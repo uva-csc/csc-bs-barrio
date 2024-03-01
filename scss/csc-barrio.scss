@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+#header {
+  #navbar-main {
+    padding: 8px 3rem;
+    .navbar-brand {
+      img {
+        max-height: 40px;
+      }
+    }
+  }
+}
+
+main#content {
+  .node__content {
+    margin-top: 0;
+  }
+  .c-csc-hero {
+    width: 100vw;
+    min-height: 60vh;
+
+    .text-formatted {
+      position: absolute;
+      top: 20%;
+      width: 100%;
+
+      h2 {
+        margin: 0 25%;
+        font-size: 500%;
+        background-color: #00000070;
+        color: $uva-orange;
+      }
+    }
+  }
+} // end of main#content
+
