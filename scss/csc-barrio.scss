@@ -1,5 +1,6 @@
 @import 'variables.scss';
 
+/***  General Structural Styles ***/
 #header {
   #navbar-main {
     padding: 8px 3rem;
@@ -17,20 +18,50 @@ main#content {
   }
   .c-csc-hero {
     width: 100vw;
-    min-height: 60vh;
+    min-height: 75vh;
 
     .text-formatted {
-      position: absolute;
-      top: 20%;
       width: 100%;
+      transform: translateY(30px);
 
       h2 {
-        margin: 0 25%;
-        font-size: 500%;
-        background-color: #00000070;
-        color: $uva-orange;
+        margin: 0 20%;
+        font-size: 300%;
+        /*background-color: #FFFFFF30;*/
       }
     }
   }
 } // end of main#content
 
+/** General Text Styles **/
+
+main#content {
+  .text-formatted {
+    h1, h2, h3, p, span {
+      &.blue {
+        color: $uva-blue !important;
+      }
+
+      &.orange {
+        color: $uva-orange !important;
+      }
+
+      &.white {
+        color: $white;
+      }
+
+      &.black {
+        color: black;
+      }
+    }
+  }
+}
+
+
+/*** Individual Page Styles ***/
+
+main#content {
+  .c-csc-hero#para-2 {
+    background-position: bottom center;
+  }
+}
