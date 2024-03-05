@@ -13043,8 +13043,8 @@ main#content .text-formatted h1.black, main#content .text-formatted .black.h1, m
 }
 
 /*** Individual Page Styles ***/
-main#content .c-csc-hero#para-2 {
-  background-position: bottom center;
+main#content .c-csc-hero {
+  background-position: top center;
 }
 
 /** Colors **/

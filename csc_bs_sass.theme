@@ -11,6 +11,8 @@ use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 
+const POSITION_RELATIVE = "position: relative;";
+
 /**
  * Implements hook_form_system_theme_settings_alter() for settings form.
  *
@@ -44,14 +46,17 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   $pid = "para-" . $para->id();
   $variables['attributes']['class'][] = 'c-csc-' . $para->bundle();
   $variables['attributes']['id'] = $pid;
+  // Process text-color and background-color fields adding styles or classes as necessary
   $vnames = array('text', 'bg');
   foreach($vnames as $vnm) {
     $fnm = "field_{$vnm}_color";
     $varnm = "csc_{$vnm}_color";
     $cval = $para->hasField($fnm) ? csc_color_code($para->get($fnm)->value) : '';
+    /*if ($vnm === 'bg' && $para->bundle() === "colored_text") {
+      kint("bg cval", $cval, $para);
+    }*/
     $variables[$varnm] = $cval; // save as variable in case it is needed in templates.
     if (!empty($cval)) {
-      // kint("cval", $cval, $variables);
       if (substr($cval, 0, 1) === '#') {
         $sattnm = ($vnm === 'bg') ? 'background-color' : 'color';
         $variables['attributes']['style'][] = "$sattnm:$cval;";
@@ -59,6 +64,21 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
         $cval = ($vnm === 'bg') ? str_replace('text', 'bg', $cval) : $cval;
         $variables['attributes']['class'][] = strtolower($cval);
       }
+    }
+  }
+  // Adjust size and position of text boxes
+  if ($para->hasField('field_text_box_position')) {
+    $boxsize = $para->get('field_text_box_position')->value;
+    if (!empty($boxsize)) {
+      list($width, $height, $top, $left) = explode(',', str_replace(' ', '', $boxsize));
+      // kint("box size", $boxsize, $width, $height);
+      $top = (mb_substr($top, -1) === '%') ? $top : "{$top}px";
+      $left = (mb_substr($left, -1) === '%') ? $left : "{$left}px";
+      $variables['attributes']['style'][] = POSITION_RELATIVE;
+      $variables['attributes']['style'][] = "width: {$width}px;";
+      $variables['attributes']['style'][] = "height: {$height}px;";
+      $variables['attributes']['style'][] = "top: $top;";
+      $variables['attributes']['style'][] = "left: $left;";
     }
   }
 }
@@ -77,7 +97,7 @@ function csc_color_code($cstr) {
 function is_hex_val($hstr) {
   $hstr = str_replace('#', '', $hstr);
   $slen = strlen($hstr);
-  return (ctype_xdigit($hstr) && ($slen === 3 || $slen === 6));
+  return (ctype_xdigit($hstr) && ($slen === 3 || $slen === 6 || $slen === 8));
 }
 
 /**
