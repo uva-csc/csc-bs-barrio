@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+}
+
+
+/**
+ * Implements custom classes for paragraphs with bundle name
+ */
+function csc_bs_sass_preprocess_paragraph(&$variables) {
+  $para = $variables['paragraph'];
+  $pid = "para-" . $para->id();
+  $variables['attributes']['class'][] = 'c-csc-' . $para->bundle();
+  $variables['attributes']['id'] = $pid;
+}
+
+/**
+ * Implements background image for hero paragraphs
+ */
+function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
+  $para = $variables['paragraph'];
+  $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
+  $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
+  $file = FILE::load($fid); //->createFileUrl();
+  $file_url = ImageStyle::load('wide')->buildUrl($file->uri->value);
+  // kint("para", $para);
+  if (!empty($file_url)) {
+    $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
+    $variables['attributes']['style'][] = 'background-size: cover;';
+    /* $variables['attributes']['style'][] = 'background-position: center center;'; Set in scss depending on situation */
+  }
+}
