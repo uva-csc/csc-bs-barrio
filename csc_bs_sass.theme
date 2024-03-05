@@ -44,6 +44,40 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   $pid = "para-" . $para->id();
   $variables['attributes']['class'][] = 'c-csc-' . $para->bundle();
   $variables['attributes']['id'] = $pid;
+  $vnames = array('text', 'bg');
+  foreach($vnames as $vnm) {
+    $fnm = "field_{$vnm}_color";
+    $varnm = "csc_{$vnm}_color";
+    $cval = $para->hasField($fnm) ? csc_color_code($para->get($fnm)->value) : '';
+    $variables[$varnm] = $cval; // save as variable in case it is needed in templates.
+    if (!empty($cval)) {
+      // kint("cval", $cval, $variables);
+      if (substr($cval, 0, 1) === '#') {
+        $sattnm = ($vnm === 'bg') ? 'background-color' : 'color';
+        $variables['attributes']['style'][] = "$sattnm:$cval;";
+      } else {
+        $cval = ($vnm === 'bg') ? str_replace('text', 'bg', $cval) : $cval;
+        $variables['attributes']['class'][] = strtolower($cval);
+      }
+    }
+  }
+}
+
+function csc_color_code($cstr) {
+  // kint("in color code function", $cstr);
+  if (empty($cstr)) { return ''; }
+  if (substr($cstr, 0, 1) === '#' || is_hex_val($cstr)) {
+    $cstr = '#' . str_replace('#', '', $cstr); // Make sure there is a hash-sign for custom colors;
+  } else {
+    $cstr = strtolower($cstr);
+    return "text-$cstr";
+  }
+}
+
+function is_hex_val($hstr) {
+  $hstr = str_replace('#', '', $hstr);
+  $slen = strlen($hstr);
+  return (ctype_xdigit($hstr) && ($slen === 3 || $slen === 6));
 }
 
 /**
@@ -55,10 +89,24 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
   $file = FILE::load($fid); //->createFileUrl();
   $file_url = ImageStyle::load('wide')->buildUrl($file->uri->value);
-  // kint("para", $para);
+  // kint("para variables", $variables);
   if (!empty($file_url)) {
     $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
     $variables['attributes']['style'][] = 'background-size: cover;';
     /* $variables['attributes']['style'][] = 'background-position: center center;'; Set in scss depending on situation */
   }
 }
+
+/**
+ * Sets values for text and background colors from the color fields
+ *
+ * @param $variables
+ * @return void
+function csc_bs_sass_preprocess_paragraph__colored_text(&$variables) {
+  $para = $variables['paragraph'];
+  $variables['csc_txt_color'] = $para->get('field_text_color')->value;
+  $variables['csc_bg_color'] = $para->get('field_bg_color')->value;
+  kint("variables in colored text: ", $variables);
+}
+
+ */

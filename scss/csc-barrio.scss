@@ -65,3 +65,21 @@ main#content {
     background-position: bottom center;
   }
 }
+
+
+/** Colors **/
+.text-blue {
+  color: $uva-blue !important;
+}
+
+.text-orange {
+  color: $uva-orange;
+}
+
+.bg-blue {
+  background-color: $uva-blue;
+}
+
+.bg-orange {
+  background-color: $uva-orange;
+}

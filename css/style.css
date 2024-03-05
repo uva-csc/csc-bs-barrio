@@ -13047,6 +13047,23 @@ main#content .c-csc-hero#para-2 {
   background-position: bottom center;
 }
 
+/** Colors **/
+.text-blue {
+  color: #232D4B !important;
+}
+
+.text-orange {
+  color: #E57200;
+}
+
+.bg-blue {
+  background-color: #232D4B;
+}
+
+.bg-orange {
+  background-color: #E57200;
+}
+
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {
