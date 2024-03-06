@@ -66,7 +66,7 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
       }
     }
   }
-  // Adjust size and position of text boxes
+  // Use value of field text_box_position to custom size and align a text box (experimental)
   if ($para->hasField('field_text_box_position')) {
     $boxsize = $para->get('field_text_box_position')->value;
     if (!empty($boxsize)) {
@@ -81,6 +81,14 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
       $variables['attributes']['style'][] = "left: $left;";
     }
   }
+
+  // Use class attribute field and add to div
+  if ($para->hasField('field_class_attribute')) {
+    $cattval = $para->get('field_class_attribute')->value;
+    if (!empty($cattval)) {
+      $variables['attributes']['class'][] = $cattval;
+    }
+  }
 }
 
 function csc_color_code($cstr) {
@@ -89,9 +97,9 @@ function csc_color_code($cstr) {
   if (substr($cstr, 0, 1) === '#' || is_hex_val($cstr)) {
     $cstr = '#' . str_replace('#', '', $cstr); // Make sure there is a hash-sign for custom colors;
   } else {
-    $cstr = strtolower($cstr);
-    return "text-$cstr";
+    $cstr = "text-" . strtolower($cstr);
   }
+  return $cstr;
 }
 
 function is_hex_val($hstr) {
