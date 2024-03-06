@@ -13016,16 +13016,10 @@ main#content .node__content {
 }
 main#content .c-csc-hero {
   width: 100vw;
-  min-height: 75vh;
+  min-height: 70vh;
 }
 main#content .c-csc-hero .text-formatted {
   width: 100%;
-  transform: translateY(30px);
-}
-main#content .c-csc-hero .text-formatted h2, main#content .c-csc-hero .text-formatted .h2 {
-  margin: 0 20%;
-  font-size: 300%;
-  /*background-color: #FFFFFF30;*/
 }
 
 /** General Text Styles **/
@@ -13040,6 +13034,34 @@ main#content .text-formatted h1.white, main#content .text-formatted .white.h1, m
 }
 main#content .text-formatted h1.black, main#content .text-formatted .black.h1, main#content .text-formatted h2.black, main#content .text-formatted .black.h2, main#content .text-formatted h3.black, main#content .text-formatted .black.h3, main#content .text-formatted p.black, main#content .text-formatted span.black {
   color: black;
+}
+
+/*** Home Page Styles ***/
+main#content .c-csc-hero .home-title-overlay {
+  transform: translateY(30px);
+}
+main#content .c-csc-hero .home-title-overlay h2, main#content .c-csc-hero .home-title-overlay .h2 {
+  font-size: 400%;
+  font-weight: bold;
+}
+main#content .c-csc-hero .home-info-overlay {
+  position: absolute;
+  width: 450px;
+  transform: translate(60vw, 30px);
+  background-color: #ffffffad;
+  border-radius: 25px;
+  color: #232D4B;
+  text-align: left;
+  font-size: 1rem;
+  padding: 10px;
+}
+main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-csc-hero .home-info-overlay .text-formatted .h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  text-align: left !important;
+  font-weight: bold;
 }
 
 /*** Individual Page Styles ***/

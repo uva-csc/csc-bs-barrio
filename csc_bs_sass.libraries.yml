@@ -5,6 +5,7 @@ global-styling:
     js/bootstrap.min.js: {}
     js/barrio.js: {}
     js/custom.js: {}
+    https://use.typekit.net/tgy5tlj.js: { type: external }
   css:
     component:
       css/style.css: {}
