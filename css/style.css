@@ -13077,20 +13077,21 @@ main#content .c-csc-hero .home-title-overlay {
   transform: translateY(30px);
 }
 main#content .c-csc-hero .home-title-overlay h2, main#content .c-csc-hero .home-title-overlay .h2 {
+  margin-bottom: 0;
   font-size: 400%;
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
 main#content .c-csc-hero .home-title-overlay h3, main#content .c-csc-hero .home-title-overlay .h3 {
   font-family: "ITC Franklin Gothic Demi", sans-serif;
-  font-size: 200%;
+  font-size: 250%;
   letter-spacing: 0.05rem;
 }
 main#content .c-csc-hero .home-info-overlay {
   position: absolute;
-  width: 450px;
-  transform: translate(60vw, 30px);
-  background-color: #ffffffcd;
+  maxwidth: 450px;
+  transform: translate(70vw, 30px);
+  background-color: #ffffffdd;
   border-radius: 25px;
   color: #232D4B;
   text-align: left;
@@ -13115,6 +13116,13 @@ main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-
 #header #navbar-main .navbar-brand img {
   max-height: 40px;
 }
+#header .navbar-nav .nav-item a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
 
 .block-system-breadcrumb-block {
   display: none;
@@ -13124,6 +13132,7 @@ footer.site-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  min-height: 50px;
 }
 
 main#content .node__content {
