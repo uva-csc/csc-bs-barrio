@@ -13062,6 +13062,10 @@ main#content .text-formatted h1.black, main#content .text-formatted .black.h1, m
   color: #E57200;
 }
 
+.text-lt-blue {
+  color: #009fdf;
+}
+
 .bg-blue {
   background-color: #232D4B;
 }
@@ -13117,9 +13121,10 @@ main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-
   max-height: 40px;
 }
 #header .navbar-nav .nav-item a {
+  margin-right: 0.5rem;
   color: white;
   text-transform: uppercase;
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
@@ -13129,7 +13134,7 @@ main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-
 }
 
 footer.site-footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   min-height: 50px;

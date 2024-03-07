@@ -14,9 +14,10 @@
 
   // Menu Links
   .navbar-nav .nav-item a {
+    margin-right: 0.5rem;
     color: white;
     text-transform: uppercase;
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: .05rem;
   }
@@ -31,11 +32,10 @@
 
 // Footer
 footer.site-footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   min-height: 50px;
-  // height: 2.5rem;            /* Footer height */
 }
 
 main#content {
