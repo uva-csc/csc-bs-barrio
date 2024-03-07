@@ -1,0 +1,42 @@
+@import 'variables.scss';
+
+/***  General Structural Styles ***/
+// Header
+#header {
+  #navbar-main {
+    padding: 8px 3rem;
+    .navbar-brand {
+      img {
+        max-height: 40px;
+      }
+    }
+  }
+} // End #header
+
+// Breadcrumbs (hiding for now)
+.block-system-breadcrumb-block {
+  display: none;
+}
+
+// Footer
+footer.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // height: 2.5rem;            /* Footer height */
+}
+
+main#content {
+  .node__content {
+    margin-top: 0;
+  }
+  .c-csc-hero {
+    width: 100vw;
+    min-height: 70vh;
+    background-position: top center;
+
+    .text-formatted {
+      width: 100%;
+    }
+  }
+} // end of main#content

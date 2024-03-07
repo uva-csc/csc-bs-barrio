@@ -1,0 +1,38 @@
+@import 'variables.scss';
+
+/*** Home Page Styles ***/
+main#content {
+  .c-csc-hero {
+    .home-title-overlay {
+      transform: translateY(30px);
+
+      h2 {
+        font-size: 400%;
+        font-weight: bold;
+      }
+    }
+
+    .home-info-overlay {
+      position: absolute;
+      width: 450px;
+      transform: translate(60vw, 30px);
+      background-color: #ffffffad;
+      border-radius: 25px;
+      color: $uva-blue;
+      text-align: left;
+      font-size: 1rem;
+      padding: 10px;
+
+      .text-formatted {
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 1.25rem;
+          white-space: nowrap;
+          text-align: left !important;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

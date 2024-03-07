@@ -13001,28 +13001,27 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* VARIABLES */
-/** Bootstrap Overrides **/
-/***  General Structural Styles ***/
-#header #navbar-main {
-  padding: 8px 3rem;
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
 }
-#header #navbar-main .navbar-brand img {
-  max-height: 40px;
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
 }
-
-main#content .node__content {
-  margin-top: 0;
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
 }
-main#content .c-csc-hero {
-  width: 100vw;
-  min-height: 70vh;
-}
-main#content .c-csc-hero .text-formatted {
-  width: 100%;
-}
-
 /** General Text Styles **/
+body {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+}
+
 main#content .text-formatted h1.blue, main#content .text-formatted .blue.h1, main#content .text-formatted h2.blue, main#content .text-formatted .blue.h2, main#content .text-formatted h3.blue, main#content .text-formatted .blue.h3, main#content .text-formatted p.blue, main#content .text-formatted span.blue {
   color: #232D4B !important;
 }
@@ -13036,6 +13035,32 @@ main#content .text-formatted h1.black, main#content .text-formatted .black.h1, m
   color: black;
 }
 
+/*** Individual Page Styles ***/
+.page-user-login form#user-login-form {
+  max-width: 500px;
+  margin-left: 2rem;
+  height: 83vh;
+}
+
+/** Colors **/
+.text-blue {
+  color: #232D4B !important;
+}
+
+.text-orange {
+  color: #E57200;
+}
+
+.bg-blue {
+  background-color: #232D4B;
+}
+
+.bg-orange {
+  background-color: #E57200;
+}
+
+/* VARIABLES */
+/** Bootstrap Overrides **/
 /*** Home Page Styles ***/
 main#content .c-csc-hero .home-title-overlay {
   transform: translateY(30px);
@@ -13064,26 +13089,36 @@ main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-
   font-weight: bold;
 }
 
-/*** Individual Page Styles ***/
+/* VARIABLES */
+/** Bootstrap Overrides **/
+/***  General Structural Styles ***/
+#header #navbar-main {
+  padding: 8px 3rem;
+}
+#header #navbar-main .navbar-brand img {
+  max-height: 40px;
+}
+
+.block-system-breadcrumb-block {
+  display: none;
+}
+
+footer.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+main#content .node__content {
+  margin-top: 0;
+}
 main#content .c-csc-hero {
+  width: 100vw;
+  min-height: 70vh;
   background-position: top center;
 }
-
-/** Colors **/
-.text-blue {
-  color: #232D4B !important;
-}
-
-.text-orange {
-  color: #E57200;
-}
-
-.bg-blue {
-  background-color: #232D4B;
-}
-
-.bg-orange {
-  background-color: #E57200;
+main#content .c-csc-hero .text-formatted {
+  width: 100%;
 }
 
 /* GENERAL STYLES
