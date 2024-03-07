@@ -9,9 +9,22 @@
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
 }
-
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: bold;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
 }
+
+// Demi
+@font-face {
+  font-family: "ITC Franklin Gothic Demi";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Demi";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
+}
+

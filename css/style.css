@@ -13017,6 +13017,17 @@ textarea.form-control-lg {
   font-weight: bold;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
 }
+@font-face {
+  font-family: "ITC Franklin Gothic Demi";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Demi";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
+}
 /** General Text Styles **/
 body {
   font-family: "ITC Franklin Gothic Std", sans-serif;
@@ -13069,16 +13080,21 @@ main#content .c-csc-hero .home-title-overlay h2, main#content .c-csc-hero .home-
   font-size: 400%;
   font-weight: bold;
 }
+main#content .c-csc-hero .home-title-overlay h3, main#content .c-csc-hero .home-title-overlay .h3 {
+  font-family: "ITC Franklin Gothic Demi", sans-serif;
+  font-size: 200%;
+  letter-spacing: 0.05rem;
+}
 main#content .c-csc-hero .home-info-overlay {
   position: absolute;
   width: 450px;
   transform: translate(60vw, 30px);
-  background-color: #ffffffad;
+  background-color: #ffffffcd;
   border-radius: 25px;
   color: #232D4B;
   text-align: left;
   font-size: 1rem;
-  padding: 10px;
+  padding: 20px;
 }
 main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-csc-hero .home-info-overlay .text-formatted .h2 {
   margin: 0;
