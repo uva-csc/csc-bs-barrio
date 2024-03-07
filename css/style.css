@@ -13133,6 +13133,17 @@ main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-
   display: none;
 }
 
+.c-csc-teaser_row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.c-csc-teaser_row .field--name-field-teaser-row {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
 footer.site-footer {
   position: relative;
   bottom: 0;

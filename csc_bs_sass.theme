@@ -125,16 +125,11 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   }
 }
 
-/**
- * Sets values for text and background colors from the color fields
- *
- * @param $variables
- * @return void
-function csc_bs_sass_preprocess_paragraph__colored_text(&$variables) {
-  $para = $variables['paragraph'];
-  $variables['csc_txt_color'] = $para->get('field_text_color')->value;
-  $variables['csc_bg_color'] = $para->get('field_bg_color')->value;
-  kint("variables in colored text: ", $variables);
-}
 
+/**
+ * Implements background image for teaser row paragraphs
  */
+function csc_bs_sass_preprocess_paragraph__teaser_row(&$variables) {
+  $variables['class'][] = 'container-fluid';
+  // kint('teaser row variables', $variables);
+}

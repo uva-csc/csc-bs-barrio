@@ -29,6 +29,19 @@
   display: none;
 }
 
+// Paragraph Types
+.c-csc-teaser_row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .field--name-field-teaser-row {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+  }
+}
+
 
 // Footer
 footer.site-footer {
