@@ -31,48 +31,11 @@
 
 // Paragraph Types
 
-// Teaser row
-.c-csc-teaser_row .field--name-field-header h2 {
-  margin: 0px auto 12px;
-  width: fit-content;
-  text-align: center;
-  border-bottom: 4px solid $uva-orange;
-  line-height: 28px;
-}
-
-.field.field--name-field-teasers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  & > .field__item .text-formatted {
-    color: $uva-blue;
-    margin: 8px auto;
-    p {
-      margin: 0 auto;
-      padding: 0;
-      text-align: center;
-      line-height: 20px;
-      width: fit-content;
-
-      &:last-child {
-        border-bottom: 4px solid $uva-orange;
-      }
-    }
-  }
-}
-  // Footer
-footer.site-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  min-height: 50px;
-}
-
 main#content {
   .node__content {
     margin-top: 0;
   }
+
   .c-csc-hero {
     width: 100vw;
     min-height: 70vh;
@@ -82,4 +45,62 @@ main#content {
       width: 100%;
     }
   }
+
+  // Teaser row
+  .c-csc-teaser_row .field--name-field-header h2 {
+    margin: 0px auto 12px;
+    width: fit-content;
+    text-align: center;
+    border-bottom: 4px solid $uva-orange;
+    line-height: 28px;
+  }
+
+  .field.field--name-field-teasers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    & > .field__item .text-formatted {
+      color: $uva-blue;
+      margin: 8px auto;
+      p {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        line-height: 20px;
+        width: fit-content;
+
+        &:last-child {
+          border-bottom: 4px solid $uva-orange;
+        }
+      }
+    }
+  }
+
+  // Separators
+  .csc-sep {
+    &.dotted-orange {
+      border-top: 4px dotted $uva-orange;
+      margin: 2rem auto;
+      padding-top: 2rem;
+      width: 80%;
+      /* border-image: url('/themes/custom/csc_bs_sass/images/icons/orange-dot.svg'); */
+    }
+  }
+  main#content .csc-sep.dotted-orange {
+    /* border-top: 4px dotted #E57200; */
+    margin: 2rem auto;
+    padding-top: 2rem;
+    width: 80%;
+
+  }
 } // end of main#content
+
+  // Footer
+footer.site-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+}
+

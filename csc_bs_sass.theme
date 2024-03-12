@@ -57,7 +57,7 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
     }*/
     $variables[$varnm] = $cval; // save as variable in case it is needed in templates.
     if (!empty($cval)) {
-      if (substr($cval, 0, 1) === '#') {
+      if (str_starts_with($cval, '#')) {
         $sattnm = ($vnm === 'bg') ? 'background-color' : 'color';
         $variables['attributes']['style'][] = "$sattnm:$cval;";
       } else {
@@ -131,4 +131,16 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
  */
 function csc_bs_sass_preprocess_paragraph__teaser_row(&$variables) {
   $variables['class'][] = 'container-fluid';
+}
+
+
+function csc_bs_sass_preprocess_paragraph__feature_separator(&$variables) {
+  $para = $variables['paragraph'];
+  $septype = $para->get('field_separator_type')->value;
+  $sepcolor = $para->get('field_separator_color')->value;
+  $textcolor = $para->get('field_text_color')->value;
+  $variables['attributes']['class'][] = "csc-sep";
+  $variables['attributes']['class'][] = "$septype-$sepcolor";
+  $variables['attributes']['class'][] = "text-center";
+  $variables['attributes']['class'][] = "text-$textcolor";
 }

@@ -6,28 +6,6 @@ body {
   font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
-main#content {
-  .text-formatted {
-    h1, h2, h3, p, span {
-      &.blue {
-        color: $uva-blue !important;
-      }
-
-      &.orange {
-        color: $uva-orange !important;
-      }
-
-      &.white {
-        color: $white;
-      }
-
-      &.black {
-        color: black;
-      }
-    }
-  }
-}
-
 
 /*** Individual Page Styles ***/
 
@@ -59,3 +37,9 @@ main#content {
   background-color: $uva-orange;
 }
 
+/** Icons **/
+.csc-pointer {
+  img.chevron {
+    width: 25px;
+  }
+}
