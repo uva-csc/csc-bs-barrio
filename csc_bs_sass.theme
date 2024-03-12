@@ -43,7 +43,12 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
  */
 function csc_bs_sass_preprocess_paragraph(&$variables) {
   $para = $variables['paragraph'];
+  $para_type = $para->bundle();
+  // kint($para_type);
   $pid = "para-" . $para->id();
+  if($para->bundle() == 'teaser_row') {
+    kint($para);
+  }
   $variables['attributes']['class'][] = 'c-csc-' . $para->bundle();
   $variables['attributes']['id'] = $pid;
   // Process text-color and background-color fields adding styles or classes as necessary
@@ -131,5 +136,4 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
  */
 function csc_bs_sass_preprocess_paragraph__teaser_row(&$variables) {
   $variables['class'][] = 'container-fluid';
-  // kint('teaser row variables', $variables);
 }
