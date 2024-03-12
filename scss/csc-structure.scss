@@ -30,20 +30,38 @@
 }
 
 // Paragraph Types
-.c-csc-teaser_row {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 
-  .field--name-field-teaser-row {
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-  }
+// Teaser row
+.c-csc-teaser_row .field--name-field-header h2 {
+  margin: 0px auto 12px;
+  width: fit-content;
+  text-align: center;
+  border-bottom: 4px solid $uva-orange;
+  line-height: 28px;
 }
 
+.field.field--name-field-teasers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
-// Footer
+  & > .field__item .text-formatted {
+    color: $uva-blue;
+    margin: 8px auto;
+    p {
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      line-height: 20px;
+      width: fit-content;
+
+      &:last-child {
+        border-bottom: 4px solid $uva-orange;
+      }
+    }
+  }
+}
+  // Footer
 footer.site-footer {
   position: relative;
   bottom: 0;

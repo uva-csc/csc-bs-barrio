@@ -43,6 +43,8 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
  */
 function csc_bs_sass_preprocess_paragraph(&$variables) {
   $para = $variables['paragraph'];
+  $para_type = $para->bundle();
+  // kint($para_type);
   $pid = "para-" . $para->id();
   $variables['attributes']['class'][] = 'c-csc-' . $para->bundle();
   $variables['attributes']['id'] = $pid;
@@ -131,5 +133,13 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
  */
 function csc_bs_sass_preprocess_paragraph__teaser_row(&$variables) {
   $variables['class'][] = 'container-fluid';
-  // kint('teaser row variables', $variables);
+}
+
+function csc_bs_sass_preprocess_paragraph__teaser(&$variables) {
+  //$variables['class'] =
+}
+
+
+function csc_bs_sass_preprocess_field(&$variables) {
+
 }

@@ -13133,15 +13133,32 @@ main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-
   display: none;
 }
 
-.c-csc-teaser_row {
-  display: flex;
-  flex-direction: column;
+.c-csc-teaser_row .field--name-field-header h2, .c-csc-teaser_row .field--name-field-header .h2 {
+  margin: 0px auto 12px;
+  width: fit-content;
   text-align: center;
+  border-bottom: 4px solid #E57200;
+  line-height: 28px;
 }
-.c-csc-teaser_row .field--name-field-teaser-row {
+
+.field.field--name-field-teasers {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
+  justify-content: space-around;
+}
+.field.field--name-field-teasers > .field__item .text-formatted {
+  color: #232D4B;
+  margin: 8px auto;
+}
+.field.field--name-field-teasers > .field__item .text-formatted p {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  line-height: 20px;
+  width: fit-content;
+}
+.field.field--name-field-teasers > .field__item .text-formatted p:last-child {
+  border-bottom: 4px solid #E57200;
 }
 
 footer.site-footer {
