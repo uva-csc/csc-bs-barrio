@@ -72,3 +72,11 @@ h4, h5, h6 {
 div.geolocation-map-wrapper {
   filter: drop-shadow(10px 10px #b2c0e3);
 }
+
+/** Slideshows **/
+.views_slideshow_cycle_teaser_section {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  filter: drop-shadow(2px 4px 6px #232D4B);
+}
