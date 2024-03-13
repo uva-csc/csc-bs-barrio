@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 /*** Home Page Styles ***/
-main#content {
+body.path-frontpage main#content {
   .c-csc-hero {
     .home-title-overlay {
       transform: translateY(30px);
@@ -24,7 +24,7 @@ main#content {
     .home-info-overlay {
       position: absolute;
       max-width: 28vw;
-      transform: translate(70vw, 30px);
+      transform: translate(65vw, -40px);
       background-color: #b2c0e3;
       border-radius: 25px;
       color: $uva-blue;
@@ -43,5 +43,43 @@ main#content {
         }
       }
     }
+  } // End of Home page Hero
+
+  // Commons Slideshow (Note, the block must have the machine name block_1)
+  .block-views-blockhomepage-slideshow-block-1 {
+    min-height: 400px;
+    /*border: thin solid $csc-lt-blue;*/
+    background-image: url("/themes/custom/csc_bs_sass/images/home/your-space-screen.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position-x: 18vw;
+    background-position-y: -8px;
+
+    & > div.content {
+      margin-left: 55vw;
+      padding-top: 10px;
+    }
+
+
+    .views_slideshow_controls_text_previous {
+      position: absolute;
+      transform: translateY(140px);
+      z-index: 200;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .views_slideshow_controls_text_next {
+      position: absolute;
+      transform: translate(460px, 140px);
+      z-index: 200;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
   }
 }
