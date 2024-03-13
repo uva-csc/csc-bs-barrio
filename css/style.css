@@ -13130,7 +13130,7 @@ main#content .c-csc-hero .home-info-overlay .text-formatted h2, main#content .c-
   letter-spacing: 0.05rem;
 }
 
-#main-wrapper {
+.path-frontpage #main-wrapper {
   margin-top: -1rem;
 }
 

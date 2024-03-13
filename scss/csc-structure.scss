@@ -24,8 +24,8 @@
 
 } // End #header
 
-#main-wrapper {
-  margin-top: -1rem; // There is whitespace before the hero. Not sure where it is coming from.
+.path-frontpage #main-wrapper {
+  margin-top: -1rem; // There is whitespace before the hero on the homepage. Not sure where it is coming from.
 }
 
 // Breadcrumbs (hiding for now)
