@@ -2,10 +2,6 @@
 
 /** General Text Styles **/
 
-body {
-  font-family: "ITC Franklin Gothic Std", sans-serif;
-}
-
 h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
@@ -50,4 +46,29 @@ h4, h5, h6 {
   img.chevron {
     width: 25px;
   }
+}
+
+/** Images **/
+.field--name-field-image {
+  float: left;
+  margin-right: 1.5rem;
+
+  img {
+    margin: -4px 4px 4px -4px;
+    display: block;
+    position: relative;
+    padding: 4px;
+    background-color: #fcfcfc;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    border-radius: 15px;
+  }
+}
+
+
+/** Maps **/
+div.geolocation-map-wrapper {
+  filter: drop-shadow(10px 10px #b2c0e3);
 }

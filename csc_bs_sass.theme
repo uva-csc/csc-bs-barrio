@@ -37,6 +37,12 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
   );
 }
 
+////********* Preprocessing ************////
+function csc_bs_sass_preprocess_page(&$variables) {
+  if (!empty($variables['node']) && $variables['node']->getType() != 'page_full_width') {
+    $variables['container'] = 'container';
+  }
+}
 
 /**
  * Implements custom classes for paragraphs with bundle name

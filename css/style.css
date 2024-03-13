@@ -13029,10 +13029,6 @@ textarea.form-control-lg {
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
 }
 /** General Text Styles **/
-body {
-  font-family: "ITC Franklin Gothic Std", sans-serif;
-}
-
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 1rem;
 }
@@ -13072,6 +13068,29 @@ h4, .h4, h5, .h5, h6, .h6 {
 /** Icons **/
 .csc-pointer img.chevron {
   width: 25px;
+}
+
+/** Images **/
+.field--name-field-image {
+  float: left;
+  margin-right: 1.5rem;
+}
+.field--name-field-image img {
+  margin: -4px 4px 4px -4px;
+  display: block;
+  position: relative;
+  padding: 4px;
+  background-color: #fcfcfc;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+  border-radius: 15px;
+}
+
+/** Maps **/
+div.geolocation-map-wrapper {
+  filter: drop-shadow(10px 10px #b2c0e3);
 }
 
 /* VARIABLES */
@@ -13144,6 +13163,33 @@ body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .v
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /***  General Structural Styles ***/
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "franklin-gothic-urw", "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  margin: 0;
+}
+
+body {
+  margin-top: 0 !important;
+  max-width: 100%;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+#main.container {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 #header #navbar-main {
   padding: 8px 3rem;
 }
