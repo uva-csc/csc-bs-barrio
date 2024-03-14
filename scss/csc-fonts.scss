@@ -7,12 +7,19 @@
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
   font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: bold;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
 }
 
 // Demi

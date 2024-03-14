@@ -82,4 +82,101 @@ body.path-frontpage main#content {
     }
 
   }
+
+  // Featured Event (This week at the commons)
+  .featured-event {
+    margin: 6rem 4rem;
+    background-color: $uva-blue;
+    padding: 1rem 4rem;
+    color: white;
+
+    // This week at the commons
+    // block header
+    .view-header h3 {
+      span.text-white {
+        font-size: 180%;
+        text-transform: uppercase;
+      }
+
+      span.text-orange {
+        display: block;
+        margin-left: 15%;
+        margin-top: 0.25rem;
+        font-size: 110%;
+        font-weight: bold;
+        font-style: italic;
+      }
+
+    }
+
+    // Image
+    .views-field-field-image img {
+      min-width: 100%;
+      height: unset;
+    }
+
+    // Title
+    .views-field-title {
+      margin-top: 0.5rem;
+      color: white;
+      font-size: 130%;
+
+    }
+    // Body
+    .views-field-body p {
+      font-weight: normal;
+      font-size: 1rem;
+    }
+
+    // Links (read more)
+    .views-field a {
+      color: white;
+    }
+  }  // End of featured event
+
+  // Upcoming Events
+  .upcoming-events {
+    h3 {
+      padding-top: 1.5rem;
+      padding-left: 25%;
+      margin-bottom: 2rem;
+
+      span {
+        position: absolute;
+        display: inline-block;
+        font-weight: bold;
+      }
+      span.text-white:first-child {
+          text-transform: uppercase;
+          font-size: 150%;
+      }
+      span.text-blue {
+        margin-top: 0.5rem;
+        padding-left: 3.5rem;
+        text-transform: uppercase;
+        font-size: 250%;
+      }
+
+      span.text-white:last-child {
+        margin-top: 2.5rem;
+        padding-left: 7rem;
+        font-size: 90%;
+        font-style: italic;
+      }
+    }  // end of h3
+
+    .view-content {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+
+      .views-row {
+        .views-field-field-image {
+          float: left;
+          padding: 1rem;
+        }
+      }
+    } // end of view-content div
+  }
 }
+

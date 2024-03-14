@@ -13010,12 +13010,18 @@ textarea.form-control-lg {
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
   font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: bold;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Demi";
@@ -13097,6 +13103,11 @@ div.geolocation-map-wrapper {
   filter: drop-shadow(10px 10px #b2c0e3);
 }
 
+.node--view-mode-map .field--name-title {
+  display: none;
+}
+
+/** Addresses **/
 /** Slideshows **/
 .views_slideshow_cycle_teaser_section {
   position: relative;
@@ -13171,6 +13182,75 @@ body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .v
 body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_next:hover {
   cursor: pointer;
 }
+body.path-frontpage main#content .featured-event {
+  margin: 6rem 4rem;
+  background-color: #232D4B;
+  padding: 1rem 4rem;
+  color: white;
+}
+body.path-frontpage main#content .featured-event .view-header h3 span.text-white, body.path-frontpage main#content .featured-event .view-header .h3 span.text-white {
+  font-size: 180%;
+  text-transform: uppercase;
+}
+body.path-frontpage main#content .featured-event .view-header h3 span.text-orange, body.path-frontpage main#content .featured-event .view-header .h3 span.text-orange {
+  display: block;
+  margin-left: 15%;
+  margin-top: 0.25rem;
+  font-size: 110%;
+  font-weight: bold;
+  font-style: italic;
+}
+body.path-frontpage main#content .featured-event .views-field-field-image img {
+  min-width: 100%;
+  height: unset;
+}
+body.path-frontpage main#content .featured-event .views-field-title {
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 130%;
+}
+body.path-frontpage main#content .featured-event .views-field-body p {
+  font-weight: normal;
+  font-size: 1rem;
+}
+body.path-frontpage main#content .featured-event .views-field a {
+  color: white;
+}
+body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#content .upcoming-events .h3 {
+  padding-top: 1.5rem;
+  padding-left: 25%;
+  margin-bottom: 2rem;
+}
+body.path-frontpage main#content .upcoming-events h3 span, body.path-frontpage main#content .upcoming-events .h3 span {
+  position: absolute;
+  display: inline-block;
+  font-weight: bold;
+}
+body.path-frontpage main#content .upcoming-events h3 span.text-white:first-child, body.path-frontpage main#content .upcoming-events .h3 span.text-white:first-child {
+  text-transform: uppercase;
+  font-size: 150%;
+}
+body.path-frontpage main#content .upcoming-events h3 span.text-blue, body.path-frontpage main#content .upcoming-events .h3 span.text-blue {
+  margin-top: 0.5rem;
+  padding-left: 3.5rem;
+  text-transform: uppercase;
+  font-size: 250%;
+}
+body.path-frontpage main#content .upcoming-events h3 span.text-white:last-child, body.path-frontpage main#content .upcoming-events .h3 span.text-white:last-child {
+  margin-top: 2.5rem;
+  padding-left: 7rem;
+  font-size: 90%;
+  font-style: italic;
+}
+body.path-frontpage main#content .upcoming-events .view-content {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-image {
+  float: left;
+  padding: 1rem;
+}
 
 /* VARIABLES */
 /** Bootstrap Overrides **/
@@ -13217,12 +13297,49 @@ body {
   letter-spacing: 0.05rem;
 }
 
+footer.site-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  z-index: 1;
+}
+
 .path-frontpage #main-wrapper {
   margin-top: -1rem;
 }
 
 .block-system-breadcrumb-block {
   display: none;
+}
+
+.blue-skew {
+  background: inherit;
+  position: relative;
+}
+.blue-skew .skew-overlay {
+  position: absolute;
+  background: #009fdf;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 2rem;
+}
+.blue-skew .skew-overlay:after {
+  background: white;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 80%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-9deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+.blue-skew .skew-overlay ~ div.layout__region {
+  z-index: 1;
 }
 
 main#content .node__content {
@@ -13274,13 +13391,6 @@ main#content main#content .csc-sep.dotted-orange {
   margin: 2rem auto;
   padding-top: 2rem;
   width: 80%;
-}
-
-footer.site-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  min-height: 50px;
 }
 
 /* GENERAL STYLES
