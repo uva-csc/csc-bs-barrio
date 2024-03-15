@@ -13183,10 +13183,13 @@ body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .v
   cursor: pointer;
 }
 body.path-frontpage main#content .featured-event {
-  margin: 6rem 4rem;
-  background-color: #232D4B;
-  padding: 1rem 4rem;
+  padding: 6rem 4rem;
   color: white;
+  max-width: 49vw;
+}
+body.path-frontpage main#content .featured-event .wrapper {
+  padding: 1rem 4rem;
+  background-color: #232D4B;
 }
 body.path-frontpage main#content .featured-event .view-header h3 span.text-white, body.path-frontpage main#content .featured-event .view-header .h3 span.text-white {
   font-size: 180%;
@@ -13201,7 +13204,7 @@ body.path-frontpage main#content .featured-event .view-header h3 span.text-orang
   font-style: italic;
 }
 body.path-frontpage main#content .featured-event .views-field-field-image img {
-  min-width: 100%;
+  width: 100%;
   height: unset;
 }
 body.path-frontpage main#content .featured-event .views-field-title {
@@ -13215,6 +13218,9 @@ body.path-frontpage main#content .featured-event .views-field-body p {
 }
 body.path-frontpage main#content .featured-event .views-field a {
   color: white;
+}
+body.path-frontpage main#content .upcoming-events {
+  padding: 6rem 4rem;
 }
 body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#content .upcoming-events .h3 {
   padding-top: 1.5rem;

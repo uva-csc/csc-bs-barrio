@@ -85,10 +85,14 @@ body.path-frontpage main#content {
 
   // Featured Event (This week at the commons)
   .featured-event {
-    margin: 6rem 4rem;
-    background-color: $uva-blue;
-    padding: 1rem 4rem;
+    padding: 6rem 4rem;
     color: white;
+    max-width: 49vw;
+
+    .wrapper {
+      padding: 1rem 4rem;
+      background-color: $uva-blue;
+    }
 
     // This week at the commons
     // block header
@@ -111,7 +115,7 @@ body.path-frontpage main#content {
 
     // Image
     .views-field-field-image img {
-      min-width: 100%;
+      width: 100%;
       height: unset;
     }
 
@@ -136,6 +140,7 @@ body.path-frontpage main#content {
 
   // Upcoming Events
   .upcoming-events {
+    padding: 6rem 4rem;
     h3 {
       padding-top: 1.5rem;
       padding-left: 25%;

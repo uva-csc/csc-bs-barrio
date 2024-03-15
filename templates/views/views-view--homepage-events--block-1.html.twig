@@ -40,57 +40,59 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
+  <div class="wrapper">
   {{ title_prefix }}
   {% if title %}
     {{ title }}
   {% endif %}
   {{ title_suffix }}
-  <div class="view-header">
-    <h3>
-      <span class="text-white">This Week</span><br />
-      <span class="text-orange">at the Commons</span>
-    </h3>
+    <div class="view-header">
+      <h3>
+        <span class="text-white">This Week</span><br />
+        <span class="text-orange">at the Commons</span>
+      </h3>
+    </div>
+    {% if exposed %}
+      <div class="view-filters">
+        {{ exposed }}
+      </div>
+    {% endif %}
+    {% if attachment_before %}
+      <div class="attachment attachment-before">
+        {{ attachment_before }}
+      </div>
+    {% endif %}
+
+    {% if rows %}
+      <div class="view-content row">
+        {{ rows }}
+      </div>
+    {% elseif empty %}
+      <div class="view-empty">
+        {{ empty }}
+      </div>
+    {% endif %}
+
+    {% if pager %}
+      {{ pager }}
+    {% endif %}
+    {% if attachment_after %}
+      <div class="attachment attachment-after">
+        {{ attachment_after }}
+      </div>
+    {% endif %}
+    {% if more %}
+      {{ more }}
+    {% endif %}
+    {% if footer %}
+      <div class="view-footer">
+        {{ footer }}
+      </div>
+    {% endif %}
+    {% if feed_icons %}
+      <div class="feed-icons">
+        {{ feed_icons }}
+      </div>
+    {% endif %}
   </div>
-  {% if exposed %}
-    <div class="view-filters">
-      {{ exposed }}
-    </div>
-  {% endif %}
-  {% if attachment_before %}
-    <div class="attachment attachment-before">
-      {{ attachment_before }}
-    </div>
-  {% endif %}
-
-  {% if rows %}
-    <div class="view-content row">
-      {{ rows }}
-    </div>
-  {% elseif empty %}
-    <div class="view-empty">
-      {{ empty }}
-    </div>
-  {% endif %}
-
-  {% if pager %}
-    {{ pager }}
-  {% endif %}
-  {% if attachment_after %}
-    <div class="attachment attachment-after">
-      {{ attachment_after }}
-    </div>
-  {% endif %}
-  {% if more %}
-    {{ more }}
-  {% endif %}
-  {% if footer %}
-    <div class="view-footer">
-      {{ footer }}
-    </div>
-  {% endif %}
-  {% if feed_icons %}
-    <div class="feed-icons">
-      {{ feed_icons }}
-    </div>
-  {% endif %}
 </div>
