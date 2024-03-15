@@ -13043,6 +13043,7 @@ h4, .h4, h5, .h5, h6, .h6 {
   text-transform: uppercase;
 }
 
+/** Page Title Styles **/
 /*** Individual Page Styles ***/
 .page-user-login form#user-login-form {
   max-width: 500px;
