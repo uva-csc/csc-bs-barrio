@@ -13277,7 +13277,7 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
   margin-top: 0.75rem;
 }
 body.path-frontpage main#content a {
-  bottom-border: 4px solid #E57200;
+  bottom-border: 4px solid #E57200 !important;
 }
 
 /* VARIABLES */
@@ -13393,18 +13393,18 @@ main#content .field.field--name-field-teasers {
   flex-direction: row;
   justify-content: space-around;
 }
-main#content .field.field--name-field-teasers > .field__item .text-formatted {
+main#content .field.field--name-field-teasers .field--name-field-teaser-caption {
   color: #232D4B;
-  margin: 8px auto;
+  margin: 1rem auto;
 }
-main#content .field.field--name-field-teasers > .field__item .text-formatted p {
+main#content .field.field--name-field-teasers .field--name-field-teaser-caption p {
   margin: 0 auto;
   padding: 0;
   text-align: center;
   line-height: 20px;
   width: fit-content;
 }
-main#content .field.field--name-field-teasers > .field__item .text-formatted p:last-child {
+main#content .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
   border-bottom: 4px solid #E57200;
 }
 main#content .csc-sep.dotted-orange {
