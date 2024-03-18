@@ -16,6 +16,7 @@ h4, h5, h6 {
 
 }
 
+
 /*** Individual Page Styles ***/
 
 .page-user-login form#user-login-form {
@@ -92,4 +93,10 @@ div.geolocation-map-wrapper {
   width: 500px;
   height: 300px;
   filter: drop-shadow(2px 4px 6px #232D4B);
+}
+
+
+/** Views **/
+.views-field-title {
+  font-weight: bold;
 }
