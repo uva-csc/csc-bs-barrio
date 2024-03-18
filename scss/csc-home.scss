@@ -178,6 +178,12 @@ body.path-frontpage main#content {
 
       .views-row {
 
+        .views-field-title {
+          a {
+            border-bottom: none;
+          }
+        }
+
         .views-field-field-date-value {
           font-style: italic;
         }
@@ -196,6 +202,11 @@ body.path-frontpage main#content {
         }
       }
     } // end of view-content div
+  } // End of Upcoming Events
+
+  // General homepage styles
+  a {
+    bottom-border: 4px solid #E57200;
   }
 }
 

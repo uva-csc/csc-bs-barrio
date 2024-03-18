@@ -13260,6 +13260,9 @@ body.path-frontpage main#content .upcoming-events .view-content {
   display: flex;
   flex-direction: column;
 }
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-title a {
+  border-bottom: none;
+}
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-date-value {
   font-style: italic;
 }
@@ -13272,6 +13275,9 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-body {
   margin-top: 0.75rem;
+}
+body.path-frontpage main#content a {
+  bottom-border: 4px solid #E57200;
 }
 
 /* VARIABLES */
