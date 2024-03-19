@@ -13122,6 +13122,10 @@ div.geolocation-map-wrapper {
   font-weight: bold;
 }
 
+.views-field-field-image + .views-field-field-date {
+  margin-top: 0.5rem;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Home Page Styles ***/
@@ -13331,6 +13335,10 @@ footer.site-footer {
   width: 100%;
   min-height: 50px;
   z-index: 1;
+}
+
+.has-skew footer.site-footer {
+  bottom: -180px;
 }
 
 .path-frontpage #main-wrapper {

@@ -63,6 +63,11 @@ footer.site-footer {
   min-height: 50px;
   z-index: 1;
 }
+
+.has-skew footer.site-footer {
+  bottom: -180px;
+}
+
 // End of Footer
 .path-frontpage #main-wrapper {
   margin-top: -1rem; // There is whitespace before the hero on the homepage. Not sure where it is coming from.
