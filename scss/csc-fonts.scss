@@ -35,3 +35,16 @@
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
 }
 
+// Demi
+@font-face {
+  font-family: "ITC Franklin Gothic Book";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Book";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
+}
+

@@ -13034,6 +13034,17 @@ textarea.form-control-lg {
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
 }
+@font-face {
+  font-family: "ITC Franklin Gothic Book";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Book";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
+}
 /** General Text Styles **/
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 1rem;
@@ -13273,6 +13284,9 @@ body.path-frontpage main#content .upcoming-events .view-content {
   display: flex;
   flex-direction: column;
 }
+body.path-frontpage main#content .upcoming-events .view-content .views-row:nth-child(2) {
+  margin-top: 4rem;
+}
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-title a {
   border-bottom: none;
 }
@@ -13366,7 +13380,7 @@ footer.site-footer {
   position: absolute;
   background: #009fdf;
   width: 100%;
-  height: 100%;
+  height: 70%;
   z-index: 1;
   padding: 2rem;
 }
@@ -13375,7 +13389,7 @@ footer.site-footer {
   bottom: 0;
   content: "";
   display: block;
-  height: 83%;
+  height: 78%;
   left: 0;
   position: absolute;
   right: 0;
@@ -13405,25 +13419,75 @@ main#content .c-csc-teaser_row .field--name-field-header h2, main#content .c-csc
   border-bottom: 4px solid #E57200;
   line-height: 28px;
 }
-main#content .field.field--name-field-teasers {
+main#content .c-csc-teaser_row .field.field--name-field-teasers {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-main#content .field.field--name-field-teasers .field--name-field-teaser-caption {
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption {
   color: #232D4B;
   margin: 1rem auto;
 }
-main#content .field.field--name-field-teasers .field--name-field-teaser-caption p {
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p {
   margin: 0 auto;
   padding: 0;
   text-align: center;
   line-height: 20px;
   width: fit-content;
 }
-main#content .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
   border-bottom: 4px solid #E57200;
 }
+main#content .c-csc-highlight_row {
+  background-color: #232D4B;
+}
+main#content .c-csc-highlight_row .wrapper {
+  margin: 0 auto;
+  max-width: 50vw;
+  padding-bottom: 3rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-plain-header {
+  padding-top: 1rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 130%;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference {
+  margin: 1rem;
+  padding: 2rem;
+  background-color: #e5f1f6;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference h2, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .h2 {
+  width: 100%;
+  font-size: 250%;
+  font-weight: bold;
+  text-align: left;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted h3, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted .h3 {
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted .h4 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted p:has(img) + h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted p:has(img) + .h4 {
+  padding-top: 0.75rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted p {
+  font-family: "ITC Franklin Gothic Book", sans-serif;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted img.align-left {
+  margin-right: 2rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted img.align-right {
+  margin-left: 2rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted a {
+  border-bottom: 4px solid #E57200;
+}
+
 main#content .csc-sep.dotted-orange {
   border-top: 4px dotted #E57200;
   margin: 2rem auto;
