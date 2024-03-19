@@ -13077,6 +13077,15 @@ h4, .h4, h5, .h5, h6, .h6 {
   width: 25px;
 }
 
+.blue-chevron > div.wrapper:first-child:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: no-repeat center/3% url("../images/icons/chevron-blue.svg");
+  margin-top: -150px;
+  height: 150px;
+}
+
 /** Images **/
 .field--name-field-image {
   float: left;
@@ -13193,7 +13202,7 @@ body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .v
   cursor: pointer;
 }
 body.path-frontpage main#content .featured-event {
-  padding: 6rem 4rem;
+  padding: 8rem 4rem 6rem;
   color: white;
   max-width: 49vw;
 }
@@ -13234,7 +13243,7 @@ body.path-frontpage main#content .upcoming-events {
 }
 body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#content .upcoming-events .h3 {
   display: inline-block;
-  padding-top: 1.5rem;
+  padding-top: 0.75rem;
   padding-left: 25%;
   margin-bottom: 5rem;
 }

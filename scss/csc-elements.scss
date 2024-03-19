@@ -54,6 +54,16 @@ h4, h5, h6 {
   }
 }
 
+
+.blue-chevron > div.wrapper:first-child:before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  background: no-repeat center/3% url('../images/icons/chevron-blue.svg');
+  margin-top: -150px;
+  height: 150px;
+}
+
 /** Images **/
 .field--name-field-image {
   float: left;
