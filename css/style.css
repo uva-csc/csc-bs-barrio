@@ -13443,7 +13443,7 @@ main#content .c-csc-highlight_row {
 }
 main#content .c-csc-highlight_row .wrapper {
   margin: 0 auto;
-  max-width: 50vw;
+  max-width: 55vw;
   padding-bottom: 3rem;
 }
 main#content .c-csc-highlight_row .wrapper .field--name-field-plain-header {
@@ -13477,6 +13477,7 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
 }
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p {
   font-family: "ITC Franklin Gothic Book", sans-serif;
+  font-size: 1rem !important;
 }
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-left {
   margin-right: 2rem;
