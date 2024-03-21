@@ -13464,28 +13464,28 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
   font-weight: bold;
   text-align: left;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted h3, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted .h3 {
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h3, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h3 {
   font-weight: bold;
   font-size: 1.75rem;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted .h4 {
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h4 {
   font-weight: bold;
   font-size: 1.25rem;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted p:has(img) + h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted p:has(img) + .h4 {
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p:has(img) + h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p:has(img) + .h4 {
   padding-top: 0.75rem;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted p {
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p {
   font-family: "ITC Franklin Gothic Book", sans-serif;
   font-size: 17pt;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted img.align-left {
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-left {
   margin-right: 2rem;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted img.align-right {
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-right {
   margin-left: 2rem;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .text-formatted a {
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted a {
   border-bottom: 4px solid #E57200;
 }
 
