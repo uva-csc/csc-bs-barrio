@@ -1,4 +1,4 @@
-
+@import 'variables.scss';
 
 /** General Text Styles **/
 
@@ -113,4 +113,24 @@ div.geolocation-map-wrapper {
 
 .views-field-field-image + .views-field-field-date {
   margin-top: 0.5rem;
+}
+
+// News block (view)
+.view.csc-news-block {
+  max-width: 75vw;
+  margin: 2rem auto;
+
+  // News block header
+  .view-header {
+    position: relative;
+    width: 100%;
+    background-color: $uva-orange;
+
+    h2 {
+      margin: 1rem auto;
+      font-size: 150%;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
 }

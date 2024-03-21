@@ -13045,6 +13045,8 @@ textarea.form-control-lg {
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
 }
+/* VARIABLES */
+/** Bootstrap Overrides **/
 /** General Text Styles **/
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 1rem;
@@ -13144,6 +13146,22 @@ div.geolocation-map-wrapper {
 
 .views-field-field-image + .views-field-field-date {
   margin-top: 0.5rem;
+}
+
+.view.csc-news-block {
+  max-width: 75vw;
+  margin: 2rem auto;
+}
+.view.csc-news-block .view-header {
+  position: relative;
+  width: 100%;
+  background-color: #E57200;
+}
+.view.csc-news-block .view-header h2, .view.csc-news-block .view-header .h2 {
+  margin: 1rem auto;
+  font-size: 150%;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* VARIABLES */
