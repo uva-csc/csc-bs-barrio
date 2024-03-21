@@ -13156,12 +13156,16 @@ div.geolocation-map-wrapper {
   position: relative;
   width: 100%;
   background-color: #E57200;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0;
+  border-radius: 10px;
 }
 .view.csc-news-block .view-header h2, .view.csc-news-block .view-header .h2 {
   margin: 1rem auto;
-  font-size: 150%;
+  width: fit-content;
+  color: white;
+  font-size: 300%;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 /* VARIABLES */
