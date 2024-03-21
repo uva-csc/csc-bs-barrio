@@ -13157,8 +13157,8 @@ div.geolocation-map-wrapper {
   width: 100%;
   background-color: #E57200;
   margin-bottom: 0.5rem;
-  padding: 0.4rem 0;
-  border-radius: 10px;
+  padding: 0.2rem 0 0;
+  border-radius: 15px;
 }
 .view.csc-news-block .view-header h2, .view.csc-news-block .view-header .h2 {
   margin: 1rem auto;
