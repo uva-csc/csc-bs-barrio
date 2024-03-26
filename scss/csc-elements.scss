@@ -66,11 +66,12 @@ h4, h5, h6 {
 
 /** Images **/
 .field--name-field-image {
+  /* Not sure why these are here. Maybe old code...
   float: left;
-  margin-right: 1.5rem;
+  margin-right: 1.5rem; margin with float does nothing */
 
   img {
-    margin: -4px 4px 4px -4px;
+    /* margin: -4px 4px 4px -4px; why??? */
     display: block;
     position: relative;
     padding: 4px;
@@ -137,4 +138,68 @@ div.geolocation-map-wrapper {
       font-weight: bold;
     }
   }
+
+  .views-view-responsive-grid__item {
+    border-bottom: thin solid #ccc;
+  }
+
+  // The individual news item teasers in the view
+  .node--view-mode-teaser {
+    border: none;
+
+    // Every field has a .content
+    .content {
+      line-height: 1.1rem; // pack text close together
+      font-size: 90%;
+    }
+
+    // New teaser image
+    .field--name-field-image {
+      float: none;
+      overflow: hidden;
+      margin-right: 0.25rem;
+
+      img.image-style-news-teaser {
+        border: thin solid #aaa;
+        border-radius: 0;
+        padding: 0;
+        transition: transform .2s; /* Animation */
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+    } // end of new teaser image
+
+    .field--name-field-date {
+      margin-top: 0.75rem;
+      font-weight: bold;
+      color: $csc-lt-blue;
+      text-transform: uppercase;
+    }
+  }  // end of News node teaser
+
+  .view-footer {
+    float: right;
+    a {
+      border-bottom: 4px solid $uva-orange;
+    }
+  }
+
+} // end of view news block
+
+// Common footer / bottom of page elements
+// Help curate block
+.block.help-curate {
+  position: absolute;
+  right: 3rem;
+  width: fit-content;
+  font-size: 150%;
+  color: white;
+  font-weight: bold;
+  background-color: $uva-orange;
+}
+
+.block.email-contact {
+  width: 100%;
+  background-color: $csc-dark-gray;
 }

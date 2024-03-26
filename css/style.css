@@ -13101,11 +13101,12 @@ h4, .h4, h5, .h5, h6, .h6 {
 
 /** Images **/
 .field--name-field-image {
+  /* Not sure why these are here. Maybe old code...
   float: left;
-  margin-right: 1.5rem;
+  margin-right: 1.5rem; margin with float does nothing */
 }
 .field--name-field-image img {
-  margin: -4px 4px 4px -4px;
+  /* margin: -4px 4px 4px -4px; why??? */
   display: block;
   position: relative;
   padding: 4px;
@@ -13166,6 +13167,58 @@ div.geolocation-map-wrapper {
   color: white;
   font-size: 300%;
   font-weight: bold;
+}
+.view.csc-news-block .views-view-responsive-grid__item {
+  border-bottom: thin solid #ccc;
+}
+.view.csc-news-block .node--view-mode-teaser {
+  border: none;
+}
+.view.csc-news-block .node--view-mode-teaser .content {
+  line-height: 1.1rem;
+  font-size: 90%;
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image {
+  float: none;
+  overflow: hidden;
+  margin-right: 0.25rem;
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image img.image-style-news-teaser {
+  border: thin solid #aaa;
+  border-radius: 0;
+  padding: 0;
+  transition: transform 0.2s;
+  /* Animation */
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image img.image-style-news-teaser:hover {
+  transform: scale(1.15);
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-date {
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: #009fdf;
+  text-transform: uppercase;
+}
+.view.csc-news-block .view-footer {
+  float: right;
+}
+.view.csc-news-block .view-footer a {
+  border-bottom: 4px solid #E57200;
+}
+
+.block.help-curate {
+  position: absolute;
+  right: 3rem;
+  width: fit-content;
+  font-size: 150%;
+  color: white;
+  font-weight: bold;
+  background-color: #E57200;
+}
+
+.block.email-contact {
+  width: 100%;
+  background-color: #5a6172;
 }
 
 /* VARIABLES */
