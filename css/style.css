@@ -13290,7 +13290,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
   letter-spacing: 0.05rem;
 }
 body.path-frontpage main#content .c-csc-hero .commons-hours {
-  background-color: #b2c0e3CC;
+  background-color: #b2c0e3DF;
   border-radius: 80%;
   padding: 3rem 3rem 2rem 3rem;
   color: white;
@@ -13318,7 +13318,7 @@ body.path-frontpage main#content .c-csc-hero .home-info-overlay {
   width: fit-content;
   max-width: 23vw;
   transform: translateX(15vw);
-  background-color: #b2c0e3CC;
+  background-color: #b2c0e3DF;
   border-radius: 80%;
   color: white;
   text-align: left;
@@ -13330,7 +13330,7 @@ body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted 
   text-align: center;
   margin: 0;
   padding: 0 0 0 0.5rem;
-  width: 1.5rem;
+  font-size: 1.5rem;
 }
 body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted p {
   text-align: center;
