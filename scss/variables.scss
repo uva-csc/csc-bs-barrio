@@ -1,4 +1,9 @@
 /* VARIABLES */
+// Fonts
+$fg-std: "ITC Franklin Gothic Std", sans-serif;
+$fg-demi: "ITC Franklin Gothic Demi", sans-serif;
+$fg-book: "ITC Franklin Gothic Book", sans-serif;
+
 // colors
 $primary-shade: #d5d5d5; // rgb(255, 78, 47);
 $primary-light: tint-color($primary-shade, 37%);
@@ -14,6 +19,7 @@ $yellow: #ffc107;
 $green: #28a745;
 $cyan: #17a2b8;
 $white: #fdfdfd;
+$off-white: #dadada;
 $black: #222222;
 $gray-100: #f8f9fa;
 $gray-800: #343a40;

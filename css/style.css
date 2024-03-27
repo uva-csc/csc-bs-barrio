@@ -13475,6 +13475,68 @@ footer.site-footer {
   width: 100%;
   min-height: 50px;
   z-index: 1;
+  color: #dadada;
+  padding: 1.5rem;
+}
+footer.site-footer section.region-footer-first {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-column-gap: 10px;
+  grid-row-gap: 1rem;
+}
+footer.site-footer section.region-footer-first .block-logo {
+  display: unset;
+  grid-column: 1/-1;
+}
+footer.site-footer section.region-footer-first .block-logo .footer-logo img {
+  height: 30%;
+  width: 30%;
+}
+footer.site-footer section.region-footer-first .footer-contact {
+  padding-left: 2rem;
+  font-family: "ITC Franklin Gothic Book", sans-serif;
+}
+footer.site-footer section.region-footer-first .footer-contact h2, footer.site-footer section.region-footer-first .footer-contact .h2 {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  text-transform: uppercase;
+  border-bottom: 2px orange solid;
+  width: fit-content;
+  padding-bottom: 0;
+  line-height: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+}
+footer.site-footer section.region-footer-first .footer-contact ul {
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0;
+  line-height: 1.1rem;
+  list-style-type: none;
+}
+footer.site-footer section.region-footer-first .footer-contact ul li {
+  list-style-type: none;
+  margin-bottom: 0.75rem;
+}
+footer.site-footer section.region-footer-first .footer-menu {
+  padding-top: 1.5rem;
+}
+footer.site-footer section.region-footer-first .media-links {
+  padding-top: 1.5rem;
+}
+footer.site-footer section.region-footer-first .media-links a {
+  color: #dadada;
+}
+footer.site-footer section.region-footer-first .media-links a span {
+  font-size: 1.5rem;
+}
+footer.site-footer section.region-footer-first .rector-visitor-block {
+  display: unset;
+  grid-column: 1/-1;
+  width: 100%;
+  text-align: center;
 }
 
 .has-skew footer.site-footer {
@@ -13618,6 +13680,17 @@ main#content main#content .csc-sep.dotted-orange {
   margin: 2rem auto;
   padding-top: 2rem;
   width: 80%;
+}
+
+/** Admin Structure **/
+#node-admin-links .nav.primary {
+  margin-top: 4px;
+}
+
+#toolbar-administration #toolbar-bar {
+  border-bottom: 1px solid gray;
+  margin-bottom: -4px;
+  max-height: 43px;
 }
 
 /* GENERAL STYLES

@@ -62,8 +62,85 @@ footer.site-footer {
   width: 100%;
   min-height: 50px;
   z-index: 1;
-}
+  color: $off-white;
+  padding: 1.5rem;
 
+  // Footer grid for placing blocks
+  section.region-footer-first {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-column-gap: 10px;
+    grid-row-gap: 1rem;
+
+    .block-logo {
+      display: unset;
+      grid-column: 1/-1;
+
+      .footer-logo img {
+        height: 30%;
+        width: 30%;
+      }
+    }
+
+    .footer-contact {
+      padding-left: 2rem;
+      font-family: $fg-book;
+
+      h2 {
+        font-family: $fg-std;
+          text-transform: uppercase;
+          border-bottom: 2px orange solid;
+          width: fit-content;
+          padding-bottom: 0;
+          line-height: 1.1rem;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+          font-weight: bolder;
+          letter-spacing: 0.05rem;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        padding-inline-start: 0;
+        line-height: 1.1rem;
+        list-style-type: none;
+
+        li {
+          list-style-type: none;
+          margin-bottom: 0.75rem;
+        }
+      }
+    }
+
+    .footer-menu {
+      padding-top: 1.5rem;
+    }
+
+    .media-links {
+      padding-top: 1.5rem;
+      a {
+        color: $off-white;
+
+        span {  // the icons
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .rector-visitor-block {
+      display: unset;
+      grid-column: 1/-1;
+      width: 100%;
+      text-align: center;
+    }
+
+  } // end of div.site-footer__top
+} // end of footer.site-footer
+
+
+// When there is a skew footer needs to go lower
 .has-skew footer.site-footer {
   bottom: -180px;
 }
@@ -245,3 +322,16 @@ main#content {
 
   }
 } // end of separators
+
+/** Admin Structure **/
+// styling moved node action tabs. See custom.js
+#node-admin-links .nav.primary {
+  margin-top: 4px;
+}
+
+#toolbar-administration #toolbar-bar {
+    border-bottom: 1px solid gray;
+    margin-bottom: -4px;
+    max-height: 43px;
+}
+
