@@ -324,6 +324,11 @@ main#content {
 } // end of separators
 
 /** Admin Structure **/
+
+body.toolbar-fixed #header #navbar-main {
+  padding: 8px 3rem 1.5rem !important;
+}
+
 // styling moved node action tabs. See custom.js
 #node-admin-links .nav.primary {
   margin-top: 4px;

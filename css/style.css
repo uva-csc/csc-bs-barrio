@@ -13047,6 +13047,289 @@ textarea.form-control-lg {
 }
 /* VARIABLES */
 /** Bootstrap Overrides **/
+.text-underline-orange {
+  border-bottom: 2px solid #E57200;
+}
+
+.text-underline-blue {
+  border-bottom: 2px solid #232D4B;
+}
+
+/* VARIABLES */
+/** Bootstrap Overrides **/
+/***  General Structural Styles ***/
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "franklin-gothic-urw", "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  margin: 0;
+}
+
+body {
+  margin-top: 0 !important;
+  max-width: 100%;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+#main.container {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#header #navbar-main {
+  padding: 8px 3rem;
+}
+#header #navbar-main .navbar-brand img {
+  max-height: 40px;
+}
+#header .navbar-nav .nav-item a {
+  margin-right: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+
+footer.site-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  z-index: 1;
+  color: #dadada;
+  padding: 1.5rem;
+}
+footer.site-footer section.region-footer-first {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-column-gap: 10px;
+  grid-row-gap: 1rem;
+}
+footer.site-footer section.region-footer-first .block-logo {
+  display: unset;
+  grid-column: 1/-1;
+}
+footer.site-footer section.region-footer-first .block-logo .footer-logo img {
+  height: 30%;
+  width: 30%;
+}
+footer.site-footer section.region-footer-first .footer-contact {
+  padding-left: 2rem;
+  font-family: "ITC Franklin Gothic Book", sans-serif;
+}
+footer.site-footer section.region-footer-first .footer-contact h2, footer.site-footer section.region-footer-first .footer-contact .h2 {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  text-transform: uppercase;
+  border-bottom: 2px orange solid;
+  width: fit-content;
+  padding-bottom: 0;
+  line-height: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+}
+footer.site-footer section.region-footer-first .footer-contact ul {
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0;
+  line-height: 1.1rem;
+  list-style-type: none;
+}
+footer.site-footer section.region-footer-first .footer-contact ul li {
+  list-style-type: none;
+  margin-bottom: 0.75rem;
+}
+footer.site-footer section.region-footer-first .footer-menu {
+  padding-top: 1.5rem;
+}
+footer.site-footer section.region-footer-first .media-links {
+  padding-top: 1.5rem;
+}
+footer.site-footer section.region-footer-first .media-links a {
+  color: #dadada;
+}
+footer.site-footer section.region-footer-first .media-links a span {
+  font-size: 1.5rem;
+}
+footer.site-footer section.region-footer-first .rector-visitor-block {
+  display: unset;
+  grid-column: 1/-1;
+  width: 100%;
+  text-align: center;
+}
+
+.has-skew footer.site-footer {
+  bottom: -180px;
+}
+
+.path-frontpage #main-wrapper {
+  margin-top: -1rem;
+}
+
+.block-system-breadcrumb-block {
+  display: none;
+}
+
+.blue-skew {
+  background: inherit;
+  position: relative;
+}
+.blue-skew .skew-overlay {
+  position: absolute;
+  background: #009fdf;
+  width: 100%;
+  height: 70%;
+  z-index: 1;
+  padding: 2rem;
+}
+.blue-skew .skew-overlay:after {
+  background: white;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 78%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-7deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+.blue-skew .skew-overlay ~ div.layout__region {
+  z-index: 1;
+}
+
+main#content .node__content {
+  margin-top: 0;
+}
+main#content .c-csc-hero {
+  width: 100vw;
+  min-height: 70vh;
+  background-position: top center;
+}
+main#content .c-csc-hero .text-formatted {
+  width: 100%;
+}
+main#content .c-csc-teaser_row .field--name-field-header h2, main#content .c-csc-teaser_row .field--name-field-header .h2 {
+  margin: 0px auto 12px;
+  width: fit-content;
+  text-align: center;
+  border-bottom: 4px solid #E57200;
+  line-height: 28px;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption {
+  color: #232D4B;
+  margin: 1rem auto;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  line-height: 20px;
+  width: fit-content;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
+  border-bottom: 4px solid #E57200;
+}
+main#content .c-csc-highlight_row {
+  background-color: #232D4B;
+}
+main#content .c-csc-highlight_row .wrapper {
+  margin: 0 auto;
+  max-width: 55vw;
+  padding-bottom: 3rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-plain-header {
+  padding-top: 1rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 110%;
+  text-transform: uppercase;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference {
+  padding: 2rem;
+  background-color: #e5f1f6;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference h2, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .h2 {
+  width: 100%;
+  font-size: 250%;
+  font-weight: bold;
+  text-align: left;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h3, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h3 {
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h4 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p:has(img) + h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p:has(img) + .h4 {
+  padding-top: 0.75rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p {
+  font-family: "ITC Franklin Gothic Book", sans-serif;
+  font-size: 1rem !important;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-left {
+  margin-right: 2rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-right {
+  margin-left: 2rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted a {
+  border-bottom: 4px solid #E57200;
+}
+
+main#content .csc-sep.dotted-orange {
+  border-top: 4px dotted #E57200;
+  margin: 2rem auto;
+  padding-top: 2rem;
+  width: 80%;
+  /* border-image: url('/themes/custom/csc_bs_sass/images/icons/orange-dot.svg'); */
+}
+main#content main#content .csc-sep.dotted-orange {
+  /* border-top: 4px dotted #E57200; */
+  margin: 2rem auto;
+  padding-top: 2rem;
+  width: 80%;
+}
+
+/** Admin Structure **/
+body.toolbar-fixed #header #navbar-main {
+  padding: 8px 3rem 1.5rem !important;
+}
+
+#node-admin-links .nav.primary {
+  margin-top: 4px;
+}
+
+#toolbar-administration #toolbar-bar {
+  border-bottom: 1px solid gray;
+  margin-bottom: -4px;
+  max-height: 43px;
+}
+
+/* VARIABLES */
+/** Bootstrap Overrides **/
 /** General Text Styles **/
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 1rem;
@@ -13316,14 +13599,14 @@ body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted ul {
 body.path-frontpage main#content .c-csc-hero .home-info-overlay {
   position: absolute;
   width: fit-content;
-  max-width: 23vw;
+  max-width: 24vw;
   transform: translateX(15vw);
   background-color: #b2c0e3DF;
   border-radius: 80%;
   color: white;
   text-align: left;
   font-size: 1rem;
-  padding: 3rem 1.5rem 0;
+  padding: 2.25rem 1.5rem 0.5rem;
 }
 body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted h2, body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted .h2 {
   width: 100%;
@@ -13333,6 +13616,7 @@ body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted 
   font-size: 1.5rem;
 }
 body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted p {
+  width: 99%;
   text-align: center;
 }
 body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 {
@@ -13457,275 +13741,6 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
 }
 body.path-frontpage main#content a {
   bottom-border: 4px solid #E57200 !important;
-}
-
-/* VARIABLES */
-/** Bootstrap Overrides **/
-/***  General Structural Styles ***/
-html, body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "franklin-gothic-urw", "ITC Franklin Gothic Std", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 17px;
-  margin: 0;
-}
-
-body {
-  margin-top: 0 !important;
-  max-width: 100%;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
-}
-
-#main.container {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-#header #navbar-main {
-  padding: 8px 3rem;
-}
-#header #navbar-main .navbar-brand img {
-  max-height: 40px;
-}
-#header .navbar-nav .nav-item a {
-  margin-right: 0.5rem;
-  color: white;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: bold;
-  letter-spacing: 0.05rem;
-}
-
-footer.site-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  min-height: 50px;
-  z-index: 1;
-  color: #dadada;
-  padding: 1.5rem;
-}
-footer.site-footer section.region-footer-first {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-column-gap: 10px;
-  grid-row-gap: 1rem;
-}
-footer.site-footer section.region-footer-first .block-logo {
-  display: unset;
-  grid-column: 1/-1;
-}
-footer.site-footer section.region-footer-first .block-logo .footer-logo img {
-  height: 30%;
-  width: 30%;
-}
-footer.site-footer section.region-footer-first .footer-contact {
-  padding-left: 2rem;
-  font-family: "ITC Franklin Gothic Book", sans-serif;
-}
-footer.site-footer section.region-footer-first .footer-contact h2, footer.site-footer section.region-footer-first .footer-contact .h2 {
-  font-family: "ITC Franklin Gothic Std", sans-serif;
-  text-transform: uppercase;
-  border-bottom: 2px orange solid;
-  width: fit-content;
-  padding-bottom: 0;
-  line-height: 1.1rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  font-weight: bolder;
-  letter-spacing: 0.05rem;
-}
-footer.site-footer section.region-footer-first .footer-contact ul {
-  margin: 0;
-  padding: 0;
-  padding-inline-start: 0;
-  line-height: 1.1rem;
-  list-style-type: none;
-}
-footer.site-footer section.region-footer-first .footer-contact ul li {
-  list-style-type: none;
-  margin-bottom: 0.75rem;
-}
-footer.site-footer section.region-footer-first .footer-menu {
-  padding-top: 1.5rem;
-}
-footer.site-footer section.region-footer-first .media-links {
-  padding-top: 1.5rem;
-}
-footer.site-footer section.region-footer-first .media-links a {
-  color: #dadada;
-}
-footer.site-footer section.region-footer-first .media-links a span {
-  font-size: 1.5rem;
-}
-footer.site-footer section.region-footer-first .rector-visitor-block {
-  display: unset;
-  grid-column: 1/-1;
-  width: 100%;
-  text-align: center;
-}
-
-.has-skew footer.site-footer {
-  bottom: -180px;
-}
-
-.path-frontpage #main-wrapper {
-  margin-top: -1rem;
-}
-
-.block-system-breadcrumb-block {
-  display: none;
-}
-
-.blue-skew {
-  background: inherit;
-  position: relative;
-}
-.blue-skew .skew-overlay {
-  position: absolute;
-  background: #009fdf;
-  width: 100%;
-  height: 70%;
-  z-index: 1;
-  padding: 2rem;
-}
-.blue-skew .skew-overlay:after {
-  background: white;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 78%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  transform: skewY(-7deg);
-  transform-origin: 100%;
-  z-index: -1;
-}
-.blue-skew .skew-overlay ~ div.layout__region {
-  z-index: 1;
-}
-
-main#content .node__content {
-  margin-top: 0;
-}
-main#content .c-csc-hero {
-  width: 100vw;
-  min-height: 70vh;
-  background-position: top center;
-}
-main#content .c-csc-hero .text-formatted {
-  width: 100%;
-}
-main#content .c-csc-teaser_row .field--name-field-header h2, main#content .c-csc-teaser_row .field--name-field-header .h2 {
-  margin: 0px auto 12px;
-  width: fit-content;
-  text-align: center;
-  border-bottom: 4px solid #E57200;
-  line-height: 28px;
-}
-main#content .c-csc-teaser_row .field.field--name-field-teasers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption {
-  color: #232D4B;
-  margin: 1rem auto;
-}
-main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p {
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  line-height: 20px;
-  width: fit-content;
-}
-main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
-  border-bottom: 4px solid #E57200;
-}
-main#content .c-csc-highlight_row {
-  background-color: #232D4B;
-}
-main#content .c-csc-highlight_row .wrapper {
-  margin: 0 auto;
-  max-width: 55vw;
-  padding-bottom: 3rem;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-plain-header {
-  padding-top: 1rem;
-  color: white;
-  width: 100%;
-  text-align: center;
-  font-size: 110%;
-  text-transform: uppercase;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference {
-  padding: 2rem;
-  background-color: #e5f1f6;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference h2, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .h2 {
-  width: 100%;
-  font-size: 250%;
-  font-weight: bold;
-  text-align: left;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h3, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h3 {
-  font-weight: bold;
-  font-size: 1.75rem;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h4 {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p:has(img) + h4, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p:has(img) + .h4 {
-  padding-top: 0.75rem;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p {
-  font-family: "ITC Franklin Gothic Book", sans-serif;
-  font-size: 1rem !important;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-left {
-  margin-right: 2rem;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-right {
-  margin-left: 2rem;
-}
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted a {
-  border-bottom: 4px solid #E57200;
-}
-
-main#content .csc-sep.dotted-orange {
-  border-top: 4px dotted #E57200;
-  margin: 2rem auto;
-  padding-top: 2rem;
-  width: 80%;
-  /* border-image: url('/themes/custom/csc_bs_sass/images/icons/orange-dot.svg'); */
-}
-main#content main#content .csc-sep.dotted-orange {
-  /* border-top: 4px dotted #E57200; */
-  margin: 2rem auto;
-  padding-top: 2rem;
-  width: 80%;
-}
-
-/** Admin Structure **/
-#node-admin-links .nav.primary {
-  margin-top: 4px;
-}
-
-#toolbar-administration #toolbar-bar {
-  border-bottom: 1px solid gray;
-  margin-bottom: -4px;
-  max-height: 43px;
 }
 
 /* GENERAL STYLES

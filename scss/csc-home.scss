@@ -64,14 +64,14 @@ body.path-frontpage main#content {
     .home-info-overlay {
       position: absolute;
       width: fit-content;
-      max-width: 23vw;
+      max-width: 24vw;
       transform: translateX(15vw);
       background-color: #b2c0e3DF;
       border-radius: 80%;
       color: white; // $uva-blue;
       text-align: left;
       font-size: 1rem;
-      padding: 3rem 1.5rem 0;
+      padding: 2.25rem 1.5rem 0.5rem;
 
 
       .text-formatted {
@@ -84,6 +84,7 @@ body.path-frontpage main#content {
         }
 
         p {
+          width:99%;
           text-align: center;
         }
       }

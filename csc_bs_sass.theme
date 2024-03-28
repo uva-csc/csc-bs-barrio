@@ -154,15 +154,16 @@ function csc_bs_sass_preprocess_paragraph__feature_separator(&$variables) {
 /** End of paragraphs **/
 
 /** Menus **/
+/*
 function csc_bs_sass_preprocess_menu(array &$vars) {
   if ($vars['menu_name'] == 'footer') {
-    kint($vars);
-    /*
+    //kint($vars);
+
     foreach ($vars['items'] as $idx => $item) {
-      $menuEntity = $item['entity'];
-      $myField = $menuEntity->get('field_menu_class');
-      $vars['items'][$idx]['attributes']['class'] = $myField->value;
+      $title_pts = explode(' ', $item['title']);
+      $title_pts[0] = "<span class=\"ul-orange\">$title_pts[0]</span>";
+      $vars['items'][$idx]['title'] = implode(' ', $title_pts);
     }
-    */
   }
 }
+*/
