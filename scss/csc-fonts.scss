@@ -48,3 +48,16 @@
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
 }
 
+// Bodoni Poster
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Poster.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-PosterItalic.otf") format("opentype");
+}

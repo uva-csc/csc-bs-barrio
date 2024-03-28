@@ -51,6 +51,37 @@ body {
     letter-spacing: .05rem;
   }
 
+
+
+  // Give Button
+  .nav li.csc-give-link {
+    margin-left: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid $uva-orange;
+    position: relative;
+    font-family: "ITC Franklin Gothic Std", sans-serif;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: transparent;
+    transform: skewX(-20deg);
+
+    a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: "Bodoni Poster",Arial,sans-serif;
+      white-space: nowrap;
+      width: fit-content;
+      transform: skewX(20deg);
+      padding: 0.5rem 0 0 0.5rem;
+    }
+  }
+
 } // End #header
 
 

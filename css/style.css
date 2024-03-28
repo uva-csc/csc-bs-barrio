@@ -13045,6 +13045,17 @@ textarea.form-control-lg {
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
 }
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Poster.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-PosterItalic.otf") format("opentype");
+}
 /* VARIABLES */
 /** Bootstrap Overrides **/
 .text-underline-orange {
@@ -13098,6 +13109,31 @@ body {
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
+}
+#header .nav li.csc-give-link {
+  margin-left: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid #E57200;
+  position: relative;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+  transform: skewX(-20deg);
+}
+#header .nav li.csc-give-link a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Bodoni Poster", Arial, sans-serif;
+  white-space: nowrap;
+  width: fit-content;
+  transform: skewX(20deg);
+  padding: 0.5rem 0 0 0.5rem;
 }
 
 footer.site-footer {
