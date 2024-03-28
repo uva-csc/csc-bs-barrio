@@ -13594,7 +13594,7 @@ body.path-frontpage main#content .c-csc-hero .field--name-field-text-overlay .fi
   grid-column: 1/-1;
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay {
-  transform: translateY(30px);
+  /*transform: translateY(30px);*/
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h2, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h2 {
   margin-bottom: 0;
@@ -13609,16 +13609,19 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
   letter-spacing: 0.05rem;
 }
 body.path-frontpage main#content .c-csc-hero .commons-hours {
-  background-color: #b2c0e3DF;
-  border-radius: 80%;
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  /*background-color: #b2c0e3DF;
+  border: thin solid #99b1e3;*/
   padding: 3rem 3rem 2rem 3rem;
-  color: white;
+  color: #232D4B;
   width: fit-content;
-  transform: translateX(10vw);
   text-align: center;
 }
 body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted h2, body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted .h2 {
   width: 100%;
+  font-size: 1.5rem;
   text-align: center;
   margin: 0;
   padding: 0 0 0 0.5rem;
@@ -13634,12 +13637,13 @@ body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted ul {
 }
 body.path-frontpage main#content .c-csc-hero .home-info-overlay {
   position: absolute;
+  right: 10px;
+  top: 30px;
   width: fit-content;
-  max-width: 24vw;
-  transform: translateX(15vw);
-  background-color: #b2c0e3DF;
-  border-radius: 80%;
-  color: white;
+  width: 400px;
+  /*background-color: #b2c0e3DF;
+  border: thin solid #99b1e3;*/
+  color: #232D4B;
   text-align: left;
   font-size: 1rem;
   padding: 2.25rem 1.5rem 0.5rem;
