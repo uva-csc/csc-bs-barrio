@@ -13147,7 +13147,7 @@ footer.site-footer {
 }
 footer.site-footer section.region-footer-first {
   display: grid;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: 20% 30% 26% 23%;
   grid-column-gap: 10px;
   grid-row-gap: 1rem;
 }
@@ -13598,7 +13598,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay {
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h2, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h2 {
   margin-bottom: 0;
-  font-size: 400%;
+  font-size: 300%;
   font-weight: bold;
   letter-spacing: 0.1rem;
   color: #232D4B;
