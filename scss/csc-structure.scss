@@ -115,10 +115,10 @@ footer.site-footer {
 
     .footer-contact {
       padding-left: 2rem;
-      font-family: $fg-book;
+      font-family: $font-frankgoth-book;
 
       h2 {
-        font-family: $fg-std;
+        font-family: $font-frankgoth-std;
           text-transform: uppercase;
           border-bottom: 2px orange solid;
           width: fit-content;
@@ -219,6 +219,36 @@ footer.site-footer {
   }
 }
 
+// Page Type Styles (Content types)
+// Landing pages
+body.node--type-landing-page  main#content {
+  h1.title_overlay {
+    padding: 15px;
+    background-color: #33333377;
+    font-family: $font-frankgoth-hvy;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 3rem;
+  }
+
+  .field--name-field-text-overlay .c-csc-text_box {
+    h2 {
+      font-family: $font-frankgoth-demi;
+      text-align: left;
+      margin: 1.5rem 0 0.5rem 25vw;
+      font-size: 2.75rem;
+      text-shadow: 2px 2px 5px black;
+    }
+    p {
+      color: $uva-blue;
+      max-width: 650px;
+      text-align: left;
+      margin-left: 27vw;
+      line-height: 1.5rem;
+    }
+  }
+} // End of Landing page styles
 
 // Paragraph Types
 
@@ -231,6 +261,7 @@ main#content {
     width: 100vw;
     min-height: 70vh;
     background-position: top center;
+
 
     .text-formatted {
       width: 100%;

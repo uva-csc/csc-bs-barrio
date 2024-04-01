@@ -39,8 +39,13 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
 
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
-  if (!empty($variables['node']) && $variables['node']->getType() != 'page_full_width') {
-    $variables['container'] = 'container';
+  $node = $variables['node'];
+  if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
+    $full_width_pages = ['page_full_width', 'landing_page'];
+    $pg_type = $variables['node']->getType();
+    if (!empty($variables['node']) && !in_array($pg_type, $full_width_pages)) {
+      $variables['container'] = 'container';
+    }
   }
 }
 
@@ -76,7 +81,7 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   if ($para->hasField('field_text_box_position')) {
     $boxsize = $para->get('field_text_box_position')->value;
     if (!empty($boxsize)) {
-      list($width, $height, $top, $left) = explode(',', str_replace(' ', '', $boxsize));
+      [$width, $height, $top, $left] = explode(',', str_replace(' ', '', $boxsize));
       // kint("box size", $boxsize, $width, $height);
       $top = (mb_substr($top, -1) === '%') ? $top : "{$top}px";
       $left = (mb_substr($left, -1) === '%') ? $left : "{$left}px";
@@ -119,6 +124,15 @@ function is_hex_val($hstr) {
  */
 function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   $para = $variables['paragraph'];
+  $node = $para->getParentEntity();
+  if (!empty($node) && $node->hasField('field_display_title')) {
+    if ($node->getType() == 'landing_page') {
+      $display_title = $node->get('field_display_title')->value;
+      $words = explode(' ', $display_title);
+      $words[0] = '<span class="text-blue">' . $words[0] . '</span>';
+      $variables['title_overlay'] = implode(' ', $words);
+    }
+  }
   $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
   $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
   $file = FILE::load($fid); //->createFileUrl();

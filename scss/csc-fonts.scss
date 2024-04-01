@@ -48,6 +48,19 @@
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
 }
 
+// Heavy
+@font-face {
+  font-family: "ITC Franklin Gothic Hvy";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Book";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
+}
+
 // Bodoni Poster
 @font-face {
   font-family: "Bodoni Poster";

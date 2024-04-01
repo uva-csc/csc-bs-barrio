@@ -47,6 +47,7 @@
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    <h1 class="title_overlay">{{ title_overlay | raw }}</h1>
     {% block content %}
       {{ content }}
     {% endblock %}

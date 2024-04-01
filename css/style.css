@@ -13046,6 +13046,17 @@ textarea.form-control-lg {
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
 }
 @font-face {
+  font-family: "ITC Franklin Gothic Hvy";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Book";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
+}
+@font-face {
   font-family: "Bodoni Poster";
   font-weight: normal;
   src: url("../css/fonts/bodoni/BodoniStd-Poster.otf") format("opentype");
@@ -13245,6 +13256,30 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
 }
 .blue-skew .skew-overlay ~ div.layout__region {
   z-index: 1;
+}
+
+body.node--type-landing-page main#content h1.title_overlay, body.node--type-landing-page main#content .title_overlay.h1 {
+  padding: 15px;
+  background-color: #33333377;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 3rem;
+}
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box h2, body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box .h2 {
+  font-family: "ITC Franklin Gothic Demi", sans-serif;
+  text-align: left;
+  margin: 1.5rem 0 0.5rem 25vw;
+  font-size: 2.75rem;
+  text-shadow: 2px 2px 5px black;
+}
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box p {
+  color: #232D4B;
+  max-width: 650px;
+  text-align: left;
+  margin-left: 27vw;
+  line-height: 1.5rem;
 }
 
 main#content .node__content {
