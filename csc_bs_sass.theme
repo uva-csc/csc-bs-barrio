@@ -39,12 +39,14 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
 
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
-  $node = $variables['node'];
-  if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
-    $full_width_pages = ['page_full_width', 'landing_page'];
-    $pg_type = $variables['node']->getType();
-    if (!empty($variables['node']) && !in_array($pg_type, $full_width_pages)) {
-      $variables['container'] = 'container';
+  if (array_key_exists('node', $variables)) {
+    $node = $variables['node'];
+    if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
+      $full_width_pages = ['page_full_width', 'landing_page'];
+      $pg_type = $variables['node']->getType();
+      if (!empty($variables['node']) && !in_array($pg_type, $full_width_pages)) {
+        $variables['container'] = 'container';
+      }
     }
   }
 }
@@ -136,8 +138,8 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
   $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
   $file = FILE::load($fid); //->createFileUrl();
-  $file_url = ImageStyle::load('wide')->buildUrl($file->uri->value);
-  // kint("para variables", $variables);
+  $file_url = ImageStyle::load('hero')->buildUrl($file->uri->value);
+  //kint($file_url);
   if (!empty($file_url)) {
     $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
     $variables['attributes']['style'][] = 'background-size: cover;';

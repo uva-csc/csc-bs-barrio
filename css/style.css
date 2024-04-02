@@ -13147,6 +13147,10 @@ body {
   padding: 0.5rem 0 0 0.5rem;
 }
 
+.region-featured-bottom-first {
+  margin-bottom: -0.5rem;
+}
+
 footer.site-footer {
   position: relative;
   bottom: 0;
@@ -13225,10 +13229,6 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   margin-top: -1rem;
 }
 
-.block-system-breadcrumb-block {
-  display: none;
-}
-
 .blue-skew {
   background: inherit;
   position: relative;
@@ -13259,7 +13259,7 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
 }
 
 body.node--type-landing-page main#content h1.title_overlay, body.node--type-landing-page main#content .title_overlay.h1 {
-  padding: 15px;
+  padding: 25px 0 15px;
   background-color: #33333377;
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   font-weight: bold;
@@ -13280,6 +13280,20 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   text-align: left;
   margin-left: 27vw;
   line-height: 1.5rem;
+}
+body.node--type-landing-page main#content .c-csc-hero {
+  margin-bottom: 1.5rem;
+}
+body.node--type-landing-page main#content .block-system-breadcrumb-block .content nav {
+  margin: 1rem auto;
+  width: fit-content;
+}
+body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody .content {
+  width: 75%;
+  margin-bottom: 4rem;
+}
+body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody p {
+  font-family: "ITC Franklin Gothic Book", sans-serif;
 }
 
 main#content .node__content {
@@ -13633,7 +13647,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay {
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h2, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h2 {
   margin-bottom: 0;
-  font-size: 300%;
+  font-size: 250%;
   font-weight: bold;
   letter-spacing: 0.1rem;
   color: #232D4B;

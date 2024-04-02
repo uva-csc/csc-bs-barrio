@@ -86,7 +86,12 @@ body {
 
 
 
-// Footer
+// Footer including featured bottom
+
+.region-featured-bottom-first {
+  margin-bottom: -0.5rem;
+}
+
 footer.site-footer {
   position: relative;
   bottom: 0;
@@ -183,7 +188,7 @@ footer.site-footer {
 
 // Breadcrumbs (hiding for now)
 .block-system-breadcrumb-block {
-  display: none;
+  // display: none;
 }
 
 // Layout Styles
@@ -223,7 +228,7 @@ footer.site-footer {
 // Landing pages
 body.node--type-landing-page  main#content {
   h1.title_overlay {
-    padding: 15px;
+    padding: 25px 0 15px;
     background-color: #33333377;
     font-family: $font-frankgoth-hvy;
     font-weight: bold;
@@ -246,6 +251,25 @@ body.node--type-landing-page  main#content {
       text-align: left;
       margin-left: 27vw;
       line-height: 1.5rem;
+    }
+  }
+
+  .c-csc-hero {
+    margin-bottom: 1.5rem;
+  }
+
+  .block-system-breadcrumb-block .content nav {
+    margin: 1rem auto;
+    width: fit-content;
+  }
+
+  .block-field-blocknodelanding-pagebody {
+    .content {
+      width: 75%;
+      margin-bottom: 4rem;
+    }
+    p {
+      font-family: $font-frankgoth-book;
     }
   }
 } // End of Landing page styles
