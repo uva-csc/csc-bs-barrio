@@ -34,8 +34,8 @@ body.path-frontpage main#content {
 
     .commons-hours {
       position: absolute;
-      left: 10px;
-      top: 30px;
+      left: 15px;
+      top: 40px;
       /*background-color: #b2c0e3DF;
       border: thin solid #99b1e3;*/
       padding: 3rem 3rem 2rem 3rem;
@@ -66,8 +66,8 @@ body.path-frontpage main#content {
 
     .home-info-overlay {
       position: absolute;
-      right: 10px;
-      top: 30px;
+      right: 15px;
+      top: 40px;
       width: fit-content;
       width: 400px;
       /*background-color: #b2c0e3DF;
@@ -180,6 +180,7 @@ body.path-frontpage main#content {
     .views-field-body p {
       font-weight: normal;
       font-size: 1rem;
+      line-height: 1.5rem;
     }
 
     // Links (read more)
@@ -252,6 +253,12 @@ body.path-frontpage main#content {
 
         .views-field-body {
           margin-top: 0.75rem;
+
+          p {
+            font-weight: normal;
+            font-size: 0.9rem;
+            line-height: 1.25rem;
+          }
         }
       }
     } // end of view-content div

@@ -42,13 +42,24 @@ body {
   }
 
   // Menu Links
-  .navbar-nav .nav-item a {
-    margin-right: 0.5rem;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
-    letter-spacing: .05rem;
+  .navbar-nav {
+    padding-top: 3px;
+    padding-left: 1rem;
+
+    .nav-item {
+      &.csc-give-link {
+        margin-left: 3rem;
+      }
+      a {
+        margin-right: 0.5rem;
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: .05rem;
+      }
+    }
+
   }
 
 
@@ -100,6 +111,10 @@ footer.site-footer {
   z-index: 1;
   color: $off-white;
   padding: 1.5rem;
+
+  a {
+    color: $off-white !important;
+  }
 
   // Footer grid for placing blocks
   section.region-footer-first {
@@ -369,6 +384,7 @@ main#content {
               padding-top: 0.75rem;
           }
           p {
+            margin-bottom: 0.5rem;
             font-family: 'ITC Franklin Gothic Book', sans-serif;
             font-size: 1rem!important;
           }

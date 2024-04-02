@@ -3,11 +3,16 @@
 /** General Text Styles **/
 
 h2, h3, h4, h5, h6 {
+  font-family: $font-frankgoth-demi;
   margin-top: 1rem;
 }
 
 h4, h5, h6 {
   text-transform: uppercase;
+}
+
+p {
+  font-family: $font-frankgoth-book;
 }
 
 /** Page Title Styles **/
@@ -110,6 +115,14 @@ div.geolocation-map-wrapper {
 /** Views **/
 .views-field-title {
   font-weight: bold;
+}
+
+.views-field-body {
+  font-family: $font-frankgoth-book;
+}
+
+.views-field-view-node a {
+  border-bottom: 4px solid #E57200;
 }
 
 .views-field-field-image + .views-field-field-date {
