@@ -10,6 +10,7 @@ use Drupal\Core\Url;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\smart_date\SmartDateTrait;
 
 const POSITION_RELATIVE = "position: relative;";
 
@@ -39,6 +40,7 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
 
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
+
   if (array_key_exists('node', $variables)) {
     $node = $variables['node'];
     if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
@@ -50,7 +52,17 @@ function csc_bs_sass_preprocess_page(&$variables) {
     }
   }
 }
-
+/*
+function csc_bs_sass_preprocess_node(&$variables) {
+  if (array_key_exists('node', $variables)) {
+    $node = $variables['node'];
+    if ($node->getType() == 'event') {
+      $dateval = $variables['node']->get('field_date')->get(0)->toArray();
+      $variables['is_all_day'] = (new class { use SmartDateTrait; })::isAllDay($dateval['value'], $dateval['end_value']);
+    }
+  }
+}
+*/
 /**
  * Implements custom classes for paragraphs with bundle name
  */
@@ -168,18 +180,3 @@ function csc_bs_sass_preprocess_paragraph__feature_separator(&$variables) {
 }
 
 /** End of paragraphs **/
-
-/** Menus **/
-/*
-function csc_bs_sass_preprocess_menu(array &$vars) {
-  if ($vars['menu_name'] == 'footer') {
-    //kint($vars);
-
-    foreach ($vars['items'] as $idx => $item) {
-      $title_pts = explode(' ', $item['title']);
-      $title_pts[0] = "<span class=\"ul-orange\">$title_pts[0]</span>";
-      $vars['items'][$idx]['title'] = implode(' ', $title_pts);
-    }
-  }
-}
-*/

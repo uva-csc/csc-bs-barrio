@@ -13004,46 +13004,83 @@ textarea.form-control-lg {
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
   font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: bold;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Std";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Demi";
-  font-weight: normal;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Demi.otf") format("opentype");
 }
 @font-face {
-  font-family: "ITC Franklin Gothic Demi";
-  font-weight: normal;
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
 }
 @font-face {
-  font-family: "ITC Franklin Gothic Book";
+  font-family: "ITC Franklin Gothic Condensed";
   font-weight: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCd.otf") format("opentype");
 }
 @font-face {
-  font-family: "ITC Franklin Gothic Book";
+  font-family: "ITC Franklin Gothic Condensed";
   font-weight: normal;
   font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCpIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCpIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Hvy";
@@ -13051,7 +13088,7 @@ textarea.form-control-lg {
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
 }
 @font-face {
-  font-family: "ITC Franklin Gothic Book";
+  font-family: "ITC Franklin Gothic Hvy";
   font-weight: normal;
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
@@ -13186,7 +13223,7 @@ footer.site-footer section.region-footer-first .block-logo .footer-logo img {
 }
 footer.site-footer section.region-footer-first .footer-contact {
   padding-left: 2rem;
-  font-family: "ITC Franklin Gothic Book", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 footer.site-footer section.region-footer-first .footer-contact h2, footer.site-footer section.region-footer-first .footer-contact .h2 {
   font-family: "ITC Franklin Gothic Std", sans-serif;
@@ -13278,7 +13315,7 @@ body.node--type-landing-page main#content h1.title_overlay, body.node--type-land
   font-size: 3rem;
 }
 body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box h2, body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box .h2 {
-  font-family: "ITC Franklin Gothic Demi", sans-serif;
+  font-family: "ITC Franklin Gothic Med", sans-serif;
   text-align: left;
   margin: 1.5rem 0 0.5rem 25vw;
   font-size: 2.75rem;
@@ -13303,7 +13340,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   margin-bottom: 4rem;
 }
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody p {
-  font-family: "ITC Franklin Gothic Book", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
 main#content .node__content {
@@ -13428,7 +13465,7 @@ body.toolbar-fixed #header #navbar-main {
 /** Bootstrap Overrides **/
 /** General Text Styles **/
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "ITC Franklin Gothic Demi", sans-serif;
+  font-family: "ITC Franklin Gothic Med", sans-serif;
   margin-top: 1rem;
 }
 
@@ -13437,7 +13474,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 
 p {
-  font-family: "ITC Franklin Gothic Book", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
 /** Page Title Styles **/
@@ -13530,7 +13567,7 @@ div.geolocation-map-wrapper {
 }
 
 .views-field-body {
-  font-family: "ITC Franklin Gothic Book", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
 .views-field-view-node a {
@@ -13596,6 +13633,47 @@ div.geolocation-map-wrapper {
 }
 .view.csc-news-block .view-footer a {
   border-bottom: 4px solid #E57200;
+}
+
+.view-events.events-row {
+  width: 80vw;
+  margin: 0 10vw;
+}
+.view-events.events-row .view-header h2, .view-events.events-row .view-header .h2 {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+}
+.view-events.events-row .view-content .views-view-responsive-grid {
+  justify-items: center;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
+  border-top: 16px solid #E57200;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article {
+  border: thin solid #939292;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article .field--name-field-image img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout {
+  margin: 10px 8px 0;
+  padding-top: 0.5rem;
+  line-height: 1.35rem;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout .field--name-field-date {
+  font-weight: bold;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout .field--name-field-location {
+  font-size: 90%;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout .block-field-blocknodeeventtitle {
+  margin-top: 0.5rem;
+  font-size: 110%;
+  font-weight: bold;
 }
 
 .block.help-curate {

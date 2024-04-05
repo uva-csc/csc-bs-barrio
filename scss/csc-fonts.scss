@@ -1,51 +1,90 @@
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
   font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
 }
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: bold;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "ITC Franklin Gothic Std";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
-}
-
-// Demi
-@font-face {
-  font-family: "ITC Franklin Gothic Demi";
-  font-weight: normal;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Demi.otf") format("opentype");
 }
 @font-face {
-  font-family: "ITC Franklin Gothic Demi";
-  font-weight: normal;
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
 }
 
-// Demi
+// Condensed
 @font-face {
-  font-family: "ITC Franklin Gothic Book";
+  font-family: "ITC Franklin Gothic Condensed";
   font-weight: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCd.otf") format("opentype");
 }
 @font-face {
-  font-family: "ITC Franklin Gothic Book";
+  font-family: "ITC Franklin Gothic Condensed";
   font-weight: normal;
   font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCdIt.otf") format("opentype");
+}
+
+
+// Compressed
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCpIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCpIt.otf") format("opentype");
+}
+
+// Med
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
 }
 
 // Heavy
@@ -55,7 +94,7 @@
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
 }
 @font-face {
-  font-family: "ITC Franklin Gothic Book";
+  font-family: "ITC Franklin Gothic Hvy";
   font-weight: normal;
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
