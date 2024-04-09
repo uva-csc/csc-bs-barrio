@@ -1,5 +1,21 @@
 @import 'variables.scss';
 
+.font-medium, .font-medium p {
+  font-family: 'ITC Franklin Gothic Med', sans-serif;
+}
+
+.font-heavy, .font-heavy p {
+  font-family: 'ITC Franklin Gothic Hvy', sans-serif;
+}
+
+.text-small, .text-sm {
+  font-size: 90%;
+}
+
+.text-xsmall, .text-xsm {
+  font-size: 80%;
+}
+
 .text-underline-orange {
   border-bottom: 2px solid $uva-orange;
 }

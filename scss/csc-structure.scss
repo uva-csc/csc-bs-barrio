@@ -212,7 +212,7 @@ footer.site-footer {
     position: absolute;
     background: #009fdf;
     width: 100%;
-    height: 70%;
+    height: 80%;
     z-index: 1;
     padding: 2rem;
 
@@ -322,12 +322,14 @@ main#content {
       .field--name-field-teaser-caption {
         color: $uva-blue;
         margin: 1rem auto;
+
         p {
           margin: 0 auto;
           padding: 0;
+          width: fit-content;
           text-align: center;
           line-height: 20px;
-          width: fit-content;
+          font-weight: bold;
 
           &:last-child {
             border-bottom: 4px solid $uva-orange;
@@ -399,6 +401,44 @@ main#content {
       }
     } // End of highlight row wrapper
   } // End of Highlight row
+
+  // Text-Row Paragraph
+  .c-csc-text_row {
+    // Default arrangement of 3 columns 25/50/25
+    .field--name-field-text-boxes {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 25% 50% 25%;
+    }
+
+    // Two Equal Columns (when class field on paragraph is set to "equal-2"
+    &.equal-2 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(2, 50%);
+      }
+    }
+
+    // Three Equal Columns (equal-3)
+    &.equal-3 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(3, 33%);
+      }
+    }
+
+    // Four Equal columns (equal-4)
+    &.equal-4 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(4, 25%);
+      }
+    }
+
+    // Five Equal columns (equal-5)
+    &.equal-5 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(5, 20%);
+      }
+    }
+  }
 } // end of paragraph type styles
 
 main#content {

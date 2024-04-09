@@ -13106,6 +13106,22 @@ textarea.form-control-lg {
 }
 /* VARIABLES */
 /** Bootstrap Overrides **/
+.font-medium, .font-medium p {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+}
+
+.font-heavy, .font-heavy p {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+}
+
+.text-small, .text-sm {
+  font-size: 90%;
+}
+
+.text-xsmall, .text-xsm {
+  font-size: 80%;
+}
+
 .text-underline-orange {
   border-bottom: 2px solid #E57200;
 }
@@ -13284,7 +13300,7 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   position: absolute;
   background: #009fdf;
   width: 100%;
-  height: 70%;
+  height: 80%;
   z-index: 1;
   padding: 2rem;
 }
@@ -13373,9 +13389,10 @@ main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-fie
 main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p {
   margin: 0 auto;
   padding: 0;
+  width: fit-content;
   text-align: center;
   line-height: 20px;
-  width: fit-content;
+  font-weight: bold;
 }
 main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
   border-bottom: 4px solid #E57200;
@@ -13431,6 +13448,23 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted a {
   border-bottom: 4px solid #E57200;
 }
+main#content .c-csc-text_row .field--name-field-text-boxes {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 25% 50% 25%;
+}
+main#content .c-csc-text_row.equal-2 .field--name-field-text-boxes {
+  grid-template-columns: repeat(2, 50%);
+}
+main#content .c-csc-text_row.equal-3 .field--name-field-text-boxes {
+  grid-template-columns: repeat(3, 33%);
+}
+main#content .c-csc-text_row.equal-4 .field--name-field-text-boxes {
+  grid-template-columns: repeat(4, 25%);
+}
+main#content .c-csc-text_row.equal-5 .field--name-field-text-boxes {
+  grid-template-columns: repeat(5, 20%);
+}
 
 main#content .csc-sep.dotted-orange {
   border-top: 4px dotted #E57200;
@@ -13464,17 +13498,20 @@ body.toolbar-fixed #header #navbar-main {
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /** General Text Styles **/
-h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "ITC Franklin Gothic Med", sans-serif;
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
   margin-top: 1rem;
 }
 
 h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
   text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 p {
   font-family: "ITC Franklin Gothic Std", sans-serif;
+  line-height: 1.5rem;
 }
 
 /** Page Title Styles **/
@@ -13561,6 +13598,15 @@ div.geolocation-map-wrapper {
   filter: drop-shadow(2px 4px 6px #232D4B);
 }
 
+/** Links **/
+a {
+  border-bottom: 4px solid #E57200;
+}
+
+a[class^=social-media-link], a[href^=tel], a[href^=mailto] {
+  border-bottom: none;
+}
+
 /** Views **/
 .views-field-title {
   font-weight: bold;
@@ -13581,6 +13627,9 @@ div.geolocation-map-wrapper {
 .view.csc-news-block {
   max-width: 75vw;
   margin: 2rem auto;
+}
+.view.csc-news-block a {
+  border-bottom: none;
 }
 .view.csc-news-block .view-header {
   position: relative;
@@ -13772,16 +13821,16 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay {
   /*transform: translateY(30px);*/
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h2, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h2 {
-  margin-bottom: 0;
-  font-size: 250%;
+  margin: 3rem 0 0;
+  font-size: 300%;
   font-weight: bold;
   letter-spacing: 0.1rem;
   color: #232D4B;
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h3 {
-  font-family: "ITC Franklin Gothic Demi", sans-serif;
-  font-size: 250%;
-  letter-spacing: 0.05rem;
+  margin-top: 0;
+  font-size: 220%;
+  letter-spacing: 0.03rem;
 }
 body.path-frontpage main#content .c-csc-hero .commons-hours {
   position: absolute;
@@ -13906,9 +13955,10 @@ body.path-frontpage main#content .upcoming-events {
 }
 body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#content .upcoming-events .h3 {
   display: inline-block;
-  padding-top: 0.75rem;
-  padding-left: 25%;
+  maring-top: 0.5rem;
   margin-bottom: 5rem;
+  padding-bottom: 0.75rem;
+  padding-left: 10%;
 }
 body.path-frontpage main#content .upcoming-events h3 span, body.path-frontpage main#content .upcoming-events .h3 span {
   position: absolute;
@@ -13959,9 +14009,6 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
   font-weight: normal;
   font-size: 0.9rem;
   line-height: 1.25rem;
-}
-body.path-frontpage main#content a {
-  bottom-border: 4px solid #E57200 !important;
 }
 
 /* GENERAL STYLES

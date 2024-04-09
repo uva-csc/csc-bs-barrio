@@ -2,17 +2,20 @@
 
 /** General Text Styles **/
 
-h2, h3, h4, h5, h6 {
-  font-family: $font-frankgoth-med;
+h1, h2, h3 {
+  font-family: $font-frankgoth-hvy;
   margin-top: 1rem;
 }
 
 h4, h5, h6 {
+  font-family: $font-frankgoth-med;
   text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 p {
   font-family: $font-frankgoth-std;
+  line-height: 1.5rem;
 }
 
 /** Page Title Styles **/
@@ -111,6 +114,15 @@ div.geolocation-map-wrapper {
   filter: drop-shadow(2px 4px 6px #232D4B);
 }
 
+/** Links **/
+a {
+  border-bottom: 4px solid $uva-orange;
+}
+
+a[class^=social-media-link], a[href^=tel], a[href^=mailto] { // Do not underline social media icons, telphone numbers, or email addresses
+  border-bottom: none;
+}
+
 
 /** Views **/
 .views-field-title {
@@ -133,6 +145,11 @@ div.geolocation-map-wrapper {
 .view.csc-news-block {
   max-width: 75vw;
   margin: 2rem auto;
+
+  // No orange border on links
+  a {
+    border-bottom: none;
+  }
 
   // News block header
   .view-header {
