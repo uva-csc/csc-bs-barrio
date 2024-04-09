@@ -13649,31 +13649,55 @@ div.geolocation-map-wrapper {
   justify-items: center;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
-  border-top: 16px solid #E57200;
-}
-.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article {
   border: thin solid #939292;
+  border-top: 16px solid #E57200;
+  /*margin: 10px 8px 0;
+  padding-top: 0.5rem;
+  line-height: 1.35rem;*/
 }
-.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article .field--name-field-image img {
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-image {
+  border-top: thin solid #939292;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-image img {
   border: none;
   border-radius: 0;
   padding: 0;
 }
-.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout {
-  margin: 10px 8px 0;
-  padding-top: 0.5rem;
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date {
+  margin: 18px 8px 0;
   line-height: 1.35rem;
-}
-.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout .field--name-field-date {
   font-weight: bold;
 }
-.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout .field--name-field-location {
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date .smart-date--time {
+  display: none;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-location {
+  margin: 0 8px;
   font-size: 90%;
 }
-.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .metadata.layout .block-field-blocknodeeventtitle {
-  margin-top: 0.5rem;
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title {
+  margin: 0.5rem 8px 0;
   font-size: 110%;
   font-weight: bold;
+}
+.view-events.events-row .view-footer {
+  width: fit-content;
+  margin: 3rem auto 1rem;
+  text-align: center;
+}
+.view-events.events-row .view-footer p {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-size: 90%;
+  padding: 0rem 3.5rem;
+  border-radius: 3px;
+  line-height: 1.15rem;
+}
+.view-events.events-row .view-footer p a {
+  display: inline-block;
+  padding-top: 0.35rem;
+  color: #fdfdfd !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .block.help-curate {

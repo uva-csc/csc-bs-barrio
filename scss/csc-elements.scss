@@ -219,42 +219,71 @@ div.geolocation-map-wrapper {
         justify-items: center;
 
         .views-view-responsive-grid__item-inner {
+          border: thin solid #939292;
           border-top: 16px solid $uva-orange;
 
-          article {
-            border: thin solid #939292;
 
-          .field--name-field-image img {
+          .views-field-field-image {
+            border-top: thin solid #939292;
+            img {
               border: none;
               border-radius: 0;
               padding: 0;
             }
-          }
+          } // End of .field--name-field-image
 
-          .metadata.layout {
-            margin: 10px 8px 0;
+
+            /*margin: 10px 8px 0;
             padding-top: 0.5rem;
-            line-height: 1.35rem;
+            line-height: 1.35rem;*/
 
-            .field--name-field-date {
+            .views-field-field-date {
+              margin: 18px 8px 0;
+              line-height: 1.35rem;
               font-weight: bold;
+
+              .smart-date--time {
+                display: none;
+              }
             }
 
-            .field--name-field-location {
+            .views-field-field-location {
+              margin: 0 8px;
               font-size: 90%;
             }
 
-            .block-field-blocknodeeventtitle {
-              margin-top: 0.5rem;
+            .views-field-title {
+              margin: 0.5rem 8px 0;
               font-size: 110%;
               font-weight: bold;
             }
-          }
+
         }  // End of views-view-responsive-grid__item-inner
       } // End of views-view-responsive-grid
-    }
-  }
-}
+    } // End of .view-events .view-content
+    .view-footer {
+      width: fit-content;
+      margin: 3rem auto 1rem;
+      text-align: center;
+
+      p { // The "More Events Button"
+        font-family: $font-frankgoth-hvy;
+        font-size: 90%;
+        padding: 0rem 3.5rem;
+        border-radius: 3px;
+        line-height: 1.15rem;
+
+        a {
+          display: inline-block;
+          padding-top: 0.35rem;
+          color: $white !important;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    } // End of .events-row .footer
+  } // End of &.events-row
+} // End of .view-events
 
 // Common footer / bottom of page elements
 // Help curate block
