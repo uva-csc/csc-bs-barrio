@@ -13345,7 +13345,10 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   margin-left: 27vw;
   line-height: 1.5rem;
 }
-body.node--type-landing-page main#content .c-csc-hero {
+body.node--type-landing-page main#content .field--name-field-hero-top {
+  margin-top: -1rem;
+}
+body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-hero {
   margin-bottom: 1.5rem;
 }
 body.node--type-landing-page main#content .block-system-breadcrumb-block .content nav {
@@ -13530,6 +13533,10 @@ a.plain,
 a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto] {
+  border-bottom: none;
+}
+
+.view.events-row a {
   border-bottom: none;
 }
 
@@ -13762,7 +13769,7 @@ div.geolocation-map-wrapper {
 .block.help-curate {
   position: absolute;
   right: 3rem;
-  margin-top: -3.5rem;
+  margin-top: -2.75rem;
   width: fit-content;
   font-size: 100%;
   font-weight: bold;

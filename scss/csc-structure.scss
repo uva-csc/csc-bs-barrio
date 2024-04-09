@@ -267,8 +267,11 @@ body.node--type-landing-page  main#content {
     }
   }
 
-  .c-csc-hero {
-    margin-bottom: 1.5rem;
+  .field--name-field-hero-top {
+    margin-top: -1rem;
+    .c-csc-hero {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .block-system-breadcrumb-block .content nav {

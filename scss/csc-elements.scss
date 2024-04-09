@@ -31,6 +31,12 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
   border-bottom: none;
 }
 
+.view.events-row {
+  a {
+    border-bottom: none;
+  }
+}
+
 /** Page Title Styles **/
 // Title in layout builder
 .block-layout-builder .field--name-title {
@@ -311,7 +317,7 @@ div.geolocation-map-wrapper {
 .block.help-curate {
   position: absolute;
   right: 3rem;
-  margin-top: -3.5rem;
+  margin-top: -2.75rem;
   width: fit-content;
   font-size: 100%;
   font-weight: bold;
