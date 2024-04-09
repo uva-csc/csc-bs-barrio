@@ -13222,6 +13222,7 @@ footer.site-footer {
 }
 footer.site-footer a {
   color: #dadada !important;
+  border-bottom-width: 2px;
 }
 footer.site-footer section.region-footer-first {
   display: grid;
