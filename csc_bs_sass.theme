@@ -52,6 +52,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
     }
   }
 }
+
 /*
 function csc_bs_sass_preprocess_node(&$variables) {
   if (array_key_exists('node', $variables)) {
@@ -59,10 +60,23 @@ function csc_bs_sass_preprocess_node(&$variables) {
     if ($node->getType() == 'event') {
       $dateval = $variables['node']->get('field_date')->get(0)->toArray();
       $variables['is_all_day'] = (new class { use SmartDateTrait; })::isAllDay($dateval['value'], $dateval['end_value']);
+      $variables['attributes']['class'][] = 'all-day';
     }
   }
 }
 */
+
+/*
+function csc_bs_sass_preprocess_block(&$variables) {
+  $bid = $variables['elements']['#plugin_id'];
+  if ($bid == 'views_block:events-block_3') {
+    // $variables['attributes']['class'][] = 'thans-event-block';
+    // kint($variables);
+    //Drupal::logger('csc_bs_sass block maybe?!')->notice(json_encode($variables['elements'], JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT));
+  }
+}
+*/
+
 /**
  * Implements custom classes for paragraphs with bundle name
  */
@@ -180,3 +194,57 @@ function csc_bs_sass_preprocess_paragraph__feature_separator(&$variables) {
 }
 
 /** End of paragraphs **/
+
+/** Views Preprocessing */
+/*
+function csc_bs_sass_preprocess_views_view(&$variables) {
+  //kint(array_keys($variables['view_array']));
+ // kint($variables['rows']);
+  $variables['allday'] = [];
+  $view_id = $variables['id'];
+  if ($view_id == 'events') {
+    $view = $variables['view'];
+    $shown = false;
+    foreach ($view->result as $n => $row) {
+      $date = $row->_entity->get('field_date')->getValue()[0];
+      $isallday = isDateAllDay($date['value'], $date['end_value']);
+      if (!$shown) {
+        $class = ($isallday) ? 'allday' : 'notallday';
+        kint(get_class($variables['rows'][$n]));
+        $shown = true;
+      }
+    }
+  }
+}
+*/
+
+
+/** Field Preprocessing */
+
+/* test
+function csc_bs_sass_preprocess_field(&$variables) {
+  if (str_contains($variables['field_name'], 'date')) {
+    $akeys = json_encode(array_keys($variables));
+    csc_log('date field keys: ' . $akeys);
+  } else {
+    csc_log(json_encode($variables['field_name']));
+  }
+}
+*/
+
+/** Utitlity functions */
+
+function csc_log($msg='no message sent to log function', $ltype='notice', $sufx='') {
+  if (strlen($sufx) > 0) { $sufx = " $sufx"; }
+  if ($ltype == 'warning') {
+    Drupal::logger("csc_bs_sass$sufx")->warning($msg);
+  } elseif ($ltype == 'error') {
+    Drupal::logger("csc_bs_sass$sufx")->error($msg);
+  } else {
+    Drupal::logger("csc_bs_sass$sufx")->notice($msg);
+  }
+}
+
+function isDateAllDay($sttm, $entm) {
+  return (new class { use SmartDateTrait; })::isAllDay($sttm, $entm);
+}
