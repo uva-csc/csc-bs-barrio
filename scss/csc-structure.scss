@@ -212,7 +212,7 @@ footer.site-footer {
     position: absolute;
     background: #009fdf;
     width: 100%;
-    height: 80%;
+    height: 70%;
     z-index: 1;
     padding: 2rem;
 
@@ -225,7 +225,7 @@ footer.site-footer {
       left: 0;
       position: absolute;
       right: 0;
-      transform: skewY(-7deg);
+      transform: skewY(-8deg);
       transform-origin: 100%;
       z-index: -1;
     }
@@ -473,9 +473,14 @@ body.toolbar-fixed #header #navbar-main {
   margin-top: 4px;
 }
 
-#toolbar-administration #toolbar-bar {
+#toolbar-administration {
+  a {
+    border-bottom: none;
+  }
+  #toolbar-bar {
     border-bottom: 1px solid gray;
     margin-bottom: -4px;
     max-height: 43px;
+  }
 }
 

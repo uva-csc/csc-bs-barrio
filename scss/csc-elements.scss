@@ -18,6 +18,19 @@ p {
   line-height: 1.5rem;
 }
 
+
+/** Links **/
+a {
+  border-bottom: 4px solid $uva-orange;
+}
+
+a.plain,
+a[class^=social-media-link],
+a[href^=tel],
+a[href^=mailto] { // Do not underline social media icons, telphone numbers, or email addresses
+  border-bottom: none;
+}
+
 /** Page Title Styles **/
 // Title in layout builder
 .block-layout-builder .field--name-title {
@@ -112,15 +125,6 @@ div.geolocation-map-wrapper {
   width: 500px;
   height: 300px;
   filter: drop-shadow(2px 4px 6px #232D4B);
-}
-
-/** Links **/
-a {
-  border-bottom: 4px solid $uva-orange;
-}
-
-a[class^=social-media-link], a[href^=tel], a[href^=mailto] { // Do not underline social media icons, telphone numbers, or email addresses
-  border-bottom: none;
 }
 
 
@@ -322,13 +326,19 @@ a[class^=social-media-link], a[href^=tel], a[href^=mailto] { // Do not underline
     flex-direction: row;
     justify-content: space-evenly;
 
+    a {
+      border-bottom: none;
+    }
+
     button {
+      display: inline-block;
+      margin-top: -0.8rem;
       background: transparent;
       color: white;
       border: thin solid white;
-      width: 40%;
       height: 38px;
-      padding-top: 0.25rem;
+      padding: 0.25rem 1.5rem 0;
+      font-weight: bold;
       text-transform: uppercase;
     }
   }

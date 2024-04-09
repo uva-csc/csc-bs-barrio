@@ -13300,7 +13300,7 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   position: absolute;
   background: #009fdf;
   width: 100%;
-  height: 80%;
+  height: 70%;
   z-index: 1;
   padding: 2rem;
 }
@@ -13313,7 +13313,7 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   left: 0;
   position: absolute;
   right: 0;
-  transform: skewY(-7deg);
+  transform: skewY(-8deg);
   transform-origin: 100%;
   z-index: -1;
 }
@@ -13489,6 +13489,9 @@ body.toolbar-fixed #header #navbar-main {
   margin-top: 4px;
 }
 
+#toolbar-administration a {
+  border-bottom: none;
+}
 #toolbar-administration #toolbar-bar {
   border-bottom: 1px solid gray;
   margin-bottom: -4px;
@@ -13512,6 +13515,18 @@ h4, .h4, h5, .h5, h6, .h6 {
 p {
   font-family: "ITC Franklin Gothic Std", sans-serif;
   line-height: 1.5rem;
+}
+
+/** Links **/
+a {
+  border-bottom: 4px solid #E57200;
+}
+
+a.plain,
+a[class^=social-media-link],
+a[href^=tel],
+a[href^=mailto] {
+  border-bottom: none;
 }
 
 /** Page Title Styles **/
@@ -13596,15 +13611,6 @@ div.geolocation-map-wrapper {
   width: 500px;
   height: 300px;
   filter: drop-shadow(2px 4px 6px #232D4B);
-}
-
-/** Links **/
-a {
-  border-bottom: 4px solid #E57200;
-}
-
-a[class^=social-media-link], a[href^=tel], a[href^=mailto] {
-  border-bottom: none;
 }
 
 /** Views **/
@@ -13767,13 +13773,18 @@ a[class^=social-media-link], a[href^=tel], a[href^=mailto] {
   flex-direction: row;
   justify-content: space-evenly;
 }
+.block.help-curate p:last-child a {
+  border-bottom: none;
+}
 .block.help-curate p:last-child button {
+  display: inline-block;
+  margin-top: -0.8rem;
   background: transparent;
   color: white;
   border: thin solid white;
-  width: 40%;
   height: 38px;
-  padding-top: 0.25rem;
+  padding: 0.25rem 1.5rem 0;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
