@@ -152,7 +152,7 @@ footer.site-footer {
         margin: 0;
         padding: 0;
         padding-inline-start: 0;
-        line-height: 1.1rem;
+        line-height: 1.3rem;
         list-style-type: none;
 
         li {
@@ -482,5 +482,9 @@ body.toolbar-fixed #header #navbar-main {
     margin-bottom: -4px;
     max-height: 43px;
   }
+}
+
+.contextual-links a {
+  border-bottom: none;
 }
 

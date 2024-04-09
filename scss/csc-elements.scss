@@ -356,13 +356,15 @@ div.geolocation-map-wrapper {
     max-width: 1400px;
     margin-left: 13%;
 
-    p {
+    p a {
       display: flex;
       flex-direction: row;
       color: white !important;
       letter-spacing: .05rem;
       font-size: 95%;
+      font-weight: bold;
 
+     /* Took out input text box because link goes to form
       input {
         display: inline-block;
         margin-left: 1.5rem;
@@ -371,7 +373,7 @@ div.geolocation-map-wrapper {
         border: thin solid gray;
         border-radius: 8px;
         min-width: 20%;
-      }
+      } */
     }
   }
 }

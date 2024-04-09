@@ -13258,7 +13258,7 @@ footer.site-footer section.region-footer-first .footer-contact ul {
   margin: 0;
   padding: 0;
   padding-inline-start: 0;
-  line-height: 1.1rem;
+  line-height: 1.3rem;
   list-style-type: none;
 }
 footer.site-footer section.region-footer-first .footer-contact ul li {
@@ -13496,6 +13496,10 @@ body.toolbar-fixed #header #navbar-main {
   border-bottom: 1px solid gray;
   margin-bottom: -4px;
   max-height: 43px;
+}
+
+.contextual-links a {
+  border-bottom: none;
 }
 
 /* VARIABLES */
@@ -13800,21 +13804,23 @@ div.geolocation-map-wrapper {
   max-width: 1400px;
   margin-left: 13%;
 }
-.block.email-updates .field--name-body p {
+.block.email-updates .field--name-body p a {
   display: flex;
   flex-direction: row;
   color: white !important;
   letter-spacing: 0.05rem;
   font-size: 95%;
-}
-.block.email-updates .field--name-body p input {
-  display: inline-block;
-  margin-left: 1.5rem;
-  margin-top: -0.4rem;
-  background: transparent;
-  border: thin solid gray;
-  border-radius: 8px;
-  min-width: 20%;
+  font-weight: bold;
+  /* Took out input text box because link goes to form
+   input {
+     display: inline-block;
+     margin-left: 1.5rem;
+     margin-top: -0.4rem;
+     background: transparent;
+     border: thin solid gray;
+     border-radius: 8px;
+     min-width: 20%;
+   } */
 }
 
 /* VARIABLES */
