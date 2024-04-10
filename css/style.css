@@ -13245,7 +13245,7 @@ footer.site-footer section.region-footer-first .footer-contact {
 footer.site-footer section.region-footer-first .footer-contact h2, footer.site-footer section.region-footer-first .footer-contact .h2 {
   font-family: "ITC Franklin Gothic Std", sans-serif;
   text-transform: uppercase;
-  border-bottom: 2px orange solid;
+  border-bottom: 2px #E57200 solid;
   width: fit-content;
   padding-bottom: 0;
   line-height: 1.1rem;
