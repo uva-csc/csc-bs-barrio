@@ -45,9 +45,9 @@ function csc_bs_sass_preprocess_page(&$variables) {
     $node = $variables['node'];
     if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
       $full_width_pages = ['page_full_width', 'landing_page'];
-      $pg_type = $variables['node']->getType();
-      if (!empty($variables['node']) && !in_array($pg_type, $full_width_pages)) {
-        $variables['container'] = 'container';
+      $pg_type = $node->getType();
+      if (in_array($pg_type, $full_width_pages)) {
+        $variables['container'] = 'container-fluid';
       }
     }
   }
