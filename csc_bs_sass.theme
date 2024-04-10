@@ -163,13 +163,10 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   }
   $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
   $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
-  $file = FILE::load($fid); //->createFileUrl();
-  $file_url = ImageStyle::load('hero')->buildUrl($file->uri->value);
-  //kint($file_url);
+  $file_url = FILE::load($fid)->createFileUrl();
   if (!empty($file_url)) {
     $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
     $variables['attributes']['style'][] = 'background-size: cover;';
-    /* $variables['attributes']['style'][] = 'background-position: center center;'; Set in scss depending on situation */
   }
 }
 
