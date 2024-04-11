@@ -31,6 +31,8 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
   border-bottom: none;
 }
 
+#header .navbar,
+.path-webform,
 .view.events-row {
   a {
     border-bottom: none;
@@ -383,4 +385,14 @@ div.geolocation-map-wrapper {
     }
   }
 }
+// End of Bottom of Page Elements
+
+// Webforms
+body.path-webform {
+  .help-curate {
+    display: none;
+  }
+}
+
+// End of Webforms
 

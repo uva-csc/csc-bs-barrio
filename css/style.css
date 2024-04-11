@@ -13536,6 +13536,8 @@ a[href^=mailto] {
   border-bottom: none;
 }
 
+#header .navbar a,
+.path-webform a,
 .view.events-row a {
   border-bottom: none;
 }
@@ -13828,6 +13830,10 @@ div.geolocation-map-wrapper {
      border-radius: 8px;
      min-width: 20%;
    } */
+}
+
+body.path-webform .help-curate {
+  display: none;
 }
 
 /* VARIABLES */
