@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'csc-mixins.scss';
 
 /***  General Structural Styles ***/
 
@@ -23,6 +24,10 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+}
+
+#main-wrapper {
+  min-height: 800px; // temporary TODO: remove this
 }
 
 #main.container {
@@ -205,6 +210,11 @@ footer.site-footer {
 }
 
 // Layout Styles
+.layout--twocol-section {
+  .fixed-width {
+
+  }
+}
 .blue-skew {
   background: inherit;
   position: relative;
@@ -237,13 +247,60 @@ footer.site-footer {
   }
 }
 
+.skew-bottom {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  transform-origin: top left;
+  background-color: $white;
+}
+
+.bg-skew {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  will-change: transfrom;
+  z-index: 1;
+}
+
 // Page Type Styles (Content types)
 // Landing pages
 body.node--type-landing-page  main#content {
-  h1.title_overlay {
+  &.csc-lg-hero {
+    .c-csc-hero {
+      height: fit-content;
+
+      .c-csc-text_box.hero-title {
+        h1 {
+          padding: 35px 0 10px;
+          color: $white;
+          font-family: "ITC Franklin Gothic Hvy", sans-serif;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          font-size: 3rem;
+        }
+      } // End of .hero-title
+
+      .overlay-table {
+        table {
+          width: 50vw;
+          min-width: 950px;
+          margin: auto;
+
+          th, td {
+            text-align: left;
+          }
+        }
+      }
+    }
+  } // End of Large Hero pages (like Student)
+
+  h1.title-overlay {
     padding: 25px 0 15px;
     background-color: #33333377;
-    font-family: $font-frankgoth-hvy;
+    color: $white;
+    font-family: "ITC Franklin Gothic Hvy", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -262,7 +319,7 @@ body.node--type-landing-page  main#content {
       color: $uva-blue;
       max-width: 650px;
       text-align: left;
-      margin-left: 27vw;
+      /* margin-left: 27vw; TODO: Make this more specific to its context */
       line-height: 1.5rem;
     }
   }
@@ -301,7 +358,6 @@ main#content {
     width: 100vw;
     min-height: 70vh;
     background-position: top center;
-
 
     .text-formatted {
       width: 100%;
@@ -441,7 +497,30 @@ main#content {
         grid-template-columns: repeat(5, 20%);
       }
     }
+  } // End of text-row paragraph
+
+  // Skewed color header paragraph
+  .c-csc-skewed_colored_header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 250px;
+    z-index: -1;
+
+    & > div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    & + .paragraph {
+      max-width: 80vw;
+      margin: inherit auto;
+    }
   }
+
 } // end of paragraph type styles
 
 main#content {
@@ -464,6 +543,13 @@ main#content {
 
   }
 } // end of separators
+
+/** General Structure **/
+// For constricting width of paragraphs etc in full-width pages
+.fixed-width {
+  max-width: 80vw;
+  margin: auto;
+}
 
 /** Admin Structure **/
 

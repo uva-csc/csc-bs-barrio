@@ -17,3 +17,15 @@
   }
 }
 */
+
+// Layout
+@media (min-width: 48em) {
+  // A fixed width section (paragraph) in a full width page (content type)
+  body.node--type-page-full-width {
+    .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--first,
+    .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--second {
+      flex: 0 1 45%;
+      padding: 1rem;
+    }
+  }
+}

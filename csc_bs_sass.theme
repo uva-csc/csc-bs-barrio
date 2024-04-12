@@ -41,11 +41,17 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
 
+  // Node pages
   if (array_key_exists('node', $variables)) {
     $node = $variables['node'];
+    $pg_type = $node->getType();
+    if ($node->hasField('field_class_attribute')) {
+      $class = $node->get('field_class_attribute')->value;
+      // kint('vars', $variables);
+      $variables['content_attributes']->addClass($class);
+    }
     if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
       $full_width_pages = ['page_full_width', 'landing_page'];
-      $pg_type = $node->getType();
       if (in_array($pg_type, $full_width_pages)) {
         $variables['container'] = 'container-fluid';
       }
@@ -130,23 +136,6 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   }
 }
 
-function csc_color_code($cstr) {
-  // kint("in color code function", $cstr);
-  if (empty($cstr)) { return ''; }
-  if (str_starts_with($cstr, '#') || is_hex_val($cstr)) {
-    $cstr = '#' . str_replace('#', '', $cstr); // Make sure there is a hash-sign for custom colors;
-  } else {
-    $cstr = "text-" . strtolower($cstr);
-  }
-  return $cstr;
-}
-
-function is_hex_val($hstr) {
-  $hstr = str_replace('#', '', $hstr);
-  $slen = strlen($hstr);
-  return (ctype_xdigit($hstr) && ($slen === 3 || $slen === 6 || $slen === 8));
-}
-
 /**
  * Implements background image for hero paragraphs
  */
@@ -156,17 +145,21 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   if (!empty($node) && $node->hasField('field_display_title')) {
     if ($node->getType() == 'landing_page') {
       $display_title = $node->get('field_display_title')->value;
-      $words = explode(' ', $display_title);
-      $words[0] = '<span class="text-blue">' . $words[0] . '</span>';
-      $variables['title_overlay'] = implode(' ', $words);
+      if ($display_title) {
+        $words = explode(' ', $display_title);
+        $words[0] = '<span class="text-blue">' . $words[0] . '</span>';
+        $variables['title_overlay'] = implode(' ', $words);
+      }
     }
   }
-  $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
-  $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
-  $file_url = FILE::load($fid)->createFileUrl();
-  if (!empty($file_url)) {
-    $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
-    $variables['attributes']['style'][] = 'background-size: cover;';
+  if ($para->get('field_hero_image')) {
+    $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
+    $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
+    $file_url = FILE::load($fid)->createFileUrl();
+    if (!empty($file_url)) {
+      $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
+      $variables['attributes']['style'][] = 'background-size: cover;';
+    }
   }
 }
 
@@ -188,6 +181,14 @@ function csc_bs_sass_preprocess_paragraph__feature_separator(&$variables) {
   $variables['attributes']['class'][] = "$septype-$sepcolor";
   $variables['attributes']['class'][] = "text-center";
   $variables['attributes']['class'][] = "text-$textcolor";
+}
+
+function csc_bs_sass_preprocess_paragraph__skewed_colored_header(&$variables) {
+  $para = $variables['paragraph'];
+  $variables['color'] = $para->get('field_color')->value;
+  $variables['height'] = $para->get('field_height')->value;
+  $variables['angle'] = $para->get('field_skew_angle')->value;
+  $variables['custom_color'] = $para->get('field_custom_color')->value;
 }
 
 /** End of paragraphs **/
@@ -230,6 +231,23 @@ function csc_bs_sass_preprocess_field(&$variables) {
 */
 
 /** Utitlity functions */
+
+function csc_color_code($cstr) {
+  // kint("in color code function", $cstr);
+  if (empty($cstr)) { return ''; }
+  if (str_starts_with($cstr, '#') || is_hex_val($cstr)) {
+    $cstr = '#' . str_replace('#', '', $cstr); // Make sure there is a hash-sign for custom colors;
+  } else {
+    $cstr = "text-" . strtolower($cstr);
+  }
+  return $cstr;
+}
+
+function is_hex_val($hstr) {
+  $hstr = str_replace('#', '', $hstr);
+  $slen = strlen($hstr);
+  return (ctype_xdigit($hstr) && ($slen === 3 || $slen === 6 || $slen === 8));
+}
 
 function csc_log($msg='no message sent to log function', $ltype='notice', $sufx='') {
   if (strlen($sufx) > 0) { $sufx = " $sufx"; }

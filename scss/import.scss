@@ -56,11 +56,12 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-@import "mixins";
+@import "csc-mixins";
 // CSC Custom
 @import "csc-fonts";
 @import "csc-typography";
 @import "csc-structure";
 @import "csc-elements";
 @import "csc-home";
+@import "csc-media";
 

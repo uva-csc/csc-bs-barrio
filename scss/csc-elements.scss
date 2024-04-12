@@ -103,6 +103,7 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
     /* margin: -4px 4px 4px -4px; why??? */
     display: block;
     position: relative;
+    /*
     padding: 4px;
     background-color: #fcfcfc;
     border-left: 1px solid #ccc;
@@ -110,6 +111,7 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
     border-right: 1px solid #888;
     border-bottom: 1px solid #888;
     border-radius: 15px;
+     */
   }
 }
 

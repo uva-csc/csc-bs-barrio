@@ -13001,6 +13001,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* VARIABLES */
+/** Bootstrap Overrides **/
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
@@ -13130,6 +13132,12 @@ textarea.form-control-lg {
   border-bottom: 2px solid #232D4B;
 }
 
+.text-white, .text-white a {
+  color: #fdfdfd;
+}
+
+/* VARIABLES */
+/** Bootstrap Overrides **/
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /***  General Structural Styles ***/
@@ -13153,6 +13161,10 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+}
+
+#main-wrapper {
+  min-height: 800px;
 }
 
 #main.container {
@@ -13322,9 +13334,46 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   z-index: 1;
 }
 
-body.node--type-landing-page main#content h1.title_overlay, body.node--type-landing-page main#content .title_overlay.h1 {
+.skew-bottom {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  transform-origin: top left;
+  background-color: #fdfdfd;
+}
+
+.bg-skew {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  will-change: transfrom;
+  z-index: 1;
+}
+
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero {
+  height: fit-content;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title h1, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title .h1 {
+  padding: 35px 0 10px;
+  color: #fdfdfd;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 3rem;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .overlay-table table {
+  width: 50vw;
+  min-width: 950px;
+  margin: auto;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .overlay-table table th, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .overlay-table table td {
+  text-align: left;
+}
+body.node--type-landing-page main#content h1.title-overlay, body.node--type-landing-page main#content .title-overlay.h1 {
   padding: 25px 0 15px;
   background-color: #33333377;
+  color: #fdfdfd;
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -13342,7 +13391,7 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   color: #232D4B;
   max-width: 650px;
   text-align: left;
-  margin-left: 27vw;
+  /* margin-left: 27vw; TODO: Make this more specific to its context */
   line-height: 1.5rem;
 }
 body.node--type-landing-page main#content .field--name-field-hero-top {
@@ -13468,6 +13517,24 @@ main#content .c-csc-text_row.equal-4 .field--name-field-text-boxes {
 main#content .c-csc-text_row.equal-5 .field--name-field-text-boxes {
   grid-template-columns: repeat(5, 20%);
 }
+main#content .c-csc-skewed_colored_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 250px;
+  z-index: -1;
+}
+main#content .c-csc-skewed_colored_header > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main#content .c-csc-skewed_colored_header + .paragraph {
+  max-width: 80vw;
+  margin: inherit auto;
+}
 
 main#content .csc-sep.dotted-orange {
   border-top: 4px dotted #E57200;
@@ -13481,6 +13548,12 @@ main#content main#content .csc-sep.dotted-orange {
   margin: 2rem auto;
   padding-top: 2rem;
   width: 80%;
+}
+
+/** General Structure **/
+.fixed-width {
+  max-width: 80vw;
+  margin: auto;
 }
 
 /** Admin Structure **/
@@ -13595,6 +13668,7 @@ a[href^=mailto] {
   /* margin: -4px 4px 4px -4px; why??? */
   display: block;
   position: relative;
+  /*
   padding: 4px;
   background-color: #fcfcfc;
   border-left: 1px solid #ccc;
@@ -13602,6 +13676,7 @@ a[href^=mailto] {
   border-right: 1px solid #888;
   border-bottom: 1px solid #888;
   border-radius: 15px;
+   */
 }
 
 .field--name-field-teaser-image {
@@ -14041,6 +14116,32 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
   line-height: 1.25rem;
 }
 
+/* May already be in bootstrap took from uva law law.virginia.edu
+@media (min-width: 48em) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 1270px;
+  }
+}
+
+@media (min-width: 48em) {
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 36em) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+*/
+@media (min-width: 48em) {
+  body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--first,
+body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--second {
+    flex: 0 1 45%;
+    padding: 1rem;
+  }
+}
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {

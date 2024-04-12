@@ -40,18 +40,19 @@
 #}
 {%
   set classes = [
-    'csc-center',
-    'text-center',
-    'text-white'
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'skewed-header',
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    custom_color ? 'bg-custom',
+    not custom_color ? 'bg-' ~ color|clean_class,
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% if title_overlay %}
-      <h1 class="title-overlay">{{ title_overlay | raw }}</h1>
-    {% endif %}
-    {% block content %}
-      {{ content|without('field_hero_image') }}
-    {% endblock %}
+  <div{{ attributes.addClass(classes) }} style="height: {{ height }}px;">
+    <div>
+      <div class="bg-skew skew-bottom" style="transform: skewY({{ angle }}deg);"></div>
+    </div>
   </div>
 {% endblock paragraph %}
