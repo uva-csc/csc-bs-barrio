@@ -272,9 +272,9 @@ body.node--type-landing-page  main#content {
 
       .c-csc-text_box.hero-title {
         h1 {
-          padding: 35px 0 10px;
+          padding: 35px 0 0;
           color: $white;
-          font-family: "ITC Franklin Gothic Hvy", sans-serif;
+          font-family: $font-frankgoth-hvy;
           font-weight: bold;
           text-transform: uppercase;
           letter-spacing: 0.1rem;
@@ -282,15 +282,61 @@ body.node--type-landing-page  main#content {
         }
       } // End of .hero-title
 
-      .overlay-table {
-        table {
-          width: 50vw;
-          min-width: 950px;
-          margin: auto;
+      p.breadcrumbs {
+        margin-left: 15vw;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 90%;
+      }
 
-          th, td {
-            text-align: left;
+      .c-csc-text_box h2 {
+        font-family: $font-frankgoth-hvy;
+        text-align: left;
+        margin: 1.5rem 0 0.5rem 500px;
+        font-size: 2.75rem;
+        text-shadow: 2px 2px 5px black;
+      }
+
+      // Overlay (see below .csc-2col-tbl general definition for grid layout specs)
+      .csc-2col-tbl {
+        margin: 1rem 8rem;
+        width: fit-content;
+        grid-gap: 1.5rem 5rem;
+        grid-template-columns: 300px 600px;
+
+        & > div {
+          text-align: left;
+
+          a {
+            font-weight: bold;
+            text-transform: uppercase;
           }
+        }
+
+        h3 {
+          margin: 1rem 0 0 0;
+          padding: 0;
+          text-transform: uppercase;
+          font-size: 2rem;
+          letter-spacing: 0.05rem;
+        }
+
+        h4 {
+          margin: 0;
+          padding: 0;
+          font-family: 'Bodoni Bold', serif;
+          text-transform: capitalize;
+          letter-spacing: 0.05rem;
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+
+        img {
+          border: 4px solid white;
+          max-height: 200px;
         }
       }
     }
@@ -300,13 +346,14 @@ body.node--type-landing-page  main#content {
     padding: 25px 0 15px;
     background-color: #33333377;
     color: $white;
-    font-family: "ITC Franklin Gothic Hvy", sans-serif;
+    font-family: $font-frankgoth-hvy;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 3rem;
   }
 
+  // Hero Overlays
   .field--name-field-text-overlay .c-csc-text_box {
     h2 {
       font-family: $font-frankgoth-med;
@@ -319,15 +366,16 @@ body.node--type-landing-page  main#content {
       color: $uva-blue;
       max-width: 650px;
       text-align: left;
-      /* margin-left: 27vw; TODO: Make this more specific to its context */
+      margin-left: 27vw; /* TODO: Make this more specific to its context?? */
       line-height: 1.5rem;
     }
-  }
+  } // End of Hero Overlays
 
   .field--name-field-hero-top {
     margin-top: -1rem;
     .c-csc-hero {
       margin-bottom: 1.5rem;
+      padding-bottom: 2rem;
     }
   }
 
@@ -549,6 +597,12 @@ main#content {
 .fixed-width {
   max-width: 80vw;
   margin: auto;
+}
+
+.csc-2col-tbl {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /** Admin Structure **/

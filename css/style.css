@@ -13096,6 +13096,17 @@ textarea.form-control-lg {
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
 }
 @font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-BoldItalic.otf") format("opentype");
+}
+@font-face {
   font-family: "Bodoni Poster";
   font-weight: normal;
   src: url("../css/fonts/bodoni/BodoniStd-Poster.otf") format("opentype");
@@ -13132,8 +13143,16 @@ textarea.form-control-lg {
   border-bottom: 2px solid #232D4B;
 }
 
-.text-white, .text-white a {
+.text-white, .text-white > a {
   color: #fdfdfd;
+}
+
+.text-orange, .text-orange > a {
+  color: #E57200;
+}
+
+.text-blue, .text-blue > a {
+  color: #232D4B;
 }
 
 /* VARIABLES */
@@ -13354,7 +13373,7 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero {
   height: fit-content;
 }
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title h1, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title .h1 {
-  padding: 35px 0 10px;
+  padding: 35px 0 0;
   color: #fdfdfd;
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   font-weight: bold;
@@ -13362,13 +13381,53 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_bo
   letter-spacing: 0.1rem;
   font-size: 3rem;
 }
-body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .overlay-table table {
-  width: 50vw;
-  min-width: 950px;
-  margin: auto;
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero p.breadcrumbs {
+  margin-left: 15vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 90%;
 }
-body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .overlay-table table th, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .overlay-table table td {
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box h2, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box .h2 {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
   text-align: left;
+  margin: 1.5rem 0 0.5rem 500px;
+  font-size: 2.75rem;
+  text-shadow: 2px 2px 5px black;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl {
+  margin: 1rem 8rem;
+  width: fit-content;
+  grid-gap: 1.5rem 5rem;
+  grid-template-columns: 300px 600px;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl > div {
+  text-align: left;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl > div a {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h3, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl .h3 {
+  margin: 1rem 0 0 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h4, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl .h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Bodoni Bold", serif;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl p {
+  margin: 0;
+  padding: 0;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl img {
+  border: 4px solid white;
+  max-height: 200px;
 }
 body.node--type-landing-page main#content h1.title-overlay, body.node--type-landing-page main#content .title-overlay.h1 {
   padding: 25px 0 15px;
@@ -13391,7 +13450,8 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   color: #232D4B;
   max-width: 650px;
   text-align: left;
-  /* margin-left: 27vw; TODO: Make this more specific to its context */
+  margin-left: 27vw;
+  /* TODO: Make this more specific to its context?? */
   line-height: 1.5rem;
 }
 body.node--type-landing-page main#content .field--name-field-hero-top {
@@ -13399,6 +13459,7 @@ body.node--type-landing-page main#content .field--name-field-hero-top {
 }
 body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-hero {
   margin-bottom: 1.5rem;
+  padding-bottom: 2rem;
 }
 body.node--type-landing-page main#content .block-system-breadcrumb-block .content nav {
   margin: 1rem auto;
@@ -13554,6 +13615,12 @@ main#content main#content .csc-sep.dotted-orange {
 .fixed-width {
   max-width: 80vw;
   margin: auto;
+}
+
+.csc-2col-tbl {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /** Admin Structure **/

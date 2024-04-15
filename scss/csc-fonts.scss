@@ -99,6 +99,18 @@
   font-style: italic;
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
 }
+// Bodoni Standard
+@font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-BoldItalic.otf") format("opentype");
+}
 
 // Bodoni Poster
 @font-face {
