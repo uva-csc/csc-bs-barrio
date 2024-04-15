@@ -18,7 +18,6 @@ p {
   line-height: 1.5rem;
 }
 
-
 /** Links **/
 a {
   border-bottom: 4px solid $uva-orange;
@@ -54,6 +53,14 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
   height: 83vh;
 }
 
+// Students Page
+.student-features {
+  width: 85%;
+  margin: 1rem auto;
+}
+
+
+/** End of Individual Page Styles **/
 
 /** Colors **/
 .text-blue {

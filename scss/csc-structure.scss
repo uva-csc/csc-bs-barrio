@@ -64,6 +64,22 @@ body {
         letter-spacing: .05rem;
       }
     }
+    .nav-item.dropdown {
+      .dropdown-menu {
+        li, a {
+          color: $uva-blue;
+          backgroud-color: $off-white;
+        }
+      }
+      &:hover {
+        .dropdown-menu {
+          display: block;
+          backgroud-color: $off-white;
+          color: $uva-blue;
+        }
+      }
+
+    }
 
   }
 
@@ -215,6 +231,17 @@ footer.site-footer {
 
   }
 }
+
+.layout-title {
+  width: 100%;
+  h1 {
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: fit-content;
+    text-transform: uppercase;
+  }
+}
+
 .blue-skew {
   background: inherit;
   position: relative;
@@ -262,6 +289,7 @@ footer.site-footer {
   will-change: transfrom;
   z-index: 1;
 }
+// End of Layout Styles
 
 // Page Type Styles (Content types)
 // Landing pages
@@ -394,6 +422,18 @@ body.node--type-landing-page  main#content {
     }
   }
 } // End of Landing page styles
+
+// Basic Page Content Type
+body.node--type-page {
+  .field--name-field-image {
+    float: left;
+    margin: 0 1rem 0.25rem;
+    border: 2px solid #777;
+    padding: 5px;
+  }
+} // End of basic page content type
+
+// End of Content Type Styles
 
 // Paragraph Types
 

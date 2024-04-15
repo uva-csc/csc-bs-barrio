@@ -13212,6 +13212,15 @@ body {
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
+#header .navbar-nav .nav-item.dropdown .dropdown-menu li, #header .navbar-nav .nav-item.dropdown .dropdown-menu a {
+  color: #232D4B;
+  backgroud-color: #dadada;
+}
+#header .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  backgroud-color: #dadada;
+  color: #232D4B;
+}
 #header .nav li.csc-give-link {
   margin-left: 2rem;
   cursor: pointer;
@@ -13322,6 +13331,16 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
 
 .path-frontpage #main-wrapper {
   margin-top: -1rem;
+}
+
+.layout-title {
+  width: 100%;
+}
+.layout-title h1, .layout-title .h1 {
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: fit-content;
+  text-transform: uppercase;
 }
 
 .blue-skew {
@@ -13471,6 +13490,13 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
 }
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody p {
   font-family: "ITC Franklin Gothic Std", sans-serif;
+}
+
+body.node--type-page .field--name-field-image {
+  float: left;
+  margin: 0 1rem 0.25rem;
+  border: 2px solid #777;
+  padding: 5px;
 }
 
 main#content .node__content {
@@ -13690,6 +13716,12 @@ a[href^=mailto] {
   height: 83vh;
 }
 
+.student-features {
+  width: 85%;
+  margin: 1rem auto;
+}
+
+/** End of Individual Page Styles **/
 /** Colors **/
 .text-blue {
   color: #232D4B !important;
