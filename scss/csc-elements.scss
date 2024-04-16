@@ -45,23 +45,6 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
 }
 
 
-/*** Individual Page Styles ***/
-
-.page-user-login form#user-login-form {
-  max-width: 500px;
-  margin-left: 2rem;
-  height: 83vh;
-}
-
-// Students Page
-.student-features {
-  width: 85%;
-  margin: 1rem auto;
-}
-
-
-/** End of Individual Page Styles **/
-
 /** Colors **/
 .text-blue {
   color: $uva-blue !important;

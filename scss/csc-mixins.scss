@@ -1,13 +1,3 @@
 @import 'variables.scss';
 
-@mixin page-title($color: $white) {
-  body.node--type-landing-page main#content h1.title-overlaylay, body.node--type-landing-page main#content .title-overlaylay.h1 {
-    padding: 25px 0 15px;
-    color: $color;
-    font-family: "ITC Franklin Gothic Hvy", sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 3rem;
-  }
-}
+// Could not get mixins to work yet....
