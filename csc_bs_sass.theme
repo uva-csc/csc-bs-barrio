@@ -193,43 +193,6 @@ function csc_bs_sass_preprocess_paragraph__skewed_colored_header(&$variables) {
 
 /** End of paragraphs **/
 
-/** Views Preprocessing */
-/*
-function csc_bs_sass_preprocess_views_view(&$variables) {
-  //kint(array_keys($variables['view_array']));
- // kint($variables['rows']);
-  $variables['allday'] = [];
-  $view_id = $variables['id'];
-  if ($view_id == 'events') {
-    $view = $variables['view'];
-    $shown = false;
-    foreach ($view->result as $n => $row) {
-      $date = $row->_entity->get('field_date')->getValue()[0];
-      $isallday = isDateAllDay($date['value'], $date['end_value']);
-      if (!$shown) {
-        $class = ($isallday) ? 'allday' : 'notallday';
-        kint(get_class($variables['rows'][$n]));
-        $shown = true;
-      }
-    }
-  }
-}
-*/
-
-
-/** Field Preprocessing */
-
-/* test
-function csc_bs_sass_preprocess_field(&$variables) {
-  if (str_contains($variables['field_name'], 'date')) {
-    $akeys = json_encode(array_keys($variables));
-    csc_log('date field keys: ' . $akeys);
-  } else {
-    csc_log(json_encode($variables['field_name']));
-  }
-}
-*/
-
 /** Utitlity functions */
 
 function csc_color_code($cstr) {

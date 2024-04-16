@@ -13349,7 +13349,7 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   display: inline-block;
 }
 .features-1over2 > .layout__region > .block .content {
-  width: 650px;
+  width: 30vw;
 }
 .features-1over2 > .layout__region > .block:first-child {
   flex: 0 0 100%;
@@ -13358,12 +13358,12 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   margin: 1rem auto;
 }
 .features-1over2 > .layout__region > .block:nth-child(2) {
-  flex: 1;
-  width: 40%;
+  flex: 2;
+  width: 45vw;
 }
 .features-1over2 > .layout__region > .block:nth-child(3) {
   flex: 1;
-  width: 40%;
+  width: 30%;
 }
 .features-1over2 > .layout__region .field--name-field-alt-teaser-title {
   width: 100%;
@@ -13376,8 +13376,7 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   border: none;
 }
 .features-1over2 > .layout__region .field--name-field-teaser-image, .features-1over2 > .layout__region .field--name-field-image {
-  padding-left: 25%;
-  background-color: pink;
+  padding-left: 20%;
 }
 .features-1over2 > .layout__region .field--name-field-teaser-image img, .features-1over2 > .layout__region .field--name-field-image img {
   border: 2px solid #fcfcfc;
@@ -14055,25 +14054,10 @@ body.path-webform .help-curate {
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
-.student-features {
-  width: 85%;
-  margin: 1rem auto;
-}
-.student-features .layout__region .block .contextual-region > h2, .student-features .layout__region .block .contextual-region > .h2 {
-  width: 100%;
-  text-align: center;
-}
-.student-features .layout__region .block .contextual-region > h2 a, .student-features .layout__region .block .contextual-region > .h2 a {
-  color: #E57200;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
-  text-transform: uppercase;
-}
-.student-features .layout__region .block .contextual-region > div {
+.features-1over2 > .layout__region .field--name-field-teaser-image,
+.features-1over2 > .layout__region .field--name-field-image {
   background-image: url("/sites/default/files/2024-04/South_Lawn_Commons_Students_16_1V3A1133_160over90.jpg");
-  background-position: center;
-  background-size: 100%;
-  margin: 1rem 2rem;
-  padding: 2rem 25%;
+  background-size: cover;
 }
 
 #student-media {

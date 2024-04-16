@@ -3,29 +3,11 @@
 /*** Individual Page Styles ***/
 
 // Students Page
-.student-features {
-  width: 85%;
-  margin: 1rem auto;
-
-
-  .layout__region .block .contextual-region {
-    & > h2 {
-      width: 100%;
-      text-align: center;
-      a {
-        color: $uva-orange;
-        font-family: $font-frankgoth-hvy;
-        text-transform: uppercase;
-      }
-    }
-    & >div {
-      background-image: url('/sites/default/files/2024-04/South_Lawn_Commons_Students_16_1V3A1133_160over90.jpg');
-      background-position: center;
-      background-size: 100%;
-      margin: 1rem 2rem;
-      padding: 2rem 25%;
-    }
-  }
+// Students Features
+.features-1over2 > .layout__region .field--name-field-teaser-image,
+.features-1over2 > .layout__region .field--name-field-image {
+    background-image: url("/sites/default/files/2024-04/South_Lawn_Commons_Students_16_1V3A1133_160over90.jpg");
+    background-size: cover;
 }
 
 // Student social media
@@ -47,6 +29,6 @@
     font-family: $font-frankgoth-med;
   }
 }
-
+// End of Students Page
 
 /** End of Individual Page Styles **/
