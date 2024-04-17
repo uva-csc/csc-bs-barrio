@@ -14060,21 +14060,17 @@ body.path-webform .help-curate {
   background-size: cover;
 }
 
-#student-media {
+.layout.media-feeds {
   background-color: #232D4B;
   min-height: 500px;
-  margin-top: 10rem;
+  margin-top: 3rem;
+  padding: 2rem;
 }
-#student-media > .wrapper {
-  background-color: #f4f5f6;
-  padding: 0.75rem 1rem 0.5rem;
-  width: fit-content;
-  position: relative;
-  top: -5rem;
-  margin: 0 auto;
-}
-#student-media h2, #student-media .h2 {
-  font-family: "ITC Franklin Gothic Med", sans-serif;
+.layout.media-feeds .layout__region {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 /** End of Individual Page Styles **/
