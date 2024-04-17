@@ -270,15 +270,16 @@ footer.site-footer {
       width: 30%;
     }
 
+    h2 {
+      margin-bottom: 0;
+    }
     .field--name-field-alt-teaser-title {
       width: 100%;
       text-align: center;
-      a {
-        color: $uva-orange;
-        font-family: $font-frankgoth-hvy;
-        text-transform: uppercase;
-        border: none;
-      }
+      color: $uva-orange;
+      font-family: $font-frankgoth-hvy;
+      text-transform: uppercase;
+      border: none;
     }
 
     .field--name-field-teaser-image, .field--name-field-image {

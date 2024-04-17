@@ -13365,11 +13365,12 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   flex: 1;
   width: 30%;
 }
+.features-1over2 > .layout__region h2, .features-1over2 > .layout__region .h2 {
+  margin-bottom: 0;
+}
 .features-1over2 > .layout__region .field--name-field-alt-teaser-title {
   width: 100%;
   text-align: center;
-}
-.features-1over2 > .layout__region .field--name-field-alt-teaser-title a {
   color: #E57200;
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   text-transform: uppercase;
