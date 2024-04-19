@@ -13214,6 +13214,9 @@ body {
   color: #232D4B;
   backgroud-color: #dadada;
 }
+#header .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item.active a {
+  color: #dadada;
+}
 #header .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   backgroud-color: #dadada;
@@ -13777,12 +13780,32 @@ a[href^=mailto] {
   color: #009fdf;
 }
 
+.text-white {
+  color: #fdfdfd;
+}
+
+.text-black {
+  color: #222222;
+}
+
 .bg-blue {
   background-color: #232D4B;
 }
 
 .bg-orange {
   background-color: #E57200;
+}
+
+.bg-lt-blue {
+  background-color: #009fdf;
+}
+
+.bg-white {
+  background-color: #fdfdfd;
+}
+
+.bg-black {
+  background-color: #222222;
 }
 
 /** Icons **/
@@ -13840,6 +13863,17 @@ div.geolocation-map-wrapper {
   width: 500px;
   height: 300px;
   filter: drop-shadow(2px 4px 6px #232D4B);
+}
+
+/** Blocks **/
+.csc-skewed-block {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.csc-skewed-block .skew-overlay {
+  position: relative;
+  background-color: #fdfdfd;
 }
 
 /** Views **/
@@ -13935,6 +13969,7 @@ div.geolocation-map-wrapper {
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
   border: thin solid #939292;
   border-top: 16px solid #E57200;
+  background-color: #fdfdfd;
   /*margin: 10px 8px 0;
   padding-top: 0.5rem;
   line-height: 1.35rem;*/
@@ -14072,6 +14107,13 @@ body.path-webform .help-curate {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+}
+
+.student-resources.layout {
+  padding: 0.5rem 3rem;
+}
+.student-resources.layout h2, .student-resources.layout .h2 {
+  margin-bottom: solid 8px #E57200;
 }
 
 /** End of Individual Page Styles **/

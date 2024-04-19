@@ -58,12 +58,32 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
   color: $csc-lt-blue;
 }
 
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
 .bg-blue {
   background-color: $uva-blue;
 }
 
 .bg-orange {
   background-color: $uva-orange;
+}
+
+.bg-lt-blue {
+  background-color: $csc-lt-blue;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-black {
+  background-color: $black;
 }
 
 /** Icons **/
@@ -125,6 +145,19 @@ div.geolocation-map-wrapper {
   width: 500px;
   height: 300px;
   filter: drop-shadow(2px 4px 6px #232D4B);
+}
+
+/** Blocks **/
+
+.csc-skewed-block {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+
+  .skew-overlay {
+    position: relative;
+    background-color: $white;
+  }
 }
 
 
@@ -242,7 +275,7 @@ div.geolocation-map-wrapper {
         .views-view-responsive-grid__item-inner {
           border: thin solid #939292;
           border-top: 16px solid $uva-orange;
-
+          background-color: $white;
 
           .views-field-field-image {
             border-top: thin solid #939292;

@@ -69,6 +69,9 @@ body {
           color: $uva-blue;
           backgroud-color: $off-white;
         }
+        .dropdown-item.active a {
+          color: $off-white;
+        }
       }
       &:hover {
         .dropdown-menu {
