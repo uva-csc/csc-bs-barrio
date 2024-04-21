@@ -14110,10 +14110,49 @@ body.path-webform .help-curate {
 }
 
 .student-resources.layout {
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 10vw;
 }
-.student-resources.layout h2, .student-resources.layout .h2 {
-  margin-bottom: solid 8px #E57200;
+.student-resources.layout .field--name-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1.75rem;
+}
+.student-resources.layout .field--name-body h2, .student-resources.layout .field--name-body .h2 {
+  grid-column: 1/4;
+  width: fit-content;
+  border-bottom: solid 0.8rem #E57200;
+  line-height: 1rem;
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.student-resources.layout .field--name-body h2 span, .student-resources.layout .field--name-body .h2 span {
+  display: inline-block;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-size: 130%;
+  line-height: 0.2rem;
+  vertical-align: sub;
+  font-style: normal;
+}
+.student-resources.layout .field--name-body hr {
+  display: none;
+}
+.student-resources.layout .field--name-body ul {
+  list-style-type: none;
+}
+.student-resources.layout .field--name-body ul li {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.25rem;
+}
+.student-resources.layout .field--name-body ul li a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  border-bottom-width: 2px !important;
 }
 
 /** End of Individual Page Styles **/

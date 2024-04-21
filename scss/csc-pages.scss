@@ -28,11 +28,57 @@
 
 // Student Resources
 .student-resources.layout {
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 10vw;
 
-  h2 {
-    margin-bottom: solid 8px $uva-orange;
+  .field--name-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1.75rem;
+
+    h2 {
+      grid-column: 1 / 4;
+      width: fit-content;
+      border-bottom: solid 0.8rem $uva-orange;
+      line-height: 1rem;
+      font-family: $font-frankgoth-med;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+
+      span {
+        display: inline-block;
+        font-family: $font-frankgoth-hvy;
+        font-size: 130%;
+        line-height: 0.2rem;
+        vertical-align: sub;
+        font-style: normal;
+      }
+    }
+
+    hr {
+      display: none;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        font-family: $font-frankgoth-med;
+        font-weight: bold;
+        font-size: 1.25rem;
+        letter-spacing: 0.05rem;
+        margin-bottom: 0.25rem;
+        a {
+          font-family: $font-frankgoth-med;
+          font-weight: bold;
+          font-size: 1.25rem;
+          letter-spacing: 0.05rem;
+          border-bottom-width: 2px!important;
+        }
+      }
+    }
+
   }
+
 } // End Student Resources
 
 // End of Students Page
