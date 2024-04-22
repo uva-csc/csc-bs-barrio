@@ -86,10 +86,10 @@
 // People Pages
 .node--type-people {
   #main.container { margin-top: 0; }
-  main.main-content { margin-top: 1rem; }
 
   .persname {
     background: $csc-gray;
+    margin-bottom: 1rem;
     padding: 20px;
     text-align: center;
 
@@ -103,6 +103,10 @@
   .block-field-blocknodepeoplefield-image {
     float: left;
     padding: 0 1rem 0.5rem 0;
+  }
+
+  .block-field-blocknodepeoplebody {
+    padding-top: 1rem;
   }
 }
 // End of People pages

@@ -14178,11 +14178,9 @@ body.path-webform .help-curate {
 .node--type-people #main.container {
   margin-top: 0;
 }
-.node--type-people main.main-content {
-  margin-top: 1rem;
-}
 .node--type-people .persname {
   background: #cdcdcd;
+  margin-bottom: 1rem;
   padding: 20px;
   text-align: center;
 }
@@ -14194,6 +14192,9 @@ body.path-webform .help-curate {
 .node--type-people .block-field-blocknodepeoplefield-image {
   float: left;
   padding: 0 1rem 0.5rem 0;
+}
+.node--type-people .block-field-blocknodepeoplebody {
+  padding-top: 1rem;
 }
 
 /** End of Individual Page Styles **/
