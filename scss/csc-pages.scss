@@ -84,11 +84,25 @@
 // End of Students Page
 
 // People Pages
-.node--type-people .field--name-field-image {
-  float: left;
-  padding: 0 1rem 0.5rem 0;
-}
+.node--type-people {
 
+  .persname {
+    background: $csc-gray;
+    padding: 20px;
+    text-align: center;
+
+    .content {
+      font-size: 2.5rem;
+      font-family: $font-frankgoth-hvy;
+      color: $uva-blue;
+    }
+  }
+
+  .block-field-blocknodepeoplefield-image {
+    float: left;
+    padding: 0 1rem 0.5rem 0;
+  }
+}
 // End of People pages
 
 /** End of Individual Page Styles **/

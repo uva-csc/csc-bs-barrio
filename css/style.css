@@ -14175,7 +14175,17 @@ body.path-webform .help-curate {
   border-bottom-width: 2px !important;
 }
 
-.node--type-people .field--name-field-image {
+.node--type-people .persname {
+  background: #cdcdcd;
+  padding: 20px;
+  text-align: center;
+}
+.node--type-people .persname .content {
+  font-size: 2.5rem;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  color: #232D4B;
+}
+.node--type-people .block-field-blocknodepeoplefield-image {
   float: left;
   padding: 0 1rem 0.5rem 0;
 }
