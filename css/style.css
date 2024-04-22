@@ -13779,6 +13779,13 @@ a[href^=mailto] {
   border-bottom: none;
 }
 
+p.read-more {
+  font-size: 90%;
+  font-weight: bold;
+  text-align: right;
+}
+
+/** End of Links **/
 /** Page Title Styles **/
 /** Colors **/
 .text-blue {

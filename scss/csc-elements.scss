@@ -38,6 +38,16 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
   }
 }
 
+// Read More links
+p.read-more {
+  font-size: 90%;
+  font-weight: bold;
+  text-align: right;
+}
+
+/** End of Links **/
+
+
 /** Page Title Styles **/
 // Title in layout builder
 .block-layout-builder .field--name-title {
