@@ -45,6 +45,11 @@ function csc_bs_sass_preprocess_page(&$variables) {
   if (array_key_exists('node', $variables)) {
     $node = $variables['node'];
     $pg_type = $node->getType();
+
+    /*if ($pg_type == 'page') {
+      kint($variables);
+    }*/
+
     if ($node->hasField('field_class_attribute')) {
       $class = $node->get('field_class_attribute')->value;
       // kint('vars', $variables);

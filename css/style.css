@@ -13550,6 +13550,16 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
+body.node--type-page #title-div .content {
+  background-color: #cdcdcd;
+  margin: 0;
+  padding: 0.25rem;
+}
+body.node--type-page #title-div .content h1, body.node--type-page #title-div .content .h1 {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
 body.node--type-page .field--name-field-image {
   float: left;
   margin: 0 1rem 0.25rem;
@@ -13970,10 +13980,6 @@ div.geolocation-map-wrapper {
   border-bottom: 4px solid #E57200;
 }
 
-.view-events.events-row {
-  width: 80vw;
-  margin: 0 10vw;
-}
 .view-events.events-row .view-header h2, .view-events.events-row .view-header .h2 {
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   text-align: center;

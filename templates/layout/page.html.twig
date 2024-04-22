@@ -146,6 +146,13 @@
     {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
+        {% if node.getType == 'page' %}
+          <div id="title-div" class="full-width-title">
+            <div class="content">
+              <h1>{{ node.getTitle }}</h1>
+            </div>
+          </div>
+        {% endif %}
         <div id="main" class="{{ container }}">
           {{ page.breadcrumb }}
           <div class="row row-offcanvas row-offcanvas-left clearfix">
