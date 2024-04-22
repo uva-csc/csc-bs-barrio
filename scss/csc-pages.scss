@@ -85,6 +85,8 @@
 
 // People Pages
 .node--type-people {
+  #main.container { margin-top: 0; }
+  main.main-content { margin-top: 1rem; }
 
   .persname {
     background: $csc-gray;

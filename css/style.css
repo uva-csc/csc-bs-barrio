@@ -14175,6 +14175,12 @@ body.path-webform .help-curate {
   border-bottom-width: 2px !important;
 }
 
+.node--type-people #main.container {
+  margin-top: 0;
+}
+.node--type-people main.main-content {
+  margin-top: 1rem;
+}
 .node--type-people .persname {
   background: #cdcdcd;
   padding: 20px;
