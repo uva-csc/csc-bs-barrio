@@ -14175,6 +14175,11 @@ body.path-webform .help-curate {
   border-bottom-width: 2px !important;
 }
 
+.node--type-people .field--name-field-image {
+  float: left;
+  padding: 0 1rem 0.5rem 0;
+}
+
 /** End of Individual Page Styles **/
 /* VARIABLES */
 /** Bootstrap Overrides **/
