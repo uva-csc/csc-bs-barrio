@@ -207,7 +207,7 @@ div.geolocation-map-wrapper {
   }
 
   .views-view-responsive-grid__item {
-    border-bottom: thin solid #ccc;
+    // border-bottom: thin solid #ccc;
   }
 
   // The individual news item teasers in the view
@@ -342,37 +342,41 @@ div.geolocation-map-wrapper {
 // Common footer / bottom of page elements
 // Help curate block
 .block.help-curate {
-  position: absolute;
-  right: 3rem;
-  margin-top: -2.75rem;
-  width: fit-content;
-  font-size: 100%;
-  font-weight: bold;
-  color: white;
-  background-color: $uva-orange;
-  letter-spacing: 0.05rem;
-  padding: 1.5rem 2rem 0rem;
-  z-index: 10;
+  padding-top: 3rem;
 
-  p:last-child {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  .content {
+    position: absolute;
+    right: 3rem;
+    margin-top: -2.75rem;
+    width: fit-content;
+    font-size: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: $uva-orange;
+    letter-spacing: 0.05rem;
+    padding: 1.5rem 2rem 0rem;
+    z-index: 10;
 
-    a {
-      border-bottom: none;
-    }
+    p:last-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
 
-    button {
-      display: inline-block;
-      margin-top: -0.8rem;
-      background: transparent;
-      color: white;
-      border: thin solid white;
-      height: 38px;
-      padding: 0.25rem 1.5rem 0;
-      font-weight: bold;
-      text-transform: uppercase;
+      a {
+        border-bottom: none;
+      }
+
+      button {
+        display: inline-block;
+        margin-top: -0.8rem;
+        background: transparent;
+        color: white;
+        border: thin solid white;
+        height: 38px;
+        padding: 0.25rem 1.5rem 0;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
     }
   }
 }

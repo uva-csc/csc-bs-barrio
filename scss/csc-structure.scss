@@ -43,7 +43,7 @@ body {
         max-height: 40px;
       }
     }
-  }
+  } // end of #navbar-main
 
   // Menu Links
   .navbar-nav {
@@ -85,34 +85,51 @@ body {
 
   }
 
+  // Social Media links
+  .navbar .block-social-media-links-block {
+    padding-top: 1.25rem;
+
+    ul.social-media-links--platforms {
+      margin-left: 1rem;
+
+      li a {
+        color: white;
+      }
+    }
+  } // End of Social Media links in navbar
+
   // Give Button
-  .nav li.csc-give-link {
+  .navbar div.csc-give-link {
+    position: relative;
     margin-left: 2rem;
-    cursor: pointer;
+    font-family: "ITC Franklin Gothic Std", sans-serif;
+    font-weight: 600;
     text-decoration: none;
     text-align: center;
     justify-content: center;
-    border: 2px solid $uva-orange;
-    position: relative;
-    font-family: "ITC Franklin Gothic Std", sans-serif;
-    font-weight: 600;
-
     text-transform: uppercase;
     color: #ffffff;
     background-color: transparent;
+    border: 2px solid $uva-orange;
     transform: skewX(-20deg);
+    cursor: pointer;
 
-    a {
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-family: "Bodoni Poster",Arial,sans-serif;
-      white-space: nowrap;
+    .content .field--name-body p {
+      max-height: 20px;
       width: fit-content;
       transform: skewX(20deg);
-      padding: 0.5rem 0 0 0.5rem;
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+      a {
+        font-family: "Bodoni Poster", Arial, sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: $white;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
     }
-  }
+  } // End of Give Button
+
 
 } // End #header
 

@@ -13222,30 +13222,43 @@ body {
   backgroud-color: #dadada;
   color: #232D4B;
 }
-#header .nav li.csc-give-link {
+#header .navbar .block-social-media-links-block {
+  padding-top: 1.25rem;
+}
+#header .navbar .block-social-media-links-block ul.social-media-links--platforms {
+  margin-left: 1rem;
+}
+#header .navbar .block-social-media-links-block ul.social-media-links--platforms li a {
+  color: white;
+}
+#header .navbar div.csc-give-link {
+  position: relative;
   margin-left: 2rem;
-  cursor: pointer;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 600;
   text-decoration: none;
   text-align: center;
   justify-content: center;
-  border: 2px solid #E57200;
-  position: relative;
-  font-family: "ITC Franklin Gothic Std", sans-serif;
-  font-weight: 600;
   text-transform: uppercase;
   color: #ffffff;
   background-color: transparent;
+  border: 2px solid #E57200;
   transform: skewX(-20deg);
+  cursor: pointer;
 }
-#header .nav li.csc-give-link a {
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Bodoni Poster", Arial, sans-serif;
-  white-space: nowrap;
+#header .navbar div.csc-give-link .content .field--name-body p {
+  max-height: 20px;
   width: fit-content;
   transform: skewX(20deg);
-  padding: 0.5rem 0 0 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+#header .navbar div.csc-give-link .content .field--name-body p a {
+  font-family: "Bodoni Poster", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fdfdfd;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .region-featured-bottom-first {
@@ -13915,9 +13928,6 @@ div.geolocation-map-wrapper {
   font-size: 300%;
   font-weight: bold;
 }
-.view.csc-news-block .views-view-responsive-grid__item {
-  border-bottom: thin solid #ccc;
-}
 .view.csc-news-block .node--view-mode-teaser {
   border: none;
 }
@@ -14020,6 +14030,9 @@ div.geolocation-map-wrapper {
 }
 
 .block.help-curate {
+  padding-top: 3rem;
+}
+.block.help-curate .content {
   position: absolute;
   right: 3rem;
   margin-top: -2.75rem;
@@ -14032,15 +14045,15 @@ div.geolocation-map-wrapper {
   padding: 1.5rem 2rem 0rem;
   z-index: 10;
 }
-.block.help-curate p:last-child {
+.block.help-curate .content p:last-child {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.block.help-curate p:last-child a {
+.block.help-curate .content p:last-child a {
   border-bottom: none;
 }
-.block.help-curate p:last-child button {
+.block.help-curate .content p:last-child button {
   display: inline-block;
   margin-top: -0.8rem;
   background: transparent;
