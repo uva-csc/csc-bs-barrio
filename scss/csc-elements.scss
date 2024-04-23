@@ -170,6 +170,37 @@ div.geolocation-map-wrapper {
   }
 }
 
+/** Paragraphs: class for paragraphs with custom formatting (not structural) **/
+
+// Centered Intro, e.g. Citizen Leaders Fellowship
+.centered-intro {
+  margin: 1rem 0 2rem;
+
+  h2 {
+    font-size: 2.25rem;
+    text-shadow: $text-shadow;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  p:not(:has(img)) {
+    max-width: 800px;
+    margin: 0.5rem auto;
+    font-weight: bold;
+  }
+
+  p:has(img) {
+    width: 100%;
+    max-width: unset;
+    margin: 0.5rem;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
 
 /** Views **/
 .views-field-title {

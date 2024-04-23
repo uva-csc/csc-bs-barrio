@@ -26,14 +26,16 @@ $off-white: #dadada;
 $black: #222222;
 $gray-100: #f8f9fa;
 $gray-800: #343a40;
-$csc-gray: #cdcdcd;
 $uva-blue: #232D4B;
 $uva-blue-25: #C8CBD2;
 $uva-orange: #E57200;
 $uva-orange-25: #F9DCBF;
 $csc-lt-blue: #009fdf;
 $csc-white-blue: #e5f1f6;
+$csc-gray: #cdcdcd;
 $csc-dark-gray: #5a6172;
+
+$text-shadow: 2px 2px 5px #00000084;
 
   // scss-docs-start theme-color-variables
 $primary:       $accent-shade;

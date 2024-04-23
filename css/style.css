@@ -13906,6 +13906,31 @@ div.geolocation-map-wrapper {
   background-color: #fdfdfd;
 }
 
+/** Paragraphs: class for paragraphs with custom formatting (not structural) **/
+.centered-intro {
+  margin: 1rem 0 2rem;
+}
+.centered-intro h2, .centered-intro .h2 {
+  font-size: 2.25rem;
+  text-shadow: 2px 2px 5px #00000084;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+.centered-intro p:not(:has(img)) {
+  max-width: 800px;
+  margin: 0.5rem auto;
+  font-weight: bold;
+}
+.centered-intro p:has(img) {
+  width: 100%;
+  max-width: unset;
+  margin: 0.5rem;
+}
+.centered-intro p:has(img) img {
+  display: block;
+  margin: 0 auto;
+}
+
 /** Views **/
 .views-field-title {
   font-weight: bold;
