@@ -13261,6 +13261,17 @@ body {
   white-space: nowrap;
 }
 
+#title-div .content {
+  background-color: #cdcdcd;
+  margin: 0;
+  padding: 0.25rem;
+}
+#title-div .content h1, #title-div .content .h1 {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
 .region-featured-bottom-first {
   margin-bottom: -0.5rem;
 }
@@ -13557,16 +13568,6 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
-body.node--type-page #title-div .content {
-  background-color: #cdcdcd;
-  margin: 0;
-  padding: 0.25rem;
-}
-body.node--type-page #title-div .content h1, body.node--type-page #title-div .content .h1 {
-  text-align: center;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-}
 body.node--type-page .field--name-field-image {
   float: left;
   margin: 0 1rem 0.25rem;
@@ -14213,6 +14214,49 @@ body.path-webform .help-curate {
   border-bottom-width: 2px !important;
 }
 
+.node--type-event .layout__region.layout__region--first {
+  padding-right: 5rem;
+}
+.node--type-event .layout__region.layout__region--first ol.breadcrumb {
+  margin-top: -1rem;
+  margin-left: -8rem;
+}
+.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags {
+  text-align: right;
+}
+.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags ul, .node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
+  margin: 0;
+  padding: 0;
+}
+.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
+  list-style-type: none;
+  text-align: right;
+}
+.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 90%;
+  text-transform: uppercase;
+  border: none;
+  color: #5a6172;
+}
+.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle {
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: thin solid grey;
+}
+.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle span {
+  font-size: 3.5rem;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  line-height: 1.03846;
+  letter-spacing: -0.02885em;
+}
+.node--type-event .layout__region.layout__region--first .field--name-field-image {
+  margin-bottom: 1rem;
+}
+.node--type-event .layout__region.layout__region--first .field--name-field-image img {
+  width: 100%;
+  height: auto;
+}
 .node--type-people #main.container {
   margin-top: 0;
 }
@@ -14232,6 +14276,11 @@ body.path-webform .help-curate {
 }
 .node--type-people .field--name-body {
   padding-top: 1rem;
+}
+
+.node--type-location .field--name-field-image {
+  float: right;
+  padding: 0 1rem 0.5rem;
 }
 
 /** End of Individual Page Styles **/
