@@ -13136,7 +13136,7 @@ textarea.form-control-lg {
 }
 
 .text-underline-orange {
-  border-bottom: 2px solid #E57200;
+  border-bottom: 2px solid #E57325;
 }
 
 .text-underline-blue {
@@ -13148,7 +13148,7 @@ textarea.form-control-lg {
 }
 
 .text-orange, .text-orange > a {
-  color: #E57200;
+  color: #E57325;
 }
 
 .text-blue, .text-blue > a {
@@ -13242,7 +13242,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   background-color: transparent;
-  border: 2px solid #E57200;
+  border: 2px solid #E57325;
   transform: skewX(-20deg);
   cursor: pointer;
 }
@@ -13310,7 +13310,7 @@ footer.site-footer section.region-footer-first .footer-contact {
 footer.site-footer section.region-footer-first .footer-contact h2, footer.site-footer section.region-footer-first .footer-contact .h2 {
   font-family: "ITC Franklin Gothic Std", sans-serif;
   text-transform: uppercase;
-  border-bottom: 2px #E57200 solid;
+  border-bottom: 2px #E57325 solid;
   width: fit-content;
   padding-bottom: 0;
   line-height: 1.1rem;
@@ -13398,7 +13398,7 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
 .features-1over2 > .layout__region .field--name-field-alt-teaser-title {
   width: 100%;
   text-align: center;
-  color: #E57200;
+  color: #E57325;
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   text-transform: uppercase;
   border: none;
@@ -13514,7 +13514,7 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl 
   border: none;
 }
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h4 a:hover, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl .h4 a:hover, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h4 a:hover span, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl .h4 a:hover span {
-  color: #E57200 !important;
+  color: #E57325 !important;
 }
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl p {
   margin: 0.5rem 0;
@@ -13525,8 +13525,8 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl 
   max-height: 200px;
 }
 body.node--type-landing-page main#content h1.title-overlay, body.node--type-landing-page main#content .title-overlay.h1 {
-  padding: 25px 0 15px;
-  background-color: #33333377;
+  padding: 45px 0 15px;
+  background-color: #22222277;
   color: #fdfdfd;
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   font-weight: bold;
@@ -13590,7 +13590,7 @@ main#content .c-csc-teaser_row .field--name-field-header h2, main#content .c-csc
   margin: 0px auto 12px;
   width: fit-content;
   text-align: center;
-  border-bottom: 4px solid #E57200;
+  border-bottom: 4px solid #E57325;
   line-height: 28px;
 }
 main#content .c-csc-teaser_row .field.field--name-field-teasers {
@@ -13611,7 +13611,7 @@ main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-fie
   font-weight: bold;
 }
 main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
-  border-bottom: 4px solid #E57200;
+  border-bottom: 4px solid #E57325;
 }
 main#content .c-csc-highlight_row {
   background-color: #232D4B;
@@ -13661,7 +13661,7 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
   margin-left: 2rem;
 }
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted a {
-  border-bottom: 4px solid #E57200;
+  border-bottom: 4px solid #E57325;
 }
 main#content .c-csc-text_row .field--name-field-text-boxes {
   display: grid;
@@ -13700,7 +13700,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
 }
 
 main#content .csc-sep.dotted-orange {
-  border-top: 4px dotted #E57200;
+  border-top: 4px dotted #E57325;
   margin: 2rem auto;
   padding-top: 2rem;
   width: 80%;
@@ -13781,7 +13781,7 @@ p {
 
 /** Links **/
 a {
-  border-bottom: 4px solid #E57200;
+  border-bottom: 4px solid #E57325;
 }
 
 a.plain,
@@ -13817,7 +13817,7 @@ p.read-more a {
 }
 
 .text-orange {
-  color: #E57200;
+  color: #E57325;
 }
 
 .text-lt-blue {
@@ -13837,7 +13837,7 @@ p.read-more a {
 }
 
 .bg-orange {
-  background-color: #E57200;
+  background-color: #E57325;
 }
 
 .bg-lt-blue {
@@ -13972,7 +13972,7 @@ div.geolocation-map-wrapper {
 .view.csc-news-block .view-header {
   position: relative;
   width: 100%;
-  background-color: #E57200;
+  background-color: #E57325;
   margin-bottom: 0.5rem;
   padding: 0.2rem 0 0;
   border-radius: 15px;
@@ -14016,7 +14016,7 @@ div.geolocation-map-wrapper {
   float: right;
 }
 .view.csc-news-block .view-footer a {
-  border-bottom: 4px solid #E57200;
+  border-bottom: 4px solid #E57325;
 }
 
 .view-events.events-row .view-header h2, .view-events.events-row .view-header .h2 {
@@ -14030,7 +14030,7 @@ div.geolocation-map-wrapper {
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
   border: thin solid #939292;
-  border-top: 16px solid #E57200;
+  border-top: 16px solid #E57325;
   background-color: #fdfdfd;
   /*margin: 10px 8px 0;
   padding-top: 0.5rem;
@@ -14092,7 +14092,7 @@ div.geolocation-map-wrapper {
   font-size: 100%;
   font-weight: bold;
   color: white;
-  background-color: #E57200;
+  background-color: #E57325;
   letter-spacing: 0.05rem;
   padding: 1.5rem 2rem 0rem;
   z-index: 10;
@@ -14185,7 +14185,7 @@ body.path-webform .help-curate {
 .student-resources.layout .field--name-body h2, .student-resources.layout .field--name-body .h2 {
   grid-column: 1/4;
   width: fit-content;
-  border-bottom: solid 0.8rem #E57200;
+  border-bottom: solid 0.8rem #E57325;
   line-height: 1rem;
   font-family: "ITC Franklin Gothic Med", sans-serif;
   font-style: italic;

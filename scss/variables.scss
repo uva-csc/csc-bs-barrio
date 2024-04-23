@@ -28,14 +28,12 @@ $gray-100: #f8f9fa;
 $gray-800: #343a40;
 $uva-blue: #232D4B;
 $uva-blue-25: #C8CBD2;
-$uva-orange: #E57200;
+$uva-orange: #E57325; // uva orange is: #E57200;
 $uva-orange-25: #F9DCBF;
 $csc-lt-blue: #009fdf;
 $csc-white-blue: #e5f1f6;
 $csc-gray: #cdcdcd;
 $csc-dark-gray: #5a6172;
-
-$text-shadow: 2px 2px 5px #00000084;
 
   // scss-docs-start theme-color-variables
 $primary:       $accent-shade;
@@ -61,6 +59,12 @@ $body-bg: $white;
 $body-color: $gray-800;
 $inverse-bg: $primary-shade;
 $inverse-color: $white;
+
+// Title
+
+$text-shadow: 2px 2px 5px #00000084;
+$title-bg: #22222277;
+
 // Links
 //
 // Style anchor elements.
