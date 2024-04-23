@@ -428,10 +428,19 @@ body.node--type-landing-page  main#content {
           font-family: 'Bodoni Bold', serif;
           text-transform: capitalize;
           letter-spacing: 0.05rem;
+
+          a {
+            text-transform: capitalize;
+            border: none;
+
+            &:hover, &:hover span {
+              color: $uva-orange!important;
+            }
+          }
         }
 
         p {
-          margin: 0;
+          margin: 0.5rem 0;
           padding: 0;
         }
 
