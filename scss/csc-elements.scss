@@ -18,9 +18,38 @@ p {
   line-height: 1.5rem;
 }
 
+/** Breadcrumbs **/
+
+nav ol.breadcrumb {
+  display: block;
+
+  // Remove parent theme display of slash separator
+  .breadcrumb-item:before {
+    display: none;
+  }
+
+  ol {
+    list-style-type: none;
+    padding-inline-start: 10px;
+  }
+
+  // Don't display bootstrap icon for home breadcrumb
+  & > li.breadcrumb-item:first-child > i.bi {
+     display: none;
+  }
+
+  // Make bootstrap chevron icon smaller and vertically aligned
+  li.breadcrumb-item {
+    i.bi {
+      font-size: 70%;
+      vertical-align: middle;
+    }
+  }
+}
+
 /** Links **/
 a {
-  border-bottom: 4px solid $uva-orange;
+  border-bottom: 3px solid $uva-orange;
 }
 
 a.plain,

@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * CSC Update: Nest breadcrumbs for progressive indent and use chevron bootstrap icon for separator
+ */
+#}
+{{ attach_library('bootstrap_barrio/breadcrumb') }}
+
+{% if breadcrumb %}
+  <nav role="navigation" aria-label="breadcrumb" style="{{breadcrumb_divider}}">
+    <ol class="breadcrumb">
+    {% for item in breadcrumb %}
+      {% if item.url %}
+        <li class="breadcrumb-item">
+          <i class="bi bi-chevron-right"></i>
+          <a href="{{ item.url }}">{{ item.text }}</a>
+          <ol>
+      {% else %}
+        <li class="breadcrumb-item active">
+          <i class="bi bi-chevron-right"></i>
+          {{ item.text }}
+          <ol>
+      {% endif %}
+    {% endfor %}
+    {% for item in breadcrumb %}
+        </ol></li>
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

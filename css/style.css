@@ -13779,9 +13779,28 @@ p {
   line-height: 1.5rem;
 }
 
+/** Breadcrumbs **/
+nav ol.breadcrumb {
+  display: block;
+}
+nav ol.breadcrumb .breadcrumb-item:before {
+  display: none;
+}
+nav ol.breadcrumb ol {
+  list-style-type: none;
+  padding-inline-start: 10px;
+}
+nav ol.breadcrumb > li.breadcrumb-item:first-child > i.bi {
+  display: none;
+}
+nav ol.breadcrumb li.breadcrumb-item i.bi {
+  font-size: 70%;
+  vertical-align: middle;
+}
+
 /** Links **/
 a {
-  border-bottom: 4px solid #E57325;
+  border-bottom: 3px solid #E57325;
 }
 
 a.plain,

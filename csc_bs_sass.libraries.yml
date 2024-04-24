@@ -9,6 +9,11 @@ global-styling:
   css:
     component:
       css/style.css: {}
+    theme:
+      'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css' :
+        type: external
+        minified: true
+
   dependencies:
     - core/jquery
     - core/jquery.once
