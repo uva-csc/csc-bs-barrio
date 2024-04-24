@@ -13374,6 +13374,8 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia {
 }
 div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   filter: drop-shadow(2px 4px 6px #232D4B);
+  max-width: 27vw;
+  height: auto;
 }
 
 .features-1over2 > .layout__region {
