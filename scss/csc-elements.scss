@@ -28,7 +28,7 @@ nav ol.breadcrumb {
     display: none;
   }
 
-  ol {
+  li > ol {
     list-style-type: none;
     padding-inline-start: 10px;
   }

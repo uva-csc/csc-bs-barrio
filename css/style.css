@@ -13786,7 +13786,7 @@ nav ol.breadcrumb {
 nav ol.breadcrumb .breadcrumb-item:before {
   display: none;
 }
-nav ol.breadcrumb ol {
+nav ol.breadcrumb li > ol {
   list-style-type: none;
   padding-inline-start: 10px;
 }
