@@ -35,6 +35,11 @@ $csc-white-blue: #e5f1f6;
 $csc-gray: #cdcdcd;
 $csc-dark-gray: #5a6172;
 
+// Shadows
+$img-shadow: drop-shadow(2px 4px 6px #232D4B);  // use with "filter: ..."
+$map-shadow: drop-shadow(10px 10px #b2c0e3);      // use with filter
+$text-shadow: 2px 2px 5px #232D4B84;  // use with "text-shadow"
+
   // scss-docs-start theme-color-variables
 $primary:       $accent-shade;
 $secondary:     $primary-shade;
@@ -61,8 +66,6 @@ $inverse-bg: $primary-shade;
 $inverse-color: $white;
 
 // Title
-
-$text-shadow: 2px 2px 5px #00000084;
 $title-bg: #22222277;
 
 // Links

@@ -263,6 +263,18 @@ footer.site-footer {
   }
 }
 
+// Media Images on left in a 33%/67% layout builder layout
+div.layout--twocol-section--33-67 {
+   .block.block-entity-blockmedia {
+    margin-left: 3rem;
+    margin-top: 3rem;
+
+     img {
+       filter: $img-shadow;
+     }
+  }
+}
+
 .features-1over2 {
   & > .layout__region {
     display: flex;

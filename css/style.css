@@ -13368,6 +13368,14 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   text-transform: uppercase;
 }
 
+div.layout--twocol-section--33-67 .block.block-entity-blockmedia {
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
+  filter: drop-shadow(2px 4px 6px #232D4B);
+}
+
 .features-1over2 > .layout__region {
   display: flex;
   flex-wrap: wrap;
@@ -13539,7 +13547,7 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   text-align: left;
   margin: 1.5rem 0 0.5rem 25vw;
   font-size: 2.75rem;
-  text-shadow: 2px 2px 5px #00000084;
+  text-shadow: 2px 2px 5px #232D4B84;
 }
 body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box p {
   color: #232D4B;
@@ -13779,6 +13787,11 @@ p {
   line-height: 1.5rem;
 }
 
+blockquote {
+  margin: 0 0 1.5rem;
+  margin-inline-start: 40px;
+}
+
 /** Breadcrumbs **/
 nav ol.breadcrumb {
   display: block;
@@ -13945,7 +13958,7 @@ div.geolocation-map-wrapper {
 }
 .centered-intro h2, .centered-intro .h2 {
   font-size: 2.25rem;
-  text-shadow: 2px 2px 5px #00000084;
+  text-shadow: 2px 2px 5px #232D4B84;
   text-align: center;
   letter-spacing: 0.2rem;
 }

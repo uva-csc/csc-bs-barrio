@@ -18,6 +18,11 @@ p {
   line-height: 1.5rem;
 }
 
+blockquote {
+  margin: 0 0 1.5rem;
+  margin-inline-start: 40px;
+}
+
 /** Breadcrumbs **/
 
 nav ol.breadcrumb {
