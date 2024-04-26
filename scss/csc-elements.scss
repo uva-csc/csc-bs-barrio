@@ -27,6 +27,7 @@ blockquote {
 
 nav ol.breadcrumb {
   display: block;
+  font-size: 90%;
 
   // Remove parent theme display of slash separator
   .breadcrumb-item:before {
@@ -48,6 +49,19 @@ nav ol.breadcrumb {
     i.bi {
       font-size: 70%;
       vertical-align: middle;
+    }
+  }
+}
+
+div.layout.bc-inline .block-system-breadcrumb-block {
+  margin: -1rem 0 1rem;
+
+  nav ol.breadcrumb {
+    display: inline-block;
+
+    * {
+      display: inline-block;
+      padding-inline-start: 0px;
     }
   }
 }
@@ -177,13 +191,13 @@ p.read-more {
 }
 
 .field--name-field-teaser-image {
-  filter: drop-shadow(2px 4px 6px $uva-blue);
+  filter: $img-shadow;
 }
 
 
 /** Maps **/
 div.geolocation-map-wrapper {
-  filter: drop-shadow(10px 10px #b2c0e3);
+  filter: $map-shadow;
 }
 .node--view-mode-map .field--name-title { display: none; }
 
@@ -215,7 +229,7 @@ div.geolocation-map-wrapper {
 
 // Centered Intro, e.g. Citizen Leaders Fellowship
 .centered-intro {
-  margin: 1rem 0 2rem;
+  margin: 0;
 
   h2 {
     font-size: 2.25rem;
@@ -237,7 +251,8 @@ div.geolocation-map-wrapper {
 
     img {
       display: block;
-      margin: 0 auto;
+      margin: 1.5rem auto;
+      filter: $img-shadow;
     }
   }
 }

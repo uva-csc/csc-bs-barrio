@@ -13368,6 +13368,10 @@ footer.site-footer section.region-footer-first .rector-visitor-block {
   text-transform: uppercase;
 }
 
+.layout .field--name-body h2:first-child, .layout .field--name-body .h2:first-child, .layout .field--name-body h3:first-child, .layout .field--name-body .h3:first-child, .layout .field--name-body h4:first-child, .layout .field--name-body .h4:first-child {
+  margin-top: 0;
+}
+
 div.layout--twocol-section--33-67 .block.block-entity-blockmedia {
   margin-left: 3rem;
   margin-top: 3rem;
@@ -13797,6 +13801,7 @@ blockquote {
 /** Breadcrumbs **/
 nav ol.breadcrumb {
   display: block;
+  font-size: 90%;
 }
 nav ol.breadcrumb .breadcrumb-item:before {
   display: none;
@@ -13811,6 +13816,17 @@ nav ol.breadcrumb > li.breadcrumb-item:first-child > i.bi {
 nav ol.breadcrumb li.breadcrumb-item i.bi {
   font-size: 70%;
   vertical-align: middle;
+}
+
+div.layout.bc-inline .block-system-breadcrumb-block {
+  margin: -1rem 0 1rem;
+}
+div.layout.bc-inline .block-system-breadcrumb-block nav ol.breadcrumb {
+  display: inline-block;
+}
+div.layout.bc-inline .block-system-breadcrumb-block nav ol.breadcrumb * {
+  display: inline-block;
+  padding-inline-start: 0px;
 }
 
 /** Links **/
@@ -13956,7 +13972,7 @@ div.geolocation-map-wrapper {
 
 /** Paragraphs: class for paragraphs with custom formatting (not structural) **/
 .centered-intro {
-  margin: 1rem 0 2rem;
+  margin: 0;
 }
 .centered-intro h2, .centered-intro .h2 {
   font-size: 2.25rem;
@@ -13976,7 +13992,8 @@ div.geolocation-map-wrapper {
 }
 .centered-intro p:has(img) img {
   display: block;
-  margin: 0 auto;
+  margin: 1.5rem auto;
+  filter: drop-shadow(2px 4px 6px #232D4B);
 }
 
 /** Views **/
@@ -14316,6 +14333,15 @@ body.path-webform .help-curate {
 }
 .node--type-people .field--name-body {
   padding-top: 1rem;
+}
+
+.node--type-page h2:first-child, .node--type-page .h2:first-child {
+  margin-top: 0;
+}
+.node--type-page .block-field-blocknodepagebody img {
+  max-width: 60vw;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px #232D4B);
 }
 
 .node--type-location .field--name-field-image {

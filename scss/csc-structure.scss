@@ -263,6 +263,13 @@ footer.site-footer {
   }
 }
 
+// Remove top margin for headers in body
+.layout .field--name-body {
+  h2:first-child, h3:first-child, h4:first-child {
+    margin-top: 0;
+  }
+}
+
 // Media Images on left in a 33%/67% layout builder layout
 div.layout--twocol-section--33-67 {
    .block.block-entity-blockmedia {

@@ -11,6 +11,7 @@ use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\smart_date\SmartDateTrait;
+use Drupal\node\NodeInterface;
 
 const POSITION_RELATIVE = "position: relative;";
 
@@ -42,7 +43,7 @@ function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface
 function csc_bs_sass_preprocess_page(&$variables) {
 
   // Node pages
-  if (array_key_exists('node', $variables)) {
+  if (array_key_exists('node', $variables) && $variables['node'] instanceof NodeInterface) {
     $node = $variables['node'];
     $pg_type = $node->getType();
 
@@ -157,13 +158,16 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
       }
     }
   }
-  if ($para->get('field_hero_image')) {
-    $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
-    $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
-    $file_url = FILE::load($fid)->createFileUrl();
-    if (!empty($file_url)) {
-      $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
-      $variables['attributes']['style'][] = 'background-size: cover;';
+  if (!empty($para) && $para->get('field_hero_image')) {
+    $mid = $para->get('field_hero_image')[0]?->get('target_id')?->getValue();
+    if ($mid) {
+      $fid = Media::load($mid)->get('field_media_image')[0]->get('target_id')
+        ->getValue();
+      $file_url = FILE::load($fid)?->createFileUrl();
+      if (!empty($file_url)) {
+        $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
+        $variables['attributes']['style'][] = 'background-size: cover;';
+      }
     }
   }
 }
