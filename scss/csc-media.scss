@@ -69,4 +69,14 @@
   // Standard Elements
   h2, h3, h4 { font-size: 115%!important; }
 
+  // Front page
+  .path-frontpage {
+    .c-csc-text_box.hours-box {
+        position: absolute;
+        top: 170px;
+        color: white;
+        width: 100vw;
+        text-align: center;
+    }
+  }
 } // End of max-width: 576px
