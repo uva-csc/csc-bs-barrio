@@ -14555,6 +14555,8 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
   line-height: 1.25rem;
 }
 
+/* VARIABLES */
+/** Bootstrap Overrides **/
 /* May already be in bootstrap took from uva law law.virginia.edu
 @media (min-width: 48em) {
   .container, .container-sm, .container-md, .container-lg {
@@ -14579,6 +14581,37 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
 body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--second {
     flex: 0 1 45%;
     padding: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  #block-csc-bs-sass-main-menu:not(.show) {
+    display: none;
+  }
+
+  #header #navbar-main {
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  #header #navbar-main .nav-item a {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  #header #navbar-main div.csc-give-link {
+    border-width: 2px;
+    padding: 0 2px;
+  }
+  #header #navbar-main div.csc-give-link .content .field--name-body p {
+    margin: 0;
+    padding: 0;
+  }
+  #header #navbar-main div.csc-give-link .content .field--name-body p a {
+    font-family: "ITC Franklin Gothic Med", sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  h2, .h2, h3, .h3, h4, .h4 {
+    font-size: 115% !important;
   }
 }
 /* GENERAL STYLES

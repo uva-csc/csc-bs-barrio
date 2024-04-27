@@ -40,7 +40,12 @@
   ]
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#main-menu-list" aria-controls="main-menu-list"
+        aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div id="main-menu-list" class="collapse navbar-collapse">
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}
@@ -49,16 +54,8 @@
   <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
   {{ title_suffix }}
 
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#csc-navbar-main"
-            aria-controls="csc-navbar-main" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="csc-navbar-main">
-      {# Menu. #}
-      {% block content %}
-        {{ content }}
-      {% endblock %}
-    </div>
-  </div>
-</nav>
+  {# Menu. #}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
