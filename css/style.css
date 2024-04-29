@@ -14443,8 +14443,10 @@ body.path-webform .help-curate {
   border-bottom-width: 2px !important;
 }
 
-.events-main .view-events .views-field-field-tags a {
-  margin: 15px 0 10px;
+.events-main .view-events .tax-term {
+  margin: 0 0 10px;
+}
+.events-main .view-events .tax-term a {
   line-height: 1;
   font-size: 0.875rem;
   font-weight: 500;
@@ -14505,9 +14507,29 @@ body.path-webform .help-curate {
   font-style: normal;
   transform: translateX(-80px);
 }
-.events-main .events-column .views-field-title {
+.events-main .events-column h2.event-title, .events-main .events-column .event-title.h2 {
+  margin-top: -10px;
   font-size: 1.75rem;
   line-height: 1.0714285714;
+}
+.events-main .events-column h2.event-title:hover, .events-main .events-column .event-title.h2:hover {
+  text-decoration: underline;
+}
+.events-main .events-column .views-row {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0 10px -20px;
+  animation-name: transformer, fade-in;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(50%);
+}
+.events-main .events-column .views-row img {
+  max-width: unset;
+  width: 270px;
+  height: auto;
 }
 
 .node--type-people #main.container {
