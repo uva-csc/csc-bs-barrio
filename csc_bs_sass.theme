@@ -65,6 +65,28 @@ function csc_bs_sass_preprocess_page(&$variables) {
   }
 }
 
+/* View Preprocessing */
+function csc_bs_sass_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  $field = $variables['field'];
+  if ($view->storage->id() == 'events' &&
+    // $view->current_display == 'block_featured' &&
+    $field->field == 'field_tags') {
+    $output = [];
+    foreach ($view->result as $rid => $row) {
+      $tids = $view->field['field_tags']->getValue($row);
+      foreach ($tids as $tid) {
+        $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+        $bundle = $term->bundle();
+        if($bundle !== 'content_filters') {
+          $output[] = "<span class=\"tax-term\"><a href=\"/taxonomy/term/{$tid}\">{$term->label()}</a></span>";
+        }
+      }
+    }
+    $variables['output'] = implode('', $output);
+  }
+}
+
 /*
 function csc_bs_sass_preprocess_node(&$variables) {
   if (array_key_exists('node', $variables)) {

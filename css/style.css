@@ -13001,8 +13001,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* VARIABLES */
-/** Bootstrap Overrides **/
 @font-face {
   font-family: "ITC Franklin Gothic Std";
   font-weight: normal;
@@ -13143,16 +13141,59 @@ textarea.form-control-lg {
   border-bottom: 2px solid #232D4B;
 }
 
-.text-white, .text-white > a {
-  color: #fdfdfd;
+.text-blue {
+  color: #232D4B !important;
+}
+.text-blue a:not(*[class*=text-]) {
+  color: #232D4B;
 }
 
-.text-orange, .text-orange > a {
+.text-orange {
+  color: #E57325;
+}
+.text-orange a:not(*[class*=text-]) {
   color: #E57325;
 }
 
-.text-blue, .text-blue > a {
-  color: #232D4B;
+.text-lt-blue {
+  color: #009fdf;
+}
+.text-lt-blue a:not(*[class*=text-]) {
+  color: #009fdf;
+}
+
+.text-white {
+  color: #fdfdfd;
+}
+.text-white a:not(*[class*=text-]) {
+  color: #fdfdfd;
+}
+
+.text-black {
+  color: #222222;
+}
+.text-black a:not(*[class*=text-]) {
+  color: #222222;
+}
+
+.bg-blue {
+  background-color: #232D4B;
+}
+
+.bg-orange {
+  background-color: #E57325;
+}
+
+.bg-lt-blue {
+  background-color: #009fdf;
+}
+
+.bg-white {
+  background-color: #fdfdfd;
+}
+
+.bg-black {
+  background-color: #222222;
 }
 
 /* VARIABLES */
@@ -13589,6 +13630,49 @@ body.node--type-page .field--name-field-image {
   padding: 5px;
 }
 
+body.node--type-event .layout__region.layout__region--first {
+  padding-right: 5rem;
+}
+body.node--type-event .layout__region.layout__region--first ol.breadcrumb {
+  margin-top: -1rem;
+  margin-left: -8rem;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags {
+  text-align: right;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags ul, body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
+  margin: 0;
+  padding: 0;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
+  list-style-type: none;
+  text-align: right;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 90%;
+  text-transform: uppercase;
+  border: none;
+  color: #5a6172;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle {
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: thin solid grey;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle span {
+  font-size: 3.5rem;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  line-height: 1.03846;
+  letter-spacing: -0.02885em;
+}
+body.node--type-event .layout__region.layout__region--first .field--name-field-image {
+  margin-bottom: 1rem;
+}
+body.node--type-event .layout__region.layout__region--first .field--name-field-image img {
+  width: 100%;
+  height: auto;
+}
 main#content .node__content {
   margin-top: 0;
 }
@@ -13848,60 +13932,125 @@ a[href^=mailto] {
 }
 
 p.read-more {
-  font-size: 80%;
+  font-size: 75%;
   font-weight: bold;
   text-align: right;
   font-style: italic;
   position: relative;
-  top: -0.75rem;
+  top: -1rem;
 }
 p.read-more a {
   border-bottom-width: 2px;
 }
 
 /** End of Links **/
-/** Page Title Styles **/
-/** Colors **/
-.text-blue {
-  color: #232D4B !important;
+/** Buttons (taken from Arts at UVA) **/
+.csc-btn {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-size: 90% !important;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  min-height: 45px;
+  max-width: 200px;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  width: 100%;
+  z-index: 1;
 }
-
-.text-orange {
-  color: #E57325;
+.csc-btn:has(a) {
+  padding-bottom: 0.25rem;
 }
-
-.text-lt-blue {
-  color: #009fdf;
+.csc-btn:active {
+  transform: translateY(2px);
 }
-
-.text-white {
+.csc-btn:hover {
+  cursor: pointer;
+}
+.csc-btn.btn--pill {
+  border-radius: 22.5px;
+}
+.csc-btn.btn--circle {
+  border-radius: 50%;
+  border: none;
+}
+.csc-btn.btn--blue {
+  background-color: #232D4B;
   color: #fdfdfd;
 }
-
-.text-black {
-  color: #222222;
-}
-
-.bg-blue {
-  background-color: #232D4B;
-}
-
-.bg-orange {
-  background-color: #E57325;
-}
-
-.bg-lt-blue {
+.csc-btn.btn--blue::before {
   background-color: #009fdf;
 }
-
-.bg-white {
+.csc-btn.btn--blue-gray-l {
+  background-color: #cdcdcd;
+}
+.csc-btn.btn--blue-gray-l::before {
+  background-color: #b4b4b4;
+}
+.csc-btn.btn--white {
+  background-color: #fdfdfd;
+  color: #232D4B;
+}
+.csc-btn.btn--white::before {
+  background-color: #cdcdcd;
+}
+.csc-btn.btn--outline-white {
+  background-color: transparent;
+  border: 1px solid #fdfdfd;
+  color: #fdfdfd;
+}
+.csc-btn.btn--outline-white:hover, .csc-btn.btn--outline-white:focus {
+  color: #232D4B;
+}
+.csc-btn.btn--outline-white::before {
   background-color: #fdfdfd;
 }
-
-.bg-black {
-  background-color: #222222;
+.csc-btn.btn--outline-blue {
+  background-color: transparent;
+  border: 1px solid #232D4B;
+  color: #232D4B;
+}
+.csc-btn.btn--outline-blue:hover, .csc-btn.btn--outline-blue:focus {
+  color: #fdfdfd;
+}
+.csc-btn.btn--outline-blue::before {
+  background-color: #232D4B;
+}
+.csc-btn.btn--disabled {
+  background-color: #cdcdcd;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.csc-btn.btn--disabled:hover, .csc-btn.btn--disabled:focus {
+  background-color: #cdcdcd;
+}
+.csc-btn.btn--disabled::before {
+  background-color: #cdcdcd;
+}
+.csc-btn.btn--slide::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+  z-index: -1;
+}
+.csc-btn.btn--slide:hover::before, .csc-btn.btn--slide:focus::before {
+  transform-origin: center left;
+  transform: scaleX(1);
 }
 
+/** Page Title Styles **/
 /** Icons **/
 .csc-pointer img.chevron {
   width: 25px;
@@ -13937,7 +14086,8 @@ p.read-more a {
    */
 }
 
-.field--name-field-teaser-image {
+.field--name-field-teaser-image,
+.views-field-field-teaser-image {
   filter: drop-shadow(2px 4px 6px #232D4B);
 }
 
@@ -14271,49 +14421,50 @@ body.path-webform .help-curate {
   border-bottom-width: 2px !important;
 }
 
-.node--type-event .layout__region.layout__region--first {
-  padding-right: 5rem;
-}
-.node--type-event .layout__region.layout__region--first ol.breadcrumb {
-  margin-top: -1rem;
-  margin-left: -8rem;
-}
-.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags {
-  text-align: right;
-}
-.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags ul, .node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
-  margin: 0;
-  padding: 0;
-}
-.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
-  list-style-type: none;
-  text-align: right;
-}
-.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li a {
-  font-family: "ITC Franklin Gothic Med", sans-serif;
-  font-size: 90%;
+.events-main .view-events .views-field-field-tags a {
+  margin: 15px 0 10px;
+  line-height: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.0714285714em;
+  color: #141e3c;
   text-transform: uppercase;
+}
+.events-main .view-events a {
   border: none;
-  color: #5a6172;
 }
-.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle {
-  margin-bottom: 1rem;
-  padding-bottom: 0.25rem;
-  border-bottom: thin solid grey;
+.events-main .events-featured {
+  width: 600px;
 }
-.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle span {
-  font-size: 3.5rem;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
-  line-height: 1.03846;
-  letter-spacing: -0.02885em;
-}
-.node--type-event .layout__region.layout__region--first .field--name-field-image {
+.events-main .events-featured .views-field-field-teaser-image {
   margin-bottom: 1rem;
 }
-.node--type-event .layout__region.layout__region--first .field--name-field-image img {
-  width: 100%;
+.events-main .events-featured .views-field-field-teaser-image img {
+  width: 600px;
   height: auto;
 }
+.events-main .events-featured .views-field-title {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+.events-main .events-featured .views-field-body {
+  font-size: 1rem;
+  line-height: 1.375;
+  letter-spacing: -0.03125em;
+  margin: 0 0 10px;
+}
+.events-main .events-featured .views-field-field-date,
+.events-main .events-featured .views-field-field-location {
+  font-size: 90%;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+}
+.events-main .events-column .views-field-title {
+  font-size: 1.75rem;
+  line-height: 1.0714285714;
+}
+
 .node--type-people #main.container {
   margin-top: 0;
 }
@@ -14551,7 +14702,7 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-body p {
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.25rem;
 }
 

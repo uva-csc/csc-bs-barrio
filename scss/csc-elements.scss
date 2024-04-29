@@ -88,12 +88,12 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
 
 // Read More links
 p.read-more {
-  font-size: 80%;
+  font-size: 75%;
   font-weight: bold;
   text-align: right;
   font-style: italic;
   position: relative;
-  top: -0.75rem;
+  top: -1rem;
 
   a {
     border-bottom-width: 2px;
@@ -102,53 +102,149 @@ p.read-more {
 
 /** End of Links **/
 
+/** Buttons (taken from Arts at UVA) **/
+.csc-btn {
+  // @include font(15, 15, -0.25, $sans, $fw-medium);
+  font-family: $font-frankgoth-std;
+  font-size: 90% !important;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  min-height: 45px;
+  max-width: 200px;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  width: 100%;
+  z-index: 1;
+
+  &:has(a) {
+    padding-bottom: 0.25rem;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // Shape
+  &.btn--pill {
+    border-radius: 22.5px;
+  }
+
+  &.btn--circle {
+    border-radius: 50%;
+    border: none;
+  }
+
+  // Color
+  &.btn--blue {
+    background-color: $uva-blue;
+    color: $white;
+
+    &::before {
+      background-color: $csc-lt-blue;
+    }
+  }
+
+  &.btn--blue-gray-l {
+    background-color: $csc-gray;
+
+    &::before {
+      background-color: darken($csc-gray, 10%);
+    }
+  }
+
+  &.btn--white {
+    background-color: $white;
+    color: $uva-blue;
+
+    &::before {
+      background-color: $csc-gray;
+    }
+  }
+
+  &.btn--outline-white {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $uva-blue;
+    }
+
+    &::before {
+      background-color: $white;
+    }
+  }
+
+  &.btn--outline-blue {
+    background-color: transparent;
+    border: 1px solid $uva-blue;
+    color: $uva-blue;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    &::before {
+      background-color: $uva-blue;
+    }
+  }
+
+  &.btn--disabled {
+    background-color: $csc-gray;
+    opacity: 0.7;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      background-color: $csc-gray;
+    }
+
+    &::before {
+      background-color: $csc-gray;
+    }
+  }
+
+  // Motion
+  &.btn--slide {
+    &::before {
+      content: "";
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform-origin: center right;
+      transform: scaleX(0);
+      transition: transform 0.25s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform-origin: center left;
+      transform: scaleX(1);
+    }
+  }
+}
+// End of  CSC Buttons
 
 /** Page Title Styles **/
 // Title in layout builder
 .block-layout-builder .field--name-title {
 
-}
-
-
-/** Colors **/
-.text-blue {
-  color: $uva-blue !important;
-}
-
-.text-orange {
-  color: $uva-orange;
-}
-
-.text-lt-blue {
-  color: $csc-lt-blue;
-}
-
-.text-white {
-  color: $white;
-}
-
-.text-black {
-  color: $black;
-}
-
-.bg-blue {
-  background-color: $uva-blue;
-}
-
-.bg-orange {
-  background-color: $uva-orange;
-}
-
-.bg-lt-blue {
-  background-color: $csc-lt-blue;
-}
-
-.bg-white {
-  background-color: $white;
-}
-
-.bg-black {
-  background-color: $black;
 }
 
 /** Icons **/
@@ -190,7 +286,8 @@ p.read-more {
   }
 }
 
-.field--name-field-teaser-image {
+.field--name-field-teaser-image,
+.views-field-field-teaser-image {
   filter: $img-shadow;
 }
 

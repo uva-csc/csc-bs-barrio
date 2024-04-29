@@ -83,60 +83,65 @@
 
 // End of Students Page
 
-// Event Pages
-
-.node--type-event {
-  .layout__region.layout__region--first {
-    padding-right: 5rem;
-
-    ol.breadcrumb {
-      margin-top: -1rem;
-      margin-left: -8rem;
-    }
-
-    .block-field-blocknodeeventfield-tags {
-      text-align: right;
-      ul, li { margin: 0; padding: 0;}
-      li {
-        list-style-type: none;
-
-        text-align: right;
-        a {
-          font-family: $font-frankgoth-med;
-          font-size: 90%;
-          text-transform: uppercase;
-          border: none;
-          color: $csc-dark-gray;
-        }
+// Events Page
+.events-main { // class set on content section of events page in layout builder
+  // both views on event pages
+  .view-events {
+    .views-field-field-tags {
+      a {
+        margin: 15px 0 10px;
+        line-height: 1;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.0714285714em;
+        color: #141e3c;
+        text-transform: uppercase;
       }
     }
-    .block-field-blocknodeeventtitle {
-      margin-bottom: 1rem;
-      padding-bottom: 0.25rem;
-      border-bottom: thin solid grey;
-      span {
-        font-size: 3.5rem;
-        font-family: $font-frankgoth-hvy;
-        line-height: 1.03846;
-        letter-spacing: -0.02885em;
-      }
+    a {
+      border: none; // remove orange underline
     }
+  }
+  // The Featured left side
+  .events-featured {
+    width: 600px;
 
-    .field--name-field-image {
+    .views-field-field-teaser-image {
       margin-bottom: 1rem;
+
       img {
-        width: 100%;
+        width: 600px;
         height: auto;
       }
     }
 
-  } // end of events layout region first
-  .layout__region.layout__region--second {
+    .views-field-title {
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+    .views-field-body {
+      font-size: 1rem;
+      line-height: 1.375;
+      letter-spacing: -0.03125em;
+      margin: 0 0 10px;
+    }
 
-  } // end of events layout region second
-}
+    .views-field-field-date,
+    .views-field-field-location {
+      font-size: 90%;
+      font-weight: bold;
+      line-height: 1.5;
+      text-align: center;
+    }
+  } // End of Events page featured block
 
-// End of Event Pages
+  .events-column {
+    .views-field-title {
+      font-size: 1.75rem;
+      line-height: 1.0714285714;
+    }
+  }
+} // End of Events Main Page
 
 // People Pages
 .node--type-people {

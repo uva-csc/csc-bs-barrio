@@ -25,14 +25,57 @@
 }
 
 // Colors
-.text-white, .text-white > a {
-  color: $white;
+.text-blue {
+  color: $uva-blue !important;
+  a:not(*[class*='text-']) {
+    color: $uva-blue;
+  }
 }
 
-.text-orange, .text-orange > a {
+.text-orange {
   color: $uva-orange;
+  a:not(*[class*='text-']) {
+    color: $uva-orange;
+  }
 }
 
-.text-blue, .text-blue > a {
-  color: $uva-blue;
+.text-lt-blue {
+  color: $csc-lt-blue;
+  a:not(*[class*='text-']) {
+    color: $csc-lt-blue;
+  }
+}
+
+.text-white {
+  color: $white;
+  a:not(*[class*='text-']) {
+    color: $white;
+  }
+}
+
+.text-black {
+  color: $black;
+  a:not(*[class*='text-']) {
+    color: $black;
+  }
+}
+
+.bg-blue {
+  background-color: $uva-blue;
+}
+
+.bg-orange {
+  background-color: $uva-orange;
+}
+
+.bg-lt-blue {
+  background-color: $csc-lt-blue;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-black {
+  background-color: $black;
 }

@@ -538,6 +538,58 @@ body.node--type-page {
   }
 } // End of basic page content type
 
+// Event Content Type Pages
+body.node--type-event {
+  .layout__region.layout__region--first {
+    padding-right: 5rem;
+
+    ol.breadcrumb {
+      margin-top: -1rem;
+      margin-left: -8rem;
+    }
+
+    .block-field-blocknodeeventfield-tags {
+      text-align: right;
+      ul, li { margin: 0; padding: 0;}
+      li {
+        list-style-type: none;
+
+        text-align: right;
+        a {
+          font-family: $font-frankgoth-med;
+          font-size: 90%;
+          text-transform: uppercase;
+          border: none;
+          color: $csc-dark-gray;
+        }
+      }
+    }
+    .block-field-blocknodeeventtitle {
+      margin-bottom: 1rem;
+      padding-bottom: 0.25rem;
+      border-bottom: thin solid grey;
+      span {
+        font-size: 3.5rem;
+        font-family: $font-frankgoth-hvy;
+        line-height: 1.03846;
+        letter-spacing: -0.02885em;
+      }
+    }
+
+    .field--name-field-image {
+      margin-bottom: 1rem;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  } // end of events layout region first
+  .layout__region.layout__region--second {
+
+  } // end of events layout region second
+} // End of Events Content Type
+
 // End of Content Type Styles
 
 // Paragraph Types
