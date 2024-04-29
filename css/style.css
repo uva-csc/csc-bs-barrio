@@ -13048,6 +13048,18 @@ textarea.form-control-lg {
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCdIt.otf") format("opentype");
 }
 @font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCdIt.otf") format("opentype");
+}
+@font-face {
   font-family: "ITC Franklin Gothic Compressed";
   font-weight: normal;
   font-style: normal;
@@ -14353,6 +14365,16 @@ body.path-webform .help-curate {
   display: none;
 }
 
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes transformer {
+  100% {
+    transform: none;
+  }
+}
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
@@ -14459,6 +14481,29 @@ body.path-webform .help-curate {
   font-weight: bold;
   line-height: 1.5;
   text-align: center;
+}
+.events-main .events-column .view-header h2, .events-main .events-column .view-header .h2 {
+  font-family: "ITC Franklin Gothic Condensed", sans-serif;
+  font-size: 6.25rem;
+  font-weight: bold;
+  line-height: 0.8;
+  letter-spacing: 0.01em;
+  max-width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 0 0 0 -10px;
+  opacity: 0;
+  transform: translateY(-80%);
+  text-transform: uppercase;
+  animation: fade-in 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transformer 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation-fill-mode: forwards;
+}
+.events-main .events-column .view-header h2 em, .events-main .events-column .view-header .h2 em {
+  display: inline-block;
+  color: #fdfdfd;
+  font-style: normal;
+  transform: translateX(-80px);
 }
 .events-main .events-column .views-field-title {
   font-size: 1.75rem;

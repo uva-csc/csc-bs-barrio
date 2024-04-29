@@ -617,3 +617,16 @@ body.path-webform {
 
 // End of Webforms
 
+
+// Animations
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transformer {
+  100% {
+    transform: none;
+  }
+}

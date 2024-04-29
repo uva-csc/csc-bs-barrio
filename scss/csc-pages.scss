@@ -136,6 +136,30 @@
   } // End of Events page featured block
 
   .events-column {
+    .view-header h2 {
+      font-family: $font-frankgoth-cd;
+      font-size: 6.25rem;
+      font-weight: bold;
+      line-height: 0.8;
+      letter-spacing: 0.01em;
+      max-width: 650px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin: 0 0 0 -10px;
+      opacity: 0;
+      transform: translateY(-80%);
+      text-transform: uppercase;
+      animation: fade-in 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transformer 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      animation-fill-mode: forwards;
+
+      em {
+        display: inline-block;
+        color: $white;
+        font-style: normal;
+        transform: translateX(-80px);
+      }
+    }
     .views-field-title {
       font-size: 1.75rem;
       line-height: 1.0714285714;

@@ -47,6 +47,19 @@
   src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCdIt.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCdIt.otf") format("opentype");
+}
+
 
 // Compressed
 @font-face {
