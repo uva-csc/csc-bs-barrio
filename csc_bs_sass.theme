@@ -65,6 +65,36 @@ function csc_bs_sass_preprocess_page(&$variables) {
   }
 }
 
+function csc_bs_sass_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($node->bundle() == 'event') {
+    // kint($node);
+    $date = $node->get('field_date');
+    $vals = $date->getValue();
+    foreach($vals as $n => $val) {
+      $dtts = $val['value'];
+      $val['month'] = date('M', $dtts);
+      $val['day'] = date('j', $dtts);
+      $val['full'] = date('M j, Y', $dtts);
+      $vals[$n] = $val;
+    }
+    $date->setValue($vals);
+  }
+}
+
+function csc_bs_sass_preprocess_field(&$variables) {
+  csc_log('vars in pp field: ' . json_encode(array_keys($variables)));
+  $fld_name = $variables['field_name'];
+  if ($fld_name == 'field_date') {
+    $el = $variables['element'];
+    // TODO: need to account for multiple dates, event with many different occurrences?
+    $dt = $el['#items'][0]->getValue();
+    $variables['csc_month'] = $dt['month'];
+    $variables['csc_day'] = $dt['day'];
+    $variables['csc_full'] = $dt['full'];
+  }
+}
+
 /* View Preprocessing */
 function csc_bs_sass_preprocess_views_view_field(&$variables) {
   $view = $variables['view'];

@@ -493,7 +493,7 @@ body.node--type-landing-page  main#content {
       text-align: left;
       margin: 1.5rem 0 0.5rem 25vw;
       font-size: 2.75rem;
-      text-shadow: $text-shadow;
+      // text-shadow: $text-shadow;
     }
     p {
       color: $uva-blue;
@@ -540,7 +540,15 @@ body.node--type-page {
 
 // Event Content Type Pages
 body.node--type-event {
+  article.node--type-event {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  div.event-content.layout--twocol-section {
+    gap: 75px;
+  }
   .layout__region.layout__region--first {
+    max-width:800px;
     padding-right: 5rem;
 
     ol.breadcrumb {
@@ -585,8 +593,12 @@ body.node--type-event {
     }
 
   } // end of events layout region first
-  .layout__region.layout__region--second {
-
+  .layout__region.layout__region--second .wrapper {
+    height: 430px;
+    width: 300px;
+    background-color: $csc-lt-gray;
+    margin-top: 20px;
+    padding: 40px 50px;
   } // end of events layout region second
 } // End of Events Content Type
 
