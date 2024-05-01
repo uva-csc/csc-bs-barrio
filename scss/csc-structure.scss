@@ -36,29 +36,166 @@ body {
 
 // Header
 #header {
-  #navbar-main {
+  font-family: $font-frankgoth-hvy;
+
+  #navbar-top {
     padding: 8px 3rem;
-    .navbar-brand {
-      img {
-        max-height: 40px;
+    max-height: 50px;
+
+    & > section {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      & > * {
+        width: fit-content;
+      }
+
+      a.navbar-brand {
+        margin-right: auto;
+        img {
+          max-height: 40px;
+        }
+      }
+
+      nav.menu--top-menu ul {
+        margin-top: 12px;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          margin: 0 6px 0 0;
+
+          a {
+            font-size: 0.75rem;
+          }
+
+          &:last-of-type:after {
+            display: none;
+          }
+        }
+        li:after {
+          content: '/';
+          color: $uva-orange;
+          display: inline-block;
+          margin-left: -4px;
+        }
       }
     }
-  } // end of #navbar-main
 
-  // Menu Links
-  .navbar-nav {
+    // Social Media links
+    .block-social-media-links-block {
+
+      ul.social-media-links--platforms {
+        margin: 12px 0 0;
+
+        li a {
+          color: white;
+        }
+      }
+    } // End of Social Media links in navbar
+
+    // Give Button
+    div.csc-give-link {
+      position: relative;
+      max-height: 36px;
+      margin-top: 8px;
+      color: #ffffff;
+      background-color: transparent;
+      border: 2px solid $uva-orange;
+      font-family: "ITC Franklin Gothic Std", sans-serif;
+      font-weight: 600;
+      justify-content: center;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      transform: skewX(-20deg);
+      cursor: pointer;
+
+      .content .field--name-body p {
+        max-height: 20px;
+        width: fit-content;
+        transform: skewX(20deg);
+        padding: 0.4rem 0.25rem 0 0;
+        a {
+          font-family: "Bodoni Poster", Arial, sans-serif;
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: $white;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+    } // End of Give Button
+
+    // Search Block
+    .block-search-form-block {
+      margin-top: 6px;
+      padding: 0;
+
+      .contextual {
+        display: none;
+      }
+
+      & > .container-inline {
+        white-space: nowrap;
+        display: flex;
+        padding-left: 1.5rem;
+      }
+
+      .icon {
+        color: $white;
+        padding-top: 6px;
+        max-height: 35px;
+      }
+
+      #search-block-form {
+        width: 100%;
+        overflow: hidden;
+        display: inline-block;
+        margin-left: 0.5rem;
+
+        .js-form-item {
+          display: inline-block;
+        }
+        .form-submit {
+          display: none;
+        }
+
+        &.show, &.show .js-form-item {
+          animation-name: slide-in;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+  } // end of #navbar-top
+
+  // Bottom Navbar
+  #navbar-main {
+    ul.navbar-nav {
+      margin-left: auto;
+      justify-content: space-between;
+      width: 60%;
+    }
+  }
+
+  // Menu Links (for both upper and lower menus)
+  .navbar {
     padding-top: 3px;
     padding-left: 1rem;
 
-    .nav-item {
-      &.csc-give-link {
-        margin-left: 3rem;
-      }
+    // Top header menu uses .menu-item, while navigation menu in primary header uses .nav-item
+    .nav-item, .menu-item {
       a {
         margin-right: 0.5rem;
         color: white;
         text-transform: uppercase;
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: bold;
         letter-spacing: .05rem;
       }
@@ -83,52 +220,8 @@ body {
 
     }
 
-  }
+  }  // end of Menu Links for both headers
 
-  // Social Media links
-  .navbar .block-social-media-links-block {
-    padding-top: 1.25rem;
-
-    ul.social-media-links--platforms {
-      margin-left: 1rem;
-
-      li a {
-        color: white;
-      }
-    }
-  } // End of Social Media links in navbar
-
-  // Give Button
-  .navbar div.csc-give-link {
-    position: relative;
-    margin-left: 2rem;
-    font-family: "ITC Franklin Gothic Std", sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    justify-content: center;
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: transparent;
-    border: 2px solid $uva-orange;
-    transform: skewX(-20deg);
-    cursor: pointer;
-
-    .content .field--name-body p {
-      max-height: 20px;
-      width: fit-content;
-      transform: skewX(20deg);
-      padding: 0.5rem 1rem 0.5rem 0.5rem;
-      a {
-        font-family: "Bodoni Poster", Arial, sans-serif;
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: $white;
-        text-transform: uppercase;
-        white-space: nowrap;
-      }
-    }
-  } // End of Give Button
 
 
 } // End #header
@@ -820,37 +913,5 @@ main#content {
   display: grid;
   align-items: start;
   grid-template-columns: repeat(2, 1fr);
-}
-
-/** Admin Structure **/
-
-.page-user-login form#user-login-form {
-  max-width: 500px;
-  margin-left: 2rem;
-  height: 83vh;
-}
-
-body.toolbar-fixed #header #navbar-main {
-  padding: 8px 3rem 1.5rem !important;
-}
-
-// styling moved node action tabs. See custom.js
-#node-admin-links .nav.primary {
-  margin-top: 4px;
-}
-
-#toolbar-administration {
-  a {
-    border-bottom: none;
-  }
-  #toolbar-bar {
-    border-bottom: 1px solid gray;
-    margin-bottom: -4px;
-    max-height: 43px;
-  }
-}
-
-.contextual-links a {
-  border-bottom: none;
 }
 

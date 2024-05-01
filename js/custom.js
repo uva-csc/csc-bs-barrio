@@ -7,7 +7,8 @@
 
   'use strict';
 
-  Drupal.behaviors.csc_bs_sass = {
+  // Behaviors for Admin screens
+  Drupal.behaviors.csc_bs_sass_admin = {
     attach: function(context, settings) {
 
       $(document).ready(() => {
@@ -30,6 +31,28 @@
         });
       });
 
+    }
+  };
+
+  // Global Listener Behaviors
+  Drupal.behaviors.csc_bs_sass_global_listeners = {
+    attach: function(context, settings) {
+
+      $(document).ready(() => {
+        $('div.icon.show-search').hover(function(e) {
+          $('#search-block-form').addClass('show');
+        });
+      });
+
+    }
+  };
+
+  Drupal.behaviors.csc_bs_sass_other = {
+    attach: function(context, settings) {
+
+      $(document).ready(() => {
+        // nothing here yet. Use as template for other types of behaviors.
+      });
     }
   };
 

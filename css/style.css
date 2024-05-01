@@ -13242,76 +13242,148 @@ body {
   margin-bottom: 1.5rem;
 }
 
-#header #navbar-main {
-  padding: 8px 3rem;
+#header {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
 }
-#header #navbar-main .navbar-brand img {
+#header #navbar-top {
+  padding: 8px 3rem;
+  max-height: 50px;
+}
+#header #navbar-top > section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#header #navbar-top > section > * {
+  width: fit-content;
+}
+#header #navbar-top > section a.navbar-brand {
+  margin-right: auto;
+}
+#header #navbar-top > section a.navbar-brand img {
   max-height: 40px;
 }
-#header .navbar-nav {
-  padding-top: 3px;
-  padding-left: 1rem;
+#header #navbar-top > section nav.menu--top-menu ul {
+  margin-top: 12px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
-#header .navbar-nav .nav-item.csc-give-link {
-  margin-left: 3rem;
+#header #navbar-top > section nav.menu--top-menu ul li {
+  margin: 0 6px 0 0;
 }
-#header .navbar-nav .nav-item a {
-  margin-right: 0.5rem;
-  color: white;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: bold;
-  letter-spacing: 0.05rem;
+#header #navbar-top > section nav.menu--top-menu ul li a {
+  font-size: 0.75rem;
 }
-#header .navbar-nav .nav-item.dropdown .dropdown-menu li, #header .navbar-nav .nav-item.dropdown .dropdown-menu a {
-  color: #232D4B;
-  backgroud-color: #dadada;
+#header #navbar-top > section nav.menu--top-menu ul li:last-of-type:after {
+  display: none;
 }
-#header .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item.active a {
-  color: #dadada;
+#header #navbar-top > section nav.menu--top-menu ul li:after {
+  content: "/";
+  color: #E57325;
+  display: inline-block;
+  margin-left: -4px;
 }
-#header .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-  backgroud-color: #dadada;
-  color: #232D4B;
+#header #navbar-top .block-social-media-links-block ul.social-media-links--platforms {
+  margin: 12px 0 0;
 }
-#header .navbar .block-social-media-links-block {
-  padding-top: 1.25rem;
-}
-#header .navbar .block-social-media-links-block ul.social-media-links--platforms {
-  margin-left: 1rem;
-}
-#header .navbar .block-social-media-links-block ul.social-media-links--platforms li a {
+#header #navbar-top .block-social-media-links-block ul.social-media-links--platforms li a {
   color: white;
 }
-#header .navbar div.csc-give-link {
+#header #navbar-top div.csc-give-link {
   position: relative;
-  margin-left: 2rem;
-  font-family: "ITC Franklin Gothic Std", sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  justify-content: center;
-  text-transform: uppercase;
+  max-height: 36px;
+  margin-top: 8px;
   color: #ffffff;
   background-color: transparent;
   border: 2px solid #E57325;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 600;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
   transform: skewX(-20deg);
   cursor: pointer;
 }
-#header .navbar div.csc-give-link .content .field--name-body p {
+#header #navbar-top div.csc-give-link .content .field--name-body p {
   max-height: 20px;
   width: fit-content;
   transform: skewX(20deg);
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  padding: 0.4rem 0.25rem 0 0;
 }
-#header .navbar div.csc-give-link .content .field--name-body p a {
+#header #navbar-top div.csc-give-link .content .field--name-body p a {
   font-family: "Bodoni Poster", Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: #fdfdfd;
   text-transform: uppercase;
   white-space: nowrap;
+}
+#header #navbar-top .block-search-form-block {
+  margin-top: 6px;
+  padding: 0;
+}
+#header #navbar-top .block-search-form-block .contextual {
+  display: none;
+}
+#header #navbar-top .block-search-form-block > .container-inline {
+  white-space: nowrap;
+  display: flex;
+  padding-left: 1.5rem;
+}
+#header #navbar-top .block-search-form-block .icon {
+  color: #fdfdfd;
+  padding-top: 6px;
+  max-height: 35px;
+}
+#header #navbar-top .block-search-form-block #search-block-form {
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+#header #navbar-top .block-search-form-block #search-block-form .js-form-item {
+  display: inline-block;
+}
+#header #navbar-top .block-search-form-block #search-block-form .form-submit {
+  display: none;
+}
+#header #navbar-top .block-search-form-block #search-block-form.show, #header #navbar-top .block-search-form-block #search-block-form.show .js-form-item {
+  animation-name: slide-in;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+#header #navbar-main ul.navbar-nav {
+  margin-left: auto;
+  justify-content: space-between;
+  width: 60%;
+}
+#header .navbar {
+  padding-top: 3px;
+  padding-left: 1rem;
+}
+#header .navbar .nav-item a, #header .navbar .menu-item a {
+  margin-right: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+#header .navbar .nav-item.dropdown .dropdown-menu li, #header .navbar .nav-item.dropdown .dropdown-menu a {
+  color: #232D4B;
+  backgroud-color: #dadada;
+}
+#header .navbar .nav-item.dropdown .dropdown-menu .dropdown-item.active a {
+  color: #dadada;
+}
+#header .navbar .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  backgroud-color: #dadada;
+  color: #232D4B;
 }
 
 #title-div .content {
@@ -13857,34 +13929,6 @@ main#content main#content .csc-sep.dotted-orange {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/** Admin Structure **/
-.page-user-login form#user-login-form {
-  max-width: 500px;
-  margin-left: 2rem;
-  height: 83vh;
-}
-
-body.toolbar-fixed #header #navbar-main {
-  padding: 8px 3rem 1.5rem !important;
-}
-
-#node-admin-links .nav.primary {
-  margin-top: 4px;
-}
-
-#toolbar-administration a {
-  border-bottom: none;
-}
-#toolbar-administration #toolbar-bar {
-  border-bottom: 1px solid gray;
-  margin-bottom: -4px;
-  max-height: 43px;
-}
-
-.contextual-links a {
-  border-bottom: none;
-}
-
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /** General Text Styles **/
@@ -14385,6 +14429,11 @@ body.path-webform .help-curate {
     opacity: 1;
   }
 }
+@keyframes slide-in {
+  100% {
+    width: 100%;
+  }
+}
 @keyframes transformer {
   100% {
     transform: none;
@@ -14860,6 +14909,34 @@ body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--
     text-align: center;
   }
 }
+/** Admin Structure **/
+.page-user-login form#user-login-form {
+  max-width: 500px;
+  margin-left: 2rem;
+  height: 83vh;
+}
+
+body.toolbar-fixed #header #navbar-main {
+  padding: 8px 3rem 1.5rem !important;
+}
+
+#node-admin-links .nav.primary {
+  margin-top: 4px;
+}
+
+#toolbar-administration a {
+  border-bottom: none;
+}
+#toolbar-administration #toolbar-bar {
+  border-bottom: 1px solid gray;
+  margin-bottom: -4px;
+  max-height: 43px;
+}
+
+.contextual-links a {
+  border-bottom: none;
+}
+
 .ui-dialog-position-side .text-muted {
   color: white !important;
 }

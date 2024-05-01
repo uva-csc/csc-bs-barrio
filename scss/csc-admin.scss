@@ -1,4 +1,36 @@
+/** Admin Structure **/
 
+.page-user-login form#user-login-form {
+  max-width: 500px;
+  margin-left: 2rem;
+  height: 83vh;
+}
+
+body.toolbar-fixed #header #navbar-main {
+  padding: 8px 3rem 1.5rem !important;
+}
+
+// styling moved node action tabs. See custom.js
+#node-admin-links .nav.primary {
+  margin-top: 4px;
+}
+
+#toolbar-administration {
+  a {
+    border-bottom: none;
+  }
+  #toolbar-bar {
+    border-bottom: 1px solid gray;
+    margin-bottom: -4px;
+    max-height: 43px;
+  }
+}
+
+.contextual-links a {
+  border-bottom: none;
+}
+
+// Show muted text in Smart Date admin sidebar
 .ui-dialog-position-side .text-muted {
   color: white!important;
 }
