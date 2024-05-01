@@ -13246,8 +13246,8 @@ body {
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
 }
 #header #navbar-top {
-  padding: 8px 3rem;
-  max-height: 50px;
+  padding: 10px 5rem 10px 1rem;
+  max-height: 54px;
 }
 #header #navbar-top > section {
   width: 100%;
@@ -13259,13 +13259,13 @@ body {
   width: fit-content;
 }
 #header #navbar-top > section a.navbar-brand {
-  margin-right: auto;
+  margin: -8px auto 0 0;
 }
 #header #navbar-top > section a.navbar-brand img {
   max-height: 40px;
 }
 #header #navbar-top > section nav.menu--top-menu ul {
-  margin-top: 12px;
+  margin-top: 6px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -13286,15 +13286,14 @@ body {
   margin-left: -4px;
 }
 #header #navbar-top .block-social-media-links-block ul.social-media-links--platforms {
-  margin: 12px 0 0;
+  margin: 6px 0 0;
 }
 #header #navbar-top .block-social-media-links-block ul.social-media-links--platforms li a {
   color: white;
 }
 #header #navbar-top div.csc-give-link {
   position: relative;
-  max-height: 36px;
-  margin-top: 8px;
+  max-height: 32px;
   color: #ffffff;
   background-color: transparent;
   border: 2px solid #E57325;
@@ -13311,18 +13310,18 @@ body {
   max-height: 20px;
   width: fit-content;
   transform: skewX(20deg);
-  padding: 0.4rem 0.25rem 0 0;
+  padding: 0.2rem 0.25rem 0 0;
 }
 #header #navbar-top div.csc-give-link .content .field--name-body p a {
-  font-family: "Bodoni Poster", Arial, sans-serif;
+  font-family: "Bodoni", serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: #fdfdfd;
   text-transform: uppercase;
   white-space: nowrap;
+  letter-spacing: 0.05rem;
 }
 #header #navbar-top .block-search-form-block {
-  margin-top: 6px;
   padding: 0;
 }
 #header #navbar-top .block-search-form-block .contextual {
@@ -13345,7 +13344,10 @@ body {
   margin-left: 0.5rem;
 }
 #header #navbar-top .block-search-form-block #search-block-form .js-form-item {
-  display: inline-block;
+  display: none;
+}
+#header #navbar-top .block-search-form-block #search-block-form .js-form-item input {
+  max-height: 30px;
 }
 #header #navbar-top .block-search-form-block #search-block-form .form-submit {
   display: none;
@@ -13356,14 +13358,26 @@ body {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
-#header #navbar-main ul.navbar-nav {
-  margin-left: auto;
-  justify-content: space-between;
-  width: 60%;
+#header #navbar-main {
+  height: 35px;
+  padding: 4px 0 0 0;
 }
-#header .navbar {
-  padding-top: 3px;
-  padding-left: 1rem;
+#header #navbar-main.bg-primary {
+  background-color: #434b64 !important;
+}
+#header #navbar-main ul.navbar-nav {
+  margin: 0 4rem 0 auto;
+  justify-content: space-between;
+}
+#header #navbar-main ul.navbar-nav li {
+  padding: 1px 1rem;
+}
+#header #navbar-main ul.navbar-nav a {
+  letter-spacing: 0.08rem !important;
+  color: #eeeeee;
+}
+#header #navbar-main ul.navbar-nav a:hover {
+  color: #fdfdfd;
 }
 #header .navbar .nav-item a, #header .navbar .menu-item a {
   margin-right: 0.5rem;
@@ -13664,7 +13678,7 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl 
   max-height: 200px;
 }
 body.node--type-landing-page main#content h1.title-overlay, body.node--type-landing-page main#content .title-overlay.h1 {
-  padding: 45px 0 15px;
+  padding: 25px 0 10px;
   background-color: #22222277;
   color: #fdfdfd;
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
@@ -14916,8 +14930,8 @@ body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--
   height: 83vh;
 }
 
-body.toolbar-fixed #header #navbar-main {
-  padding: 8px 3rem 1.5rem !important;
+body.toolbar-fixed #header #navbar-main.node--type-landing-page {
+  padding-bottom: 0rem !important;
 }
 
 #node-admin-links .nav.primary {

@@ -7,7 +7,11 @@
 }
 
 body.toolbar-fixed #header #navbar-main {
-  padding: 8px 3rem 1.5rem !important;
+  // padding: 8px 3rem 1.5rem !important;
+
+  &.node--type-landing-page {
+    padding-bottom: 0rem !important;
+  }
 }
 
 // styling moved node action tabs. See custom.js

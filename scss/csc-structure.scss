@@ -38,9 +38,10 @@ body {
 #header {
   font-family: $font-frankgoth-hvy;
 
+  // Top Navbar
   #navbar-top {
-    padding: 8px 3rem;
-    max-height: 50px;
+    padding: 10px 5rem 10px 1rem;
+    max-height: 54px;
 
     & > section {
       width: 100%;
@@ -53,14 +54,14 @@ body {
       }
 
       a.navbar-brand {
-        margin-right: auto;
+        margin: -8px auto 0 0;
         img {
           max-height: 40px;
         }
       }
 
       nav.menu--top-menu ul {
-        margin-top: 12px;
+        margin-top: 6px;
         list-style-type: none;
         display: flex;
         justify-content: space-between;
@@ -89,7 +90,7 @@ body {
     .block-social-media-links-block {
 
       ul.social-media-links--platforms {
-        margin: 12px 0 0;
+        margin: 6px 0 0;
 
         li a {
           color: white;
@@ -100,8 +101,7 @@ body {
     // Give Button
     div.csc-give-link {
       position: relative;
-      max-height: 36px;
-      margin-top: 8px;
+      max-height: 32px;
       color: #ffffff;
       background-color: transparent;
       border: 2px solid $uva-orange;
@@ -118,21 +118,21 @@ body {
         max-height: 20px;
         width: fit-content;
         transform: skewX(20deg);
-        padding: 0.4rem 0.25rem 0 0;
+        padding: 0.2rem 0.25rem 0 0;
         a {
-          font-family: "Bodoni Poster", Arial, sans-serif;
+          font-family: $font-bodoni;
           font-size: 0.95rem;
           font-weight: 600;
           color: $white;
           text-transform: uppercase;
           white-space: nowrap;
+          letter-spacing: 0.05rem;
         }
       }
     } // End of Give Button
 
     // Search Block
     .block-search-form-block {
-      margin-top: 6px;
       padding: 0;
 
       .contextual {
@@ -158,12 +158,16 @@ body {
         margin-left: 0.5rem;
 
         .js-form-item {
-          display: inline-block;
+          display: none; // hiding input box for now. make into dropdown?
+
+          input {
+            max-height: 30px;
+          }
         }
         .form-submit {
           display: none;
         }
-
+        // This animation didn't really work...
         &.show, &.show .js-form-item {
           animation-name: slide-in;
           animation-duration: 5s;
@@ -177,17 +181,31 @@ body {
 
   // Bottom Navbar
   #navbar-main {
+    height: 35px;
+    padding: 4px 0 0 0;
+    &.bg-primary {
+      background-color: #434b64!important;
+    }
     ul.navbar-nav {
-      margin-left: auto;
+      margin: 0 4rem 0 auto;
       justify-content: space-between;
-      width: 60%;
+
+      li {
+        padding: 1px 1rem;
+      }
+
+      a {
+        letter-spacing: 0.08rem !important;
+        color: $csc-lt-gray;
+        &:hover {
+          color: $white;
+        }
+      }
     }
   }
 
   // Menu Links (for both upper and lower menus)
   .navbar {
-    padding-top: 3px;
-    padding-left: 1rem;
 
     // Top header menu uses .menu-item, while navigation menu in primary header uses .nav-item
     .nav-item, .menu-item {
@@ -569,7 +587,7 @@ body.node--type-landing-page  main#content {
   } // End of Large Hero pages (like Student)
 
   h1.title-overlay {
-    padding: 45px 0 15px;
+    padding: 25px 0 10px;
     background-color: $title-bg;
     color: $white;
     font-family: $font-frankgoth-hvy;
