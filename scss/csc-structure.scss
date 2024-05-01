@@ -183,8 +183,10 @@ body {
   #navbar-main {
     height: 35px;
     padding: 4px 0 0 0;
+
     &.bg-primary {
       background-color: #434b64!important;
+      z-index: 1;
     }
     ul.navbar-nav {
       margin: 0 4rem 0 auto;
@@ -199,6 +201,7 @@ body {
         color: $csc-lt-gray;
         &:hover {
           color: $white;
+          opacity: 1;
         }
       }
     }

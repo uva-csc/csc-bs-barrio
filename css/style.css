@@ -13364,6 +13364,7 @@ body {
 }
 #header #navbar-main.bg-primary {
   background-color: #434b64 !important;
+  z-index: 1;
 }
 #header #navbar-main ul.navbar-nav {
   margin: 0 4rem 0 auto;
@@ -13378,6 +13379,7 @@ body {
 }
 #header #navbar-main ul.navbar-nav a:hover {
   color: #fdfdfd;
+  opacity: 1;
 }
 #header .navbar .nav-item a, #header .navbar .menu-item a {
   margin-right: 0.5rem;
