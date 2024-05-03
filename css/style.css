@@ -13269,21 +13269,26 @@ body {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  /*
+  li:after {
+    content: '/';
+    color: $uva-orange;
+    display: inline-block;
+    margin-left: -4px;
+  }
+   */
 }
 #header #navbar-top > section nav.menu--top-menu ul li {
-  margin: 0 6px 0 0;
+  display: flex;
+  align-items: center;
 }
 #header #navbar-top > section nav.menu--top-menu ul li a {
   font-size: 0.75rem;
 }
-#header #navbar-top > section nav.menu--top-menu ul li:last-of-type:after {
-  display: none;
-}
-#header #navbar-top > section nav.menu--top-menu ul li:after {
+#header #navbar-top > section nav.menu--top-menu ul li span.menu-sep:before {
   content: "/";
   color: #E57325;
   display: inline-block;
-  margin-left: -4px;
 }
 #header #navbar-top .block-social-media-links-block ul.social-media-links--platforms {
   margin: 6px 0 0;
@@ -13371,7 +13376,7 @@ body {
   justify-content: space-between;
 }
 #header #navbar-main ul.navbar-nav li {
-  padding: 1px 1rem;
+  padding: 0 1rem;
 }
 #header #navbar-main ul.navbar-nav a {
   letter-spacing: 0.08rem !important;
@@ -13382,10 +13387,10 @@ body {
   opacity: 1;
 }
 #header .navbar .nav-item a, #header .navbar .menu-item a {
-  margin-right: 0.5rem;
+  margin: 0 0.25rem 0 0;
   color: white;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
@@ -14006,6 +14011,7 @@ a {
 }
 
 a.plain,
+a.link--animated,
 a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto] {
@@ -14024,10 +14030,52 @@ p.read-more {
   text-align: right;
   font-style: italic;
   position: relative;
+  text-transform: uppercase;
   top: -1rem;
 }
 p.read-more a {
-  border-bottom-width: 2px;
+  position: relative;
+  z-index: 10;
+  border-bottom: none;
+}
+p.read-more a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #E57325;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+p.read-more a:hover::before, p.read-more a:focus::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.link--animated {
+  position: relative;
+  z-index: 10;
+}
+.link--animated::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #E57325;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+.link--animated:hover::before, .link--animated:focus::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 /** End of Links **/

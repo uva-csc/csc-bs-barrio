@@ -72,6 +72,7 @@ a {
 }
 
 a.plain,
+a.link--animated,
 a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto] { // Do not underline social media icons, telphone numbers, or email addresses
@@ -93,10 +94,62 @@ p.read-more {
   text-align: right;
   font-style: italic;
   position: relative;
+  text-transform: uppercase;
   top: -1rem;
 
   a {
-    border-bottom-width: 2px;
+    position: relative;
+    z-index: 10;
+    border-bottom: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $uva-orange;
+      transform-origin: bottom right;
+      transform: scaleX(0);
+      transition: transform 0.5s ease;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.link--animated {
+  position: relative;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $uva-orange;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform-origin: bottom left;
+      transform: scaleX(1);
+    }
   }
 }
 

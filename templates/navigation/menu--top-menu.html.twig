@@ -38,26 +38,29 @@ We call a macro which calls itself to render the full tree.
       {% set menu_attributes = menus_attribute(items|keys[loop.index0]) %}
       {%
         set classes = [
-          'nav-item',
-          item.is_expanded ? 'menu-item--expanded',
-          item.is_collapsed ? 'menu-item--collapsed',
-          item.in_active_trail ? 'menu-item--active-trail',
-          menu_attributes.item.class ? menu_attributes.item.class,
-        ]
+        'nav-item',
+        item.is_expanded ? 'menu-item--expanded',
+        item.is_collapsed ? 'menu-item--collapsed',
+        item.in_active_trail ? 'menu-item--active-trail',
+        menu_attributes.item.class ? menu_attributes.item.class,
+      ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
         {%
           set link_classes = [
-            'nav-link',
-            item.in_active_trail ? 'active',
-            item.url.getOption('attributes').class ? item.url.getOption('attributes').class | join(''),
-            'nav-link-' ~ item.url.toString() | clean_class,
-            menu_attributes.link.class ? menu_attributes.link.class,
-          ]
+          'nav-link',
+          item.in_active_trail ? 'active',
+          item.url.getOption('attributes').class ? item.url.getOption('attributes').class | join(''),
+          'nav-link-' ~ item.url.toString() | clean_class,
+          menu_attributes.link.class ? menu_attributes.link.class,
+        ]
         %}
         {{ link(item.title, item.url, {'class': link_classes}) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+        {% if loop.last == false %}
+          <span class="menu-sep"></span>
         {% endif %}
       </li>
     {% endfor %}
