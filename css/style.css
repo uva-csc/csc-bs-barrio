@@ -13878,9 +13878,6 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-right {
   margin-left: 2rem;
 }
-main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted a {
-  border-bottom: 4px solid #E57325;
-}
 main#content .c-csc-text_row .field--name-field-text-boxes {
   display: grid;
   grid-gap: 1rem;
