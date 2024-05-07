@@ -14854,10 +14854,10 @@ body.path-frontpage main#content .featured-event .views-field-body p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-body.path-frontpage main#content .featured-event .views-field-view-node {
+body.path-frontpage main#content .featured-event .views-field-view-node, body.path-frontpage main#content .featured-event .views-field-nothing {
   text-align: right;
 }
-body.path-frontpage main#content .featured-event .views-field-view-node a {
+body.path-frontpage main#content .featured-event .views-field-view-node a, body.path-frontpage main#content .featured-event .views-field-nothing a {
   color: white;
 }
 body.path-frontpage main#content .upcoming-events {
