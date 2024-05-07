@@ -42,6 +42,7 @@ body {
   #navbar-top {
     padding: 10px 5rem 10px 1rem;
     max-height: 54px;
+    background-color: #434b64!important;
 
     & > section {
       width: 100%;
@@ -190,18 +191,26 @@ body {
     padding: 4px 0 0 0;
 
     &.bg-primary {
-      background-color: #434b64!important;
+      background-color: $uva-blue;
       z-index: 1;
     }
+
     ul.navbar-nav {
+      /*
       margin: 0 4rem 0 auto;
       justify-content: space-between;
+      */
+      justify-content: center;
+      margin: auto;
+      font-family: $font-frankgoth-cd;
+
 
       li {
         padding: 0 1rem;
       }
 
       a {
+        font-size: 1.1rem;
         letter-spacing: 0.08rem !important;
         color: $csc-lt-gray;
         &:hover {
@@ -768,7 +777,7 @@ main#content {
           font-weight: bold;
 
           &:last-child {
-            border-bottom: 4px solid $uva-orange;
+            /*border-bottom: 4px solid $uva-orange;*/
           }
         }
       }

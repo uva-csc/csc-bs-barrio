@@ -83,15 +83,21 @@ function csc_bs_sass_preprocess_node(&$variables) {
 }
 
 function csc_bs_sass_preprocess_field(&$variables) {
-  csc_log('vars in pp field: ' . json_encode(array_keys($variables)));
+  // csc_log('vars in pp field: ' . json_encode(array_keys($variables)));
   $fld_name = $variables['field_name'];
   if ($fld_name == 'field_date') {
     $el = $variables['element'];
     // TODO: need to account for multiple dates, event with many different occurrences?
     $dt = $el['#items'][0]->getValue();
-    $variables['csc_month'] = $dt['month'];
-    $variables['csc_day'] = $dt['day'];
-    $variables['csc_full'] = $dt['full'];
+    if (array_key_exists( 'month', $dt)) {
+      $variables['csc_month'] = $dt['month'];
+    }
+    if (array_key_exists('day', $dt)) {
+      $variables['csc_day'] = $dt['day'];
+    }
+    if (array_key_exists('full', $dt)) {
+      $variables['csc_full'] = $dt['full'];
+    }
   }
 }
 

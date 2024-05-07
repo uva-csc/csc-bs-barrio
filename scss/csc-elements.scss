@@ -126,7 +126,9 @@ p.read-more {
   }
 }
 
-.link--animated {
+.link--animated,
+.field--name-field-teaser-caption p
+{
   position: relative;
   z-index: 10;
 

@@ -13248,6 +13248,7 @@ body {
 #header #navbar-top {
   padding: 10px 5rem 10px 1rem;
   max-height: 54px;
+  background-color: #434b64 !important;
 }
 #header #navbar-top > section {
   width: 100%;
@@ -13368,17 +13369,23 @@ body {
   padding: 4px 0 0 0;
 }
 #header #navbar-main.bg-primary {
-  background-color: #434b64 !important;
+  background-color: #232D4B;
   z-index: 1;
 }
 #header #navbar-main ul.navbar-nav {
+  /*
   margin: 0 4rem 0 auto;
   justify-content: space-between;
+  */
+  justify-content: center;
+  margin: auto;
+  font-family: "ITC Franklin Gothic Condensed", sans-serif;
 }
 #header #navbar-main ul.navbar-nav li {
   padding: 0 1rem;
 }
 #header #navbar-main ul.navbar-nav a {
+  font-size: 1.1rem;
   letter-spacing: 0.08rem !important;
   color: #eeeeee;
 }
@@ -13829,7 +13836,7 @@ main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-fie
   font-weight: bold;
 }
 main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
-  border-bottom: 4px solid #E57325;
+  /*border-bottom: 4px solid $uva-orange;*/
 }
 main#content .c-csc-highlight_row {
   background-color: #232D4B;
@@ -14053,11 +14060,13 @@ p.read-more a:hover::before, p.read-more a:focus::before {
   transform: scaleX(1);
 }
 
-.link--animated {
+.link--animated,
+.field--name-field-teaser-caption p {
   position: relative;
   z-index: 10;
 }
-.link--animated::before {
+.link--animated::before,
+.field--name-field-teaser-caption p::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -14070,7 +14079,9 @@ p.read-more a:hover::before, p.read-more a:focus::before {
   transition: transform 0.5s ease;
   z-index: -1;
 }
-.link--animated:hover::before, .link--animated:focus::before {
+.link--animated:hover::before, .link--animated:focus::before,
+.field--name-field-teaser-caption p:hover::before,
+.field--name-field-teaser-caption p:focus::before {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
