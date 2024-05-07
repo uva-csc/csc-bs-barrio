@@ -14011,7 +14011,7 @@ div.layout.bc-inline .block-system-breadcrumb-block nav ol.breadcrumb * {
 
 /** Links **/
 a {
-  border-bottom: 3px solid #E57325;
+  border-bottom: 2px solid #E57325;
 }
 
 a.plain,
@@ -14019,7 +14019,7 @@ a.link--animated,
 a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto] {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 #header .navbar a,
@@ -14841,7 +14841,11 @@ body.path-frontpage main#content .featured-event .views-field-field-image img {
   height: unset;
 }
 body.path-frontpage main#content .featured-event .views-field-title {
-  margin-top: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  width: 100%;
+  text-align: center;
+}
+body.path-frontpage main#content .featured-event .views-field-title a {
   color: white;
   font-size: 130%;
 }
@@ -14850,7 +14854,10 @@ body.path-frontpage main#content .featured-event .views-field-body p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-body.path-frontpage main#content .featured-event .views-field a {
+body.path-frontpage main#content .featured-event .views-field-view-node {
+  text-align: right;
+}
+body.path-frontpage main#content .featured-event .views-field-view-node a {
   color: white;
 }
 body.path-frontpage main#content .upcoming-events {
@@ -14888,22 +14895,36 @@ body.path-frontpage main#content .upcoming-events .view-content {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  gap: 80px;
 }
-body.path-frontpage main#content .upcoming-events .view-content .views-row:nth-child(2) {
-  margin-top: 4rem;
+body.path-frontpage main#content .upcoming-events .view-content .views-row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
-body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-title a {
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-image img {
+  max-width: unset;
+  filter: drop-shadow(2px 4px 6px #232D4B);
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3 a, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 a {
   border-bottom: none;
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.date {
+  margin-bottom: 1rem;
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta p:not(.read-more) {
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-date-value {
   font-style: italic;
-}
-body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-image {
-  float: left;
-  padding: 0 2rem 1rem 1rem;
-}
-body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-image img {
-  box-shadow: 3px 3px 5px 5px #777;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-body {
   margin-top: 0.75rem;

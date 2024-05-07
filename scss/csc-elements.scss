@@ -68,7 +68,7 @@ div.layout.bc-inline .block-system-breadcrumb-block {
 
 /** Links **/
 a {
-  border-bottom: 3px solid $uva-orange;
+  border-bottom: 2px solid $uva-orange;
 }
 
 a.plain,
@@ -76,7 +76,7 @@ a.link--animated,
 a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto] { // Do not underline social media icons, telphone numbers, or email addresses
-  border-bottom: none;
+  border-bottom: none!important;
 }
 
 #header .navbar,
