@@ -413,8 +413,10 @@ div.layout--twocol-section--33-67 {
 
      img {
        filter: $img-shadow;
-       max-width: 27vw;
+       max-width: 18vw;
        height: auto;
+       display: inline-block;
+       margin: 0.5rem 18%;
      }
   }
 }
