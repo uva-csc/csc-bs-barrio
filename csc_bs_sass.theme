@@ -210,12 +210,16 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
     if ($node->getType() == 'landing_page') {
       $display_title = $node->get('field_display_title')->value;
       if ($display_title) {
+        /*
         $words = explode(' ', $display_title);
-        $words[0] = '<span class="text-blue">' . $words[0] . '</span>';
+        $words[0] = '<span class="first-word">' . $words[0] . '</span>';
         $variables['title_overlay'] = implode(' ', $words);
+        */
+        $variables['title_overlay'] = $display_title;
       }
     }
   }
+
   if (!empty($para) && $para->get('field_hero_image')) {
     $mid = $para->get('field_hero_image')[0]?->get('target_id')?->getValue();
     if ($mid) {
