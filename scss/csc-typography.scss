@@ -24,6 +24,10 @@
   border-bottom: 2px solid $uva-blue;
 }
 
+.text-shadow {
+  text-shadow: $csc-shadow;
+}
+
 // Colors
 .text-blue {
   color: $uva-blue !important;
