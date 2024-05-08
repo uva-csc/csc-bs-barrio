@@ -13393,6 +13393,12 @@ body {
   color: #fdfdfd;
   opacity: 1;
 }
+#header #navbar-main ul.dropdown-menu a {
+  color: #232D4B;
+}
+#header #navbar-main ul.dropdown-menu a:hover {
+  color: #C8CBD2;
+}
 #header .navbar .nav-item a, #header .navbar .menu-item a {
   margin: 0 0.25rem 0 0;
   color: white;

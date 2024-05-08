@@ -219,6 +219,13 @@ body {
         }
       }
     }
+
+    ul.dropdown-menu a {
+      color: $uva-blue;
+      &:hover {
+        color: $uva-blue-25;
+      }
+    }
   }
 
   // Menu Links (for both upper and lower menus)
