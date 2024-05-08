@@ -13815,7 +13815,7 @@ main#content .c-csc-teaser_row .field--name-field-header h2, main#content .c-csc
   margin: 0px auto 12px;
   width: fit-content;
   text-align: center;
-  border-bottom: 4px solid #E57325;
+  /*border-bottom: 4px solid $uva-orange;*/
   line-height: 28px;
 }
 main#content .c-csc-teaser_row .field.field--name-field-teasers {
@@ -14049,7 +14049,7 @@ a[href^=mailto] {
   border-bottom: none;
 }
 
-p.read-more, span.read-more {
+p.read-more {
   font-size: 75%;
   font-weight: bold;
   text-align: right;
@@ -14058,12 +14058,12 @@ p.read-more, span.read-more {
   text-transform: uppercase;
   top: -1rem;
 }
-p.read-more a, span.read-more a {
+p.read-more a {
   position: relative;
   z-index: 10;
   border-bottom: none;
 }
-p.read-more a::before, span.read-more a::before {
+p.read-more a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -14076,14 +14076,17 @@ p.read-more a::before, span.read-more a::before {
   transition: transform 0.5s ease;
   z-index: -1;
 }
-p.read-more a:hover::before, p.read-more a:focus::before, span.read-more a:hover::before, span.read-more a:focus::before {
+p.read-more a:hover::before, p.read-more a:focus::before {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
 
-span.read-more {
-  display: inline-block;
-  top: 0;
+a.read-more, span.read-more {
+  font-size: 85%;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  text-transform: uppercase;
 }
 
 .link--animated,
