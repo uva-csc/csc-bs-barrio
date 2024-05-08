@@ -109,7 +109,7 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
 }
 
 // Read More links
-p.read-more {
+p.read-more, span.read-more {
   font-size: 75%;
   font-weight: bold;
   text-align: right;
@@ -145,6 +145,11 @@ p.read-more {
       }
     }
   }
+}
+
+span.read-more {
+  display: inline-block;
+  top: 0;
 }
 
 .link--animated,
