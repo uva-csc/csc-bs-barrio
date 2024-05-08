@@ -1,7 +1,28 @@
 @import 'variables.scss';
 
 /** General Text Styles **/
+.fsnorm {
+  font-size: 1rem!important;
+}
 
+.fs-small {
+  font-size: 0.9rem!important;
+}
+
+.fs-time {
+  font-size: 0.8rem!important;
+}
+
+.fs-large {
+  font-size: 1.1rem!important;
+}
+
+
+.fs-xlarge {
+  font-size: 1.5rem!important;
+}
+
+/** General Block Styles **/
 h1, h2, h3 {
   font-family: $font-frankgoth-hvy;
   margin-top: 1rem;
