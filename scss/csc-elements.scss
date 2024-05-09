@@ -92,11 +92,14 @@ a {
   border-bottom: 2px solid $uva-orange;
 }
 
+// Do not underline social media icons, telphone numbers, or email addresses or any link that is an animated link
 a.plain,
 a.link--animated,
 a[class^=social-media-link],
 a[href^=tel],
-a[href^=mailto] { // Do not underline social media icons, telphone numbers, or email addresses
+a[href^=mailto],
+.captioned-image .field--name-field-caption a
+{
   border-bottom: none!important;
 }
 
@@ -108,7 +111,38 @@ a[href^=mailto] { // Do not underline social media icons, telphone numbers, or e
   }
 }
 
-// Read More links
+// Animated Link Styles
+.link--animated,
+.field--name-field-teaser-caption p,
+.captioned-image .field--name-field-caption a
+{
+  position: relative;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $uva-orange;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform-origin: bottom left;
+      transform: scaleX(1);
+    }
+  }
+}
+
+// Read More links (include animated link styles
 p.read-more {
   font-size: 75%;
   font-weight: bold;
@@ -153,35 +187,6 @@ a.read-more, span.read-more {
   font-style: italic;
   position: relative;
   text-transform: uppercase;
-}
-
-.link--animated,
-.field--name-field-teaser-caption p
-{
-  position: relative;
-  z-index: 10;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: $uva-orange;
-    transform-origin: bottom right;
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
-    z-index: -1;
-  }
-
-  &:hover,
-  &:focus {
-    &::before {
-      transform-origin: bottom left;
-      transform: scaleX(1);
-    }
-  }
 }
 
 /** End of Links **/
@@ -438,6 +443,21 @@ div.geolocation-map-wrapper {
   }
 }
 
+// Captioned Image Paragraph
+.captioned-image {
+  .field--name-field-image {
+    max-width: 50%;
+    margin: 1rem auto 0.75rem;
+
+    img {
+      filter: $img-shadow;
+    }
+  }
+
+  .field--name-field-caption {
+    text-align: center;
+  }
+}
 
 /** Views **/
 .views-field-title {

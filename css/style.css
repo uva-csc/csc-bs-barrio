@@ -13288,6 +13288,7 @@ body {
   align-items: center;
 }
 #header #navbar-top > section nav.menu--top-menu ul li a {
+  font-family: "ITC Franklin Gothic Std", sans-serif !important;
   font-size: 0.75rem;
 }
 #header #navbar-top > section nav.menu--top-menu ul li span.menu-sep:before {
@@ -13390,7 +13391,7 @@ body {
 }
 #header #navbar-main ul.navbar-nav a {
   font-size: 1.1rem;
-  letter-spacing: 0.08rem !important;
+  /* letter-spacing: 0.08rem !important; */
   color: #eeeeee;
 }
 #header #navbar-main ul.navbar-nav a:hover {
@@ -14051,7 +14052,8 @@ a.plain,
 a.link--animated,
 a[class^=social-media-link],
 a[href^=tel],
-a[href^=mailto] {
+a[href^=mailto],
+.captioned-image .field--name-field-caption a {
   border-bottom: none !important;
 }
 
@@ -14059,6 +14061,36 @@ a[href^=mailto] {
 .path-webform a,
 .view.events-row a {
   border-bottom: none;
+}
+
+.link--animated,
+.field--name-field-teaser-caption p,
+.captioned-image .field--name-field-caption a {
+  position: relative;
+  z-index: 10;
+}
+.link--animated::before,
+.field--name-field-teaser-caption p::before,
+.captioned-image .field--name-field-caption a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #E57325;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+.link--animated:hover::before, .link--animated:focus::before,
+.field--name-field-teaser-caption p:hover::before,
+.field--name-field-teaser-caption p:focus::before,
+.captioned-image .field--name-field-caption a:hover::before,
+.captioned-image .field--name-field-caption a:focus::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 p.read-more {
@@ -14099,32 +14131,6 @@ a.read-more, span.read-more {
   font-style: italic;
   position: relative;
   text-transform: uppercase;
-}
-
-.link--animated,
-.field--name-field-teaser-caption p {
-  position: relative;
-  z-index: 10;
-}
-.link--animated::before,
-.field--name-field-teaser-caption p::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #E57325;
-  transform-origin: bottom right;
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-  z-index: -1;
-}
-.link--animated:hover::before, .link--animated:focus::before,
-.field--name-field-teaser-caption p:hover::before,
-.field--name-field-teaser-caption p:focus::before {
-  transform-origin: bottom left;
-  transform: scaleX(1);
 }
 
 /** End of Links **/
@@ -14328,6 +14334,17 @@ div.geolocation-map-wrapper {
   display: block;
   margin: 1.5rem auto;
   filter: drop-shadow(2px 4px 6px #232D4B);
+}
+
+.captioned-image .field--name-field-image {
+  max-width: 50%;
+  margin: 1rem auto 0.75rem;
+}
+.captioned-image .field--name-field-image img {
+  filter: drop-shadow(2px 4px 6px #232D4B);
+}
+.captioned-image .field--name-field-caption {
+  text-align: center;
 }
 
 /** Views **/
