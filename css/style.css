@@ -14418,6 +14418,62 @@ div.geolocation-map-wrapper {
   display: inline-block;
 }
 
+.view.event-col {
+  margin: 0 0 0 20px;
+}
+.view.event-col .view-header h2, .view.event-col .view-header .h2 {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.8;
+  margin-top: 20px;
+  margin-left: 50px;
+  text-align: right;
+}
+.view.event-col .view-header h2 span, .view.event-col .view-header .h2 span {
+  display: inline-block;
+  transform: translateX(-80px);
+}
+.view.event-col .views-row {
+  display: flex;
+}
+.view.event-col .views-row > div:first-child {
+  margin: 20px;
+}
+.view.event-col .views-row > div:nth-child(2) {
+  margin: 20px 0 0 0;
+}
+.view.event-col .views-row .views-field-field-image {
+  flex-shrink: 0;
+  max-width: 280px;
+}
+.view.event-col .views-row .views-field.event-type {
+  margin-top: 0.75rem;
+}
+.view.event-col .views-row .views-field.event-type a {
+  font-size: 70%;
+  letter-spacing: unset;
+}
+.view.event-col .views-row .views-field.title {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.025rem;
+  line-height: 1.2;
+  /*&:hover {
+    border-bottom: $csc-link;
+  }*/
+}
+.view.event-col .views-row .views-field.title a {
+  border-bottom: none;
+}
+.view.event-col .views-row .views-field.date {
+  margin: 0.25rem 0 0 0;
+  font-size: 90%;
+  font-style: italic;
+}
+
 .view.csc-news-block {
   max-width: 75vw;
   margin: 2rem auto;

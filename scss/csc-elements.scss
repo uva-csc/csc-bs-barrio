@@ -539,6 +539,73 @@ div.geolocation-map-wrapper {
   }
 }
 
+// Event Column View (used on events page)
+.view.event-col {
+  margin: 0 0 0 20px;
+
+  .view-header {
+    h2 {
+      font-family: $font-frankgoth-med;
+      font-size: 6rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 0.8;
+      margin-top: 20px;
+      margin-left: 50px;
+      text-align: right;
+
+      span {
+        display: inline-block;
+        transform: translateX(-80px);
+      }
+    }
+  }
+
+  .views-row {
+    display: flex;
+
+    &>div:first-child {
+      margin: 20px;
+    }
+
+    &>div:nth-child(2) {
+      margin: 20px 0 0 0;
+    }
+
+    .views-field-field-image {
+      flex-shrink: 0;
+      max-width: 280px;
+    }
+
+    .views-field.event-type {
+      margin-top: 0.75rem;
+      a {
+        font-size: 70%;
+        letter-spacing: unset;
+      }
+    }
+    .views-field.title {
+      margin: 0.25rem 0 0.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: -0.025rem;
+      line-height: 1.2;
+      a {
+        border-bottom: none;
+      }
+
+      /*&:hover {
+        border-bottom: $csc-link;
+      }*/
+    }
+    .views-field.date {
+      margin: 0.25rem 0 0 0;
+      font-size: 90%;
+      font-style: italic;
+    }
+  }
+}
+
 // News block (view)
 .view.csc-news-block {
   max-width: 75vw;
