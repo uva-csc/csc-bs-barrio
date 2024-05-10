@@ -379,6 +379,9 @@ a.read-more, span.read-more {
      */
   }
 }
+.content img.img-fluid {
+  max-width: 90%;
+}
 
 .field--name-field-teaser-image,
 .views-field-field-teaser-image {
@@ -451,7 +454,7 @@ div.geolocation-map-wrapper {
 // Captioned Image Paragraph
 .captioned-image {
   .field--name-field-image {
-    max-width: 50%;
+    max-width: 90%;
     margin: 1rem auto 0.75rem;
 
     img {
@@ -460,7 +463,9 @@ div.geolocation-map-wrapper {
   }
 
   .field--name-field-caption {
-    font-size: 0.9rem;
+    max-width: 90%;
+    font-size: 0.95rem;
+    font-style: italic;
     text-align: center;
   }
 }

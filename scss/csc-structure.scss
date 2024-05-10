@@ -650,7 +650,6 @@ body.node--type-landing-page  main#content {
   }
 
   .block-system-breadcrumb-block .content nav {
-    margin: 1rem auto;
     width: fit-content;
   }
 
@@ -666,6 +665,7 @@ body.node--type-landing-page  main#content {
 } // End of Landing page styles
 
 // Basic Page Content Type
+/*
 body.node--type-page {
   .field--name-field-image {
     float: left;
@@ -673,7 +673,9 @@ body.node--type-page {
     border: 2px solid #777;
     padding: 5px;
   }
-} // End of basic page content type
+} */
+// End of basic page content type
+
 
 // Event Content Type Pages
 body.node--type-event {
