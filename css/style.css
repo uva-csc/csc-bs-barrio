@@ -14112,7 +14112,7 @@ p.read-more {
 p.read-more a {
   position: relative;
   z-index: 10;
-  border-bottom: none;
+  /* border-bottom: none; */
   /*
       &::before {
         content: "";
