@@ -13735,9 +13735,6 @@ body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-her
   margin-bottom: 1.5rem;
   padding-bottom: 2rem;
 }
-body.node--type-landing-page main#content .block-system-breadcrumb-block .content nav {
-  width: fit-content;
-}
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody .content {
   width: 75%;
   margin-bottom: 4rem;
@@ -14034,6 +14031,11 @@ nav ol.breadcrumb > li.breadcrumb-item:first-child > i.bi {
 nav ol.breadcrumb li.breadcrumb-item i.bi {
   font-size: 70%;
   vertical-align: middle;
+}
+
+.block-system-breadcrumb-block .content nav {
+  margin: 0 0 0 1.3rem;
+  width: fit-content;
 }
 
 div.layout.bc-inline .block-system-breadcrumb-block {
