@@ -395,7 +395,7 @@ div.geolocation-map-wrapper {
   position: relative;
   width: 500px;
   height: 300px;
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: $img-shadow;
 }
 
 /** Blocks **/

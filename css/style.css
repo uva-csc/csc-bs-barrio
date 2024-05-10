@@ -13541,7 +13541,7 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia {
   margin-top: 3rem;
 }
 div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: drop-shadow(8px 10px 3px #00000095);
   max-width: 18vw;
   height: auto;
   display: inline-block;
@@ -14278,7 +14278,7 @@ a.read-more, span.read-more {
 
 .field--name-field-teaser-image,
 .views-field-field-teaser-image {
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: drop-shadow(8px 10px 3px #00000095);
 }
 
 /** Maps **/
@@ -14296,7 +14296,7 @@ div.geolocation-map-wrapper {
   position: relative;
   width: 500px;
   height: 300px;
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: drop-shadow(8px 10px 3px #00000095);
 }
 
 /** Blocks **/
@@ -14333,7 +14333,7 @@ div.geolocation-map-wrapper {
 .centered-intro p:has(img) img {
   display: block;
   margin: 1.5rem auto;
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: drop-shadow(8px 10px 3px #00000095);
 }
 
 .captioned-image .field--name-field-image {
@@ -14341,7 +14341,7 @@ div.geolocation-map-wrapper {
   margin: 1rem auto 0.75rem;
 }
 .captioned-image .field--name-field-image img {
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: drop-shadow(8px 10px 3px #00000095);
 }
 .captioned-image .field--name-field-caption {
   text-align: center;
@@ -14758,7 +14758,7 @@ body.path-webform .help-curate {
 .node--type-page .block-field-blocknodepagebody img {
   max-width: 60vw;
   height: auto;
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: drop-shadow(8px 10px 3px #00000095);
 }
 
 .node--type-location .field--name-field-image {
@@ -14962,7 +14962,7 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row {
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-image img {
   max-width: unset;
-  filter: drop-shadow(2px 4px 6px #232D4B);
+  filter: drop-shadow(8px 10px 3px #00000095);
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 {
   margin: 0.5rem 0 0 0;
