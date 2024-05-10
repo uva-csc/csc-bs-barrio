@@ -107,9 +107,18 @@ a.plain,
 a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto],
+.csc-btn a,
 // .captioned-image .field--name-field-caption a
 {
   border-bottom: none!important;
+}
+
+.reversed a, a.reversed {
+  border-bottom: none;
+
+  &:hover {
+    border-bottom: $csc-link;
+  }
 }
 
 #header .navbar,
@@ -385,7 +394,7 @@ a.read-more, span.read-more {
   }
 }
 .content img.img-fluid {
-  max-width: 90%;
+  // max-width: 90%;
 }
 
 .field--name-field-teaser-image,
@@ -490,6 +499,44 @@ div.geolocation-map-wrapper {
 
 .views-field-field-image + .views-field-field-date {
   margin-top: 0.5rem;
+}
+
+.views-field.event-type {
+  padding-top: 0.5rem;
+  a {
+    font-family: $font-frankgoth-med;
+    font-size: 80%;
+    text-transform: uppercase;
+    color: $csc-dark-gray;
+    letter-spacing: 1px;
+  }
+}
+
+// Feature event on the events page
+.view.featured-event {
+  .views-field-title {
+    font-size: 1.5rem;
+  }
+
+  .views-field-field-date {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  .views-field-body {
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: -0.03125em;
+  }
+
+  // Link to content
+  .views-field-view-node {
+    text-align: center;
+
+    .csc-btn {
+      display: inline-block;
+    }
+  }
 }
 
 // News block (view)

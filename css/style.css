@@ -14060,8 +14060,16 @@ a:hover {
 a.plain,
 a[class^=social-media-link],
 a[href^=tel],
-a[href^=mailto] {
+a[href^=mailto],
+.csc-btn a {
   border-bottom: none !important;
+}
+
+.reversed a, a.reversed {
+  border-bottom: none;
+}
+.reversed a:hover, a.reversed:hover {
+  border-bottom: 2px solid #E57325;
 }
 
 #header .navbar a,
@@ -14288,10 +14296,6 @@ a.read-more, span.read-more {
    */
 }
 
-.content img.img-fluid {
-  max-width: 90%;
-}
-
 .field--name-field-teaser-image,
 .views-field-field-teaser-image {
   filter: drop-shadow(8px 10px 3px #00000095);
@@ -14381,6 +14385,37 @@ div.geolocation-map-wrapper {
 
 .views-field-field-image + .views-field-field-date {
   margin-top: 0.5rem;
+}
+
+.views-field.event-type {
+  padding-top: 0.5rem;
+}
+.views-field.event-type a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #5a6172;
+  letter-spacing: 1px;
+}
+
+.view.featured-event .views-field-title {
+  font-size: 1.5rem;
+}
+.view.featured-event .views-field-field-date {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+.view.featured-event .views-field-body {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: -0.03125em;
+}
+.view.featured-event .views-field-view-node {
+  text-align: center;
+}
+.view.featured-event .views-field-view-node .csc-btn {
+  display: inline-block;
 }
 
 .view.csc-news-block {
