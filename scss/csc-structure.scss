@@ -111,7 +111,7 @@ body {
       max-height: 32px;
       color: #ffffff;
       background-color: transparent;
-      border: 2px solid $uva-orange;
+      border: $csc-link;
       font-family: "ITC Franklin Gothic Std", sans-serif;
       font-weight: 600;
       justify-content: center;
@@ -786,7 +786,11 @@ main#content {
           font-weight: bold;
 
           &:last-child {
-            /*border-bottom: 4px solid $uva-orange;*/
+            border-bottom: $csc-link;
+
+            &:hover {
+              border-bottom: none;
+            }
           }
         }
       }

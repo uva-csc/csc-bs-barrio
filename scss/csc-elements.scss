@@ -89,16 +89,20 @@ div.layout.bc-inline .block-system-breadcrumb-block {
 
 /** Links **/
 a {
-  border-bottom: 2px solid $uva-orange;
+  border-bottom: $csc-link;
+
+  &:hover {
+    border-bottom: none;
+  }
 }
 
 // Do not underline social media icons, telphone numbers, or email addresses or any link that is an animated link
 a.plain,
-a.link--animated,
+// a.link--animated,
 a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto],
-.captioned-image .field--name-field-caption a
+// .captioned-image .field--name-field-caption a
 {
   border-bottom: none!important;
 }
@@ -112,6 +116,7 @@ a[href^=mailto],
 }
 
 // Animated Link Styles
+/*
 .link--animated,
 .field--name-field-teaser-caption p,
 .captioned-image .field--name-field-caption a
@@ -140,7 +145,7 @@ a[href^=mailto],
       transform: scaleX(1);
     }
   }
-}
+}*/
 
 // Read More links (include animated link styles
 p.read-more {
@@ -156,7 +161,7 @@ p.read-more {
     position: relative;
     z-index: 10;
     border-bottom: none;
-
+/*
     &::before {
       content: "";
       position: absolute;
@@ -177,7 +182,7 @@ p.read-more {
         transform-origin: bottom left;
         transform: scaleX(1);
       }
-    }
+    }  */
   }
 }
 
