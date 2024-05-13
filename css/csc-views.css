@@ -1,0 +1,226 @@
+/* VARIABLES */
+/** Bootstrap Overrides **/
+/** Views **/
+.views-field-title {
+  font-weight: bold;
+}
+
+.views-field-body {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+}
+
+.views-field-view-node a {
+  border-bottom: 4px solid #E57200;
+}
+
+.views-field-field-image + .views-field-field-date {
+  margin-top: 0.5rem;
+}
+
+.views-field.event-type {
+  padding-top: 0.5rem;
+}
+.views-field.event-type a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #5a6172;
+  letter-spacing: 1px;
+}
+
+.view.featured-event .views-field-title {
+  font-size: 1.5rem;
+}
+.view.featured-event .views-field-field-date {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+.view.featured-event .views-field-body {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: -0.03125em;
+}
+.view.featured-event .views-field-view-node {
+  text-align: center;
+}
+.view.featured-event .views-field-view-node .csc-btn {
+  display: inline-block;
+}
+
+.view.event-col {
+  margin: 0 -40px 0 30px;
+}
+.view.event-col .view-header h2 {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.8;
+  margin-top: 30px;
+  margin-right: -50px;
+  text-align: right;
+}
+.view.event-col .view-header h2 span {
+  display: inline-block;
+  transform: translateX(-80px);
+}
+.view.event-col .views-row {
+  display: flex;
+}
+.view.event-col .views-row > div:first-child {
+  margin: 20px;
+}
+.view.event-col .views-row > div:nth-child(2) {
+  margin: 20px 0 0 0;
+}
+.view.event-col .views-row .views-field-field-image {
+  flex-shrink: 0;
+  max-width: 280px;
+}
+.view.event-col .views-row .views-field.event-type {
+  margin-top: 0.75rem;
+}
+.view.event-col .views-row .views-field.event-type a {
+  font-size: 70%;
+  letter-spacing: unset;
+}
+.view.event-col .views-row .views-field.title {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.025rem;
+  line-height: 1.2;
+  /*&:hover {
+    border-bottom: $csc-link;
+  }*/
+}
+.view.event-col .views-row .views-field.title a {
+  border-bottom: none;
+}
+.view.event-col .views-row .views-field.date {
+  margin: 0.25rem 0 0 0;
+  font-size: 90%;
+  font-style: italic;
+}
+
+.view.csc-news-block {
+  max-width: 75vw;
+  margin: 2rem auto;
+}
+.view.csc-news-block a {
+  border-bottom: none;
+}
+.view.csc-news-block .view-header {
+  position: relative;
+  width: 100%;
+  background-color: #E57325;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0 0;
+  border-radius: 15px;
+}
+.view.csc-news-block .view-header h2 {
+  margin: 1rem auto;
+  width: fit-content;
+  color: white;
+  font-size: 300%;
+  font-weight: bold;
+}
+.view.csc-news-block .node--view-mode-teaser {
+  border: none;
+}
+.view.csc-news-block .node--view-mode-teaser .content {
+  line-height: 1.1rem;
+  font-size: 90%;
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image {
+  float: none;
+  overflow: hidden;
+  margin-right: 0.25rem;
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image img.image-style-news-teaser {
+  border: thin solid #aaa;
+  border-radius: 0;
+  padding: 0;
+  transition: transform 0.2s;
+  /* Animation */
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image img.image-style-news-teaser:hover {
+  transform: scale(1.15);
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-field-date {
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: #009fdf;
+  text-transform: uppercase;
+}
+.view.csc-news-block .view-footer {
+  float: right;
+}
+.view.csc-news-block .view-footer a {
+  border-bottom: 4px solid #E57325;
+}
+
+.view-events.events-row .view-header h2 {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+}
+.view-events.events-row .view-content .views-view-responsive-grid {
+  justify-items: center;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
+  border: thin solid #939292;
+  border-top: 16px solid #E57325;
+  background-color: #fdfdfd;
+  /*margin: 10px 8px 0;
+  padding-top: 0.5rem;
+  line-height: 1.35rem;*/
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-image {
+  border-top: thin solid #939292;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-image img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date {
+  margin: 18px 8px 0;
+  line-height: 1.35rem;
+  font-weight: bold;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date .smart-date--time {
+  display: none;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-location {
+  margin: 0 8px;
+  font-size: 90%;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title {
+  margin: 0.5rem 8px 0;
+  font-size: 110%;
+  font-weight: bold;
+}
+.view-events.events-row .view-footer {
+  width: fit-content;
+  margin: 3rem auto 1rem;
+  text-align: center;
+}
+.view-events.events-row .view-footer p {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-size: 90%;
+  padding: 0rem 3.5rem;
+  border-radius: 3px;
+  line-height: 1.15rem;
+}
+.view-events.events-row .view-footer p a {
+  display: inline-block;
+  padding-top: 0.35rem;
+  color: #fdfdfd !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*# sourceMappingURL=csc-views.css.map */
