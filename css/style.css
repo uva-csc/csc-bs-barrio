@@ -14297,7 +14297,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
 }
 
 .view.event-col {
-  margin: 0 -40px 0 30px;
+  margin: 0 0 0 30px;
 }
 .view.event-col .view-header h2, .view.event-col .view-header .h2 {
   font-family: "ITC Franklin Gothic Med", sans-serif;
