@@ -541,17 +541,17 @@ div.geolocation-map-wrapper {
 
 // Event Column View (used on events page)
 .view.event-col {
-  margin: 0 0 0 20px;
+  margin: 0 -40px 0 30px;
 
   .view-header {
     h2 {
       font-family: $font-frankgoth-med;
-      font-size: 6rem;
+      font-size: 5rem;
       font-weight: bold;
       text-transform: uppercase;
       line-height: 0.8;
-      margin-top: 20px;
-      margin-left: 50px;
+      margin-top: 30px;
+      margin-right: -50px;
       text-align: right;
 
       span {
