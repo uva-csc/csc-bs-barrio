@@ -22,7 +22,7 @@
 }
 
 .views-field.event-type  {
-  padding-top: 0.5rem;
+  padding-top: 0.3rem;
   a {
     font-family: $font-frankgoth-med;
     font-size: 80%;
@@ -30,6 +30,10 @@
     color: $csc-dark-gray;
     letter-spacing: 1px;
   }
+}
+
+.featured-event .views-field.event-type {
+  margin-top: 0.8rem;
 }
 
 // Feature event on the events page

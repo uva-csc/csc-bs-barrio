@@ -14270,7 +14270,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
 }
 
 .views-field.event-type {
-  padding-top: 0.5rem;
+  padding-top: 0.3rem;
 }
 .views-field.event-type a {
   font-family: "ITC Franklin Gothic Med", sans-serif;
@@ -14278,6 +14278,10 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   text-transform: uppercase;
   color: #5a6172;
   letter-spacing: 1px;
+}
+
+.featured-event .views-field.event-type {
+  margin-top: 0.8rem;
 }
 
 .view.featured-event .views-field-title {
