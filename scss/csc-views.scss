@@ -13,6 +13,10 @@
   border-bottom: 4px solid #E57200;
 }
 
+.views-field-field-image img {
+  filter: $img-shadow;
+}
+
 .views-field-field-image + .views-field-field-date {
   margin-top: 0.5rem;
 }

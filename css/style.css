@@ -14261,6 +14261,10 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   border-bottom: 4px solid #E57200;
 }
 
+.views-field-field-image img {
+  filter: drop-shadow(8px 10px 3px #00000095);
+}
+
 .views-field-field-image + .views-field-field-date {
   margin-top: 0.5rem;
 }
@@ -14301,7 +14305,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
 }
 .view.event-col .view-header h2, .view.event-col .view-header .h2 {
   font-family: "ITC Franklin Gothic Med", sans-serif;
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 0.8;
