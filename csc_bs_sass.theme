@@ -68,17 +68,29 @@ function csc_bs_sass_preprocess_page(&$variables) {
 function csc_bs_sass_preprocess_node(&$variables) {
   $node = $variables['node'];
   if ($node->bundle() == 'event') {
-    // kint($node);
     $date = $node->get('field_date');
     $vals = $date->getValue();
     foreach($vals as $n => $val) {
-      $dtts = $val['value'];
-      $val['month'] = date('M', $dtts);
-      $val['day'] = date('j', $dtts);
-      $val['full'] = date('M j, Y', $dtts);
+      $stts = $val['value'];
+      $etts = $val['end_value'];
+      $tz = $val['timezone'];
+      $val['allday'] = isDateAllDay($stts, $etts, $tz) ? 'true' : 'false';
+      $val['month'] = date('M', $stts);
+      $val['day'] = date('j', $stts);
+      $val['full'] = date('M j, Y', $stts);
       $vals[$n] = $val;
     }
     $date->setValue($vals);
+  } else if ($node->bundle() == 'location') {
+    $short_title = $node->get('field_short_title')->getValue();
+    if (empty($short_title)) {
+      $title = $node->label();
+      $short_title = array(array(
+        'value' => $title,
+        'format' => 'basic_html',
+      ));
+      $node->get('field_short_title')->setValue($short_title);
+    }
   }
 }
 
@@ -87,8 +99,11 @@ function csc_bs_sass_preprocess_field(&$variables) {
   $fld_name = $variables['field_name'];
   if ($fld_name == 'field_date') {
     $el = $variables['element'];
-    // TODO: need to account for multiple dates, event with many different occurrences?
+    // TODO: need to account for multiple dates, event with many different occurrences? If that uses multiple items.
     $dt = $el['#items'][0]->getValue();
+    if(array_key_exists('allday', $dt)) {
+      $variables['is_allday'] = $dt['allday'];
+    }
     if (array_key_exists( 'month', $dt)) {
       $variables['csc_month'] = $dt['month'];
     }
@@ -123,18 +138,6 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
   }
 }
 
-/*
-function csc_bs_sass_preprocess_node(&$variables) {
-  if (array_key_exists('node', $variables)) {
-    $node = $variables['node'];
-    if ($node->getType() == 'event') {
-      $dateval = $variables['node']->get('field_date')->get(0)->toArray();
-      $variables['is_all_day'] = (new class { use SmartDateTrait; })::isAllDay($dateval['value'], $dateval['end_value']);
-      $variables['attributes']['class'][] = 'all-day';
-    }
-  }
-}
-*/
 
 /*
 function csc_bs_sass_preprocess_block(&$variables) {
@@ -294,6 +297,27 @@ function csc_log($msg='no message sent to log function', $ltype='notice', $sufx=
   }
 }
 
-function isDateAllDay($sttm, $entm) {
-  return (new class { use SmartDateTrait; })::isAllDay($sttm, $entm);
+
+// Taken from SmartDateTrait
+function isDateAllDay($start_ts, $end_ts, $timezone = NULL) {
+  if ($timezone) {
+    if ($timezone instanceof \DateTimeZone) {
+      // If provided as an object, convert to a string.
+      $timezone = $timezone->getName();
+    }
+    // Apply a specific timezone provided.
+    $default_tz = date_default_timezone_get();
+    date_default_timezone_set($timezone);
+  }
+  // Format timestamps to predictable format for comparison.
+  $temp_start = date('H:i', $start_ts);
+  $temp_end = date('H:i', $end_ts);
+  if ($timezone) {
+    // Revert to previous timezone.
+    date_default_timezone_set($default_tz);
+  }
+  if ($temp_start == '00:00' && $temp_end == '23:59') {
+    return TRUE;
+  }
+  return FALSE;
 }

@@ -90,7 +90,36 @@ div.layout.bc-inline .block-system-breadcrumb-block {
       padding-inline-start: 0px;
     }
   }
-}
+}  // End of Breadcrumbs
+
+// Separators
+main#content {
+  .csc-sep {
+    &.dotted-orange {
+      border-top: 4px dotted $uva-orange;
+      margin: 2rem auto;
+      padding-top: 2rem;
+      width: 80%;
+      /* border-image: url('/themes/custom/csc_bs_sass/images/icons/orange-dot.svg'); */
+    }
+
+    &.dotted-blue {
+      border-top: 4px dotted $uva-blue;
+      margin: 2rem auto;
+      padding-top: 2rem;
+      width: 80%;
+      /* border-image: url('/themes/custom/csc_bs_sass/images/icons/orange-dot.svg'); */
+    }
+  }
+
+  main#content .csc-sep.dotted-orange {
+    /* border-top: 4px dotted #E57200; */
+    margin: 2rem auto;
+    padding-top: 2rem;
+    width: 80%;
+
+  }
+} // end of separators
 
 /** Links **/
 a {
@@ -433,337 +462,6 @@ div.geolocation-map-wrapper {
   }
 }
 
-/** Paragraphs: class for paragraphs with custom formatting (not structural) **/
-
-// Centered Intro, e.g. Citizen Leaders Fellowship
-.centered-intro {
-  margin: 0;
-
-  h2 {
-    font-size: 2.25rem;
-    text-shadow: $csc-shadow;
-    text-align: center;
-    letter-spacing: 0.2rem;
-  }
-
-  p:not(:has(img)) {
-    max-width: 800px;
-    margin: 0.5rem auto;
-    font-weight: bold;
-  }
-
-  p:has(img) {
-    width: 100%;
-    max-width: unset;
-    margin: 0.5rem;
-
-    img {
-      display: block;
-      margin: 1.5rem auto;
-      filter: $img-shadow;
-    }
-  }
-}
-
-// Captioned Image Paragraph
-.captioned-image {
-  .field--name-field-image {
-    max-width: 90%;
-    margin: 1rem auto 0.75rem;
-
-    img {
-      filter: $img-shadow;
-    }
-  }
-
-  .field--name-field-caption {
-    max-width: 90%;
-    font-size: 0.95rem;
-    font-style: italic;
-    text-align: center;
-  }
-}
-
-/** Views **/
-.views-field-title {
-  font-weight: bold;
-}
-
-.views-field-body {
-  font-family: $font-frankgoth-std;
-}
-
-.views-field-view-node a {
-  border-bottom: 4px solid #E57200;
-}
-
-.views-field-field-image + .views-field-field-date {
-  margin-top: 0.5rem;
-}
-
-.views-field.event-type {
-  padding-top: 0.5rem;
-  a {
-    font-family: $font-frankgoth-med;
-    font-size: 80%;
-    text-transform: uppercase;
-    color: $csc-dark-gray;
-    letter-spacing: 1px;
-  }
-}
-
-// Feature event on the events page
-.view.featured-event {
-  .views-field-title {
-    font-size: 1.5rem;
-  }
-
-  .views-field-field-date {
-    margin: 0 0 0.5rem;
-    font-size: 1rem;
-    font-style: italic;
-  }
-  .views-field-body {
-    font-size: 1rem;
-    line-height: 1;
-    letter-spacing: -0.03125em;
-  }
-
-  // Link to content
-  .views-field-view-node {
-    text-align: center;
-
-    .csc-btn {
-      display: inline-block;
-    }
-  }
-}
-
-// Event Column View (used on events page)
-.view.event-col {
-  margin: 0 -40px 0 30px;
-
-  .view-header {
-    h2 {
-      font-family: $font-frankgoth-med;
-      font-size: 5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      line-height: 0.8;
-      margin-top: 30px;
-      margin-right: -50px;
-      text-align: right;
-
-      span {
-        display: inline-block;
-        transform: translateX(-80px);
-      }
-    }
-  }
-
-  .views-row {
-    display: flex;
-
-    &>div:first-child {
-      margin: 20px;
-    }
-
-    &>div:nth-child(2) {
-      margin: 20px 0 0 0;
-    }
-
-    .views-field-field-image {
-      flex-shrink: 0;
-      max-width: 280px;
-    }
-
-    .views-field.event-type {
-      margin-top: 0.75rem;
-      a {
-        font-size: 70%;
-        letter-spacing: unset;
-      }
-    }
-    .views-field.title {
-      margin: 0.25rem 0 0.5rem;
-      font-size: 1.25rem;
-      font-weight: bold;
-      letter-spacing: -0.025rem;
-      line-height: 1.2;
-      a {
-        border-bottom: none;
-      }
-
-      /*&:hover {
-        border-bottom: $csc-link;
-      }*/
-    }
-    .views-field.date {
-      margin: 0.25rem 0 0 0;
-      font-size: 90%;
-      font-style: italic;
-    }
-  }
-}
-
-// News block (view)
-.view.csc-news-block {
-  max-width: 75vw;
-  margin: 2rem auto;
-
-  // No orange border on links
-  a {
-    border-bottom: none;
-  }
-
-  // News block header
-  .view-header {
-    position: relative;
-    width: 100%;
-    background-color: $uva-orange;
-    margin-bottom: 0.5rem;
-    padding: 0.2rem 0 0;
-    border-radius: 15px;
-
-    h2 {
-      margin: 1rem auto;
-      width: fit-content;
-      color: white;
-      font-size: 300%;
-      font-weight: bold;
-    }
-  }
-
-  .views-view-responsive-grid__item {
-    // border-bottom: thin solid #ccc;
-  }
-
-  // The individual news item teasers in the view
-  .node--view-mode-teaser {
-    border: none;
-
-    // Every field has a .content
-    .content {
-      line-height: 1.1rem; // pack text close together
-      font-size: 90%;
-    }
-
-    // New teaser image
-    .field--name-field-image {
-      float: none;
-      overflow: hidden;
-      margin-right: 0.25rem;
-
-      img.image-style-news-teaser {
-        border: thin solid #aaa;
-        border-radius: 0;
-        padding: 0;
-        transition: transform .2s; /* Animation */
-        &:hover {
-          transform: scale(1.15);
-        }
-      }
-    } // end of new teaser image
-
-    .field--name-field-date {
-      margin-top: 0.75rem;
-      font-weight: bold;
-      color: $csc-lt-blue;
-      text-transform: uppercase;
-    }
-  }  // end of News node teaser
-
-  .view-footer {
-    float: right;
-    a {
-      border-bottom: 4px solid $uva-orange;
-    }
-  }
-
-} // end of view news block
-
-// Event Views Blocks (Some on Home page css too)
-.view-events {
-  // Block 3 of View. Shows row of latest events.
-  &.events-row {
-
-    .view-header h2 {
-      font-family: $font-frankgoth-hvy;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 250%;
-    }
-
-    .view-content {
-      .views-view-responsive-grid {
-        justify-items: center;
-
-        .views-view-responsive-grid__item-inner {
-          border: thin solid #939292;
-          border-top: 16px solid $uva-orange;
-          background-color: $white;
-
-          .views-field-field-image {
-            border-top: thin solid #939292;
-            img {
-              border: none;
-              border-radius: 0;
-              padding: 0;
-            }
-          } // End of .field--name-field-image
-
-
-            /*margin: 10px 8px 0;
-            padding-top: 0.5rem;
-            line-height: 1.35rem;*/
-
-            .views-field-field-date {
-              margin: 18px 8px 0;
-              line-height: 1.35rem;
-              font-weight: bold;
-
-              .smart-date--time {
-                display: none;
-              }
-            }
-
-            .views-field-field-location {
-              margin: 0 8px;
-              font-size: 90%;
-            }
-
-            .views-field-title {
-              margin: 0.5rem 8px 0;
-              font-size: 110%;
-              font-weight: bold;
-            }
-
-        }  // End of views-view-responsive-grid__item-inner
-      } // End of views-view-responsive-grid
-    } // End of .view-events .view-content
-    .view-footer {
-      width: fit-content;
-      margin: 3rem auto 1rem;
-      text-align: center;
-
-      p { // The "More Events Button"
-        font-family: $font-frankgoth-hvy;
-        font-size: 90%;
-        padding: 0rem 3.5rem;
-        border-radius: 3px;
-        line-height: 1.15rem;
-
-        a {
-          display: inline-block;
-          padding-top: 0.35rem;
-          color: $white !important;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-        }
-      }
-    } // End of .events-row .footer
-  } // End of &.events-row
-} // End of .view-events
 
 // Common footer / bottom of page elements
 // Help curate block
