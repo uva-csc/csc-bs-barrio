@@ -14305,8 +14305,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   font-weight: bold;
   text-transform: uppercase;
   line-height: 0.8;
-  margin-top: 30px;
-  margin-right: -50px;
+  margin: 25px 0 30px;
   text-align: right;
 }
 .view.event-col .view-header h2 span, .view.event-col .view-header .h2 span {
