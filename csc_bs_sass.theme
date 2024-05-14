@@ -117,24 +117,52 @@ function csc_bs_sass_preprocess_field(&$variables) {
 }
 
 /* View Preprocessing */
+function csc_bs_sass_preprocess_views_view(&$variables) {
+  /*
+  $view = $variables['view'];
+  if ($view->storage->id() == 'homepage_events') {
+    $display = $view->getDisplay();
+    $options = $display->options;
+    // kint($options);
+    if (!empty($options['css_class'])) {
+      if (str_contains($options['css_class'], 'featured-event')) {
+        kint($variables);
+      }
+    }
+  }
+  */
+}
+
 function csc_bs_sass_preprocess_views_view_field(&$variables) {
   $view = $variables['view'];
   $field = $variables['field'];
-  if ($view->storage->id() == 'events' &&
-    // $view->current_display == 'block_featured' &&
-    $field->field == 'field_tags') {
-    $output = [];
-    foreach ($view->result as $rid => $row) {
-      $tids = $view->field['field_tags']->getValue($row);
-      foreach ($tids as $tid) {
-        $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
-        $bundle = $term->bundle();
-        if($bundle !== 'content_filters') {
-          $output[] = "<span class=\"tax-term\"><a href=\"/taxonomy/term/{$tid}\">{$term->label()}</a></span>";
+  $view_id = $view->storage->id();
+  if ($view_id == 'events') {
+    if ($field->field == 'field_tags') {
+      $output = [];
+      foreach ($view->result as $rid => $row) {
+        $tids = $view->field['field_tags']->getValue($row);
+        foreach ($tids as $tid) {
+          $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+          $bundle = $term->bundle();
+          if($bundle !== 'content_filters') {
+            $output[] = "<span class=\"tax-term\"><a href=\"/taxonomy/term/{$tid}\">{$term->label()}</a></span>";
+          }
         }
       }
-    }
-    $variables['output'] = implode('', $output);
+      $variables['output'] = implode('', $output);
+    } // end views field tag
+  }
+
+  // For homepage events to move the read-more link inside the body's last </p>
+  // If Learn More link is created by view, it will necessarily be outside the </p> tag with some space between.
+  // If this code is to be used elsewhere, the <a> must have these classes: class="d-inline-block ms-2 lh-1"
+  if ($view->storage->id() == 'homepage_events' &&
+    $field->field == 'body') {
+    // csc_log(str_replace(array('<', '>'), array('&lt;', '&gt;'), $variables['output']));  // For debugging
+    $pattern = '/<\/p>\s*(<a[^>]+>[\s\S]+<\/a>)/'; // Looks for an <a> tag outside a </p> with some optional space
+    $rep = ' $1</p>'; // Places it inside <p> element
+    $variables['output'] = preg_replace($pattern, $rep, $variables['output']);
   }
 }
 

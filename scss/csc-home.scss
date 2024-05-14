@@ -178,7 +178,11 @@ body.path-frontpage main#content {
       text-align: center;
       a {
         color: white;
-        font-size: 130%;
+        font-size: 100%;
+        border: none;
+        &:hover {
+          border-bottom: $csc-link;
+        }
       }
     }
 

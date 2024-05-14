@@ -13788,7 +13788,11 @@ body.path-frontpage main#content .featured-event .views-field-title {
 }
 body.path-frontpage main#content .featured-event .views-field-title a {
   color: white;
-  font-size: 130%;
+  font-size: 100%;
+  border: none;
+}
+body.path-frontpage main#content .featured-event .views-field-title a:hover {
+  border-bottom: 2px solid #E57325;
 }
 body.path-frontpage main#content .featured-event .views-field-body p {
   font-weight: normal;
