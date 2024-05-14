@@ -13372,6 +13372,21 @@ body {
 #header #navbar-main {
   height: 35px;
   padding: 4px 0 0 0;
+  /*
+      ul.dropdown-menu {
+        li {
+          padding-bottom: 0.5rem;
+          border-bottom: thin solid grey;
+        }
+        a {
+          font-weight: normal;
+          color: $uva-blue;
+
+          &:hover {
+            color: $uva-blue-25;
+          }
+        }
+      }*/
 }
 #header #navbar-main.bg-primary {
   background-color: #232D4B;
@@ -13398,12 +13413,6 @@ body {
   color: #fdfdfd;
   opacity: 1;
 }
-#header #navbar-main ul.dropdown-menu a {
-  color: #232D4B;
-}
-#header #navbar-main ul.dropdown-menu a:hover {
-  color: #C8CBD2;
-}
 #header .navbar .nav-item a, #header .navbar .menu-item a {
   margin: 0 0.25rem 0 0;
   color: white;
@@ -13412,17 +13421,30 @@ body {
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
-#header .navbar .nav-item.dropdown .dropdown-menu li, #header .navbar .nav-item.dropdown .dropdown-menu a {
-  color: #232D4B;
-  backgroud-color: #dadada;
-}
-#header .navbar .nav-item.dropdown .dropdown-menu .dropdown-item.active a {
-  color: #dadada;
-}
 #header .navbar .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  backgroud-color: #dadada;
+  margin: -0.4rem 0 0 -4rem;
+  padding: 0 1rem 0.5rem;
+  line-height: 2.5;
   color: #232D4B;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item {
+  padding-top: 0.35rem !important;
+  border-bottom: thin solid lightgray;
+}
+#header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item:last-child {
+  border-bottom: none;
+}
+#header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item a {
+  color: #232D4B !important;
+  /*backgroud-color: $off-white;*/
+  text-transform: capitalize;
+  line-height: 1;
+}
+#header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item a:hover {
+  color: #E57325 !important;
 }
 
 #title-div .content {
@@ -13756,7 +13778,7 @@ body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .v
   cursor: pointer;
 }
 body.path-frontpage main#content .featured-event {
-  padding: 8rem 4rem 6rem;
+  padding: 8rem 2rem 6rem 4rem;
   color: white;
   max-width: 49vw;
 }
@@ -13806,7 +13828,7 @@ body.path-frontpage main#content .featured-event .views-field-view-node a, body.
   color: white;
 }
 body.path-frontpage main#content .upcoming-events {
-  padding: 1rem 4rem 1rem 3rem;
+  padding: 1rem 4rem 1rem 1rem;
 }
 body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#content .upcoming-events .h3 {
   display: inline-block;

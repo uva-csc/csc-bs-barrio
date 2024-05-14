@@ -220,13 +220,21 @@ body {
         }
       }
     }
-
-    ul.dropdown-menu a {
-      color: $uva-blue;
-      &:hover {
-        color: $uva-blue-25;
+/*
+    ul.dropdown-menu {
+      li {
+        padding-bottom: 0.5rem;
+        border-bottom: thin solid grey;
       }
-    }
+      a {
+        font-weight: normal;
+        color: $uva-blue;
+
+        &:hover {
+          color: $uva-blue-25;
+        }
+      }
+    }*/
   }
 
   // Menu Links (for both upper and lower menus)
@@ -243,25 +251,36 @@ body {
         letter-spacing: .05rem;
       }
     }
-    .nav-item.dropdown {
-      .dropdown-menu {
-        li, a {
-          color: $uva-blue;
-          backgroud-color: $off-white;
-        }
-        .dropdown-item.active a {
-          color: $off-white;
-        }
-      }
-      &:hover {
+    .nav-item.dropdown:hover {
         .dropdown-menu {
           display: block;
-          backgroud-color: $off-white;
+          margin: -0.4rem 0 0 -4rem;
+          padding: 0 1rem 0.5rem;
+          line-height: 2.5;
           color: $uva-blue;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+
+          li.dropdown-item {
+            padding-top: 0.35rem!important;
+            border-bottom: thin solid lightgray;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            a {
+              color: $uva-blue!important;
+              /*backgroud-color: $off-white;*/
+              text-transform: capitalize;
+              line-height: 1;
+              &:hover {
+                color: $uva-orange !important;
+              }
+            }
+          }
         }
       }
-
-    }
 
   }  // end of Menu Links for both headers
 
