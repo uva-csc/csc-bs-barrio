@@ -559,8 +559,8 @@ div.layout--twocol-section--33-67 {
 
 /** General Structure **/
 // For constricting width of paragraphs etc in full-width pages
-.fixed-width {
-  max-width: 85vw;
+.fixed-width, .max-width {
+  max-width: 1800px;
   margin: auto;
 }
 

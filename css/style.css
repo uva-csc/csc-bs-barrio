@@ -13670,8 +13670,8 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 }
 
 /** General Structure **/
-.fixed-width {
-  max-width: 85vw;
+.fixed-width, .max-width {
+  max-width: 1800px;
   margin: auto;
 }
 
