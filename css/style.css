@@ -14271,7 +14271,8 @@ main#content .c-csc-skewed_colored_header + .paragraph {
 
 .captioned-image .field--name-field-image {
   max-width: 90%;
-  margin: 1rem auto 0.75rem;
+  /*margin: 1rem auto 0.75rem;*/
+  padding-bottom: 1.5rem;
 }
 .captioned-image .field--name-field-image img {
   filter: drop-shadow(8px 10px 3px #00000095);
@@ -14280,7 +14281,8 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   max-width: 90%;
   font-size: 0.95rem;
   font-style: italic;
-  text-align: center;
+  text-align: right;
+  line-height: 1.25;
 }
 
 /* VARIABLES */

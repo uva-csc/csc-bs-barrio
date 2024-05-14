@@ -214,7 +214,8 @@ main#content {
 .captioned-image {
   .field--name-field-image {
     max-width: 90%;
-    margin: 1rem auto 0.75rem;
+    /*margin: 1rem auto 0.75rem;*/
+    padding-bottom: 1.5rem;
 
     img {
       filter: $img-shadow;
@@ -225,7 +226,8 @@ main#content {
     max-width: 90%;
     font-size: 0.95rem;
     font-style: italic;
-    text-align: center;
+    text-align: right;
+    line-height: 1.25;
   }
 }
 
