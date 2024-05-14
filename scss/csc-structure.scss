@@ -101,6 +101,10 @@ body {
 
         li a {
           color: white;
+
+          &:hover {
+            color: $uva-orange;
+          }
         }
       }
     } // End of Social Media links in navbar
@@ -134,6 +138,9 @@ body {
           text-transform: uppercase;
           white-space: nowrap;
           letter-spacing: 0.05rem;
+          &:hover {
+            color: $uva-orange;
+          }
         }
       }
     } // End of Give Button

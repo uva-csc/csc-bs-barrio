@@ -13302,6 +13302,9 @@ body {
 #header #navbar-top .block-social-media-links-block ul.social-media-links--platforms li a {
   color: white;
 }
+#header #navbar-top .block-social-media-links-block ul.social-media-links--platforms li a:hover {
+  color: #E57325;
+}
 #header #navbar-top div.csc-give-link {
   position: relative;
   max-height: 32px;
@@ -13331,6 +13334,9 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
   letter-spacing: 0.05rem;
+}
+#header #navbar-top div.csc-give-link .content .field--name-body p a:hover {
+  color: #E57325;
 }
 #header #navbar-top .block-search-form-block {
   padding: 0;
