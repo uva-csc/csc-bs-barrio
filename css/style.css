@@ -13421,6 +13421,10 @@ body {
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
+#header .navbar .nav-item a:hover, #header .navbar .menu-item a:hover {
+  color: #E57325;
+  opacity: 1;
+}
 #header .navbar .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   margin: -0.4rem 0 0 -4rem;
