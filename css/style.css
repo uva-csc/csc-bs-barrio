@@ -13779,6 +13779,7 @@ body.path-frontpage main#content .featured-event .view-header h3 span.text-orang
 body.path-frontpage main#content .featured-event .views-field-field-image img {
   width: 100%;
   height: unset;
+  filter: none;
 }
 body.path-frontpage main#content .featured-event .views-field-title {
   margin: 0 0 0.5rem 0;
