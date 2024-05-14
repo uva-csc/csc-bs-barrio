@@ -277,6 +277,10 @@ a.read-more, span.read-more {
     border-radius: 22.5px;
   }
 
+  &.btn--pill-tall {
+    border-radius: 50px;
+  }
+
   &.btn--circle {
     border-radius: 50%;
     border: none;

@@ -14441,6 +14441,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   border: none;
   border-radius: 0;
   padding: 0;
+  filter: none;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date {
   margin: 18px 8px 0;
@@ -14915,6 +14916,9 @@ a.read-more, span.read-more {
 }
 .csc-btn.btn--pill {
   border-radius: 22.5px;
+}
+.csc-btn.btn--pill-tall {
+  border-radius: 50px;
 }
 .csc-btn.btn--circle {
   border-radius: 50%;
