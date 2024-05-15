@@ -13447,6 +13447,9 @@ body {
 #header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item:last-child {
   border-bottom: none;
 }
+#header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item:active {
+  background: transparent;
+}
 #header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item a {
   color: #232D4B !important;
   /*backgroud-color: $off-white;*/
@@ -14006,7 +14009,7 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   line-height: 1.5rem;
 }
 body.node--type-landing-page main#content .field--name-field-hero-top {
-  margin-top: -1rem;
+  margin-top: -1.5rem;
 }
 body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-hero {
   margin-bottom: 1.5rem;
