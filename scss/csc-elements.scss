@@ -127,6 +127,7 @@ a {
 
   &:hover {
     border-bottom: none;
+    color: $uva-orange!important;
   }
 }
 
@@ -147,6 +148,13 @@ a[href^=mailto],
 
   &:hover {
     border-bottom: $csc-link;
+  }
+}
+
+.link-orange {
+  border-bottom: none!important;
+  &:hover {
+    color: $uva-orange!important;
   }
 }
 

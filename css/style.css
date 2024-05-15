@@ -14824,6 +14824,7 @@ a {
 }
 a:hover {
   border-bottom: none;
+  color: #E57325 !important;
 }
 
 a.plain,
@@ -14839,6 +14840,13 @@ a[href^=mailto],
 }
 .reversed a:hover, a.reversed:hover {
   border-bottom: 2px solid #E57325;
+}
+
+.link-orange {
+  border-bottom: none !important;
+}
+.link-orange:hover {
+  color: #E57325 !important;
 }
 
 #header .navbar a,
