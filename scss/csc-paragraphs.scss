@@ -211,7 +211,8 @@ main#content {
 }
 
 // Captioned Image Paragraph
-.captioned-image {
+.c-csc-captioned_image {
+  width: fit-content;
   .field--name-field-image {
     max-width: 90%;
     /*margin: 1rem auto 0.75rem;*/

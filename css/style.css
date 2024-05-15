@@ -14269,15 +14269,18 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
 
-.captioned-image .field--name-field-image {
+.c-csc-captioned_image {
+  width: fit-content;
+}
+.c-csc-captioned_image .field--name-field-image {
   max-width: 90%;
   /*margin: 1rem auto 0.75rem;*/
   padding-bottom: 1.5rem;
 }
-.captioned-image .field--name-field-image img {
+.c-csc-captioned_image .field--name-field-image img {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
-.captioned-image .field--name-field-caption {
+.c-csc-captioned_image .field--name-field-caption {
   max-width: 90%;
   font-size: 0.95rem;
   font-style: italic;
@@ -14835,10 +14838,12 @@ a[href^=mailto],
   border-bottom: none !important;
 }
 
-.reversed a, a.reversed {
+.reversed a, a.reversed,
+.link-reversed a, .link-reversed {
   border-bottom: none;
 }
-.reversed a:hover, a.reversed:hover {
+.reversed a:hover, a.reversed:hover,
+.link-reversed a:hover, .link-reversed:hover {
   border-bottom: 2px solid #E57325;
 }
 
