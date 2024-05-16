@@ -193,7 +193,7 @@ body {
 
   } // end of #navbar-top
 
-  // Bottom Navbar
+  // Bottom Navbar in Header at top
   #navbar-main {
     height: 35px;
     padding: 4px 0 0 0;
@@ -263,6 +263,7 @@ body {
         }
       }
     }
+
     .nav-item.dropdown:hover {
         .dropdown-menu {
           display: block;
@@ -281,10 +282,6 @@ body {
               border-bottom: none;
             }
 
-            &:active {
-              background: transparent;
-            }
-
             a {
               color: $uva-blue!important;
               /*backgroud-color: $off-white;*/
@@ -292,6 +289,27 @@ body {
               line-height: 1;
               &:hover {
                 color: $uva-orange !important;
+              }
+            }
+
+            &.active {
+              background-color: transparent!important;
+              a.active {
+                display: inline-block;
+                margin-left: -14px;
+                color: #00000060 !important;
+                cursor: default;
+                &:before {
+                  display: inline-block;
+                  margin-right: 0.255em;
+                  vertical-align: 0.255em;
+                  content: "";
+                  border-top: 0.3em solid;
+                  border-right: 0.3em solid transparent;
+                  border-bottom: 0;
+                  border-left: 0.3em solid transparent;
+                  transform: rotate(-90deg) translate(-2px);
+                }
               }
             }
           }
