@@ -251,6 +251,7 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
     }
   }
 
+  // Hero Image
   if (!empty($para) && $para->get('field_hero_image')) {
     $mid = $para->get('field_hero_image')[0]?->get('target_id')?->getValue();
     if ($mid) {
@@ -259,8 +260,27 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
       $file_url = FILE::load($fid)?->createFileUrl();
       if (!empty($file_url)) {
         $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
-        $variables['attributes']['style'][] = 'background-size: cover;';
       }
+    }
+
+    // Setting for background-size and backgroud-repeat
+    $size = $para->get('field_background_size');
+    if ($size) {
+      $size = $size->value;
+      if (str_contains($size, ':')) {
+        $variables['attributes']['style'][] = $size;
+      } else {
+        $variables['attributes']['style'][] = "background-size: $size; background-repeat: no-repeat;";
+      }
+    } else {
+      $variables['attributes']['style'][] = 'background-size: cover;';
+    }
+
+    // Setting for min-height
+    $minhgt = $para->get('field_min_height');
+    if ($minhgt) {
+      $minhgt = $minhgt->value;
+      $variables['attributes']['style'][] = "min-height: $minhgt";
     }
   }
 }
