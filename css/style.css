@@ -14333,7 +14333,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
 }
 
 .views-field.event-type {
-  padding-top: 0.3rem;
+  /* padding-top: 0.3rem; */
 }
 .views-field.event-type a {
   font-family: "ITC Franklin Gothic Med", sans-serif;
@@ -14341,10 +14341,6 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   text-transform: uppercase;
   color: #5a6172;
   letter-spacing: 1px;
-}
-
-.featured-event .views-field.event-type {
-  margin-top: 0.8rem;
 }
 
 .view.featured-event .views-field-title {
@@ -14397,7 +14393,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   max-width: 280px;
 }
 .view.event-col .views-row .views-field.event-type {
-  margin-top: 0.75rem;
+  /* margin-top: 0.75rem; */
 }
 .view.event-col .views-row .views-field.event-type a {
   font-size: 70%;
@@ -14541,6 +14537,13 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.view-events.featured-event {
+  max-width: 500px;
+  margin-left: 5rem;
+}
+.view-events.featured-event .views-field.event-type {
+  margin-top: 0.8rem;
+}
 
 /* VARIABLES */
 /** Bootstrap Overrides **/
@@ -14601,6 +14604,7 @@ main#content .c-csc-skewed_colored_header + .paragraph {
 .student-resources.layout .field--name-body ul li a {
   font-family: "ITC Franklin Gothic Std", sans-serif;
   font-size: 1.25rem;
+  font-weight: bold;
   letter-spacing: 0.05rem;
   border-bottom-width: 1px !important;
 }

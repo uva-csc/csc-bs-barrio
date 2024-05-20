@@ -22,7 +22,7 @@
 }
 
 .views-field.event-type  {
-  padding-top: 0.3rem;
+  /* padding-top: 0.3rem; */
   a {
     font-family: $font-frankgoth-med;
     font-size: 80%;
@@ -30,10 +30,6 @@
     color: $csc-dark-gray;
     letter-spacing: 1px;
   }
-}
-
-.featured-event .views-field.event-type {
-  margin-top: 0.8rem;
 }
 
 // Feature event on the events page
@@ -101,7 +97,7 @@
     }
 
     .views-field.event-type {
-      margin-top: 0.75rem;
+      /* margin-top: 0.75rem; */
       a {
         font-size: 70%;
         letter-spacing: unset;
@@ -287,4 +283,13 @@
       }
     } // End of .events-row .footer
   } // End of &.events-row
+
+  // Featured Event on Events Page
+  &.featured-event {
+    max-width: 500px;
+    margin-left: 5rem;
+    .views-field.event-type {
+      margin-top: 0.8rem;
+    }
+  }
 } // End of .view-events
