@@ -62,17 +62,12 @@
       list-style-type: none;
 
       li {
-        font-family: $font-frankgoth-med;
-        font-weight: bold;
-        font-size: 1.25rem;
-        letter-spacing: 0.05rem;
-        margin-bottom: 0.25rem;
+        margin-bottom: 1.25rem;
         a {
-          font-family: $font-frankgoth-med;
-          font-weight: bold;
+          font-family: $font-frankgoth-std;
           font-size: 1.25rem;
           letter-spacing: 0.05rem;
-          border-bottom-width: 2px!important;
+          border-bottom-width: 1px!important;
         }
       }
     }

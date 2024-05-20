@@ -14596,18 +14596,13 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   list-style-type: none;
 }
 .student-resources.layout .field--name-body ul li {
-  font-family: "ITC Franklin Gothic Med", sans-serif;
-  font-weight: bold;
-  font-size: 1.25rem;
-  letter-spacing: 0.05rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 .student-resources.layout .field--name-body ul li a {
-  font-family: "ITC Franklin Gothic Med", sans-serif;
-  font-weight: bold;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
   font-size: 1.25rem;
   letter-spacing: 0.05rem;
-  border-bottom-width: 2px !important;
+  border-bottom-width: 1px !important;
 }
 
 .events-main .view-events .tax-term {
