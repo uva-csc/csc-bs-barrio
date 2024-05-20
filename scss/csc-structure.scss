@@ -517,7 +517,8 @@ div.layout--twocol-section--33-67 {
     }
 
     .field--name-field-teaser-image, .field--name-field-image {
-      padding-left: 20%;
+      display: flex;
+      justify-content: center;
       img {
         border: 2px solid #fcfcfc;
         border-top: none;

@@ -267,10 +267,12 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
     $size = $para->get('field_background_size');
     if ($size) {
       $size = $size->value;
-      if (str_contains($size, ':')) {
-        $variables['attributes']['style'][] = $size;
-      } else {
-        $variables['attributes']['style'][] = "background-size: $size; background-repeat: no-repeat;";
+      if (!empty($size)) {
+        if (str_contains($size, ':')) {
+          $variables['attributes']['style'][] = $size;
+        } else {
+          $variables['attributes']['style'][] = "background-size: $size; background-repeat: no-repeat;";
+        }
       }
     } else {
       $variables['attributes']['style'][] = 'background-size: cover;';

@@ -13636,7 +13636,8 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   border: none;
 }
 .features-1over2 > .layout__region .field--name-field-teaser-image, .features-1over2 > .layout__region .field--name-field-image {
-  padding-left: 20%;
+  display: flex;
+  justify-content: center;
 }
 .features-1over2 > .layout__region .field--name-field-teaser-image img, .features-1over2 > .layout__region .field--name-field-image img {
   border: 2px solid #fcfcfc;
