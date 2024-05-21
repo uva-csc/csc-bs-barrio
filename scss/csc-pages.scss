@@ -219,28 +219,5 @@
   }
 } // End of People pages
 
-// Basic Pages
-.node--type-page {
-
-  // First h2 is next to image so no top margin
-  h2:first-child {
-    margin-top: 0;
-  }
-
-  // Make sure large images fit in body of basic page
-  .block-field-blocknodepagebody img {
-    max-width: 60vw;
-    height: auto;
-    filter: $img-shadow;
-  }
-}  // End of Basic Pages
-
-// Location Pages
-.node--type-location {
-  .field--name-field-image {
-    float: right;
-    padding: 0 1rem 0.5rem;
-  }
-}
 
 /** End of Individual Page Styles **/

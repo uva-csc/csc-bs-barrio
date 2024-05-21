@@ -250,7 +250,40 @@ body.node--type-event {
   } // end of events layout region second
 } // End of Events Content Type
 
+// Basic Pages
+.node--type-page {
 
+  // First h2 is next to image so no top margin
+  h2:first-child {
+    margin-top: 0;
+  }
+
+  .block-field-blocknodepagefield-image {
+    float: left;
+    margin: 0 1rem 2rem 0;
+
+    img {
+      filter: $img-shadow;
+    }
+  }
+  // Make sure large images fit in body of basic page
+  .block-field-blocknodepagebody {
+    padding-top: 1rem;
+    img {
+      max-width: 60vw;
+      height: auto;
+      filter: $img-shadow;
+    }
+  }
+}  // End of Basic Pages
+
+// Location Pages
+.node--type-location {
+  .field--name-field-image {
+    float: right;
+    padding: 0 1rem 0.5rem;
+  }
+}
 
 
 // End of Content Type Styles
