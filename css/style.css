@@ -14251,7 +14251,7 @@ main#content .c-csc-skewed_colored_header {
   right: 0;
   bottom: 0;
   left: 0;
-  max-height: 250px;
+  /*max-height: 300px;*/
   z-index: -1;
 }
 main#content .c-csc-skewed_colored_header > div {
