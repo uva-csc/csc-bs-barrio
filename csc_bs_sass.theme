@@ -67,7 +67,8 @@ function csc_bs_sass_preprocess_page(&$variables) {
 
 function csc_bs_sass_preprocess_node(&$variables) {
   $node = $variables['node'];
-  if ($node->bundle() == 'event') {
+  $node_type = $node->bundle();
+  if ($node_type == 'event') {
     $date = $node->get('field_date');
     $vals = $date->getValue();
     foreach($vals as $n => $val) {
@@ -81,7 +82,7 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $vals[$n] = $val;
     }
     $date->setValue($vals);
-  } else if ($node->bundle() == 'location') {
+  } else if ($node_type == 'location') {
     $short_title = $node->get('field_short_title')->getValue();
     if (empty($short_title)) {
       $title = $node->label();
@@ -90,6 +91,17 @@ function csc_bs_sass_preprocess_node(&$variables) {
         'format' => 'basic_html',
       ));
       $node->get('field_short_title')->setValue($short_title);
+    }
+  } else if (in_array($node_type, array('page_full_width', 'page', 'landing_page')) && in_array($variables['view_mode'], array('teaser', 'alt_teaser'))) {
+    if (empty($variables['title_attributes']['class'])) {
+      $variables['title_attributes']['class'] =  array('text-center');
+    } else {
+      $variables['title_attributes']['class'] = array_merge($variables['title_attributes']['class'], array('text-center'));
+    }
+    if (empty($variables['content_attributes']['class'])) {
+      $variables['content_attributes']['class'] =  array('img-center', 'img-link');
+    } else {
+      $variables['content_attributes']['class'] = array_merge($variables['content_attributes']['class'], array('img-center', 'img-link'));
     }
   }
 }

@@ -13702,6 +13702,10 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.node--view-mode-teaser {
+  border: none;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Home Page Styles ***/
@@ -15109,6 +15113,15 @@ a.read-more, span.read-more {
   border-bottom: 1px solid #888;
   border-radius: 15px;
    */
+}
+
+.img-center {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.img-link a {
+  border: none;
 }
 
 .field--name-field-teaser-image,

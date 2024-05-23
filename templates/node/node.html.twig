@@ -72,6 +72,12 @@
     'clearfix',
   ]
 %}
+{%
+  set content_classes = [
+    'node__content',
+    'clearfix'
+  ]
+%}
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
@@ -93,7 +99,7 @@
       </div>
     {% endif %}
   </header>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+  <div{{ content_attributes.addClass(content_classes) }}>
     {{ content }}
   </div>
 </article>

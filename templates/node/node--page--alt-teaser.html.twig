@@ -68,13 +68,21 @@
  * @ingroup themeable
  */
 #}
+
+{% set teaser_alt_title =  content.field_alt_teaser_title %}
 {% set teaser_image =  content.field_teaser_image|render|trim %}
 
 <div{{ attributes.addClass(content.field_class_attribute.value) }}>
-  <h2{{ title_attributes }}>
-    <a href="{{ url }}">{{ content.field_alt_teaser_title }}</a>
+  <h2{{ title_attributes.addClass('text-center') }}>
+    <a href="{{ url }}" class="reversed">
+      {% if teaser_alt_title|render|trim|length %}
+        {{ teaser_alt_title }}
+      {% else %}
+        {{ label }}
+      {% endif %}
+    </a>
   </h2>
-  <div{{ content_attributes }}>
+  <div{{ content_attributes.addClass(content_classes) }}>
     {% if teaser_image|striptags is not empty %}
       {{ content.field_teaser_image }}
     {% else %}
