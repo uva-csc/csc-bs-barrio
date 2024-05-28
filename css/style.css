@@ -13196,12 +13196,16 @@ textarea.form-control-lg {
   background-color: #232D4B;
 }
 
-.bg-orange {
-  background-color: #E57325;
-}
-
 .bg-lt-blue {
   background-color: #009fdf;
+}
+
+.bg-grey-blue {
+  background-color: #434b64;
+}
+
+.bg-orange {
+  background-color: #E57325;
 }
 
 .bg-white {
@@ -14164,6 +14168,26 @@ body.node--type-event .layout__region.layout__region--second .wrapper article.no
 .node--type-location .field--name-field-image {
   float: right;
   padding: 0 1rem 0.5rem;
+}
+
+.node--type-people article header.people {
+  height: 280px !important;
+  padding: 80px 60px 0px;
+  background-color: #434b64;
+}
+.node--type-people article header.people .wrapper {
+  display: flex;
+  gap: 35px;
+}
+.node--type-people article header.people .wrapper h2, .node--type-people article header.people .wrapper .h2 {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.node--type-people article .person--bio {
+  width: 650px;
+  margin-left: 680px;
+  margin-top: 30px;
 }
 
 /* VARIABLES */
