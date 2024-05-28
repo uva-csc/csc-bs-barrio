@@ -15125,6 +15125,7 @@ a.read-more, span.read-more {
 }
 
 .field--name-field-teaser-image,
+.field--name-field-image,
 .views-field-field-teaser-image {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
