@@ -159,6 +159,13 @@ a[href^=mailto],
   }
 }
 
+.link-underline {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 #header .navbar,
 .path-webform,
 .view.events-row {
@@ -532,7 +539,19 @@ div.geolocation-map-wrapper {
           font-weight: bold;
           margin: 0 0 0.5rem;
         }
-      }
+
+        .field--name-field-job-title {
+
+        }
+
+        .field--name-field-csc-role {
+          margin: 0 0 0.25rem;
+
+          &:first-child {
+            font-weight: bold;
+          }
+        }
+      } // End of .card-text
     }
   }
 }

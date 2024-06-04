@@ -194,30 +194,74 @@
   } // End of events right column
 } // End of Events Main Page
 
-// People Pages
-.node--type-people {
-  #main.container { margin-top: 0; }
-
-  h1.title {
-    background: $csc-gray;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 20px;
-    color: $uva-blue;
-    font-size: 2.5rem;
-    font-family: $font-frankgoth-hvy;
-    text-align: center;
+// People View Page
+.page-view-people { // the body class
+  .sidebar_first {
+    width: 25%;
   }
+}
 
-  .field--name-field-image {
-    float: left;
-    padding: 0 1rem 0.5rem 0;
-  }
+.view.view-people {  // the main class for the view
+  .view-header {
+    h2 {
+      margin: 0;
+      padding: 0 0 1rem 0;
+      width: 100%;
+      max-width: 790px;
+      border-bottom: 2px solid $csc-gray;
+      font-size: 1.25rem;
+      color: $uva-orange;
+      text-transform: uppercase;
+    }
 
-  .field--name-body {
-    padding-top: 1rem;
+    h3 {
+      margin: 1.5rem 0;
+    }
+  } // end of view header
+
+  .view-content.row {
+    margin: 1rem 0 0 0;
   }
-} // End of People pages
+}
+
+// Sidebar facet block for people view page
+.block-facet-blockroles {
+  .facets-widget-links {
+    padding: 1rem 2rem 0 0;
+
+    ul.item-list__links {
+      max-width: 270px;
+      background-color: #f7f7f7;
+      border-top: solid 4px $uva-blue;
+      padding: 0.25rem 0 0 0;
+
+      li {
+        list-style-type: none;
+        height: 60px;
+        padding: 0;
+
+        a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          padding: 1rem 0 0 1rem;
+          border: none;
+
+          &.is-active {
+            border-left: 4px solid $uva-orange;
+            background-color: #f1f1f1;
+            .js-facet-deactivate {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+ // End of People pages
 
 
 /** End of Individual Page Styles **/

@@ -121,19 +121,16 @@ function csc_bs_sass_preprocess_field(&$variables) {
 
 /* View Preprocessing */
 function csc_bs_sass_preprocess_views_view(&$variables) {
-  /*
   $view = $variables['view'];
-  if ($view->storage->id() == 'homepage_events') {
-    $display = $view->getDisplay();
-    $options = $display->options;
-    // kint($options);
-    if (!empty($options['css_class'])) {
-      if (str_contains($options['css_class'], 'featured-event')) {
-        kint($variables);
-      }
+  $viewId = $view->storage->id();
+  // Add chosen role facet as a secondary header on the people page
+  if ($viewId == 'people') {
+    $query_parameters = Drupal::request()->query->all();
+    if (!empty($query_parameters['f'])) {
+      $role = ucwords(str_replace(array('roles:', '_'), array('', ' '), $query_parameters['f'][0]));
+      $variables['header']['area']['#text'] .= "<h3>$role</h3>";
     }
   }
-  */
 }
 
 function csc_bs_sass_preprocess_views_view_field(&$variables) {

@@ -84,7 +84,7 @@
   set role, job = content.field_csc_role|render|striptags|lower, content.field_job_title|render|striptags|lower
 %}
 {%
-  set email, website = content.field_email['#items'].getValue()|first['value']|raw, content.field_url['#items'].getValue()|first['value']|raw
+  set email, website = content.field_email['#items'].getValue()|first['value']|raw, content.field_url|render|striptags
 %}
 
 <div class="card people">
@@ -100,12 +100,14 @@
       {% endif %}
       {{ content.field_csc_role }}
       {{ content.pronouns }}
-      <div class="field field-email-website">
-        <a className="link-orange" href="mailto:{{ email }}">E-mail</a>
-        {% if website %}
-          | <a href="{{ website }}">Website</a>
-        {% endif %}
+      <div class="field field-email">
+        <a class="link-orange link-underline" href="mailto:{{ email }}">{{ email }}</a>
       </div>
+      {% if website %}
+        <div class="field field-website">
+          <a class="link-orange link-underline" href="{{ website }}">{{ website }}</a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
