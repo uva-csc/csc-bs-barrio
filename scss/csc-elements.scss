@@ -484,6 +484,58 @@ div.geolocation-map-wrapper {
   }
 }
 
+/** Cards **/
+.view-people, .view-people-indexed {
+  .view-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: stretch;
+
+    // Unset values in _grid.scss (Should I be using Grid instead?) Or is looks like a barrio theme setting... @if $enable-grid-classes
+    & > * {
+      flex-shrink: unset;
+      width: unset;
+      max-width: unset;
+      padding-right: unset;
+      padding-left: unset;
+      margin-top: unset;
+    }
+  }
+
+  .card.people {
+    width: 250px;
+    height: 100%;
+    border: none;
+
+    .card-image {
+      border-bottom: solid $uva-orange 10px;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+      background-color: #f7f7f7;
+
+      .card-title {
+        margin: 0 0 0.75rem;
+        font-family: $font-frankgoth-hvy;
+        font-size: 1.5rem;
+        text-transform: capitalize!important;
+      }
+
+      .card-text {
+        .field {
+          font-size: 1rem;
+        }
+
+        .field--name-field-job-title {
+          font-weight: bold;
+          margin: 0 0 0.5rem;
+        }
+      }
+    }
+  }
+}
 
 // Common footer / bottom of page elements
 // Help curate block

@@ -15183,6 +15183,47 @@ div.geolocation-map-wrapper {
   background-color: #fdfdfd;
 }
 
+/** Cards **/
+.view-people .view-content, .view-people-indexed .view-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: stretch;
+}
+.view-people .view-content > *, .view-people-indexed .view-content > * {
+  flex-shrink: unset;
+  width: unset;
+  max-width: unset;
+  padding-right: unset;
+  padding-left: unset;
+  margin-top: unset;
+}
+.view-people .card.people, .view-people-indexed .card.people {
+  width: 250px;
+  height: 100%;
+  border: none;
+}
+.view-people .card.people .card-image, .view-people-indexed .card.people .card-image {
+  border-bottom: solid #E57325 10px;
+}
+.view-people .card.people .card-body, .view-people-indexed .card.people .card-body {
+  padding: 1.25rem;
+  background-color: #f7f7f7;
+}
+.view-people .card.people .card-body .card-title, .view-people-indexed .card.people .card-body .card-title {
+  margin: 0 0 0.75rem;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize !important;
+}
+.view-people .card.people .card-body .card-text .field, .view-people-indexed .card.people .card-body .card-text .field {
+  font-size: 1rem;
+}
+.view-people .card.people .card-body .card-text .field--name-field-job-title, .view-people-indexed .card.people .card-body .card-text .field--name-field-job-title {
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
 .block.help-curate {
   padding-top: 3rem;
 }

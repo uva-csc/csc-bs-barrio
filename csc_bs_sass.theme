@@ -10,34 +10,11 @@ use Drupal\Core\Url;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
-use Drupal\smart_date\SmartDateTrait;
 use Drupal\node\NodeInterface;
+use Drupal\facets\Result\ResultInterface;
 
 const POSITION_RELATIVE = "position: relative;";
 
-/**
- * Implements hook_form_system_theme_settings_alter() for settings form.
- *
- * Replace Barrio setting options with subtheme ones.
- */
-function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
-    'bg-primary' => t('Primary'),
-    'bg-secondary' => t('Secondary'),
-    'bg-light' => t('Light'),
-    'bg-dark' => t('Dark'),
-    'bg-white' => t('White'),
-    'bg-transparent' => t('Transparent'),
-  );
-  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
-    'bg-primary' => t('Primary'),
-    'bg-secondary' => t('Secondary'),
-    'bg-light' => t('Light'),
-    'bg-dark' => t('Dark'),
-    'bg-white' => t('White'),
-    'bg-transparent' => t('Transparent'),
-  );
-}
 
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
@@ -68,6 +45,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
 function csc_bs_sass_preprocess_node(&$variables) {
   $node = $variables['node'];
   $node_type = $node->bundle();
+  // EVENTS
   if ($node_type == 'event') {
     $date = $node->get('field_date');
     $vals = $date->getValue();
@@ -82,16 +60,29 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $vals[$n] = $val;
     }
     $date->setValue($vals);
+
+  // LOCATIONS
   } else if ($node_type == 'location') {
     $short_title = $node->get('field_short_title')->getValue();
     if (empty($short_title)) {
       $title = $node->label();
-      $short_title = array(array(
-        'value' => $title,
-        'format' => 'basic_html',
-      ));
+      $short_title = [
+        [
+          'value' => $title,
+          'format' => 'basic_html',
+        ]
+      ];
       $node->get('field_short_title')->setValue($short_title);
     }
+  // PEOPLE
+  } else if ($node_type == 'people') {
+    $mid = $node->get('field_image')[0]?->get('target_id')?->getValue();
+    if (empty($mid)) {
+      $mid = theme_get_setting('default_profile_image');
+    }
+    $furl = midToUrl($mid, 'people_teaser');
+    $variables['image_url'] = $furl;
+  // Teasers for Common Pages
   } else if (in_array($node_type, array('page_full_width', 'page', 'landing_page')) && in_array($variables['view_mode'], array('teaser', 'alt_teaser'))) {
     if (empty($variables['title_attributes']['class'])) {
       $variables['title_attributes']['class'] =  array('text-center');
@@ -178,17 +169,35 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
   }
 }
 
+/** End of Views hooks */
 
-/*
+
 function csc_bs_sass_preprocess_block(&$variables) {
   $bid = $variables['elements']['#plugin_id'];
-  if ($bid == 'views_block:events-block_3') {
-    // $variables['attributes']['class'][] = 'thans-event-block';
-    // kint($variables);
-    //Drupal::logger('csc_bs_sass block maybe?!')->notice(json_encode($variables['elements'], JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT));
+  //csc_log($bid);
+  /*
+  if ($bid == 'facet_block:roles') {
+      csc_log(json_encode($variables['content']), 'notice', '_el_content');
+      foreach($variables['elements']['content'][0]['#items'] as &$facet) {
+        $label = $facet['#title']['#value'];
+        $new_label = str_replace('_', ' ', $label);
+        $facet['#title']['#value'] = ucwords($new_label);
+      }
   }
+  */
 }
-*/
+
+function csc_bs_sass_preprocess_facets_result_item(&$facet) {
+  // csc_log(json_encode([$variables['value'], array_keys($variables)]));
+  $label = $facet['value'];
+  $new_label = ucwords(str_replace('_', ' ', $label));
+  if (in_array($new_label, ['Intern', 'Contemplative Instructor'])) {
+    $new_label = $new_label . 's';
+  }
+  $facet['value'] = $new_label;
+  $facet['raw_value'] = $facet['value'];
+}
+
 
 /**
  * Implements custom classes for paragraphs with bundle name
@@ -382,4 +391,23 @@ function isDateAllDay($start_ts, $end_ts, $timezone = NULL) {
     return TRUE;
   }
   return FALSE;
+}
+
+function midToUrl($mid, $style=false) {
+  if (!empty($mid)) {
+    $fid = Media::load($mid)->get('field_media_image')[0]->get('target_id')
+      ->getValue();
+    if (!empty($fid)) {
+      $file = FILE::load($fid);
+      if ($file) {
+        if ($style) {
+          return ImageStyle::load($style)->buildUrl($file->getFileUri());
+        } else {
+          return FILE::load($fid)?->createFileUrl();
+        }
+      }
+    }
+  }
+
+  return false;
 }
