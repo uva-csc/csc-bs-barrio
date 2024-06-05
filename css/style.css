@@ -14203,7 +14203,7 @@ body.node--type-event .layout__region.layout__region--second .wrapper article.no
   text-align: center;
 }
 .node--type-people .field--name-field-image {
-  float: left;
+  margin: 0 2rem 0 8rem;
   padding: 0 1rem 0.5rem 0;
 }
 .node--type-people .field--name-body {
