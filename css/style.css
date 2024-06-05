@@ -14142,7 +14142,115 @@ body.node--type-event .layout__region.layout__region--second .wrapper .field--na
   font-weight: bold;
   margin-bottom: 1rem;
 }
-body.node--type-event .layout__region.layout__region--second .wrapper article.node--type-location h2.node__title, body.node--type-event .layout__region.layout__region--second .wrapper article.node--type-location .node__title.h2, body.node--type-event .layout__region.layout__region--second .wrapper article.node--type-location .country {
+body.node--type-event .layout__region.layout__region--second .wrapper article.node--type-location .country {
+  display: none;
+}
+
+body.node--type-class .bc-inline.layout.layout--onecol {
+  margin-left: -10rem;
+}
+body.node--type-class article.node--type-class {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body.node--type-class div.event-content.layout--twocol-section {
+  gap: 75px;
+}
+body.node--type-class .layout__region.layout__region--first {
+  max-width: 800px;
+  padding-right: 5rem;
+}
+body.node--type-class .layout__region.layout__region--first ol.breadcrumb {
+  margin-top: -1rem;
+  margin-left: -8rem;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-tags {
+  text-align: right;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-tags ul, body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-tags li {
+  margin: 0;
+  padding: 0;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-tags li {
+  list-style-type: none;
+  text-align: right;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-tags li a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 90%;
+  text-transform: uppercase;
+  border: none;
+  color: #5a6172;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-class-type .field--name-field-class-type {
+  padding-top: 0.5rem;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-class-type .field--name-field-class-type a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #5a6172;
+  letter-spacing: 1px;
+  border: none;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-class-type .field--name-field-class-type a:hover {
+  border-bottom: 2px solid #E57325;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclasstitle {
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: thin solid grey;
+}
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclasstitle span {
+  font-size: 3rem;
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  line-height: 1.03846;
+  letter-spacing: -0.02885em;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-image {
+  padding: 0.5rem 0 1.75rem;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-image img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(8px 10px 3px #00000095);
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-contact-name {
+  width: fit-content;
+  float: left;
+  padding-right: 0.5rem;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-contact-name .field__item:before {
+  content: "Instructor:";
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-contact-email .field__item {
+  text-decoration: underline;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-contact-email .field__item:before {
+  content: "(";
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-contact-email .field__item:after {
+  content: ")";
+}
+body.node--type-class .layout__region.layout__region--second .wrapper {
+  height: 430px;
+  width: 300px;
+  background-color: #eeeeee;
+  margin-top: 20px;
+  padding: 40px 50px;
+}
+body.node--type-class .layout__region.layout__region--second .wrapper .field__item, body.node--type-class .layout__region.layout__region--second .wrapper .field__item p.address {
+  font-family: "ITC Franklin Gothic Condensed", sans-serif;
+  text-align: center;
+}
+body.node--type-class .layout__region.layout__region--second .wrapper .field--name-field-date {
+  font-weight: bold;
+  margin: 0 -1rem 1rem;
+}
+body.node--type-class .layout__region.layout__region--second .wrapper article.node--type-location .country {
   display: none;
 }
 

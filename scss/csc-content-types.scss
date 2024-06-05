@@ -245,10 +245,138 @@ body.node--type-event {
     }
 
     article.node--type-location {
-      h2.node__title, .country { display: none; }
+      .country { display: none; }
     }
   } // end of events layout region second
 } // End of Events Content Type
+
+// Event Content Type Pages
+body.node--type-class {
+  // Breadcrumbs on event page
+  .bc-inline.layout.layout--onecol {
+    margin-left: -10rem;
+  }
+
+  article.node--type-class {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  div.event-content.layout--twocol-section {
+    gap: 75px;
+  }
+  .layout__region.layout__region--first {
+    max-width:800px;
+    padding-right: 5rem;
+
+    ol.breadcrumb {
+      margin-top: -1rem;
+      margin-left: -8rem;
+    }
+
+    .block-field-blocknodeclassfield-tags {
+      text-align: right;
+      ul, li { margin: 0; padding: 0;}
+      li {
+        list-style-type: none;
+
+        text-align: right;
+        a {
+          font-family: $font-frankgoth-med;
+          font-size: 90%;
+          text-transform: uppercase;
+          border: none;
+          color: $csc-dark-gray;
+        }
+      }
+    }
+    .block-field-blocknodeclassfield-class-type .field--name-field-class-type  {
+      padding-top: 0.5rem;
+      a {
+        font-family: $font-frankgoth-med;
+        font-size: 80%;
+        text-transform: uppercase;
+        color: $csc-dark-gray;
+        letter-spacing: 1px;
+        border: none;
+
+        &:hover {
+          border-bottom: $csc-link;
+        }
+      }
+    }
+
+    .block-field-blocknodeclasstitle {
+      margin-bottom: 1rem;
+      padding-bottom: 0.25rem;
+      border-bottom: thin solid grey;
+      span {
+        font-size: 3rem;
+        font-family: $font-frankgoth-med;
+        line-height: 1.03846;
+        letter-spacing: -0.02885em;
+      }
+    }
+
+    .field--name-field-image {
+      padding: 0.5rem 0 1.75rem;
+      img {
+        width: 100%;
+        height: auto;
+        filter: $img-shadow;
+      }
+    }
+
+
+    .field--name-field-contact-name {
+      width: fit-content;
+      float: left;
+      padding-right: 0.5rem;
+
+      .field__item:before {
+        content: "Instructor:";
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .field--name-field-contact-email {
+      .field__item {
+        text-decoration: underline;
+      }
+      .field__item:before {
+        content: '(';
+      }
+      .field__item:after {
+        content: ')';
+      }
+    }
+
+  } // end of class layout region first
+
+  // Side bar on events
+  .layout__region.layout__region--second .wrapper {
+    height: 430px;
+    width: 300px;
+    background-color: $csc-lt-gray;
+    margin-top: 20px;
+    padding: 40px 50px;
+
+    .field__item, .field__item p.address {
+      font-family: $font-frankgoth-cd;
+      text-align: center;
+    }
+
+    .field--name-field-date {
+      font-weight: bold;
+      margin: 0 -1rem 1rem;
+    }
+
+    article.node--type-location {
+      .country { display: none; }
+    }
+  } // end of class layout region second
+} // End of Class Content Type
 
 // Basic Pages
 .node--type-page {
