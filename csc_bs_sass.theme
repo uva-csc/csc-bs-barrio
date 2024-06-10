@@ -128,6 +128,9 @@ function csc_bs_sass_preprocess_views_view(&$variables) {
     $query_parameters = Drupal::request()->query->all();
     if (!empty($query_parameters['f'])) {
       $role = ucwords(str_replace(array('roles:', '_'), array('', ' '), $query_parameters['f'][0]));
+      if (in_array(strtolower($role), ['contemplative instructor', 'intern'])) {
+        $role .= 's';
+      }
       $variables['header']['area']['#text'] .= "<h3>$role</h3>";
     }
   }
