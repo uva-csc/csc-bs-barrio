@@ -1,0 +1,33 @@
+{%
+  set rule = rule_text.rule
+%}
+{%
+  set day, time, ruleprops = rule['#day'], rule['#time'], rule['#rule'].getAllProperties()
+%}
+{%
+  set start, times, interval = rule['#rule'].start.value|date('M j, Y'), rule['#limit'].arguments['@num'], rule['#repeat']
+%}
+{%
+  set enddt = 1
+%}
+<div class="recurring-output--wrapper">
+  <!-- 'rule_text' outputs the repeat rule as formatted by smart date -->
+  {{ dump(rule['#rule']) }}
+  <div class="text-orange">{{ rule_text }}</div>
+  {% if next_display %}
+  <div class="next_instance">
+    {{ next_display }}
+  </div>
+  {% endif %}
+  {% if rule_text %}
+  <div class="rule-text">Every {{ day }} at {{ time }}</div>
+  {% endif %}
+  {% if past_display %}
+  <details open="open">
+    <summary>{{ 'Recent'|t }}</summary>
+    <div class="details-wrapper">
+      {{ past_display }}
+    </div>
+  </details>
+  {% endif %}
+</div>

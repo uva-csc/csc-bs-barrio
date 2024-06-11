@@ -12,6 +12,7 @@ use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\node\NodeInterface;
 use Drupal\facets\Result\ResultInterface;
+use Drupal\smart_date_recur\SmartDateRecurManager;
 
 const POSITION_RELATIVE = "position: relative;";
 
@@ -94,29 +95,46 @@ function csc_bs_sass_preprocess_node(&$variables) {
     } else {
       $variables['content_attributes']['class'] = array_merge($variables['content_attributes']['class'], array('img-center', 'img-link'));
     }
+  // CLASSES
+    // Code would go here
   }
 }
 
 function csc_bs_sass_preprocess_field(&$variables) {
   // csc_log('vars in pp field: ' . json_encode(array_keys($variables)));
   $fld_name = $variables['field_name'];
+  $el = $variables['element'];
+  $node = $el['#object'];
+  $ctype = $node->bundle();
+
   if ($fld_name == 'field_date') {
-    $el = $variables['element'];
-    // TODO: need to account for multiple dates, event with many different occurrences? If that uses multiple items.
-    $dt = $el['#items'][0]->getValue();
-    if(array_key_exists('allday', $dt)) {
-      $variables['is_allday'] = $dt['allday'];
-    }
-    if (array_key_exists( 'month', $dt)) {
-      $variables['csc_month'] = $dt['month'];
-    }
-    if (array_key_exists('day', $dt)) {
-      $variables['csc_day'] = $dt['day'];
-    }
-    if (array_key_exists('full', $dt)) {
-      $variables['csc_full'] = $dt['full'];
+    if ($ctype == 'event') {
+      // TODO: need to account for multiple dates, event with many different occurrences? If that uses multiple items.
+      // TODO: This may not be necessary anymore
+      $dt = $el['#items'][0]->getValue();
+      if (array_key_exists('allday', $dt)) {
+        $variables['is_allday'] = $dt['allday'];
+      }
+      if (array_key_exists('month', $dt)) {
+        $variables['csc_month'] = $dt['month'];
+      }
+      if (array_key_exists('day', $dt)) {
+        $variables['csc_day'] = $dt['day'];
+      }
+      if (array_key_exists('full', $dt)) {
+        $variables['csc_full'] = $dt['full'];
+      }
+    } if ($ctype == 'class') {
+      // kint("It's a class!");
+      $dtval = $el['#items'][0]->getValue();
+      // $manager = SmartDateRecurManager()->getStorage('smart_date_rule')->load($did);
+      // kint($dtval);
     }
   }
+}
+
+function csc_bs_sass_preprocess_field__field_date(&$variables) {
+  csc_log('in field date preprocess: ' . implode(',', array_keys($variables)));
 }
 
 /* View Preprocessing */

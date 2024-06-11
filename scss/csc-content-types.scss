@@ -250,7 +250,7 @@ body.node--type-event {
   } // end of events layout region second
 } // End of Events Content Type
 
-// Event Content Type Pages
+// Class Content Type Pages
 body.node--type-class {
   // Breadcrumbs on event page
   .bc-inline.layout.layout--onecol {
@@ -317,15 +317,13 @@ body.node--type-class {
       }
     }
 
-    .field--name-field-image {
-      padding: 0.5rem 0 1.75rem;
+    .block-field-blocknodeclassfield-image {
+      float: right;
+      margin: 0 0 1rem 1rem;
       img {
-        width: 100%;
-        height: auto;
         filter: $img-shadow;
       }
     }
-
 
     .field--name-field-contact-name {
       width: fit-content;
@@ -354,7 +352,7 @@ body.node--type-class {
 
   } // end of class layout region first
 
-  // Side bar on events
+  // Side bar on events and classes
   .layout__region.layout__region--second .wrapper {
     height: 430px;
     width: 300px;

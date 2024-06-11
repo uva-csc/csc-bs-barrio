@@ -14207,12 +14207,11 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
   line-height: 1.03846;
   letter-spacing: -0.02885em;
 }
-body.node--type-class .layout__region.layout__region--first .field--name-field-image {
-  padding: 0.5rem 0 1.75rem;
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-image {
+  float: right;
+  margin: 0 0 1rem 1rem;
 }
-body.node--type-class .layout__region.layout__region--first .field--name-field-image img {
-  width: 100%;
-  height: auto;
+body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-image img {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
 body.node--type-class .layout__region.layout__region--first .field--name-field-contact-name {
