@@ -327,7 +327,6 @@ body.node--type-class {
 
     .field--name-field-contact-name {
       width: fit-content;
-      float: left;
       padding-right: 0.5rem;
 
       .field__item:before {
@@ -335,6 +334,19 @@ body.node--type-class {
         display: inline-block;
         font-weight: bold;
         margin-right: 0.5rem;
+      }
+    }
+
+    .field--name-field-class-credits {
+      & > div {
+        display: inline-block;
+      }
+      .field__label {
+        font-weight: bold;
+        &:after {
+          content: ': ';
+          padding-right: 4px;
+        }
       }
     }
 

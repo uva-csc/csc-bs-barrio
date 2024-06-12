@@ -14216,7 +14216,6 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
 }
 body.node--type-class .layout__region.layout__region--first .field--name-field-contact-name {
   width: fit-content;
-  float: left;
   padding-right: 0.5rem;
 }
 body.node--type-class .layout__region.layout__region--first .field--name-field-contact-name .field__item:before {
@@ -14224,6 +14223,16 @@ body.node--type-class .layout__region.layout__region--first .field--name-field-c
   display: inline-block;
   font-weight: bold;
   margin-right: 0.5rem;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-class-credits > div {
+  display: inline-block;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-class-credits .field__label {
+  font-weight: bold;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-class-credits .field__label:after {
+  content: ": ";
+  padding-right: 4px;
 }
 body.node--type-class .layout__region.layout__region--first .field--name-field-contact-email .field__item {
   text-decoration: underline;
