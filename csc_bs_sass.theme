@@ -131,6 +131,7 @@ function csc_bs_sass_preprocess_field(&$variables) {
       $nodedate = $node->get('field_date'); // The Date field in the node
       $field_values = $nodedate->getValue(); // List of values for each date in recurring dates
       if(!empty($field_values)) {
+        $tba = $node->get('field_time_tba')->value * 1;
         $duration = $field_values[0]['duration'] * 1 / 10; // Number of repetitions 150 == 15 weeks. (Why the extra 0?)
         $start_ts = $nodedate->value;  // Timestamp of first date;
         $rule = $variables['items'][0]['content']['#rule_text']['rule'];
@@ -142,8 +143,8 @@ function csc_bs_sass_preprocess_field(&$variables) {
           if ($variables['interval'] == 'Weekly') {
             $end_dt->modify("+$duration weeks");
           }
-          $variables['dayoweek'] = (!empty($rule['#days_array'])) ? implode(', ', $rule['#days_array']) : $rule['#days'];
-          $variables['time'] = $rule['#time'];
+          $variables['dayoweek'] = (!empty($rule['#days_array'])) ? implode(', ', $rule['#days_array']) : $rule['#day'];
+          $variables['time'] = ($tba == 1) ? "Time TBA" : $$rule['#time'];
           $variables['start_date'] = date('D M j, Y');
           $variables['end_date'] = $end_dt->format('D M j, Y');
         } catch (Exception $e) {
