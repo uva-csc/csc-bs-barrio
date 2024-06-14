@@ -128,6 +128,7 @@ function csc_bs_sass_preprocess_field(&$variables) {
     } if ($ctype == 'class') {
       // kint("It's a class!");
       // $dtval = $el['#items'][0]->getValue();
+      $class_dt_format = 'D M j, Y';
       $nodedate = $node->get('field_date'); // The Date field in the node
       $field_values = $nodedate->getValue(); // List of values for each date in recurring dates
       if(!empty($field_values)) {
@@ -135,19 +136,18 @@ function csc_bs_sass_preprocess_field(&$variables) {
         $duration = $field_values[0]['duration'] * 1 / 10; // Number of repetitions 150 == 15 weeks. (Why the extra 0?)
         $start_ts = $nodedate->value;  // Timestamp of first date;
         $rule = $variables['items'][0]['content']['#rule_text']['rule'];
-        // kint($rule);
         try {
           $variables['limit'] = $rule['#limit']->render();
           $variables['interval'] = $rule['#repeat'];
-          $end_dt = new DateTime(date('Y/m/d', $start_ts));
+          $end_dt = new DateTime(date('Y/m/d', $start_ts), new DateTimeZone('UTC'));
           // TODO: need to broaden update
           if ($variables['interval'] == 'Weekly') {
             $end_dt->modify("+$duration weeks");
           }
           $variables['dayoweek'] = (!empty($rule['#days_array'])) ? implode(', ', $rule['#days_array']) : $rule['#day'];
-          $variables['time'] = ($tba == 1) ? "Time TBA" : $$rule['#time'];
-          $variables['start_date'] = date('D M j, Y', $start_ts);
-          $variables['end_date'] = (str_contains($variables['limit'], 'until')) ? str_replace('until ', '', $variables['limit'])  : $end_dt->format('D M j, Y');
+          $variables['time'] = ($tba == 1) ? "Time TBA" : $rule['#time'];
+          $variables['start_date'] =  date($class_dt_format, $start_ts); // Start display will adjust to first occurrence of class (but end does not)
+          $variables['end_date'] = (str_contains($variables['limit'], 'until')) ? str_replace('until ', '', $variables['limit'])  : $end_dt->format($class_dt_format);
         } catch (Exception $e) {
           csc_log("problem creating end date: " . $e);
         }
