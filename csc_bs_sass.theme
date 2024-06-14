@@ -137,7 +137,7 @@ function csc_bs_sass_preprocess_field(&$variables) {
         $start_ts = $nodedate->value;  // Timestamp of first date;
         $rule = $variables['items'][0]['content']['#rule_text']['rule'];
         try {
-          $variables['limit'] = $rule['#limit']->render();
+          $variables['limit'] = (is_object($rule['#limit'])) ? $rule['#limit']->render() : '';
           $variables['interval'] = $rule['#repeat'];
           $end_dt = new DateTime(date('Y/m/d', $start_ts), new DateTimeZone('UTC'));
           // TODO: need to broaden update
