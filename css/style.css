@@ -14577,10 +14577,10 @@ main#content .c-csc-skewed_colored_header + .paragraph {
   display: flex;
 }
 .view.event-col .views-row > div:first-child {
-  margin: 20px;
+  margin: 30px;
 }
 .view.event-col .views-row > div:nth-child(2) {
-  margin: 20px 0 0 0;
+  margin: 30px 0 0 0;
 }
 .view.event-col .views-row .views-field-field-image {
   flex-shrink: 0;
@@ -15330,6 +15330,10 @@ a.read-more, span.read-more {
 .field--name-field-image,
 .views-field-field-teaser-image {
   filter: drop-shadow(8px 10px 3px #00000095);
+}
+
+.img-no-shadow img {
+  filter: none !important;
 }
 
 /** Maps **/

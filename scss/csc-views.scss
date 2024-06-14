@@ -80,15 +80,17 @@
     }
   }
 
+  $event-row-gap: 30px;
+
   .views-row {
     display: flex;
 
     &>div:first-child {
-      margin: 20px;
+      margin: $event-row-gap;
     }
 
     &>div:nth-child(2) {
-      margin: 20px 0 0 0;
+      margin: $event-row-gap 0 0 0;
     }
 
     .views-field-field-image {
