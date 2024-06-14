@@ -436,7 +436,7 @@ body.node--type-class {
       margin: 1rem auto !important;
 
       ol.breadcrumb {
-        margin-left: 75px;
+        margin-left: 165px; // was 75px; for 300x400
 
         li.breadcrumb-item * {
           color: white !important;
