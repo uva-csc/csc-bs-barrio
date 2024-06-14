@@ -14316,10 +14316,16 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   font-size: 3rem;
   font-weight: bold;
 }
-.node--type-people .image-bio .field--name-field-description {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-description {
   margin-top: 75px;
 }
-.node--type-people .image-bio .field--name-field-description * {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-description {
+  margin-top: 120px;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-description {
+  margin-top: 130px;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-description * {
   color: #232D4B;
 }
 

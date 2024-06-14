@@ -466,8 +466,17 @@ body.node--type-class {
       font-weight: bold;
     }
 
-    .field--name-field-description {
+    .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-description {
       margin-top: 75px;
+    }
+
+    .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-description {
+      margin-top: 120px;
+    }
+
+    .block-field-blocknodepeoplefield-description {
+      margin-top: 130px;
+
       * {
         color: $uva-blue;
       }
