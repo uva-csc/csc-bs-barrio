@@ -127,7 +127,7 @@ function csc_bs_sass_preprocess_field(&$variables) {
       }
     } if ($ctype == 'class') {
       // kint("It's a class!");
-      //$dtval = $el['#items'][0]->getValue();
+      // $dtval = $el['#items'][0]->getValue();
       $nodedate = $node->get('field_date'); // The Date field in the node
       $field_values = $nodedate->getValue(); // List of values for each date in recurring dates
       if(!empty($field_values)) {
@@ -137,6 +137,7 @@ function csc_bs_sass_preprocess_field(&$variables) {
         $rule = $variables['items'][0]['content']['#rule_text']['rule'];
         // kint($rule);
         try {
+          $variables['limit'] = $rule['#limit']->render();
           $variables['interval'] = $rule['#repeat'];
           $end_dt = new DateTime(date('Y/m/d', $start_ts));
           // TODO: need to broaden update
@@ -145,8 +146,8 @@ function csc_bs_sass_preprocess_field(&$variables) {
           }
           $variables['dayoweek'] = (!empty($rule['#days_array'])) ? implode(', ', $rule['#days_array']) : $rule['#day'];
           $variables['time'] = ($tba == 1) ? "Time TBA" : $$rule['#time'];
-          $variables['start_date'] = date('D M j, Y');
-          $variables['end_date'] = $end_dt->format('D M j, Y');
+          $variables['start_date'] = date('D M j, Y', $start_ts);
+          $variables['end_date'] = (str_contains($variables['limit'], 'until')) ? str_replace('until ', '', $variables['limit'])  : $end_dt->format('D M j, Y');
         } catch (Exception $e) {
           csc_log("problem creating end date: " . $e);
         }
