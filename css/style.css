@@ -13551,6 +13551,9 @@ footer.site-footer section.region-footer-first .footer-contact ul li {
   list-style-type: none;
   margin-bottom: 0.75rem;
 }
+footer.site-footer section.region-footer-first #block-csc-bs-sass-footer {
+  margin-left: 1rem;
+}
 footer.site-footer section.region-footer-first .footer-menu {
   padding-top: 1.5rem;
 }

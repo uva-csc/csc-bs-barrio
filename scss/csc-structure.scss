@@ -404,8 +404,12 @@ footer.site-footer {
       }
     }
 
+    #block-csc-bs-sass-footer {
+      margin-left: 1rem;
+    }
+
     .footer-menu {
-      padding-top: 1.5rem;
+      padding-top: 1.5rem;  // Is this still in effect? (ndg 06-14-24)
     }
 
     .media-links {
