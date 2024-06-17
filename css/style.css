@@ -13724,6 +13724,68 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Home Page Styles ***/
+body.path-frontpage main#content .c-csc-hero {
+  /*
+  .commons-hours {
+    position: absolute;
+    left: 15px;
+    top: 40px;
+    padding: 3rem 3rem 2rem 3rem;
+    color: $uva-blue;
+    width: fit-content;
+    text-align: center;
+
+    .text-formatted {
+      h2 {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+        padding: 0 0 0 0.5rem;
+      }
+
+      ul, li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-inline-start: 0;
+      }
+      ul {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+   */
+  /*
+  .home-info-overlay {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    width: fit-content;
+    width: 400px;
+    color: $uva-blue;
+    text-align: left;
+    font-size: 1rem;
+    padding: 2.25rem 1.5rem 0.5rem;
+
+
+    .text-formatted {
+      h2 {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0 0 0 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        width:99%;
+        text-align: center;
+      }
+    }
+  } */
+}
 body.path-frontpage main#content .c-csc-hero .field--name-field-text-overlay {
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -13754,56 +13816,8 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line
   color: #E57325;
   text-shadow: 1px 1px 2px #00000040;
 }
-body.path-frontpage main#content .c-csc-hero .commons-hours {
-  position: absolute;
-  left: 15px;
-  top: 40px;
-  /*background-color: #b2c0e3DF;
-  border: thin solid #99b1e3;*/
-  padding: 3rem 3rem 2rem 3rem;
-  color: #232D4B;
-  width: fit-content;
-  text-align: center;
-}
-body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted h2, body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted .h2 {
-  width: 100%;
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 0;
-  padding: 0 0 0 0.5rem;
-}
-body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted ul, body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-inline-start: 0;
-}
-body.path-frontpage main#content .c-csc-hero .commons-hours .text-formatted ul {
-  padding-left: 0.5rem;
-}
-body.path-frontpage main#content .c-csc-hero .home-info-overlay {
-  position: absolute;
-  right: 15px;
-  top: 40px;
-  width: fit-content;
-  width: 400px;
-  /*background-color: #b2c0e3DF;
-  border: thin solid #99b1e3;*/
-  color: #232D4B;
-  text-align: left;
-  font-size: 1rem;
-  padding: 2.25rem 1.5rem 0.5rem;
-}
-body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted h2, body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted .h2 {
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0 0 0 0.5rem;
-  font-size: 1.5rem;
-}
-body.path-frontpage main#content .c-csc-hero .home-info-overlay .text-formatted p {
-  width: 99%;
-  text-align: center;
+body.path-frontpage main#content .c-csc-text_row {
+  max-height: 190px;
 }
 body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 {
   min-height: 400px;
