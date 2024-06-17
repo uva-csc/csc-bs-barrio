@@ -13848,8 +13848,11 @@ body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .v
 body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_next:hover {
   cursor: pointer;
 }
+body.path-frontpage main#content .events-row .wrapper {
+  padding: 0 30px;
+}
 body.path-frontpage main#content .featured-event {
-  padding: 8rem 2rem 6rem 4rem;
+  padding: 8rem 0rem 6rem 4rem;
   color: white;
   max-width: 49vw;
 }
