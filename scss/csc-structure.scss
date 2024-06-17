@@ -61,6 +61,7 @@ body {
         }
       }
 
+      // Main Menu
       nav.menu--top-menu ul {
         margin-top: 6px;
         list-style-type: none;
@@ -93,7 +94,7 @@ body {
       }
     }
 
-    // Social Media links
+      // Social Media links
     .block-social-media-links-block {
 
       ul.social-media-links--platforms {
@@ -599,4 +600,9 @@ div.layout--twocol-section--33-67 {
 
 .node--view-mode-teaser {
   border: none;
+}
+
+// Main menu home-link: Don't show on home page
+.path-frontpage .home-link {
+  display: none;
 }

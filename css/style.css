@@ -13157,6 +13157,10 @@ textarea.form-control-lg {
   text-shadow: 2px 2px 3px #00000040;
 }
 
+.text-shadow-dark {
+  text-shadow: 2px 2px 3px #00000080;
+}
+
 .text-blue {
   color: #232D4B !important;
 }
@@ -13711,6 +13715,10 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 
 .node--view-mode-teaser {
   border: none;
+}
+
+.path-frontpage .home-link {
+  display: none;
 }
 
 /* VARIABLES */
