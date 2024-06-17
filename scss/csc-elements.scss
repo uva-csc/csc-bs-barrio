@@ -560,6 +560,20 @@ div.geolocation-map-wrapper {
   }
 }
 
+// Tags
+div.type-tag a {
+  font-family: $font-frankgoth-med;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: $csc-dark-gray;
+  letter-spacing: 1px;
+  border: none;
+
+  &:hover {
+    border-bottom: $csc-link;
+  }
+}
+
 // Common footer / bottom of page elements
 // Help curate block
 .block.help-curate {

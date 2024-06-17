@@ -38,3 +38,10 @@ body.toolbar-fixed #header #navbar-main {
 .ui-dialog-position-side .text-muted {
   color: white!important;
 }
+
+// Layout Builder Form
+.layout-builder {
+  .blue-chevron > div.wrapper:first-child:before {
+    margin-top: 0px;
+  }
+}

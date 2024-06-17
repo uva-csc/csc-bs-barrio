@@ -111,8 +111,8 @@ body.path-frontpage main#content {
   // Commons Slideshow (Note, the block must have the machine name block_1)
   .block-views-blockhomepage-slideshow-block-1 {
     min-height: 400px;
-    /*border: thin solid $csc-lt-blue;*/
-    background-image: url("/themes/custom/csc_bs_sass/images/home/your-space-screen.png");
+    /*border: thin solid $csc-lt-blue;
+    background-image: url("/themes/custom/csc_bs_sass/images/home/your-space-screen.png");*/
     background-repeat: no-repeat;
     background-size: 30%;
     background-position-x: 18vw;
@@ -250,7 +250,7 @@ body.path-frontpage main#content {
     }  // end of h3
 
     .view-content {
-      margin-top: 5rem;
+      margin-top: 3rem;
       display: flex;
       flex-direction: column;
       gap: 80px;
@@ -262,8 +262,7 @@ body.path-frontpage main#content {
 
         .views-field-field-image {
           img {
-            max-width: unset;
-            filter: $img-shadow;
+            max-width: 280px;
           }
         }
 
@@ -272,7 +271,7 @@ body.path-frontpage main#content {
             margin: 0.5rem 0 0 0;
             padding: 0;
             font-family: $font-frankgoth-std;
-            font-size: 1.2rem;
+            font-size: 1.65rem;
             font-weight: bold;
             a {
               border-bottom: none;

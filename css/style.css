@@ -13821,8 +13821,8 @@ body.path-frontpage main#content .c-csc-text_row {
 }
 body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 {
   min-height: 400px;
-  /*border: thin solid $csc-lt-blue;*/
-  background-image: url("/themes/custom/csc_bs_sass/images/home/your-space-screen.png");
+  /*border: thin solid $csc-lt-blue;
+  background-image: url("/themes/custom/csc_bs_sass/images/home/your-space-screen.png");*/
   background-repeat: no-repeat;
   background-size: 30%;
   background-position-x: 18vw;
@@ -13930,7 +13930,7 @@ body.path-frontpage main#content .upcoming-events h3 span.text-white:last-child,
   font-style: italic;
 }
 body.path-frontpage main#content .upcoming-events .view-content {
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -13941,14 +13941,13 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row {
   gap: 30px;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-field-field-image img {
-  max-width: unset;
-  filter: drop-shadow(8px 10px 3px #00000095);
+  max-width: 280px;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 {
   margin: 0.5rem 0 0 0;
   padding: 0;
   font-family: "ITC Franklin Gothic Std", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.65rem;
   font-weight: bold;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3 a, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 a {
@@ -15441,6 +15440,18 @@ div.geolocation-map-wrapper {
   font-weight: bold;
 }
 
+div.type-tag a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #5a6172;
+  letter-spacing: 1px;
+  border: none;
+}
+div.type-tag a:hover {
+  border-bottom: 2px solid #E57325;
+}
+
 .block.help-curate {
   padding-top: 3rem;
 }
@@ -15624,6 +15635,10 @@ body.toolbar-fixed #header #navbar-main.node--type-landing-page {
 
 .ui-dialog-position-side .text-muted {
   color: white !important;
+}
+
+.layout-builder .blue-chevron > div.wrapper:first-child:before {
+  margin-top: 0px;
 }
 
 /* GENERAL STYLES
