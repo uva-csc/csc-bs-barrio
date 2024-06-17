@@ -13747,6 +13747,13 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
   font-size: 220%;
   letter-spacing: 0.03rem;
 }
+body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line {
+  font-family: "ITC Franklin Gothic Std";
+  font-size: 1.65rem;
+  font-weight: bold;
+  color: #E57325;
+  text-shadow: 1px 1px 2px #00000080;
+}
 body.path-frontpage main#content .c-csc-hero .commons-hours {
   position: absolute;
   left: 15px;

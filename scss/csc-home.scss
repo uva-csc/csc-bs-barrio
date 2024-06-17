@@ -31,6 +31,14 @@ body.path-frontpage main#content {
         font-size: 220%;
         letter-spacing: 0.03rem;
       }
+
+      p.home-tag-line {
+        font-family: 'ITC Franklin Gothic Std';
+        font-size: 1.65rem;
+        font-weight: bold;
+        color: $uva-orange;
+        text-shadow: 1px 1px 2px #00000080;
+      }
     }
 
     .commons-hours {
