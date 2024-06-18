@@ -51,7 +51,10 @@
       <h1 class="title-overlay">{{ title_overlay | raw }}</h1>
     {% endif %}
     {% block content %}
-      {{ content|without('field_hero_image') }}
+      {{ content|without('field_hero_image', 'field_caption') }}
     {% endblock %}
+  </div>
+  <div class="hero-caption">
+    {{ content.field_caption }}
   </div>
 {% endblock paragraph %}

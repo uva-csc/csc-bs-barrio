@@ -14084,6 +14084,15 @@ body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-her
   margin-bottom: 1.5rem;
   padding-bottom: 2rem;
 }
+body.node--type-landing-page main#content .field--name-field-hero-top .hero-caption {
+  width: fit-content;
+  position: absolute;
+  right: 10px;
+  margin: -1rem 1rem 0 0;
+  padding: 0;
+  color: #727272;
+  font-size: 90%;
+}
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody .content {
   width: 75%;
   margin-bottom: 4rem;
