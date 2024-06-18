@@ -13220,6 +13220,10 @@ textarea.form-control-lg {
   background-color: #222222;
 }
 
+.bg-trans-gray {
+  background-color: #22222260;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /***  General Structural Styles ***/
@@ -13483,6 +13487,11 @@ body {
   border-bottom: 0;
   border-left: 0.3em solid transparent;
   transform: rotate(-90deg) translate(-2px);
+}
+
+.container article .node__content div:not(.container) {
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 #title-div .content {
@@ -14069,7 +14078,7 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   line-height: 1.5rem;
 }
 body.node--type-landing-page main#content .field--name-field-hero-top {
-  margin-top: -1rem;
+  margin-top: -1.5rem;
 }
 body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-hero {
   margin-bottom: 1.5rem;
@@ -14377,7 +14386,7 @@ main#content .c-csc-hero .text-formatted {
   width: 100%;
 }
 main#content .c-csc-teaser_row .field--name-field-header h2, main#content .c-csc-teaser_row .field--name-field-header .h2 {
-  margin: 0px auto 12px;
+  margin: 0 auto 12px;
   width: fit-content;
   text-align: center;
   /*border-bottom: 4px solid $uva-orange;*/
@@ -14470,6 +14479,21 @@ main#content .c-csc-text_row.equal-4 .field--name-field-text-boxes {
 main#content .c-csc-text_row.equal-5 .field--name-field-text-boxes {
   grid-template-columns: repeat(5, 20%);
 }
+main#content .field--name-field-text-overlay .c-csc-text_box.title-banner {
+  background-color: #22222265;
+}
+main#content .field--name-field-text-overlay .c-csc-text_box.title-banner .field--name-field-text-box-text h2, main#content .field--name-field-text-overlay .c-csc-text_box.title-banner .field--name-field-text-box-text .h2 {
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+  padding: 20px 0 10px;
+  text-align: center;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  color: #fdfdfd;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
 main#content .c-csc-skewed_colored_header {
   position: absolute;
   top: 0;
@@ -14487,6 +14511,17 @@ main#content .c-csc-skewed_colored_header > div {
 main#content .c-csc-skewed_colored_header + .paragraph {
   max-width: 80vw;
   margin: inherit auto;
+}
+main#content .c-csc-image_text {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+main#content .c-csc-image_text.image-left {
+  grid-template-columns: 360px auto;
+}
+main#content .c-csc-image_text.image-right {
+  grid-template-columns: auto 360px;
 }
 
 /** Paragraphs: class for paragraphs with custom formatting (not structural) **/

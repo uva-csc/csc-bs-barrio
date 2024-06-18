@@ -17,22 +17,15 @@ use Drupal\smart_date\SmartDateOccurrence;
 
 const POSITION_RELATIVE = "position: relative;";
 
-
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
-
   // Node pages
   if (array_key_exists('node', $variables) && $variables['node'] instanceof NodeInterface) {
     $node = $variables['node'];
     $pg_type = $node->getType();
-
-    /*if ($pg_type == 'page') {
-      kint($variables);
-    }*/
-
     if ($node->hasField('field_class_attribute')) {
       $class = $node->get('field_class_attribute')->value;
-      // kint('vars', $variables);
+
       $variables['content_attributes']->addClass($class);
     }
     if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
@@ -324,24 +317,34 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
 
     // Setting for background-size and backgroud-repeat
     $size = $para->get('field_background_size');
+    $size_style = 'background-size: cover;';
     if ($size) {
       $size = $size->value;
       if (!empty($size)) {
         if (str_contains($size, ':')) {
-          $variables['attributes']['style'][] = $size;
+          $size_style = $size;
         } else {
-          $variables['attributes']['style'][] = "background-size: $size; background-repeat: no-repeat;";
+          $size_style =  "background-size: $size; background-repeat: no-repeat;";
         }
       }
-    } else {
-      $variables['attributes']['style'][] = 'background-size: cover;';
+    }
+    $variables['attributes']['style'][] = $size_style;
+
+    $position = $para->get('field_background_position');
+    if ($position) {
+      $position = $position->value;
+      if (!empty($position)) {
+        $variables['attributes']['style'][] = "background-position: $position;";
+      }
     }
 
     // Setting for min-height
     $minhgt = $para->get('field_min_height');
     if ($minhgt) {
       $minhgt = $minhgt->value;
-      $variables['attributes']['style'][] = "min-height: $minhgt";
+      if (!empty($minhgt)) {
+        $variables['attributes']['style'][] = "min-height: $minhgt";
+      }
     }
   }
 }
@@ -372,6 +375,11 @@ function csc_bs_sass_preprocess_paragraph__skewed_colored_header(&$variables) {
   $variables['height'] = $para->get('field_height')->value;
   $variables['angle'] = $para->get('field_skew_angle')->value;
   $variables['custom_color'] = $para->get('field_custom_color')->value;
+}
+
+function csc_bs_sass_preprocess_paragraph__image_text(&$variables) {
+  $para = $variables['paragraph'];
+  $variables['pos'] = $para->get('field_image_position')->value;
 }
 
 /** End of paragraphs **/

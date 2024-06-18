@@ -20,7 +20,7 @@ main#content {
   // Teaser row
   .c-csc-teaser_row  {
     .field--name-field-header h2 {
-      margin: 0px auto 12px;
+      margin: 0 auto 12px;
       width: fit-content;
       text-align: center;
       /*border-bottom: 4px solid $uva-orange;*/
@@ -153,6 +153,24 @@ main#content {
     }
   } // End of text-row paragraph
 
+  .field--name-field-text-overlay .c-csc-text_box {
+    &.title-banner {
+      background-color: #22222265;
+      .field--name-field-text-box-text h2 {
+        width: 100%;
+        margin: 1.5rem 0 0 0;
+        padding: 20px 0 10px;
+        text-align: center;
+        font-family: "ITC Franklin Gothic Hvy", sans-serif;
+        color: #fdfdfd;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+
   // Skewed color header paragraph
   .c-csc-skewed_colored_header {
     position: absolute;
@@ -175,7 +193,21 @@ main#content {
     }
   }
 
+  // Image-Text Paragraphs
+  .c-csc-image_text {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    &.image-left {
+      grid-template-columns: 360px auto;
+    }
+    &.image-right {
+      grid-template-columns: auto 360px;
+    }
+  }
 } // end of paragraph type styles
+
 
 
 /** Paragraphs: class for paragraphs with custom formatting (not structural) **/

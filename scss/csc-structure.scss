@@ -323,6 +323,12 @@ body {
 
 } // End #header
 
+// Containers, etc.
+.container article .node__content div:not(.container) {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
 // Title full width
 #title-div .content {
   background-color: $csc-gray;
