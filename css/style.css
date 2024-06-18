@@ -14427,6 +14427,9 @@ main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-fie
 main#content .c-csc-highlight_row {
   background-color: #232D4B;
 }
+main#content .c-csc-highlight_row.no-head .wrapper {
+  padding-top: 48px;
+}
 main#content .c-csc-highlight_row .wrapper {
   margin: 0 auto;
   max-width: 55vw;

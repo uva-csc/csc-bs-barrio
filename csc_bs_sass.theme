@@ -357,7 +357,6 @@ function csc_bs_sass_preprocess_paragraph__teaser_row(&$variables) {
   $variables['class'][] = 'container-fluid';
 }
 
-
 function csc_bs_sass_preprocess_paragraph__feature_separator(&$variables) {
   $para = $variables['paragraph'];
   $septype = $para->get('field_separator_type')->value;
@@ -380,6 +379,16 @@ function csc_bs_sass_preprocess_paragraph__skewed_colored_header(&$variables) {
 function csc_bs_sass_preprocess_paragraph__image_text(&$variables) {
   $para = $variables['paragraph'];
   $variables['pos'] = $para->get('field_image_position')->value;
+}
+
+function csc_bs_sass_preprocess_paragraph__highlight_row(&$variables) {
+  $para = $variables['paragraph'];
+  $head = $para->get('field_plain_header')->value;
+  if (empty($head)) {
+    $variables['attributes']['class'][] = 'no-head';
+  } else {
+    $variables['attributes']['class'][] = 'has-head';
+  }
 }
 
 /** End of paragraphs **/

@@ -59,6 +59,11 @@ main#content {
   // Highlight Rows
   .c-csc-highlight_row {
     background-color: $uva-blue;
+    &.no-head {
+      .wrapper {
+        padding-top: 48px;
+      }
+    }
 
     .wrapper {
       margin: 0 auto;
@@ -72,11 +77,10 @@ main#content {
         text-align: center;
         text-transform: uppercase;
       }
-
+      
       .field--name-field-content-reference {
         padding: 2rem;
         background-color: $csc-white-blue;
-
 
         h2 {
           width: 100%;
