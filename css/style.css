@@ -14448,9 +14448,10 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
 }
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference h2, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .h2 {
   width: 100%;
+  margin: 0;
   font-size: 250%;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
 }
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h3, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h3 {
   font-weight: bold;

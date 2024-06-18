@@ -77,16 +77,17 @@ main#content {
         text-align: center;
         text-transform: uppercase;
       }
-      
+
       .field--name-field-content-reference {
         padding: 2rem;
         background-color: $csc-white-blue;
 
         h2 {
           width: 100%;
+          margin: 0;
           font-size: 250%;
           font-weight: bold;
-          text-align: left;
+          text-align: center;
         }
 
         .node__content .text-formatted {
