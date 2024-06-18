@@ -14453,6 +14453,9 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
   font-weight: bold;
   text-align: center;
 }
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .field--name-field-highlight-box-content {
+  font-size: 1rem;
+}
 main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h3, main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted .h3 {
   font-weight: bold;
   font-size: 1.75rem;
