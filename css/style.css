@@ -13748,6 +13748,18 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   display: none;
 }
 
+.layout.alt-teasers {
+  margin: 0 8vw;
+}
+
+.layout__region--first .node--view-mode-alt-teaser {
+  padding-right: 2rem;
+}
+
+.layout__region--second .node--view-mode-alt-teaser {
+  padding-left: 2rem;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Home Page Styles ***/
@@ -14114,22 +14126,51 @@ body.node--type-landing-page main#content .field--name-field-hero-top .hero-capt
   color: #727272;
 }
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody .content {
-  width: 75%;
+  /* width: 75%; */
   margin-bottom: 4rem;
 }
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody p {
   font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
-/*
-body.node--type-page {
-  .field--name-field-image {
-    float: left;
-    margin: 0 1rem 0.25rem;
-    border: 2px solid #777;
-    padding: 5px;
-  }
-} */
+.node--type-page-full-width.node--view-mode-alt-teaser h3, .node--type-page-full-width.node--view-mode-alt-teaser .h3 {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 0 0.25rem;
+}
+.node--type-page-full-width.node--view-mode-alt-teaser .field--name-body.field--type-text-with-summary, .node--type-page-full-width.node--view-mode-alt-teaser p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.node--type-page h2:first-child, .node--type-page .h2:first-child {
+  margin-top: 0;
+}
+.node--type-page .block-field-blocknodepagefield-image {
+  float: left;
+  margin: 0 1rem 2rem 0;
+}
+.node--type-page .block-field-blocknodepagefield-image img {
+  filter: drop-shadow(8px 10px 3px #00000095);
+}
+.node--type-page .block-field-blocknodepagebody {
+  padding-top: 1rem;
+}
+.node--type-page .block-field-blocknodepagebody img {
+  max-width: 60vw;
+  height: auto;
+  filter: drop-shadow(8px 10px 3px #00000095);
+}
+.node--type-page.node--view-mode-alt-teaser h3, .node--type-page.node--view-mode-alt-teaser .h3 {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 0 0.25rem;
+}
+.node--type-page.node--view-mode-alt-teaser .field--name-body.field--type-text-with-summary, .node--type-page.node--view-mode-alt-teaser p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 body.node--type-event .bc-inline.layout.layout--onecol {
   margin-left: -10rem;
 }
@@ -14332,25 +14373,6 @@ body.node--type-class .layout__region.layout__region--second .wrapper .field--na
 }
 body.node--type-class .layout__region.layout__region--second .wrapper article.node--type-location .country {
   display: none;
-}
-
-.node--type-page h2:first-child, .node--type-page .h2:first-child {
-  margin-top: 0;
-}
-.node--type-page .block-field-blocknodepagefield-image {
-  float: left;
-  margin: 0 1rem 2rem 0;
-}
-.node--type-page .block-field-blocknodepagefield-image img {
-  filter: drop-shadow(8px 10px 3px #00000095);
-}
-.node--type-page .block-field-blocknodepagebody {
-  padding-top: 1rem;
-}
-.node--type-page .block-field-blocknodepagebody img {
-  max-width: 60vw;
-  height: auto;
-  filter: drop-shadow(8px 10px 3px #00000095);
 }
 
 .node--type-location .field--name-field-image {
@@ -15433,9 +15455,9 @@ a.read-more, span.read-more {
   border: none;
 }
 
-.field--name-field-teaser-image,
-.field--name-field-image,
-.views-field-field-teaser-image {
+.field--name-field-teaser-image img,
+.field--name-field-image img,
+.views-field-field-teaser-image img {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
 

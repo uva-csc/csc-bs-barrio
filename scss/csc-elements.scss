@@ -454,9 +454,9 @@ a.read-more, span.read-more {
   }
 }
 
-.field--name-field-teaser-image,
-.field--name-field-image,
-.views-field-field-teaser-image {
+.field--name-field-teaser-image img,
+.field--name-field-image img,
+.views-field-field-teaser-image img {
   filter: $img-shadow;
 }
 

@@ -612,3 +612,19 @@ div.layout--twocol-section--33-67 {
 .path-frontpage .home-link {
   display: none;
 }
+
+.layout.alt-teasers {
+  margin: 0 8vw;
+}
+
+.layout__region--first {
+  .node--view-mode-alt-teaser {
+    padding-right: 2rem;
+  }
+}
+
+.layout__region--second {
+  .node--view-mode-alt-teaser {
+    padding-left: 2rem;
+  }
+}

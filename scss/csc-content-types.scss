@@ -139,7 +139,7 @@ body.node--type-landing-page  main#content {
 
   .block-field-blocknodelanding-pagebody {
     .content {
-      width: 75%;
+      /* width: 75%; */
       margin-bottom: 4rem;
     }
     p {
@@ -148,18 +148,61 @@ body.node--type-landing-page  main#content {
   }
 } // End of Landing page styles
 
-// Basic Page Content Type
-/*
-body.node--type-page {
-  .field--name-field-image {
-    float: left;
-    margin: 0 1rem 0.25rem;
-    border: 2px solid #777;
-    padding: 5px;
-  }
-} */
-// End of basic page content type
+// Full Width Pages
+.node--type-page-full-width {
+  &.node--view-mode-alt-teaser {
+    h3 {
+      font-family: $font-frankgoth-std;
+      font-weight: bold;
+      padding: 0.5rem 0 0.25rem;
+    }
 
+    .field--name-body.field--type-text-with-summary, p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  }
+} // End of Full Width Pages
+
+
+// Basic Pages
+.node--type-page {
+
+  // First h2 is next to image so no top margin
+  h2:first-child {
+    margin-top: 0;
+  }
+
+  .block-field-blocknodepagefield-image {
+    float: left;
+    margin: 0 1rem 2rem 0;
+
+    img {
+      filter: $img-shadow;
+    }
+  }
+  // Make sure large images fit in body of basic page
+  .block-field-blocknodepagebody {
+    padding-top: 1rem;
+    img {
+      max-width: 60vw;
+      height: auto;
+      filter: $img-shadow;
+    }
+  }
+  // Basic Page Alt Teaser
+  &.node--view-mode-alt-teaser {
+    h3 {
+      font-family: $font-frankgoth-std;
+      font-weight: bold;
+      padding: 0.5rem 0 0.25rem;
+    }
+    .field--name-body.field--type-text-with-summary, p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  }
+}  // End of Basic Pages
 
 // Event Content Type Pages
 body.node--type-event {
@@ -401,32 +444,6 @@ body.node--type-class {
   } // end of class layout region second
 } // End of Class Content Type
 
-// Basic Pages
-.node--type-page {
-
-  // First h2 is next to image so no top margin
-  h2:first-child {
-    margin-top: 0;
-  }
-
-  .block-field-blocknodepagefield-image {
-    float: left;
-    margin: 0 1rem 2rem 0;
-
-    img {
-      filter: $img-shadow;
-    }
-  }
-  // Make sure large images fit in body of basic page
-  .block-field-blocknodepagebody {
-    padding-top: 1rem;
-    img {
-      max-width: 60vw;
-      height: auto;
-      filter: $img-shadow;
-    }
-  }
-}  // End of Basic Pages
 
 // Location Pages
 .node--type-location {
