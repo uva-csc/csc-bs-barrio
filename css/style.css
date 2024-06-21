@@ -14555,9 +14555,14 @@ main#content .c-csc-image_text {
 }
 main#content .c-csc-image_text.image-left {
   grid-template-columns: 550px auto;
+  gap: 100px;
 }
 main#content .c-csc-image_text.image-right {
   grid-template-columns: auto 550px;
+  gap: 100px;
+}
+main#content .c-csc-image_text p {
+  text-align: justify;
 }
 
 /** Paragraphs: class for paragraphs with custom formatting (not structural) **/

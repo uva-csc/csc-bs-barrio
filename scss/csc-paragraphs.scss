@@ -210,9 +210,15 @@ main#content {
 
     &.image-left {
       grid-template-columns: 550px auto;
+      gap: 100px;
     }
     &.image-right {
       grid-template-columns: auto 550px;
+      gap: 100px;
+    }
+
+    p {
+      text-align: justify;
     }
   }
 } // end of paragraph type styles
