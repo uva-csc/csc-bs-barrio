@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /**
  * @file
  * Global utilities.
@@ -52,6 +53,9 @@
 
       $(document).ready(() => {
         // nothing here yet. Use as template for other types of behaviors.
+        AOS.init({
+          duration: 1200,
+        });
       });
     }
   };

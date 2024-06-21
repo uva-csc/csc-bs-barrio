@@ -502,6 +502,7 @@ div.geolocation-map-wrapper {
     flex-direction: row;
     gap: 20px;
     align-items: stretch;
+    max-width: 800px;
 
     // Unset values in _grid.scss (Should I be using Grid instead?) Or is looks like a barrio theme setting... @if $enable-grid-classes
     & > * {
@@ -515,7 +516,7 @@ div.geolocation-map-wrapper {
   }
 
   .card.people {
-    width: 250px;
+    width: 250px;  // tried 175
     height: 100%;
     border: none;
 
@@ -530,13 +531,13 @@ div.geolocation-map-wrapper {
       .card-title {
         margin: 0 0 0.75rem;
         font-family: $font-frankgoth-hvy;
-        font-size: 1.5rem;
+        font-size: 1.5rem;  // tried 1.25
         text-transform: capitalize!important;
       }
 
       .card-text {
         .field {
-          font-size: 1rem;
+          font-size: 1rem;  // was tried 0.9
         }
 
         .field--name-field-job-title {

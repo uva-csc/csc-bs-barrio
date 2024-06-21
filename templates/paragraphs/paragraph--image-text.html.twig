@@ -48,7 +48,7 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} data-aos="fade-up">
     {% block content %}
       {% if pos == 'left' %}
         {{ content.field_image }}

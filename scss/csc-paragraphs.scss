@@ -209,10 +209,10 @@ main#content {
     margin-bottom: 2rem;
 
     &.image-left {
-      grid-template-columns: 360px auto;
+      grid-template-columns: 550px auto;
     }
     &.image-right {
-      grid-template-columns: auto 360px;
+      grid-template-columns: auto 550px;
     }
   }
 } // end of paragraph type styles

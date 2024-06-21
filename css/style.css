@@ -13542,7 +13542,7 @@ footer.site-footer a {
 }
 footer.site-footer section.region-footer-first {
   display: grid;
-  grid-template-columns: 20% 30% 26% 23%;
+  grid-template-columns: 22% 30% 26% 23%;
   grid-column-gap: 10px;
   grid-row-gap: 1rem;
 }
@@ -14554,10 +14554,10 @@ main#content .c-csc-image_text {
   margin-bottom: 2rem;
 }
 main#content .c-csc-image_text.image-left {
-  grid-template-columns: 360px auto;
+  grid-template-columns: 550px auto;
 }
 main#content .c-csc-image_text.image-right {
-  grid-template-columns: auto 360px;
+  grid-template-columns: auto 550px;
 }
 
 /** Paragraphs: class for paragraphs with custom formatting (not structural) **/
@@ -15473,6 +15473,7 @@ div.geolocation-map-wrapper {
   flex-direction: row;
   gap: 20px;
   align-items: stretch;
+  max-width: 800px;
 }
 .view-people .view-content > *, .view-people-indexed .view-content > * {
   flex-shrink: unset;
