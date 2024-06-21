@@ -13841,7 +13841,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line
   font-size: 1.65rem;
   font-weight: bold;
   color: #E57325;
-  text-shadow: 1px 1px 2px #00000040;
+  text-shadow: 2px 1px 2px #000000;
 }
 body.path-frontpage main#content .c-csc-text_row {
   max-height: 190px;
