@@ -138,3 +138,26 @@
   font-style: italic;
   src: url("../css/fonts/bodoni/BodoniStd-PosterItalic.otf") format("opentype");
 }
+
+// Libre Caslon
+
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Italic.ttf") format("truetype");
+}
