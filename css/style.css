@@ -14110,6 +14110,9 @@ body.node--type-landing-page main#content .field--name-field-hero-top .hero-capt
   font-size: 80%;
   font-family: "Libre Caslon Text", serif;
 }
+body.node--type-landing-page main#content .field--name-field-hero-top .hero-caption a {
+  color: #727272;
+}
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody .content {
   width: 75%;
   margin-bottom: 4rem;
