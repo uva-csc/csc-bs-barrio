@@ -190,6 +190,25 @@ body.node--type-landing-page  main#content {
       filter: $img-shadow;
     }
   }
+
+  // Basic Page Teaser
+  &.node--view-mode-teaser {
+    .field--name-field-image {
+      img {
+        max-width: 410px;
+      }
+    }
+
+    h3 {
+      font-family: $font-frankgoth-cd;
+      font-size: 24px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+    }
+
+  } // End Teaser
+
   // Basic Page Alt Teaser
   &.node--view-mode-alt-teaser {
     h3 {
@@ -201,7 +220,7 @@ body.node--type-landing-page  main#content {
       font-size: 1.1rem;
       line-height: 1.5;
     }
-  }
+  } // End Alt Teaser
 }  // End of Basic Pages
 
 // Event Content Type Pages

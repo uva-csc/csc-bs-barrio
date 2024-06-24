@@ -14161,6 +14161,16 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   height: auto;
   filter: drop-shadow(8px 10px 3px #00000095);
 }
+.node--type-page.node--view-mode-teaser .field--name-field-image img {
+  max-width: 410px;
+}
+.node--type-page.node--view-mode-teaser h3, .node--type-page.node--view-mode-teaser .h3 {
+  font-family: "ITC Franklin Gothic Condensed", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
 .node--type-page.node--view-mode-alt-teaser h3, .node--type-page.node--view-mode-alt-teaser .h3 {
   font-family: "ITC Franklin Gothic Std", sans-serif;
   font-weight: bold;
@@ -15143,7 +15153,7 @@ nav ol.breadcrumb li.breadcrumb-item i.bi {
 }
 
 .block-system-breadcrumb-block .content nav {
-  margin: 0 0 0 1.3rem;
+  margin: 0 0 0 0;
   width: fit-content;
 }
 

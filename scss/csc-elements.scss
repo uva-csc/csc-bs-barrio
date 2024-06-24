@@ -75,7 +75,7 @@ nav ol.breadcrumb {
 }
 
 .block-system-breadcrumb-block .content nav {
-  margin: 0 0 0 1.3rem;
+  margin: 0 0 0 0; // Had margin-left of 1.3rem.
   width: fit-content;
 }
 
