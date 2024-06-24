@@ -90,10 +90,13 @@
     {% else %}
       {{ content.field_teaser_image }}
     {% endif %}
-    {% if node.field_alt_teaser_title is empty %}
-      <h3>{{ label }}</h3>
-    {% else %}
-      <h3>{{ content.field_alt_teaser_title|raw }}</h3>
-    {% endif %}
+
+    <a href="{{ url }}" class="plain">
+      {% if node.field_alt_teaser_title is empty %}
+        <h3>{{ label }}</h3>
+      {% else %}
+        <h3>{{ content.field_alt_teaser_title|raw }}</h3>
+      {% endif %}
+    </a>
   </div>
 </article>
