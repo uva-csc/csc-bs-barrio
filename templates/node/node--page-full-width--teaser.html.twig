@@ -57,6 +57,8 @@
  *   is an administrator.
  *
  * @see template_preprocess_node()
+
+ Removed header with title. So title can be included by layout builder
  */
 #}
 {{ attach_library('bootstrap_barrio/node') }}
@@ -80,6 +82,7 @@
     'img-no-shadow',
   ]
 %}
+
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(content_classes) }}>
     {% if node.field_teaser_image is empty  %}
@@ -87,13 +90,10 @@
     {% else %}
       {{ content.field_teaser_image }}
     {% endif %}
-    <h3>
-      {% if node.field_alt_teaser_title is empty %}
-        {{ label }}
-      {% else %}
-        {{ content.field_alt_teaser_title }}
-      {% endif %}
-    </h3>
-    {{ content.body }}
+    {% if node.field_alt_teaser_title is empty %}
+      <h3>{{ label }}</h3>
+    {% else %}
+      <h3>{{ content.field_alt_teaser_title|raw }}</h3>
+    {% endif %}
   </div>
 </article>
