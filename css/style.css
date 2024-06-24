@@ -14152,6 +14152,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
 .node--type-page-full-width.node--view-mode-alt-teaser .field--name-body.field--type-text-with-summary, .node--type-page-full-width.node--view-mode-alt-teaser p {
   font-size: 1.1rem;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .node--type-page h2:first-child, .node--type-page .h2:first-child {
@@ -14191,6 +14192,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
 .node--type-page.node--view-mode-alt-teaser .field--name-body.field--type-text-with-summary, .node--type-page.node--view-mode-alt-teaser p {
   font-size: 1.1rem;
   line-height: 1.5;
+  text-align: justify;
 }
 
 body.node--type-event .bc-inline.layout.layout--onecol {
@@ -15320,6 +15322,7 @@ a.read-more, span.read-more {
   font-style: italic;
   position: relative;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /** End of Links **/
@@ -15473,7 +15476,7 @@ a.read-more, span.read-more {
   margin: 0 auto;
 }
 
-.img-link a {
+.img-link .field a {
   border: none;
 }
 

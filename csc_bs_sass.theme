@@ -40,6 +40,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
 function csc_bs_sass_preprocess_node(&$variables) {
   $node = $variables['node'];
   $node_type = $node->bundle();
+  // $view_mode = $variables['view_mode'];
   // EVENTS
   if ($node_type == 'event') {
     $date = $node->get('field_date');

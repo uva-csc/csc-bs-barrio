@@ -251,6 +251,7 @@ a.read-more, span.read-more {
   font-style: italic;
   position: relative;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /** End of Links **/
@@ -449,7 +450,7 @@ a.read-more, span.read-more {
 }
 
 .img-link {
-  a {
+  .field a {
     border: none;
   }
 }

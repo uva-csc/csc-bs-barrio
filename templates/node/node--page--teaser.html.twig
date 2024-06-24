@@ -92,11 +92,13 @@
     {% endif %}
 
     <a href="{{ url }}" class="plain">
-      {% if node.field_alt_teaser_title is empty %}
-        <h3>{{ label }}</h3>
-      {% else %}
-        <h3>{{ content.field_alt_teaser_title|raw }}</h3>
-      {% endif %}
+      <h3>
+        {% if node.field_alt_teaser_title is empty %}
+          {{ label }}
+        {% else %}
+          {{ content.field_alt_teaser_title|raw }}
+        {% endif %}
+      </h3>
     </a>
   </div>
 </article>

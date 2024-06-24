@@ -87,13 +87,18 @@
     {% else %}
       {{ content.field_teaser_image }}
     {% endif %}
-    <h3>
-      {% if node.field_alt_teaser_title is empty %}
-        {{ label }}
-      {% else %}
-        {{ content.field_alt_teaser_title }}
-      {% endif %}
-    </h3>
-    {{ content.body }}
+    <a href="{{ url }}" class="plain">
+      <h3>
+        {% if node.field_alt_teaser_title is empty %}
+          {{ label }}
+        {% else %}
+          {{ content.field_alt_teaser_title }}
+        {% endif %}
+      </h3>
+    </a>
+    <p>
+      {{ content.body|render|striptags|trim }}
+      <a class="link--animated read-more" href="{{ url }}">Learn More</a>
+    </p>
   </div>
 </article>
