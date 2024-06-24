@@ -14133,7 +14133,8 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-family: "ITC Franklin Gothic Std", sans-serif;
 }
 
-.node--type-page-full-width.node--view-mode-teaser .field--name-field-image img {
+.node--type-page-full-width.node--view-mode-teaser .field--name-field-image img,
+.node--type-page-full-width.node--view-mode-teaser .field--name-field-teaser-image img {
   max-width: 410px;
 }
 .node--type-page-full-width.node--view-mode-teaser h3, .node--type-page-full-width.node--view-mode-teaser .h3 {
@@ -14171,7 +14172,8 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   height: auto;
   filter: drop-shadow(8px 10px 3px #00000095);
 }
-.node--type-page.node--view-mode-teaser .field--name-field-image img {
+.node--type-page.node--view-mode-teaser .field--name-field-image img,
+.node--type-page.node--view-mode-teaser .field--name-field-teaser-image img {
   max-width: 410px;
 }
 .node--type-page.node--view-mode-teaser h3, .node--type-page.node--view-mode-teaser .h3 {

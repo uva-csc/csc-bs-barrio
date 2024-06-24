@@ -152,7 +152,8 @@ body.node--type-landing-page  main#content {
 .node--type-page-full-width {
   // Full Width Page Teaser
   &.node--view-mode-teaser {
-    .field--name-field-image {
+    .field--name-field-image,
+    .field--name-field-teaser-image {
       img {
         max-width: 410px;
       }
@@ -211,7 +212,8 @@ body.node--type-landing-page  main#content {
 
   // Basic Page Teaser
   &.node--view-mode-teaser {
-    .field--name-field-image {
+    .field--name-field-image,
+    .field--name-field-teaser-image  {
       img {
         max-width: 410px;
       }
