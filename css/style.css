@@ -13509,7 +13509,7 @@ body {
 
 .container article .node__content div:not(.container) {
   max-width: 1320px;
-  padding-right: 1rem;
+  /*  padding-right: 1rem; // breaks classes and events pages */
 }
 
 #title-div .content {
@@ -15493,6 +15493,10 @@ a.read-more, span.read-more {
 
 a img:hover {
   opacity: 0.5;
+}
+
+div.csc-news-block a img:hover {
+  opacity: unset;
 }
 
 /** Maps **/

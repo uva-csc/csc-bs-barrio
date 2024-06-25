@@ -319,14 +319,12 @@ body {
 
   }  // end of Menu Links for both headers
 
-
-
 } // End #header
 
 // Containers, etc.
 .container article .node__content div:not(.container) {
   max-width: 1320px;
-  padding-right: 1rem;
+  /*  padding-right: 1rem; // breaks classes and events pages */
 }
 
 // Title full width

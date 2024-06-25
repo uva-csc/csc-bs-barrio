@@ -469,6 +469,13 @@ a img:hover {
   opacity: 0.5;
 }
 
+div.csc-news-block {
+  a img:hover {
+    opacity: unset;
+  }
+}
+
+
 
 /** Maps **/
 div.geolocation-map-wrapper {
