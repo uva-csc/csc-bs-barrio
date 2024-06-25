@@ -573,6 +573,20 @@ div.geolocation-map-wrapper {
   }
 }
 
+// Social Media Feeds
+.media-feeds {
+  .block-csc-social-feeds.csc-social-feed-block {
+
+    h3 {
+      color: $white;
+      text-align: center;
+      font-family: "ITC Franklin Gothic Hvy", sans-serif;
+      text-transform: uppercase;
+      font-size: 100%;
+    }
+  }
+}
+
 // Tags
 div.type-tag a {
   font-family: $font-frankgoth-med;

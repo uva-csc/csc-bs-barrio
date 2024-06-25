@@ -15576,6 +15576,14 @@ div.geolocation-map-wrapper {
   font-weight: bold;
 }
 
+.media-feeds .block-csc-social-feeds.csc-social-feed-block h3, .media-feeds .block-csc-social-feeds.csc-social-feed-block .h3 {
+  color: #fdfdfd;
+  text-align: center;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  text-transform: uppercase;
+  font-size: 100%;
+}
+
 div.type-tag a {
   font-family: "ITC Franklin Gothic Med", sans-serif;
   font-size: 80%;
