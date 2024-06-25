@@ -524,10 +524,11 @@ body.node--type-class {
       color: white;
     }
 
+    /* Too General, effects /people/ben-benson profile pages */
     .field--name-field-image {
       img {
-        position: absolute;
-        right: 40px;
+        position: relative;
+        margin-left: 160px;
       }
     }
 

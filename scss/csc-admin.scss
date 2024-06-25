@@ -1,5 +1,6 @@
-/** Admin Structure **/
+@import 'variables.scss';
 
+/** Admin Structure **/
 .page-user-login form#user-login-form {
   max-width: 500px;
   margin-left: 2rem;
@@ -11,6 +12,23 @@ body.toolbar-fixed #header #navbar-main {
 
   &.node--type-landing-page {
     padding-bottom: 0rem !important;
+  }
+}
+
+// Admin Messages
+#csc-admin-msg {
+  & > div:not(.hidden) {
+    text-align: center;
+    padding: 0.25rem 0;
+
+    em.placeholder {
+      background: transparent;
+      opacity: 1;
+    }
+
+    a {
+      color: $uva-blue;
+    }
   }
 }
 

@@ -14421,13 +14421,14 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 }
 .node--type-people .image-bio {
   margin-top: -200px;
+  /* Too General, effects /people/ben-benson profile pages */
 }
 .node--type-people .image-bio * {
   color: white;
 }
 .node--type-people .image-bio .field--name-field-image img {
-  position: absolute;
-  right: 40px;
+  position: relative;
+  margin-left: 160px;
 }
 .node--type-people .image-bio .field--name-title {
   font-family: "ITC Franklin Gothic Med", sans-serif;
@@ -15732,6 +15733,8 @@ body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--
     text-align: center;
   }
 }
+/* VARIABLES */
+/** Bootstrap Overrides **/
 /** Admin Structure **/
 .page-user-login form#user-login-form {
   max-width: 500px;
@@ -15741,6 +15744,18 @@ body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--
 
 body.toolbar-fixed #header #navbar-main.node--type-landing-page {
   padding-bottom: 0rem !important;
+}
+
+#csc-admin-msg > div:not(.hidden) {
+  text-align: center;
+  padding: 0.25rem 0;
+}
+#csc-admin-msg > div:not(.hidden) em.placeholder {
+  background: transparent;
+  opacity: 1;
+}
+#csc-admin-msg > div:not(.hidden) a {
+  color: #232D4B;
 }
 
 #node-admin-links .nav.primary {
