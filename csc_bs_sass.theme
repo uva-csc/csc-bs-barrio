@@ -323,11 +323,14 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   if (!empty($para) && $para->get('field_hero_image')) {
     $mid = $para->get('field_hero_image')[0]?->get('target_id')?->getValue();
     if ($mid) {
+      $img_url = midToUrl($mid, 'hero');
+      /*
       $fid = Media::load($mid)->get('field_media_image')[0]->get('target_id')
         ->getValue();
       $file_url = FILE::load($fid)?->createFileUrl();
-      if (!empty($file_url)) {
-        $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
+      */
+      if (!empty($img_url)) {
+        $variables['attributes']['style'][] = 'background-image: url("' . $img_url . '");';
         // $variables['attributes']['data-aos'] = 'fade-down';
       }
     }
@@ -470,6 +473,7 @@ function midToUrl($mid, $style=false) {
     $fid = Media::load($mid)->get('field_media_image')[0]->get('target_id')
       ->getValue();
     if (!empty($fid)) {
+      csc_log("File id: " . $fid);
       $file = FILE::load($fid);
       if ($file) {
         if ($style) {
