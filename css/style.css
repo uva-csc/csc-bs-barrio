@@ -15491,6 +15491,10 @@ a.read-more, span.read-more {
   filter: none !important;
 }
 
+a img:hover {
+  opacity: 0.5;
+}
+
 /** Maps **/
 div.geolocation-map-wrapper {
   filter: drop-shadow(10px 10px #b2c0e3);
