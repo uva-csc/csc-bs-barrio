@@ -282,6 +282,21 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
       $variables['attributes']['class'][] = $cattval;
     }
   }
+
+  // Use data attribute field and add to div
+  // TODO: Should change this to use dos-fade-up class attribute and convert that to the data attribute instead of adding a new field
+  if ($para->hasField('field_data_attributes')) {
+    $dattval = $para->get('field_data_attributes')->value;
+    if (!empty($dattval)) {
+      $datts = explode(' ', $dattval);
+      foreach ($datts as $datt) {
+        if (str_contains($datt, '=')) {
+          list($dname, $dval) = explode('=', $datt);
+          $variables['attributes']["data-$dname"] = $dval;
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -313,6 +328,7 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
       $file_url = FILE::load($fid)?->createFileUrl();
       if (!empty($file_url)) {
         $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
+        // $variables['attributes']['data-aos'] = 'fade-down';
       }
     }
 
