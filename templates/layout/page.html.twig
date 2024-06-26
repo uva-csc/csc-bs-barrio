@@ -181,7 +181,7 @@
       {% endblock %}
     </div>
     {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
-      <div class="featured-bottom">
+      <div class="featured-bottom" data-aos="fade-up">
         <aside class="{{ container }} clearfix" role="complementary">
           {{ page.featured_bottom_first }}
           {{ page.featured_bottom_second }}
@@ -189,7 +189,7 @@
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
+    <footer class="site-footer" data-aos="fade-up">
       {% block footer %}
         <div class="{{ container }}">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
