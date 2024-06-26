@@ -279,24 +279,36 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   if ($para->hasField('field_class_attribute')) {
     $cattval = $para->get('field_class_attribute')->value;
     if (!empty($cattval)) {
+      list($cattval, $aosval) = csc_bs_sass_extract_aos_classes($cattval);
       $variables['attributes']['class'][] = $cattval;
-    }
-  }
-
-  // Use data attribute field and add to div
-  // TODO: Should change this to use dos-fade-up class attribute and convert that to the data attribute instead of adding a new field
-  if ($para->hasField('field_data_attributes')) {
-    $dattval = $para->get('field_data_attributes')->value;
-    if (!empty($dattval)) {
-      $datts = explode(' ', $dattval);
-      foreach ($datts as $datt) {
-        if (str_contains($datt, '=')) {
-          list($dname, $dval) = explode('=', $datt);
-          $variables['attributes']["data-$dname"] = $dval;
-        }
+      if ($aosval) {
+        $variables['attributes']['data-aos'] = $aosval;
       }
     }
   }
+}
+
+/**
+ * Custom function that converts class attribute values in the form of "aos-command"
+ * into "data-aos=command" attributes for animation on scroll
+ *
+ * $cattval (string) : a space-delimited string of class attributes from the field of that name in a paragraph
+ *
+ * return (array): an array of 1. the class attribute string stripped of any aos attribute and 2. the aos command if found
+ */
+function csc_bs_sass_extract_aos_classes($cattval) {
+  $parts = explode(' ', $cattval); // Split space-delimited string into individual attributes
+  $classes = [];
+  $aosval = false;
+  foreach($parts as $val) {
+    if (str_contains($val, 'aos-')) {
+      $aosval = str_replace('aos-', '', $val); // Return just the aos command as parent function can create the data attribute
+    } else {
+      $classes[] = $val;
+    }
+  }
+  $classes = implode(' ', $classes);  // Recreate space-delimited string of only class attributes
+  return array($classes, $aosval);
 }
 
 /**
