@@ -33,74 +33,18 @@ body.path-frontpage main#content {
       }
 
       p.home-tag-line {
-        font-family: 'ITC Franklin Gothic Std';
+        font-family: "ITC Franklin Gothic Std";
         font-size: 1.65rem;
         font-weight: bold;
-        color: $uva-orange;
-        text-shadow: 2px 1px 2px #000000;
+        color: #E57325;
+        /* text-shadow: 2px 1px 2px #000000; */
+        background-color: $white;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0.6rem 1rem 0.25rem;
+        border-radius: 25px;
       }
     }
-    /*
-    .commons-hours {
-      position: absolute;
-      left: 15px;
-      top: 40px;
-      padding: 3rem 3rem 2rem 3rem;
-      color: $uva-blue;
-      width: fit-content;
-      text-align: center;
-
-      .text-formatted {
-        h2 {
-          width: 100%;
-          font-size: 1.5rem;
-          text-align: center;
-          margin: 0;
-          padding: 0 0 0 0.5rem;
-        }
-
-        ul, li {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          padding-inline-start: 0;
-        }
-        ul {
-          padding-left: 0.5rem;
-        }
-      }
-    }
-
-     */
-
-    /*
-    .home-info-overlay {
-      position: absolute;
-      right: 15px;
-      top: 40px;
-      width: fit-content;
-      width: 400px;
-      color: $uva-blue;
-      text-align: left;
-      font-size: 1rem;
-      padding: 2.25rem 1.5rem 0.5rem;
-
-
-      .text-formatted {
-        h2 {
-          width: 100%;
-          text-align: center;
-          margin: 0;
-          padding: 0 0 0 0.5rem;
-          font-size: 1.5rem;
-        }
-
-        p {
-          width:99%;
-          text-align: center;
-        }
-      }
-    } */
   } // End of Home page Hero
 
   // Explore teasers
