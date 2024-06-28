@@ -13683,20 +13683,16 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   border-bottom: none;
 }
 
-.blue-skew {
-  background: inherit;
-  position: relative;
-}
-.blue-skew .skew-overlay {
+.skew-overlay-iso {
   position: absolute;
   background: #009fdf;
   width: 100%;
   height: 70%;
-  z-index: 1;
+  z-index: -1;
   padding: 2rem;
 }
-.blue-skew .skew-overlay:after {
-  background: white;
+.skew-overlay-iso:after {
+  background: #fdfdfd;
   bottom: 0;
   content: "";
   display: block;
@@ -13708,8 +13704,41 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   transform-origin: 100%;
   z-index: -1;
 }
-.blue-skew .skew-overlay ~ div.layout__region {
+.skew-overlay-iso ~ div.layout__region {
   z-index: 1;
+}
+
+.blue-skew, .green-skew {
+  background: inherit;
+  position: relative;
+}
+.blue-skew .skew-overlay, .green-skew .skew-overlay {
+  position: absolute;
+  background: #009fdf;
+  width: 100%;
+  height: 70%;
+  z-index: 1;
+  padding: 2rem;
+}
+.blue-skew .skew-overlay:after, .green-skew .skew-overlay:after {
+  background: #fdfdfd;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 78%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-8deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+.blue-skew .skew-overlay ~ div.layout__region, .green-skew .skew-overlay ~ div.layout__region {
+  z-index: 1;
+}
+
+.green-skew .skew-overlay {
+  background: #62BB46;
 }
 
 .skew-bottom {
@@ -15047,6 +15076,24 @@ main#content .c-csc-image_text p {
 /** End of Individual Page Styles **/
 /* VARIABLES */
 /** Bootstrap Overrides **/
+/** General Block/Div Styles **/
+.three-col-full {
+  margin: 0 3rem;
+}
+.three-col-full .layout__region--first {
+  max-width: 20vw;
+}
+.three-col-full .layout__region--second {
+  padding-top: 3rem;
+}
+.three-col-full .layout__region--second h2, .three-col-full .layout__region--second .h2 {
+  text-transform: uppercase;
+}
+.three-col-full .layout__region--third {
+  max-width: 20vw;
+  margin-left: 6rem;
+}
+
 /** General Text Styles **/
 .fsnorm {
   font-size: 1rem !important;
