@@ -1,29 +1,5 @@
 @import 'variables.scss';
 
-/** General Block/Div Styles **/
-
-// Layout buildr 3 column (assuming 25/50/25% like Commons page)
-.three-col-full {
-  margin: 0 3rem;
-
-  .layout__region--first {
-    max-width: 20vw;
-  }
-
-  .layout__region--second {
-    padding-top: 3rem;
-
-    h2 {
-      text-transform: uppercase;
-    }
-  }
-
-  .layout__region--third {
-    max-width: 20vw;
-    margin-left: 6rem;
-  }
-}
-
 /** General Text Styles **/
 .fsnorm {
   font-size: 1rem!important;

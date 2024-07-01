@@ -537,48 +537,22 @@ div.layout--twocol-section--33-67 {
   }
 }
 
-.skew-overlay-iso {
-  position: absolute;
-  background: $csc-lt-blue;
-  width: 100%;
-  height: 70%;
-  z-index: -1;
-  padding: 2rem;
-
-  &:after {
-    background: $white;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 78%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-8deg);
-    transform-origin: 100%;
-    z-index: -1;
-  }
-
-  & ~ div.layout__region {
-    z-index: 1;
-  }
-}
 
 // blue skewed background bar
-.blue-skew, .green-skew {
+.blue-skew {
   background: inherit;
   position: relative;
 
   .skew-overlay {
     position: absolute;
-    background: $csc-lt-blue;
+    background: #009fdf;
     width: 100%;
     height: 70%;
     z-index: 1;
     padding: 2rem;
 
     &:after {
-      background: $white;
+      background: white;
       bottom: 0;
       content: "";
       display: block;
@@ -595,10 +569,6 @@ div.layout--twocol-section--33-67 {
       z-index: 1;
     }
   }
-}
-
-.green-skew .skew-overlay {
-  background: $uva-green;
 }
 
 .skew-bottom {

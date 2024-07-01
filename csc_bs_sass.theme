@@ -95,23 +95,6 @@ function csc_bs_sass_preprocess_node(&$variables) {
   }
 }
 
-
-/* Preprocess Block Functions */
-function csc_bs_sass_preprocess_block(&$variables) {
-  $bid = $variables['elements']['#plugin_id'];
-  csc_log("block id: " . $bid);
-  if ($bid == 15) {
-      kint($variables);
-  }
-}
-
-
-/**
- * Preprocess Field Functions
- * @param $variables
- *
- * @return void
- */
 function csc_bs_sass_preprocess_field(&$variables) {
   // csc_log('vars in pp field: ' . json_encode(array_keys($variables)));
   $fld_name = $variables['field_name'];
@@ -221,6 +204,20 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
 /** End of Views hooks */
 
 
+/*
+function csc_bs_sass_preprocess_block(&$variables) {
+$bid = $variables['elements']['#plugin_id'];
+//csc_log($bid);
+if ($bid == 'facet_block:roles') {
+    csc_log(json_encode($variables['content']), 'notice', '_el_content');
+    foreach($variables['elements']['content'][0]['#items'] as &$facet) {
+      $label = $facet['#title']['#value'];
+      $new_label = str_replace('_', ' ', $label);
+      $facet['#title']['#value'] = ucwords($new_label);
+    }
+}
+}
+*/
 
 function csc_bs_sass_preprocess_facets_result_item(&$facet) {
   // csc_log(json_encode([$variables['value'], array_keys($variables)]));
@@ -282,7 +279,7 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   if ($para->hasField('field_class_attribute')) {
     $cattval = $para->get('field_class_attribute')->value;
     if (!empty($cattval)) {
-      [$cattval, $aosval] = csc_bs_sass_extract_aos_classes($cattval);
+      list($cattval, $aosval) = csc_bs_sass_extract_aos_classes($cattval);
       $variables['attributes']['class'][] = $cattval;
       if ($aosval) {
         $variables['attributes']['data-aos'] = $aosval;
