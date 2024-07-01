@@ -485,7 +485,6 @@ function midToUrl($mid, $style=false) {
     $fid = Media::load($mid)->get('field_media_image')[0]->get('target_id')
       ->getValue();
     if (!empty($fid)) {
-      csc_log("File id: " . $fid);
       $file = FILE::load($fid);
       if ($file) {
         if ($style) {

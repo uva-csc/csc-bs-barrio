@@ -2,6 +2,28 @@
 
 /*** Individual Page Styles ***/
 
+// Commons Page
+.commons-imgs {
+  .field--name-field-captioned-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5vw;
+    padding-top: 3rem;
+    colum-gap: 5rem;
+
+    .field__item:first-child {
+
+      * {
+        width: 100%;
+      }
+    }
+
+    .field--name-field-caption {
+      text-align: left;
+    }
+  }
+}
+
 // Students Page
 // Students Features
 .features-1over2 > .layout__region .field--name-field-teaser-image,

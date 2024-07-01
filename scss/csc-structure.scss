@@ -537,6 +537,29 @@ div.layout--twocol-section--33-67 {
   }
 }
 
+.layout--threecol-section--25-50-25.three-col-full {
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
+  justify-content: center;
+
+  .layout__region--first, .layout__region--third {
+    max-width: 20vw;
+  }
+
+  .layout__region--first {
+    // align first block to right
+    .block {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: 5rem;
+    }
+  }
+
+  .layout__region--second {
+    padding-right: 3rem;
+  }
+}
+
 
 // blue skewed background bar
 .blue-skew {
@@ -547,8 +570,8 @@ div.layout--twocol-section--33-67 {
     position: absolute;
     background: #009fdf;
     width: 100%;
-    height: 70%;
-    z-index: 1;
+    height: 100%;
+    z-index: -1;
     padding: 2rem;
 
     &:after {
@@ -568,6 +591,52 @@ div.layout--twocol-section--33-67 {
     & ~ div.layout__region {
       z-index: 1;
     }
+  }
+}
+
+.green-skew-right {
+  background: inherit;
+  position: relative;
+
+  .skew-overlay {
+    position: absolute;
+    background: $uva-green;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding: 2rem;
+
+    &:after {
+      background: white;
+      top: -80%;
+      left: 0;
+      right: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      transform: skewY(2deg);
+      transform-origin: 100%;
+      z-index: -1;
+    }
+
+    & ~ div.layout__region {
+      z-index: 1;
+    }
+  }
+}
+
+.csc-row-75-25 .layout__region {
+  display: flex !important;
+  padding: 2rem;
+
+  & > div.contextual-region:first-child {
+    flex: 70% !important;
+  }
+
+  & > div.contextual-region:last-child {
+    flex: 30% !important;
+    margin: 5vw 10vw 0 0;
   }
 }
 
