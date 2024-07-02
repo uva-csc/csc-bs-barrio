@@ -2,24 +2,38 @@
 
 /*** Individual Page Styles ***/
 
-// Commons Page
+// Commons Page (new)
 .commons-imgs {
   .field--name-field-captioned-images {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 0 5vw;
     padding-top: 3rem;
-    colum-gap: 5rem;
+    column-gap: 30px;
 
-    .field__item:first-child {
-
-      * {
+    .field__item {
+      &:first-child {
+        flex-grow: 2;
+        max-width: 50vw
+      }
+      &:nth-child(2) {
+        flex-grow: 1;
+        max-width: 40vw;
+      }
+      .c-csc-captioned_image,
+      .field--name-field-image,
+      img {
         width: 100%;
+        padding: 0;
       }
     }
 
     .field--name-field-caption {
+      margin: 0.5rem 0.5rem 0;
       text-align: left;
+      width: inherit;
     }
   }
 }

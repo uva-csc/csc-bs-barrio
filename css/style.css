@@ -14899,16 +14899,31 @@ main#content .c-csc-image_text p {
 /*** Individual Page Styles ***/
 .commons-imgs .field--name-field-captioned-images {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 0 5vw;
   padding-top: 3rem;
-  colum-gap: 5rem;
+  column-gap: 30px;
 }
-.commons-imgs .field--name-field-captioned-images .field__item:first-child * {
+.commons-imgs .field--name-field-captioned-images .field__item:first-child {
+  flex-grow: 2;
+  max-width: 50vw;
+}
+.commons-imgs .field--name-field-captioned-images .field__item:nth-child(2) {
+  flex-grow: 1;
+  max-width: 40vw;
+}
+.commons-imgs .field--name-field-captioned-images .field__item .c-csc-captioned_image,
+.commons-imgs .field--name-field-captioned-images .field__item .field--name-field-image,
+.commons-imgs .field--name-field-captioned-images .field__item img {
   width: 100%;
+  padding: 0;
 }
 .commons-imgs .field--name-field-captioned-images .field--name-field-caption {
+  margin: 0.5rem 0.5rem 0;
   text-align: left;
+  width: inherit;
 }
 
 .features-1over2 > .layout__region .field--name-field-teaser-image,
