@@ -13762,10 +13762,10 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   display: flex !important;
   padding: 2rem;
 }
-.csc-row-75-25 .layout__region > div.contextual-region:first-child {
+.csc-row-75-25 .layout__region > div.block-block-content:first-child {
   flex: 70% !important;
 }
-.csc-row-75-25 .layout__region > div.contextual-region:last-child {
+.csc-row-75-25 .layout__region > div.block-block-content:last-child {
   flex: 30% !important;
   margin: 5vw 10vw 0 0;
 }

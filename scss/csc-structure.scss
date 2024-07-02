@@ -630,11 +630,11 @@ div.layout--twocol-section--33-67 {
   display: flex !important;
   padding: 2rem;
 
-  & > div.contextual-region:first-child {
+  & > div.block-block-content:first-child {
     flex: 70% !important;
   }
 
-  & > div.contextual-region:last-child {
+  & > div.block-block-content:last-child {
     flex: 30% !important;
     margin: 5vw 10vw 0 0;
   }
