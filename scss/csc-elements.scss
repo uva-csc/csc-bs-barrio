@@ -738,6 +738,98 @@ body.path-webform {
 
 // End of Webforms
 
+// Calendar
+// Calendar Link
+#calendar-link {
+  color: $white;
+}
+
+#block-csc-bs-sass-calendarlinkblock {
+  margin: 0.3rem 1rem 0 -1rem;
+
+  .contextual {
+    display: none;  // Hide contextual links for admins because gets in the way of the button
+  }
+
+  #calendar-link{
+    width: 17px;
+    height: 17px;
+    color: #ffffff;
+    a {
+      color: #ffffff;
+      svg {
+        width: 18px;
+      }
+    }
+  }
+} // End of Calendar link
+
+// Calendar itself
+#sidebar_second .block-views-blockcalendar-fullcalendar-block {
+  display: none;
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  max-width: 960px;
+  background-color: $white;
+
+  &.show {
+    display: block;
+  }
+
+  .csc-calendar {
+    margin-top: 2rem;
+    padding: 0 1rem;
+
+    .close-link {
+      margin: -0.75rem 0 -1rem;
+      a {
+        border: none;
+      }
+    }
+
+    // Event listings on calendar
+    .fc-event-container {
+      &[colspan] {
+        background-color: $csc-lt-gray;
+      }
+
+      a {
+        color: #0071b3; // color event listing old site #0071b3
+        background-color: transparent!important;
+        border: none;
+        font-size: 0.75rem !important;
+        // Time color #777
+
+      }
+      .fc-content {
+        .fc-title {
+          font-weight: 700;
+          letter-spacing: 0.1px;
+          white-space: normal;
+        }
+        .fc-time {
+          font-weight: 400;
+          color: $csc-dark-gray;
+          white-space: normal;
+        }
+
+      }
+
+    }  // End of Event Container
+
+    a.fc-more {
+      font-size: 0.75rem !important;
+    }
+
+    .calendar-view-pager, .calendar-view-pager__reset {
+      display: none;
+    }
+  }
+}
+
+// End of Calendar styles
+
 
 // Animations
 @keyframes fade-in {

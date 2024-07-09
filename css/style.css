@@ -14197,7 +14197,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
 }
 
 body.node--type-event .bc-inline.layout.layout--onecol {
-  margin-left: -10rem;
+  /* margin-left: -10rem; */
 }
 body.node--type-event article.node--type-event {
   max-width: 1200px;
@@ -14264,6 +14264,10 @@ body.node--type-event .layout__region.layout__region--first .field--name-field-i
   width: 100%;
   height: auto;
   filter: drop-shadow(8px 10px 3px #00000095);
+}
+body.node--type-event .layout__region.layout__region--second {
+  width: 25%;
+  max-width: 300px;
 }
 body.node--type-event .layout__region.layout__region--second .wrapper {
   height: 430px;
@@ -15737,6 +15741,75 @@ div.type-tag a:hover {
 }
 
 body.path-webform .help-curate {
+  display: none;
+}
+
+#calendar-link {
+  color: #fdfdfd;
+}
+
+#block-csc-bs-sass-calendarlinkblock {
+  margin: 0.3rem 1rem 0 -1rem;
+}
+#block-csc-bs-sass-calendarlinkblock .contextual {
+  display: none;
+}
+#block-csc-bs-sass-calendarlinkblock #calendar-link {
+  width: 17px;
+  height: 17px;
+  color: #ffffff;
+}
+#block-csc-bs-sass-calendarlinkblock #calendar-link a {
+  color: #ffffff;
+}
+#block-csc-bs-sass-calendarlinkblock #calendar-link a svg {
+  width: 18px;
+}
+
+#sidebar_second .block-views-blockcalendar-fullcalendar-block {
+  display: none;
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  max-width: 960px;
+  background-color: #fdfdfd;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block.show {
+  display: block;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link {
+  margin: -0.75rem 0 -1rem;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link a {
+  border: none;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container[colspan] {
+  background-color: #eeeeee;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container a {
+  color: #0071b3;
+  background-color: transparent !important;
+  border: none;
+  font-size: 0.75rem !important;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-title {
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  white-space: normal;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-time {
+  font-weight: 400;
+  color: #5a6172;
+  white-space: normal;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar a.fc-more {
+  font-size: 0.75rem !important;
+}
+#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .calendar-view-pager, #sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .calendar-view-pager__reset {
   display: none;
 }
 

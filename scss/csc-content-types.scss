@@ -249,7 +249,7 @@ body.node--type-landing-page  main#content {
 body.node--type-event {
   // Breadcrumbs on event page
   .bc-inline.layout.layout--onecol {
-    margin-left: -10rem;
+   /* margin-left: -10rem; */
   }
 
   article.node--type-event {
@@ -324,26 +324,32 @@ body.node--type-event {
   } // end of events layout region first
 
   // Side bar on events
-  .layout__region.layout__region--second .wrapper {
-    height: 430px;
-    width: 300px;
-    background-color: $csc-lt-gray;
-    margin-top: 20px;
-    padding: 40px 50px;
+  .layout__region.layout__region--second {
+    width: 25%;
+    max-width: 300px;
+    .wrapper {
+      height: 430px;
+      width: 300px;
+      background-color: $csc-lt-gray;
+      margin-top: 20px;
+      padding: 40px 50px;
 
-    .field__item, .field__item p.address {
-      font-family: $font-frankgoth-cd;
-      text-align: center;
-    }
+      .field__item, .field__item p.address {
+        font-family: $font-frankgoth-cd;
+        text-align: center;
+      }
 
-    .field--name-field-date {
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
+      .field--name-field-date {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
 
-    article.node--type-location {
-      .country { display: none; }
-    }
+      article.node--type-location {
+        .country {
+          display: none;
+        }
+      }
+    } // End of wrapper
   } // end of events layout region second
 } // End of Events Content Type
 
