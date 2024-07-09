@@ -15766,7 +15766,7 @@ body.path-webform .help-curate {
   width: 18px;
 }
 
-#sidebar_second .block-views-blockcalendar-fullcalendar-block {
+.block-views-blockcalendar-fullcalendar-block {
   display: none;
   position: absolute;
   top: 150px;
@@ -15774,42 +15774,42 @@ body.path-webform .help-curate {
   max-width: 960px;
   background-color: #fdfdfd;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block.show {
+.block-views-blockcalendar-fullcalendar-block.show {
   display: block;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar {
   margin-top: 2rem;
   padding: 0 1rem;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link {
   margin: -0.75rem 0 -1rem;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link a {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link a {
   border: none;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container[colspan] {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container[colspan] {
   background-color: #eeeeee;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container a {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container a {
   color: #0071b3;
   background-color: transparent !important;
   border: none;
   font-size: 0.75rem !important;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-title {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-title {
   font-weight: 700;
   letter-spacing: 0.1px;
   white-space: normal;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-time {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-time {
   font-weight: 400;
   color: #5a6172;
   white-space: normal;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar a.fc-more {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar a.fc-more {
   font-size: 0.75rem !important;
 }
-#sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .calendar-view-pager, #sidebar_second .block-views-blockcalendar-fullcalendar-block .csc-calendar .calendar-view-pager__reset {
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .calendar-view-pager, .block-views-blockcalendar-fullcalendar-block .csc-calendar .calendar-view-pager__reset {
   display: none;
 }
 
