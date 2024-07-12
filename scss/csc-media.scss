@@ -1,82 +1,249 @@
 @import 'variables.scss';
 
-/* May already be in bootstrap took from uva law law.virginia.edu
-@media (min-width: 48em) {
-  .container, .container-sm, .container-md, .container-lg {
-    max-width: 1270px;
-  }
-}
-
-@media (min-width: 48em) {
-  .container, .container-sm, .container-md {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 36em) {
-  .container, .container-sm {
-    max-width: 540px;
-  }
-}
-*/
-
-// Layout
-@media (min-width: 48em) {
-  // A fixed width section (paragraph) in a full width page (content type)
-  body.node--type-page-full-width {
-    .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--first,
-    .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--second {
-      flex: 0 1 45%;
-      padding: 1rem;
-    }
-  }
-}
-
-@media (screen and max-width: 576px) {
-  #block-csc-bs-sass-main-menu:not(.show) {
-    display: none;
+// Tablets and phones
+@media (max-width: 768px) {
+  // Move navbar toggle up to top header
+  button.navbar-toggler {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    background-color: white;
   }
 
-  #header {
-    #navbar-main {
-      justify-content: center;
-      padding: 0.5rem;
-
-      // Menu Items
-      .nav-item a {
-        font-size: 0.8rem;
-        font-weight: normal;
-      }
-
-      // Give Link
-      div.csc-give-link {
-        border-width: 2px;
-        padding: 0 2px;
-        .content .field--name-body p {
-          margin: 0;
-          padding: 0;
-
-          a {
-            font-family: $font-frankgoth-med;
-            font-weight: bold;
-            font-size: 0.8rem;
-          }
-        }
-      } // end of give links
-    } // end of #navbar-main
-  } // End of # header
-
-  // Standard Elements
-  h2, h3, h4 { font-size: 115%!important; }
+  #header #navbar-main.bg-primary {
+    height: 0px !important;
+  }
 
   // Front page
   .path-frontpage {
-    .c-csc-text_box.hours-box {
-        position: absolute;
-        top: 170px;
-        color: white;
-        width: 100vw;
-        text-align: center;
+    #main-wrapper {
+      margin-top: unset;
+
+      main#content {
+        // CSC Hero
+        .c-csc-hero {
+          .home-title-overlay {
+            h2, .h2 {
+              margin: 2rem auto;
+              font-size: 150%;
+            }
+
+            p.home-tag-line {
+              font-size: 100% !important;
+              border-radius: 0;
+            }
+          }
+        } // End of .c-csc-hero Front Page
+        // Hero Overlay Front Page
+        .c-csc-text_row .field--name-field-text-boxes {
+          display: unset;
+          position: relative;
+          top: -25rem;
+
+          .c-csc-text_box {
+            width: 100%;
+            text-align: center;
+            color: $white;
+            background-color: #232D4B60;
+
+            a.read-more {
+              color: $uva-orange;
+            }
+          }
+
+          .c-csc-text_box {
+            padding: 1rem 0 2rem !important;
+          }
+
+          .c-csc-text_box.address {
+            background-color: $uva-blue;
+            padding: 1rem 0!important;
+          }
+        } // end of .c-csc-text_row
+
+        .c-csc-text_box.offerings {
+          margin-top: -2.75rem !important;
+        }
+
+        .c-csc-teaser_row .field--name-field-teasers {
+          display: unset !important;
+          /*
+          .field__item a {
+            display: block;
+            position: relative;
+            margin-top: -50%;
+            margin-bottom: 50%;
+            color: white;
+            border: none;
+
+            .field--name-field-teaser-caption p {
+              border: none;
+              color: white;
+            }
+
+          }
+           */
+        } // end of .c-csc-teaser_row
+
+        .block-views-blockhomepage-slideshow-block-1 {
+          display: block;
+          width: 100%;
+          height: 300px;
+          background-size: 80%;
+          background-position-y: 0px;
+          margin-left: -1.75rem;
+
+          & > div {
+            display: none;
+          }
+        }  // End of slideshowt
+
+        .featured-event {
+          margin-top: -6rem;
+          padding: unset;
+          max-width: unset;
+
+          .wrapper:first-child {
+            &:before {
+              background-position: center;
+              background-size: 7%;
+            }
+            padding: 1rem 1rem 1rem 1.25rem;
+          }
+        } // end of featured event
+
+        .events-row .layout__region--second {
+          & > .wrapper {
+            padding: 0;
+          }
+
+          .view-header {
+            margin: 0 0 -3rem -2rem;
+          }
+        }
+
+        .upcoming-events {
+          padding: 1rem 1rem 1rem 2rem;
+
+          .text-white {
+            color: $uva-orange !important;
+          }
+          .view-content {
+            gap: 10px;
+
+            .views-row {
+              display: unset;
+              border-bottom: 1px solid $csc-grey-blue;
+              margin-bottom: 1rem;
+
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+        } // end of upcoming-events
+
+        // Research highlight row
+        .c-csc-highlight_row > .wrapper {
+          padding: 0!important;
+          max-width: 100vw;
+
+          .field--name-field-highlight-box-content {
+            img {
+              width: 100%;
+              height: auto;
+              margin-bottom: 1rem;
+            }
+          }
+
+        } // end of research highlight row
+
+        // News
+        .view.csc-news-block {
+          max-width: 90vw;
+          text-align: center;
+
+          .views-view-responsive-grid--horizontal {
+            display: unset;
+
+            .block-field-blocknodenews-itemfield-image {
+              width: fit-content;
+              margin: 0 auto;
+
+              img {
+                filter: none;
+              }
+            }
+          }
+        }
+
+        } // end of main#content
+    } // end of #main-wrapper
+
+    // Pre-Footer and Footer blocks
+    .block.help-curate .content {
+      position: unset;
+      width: 100%;
+      margin: -6rem 0 0;
+      padding: 1rem 2rem;
+    }
+
+    .block.email-updates {
+      margin: -1rem 0 0;
+    }
+
+    #block-csc-bs-sass-footerblocklogo {
+      img {
+        width: 80vw !important;
+      }
+    }
+  }  // end of Front Page in phones & tablets
+
+  // Dropdown menu
+  div#main-menu-list {
+    background-color: $csc-grey-blue;
+
+    ul.navbar-nav {
+      padding: 0 0 0 1rem;
+
+      ul.dropdown-menu {
+        margin: unset!important;
+        background-color: $uva-blue-25;
+      }
     }
   }
-} // End of max-width: 576px
+} // End of min-width: 768px
+
+@media (min-width: 768.01px) and (max-width: 1200px) {
+  #header #navbar-top {
+    max-width: 100vw;
+    overflow: hidden;
+    padding: 0.5rem;
+
+    nav#block-csc-bs-sass-topmenu {
+      margin-left: -3rem;
+    }
+  }
+
+  main#content {
+    .c-csc-text_row .field--name-field-text-boxes {
+      grid-gap: 0;
+
+      .c-csc-text_box  { // .hours-box, .c-csc-text_box.address
+        font-size: 90%;
+
+        &.p-5 {
+          padding: 1rem !important;
+        }
+      }
+
+    }
+  }  // End of Main content min-width: 768.01px and max-width: 1024px
+
+} // End of min-width: 768.01px and max-width: 1024px
+
+
+// XXL
+@media (min-width: 1400px) {
+  .footer-contact, .navigation, .media-links { padding-left: 5%; }
+}

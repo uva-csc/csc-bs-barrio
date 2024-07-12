@@ -7,6 +7,12 @@
   height: 83vh;
 }
 
+// Hide overflow of relocated admin link/tabs
+#node-admin-links {
+  overflow: hidden;
+  height: 30px;
+}
+
 body.toolbar-fixed #header #navbar-main {
   // padding: 8px 3rem 1.5rem !important;
 

@@ -2,7 +2,6 @@ global-styling:
   version: VERSION
   js:
     js/popper.min.js: { weight: -49 }
-    js/bootstrap.min.js: {}
     js/barrio.js: {}
     js/custom.js: {}
     https://use.typekit.net/tgy5tlj.js: { type: external }

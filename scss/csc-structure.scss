@@ -77,10 +77,14 @@ body {
             font-size: 0.75rem;
           }
 
-          span.menu-sep:before {
+          &:after {
             content: '/';
             color: $uva-orange;
             display: inline-block;
+            margin: 0 1.75rem;
+          }
+          &:last-child:after {
+            display: none;
           }
         }
         /*
@@ -221,15 +225,22 @@ body {
         padding: 0 1rem;
       }
 
-      a {
+      a, span.nav-link.dropdown-toggle {
         font-size: 1.1rem;
-        /* letter-spacing: 0.08rem !important; */
         color: $csc-lt-gray;
 
         &:hover {
           color: $uva-orange;
           opacity: 1;
         }
+      }
+
+      span.nav-link.dropdown-toggle {
+        margin: 0 0.25rem 0 0;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
       }
     }
 /*
@@ -346,7 +357,6 @@ body {
 // Footer including featured bottom
 
 .region-featured-bottom-first {
-  margin-bottom: -0.5rem;
 }
 
 footer.site-footer {
@@ -364,24 +374,21 @@ footer.site-footer {
   }
 
   // Footer grid for placing blocks
+  section.row.region {
+    margin-bottom: 1.75rem !important;
+  }
+
   section.region-footer-first {
-    display: grid;
-    grid-template-columns: 22% 30% 26% 23%;
-    grid-column-gap: 10px;
-    grid-row-gap: 1rem;
-
-    .block-logo {
-      display: unset;
-      grid-column: 1/-1;
-
-      .footer-logo img {
-        height: 30%;
-        width: 30%;
+    div.footer-logo {
+      img {
+        max-width: 500px;
+        height: auto;
       }
     }
+  }
 
+  section.region-footer-second {
     .footer-contact {
-      padding-left: 2rem;
       font-family: $font-frankgoth-std;
 
       h2 {
@@ -412,16 +419,22 @@ footer.site-footer {
       }
     }
 
-    #block-csc-bs-sass-footer {
-      margin-left: 1rem;
-    }
+    .footer-map {
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
 
-    .footer-menu {
-      padding-top: 1.5rem;  // Is this still in effect? (ndg 06-14-24)
+      iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
     }
 
     .media-links {
-      padding-top: 1.5rem;
       a {
         color: $off-white;
 
@@ -431,14 +444,16 @@ footer.site-footer {
       }
     }
 
-    .rector-visitor-block {
-      display: unset;
-      grid-column: 1/-1;
-      width: 100%;
-      text-align: center;
-    }
+  } // end of div.site-footer__second
 
-  } // end of div.site-footer__top
+
+  .rector-visitor-block {
+    display: unset;
+    grid-column: 1/-1;
+    width: 100%;
+    text-align: center;
+  }
+
 } // end of footer.site-footer
 
 
