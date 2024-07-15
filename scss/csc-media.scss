@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
-// Tablets and phones
-@media (max-width: 768px) {
+// Phones
+@media (max-width: 767.9px) {
   // Move navbar toggle up to top header
   button.navbar-toggler {
     position: absolute;
@@ -212,9 +212,14 @@
       }
     }
   }
-} // End of min-width: 768px
+} // End of max-width: 767.9px (phones)
 
-@media (min-width: 768.01px) and (max-width: 1200px) {
+// Medium (Tablets)
+@media (min-width: 768px) and (max-width: 991.9px) {
+} // End of Tablets
+
+// Only Large (small laptops)
+@media (min-width: 992px) and (max-width: 1199.9px) {
   #header #navbar-top {
     max-width: 100vw;
     overflow: hidden;
@@ -224,24 +229,64 @@
       margin-left: -3rem;
     }
   }
+  // TODO: should be front page onlye
+  body.path-frontpage {
+    main#content {
+      .c-csc-text_row .field--name-field-text-boxes {
+        grid-gap: 0;
 
-  main#content {
-    .c-csc-text_row .field--name-field-text-boxes {
-      grid-gap: 0;
+        .c-csc-text_box { // .hours-box, .c-csc-text_box.address
+          font-size: 90%;
 
-      .c-csc-text_box  { // .hours-box, .c-csc-text_box.address
-        font-size: 90%;
+          &.p-5 {
+            padding: 1rem !important;
+          }
+        }
 
-        &.p-5 {
+      }
+
+      // End of Text boxes
+      .block-views-blockhomepage-slideshow-block-1 {
+        background-position-x: 8vw;
+      }
+
+      // Events row on home page
+      .events-row .wrapper {
+        padding: 0;
+      }
+
+      .featured-event {
+        max-width: 45vw;
+        .wrapper {
           padding: 1rem !important;
         }
       }
 
+      .upcoming-events {
+        max-width:48vw;
+
+        .view-content .views-row .views-group-meta h3 {
+          font-size: 1.4rem;
+        }
+      }
+
+      .c-csc-highlight_row .wrapper {
+        max-width: 95vw;
+      }
+
+    } // End of Front page
+
+    // General
+    .c-csc-teaser_row .field.field--name-field-teasers {
+      gap: 10px;
     }
-  }  // End of Main content min-width: 768.01px and max-width: 1024px
+  }
+} // End of min-width: 992 and max-width: 1199.9px
 
-} // End of min-width: 768.01px and max-width: 1024px
+// Only XLarge Most Small Laptops
+@media (min-width: 1200px) and (max-width: 1399.9px) {
 
+}
 
 // XXL
 @media (min-width: 1400px) {

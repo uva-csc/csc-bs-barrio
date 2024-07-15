@@ -15832,7 +15832,7 @@ body.path-webform .help-curate {
 }
 /* VARIABLES */
 /** Bootstrap Overrides **/
-@media (max-width: 768px) {
+@media (max-width: 767.9px) {
   button.navbar-toggler {
     position: absolute;
     top: -45px;
@@ -15991,7 +15991,7 @@ body.path-webform .help-curate {
     background-color: #C8CBD2;
   }
 }
-@media (min-width: 768.01px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199.9px) {
   #header #navbar-top {
     max-width: 100vw;
     overflow: hidden;
@@ -16001,14 +16001,38 @@ body.path-webform .help-curate {
     margin-left: -3rem;
   }
 
-  main#content .c-csc-text_row .field--name-field-text-boxes {
+  body.path-frontpage main#content .c-csc-text_row .field--name-field-text-boxes {
     grid-gap: 0;
   }
-  main#content .c-csc-text_row .field--name-field-text-boxes .c-csc-text_box {
+  body.path-frontpage main#content .c-csc-text_row .field--name-field-text-boxes .c-csc-text_box {
     font-size: 90%;
   }
-  main#content .c-csc-text_row .field--name-field-text-boxes .c-csc-text_box.p-5 {
+  body.path-frontpage main#content .c-csc-text_row .field--name-field-text-boxes .c-csc-text_box.p-5 {
     padding: 1rem !important;
+  }
+  body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 {
+    background-position-x: 8vw;
+  }
+  body.path-frontpage main#content .events-row .wrapper {
+    padding: 0;
+  }
+  body.path-frontpage main#content .featured-event {
+    max-width: 45vw;
+  }
+  body.path-frontpage main#content .featured-event .wrapper {
+    padding: 1rem !important;
+  }
+  body.path-frontpage main#content .upcoming-events {
+    max-width: 48vw;
+  }
+  body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 {
+    font-size: 1.4rem;
+  }
+  body.path-frontpage main#content .c-csc-highlight_row .wrapper {
+    max-width: 95vw;
+  }
+  body.path-frontpage .c-csc-teaser_row .field.field--name-field-teasers {
+    gap: 10px;
   }
 }
 @media (min-width: 1400px) {
