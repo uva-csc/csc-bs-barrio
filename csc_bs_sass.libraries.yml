@@ -19,3 +19,11 @@ global-styling:
     - core/jquery.once
     - core/drupal
     - core/popperjs
+
+bootstrap:
+  js:
+    /libraries/popper/popper.min.js: {}
+    /libraries/bootstrap/dist/js/bootstrap.min.js: {}
+  css:
+    component:
+      /libraries/bootstrap/dist/css/bootstrap.min.css: {}

@@ -13204,7 +13204,7 @@ textarea.form-control-lg {
   color: #fdfdfd;
 }
 .text-white a:not(*[class*=text-]) {
-  color: #fdfdfd;
+  color: #fdfdfd !important;
 }
 
 .text-black {
@@ -13274,6 +13274,11 @@ body {
 #main.container {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+}
+
+main#content {
+  margin: 18px 0 0;
+  padding: 0;
 }
 
 #header {
@@ -13429,7 +13434,7 @@ body {
       }*/
 }
 #header #navbar-main.bg-primary {
-  background-color: #232D4B;
+  background-color: #232D4B !important;
   z-index: 1;
 }
 #header #navbar-main ul.navbar-nav {
@@ -13978,7 +13983,7 @@ body.path-frontpage main#content .upcoming-events .view-content {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 30px;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row {
   display: flex;
@@ -15242,11 +15247,19 @@ main#content main#content .csc-sep.dotted-orange {
 
 /** Links **/
 a {
+  color: #232D4B !important;
   border-bottom: 2px solid #E57325;
+  text-decoration: none !important;
 }
 a:hover {
   border-bottom: none;
   color: #E57325 !important;
+}
+
+nav li:not(.breadcrumb-item) a,
+span.btn a,
+div.csc-give-link a {
+  color: #fdfdfd !important;
 }
 
 a.plain,
@@ -15254,6 +15267,7 @@ a[class^=social-media-link],
 a[href^=tel],
 a[href^=mailto],
 .csc-btn a {
+  color: unset !important;
   border-bottom: none !important;
 }
 
@@ -16056,6 +16070,18 @@ body.path-webform .help-curate {
 
 body.toolbar-fixed #header #navbar-main.node--type-landing-page {
   padding-bottom: 0rem !important;
+}
+
+#toolbar-administration div.toolbar-menu-administration a,
+#node-admin-links a.nav-link.active {
+  color: #232D4B !important;
+}
+
+div.toolbar-tab a#toolbar-item-announcement,
+div.toolbar-tab a#toolbar-item-shortcuts,
+div.toolbar-tab a#toolbar-item-user,
+div.toolbar-tab a#toolbar-item-devel {
+  color: #fdfdfd !important;
 }
 
 #csc-admin-msg > div:not(.hidden) {

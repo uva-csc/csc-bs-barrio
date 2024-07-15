@@ -57,7 +57,7 @@
 .text-white {
   color: $white;
   a:not(*[class*='text-']) {
-    color: $white;
+    color: $white !important;
   }
 }
 

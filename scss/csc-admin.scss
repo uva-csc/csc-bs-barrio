@@ -21,6 +21,22 @@ body.toolbar-fixed #header #navbar-main {
   }
 }
 
+
+#toolbar-administration div.toolbar-menu-administration a,
+#node-admin-links a.nav-link.active {
+  color: $uva-blue !important;
+}
+
+div.toolbar-tab {
+  a#toolbar-item-announcement,
+  a#toolbar-item-shortcuts,
+  a#toolbar-item-user,
+  a#toolbar-item-devel
+  {
+    color: $white !important;
+  }
+}
+
 // Admin Messages
 #csc-admin-msg {
   & > div:not(.hidden) {

@@ -123,12 +123,21 @@ main#content {
 
 /** Links **/
 a {
+  color: $uva-blue !important;
   border-bottom: $csc-link;
+  text-decoration: none !important;
 
   &:hover {
     border-bottom: none;
     color: $uva-orange!important;
   }
+}
+
+// Nav Links
+nav li:not(.breadcrumb-item) a,
+span.btn a,
+div.csc-give-link a {
+  color: $white !important;
 }
 
 // Do not underline social media icons, telphone numbers, or email addresses or any link that is an animated link
@@ -140,6 +149,7 @@ a[href^=mailto],
 .csc-btn a,
 // .captioned-image .field--name-field-caption a
 {
+  color: unset!important;
   border-bottom: none!important;
 }
 

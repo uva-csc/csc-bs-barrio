@@ -34,6 +34,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
+main#content {
+  margin: 18px 0 0;
+  padding: 0;
+}
+
 // Header
 #header {
   font-family: $font-frankgoth-hvy;
@@ -207,7 +212,7 @@ body {
     padding: 4px 0 0 0;
 
     &.bg-primary {
-      background-color: $uva-blue;
+      background-color: $uva-blue !important;
       z-index: 1;
     }
 
