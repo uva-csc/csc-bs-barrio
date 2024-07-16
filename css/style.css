@@ -16088,9 +16088,12 @@ body.toolbar-fixed #header #navbar-main.node--type-landing-page {
   padding-bottom: 0rem !important;
 }
 
-#toolbar-administration div.toolbar-menu-administration a,
-#node-admin-links a.nav-link.active {
+#toolbar-administration div.toolbar-menu-administration a {
   color: #232D4B !important;
+}
+
+#node-admin-links a.nav-link.active {
+  color: #E57325;
 }
 
 div.toolbar-tab a#toolbar-item-announcement,
