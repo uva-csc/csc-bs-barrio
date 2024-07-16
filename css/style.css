@@ -14942,6 +14942,10 @@ main#content .c-csc-image_text p {
   width: inherit;
 }
 
+.commons-btm-info {
+  margin: 1.5rem 5vw;
+}
+
 .features-1over2 > .layout__region .field--name-field-teaser-image,
 .features-1over2 > .layout__region .field--name-field-image {
   background-image: url("/sites/default/files/2024-04/South_Lawn_Commons_Students_16_1V3A1133_160over90.jpg");
