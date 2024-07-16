@@ -655,15 +655,15 @@ div.layout--twocol-section--33-67 {
 
 .csc-row-75-25 .layout__region {
   display: flex !important;
+  justify-content: space-between;
   padding: 2rem;
 
   & > div.block-block-content:first-child {
-    flex: 70% !important;
+    flex: 0 60%;
   }
 
   & > div.block-block-content:last-child {
-    flex: 30% !important;
-    margin: 5vw 10vw 0 0;
+    flex: 0 30%;
   }
 }
 

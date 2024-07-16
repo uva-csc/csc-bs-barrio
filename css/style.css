@@ -13771,14 +13771,14 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 
 .csc-row-75-25 .layout__region {
   display: flex !important;
+  justify-content: space-between;
   padding: 2rem;
 }
 .csc-row-75-25 .layout__region > div.block-block-content:first-child {
-  flex: 70% !important;
+  flex: 0 60%;
 }
 .csc-row-75-25 .layout__region > div.block-block-content:last-child {
-  flex: 30% !important;
-  margin: 5vw 10vw 0 0;
+  flex: 0 30%;
 }
 
 .skew-bottom {
@@ -15600,25 +15600,32 @@ div.geolocation-map-wrapper {
   top: 250px;
   left: 5vw;
 }
-#env-flourish p {
+#env-flourish h2, #env-flourish .h2, #env-flourish p {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
   color: #fdfdfd;
 }
-#env-flourish p:first-child {
-  font-size: 300%;
+#env-flourish h2, #env-flourish .h2 {
+  margin: 0;
+}
+#env-flourish h2 span, #env-flourish .h2 span {
+  display: block;
+}
+#env-flourish h2 span.part1, #env-flourish .h2 span.part1 {
+  font-size: 170%;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
 }
-#env-flourish p:nth-child(2) {
-  margin: -5px 0 0 21vw;
+#env-flourish h2 span.part2, #env-flourish .h2 span.part2 {
+  margin: -5px 0 0 15vw;
   font-family: "Libre Caslon Text", serif;
-  font-size: 225%;
+  font-size: 100%;
   font-style: italic;
 }
-#env-flourish p:last-child {
+#env-flourish h2 span.part3, #env-flourish .h2 span.part3 {
   margin-top: 4rem;
   font-family: "ITC Franklin Gothic Med", sans-serif;
-  font-size: 200%;
+  font-size: 90%;
   letter-spacing: 2px;
 }
 
