@@ -14665,7 +14665,6 @@ main#content .c-csc-image_text p {
 .c-csc-captioned_image .field--name-field-caption {
   max-width: 90%;
   font-size: 0.95rem;
-  font-style: italic;
   text-align: right;
   line-height: 1.25;
 }
@@ -14925,6 +14924,11 @@ main#content .c-csc-image_text p {
 .commons-imgs .field--name-field-captioned-images .field__item:nth-child(2) {
   flex-grow: 1;
   max-width: 40vw;
+}
+.commons-imgs .field--name-field-captioned-images .field__item img {
+  height: 450px;
+  width: auto;
+  border: thin solid #cdcdcd;
 }
 .commons-imgs .field--name-field-captioned-images .field__item .c-csc-captioned_image,
 .commons-imgs .field--name-field-captioned-images .field__item .field--name-field-image,

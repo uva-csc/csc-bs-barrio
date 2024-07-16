@@ -22,6 +22,11 @@
         flex-grow: 1;
         max-width: 40vw;
       }
+      img {
+        height: 450px;
+        width: auto;
+        border: thin solid #cdcdcd;
+      }
       .c-csc-captioned_image,
       .field--name-field-image,
       img {
