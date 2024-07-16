@@ -13281,6 +13281,10 @@ main#content {
   padding: 0;
 }
 
+.node--type-landing-page main#content {
+  margin-top: -1rem;
+}
+
 #header {
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
 }
