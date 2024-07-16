@@ -13277,7 +13277,7 @@ body {
 }
 
 main#content {
-  margin: 18px 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -14116,7 +14116,7 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   line-height: 1.5rem;
 }
 body.node--type-landing-page main#content .field--name-field-hero-top {
-  margin-top: -1.5rem;
+  /* margin-top: -1.5rem;*/
 }
 body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-hero {
   margin-bottom: 1.5rem;
