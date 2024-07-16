@@ -1,8 +1,6 @@
 global-styling:
   version: VERSION
   js:
-    js/boostrap.min.js: {}
-    js/popper.min.js: { weight: -49 }
     js/barrio.js: {}
     js/custom.js: {}
     https://use.typekit.net/tgy5tlj.js: { type: external }
@@ -18,11 +16,9 @@ global-styling:
     - core/jquery
     - core/jquery.once
     - core/drupal
-    - core/popperjs
 
 bootstrap:
   js:
-    /libraries/popper/popper.min.js: {}
     /libraries/bootstrap/dist/js/bootstrap.min.js: {}
   css:
     component:

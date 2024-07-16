@@ -14560,7 +14560,7 @@ main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference 
 main#content .c-csc-text_row .field--name-field-text-boxes {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 5% 70% 25%;
 }
 main#content .c-csc-text_row.equal-2 .field--name-field-text-boxes {
   grid-template-columns: repeat(2, 50%);
@@ -15847,6 +15847,10 @@ body.path-webform .help-curate {
 /* VARIABLES */
 /** Bootstrap Overrides **/
 @media (max-width: 767.9px) {
+  main#content {
+    padding: 0;
+  }
+
   button.navbar-toggler {
     position: absolute;
     top: -45px;
@@ -15872,7 +15876,7 @@ body.path-webform .help-curate {
   .path-frontpage #main-wrapper main#content .c-csc-text_row .field--name-field-text-boxes {
     display: unset;
     position: relative;
-    top: -25rem;
+    top: -15rem;
   }
   .path-frontpage #main-wrapper main#content .c-csc-text_row .field--name-field-text-boxes .c-csc-text_box {
     width: 100%;

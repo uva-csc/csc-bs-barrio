@@ -2,6 +2,10 @@
 
 // Phones
 @media (max-width: 767.9px) {
+  main#content {
+    padding: 0;
+  }
+
   // Move navbar toggle up to top header
   button.navbar-toggler {
     position: absolute;
@@ -10,6 +14,7 @@
     background-color: white;
   }
 
+  // Remove secondary header strip
   #header #navbar-main.bg-primary {
     height: 0px !important;
   }
@@ -38,7 +43,7 @@
         .c-csc-text_row .field--name-field-text-boxes {
           display: unset;
           position: relative;
-          top: -25rem;
+          top: -15rem;
 
           .c-csc-text_box {
             width: 100%;
