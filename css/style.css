@@ -13867,9 +13867,6 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line
   padding: 0.6rem 1rem 0.25rem;
   border-radius: 25px;
 }
-body.path-frontpage main#content .c-csc-text_row {
-  max-height: 190px;
-}
 body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 {
   min-height: 400px;
   /* border: thin solid $csc-lt-blue;*/
