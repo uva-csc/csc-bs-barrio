@@ -260,10 +260,9 @@ main#content {
 // Captioned Image Paragraph
 .c-csc-captioned_image {
   width: fit-content;
+
   .field--name-field-image {
-    max-width: 90%;
-    /*margin: 1rem auto 0.75rem;*/
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
 
     img {
       filter: $img-shadow;

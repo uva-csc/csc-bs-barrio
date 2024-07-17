@@ -96,12 +96,19 @@ function csc_bs_sass_preprocess_node(&$variables) {
 }
 
 function csc_bs_sass_preprocess_field(&$variables) {
-  // csc_log('vars in pp field: ' . json_encode(array_keys($variables)));
-  $fld_name = $variables['field_name'];
-  $el = $variables['element'];
-  $node = $el['#object'];
-  $ctype = $node->bundle();
+  // General use variables
+  $fld_name = $variables['field_name']; // Field name
+  $el = $variables['element'];  // Element array in variables
+  $node = $el['#object'];  // Entity object
+  $ctype = $node->bundle();  // Content Type of Entity (node)
 
+  // Add bootstrap row class to certain fields
+  $row_fields = Array('field_captioned_images');
+  if (in_array($fld_name, $row_fields)) {
+    $variables['attributes']['class'][] = 'row';
+  }
+
+  // Massage event and class dates
   if ($fld_name == 'field_date') {
     if ($ctype == 'event') {
       // TODO: need to account for multiple dates, event with many different occurrences? If that uses multiple items.
@@ -119,7 +126,8 @@ function csc_bs_sass_preprocess_field(&$variables) {
       if (array_key_exists('full', $dt)) {
         $variables['csc_full'] = $dt['full'];
       }
-    } if ($ctype == 'class') {
+    // end of Event dates
+    } elseif ($ctype == 'class') {
       // kint("It's a class!");
       // $dtval = $el['#items'][0]->getValue();
       $class_dt_format = 'D M j, Y';
@@ -146,8 +154,14 @@ function csc_bs_sass_preprocess_field(&$variables) {
           csc_log("problem creating end date: " . $e);
         }
       }
-    }
-  }
+    } // End of class dates
+  } // end of field_date
+  // Captioned images field
+  elseif ($fld_name == 'field_captioned_images') {
+    $numchild = $el['#items']->count();
+    // Number of bs cols is 12 / num child if num child under 5
+    $variables['bscolspan'] = ($numchild < 5) ? 12 / $numchild : 2;
+  } // end of caption images field
 }
 
 

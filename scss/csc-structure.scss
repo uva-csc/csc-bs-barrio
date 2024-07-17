@@ -398,6 +398,8 @@ footer.site-footer {
 
   section.region-footer-second {
     .footer-contact {
+      width: fit-content;
+      margin: 0 auto;
       font-family: $font-frankgoth-std;
 
       h2 {
@@ -443,7 +445,15 @@ footer.site-footer {
       }
     }
 
+    nav#block-csc-bs-sass-footer {
+      width: fit-content;
+      margin: 0 auto;
+    }
+
     .media-links {
+      width: fit-content;
+      margin: 0 auto;
+
       a {
         color: $off-white;
 

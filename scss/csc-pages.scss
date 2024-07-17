@@ -5,41 +5,23 @@
 // Commons Page (new)
 .commons-imgs {
   .field--name-field-captioned-images {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0 5vw;
-    padding-top: 3rem;
-    column-gap: 30px;
+    margin: 3rem 0 2rem 4.5vw;
+    width: fit-content;
 
     .field__item {
-      &:first-child {
-        flex-grow: 2;
-        max-width: 50vw
-      }
-      &:nth-child(2) {
-        flex-grow: 1;
-        max-width: 40vw;
-      }
+      max-width: 800px;
+
       img {
-        height: 450px;
-        width: auto;
-        border: thin solid #cdcdcd;
+        border: thin solid $csc-lt-gray;
       }
-      .c-csc-captioned_image,
-      .field--name-field-image,
-      img {
-        width: 100%;
-        padding: 0;
+
+      .field--name-field-caption {
+        margin: 0;
+        text-align: left;
+        width: inherit;
       }
     }
 
-    .field--name-field-caption {
-      margin: 0.5rem 0.5rem 0;
-      text-align: left;
-      width: inherit;
-    }
   }
 } // end of commons images
 
