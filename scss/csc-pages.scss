@@ -9,6 +9,7 @@
     width: fit-content;
 
     .field__item {
+      max-width: 45vw;
 
       img {
         border: thin solid $csc-lt-gray;
