@@ -14920,9 +14920,6 @@ main#content .c-csc-image_text p {
   margin: 3rem 0 2rem 4.5vw;
   width: fit-content;
 }
-.commons-imgs .field--name-field-captioned-images .field__item {
-  max-width: 800px;
-}
 .commons-imgs .field--name-field-captioned-images .field__item img {
   border: thin solid #eeeeee;
 }
