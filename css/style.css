@@ -13877,34 +13877,44 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line
   padding: 0.6rem 1rem 0.25rem;
   border-radius: 25px;
 }
-body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 {
+body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1, body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 {
   min-height: 400px;
-  /* border: thin solid $csc-lt-blue;*/
-  background-image: url("/themes/custom/csc_bs_sass/images/home/your-space-screen.png");
-  background-repeat: no-repeat;
-  background-size: 30%;
-  background-position-x: 18vw;
-  background-position-y: -8px;
+  /* border: thin solid $csc-lt-blue;
+      background-image: url("/themes/custom/csc_bs_sass/images/home/your-space-screen.png");
+      background-repeat: no-repeat;
+      background-size: 30%;
+      background-position-x: 18vw;
+      background-position-y: -8px;
+  */
+  /*
+  & > div.content {
+    margin-left: 55vw;
+    padding-top: 10px;
+  }
+   */
 }
-body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 > div.content {
-  margin-left: 55vw;
-  padding-top: 10px;
-}
-body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_previous {
+body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_previous, body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 .views_slideshow_controls_text_previous {
   position: absolute;
   transform: translateY(140px);
   z-index: 200;
 }
-body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_previous:hover {
+body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_previous:hover, body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 .views_slideshow_controls_text_previous:hover {
   cursor: pointer;
 }
-body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_next {
+body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_next, body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 .views_slideshow_controls_text_next {
   position: absolute;
   transform: translate(460px, 140px);
   z-index: 200;
 }
-body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_next:hover {
+body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 .views_slideshow_controls_text_next:hover, body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 .views_slideshow_controls_text_next:hover {
   cursor: pointer;
+}
+body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 {
+  background-image: none;
+  overflow: hidden;
+}
+body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 .view-media-slideshow {
+  overflow: hidden;
 }
 body.path-frontpage main#content .events-row .wrapper {
   padding: 0 30px;
@@ -14938,6 +14948,7 @@ main#content .c-csc-image_text p {
 
 .features-1over2 > .layout__region .field--name-field-teaser-image,
 .features-1over2 > .layout__region .field--name-field-image {
+  width: 30vw;
   background-image: url("/sites/default/files/2024-04/South_Lawn_Commons_Students_16_1V3A1133_160over90.jpg");
   background-size: cover;
 }
