@@ -14823,22 +14823,26 @@ main#content .c-csc-image_text p {
   filter: none;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date {
-  margin: 18px 8px 0;
+  margin: 0 8px;
   line-height: 1.35rem;
   font-weight: bold;
-  max-width: 400px;
+  max-width: 380px;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date .smart-date--time {
   display: none;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field .field-content {
+  text-align: center;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-location {
   margin: 0 8px;
   font-size: 90%;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title {
-  margin: 0.5rem 8px 0;
+  margin: 0.5rem 0 0;
   font-size: 110%;
   font-weight: bold;
+  max-width: 400px;
 }
 .view-events.events-row .view-footer {
   width: fit-content;

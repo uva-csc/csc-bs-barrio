@@ -164,14 +164,18 @@
           line-height: 1.35rem;*/
 
           .views-field-field-date {
-            margin: 18px 8px 0;
+            margin: 0 8px;
             line-height: 1.35rem;
             font-weight: bold;
-            max-width: 400px;
+            max-width: 380px;
 
             .smart-date--time {
               display: none;
             }
+          }
+
+          .views-field .field-content {
+            text-align: center;
           }
 
           .views-field-field-location {
@@ -180,9 +184,10 @@
           }
 
           .views-field-title {
-            margin: 0.5rem 8px 0;
+            margin: 0.5rem 0 0;
             font-size: 110%;
             font-weight: bold;
+            max-width: 400px;
           }
 
         }  // End of views-view-responsive-grid__item-inner
