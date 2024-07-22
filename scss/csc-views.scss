@@ -127,6 +127,100 @@
   }
 }
 
+// Event Views Blocks (Some on Home page css too)
+.view-events {
+  // Block 3 of View. Shows row of latest events.
+  &.events-row {
+
+    .view-header h2 {
+      font-family: $font-frankgoth-hvy;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 250%;
+    }
+
+    .view-content {
+      .views-view-responsive-grid {
+        justify-items: center;
+
+        .views-view-responsive-grid__item-inner {
+          border: thin solid #939292;
+          border-top: 16px solid $uva-orange;
+          background-color: $white;
+
+          .views-field-field-image {
+            border-top: thin solid #939292;
+            img {
+              border: none;
+              border-radius: 0;
+              padding: 0;
+              filter: none;
+            }
+          } // End of .field--name-field-image
+
+
+          /*margin: 10px 8px 0;
+          padding-top: 0.5rem;
+          line-height: 1.35rem;*/
+
+          .views-field-field-date {
+            margin: 18px 8px 0;
+            line-height: 1.35rem;
+            font-weight: bold;
+            max-width: 400px;
+
+            .smart-date--time {
+              display: none;
+            }
+          }
+
+          .views-field-field-location {
+            margin: 0 8px;
+            font-size: 90%;
+          }
+
+          .views-field-title {
+            margin: 0.5rem 8px 0;
+            font-size: 110%;
+            font-weight: bold;
+          }
+
+        }  // End of views-view-responsive-grid__item-inner
+      } // End of views-view-responsive-grid
+    } // End of .view-events .view-content
+    .view-footer {
+      width: fit-content;
+      margin: 3rem auto 1rem;
+      text-align: center;
+
+      p { // The "More Events Button"
+        font-family: $font-frankgoth-hvy;
+        font-size: 90%;
+        padding: 0rem 3.5rem;
+        border-radius: 3px;
+        line-height: 1.15rem;
+
+        a {
+          display: inline-block;
+          padding-top: 0.35rem;
+          color: $white !important;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    } // End of .events-row .footer
+  } // End of &.events-row
+
+  // Featured Event on Events Page
+  &.featured-event {
+    max-width: 500px;
+    margin-left: 5rem;
+    .views-field.event-type {
+      margin-top: 0.8rem;
+    }
+  }
+} // End of .view-events
+
 // News block (view)
 .view.csc-news-block {
   max-width: 75vw;
@@ -202,96 +296,3 @@
   }
 
 } // end of view news block
-
-// Event Views Blocks (Some on Home page css too)
-.view-events {
-  // Block 3 of View. Shows row of latest events.
-  &.events-row {
-
-    .view-header h2 {
-      font-family: $font-frankgoth-hvy;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 250%;
-    }
-
-    .view-content {
-      .views-view-responsive-grid {
-        justify-items: center;
-
-        .views-view-responsive-grid__item-inner {
-          border: thin solid #939292;
-          border-top: 16px solid $uva-orange;
-          background-color: $white;
-
-          .views-field-field-image {
-            border-top: thin solid #939292;
-            img {
-              border: none;
-              border-radius: 0;
-              padding: 0;
-              filter: none;
-            }
-          } // End of .field--name-field-image
-
-
-          /*margin: 10px 8px 0;
-          padding-top: 0.5rem;
-          line-height: 1.35rem;*/
-
-          .views-field-field-date {
-            margin: 18px 8px 0;
-            line-height: 1.35rem;
-            font-weight: bold;
-
-            .smart-date--time {
-              display: none;
-            }
-          }
-
-          .views-field-field-location {
-            margin: 0 8px;
-            font-size: 90%;
-          }
-
-          .views-field-title {
-            margin: 0.5rem 8px 0;
-            font-size: 110%;
-            font-weight: bold;
-          }
-
-        }  // End of views-view-responsive-grid__item-inner
-      } // End of views-view-responsive-grid
-    } // End of .view-events .view-content
-    .view-footer {
-      width: fit-content;
-      margin: 3rem auto 1rem;
-      text-align: center;
-
-      p { // The "More Events Button"
-        font-family: $font-frankgoth-hvy;
-        font-size: 90%;
-        padding: 0rem 3.5rem;
-        border-radius: 3px;
-        line-height: 1.15rem;
-
-        a {
-          display: inline-block;
-          padding-top: 0.35rem;
-          color: $white !important;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-        }
-      }
-    } // End of .events-row .footer
-  } // End of &.events-row
-
-  // Featured Event on Events Page
-  &.featured-event {
-    max-width: 500px;
-    margin-left: 5rem;
-    .views-field.event-type {
-      margin-top: 0.8rem;
-    }
-  }
-} // End of .view-events
