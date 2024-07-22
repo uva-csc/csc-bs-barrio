@@ -15155,6 +15155,12 @@ main#content .c-csc-image_text p {
 /** End of Individual Page Styles **/
 /* VARIABLES */
 /** Bootstrap Overrides **/
+/** Head Tweaks **/
+h2.hero-title, .hero-title.h2 {
+  padding-top: 25vh;
+  font-size: 5.5rem;
+}
+
 /** General Text Styles **/
 .fsnorm {
   font-size: 1rem !important;
@@ -16143,6 +16149,17 @@ div.toolbar-tab a#toolbar-item-devel {
 
 .layout-builder .blue-chevron > div.wrapper:first-child:before {
   margin-top: 0px;
+}
+.layout-builder .block-csc-skewed-block .contextual:after {
+  display: block;
+  content: "Colored Skew Block";
+}
+.layout-builder .block-csc-skewed-block .content {
+  display: none;
+}
+
+#drupal-off-canvas-wrapper .layout-selection .list-group-item a {
+  color: white !important;
 }
 
 /* GENERAL STYLES

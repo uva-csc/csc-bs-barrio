@@ -1,5 +1,12 @@
 @import 'variables.scss';
 
+/** Head Tweaks **/
+// For h2 text overlay for the title of heros
+h2.hero-title {
+  padding-top: 25vh;
+  font-size: 5.5rem;
+}
+
 /** General Text Styles **/
 .fsnorm {
   font-size: 1rem!important;

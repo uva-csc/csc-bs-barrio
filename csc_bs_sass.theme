@@ -70,6 +70,7 @@ function csc_bs_sass_preprocess_node(&$variables) {
       ];
       $node->get('field_short_title')->setValue($short_title);
     }
+
   // PEOPLE
   } else if ($node_type == 'people') {
     $mid = $node->get('field_image')[0]?->get('target_id')?->getValue();
@@ -78,6 +79,7 @@ function csc_bs_sass_preprocess_node(&$variables) {
     }
     $furl = midToUrl($mid, 'people_teaser');
     $variables['image_url'] = $furl;
+
   // Teasers for Common Pages
   } else if (in_array($node_type, array('page_full_width', 'page', 'landing_page')) && in_array($variables['view_mode'], array('teaser', 'alt_teaser'))) {
     if (empty($variables['title_attributes']['class'])) {
@@ -174,7 +176,8 @@ function csc_bs_sass_preprocess_views_view(&$variables) {
     $query_parameters = Drupal::request()->query->all();
     if (!empty($query_parameters['f'])) {
       $role = ucwords(str_replace(array('roles:', '_'), array('', ' '), $query_parameters['f'][0]));
-      if (in_array(strtolower($role), ['contemplative instructor', 'intern'])) {
+      // Role is singluar, use plural for header where appropriate
+      if (!in_array(strtolower($role), ['staff', 'advisory board'])) {
         $role .= 's';
       }
       $variables['header']['area']['#text'] .= "<h3>$role</h3>";
@@ -237,7 +240,8 @@ function csc_bs_sass_preprocess_facets_result_item(&$facet) {
   // csc_log(json_encode([$variables['value'], array_keys($variables)]));
   $label = $facet['value'];
   $new_label = ucwords(str_replace('_', ' ', $label));
-  if (in_array($new_label, ['Intern', 'Contemplative Instructor'])) {
+  /* Pluralizes facet names in facet box  on the left side of the people page */
+  if (!in_array($new_label, ['Staff', 'Advisory Board'])) {
     $new_label = $new_label . 's';
   }
   $facet['value'] = $new_label;

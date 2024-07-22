@@ -87,4 +87,18 @@ div.toolbar-tab {
   .blue-chevron > div.wrapper:first-child:before {
     margin-top: 0px;
   }
+
+  .block-csc-skewed-block {
+    .contextual:after {
+      display: block;
+      content: "Colored Skew Block";
+    }
+    .content {
+      display: none;
+    }
+  }
+}
+// Layout selection sidebar is not under class .layout-builder
+#drupal-off-canvas-wrapper .layout-selection .list-group-item a {
+  color: white !important;
 }
