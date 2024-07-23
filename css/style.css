@@ -14142,10 +14142,23 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
   /* TODO: Make this more specific to its context?? */
   line-height: 1.5rem;
 }
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  width: 30%;
+  padding: 1rem;
+  background-color: #13192999;
+}
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption p {
+  color: #fdfdfd !important;
+  margin: 0;
+}
 body.node--type-landing-page main#content .field--name-field-hero-top {
   /* margin-top: -1.5rem;*/
 }
 body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-hero {
+  position: relative;
   margin-bottom: 1.5rem;
   padding-bottom: 2rem;
 }

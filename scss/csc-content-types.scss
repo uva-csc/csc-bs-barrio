@@ -114,11 +114,25 @@ body.node--type-landing-page  main#content {
       margin-left: 27vw; /* TODO: Make this more specific to its context?? */
       line-height: 1.5rem;
     }
+
+    &.caption {
+      position: absolute;
+      right: 0;
+      bottom: 50px;
+      width: 30%;
+      padding: 1rem;
+      background-color: #13192999; // #232D4B99;
+      p {
+        color: $white!important;
+        margin: 0;
+      }
+    }
   } // End of Hero Overlays
 
   .field--name-field-hero-top {
     /* margin-top: -1.5rem;*/
     .c-csc-hero {
+      position: relative;
       margin-bottom: 1.5rem;
       padding-bottom: 2rem;
     }
