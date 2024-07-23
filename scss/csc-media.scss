@@ -220,7 +220,14 @@
 } // End of max-width: 767.9px (phones)
 
 // Medium (Tablets)
-@media (min-width: 768px) and (max-width: 991.9px) {
+@media (min-width: 768px) {
+  body.node--type-landing-page main#content {
+    .field--name-field-text-overlay .c-csc-text_box {
+      &.caption {
+        width: 50%;
+      }
+    } // End of Overlay text box
+  }// End of Landing pages medium
 } // End of Tablets
 
 // Only Large (small laptops)
@@ -282,18 +289,39 @@
     } // End of Front page
 
     // General
+
     .c-csc-teaser_row .field.field--name-field-teasers {
       gap: 10px;
     }
-  }
+  }  // end of Front page Medium
+
 } // End of min-width: 992 and max-width: 1199.9px
 
 // Only XLarge Most Small Laptops
 @media (min-width: 1200px) and (max-width: 1399.9px) {
-
-}
+  body.node--type-landing-page main#content {
+    .field--name-field-text-overlay .c-csc-text_box {
+      &.caption {
+        width: 40%;
+      }
+    } // End of Overlay text box
+  }// End of Landing pages XLarge
+} // End XLarge between 1200-1400px
 
 // XXL
 @media (min-width: 1400px) {
+  body.node--type-landing-page main#content {
+    .field--name-field-text-overlay .c-csc-text_box {
+      &.caption {
+        width: 30%;
+      }
+    } // End of Overlay text box
+  } // End of Landing pages XXLarge
   .footer-contact, .navigation, .media-links { padding-left: 5%; }
+}
+
+// Min widths only
+// Medium (Tablets) on up
+@media (min-width: 768px) {
+
 }

@@ -14144,11 +14144,17 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
 }
 body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
   position: absolute;
-  right: 0;
-  bottom: 50px;
-  width: 30%;
+  width: 100%;
   padding: 1rem;
   background-color: #13192999;
+}
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption.bottom-right {
+  right: 0;
+  bottom: 50px;
+}
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption.bottom-left {
+  left: 0;
+  bottom: 50px;
 }
 body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption p {
   color: #fdfdfd !important;
@@ -16056,6 +16062,11 @@ body.path-webform .help-curate {
     background-color: #C8CBD2;
   }
 }
+@media (min-width: 768px) {
+  body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
+    width: 50%;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199.9px) {
   #header #navbar-top {
     max-width: 100vw;
@@ -16100,7 +16111,16 @@ body.path-webform .help-curate {
     gap: 10px;
   }
 }
+@media (min-width: 1200px) and (max-width: 1399.9px) {
+  body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
+    width: 40%;
+  }
+}
 @media (min-width: 1400px) {
+  body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
+    width: 30%;
+  }
+
   .footer-contact, .navigation, .media-links {
     padding-left: 5%;
   }

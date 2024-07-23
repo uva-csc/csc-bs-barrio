@@ -117,11 +117,19 @@ body.node--type-landing-page  main#content {
 
     &.caption {
       position: absolute;
-      right: 0;
-      bottom: 50px;
-      width: 30%;
+      width: 100%;
       padding: 1rem;
       background-color: #13192999; // #232D4B99;
+
+      &.bottom-right {
+        right: 0;
+        bottom: 50px;
+      }
+      &.bottom-left {
+        left: 0;
+        bottom: 50px;
+      }
+
       p {
         color: $white!important;
         margin: 0;
