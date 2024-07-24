@@ -506,8 +506,10 @@ footer.site-footer {
 }
 
 // Media Images on left in a 33%/67% layout builder layout
-div.layout--twocol-section {
-
+.layout--twocol-section {
+  .layout__region--second {
+    padding-left: 1rem;
+  }
 }
 
 div.layout--twocol-section--33-67 {

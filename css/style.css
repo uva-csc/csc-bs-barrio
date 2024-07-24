@@ -13647,6 +13647,10 @@ footer.site-footer .rector-visitor-block {
   margin-top: 0;
 }
 
+.layout--twocol-section .layout__region--second {
+  padding-left: 1rem;
+}
+
 div.layout--twocol-section--33-67.padded .layout__region--first {
   padding-right: 1rem;
 }
