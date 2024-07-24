@@ -16163,12 +16163,9 @@ div.toolbar-tab a#toolbar-item-devel {
   color: #fdfdfd !important;
 }
 
-#csc-admin-msg {
-  margin-bottom: 20px;
-}
 #csc-admin-msg > div:not(.hidden) {
   text-align: center;
-  padding: 0.25rem 0;
+  padding: 0 0 1.25rem;
 }
 #csc-admin-msg > div:not(.hidden) em.placeholder {
   background: transparent;

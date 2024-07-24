@@ -42,10 +42,9 @@ div.toolbar-tab {
 
 // Admin Messages
 #csc-admin-msg {
-  margin-bottom: 20px;
   & > div:not(.hidden) {
     text-align: center;
-    padding: 0.25rem 0;
+    padding: 0 0 1.25rem;
 
     em.placeholder {
       background: transparent;
