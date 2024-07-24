@@ -14706,6 +14706,7 @@ main#content .c-csc-image_text p {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
 .c-csc-captioned_image .field--name-field-caption {
+  margin-top: 0.5rem;
   max-width: 90%;
   font-size: 0.95rem;
   text-align: right;
@@ -16203,6 +16204,10 @@ div.toolbar-tab a#toolbar-item-devel {
 }
 
 #drupal-off-canvas-wrapper .layout-selection .list-group-item a {
+  color: white !important;
+}
+
+div#drupal-off-canvas a {
   color: white !important;
 }
 
