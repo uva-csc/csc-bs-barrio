@@ -440,6 +440,11 @@ a.read-more, span.read-more {
 }
 
 /** Images **/
+.field--name-body .field--name-field-media-image {
+  margin-bottom: 0.5rem;
+}
+
+// ONly allowing Drupal media items in CKEditor so this may be obsolete.
 .field--name-field-image {
   /* Not sure why these are here. Maybe old code...
   float: left;
