@@ -56,21 +56,26 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $vals[$n] = $val;
     }
     $date->setValue($vals);
+    $variables['valnums'] = count($vals);
+    $variables['stdt'] = $vals[0]['value'];
 
   // LOCATIONS
   } else if ($node_type == 'location') {
+    $view_mode = $variables['view_mode'];
     $short_title = $node->get('field_short_title')->getValue();
+    $title = $node->label();
     if (empty($short_title)) {
-      $title = $node->label();
-      $short_title = [
+      $short_title_array = [
         [
           'value' => $title,
           'format' => 'basic_html',
         ]
       ];
-      $node->get('field_short_title')->setValue($short_title);
+      $node->get('field_short_title')->setValue($short_title_array);
     }
-
+    if ($view_mode == 'alt_teaser') {
+      $variables['display_title'] = empty($short_title) ? $title : $short_title;
+    }
   // PEOPLE
   } else if ($node_type == 'people') {
     $mid = $node->get('field_image')[0]?->get('target_id')?->getValue();

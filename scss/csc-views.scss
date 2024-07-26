@@ -130,7 +130,7 @@
 // Event Views Blocks (Some on Home page css too)
 .view-events {
   // Block 3 of View. Shows row of latest events.
-  &.events-row {
+  &.events-row, &.events-row-teasers {
 
     .view-header h2 {
       font-family: $font-frankgoth-hvy;
@@ -148,7 +148,15 @@
           border-top: 16px solid $uva-orange;
           background-color: $white;
 
-          .views-field-field-image {
+          .node--view-mode-teaser {
+            margin-bottom: 10px;
+            .node__content {
+              margin-top: 0;
+              text-align: center
+            }
+          }
+
+          .views-field-field-image, .field--name-field-image {
             border-top: thin solid #939292;
             img {
               border: none;
@@ -174,21 +182,32 @@
             }
           }
 
+          .field--name-field-date {
+            margin: 0;
+            max-width: 300px;
+            line-height: 1.35rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+          }
+
           .views-field .field-content {
             text-align: center;
           }
 
-          .views-field-field-location {
+          .views-field-field-location, .field--name-field-location {
             margin: 0 8px;
             font-size: 90%;
           }
 
-          .views-field-title {
+          .views-field-title, .field--name-field-short-title {
             margin: 0.5rem 0 0;
             font-size: 110%;
             font-weight: bold;
             max-width: 400px;
           }
+
+          // New way with teasers
+
 
         }  // End of views-view-responsive-grid__item-inner
       } // End of views-view-responsive-grid
