@@ -78,14 +78,13 @@
     'clearfix'
   ]
 %}
-{%
- set use_title = node.field_short_title ? node.field_short_title.value : label
- %}
+{% set is_short_title = content.field_short_title|render|striptags|trim|length  %}
+{% set display_title = is_short_title ? content.field_short_title|render|striptags : label %}
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
     <h5{{ title_attributes.addClass('node__title') }}>
-      <a href="{{ url }}" rel="bookmark" class="reversed">{{ use_title }}</a>
+      <a href="{{ url }}" rel="bookmark" class="reversed">{{ display_title }}</a>
     </h5>
     {{ title_suffix }}
   </header>

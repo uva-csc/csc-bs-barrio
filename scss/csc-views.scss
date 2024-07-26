@@ -142,9 +142,11 @@
     .view-content {
       .views-view-responsive-grid {
         justify-items: center;
+        grid-auto-rows: 1fr;
 
         .views-view-responsive-grid__item-inner {
           border: thin solid #939292;
+          height: 100%;
           border-top: 16px solid $uva-orange;
           background-color: $white;
 

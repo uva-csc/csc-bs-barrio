@@ -14834,9 +14834,11 @@ main#content .c-csc-image_text p {
 }
 .view-events.events-row .view-content .views-view-responsive-grid, .view-events.events-row-teasers .view-content .views-view-responsive-grid {
   justify-items: center;
+  grid-auto-rows: 1fr;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
   border: thin solid #939292;
+  height: 100%;
   border-top: 16px solid #E57325;
   background-color: #fdfdfd;
   /*margin: 10px 8px 0;

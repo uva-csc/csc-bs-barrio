@@ -61,9 +61,13 @@ function csc_bs_sass_preprocess_node(&$variables) {
 
   // LOCATIONS
   } else if ($node_type == 'location') {
-    $view_mode = $variables['view_mode'];
+    /*
     $short_title = $node->get('field_short_title')->getValue();
+    $variables['display_title'] = (empty($short_title)) ? $node->label() : $short_title;
+
+    $view_mode = $variables['view_mode'];
     $title = $node->label();
+    $short_title = $node->get('field_short_title')->getValue();
     if (empty($short_title)) {
       $short_title_array = [
         [
@@ -72,10 +76,7 @@ function csc_bs_sass_preprocess_node(&$variables) {
         ]
       ];
       $node->get('field_short_title')->setValue($short_title_array);
-    }
-    if ($view_mode == 'alt_teaser') {
-      $variables['display_title'] = empty($short_title) ? $title : $short_title;
-    }
+    }*/
   // PEOPLE
   } else if ($node_type == 'people') {
     $mid = $node->get('field_image')[0]?->get('target_id')?->getValue();
