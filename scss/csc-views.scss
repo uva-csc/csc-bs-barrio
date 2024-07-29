@@ -129,6 +129,10 @@
 
 // Event Views Blocks (Some on Home page css too)
 .view-events {
+  &.events-row-teasers {
+    max-width: 76vw;
+    padding: 0;
+  }
   // Block 3 of View. Shows row of latest events.
   &.events-row, &.events-row-teasers {
 
@@ -149,6 +153,16 @@
           height: 100%;
           border-top: 16px solid $uva-orange;
           background-color: $white;
+
+          article.node--type-event {
+            margin: 0;
+            padding: 0;
+          }
+
+          p.location {
+            margin: 0;
+            font-size: 105%;
+          }
 
           .node--view-mode-teaser {
             margin-bottom: 10px;
@@ -185,9 +199,9 @@
           }
 
           .field--name-field-date {
-            margin: 0;
+            margin: 0 0 0.25rem 0;
             max-width: 300px;
-            line-height: 1.35rem;
+            line-height: 1.05rem;
             font-size: 0.85rem;
             font-weight: bold;
           }
@@ -198,12 +212,12 @@
 
           .views-field-field-location, .field--name-field-location {
             margin: 0 8px;
-            font-size: 90%;
+            /* font-size: 90%;*/
           }
 
           .views-field-title, .field--name-field-short-title {
             margin: 0.5rem 0 0;
-            font-size: 110%;
+            font-size: 135%;
             font-weight: bold;
             max-width: 400px;
           }
@@ -251,6 +265,7 @@
 .view.csc-news-block {
   max-width: 75vw;
   margin: 2rem auto;
+  padding-left: 1rem;
 
   // No orange border on links
   a {
@@ -261,17 +276,18 @@
   .view-header {
     position: relative;
     width: 100%;
-    background-color: $uva-orange;
+    /* background-color: $uva-orange; */
     margin-bottom: 0.5rem;
     padding: 0.2rem 0 0;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 
     h2 {
       margin: 1rem auto;
       width: fit-content;
-      color: white;
-      font-size: 300%;
+      /*color: white;*/
+      font-size: 250%;
       font-weight: bold;
+      text-transform: uppercase;
     }
   }
 

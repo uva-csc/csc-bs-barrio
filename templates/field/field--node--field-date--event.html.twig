@@ -54,8 +54,8 @@
 {% set first_item = items|first %}
 {% set last_item = items|last %}
 
-{% if label_hidden and (items|length > 1) %}
-  {% if multiple %}
+{% if label_hidden %}
+  {% if multiple and (items|length > 1) %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
       <div{{ item.attributes.addClass('field__item') }}>{{ first_item.content }} </div>
       through

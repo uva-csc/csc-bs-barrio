@@ -14826,6 +14826,10 @@ main#content .c-csc-image_text p {
   font-style: italic;
 }
 
+.view-events.events-row-teasers {
+  max-width: 76vw;
+  padding: 0;
+}
 .view-events.events-row .view-header h2, .view-events.events-row .view-header .h2, .view-events.events-row-teasers .view-header h2, .view-events.events-row-teasers .view-header .h2 {
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   text-align: center;
@@ -14844,6 +14848,14 @@ main#content .c-csc-image_text p {
   /*margin: 10px 8px 0;
   padding-top: 0.5rem;
   line-height: 1.35rem;*/
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article.node--type-event, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article.node--type-event {
+  margin: 0;
+  padding: 0;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner p.location, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner p.location {
+  margin: 0;
+  font-size: 105%;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .node--view-mode-teaser, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .node--view-mode-teaser {
   margin-bottom: 10px;
@@ -14871,9 +14883,9 @@ main#content .c-csc-image_text p {
   display: none;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date {
-  margin: 0;
+  margin: 0 0 0.25rem 0;
   max-width: 300px;
-  line-height: 1.35rem;
+  line-height: 1.05rem;
   font-size: 0.85rem;
   font-weight: bold;
 }
@@ -14882,11 +14894,11 @@ main#content .c-csc-image_text p {
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-location, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-location, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-location, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-location {
   margin: 0 8px;
-  font-size: 90%;
+  /* font-size: 90%;*/
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title {
   margin: 0.5rem 0 0;
-  font-size: 110%;
+  font-size: 135%;
   font-weight: bold;
   max-width: 400px;
 }
@@ -14920,6 +14932,7 @@ main#content .c-csc-image_text p {
 .view.csc-news-block {
   max-width: 75vw;
   margin: 2rem auto;
+  padding-left: 1rem;
 }
 .view.csc-news-block a {
   border-bottom: none;
@@ -14927,17 +14940,18 @@ main#content .c-csc-image_text p {
 .view.csc-news-block .view-header {
   position: relative;
   width: 100%;
-  background-color: #E57325;
+  /* background-color: $uva-orange; */
   margin-bottom: 0.5rem;
   padding: 0.2rem 0 0;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 .view.csc-news-block .view-header h2, .view.csc-news-block .view-header .h2 {
   margin: 1rem auto;
   width: fit-content;
-  color: white;
-  font-size: 300%;
+  /*color: white;*/
+  font-size: 250%;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .view.csc-news-block .node--view-mode-teaser {
   border: none;
