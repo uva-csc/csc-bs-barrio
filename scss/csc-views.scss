@@ -216,10 +216,15 @@
           }
 
           .views-field-title, .field--name-field-short-title {
-            margin: 0.5rem 0 0;
-            font-size: 135%;
+            margin: 0.65rem 0;
+            line-height: 1.2;
+            font-size: 115%;
             font-weight: bold;
             max-width: 400px;
+
+            a {
+              border-bottom: none;
+            }
           }
 
           // New way with teasers

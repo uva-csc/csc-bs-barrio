@@ -74,11 +74,19 @@
   ]
 %}
 {% set is_short_title = content.field_short_title|render|striptags|trim|length  %}
-{% set display_title = is_short_title ? content.field_short_title|render|striptags : label %}
+
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
     {{ content.field_image }}
-    <div class="clearfix text-formatted field field--name-field-short-title field--type-text field--label-hidden field__item">{{ display_title|raw }}</div>
+    <div class="clearfix text-formatted field field--name-field-short-title field--type-text field--label-hidden field__item">
+      <a href="{{ url }}">
+        {% if is_short_title %}
+          {{ content.field_short_title }}
+        {% else %}
+          {{ label }}
+        {% endif %}
+      </a>
+    </div>
     {{ content|without('field_image', 'field_short_title') }}
   </div>
 </article>

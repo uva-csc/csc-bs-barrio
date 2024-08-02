@@ -13984,7 +13984,7 @@ body.path-frontpage main#content .upcoming-events {
 }
 body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#content .upcoming-events .h3 {
   display: inline-block;
-  maring-top: 0.5rem;
+  margin-top: 0.5rem;
   margin-bottom: 5rem;
   padding-bottom: 0.75rem;
   padding-left: 10%;
@@ -14897,10 +14897,14 @@ main#content .c-csc-image_text p {
   /* font-size: 90%;*/
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title {
-  margin: 0.5rem 0 0;
-  font-size: 135%;
+  margin: 0.65rem 0;
+  line-height: 1.2;
+  font-size: 115%;
   font-weight: bold;
   max-width: 400px;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title a, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title a, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title a, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title a {
+  border-bottom: none;
 }
 .view-events.events-row .view-footer, .view-events.events-row-teasers .view-footer {
   width: fit-content;
