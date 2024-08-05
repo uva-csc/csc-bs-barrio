@@ -91,7 +91,7 @@ body.node--type-landing-page  main#content {
             }
           } // End of Row
         }  // End of .student-links1
-      }
+      } // end of csc-text-box in .csc-hero
 
       // Overlay (see below .csc-2col-tbl general definition for grid layout specs)
 /*
@@ -146,7 +146,8 @@ body.node--type-landing-page  main#content {
         }
       }
       */
-    }
+    } // End of .csc-hero
+
   } // End of Large Hero pages (like Student)
 
   h1.title-overlay {
@@ -454,7 +455,7 @@ body.node--type-class {
     gap: 75px;
   }
   .layout__region.layout__region--first {
-    max-width:800px;
+    max-width:800px !important;
     padding-right: 5rem;
 
     ol.breadcrumb {

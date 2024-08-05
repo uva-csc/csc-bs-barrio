@@ -237,7 +237,11 @@
           }
         } // End of .c-csc-hero
       } // End of main#content.csc-lg-hero
-    }
+
+      .field--name-field-hero-top {
+        margin-top: 1rem;
+      }
+    } // End of main#content
   } // End of Landing Page
 
 } // End of max-width: 767.9px (phones)

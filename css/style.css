@@ -14415,7 +14415,7 @@ body.node--type-class div.event-content.layout--twocol-section {
   gap: 75px;
 }
 body.node--type-class .layout__region.layout__region--first {
-  max-width: 800px;
+  max-width: 800px !important;
   padding-right: 5rem;
 }
 body.node--type-class .layout__region.layout__region--first ol.breadcrumb {
@@ -16172,6 +16172,9 @@ body.path-webform .help-curate {
 
   body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title h1, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title .h1 {
     font-size: 2rem;
+  }
+  body.node--type-landing-page main#content .field--name-field-hero-top {
+    margin-top: 1rem;
   }
 }
 @media (min-width: 768px) {
