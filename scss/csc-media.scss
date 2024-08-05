@@ -227,6 +227,19 @@
       }
     }
   }
+
+  body.node--type-landing-page {
+    main#content {
+      &.csc-lg-hero {  // See csc-content-types.scss (l 11) for why it needs to be so specific TODO: clean this up
+        .c-csc-hero {
+          .c-csc-text_box.hero-title h1 {
+            font-size: 2rem;
+          }
+        } // End of .c-csc-hero
+      } // End of main#content.csc-lg-hero
+    }
+  } // End of Landing Page
+
 } // End of max-width: 767.9px (phones)
 
 // Medium (Tablets)

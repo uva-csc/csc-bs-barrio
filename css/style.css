@@ -16110,6 +16110,10 @@ body.path-webform .help-curate {
     margin: unset !important;
     background-color: #C8CBD2;
   }
+
+  body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title h1, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title .h1 {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 768px) {
   body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
