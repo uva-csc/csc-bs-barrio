@@ -17,6 +17,7 @@
         if ($('#toolbar-bar').length > 0 && $('#node-admin-links').length > 0) {
           $('#node-admin-links').appendTo('#toolbar-bar');
         }
+        /*
         // Enable mobil menu button
         $('#navbar-main').on('click', '.navbar-toggler', (e) => {
           const btn = $(e.currentTarget);
@@ -30,6 +31,7 @@
           }
           // console.log('clicked!', e, $(e.currentTarget).attr('aria-expanded'));
         });
+         */
       });
 
     }
