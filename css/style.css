@@ -14053,6 +14053,34 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
   line-height: 1.25rem;
 }
 
+.home-title-overlay {
+  /*transform: translateY(30px);*/
+}
+.home-title-overlay h2, .home-title-overlay .h2 {
+  margin: 5rem 0 0;
+  font-size: 300%;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #232D4B;
+}
+.home-title-overlay h3, .home-title-overlay .h3 {
+  margin-top: 0;
+  font-size: 220%;
+  letter-spacing: 0.03rem;
+}
+.home-title-overlay p.home-tag-line {
+  font-family: "ITC Franklin Gothic Std";
+  font-size: 1.65rem;
+  font-weight: bold;
+  color: #E57325;
+  /* text-shadow: 2px 1px 2px #000000; */
+  background-color: #fdfdfd;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.6rem 1rem 0.25rem;
+  border-radius: 25px;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero {
@@ -14127,7 +14155,6 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_bo
 }
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl > div {
   text-align: left;
-  margin-bottom: 1rem;
 }
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl > div a {
   font-weight: bold;
@@ -14552,6 +14579,46 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 }
 .node--type-people .image-bio .block-field-blocknodepeoplefield-description * {
   color: #232D4B;
+}
+
+.node--type-landing-page .c-csc-text_box {
+  /*
+
+  p {
+    color: $uva-blue;
+    max-width: 650px;
+    text-align: left;
+    margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
+    line-height: 1.5rem;
+  }
+  */
+}
+.node--type-landing-page .c-csc-text_box.bottom-right.caption {
+  width: 25vw;
+}
+.node--type-landing-page .c-csc-text_box h2, .node--type-landing-page .c-csc-text_box .h2 {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  text-align: left;
+  margin: 1.5rem 0 0.5rem 25vw;
+  font-size: 2.75rem;
+}
+.node--type-landing-page .c-csc-text_box.caption {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  background-color: #13192999;
+}
+.node--type-landing-page .c-csc-text_box.caption.bottom-right {
+  right: 0;
+  bottom: 50px;
+}
+.node--type-landing-page .c-csc-text_box.caption.bottom-left {
+  left: 0;
+  bottom: 50px;
+}
+.node--type-landing-page .c-csc-text_box.caption p {
+  color: #fdfdfd !important;
+  margin: 0;
 }
 
 /* VARIABLES */

@@ -98,7 +98,7 @@ body.node--type-landing-page  main#content {
 
         & > div {
           text-align: left;
-          margin-bottom: 1rem;
+
           a {
             font-weight: bold;
             text-transform: uppercase;
@@ -644,3 +644,48 @@ body.node--type-class {
 } // End of People Pages
 
 // End of Content Type Styles
+
+// Hero Overlays
+.node--type-landing-page .c-csc-text_box {
+  &.bottom-right.caption {
+    width: 25vw;
+  }
+
+  h2 {
+    font-family: $font-frankgoth-med;
+    text-align: left;
+    margin: 1.5rem 0 0.5rem 25vw;
+    font-size: 2.75rem;
+  }
+  /*
+
+  p {
+    color: $uva-blue;
+    max-width: 650px;
+    text-align: left;
+    margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
+    line-height: 1.5rem;
+  }
+  */
+
+  &.caption {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    background-color: #13192999; // #232D4B99;
+
+    &.bottom-right {
+      right: 0;
+      bottom: 50px;
+    }
+    &.bottom-left {
+      left: 0;
+      bottom: 50px;
+    }
+
+    p {
+      color: $white!important;
+      margin: 0;
+    }
+  }
+} // End of Hero Overlays
