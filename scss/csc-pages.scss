@@ -3,25 +3,23 @@
 /*** Individual Page Styles ***/
 
 // Commons Page (new)
-.commons-imgs {
-  .field--name-field-captioned-images {
-    margin: 3rem 0 2rem 4.5vw;
-    width: fit-content;
-
-    .field__item {
-      max-width: 45vw;
-
-      img {
-        border: thin solid $csc-lt-gray;
-      }
-
-      .field--name-field-caption {
-        margin: 0;
-        text-align: left;
-        width: inherit;
-      }
+.commons-images {
+  margin-top: 2rem;
+  .block.captioned-image {
+    .field--name-field-image img {
+      border: thin solid $csc-lt-gray;
+      width: 100%;
+      height: auto;
     }
 
+    .field--name-field-caption {
+      color: #212529;
+      max-width: 100%;
+      font-weight: normal;
+      font-size: 90%;
+      margin: 0.25rem 0 0 0;
+      padding: 0 0.5rem;
+    }
   }
 } // end of commons images
 

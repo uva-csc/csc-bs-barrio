@@ -81,18 +81,18 @@ Description: Bootstrap 4 with Sass
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #343a40;
-  --bs-body-color-rgb: 52, 58, 64;
+  --bs-body-color: #212529;
+  --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg: #fdfdfd;
   --bs-body-bg-rgb: 253, 253, 253;
   --bs-emphasis-color: #222222;
   --bs-emphasis-color-rgb: 34, 34, 34;
-  --bs-secondary-color: rgba(52, 58, 64, 0.75);
-  --bs-secondary-color-rgb: 52, 58, 64;
+  --bs-secondary-color: rgba(33, 37, 41, 0.75);
+  --bs-secondary-color-rgb: 33, 37, 41;
   --bs-secondary-bg: #e9ecef;
   --bs-secondary-bg-rgb: 233, 236, 239;
-  --bs-tertiary-color: rgba(52, 58, 64, 0.5);
-  --bs-tertiary-color-rgb: 52, 58, 64;
+  --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+  --bs-tertiary-color-rgb: 33, 37, 41;
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
@@ -102,7 +102,7 @@ Description: Bootstrap 4 with Sass
   --bs-link-hover-color: #1c243c;
   --bs-link-hover-color-rgb: 28, 36, 60;
   --bs-code-color: #d63384;
-  --bs-highlight-color: #343a40;
+  --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -4442,7 +4442,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2852, 58, 64, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
   --bs-navbar-toggler-border-radius: var(--bs-border-radius);
   --bs-navbar-toggler-focus-width: 0.25rem;
@@ -5051,7 +5051,7 @@ textarea.form-control-lg {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
@@ -15107,20 +15107,21 @@ main#content .c-csc-image_text p {
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
-.commons-imgs .field--name-field-captioned-images {
-  margin: 3rem 0 2rem 4.5vw;
-  width: fit-content;
+.commons-images {
+  margin-top: 2rem;
 }
-.commons-imgs .field--name-field-captioned-images .field__item {
-  max-width: 45vw;
-}
-.commons-imgs .field--name-field-captioned-images .field__item img {
+.commons-images .block.captioned-image .field--name-field-image img {
   border: thin solid #eeeeee;
+  width: 100%;
+  height: auto;
 }
-.commons-imgs .field--name-field-captioned-images .field__item .field--name-field-caption {
-  margin: 0;
-  text-align: left;
-  width: inherit;
+.commons-images .block.captioned-image .field--name-field-caption {
+  color: #212529;
+  max-width: 100%;
+  font-weight: normal;
+  font-size: 90%;
+  margin: 0.25rem 0 0 0;
+  padding: 0 0.5rem;
 }
 
 .commons-btm-info {
