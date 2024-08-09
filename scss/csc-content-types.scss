@@ -94,16 +94,11 @@ body.node--type-landing-page  main#content {
       } // end of csc-text-box in .csc-hero
 
       // Overlay (see below .csc-2col-tbl general definition for grid layout specs)
-/*
       .csc-2col-tbl {
-        margin: 1rem 8rem;
-        width: fit-content;
-        grid-gap: 1.5rem 5rem;
-        grid-template-columns: 300px 600px;
 
         & > div {
           text-align: left;
-
+          margin-bottom: 1rem;
           a {
             font-weight: bold;
             text-transform: uppercase;
@@ -145,7 +140,6 @@ body.node--type-landing-page  main#content {
           max-height: 200px;
         }
       }
-      */
     } // End of .csc-hero
 
   } // End of Large Hero pages (like Student)

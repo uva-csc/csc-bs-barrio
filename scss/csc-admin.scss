@@ -22,12 +22,9 @@ body.toolbar-fixed #header #navbar-main {
 }
 
 
-#toolbar-administration div.toolbar-menu-administration a {
-  color: $uva-blue !important;
-}
-
+#toolbar-administration div.toolbar-menu-administration a,
 #node-admin-links a.nav-link.active {
-  color: $uva-orange;
+  color: $uva-blue !important;
 }
 
 div.toolbar-tab {
