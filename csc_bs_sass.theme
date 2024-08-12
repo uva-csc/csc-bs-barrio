@@ -5,15 +5,11 @@
  * Functions to support theming in the SASS Starterkit subtheme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\node\NodeInterface;
-use Drupal\facets\Result\ResultInterface;
 use Drupal\smart_date\SmartDateOccurrence;
-
 
 const POSITION_RELATIVE = "position: relative;";
 

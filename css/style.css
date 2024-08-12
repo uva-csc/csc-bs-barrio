@@ -16394,7 +16394,7 @@ div.toolbar-tab a#toolbar-item-devel {
   color: white !important;
 }
 
-div#drupal-off-canvas a {
+div#drupal-off-canvas li:not(.ui-menu-item) a {
   color: white !important;
 }
 
