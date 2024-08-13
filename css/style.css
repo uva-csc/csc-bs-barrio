@@ -15773,6 +15773,20 @@ div.csc-news-block a img:hover {
   opacity: unset;
 }
 
+/** Teaser Rows **/
+.teaser-row .field--name-field-teaser-caption p {
+  color: #232D4B;
+  margin: 1rem auto;
+  padding: 0;
+  width: fit-content;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+}
+.teaser-row .field--name-field-teaser-caption p:last-child {
+  border-bottom: 2px solid #E57325;
+}
+
 /** Maps **/
 div.geolocation-map-wrapper {
   filter: drop-shadow(10px 10px #b2c0e3);

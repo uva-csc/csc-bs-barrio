@@ -497,6 +497,22 @@ div.csc-news-block {
   }
 }
 
+/** Teaser Rows **/
+.teaser-row {
+  .field--name-field-teaser-caption p {
+    color: #232D4B;
+    margin: 1rem auto;
+    padding: 0;
+    width: fit-content;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+
+    &:last-child {
+      border-bottom: 2px solid #E57325;
+    }
+  }
+}
 
 
 /** Maps **/
