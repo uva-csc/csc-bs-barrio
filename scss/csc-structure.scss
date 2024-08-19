@@ -498,6 +498,12 @@ footer.site-footer {
   }
 }
 
+// Two column sticky first
+.sticky-first .layout__region--first .wrapper {
+  position: sticky;
+  top: 100px;
+}
+
 // Remove top margin for headers in body
 .layout .field--name-body {
   h2:first-child, h3:first-child, h4:first-child {

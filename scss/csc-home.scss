@@ -266,8 +266,8 @@ body.path-frontpage main#content {
             }
           }
 
-          div.date {
-            margin-bottom: 1rem;
+          div.date, div.time  {
+            font-weight: normal;
           }
 
           p:not(.read-more) {

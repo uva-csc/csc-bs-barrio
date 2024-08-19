@@ -13643,6 +13643,11 @@ footer.site-footer .rector-visitor-block {
   text-transform: uppercase;
 }
 
+.sticky-first .layout__region--first .wrapper {
+  position: sticky;
+  top: 100px;
+}
+
 .layout .field--name-body h2:first-child, .layout .field--name-body .h2:first-child, .layout .field--name-body h3:first-child, .layout .field--name-body .h3:first-child, .layout .field--name-body h4:first-child, .layout .field--name-body .h4:first-child {
   margin-top: 0;
 }
@@ -14065,8 +14070,8 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3 a, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 a {
   border-bottom: none;
 }
-body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.date {
-  margin-bottom: 1rem;
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.date, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.time {
+  font-weight: normal;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta p:not(.read-more) {
   font-size: 1rem;
