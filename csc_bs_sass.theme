@@ -20,7 +20,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
     $node = $variables['node'];
     $pg_type = $node->getType();
     if ($node->hasField('field_class_attribute')) {
-      $class = $node->get('field_class_attribute')->value;
+      $class = $node->get('field_class_attribute')->getValue(); // value
 
       $variables['content_attributes']->addClass($class);
     }
