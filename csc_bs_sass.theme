@@ -10,8 +10,18 @@ use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\node\NodeInterface;
 use Drupal\smart_date\SmartDateOccurrence;
+use Drupal\smart_date_recur\Entity\SmartDateRule;
 
 const POSITION_RELATIVE = "position: relative;";
+const DAY_MAPPING = [
+  'MO' => 'Monday',
+  'TU' => 'Tuesday',
+  'WE' => 'Wednesday',
+  'TH' => 'Thursday',
+  'FR' => 'Friday',
+  'SA' => 'Saturday',
+  'SU' => 'Sunday',
+];
 
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
@@ -34,6 +44,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
 }
 
 function csc_bs_sass_preprocess_node(&$variables) {
+  $day_mapping = DAY_MAPPING;  // See constanct defined at top of this .theme script
   $node = $variables['node'];
   $node_type = $node->bundle();
   // $view_mode = $variables['view_mode'];
@@ -41,6 +52,18 @@ function csc_bs_sass_preprocess_node(&$variables) {
   if ($node_type == 'event') {
     $date = $node->get('field_date');
     $vals = $date->getValue();
+    // Get days of week for repeat rule (But can't access in Layout builder, may not be used)
+    $rrid = $vals[0]['rrule'];
+    if ($rrid) {
+      $rrule = SmartDateRule::load($rrid);
+      $rr_params = $rrule->getParametersArray();
+      $dow = $rr_params['byday'];
+      $full_dow = array_map(function ($abbr) use ($day_mapping) {
+        return $day_mapping[$abbr] . 's';  // Add plural here for display "Tuesdays and Thursdays"
+      }, $dow);
+      $variables['days_of_week'] = $full_dow;
+    }
+    // End of Days of week
     foreach($vals as $n => $val) {
       $stts = $val['value'];
       $etts = $val['end_value'];
@@ -51,7 +74,7 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $val['full'] = date('M j, Y', $stts);
       $vals[$n] = $val;
     }
-    $date->setValue($vals);
+    // $date->setValue($vals); // Took out 8/21/2024 as I don't think it does anything (good).
     $variables['valnums'] = count($vals);
     $variables['stdt'] = $vals[0]['value'];
 
@@ -299,7 +322,7 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   if ($para->hasField('field_class_attribute')) {
     $cattval = $para->get('field_class_attribute')->value;
     if (!empty($cattval)) {
-      list($cattval, $aosval) = csc_bs_sass_extract_aos_classes($cattval);
+      [$cattval, $aosval] = csc_bs_sass_extract_aos_classes($cattval);
       $variables['attributes']['class'][] = $cattval;
       if ($aosval) {
         $variables['attributes']['data-aos'] = $aosval;
