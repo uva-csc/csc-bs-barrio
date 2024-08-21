@@ -71,12 +71,14 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $val['allday'] = isDateAllDay($stts, $etts, $tz) ? 'true' : 'false';
       $val['month'] = date('M', $stts);
       $val['day'] = date('j', $stts);
+      $val['day_name'] = date('l', $stts);
       $val['full'] = date('M j, Y', $stts);
       $vals[$n] = $val;
     }
     // $date->setValue($vals); // Took out 8/21/2024 as I don't think it does anything (good).
     $variables['valnums'] = count($vals);
     $variables['stdt'] = $vals[0]['value'];
+    $variables['starts_on'] = ($rrid && $variables['stdt'] > time()) ? $vals[0]['day_name'] . ', ' . $vals[0]['full'] : null;
 
   // LOCATIONS
   } else if ($node_type == 'location') {

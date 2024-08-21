@@ -15071,6 +15071,9 @@ main#content .c-csc-image_text p {
   font-size: 0.85rem;
   font-weight: bold;
 }
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date.starts-on, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date.starts-on {
+  font-style: italic;
+}
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field .field-content, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field .field-content {
   text-align: center;
 }
