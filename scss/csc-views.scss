@@ -32,6 +32,27 @@
   }
 }
 
+// View more button in any view (orange button with white lettering)
+.view p.view-more {
+  width: fit-content;
+  margin: 3rem auto 1rem;
+  padding: 0rem 1.5rem;
+  border-radius: 3px;
+  background-color: $uva-orange;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-size: 90%;
+  text-align: center;
+  line-height: 1.15rem;
+
+  a {
+    display: inline-block;
+    padding-top: 0.35rem;
+    color: #fdfdfd !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
 // Feature event on the events page
 .view.featured-event {
   .views-field-title {
@@ -234,6 +255,8 @@
         }  // End of views-view-responsive-grid__item-inner
       } // End of views-view-responsive-grid
     } // End of .view-events .view-content
+
+    /* Generalized to use in any view above at top
     .view-footer {
       width: fit-content;
       margin: 3rem auto 1rem;
@@ -254,7 +277,8 @@
           letter-spacing: 1px;
         }
       }
-    } // End of .events-row .footer
+    } // End of .events-row .footer*/
+
   } // End of &.events-row
 
   // Featured Event on Events Page

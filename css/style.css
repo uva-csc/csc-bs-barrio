@@ -14889,6 +14889,25 @@ main#content .c-csc-image_text p {
   letter-spacing: 1px;
 }
 
+.view p.view-more {
+  width: fit-content;
+  margin: 3rem auto 1rem;
+  padding: 0rem 1.5rem;
+  border-radius: 3px;
+  background-color: #E57325;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-size: 90%;
+  text-align: center;
+  line-height: 1.15rem;
+}
+.view p.view-more a {
+  display: inline-block;
+  padding-top: 0.35rem;
+  color: #fdfdfd !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .view.featured-event .views-field-title {
   font-size: 1.5rem;
 }
@@ -14969,6 +14988,30 @@ main#content .c-csc-image_text p {
   max-width: 76vw;
   padding: 0;
 }
+.view-events.events-row, .view-events.events-row-teasers {
+  /* Generalized to use in any view above at top
+  .view-footer {
+    width: fit-content;
+    margin: 3rem auto 1rem;
+    text-align: center;
+
+    p { // The "More Events Button"
+      font-family: $font-frankgoth-hvy;
+      font-size: 90%;
+      padding: 0rem 3.5rem;
+      border-radius: 3px;
+      line-height: 1.15rem;
+
+      a {
+        display: inline-block;
+        padding-top: 0.35rem;
+        color: $white !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  } // End of .events-row .footer*/
+}
 .view-events.events-row .view-header h2, .view-events.events-row .view-header .h2, .view-events.events-row-teasers .view-header h2, .view-events.events-row-teasers .view-header .h2 {
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
   text-align: center;
@@ -15044,25 +15087,6 @@ main#content .c-csc-image_text p {
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title a, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title a, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title a, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title a {
   border-bottom: none;
-}
-.view-events.events-row .view-footer, .view-events.events-row-teasers .view-footer {
-  width: fit-content;
-  margin: 3rem auto 1rem;
-  text-align: center;
-}
-.view-events.events-row .view-footer p, .view-events.events-row-teasers .view-footer p {
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
-  font-size: 90%;
-  padding: 0rem 3.5rem;
-  border-radius: 3px;
-  line-height: 1.15rem;
-}
-.view-events.events-row .view-footer p a, .view-events.events-row-teasers .view-footer p a {
-  display: inline-block;
-  padding-top: 0.35rem;
-  color: #fdfdfd !important;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 .view-events.featured-event {
   max-width: 500px;
