@@ -13898,6 +13898,10 @@ body.path-frontpage main#content .c-csc-hero .field--name-field-text-overlay .fi
   display: unset !important;
   grid-column: 1/-1;
 }
+body.path-frontpage main#content .c-csc-hero .home-title-overlay {
+  background: linear-gradient(#ffffff, #ffffff09);
+  padding-bottom: 8rem;
+}
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h2, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h2 {
   margin: 0;
   padding: 5rem 0 0;
