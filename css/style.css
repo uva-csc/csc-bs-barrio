@@ -14016,7 +14016,7 @@ body.path-frontpage main#content .featured-event .views-field-view-node a, body.
   color: white;
 }
 body.path-frontpage main#content .upcoming-events {
-  padding: 1rem 4rem 1rem 1rem;
+  padding: 3rem 4rem 1rem 1rem;
 }
 body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#content .upcoming-events .h3 {
   display: inline-block;
@@ -14032,18 +14032,18 @@ body.path-frontpage main#content .upcoming-events h3 span, body.path-frontpage m
 }
 body.path-frontpage main#content .upcoming-events h3 span.text-white:first-child, body.path-frontpage main#content .upcoming-events .h3 span.text-white:first-child {
   text-transform: uppercase;
-  font-size: 170%;
+  font-size: 200%;
 }
 body.path-frontpage main#content .upcoming-events h3 span.text-blue, body.path-frontpage main#content .upcoming-events .h3 span.text-blue {
   margin-top: 0.5rem;
   padding-left: 3.5rem;
   text-transform: uppercase;
-  font-size: 270%;
+  font-size: 300%;
 }
 body.path-frontpage main#content .upcoming-events h3 span.text-white:last-child, body.path-frontpage main#content .upcoming-events .h3 span.text-white:last-child {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   padding-left: 7rem;
-  font-size: 90%;
+  font-size: 110%;
   font-style: italic;
 }
 body.path-frontpage main#content .upcoming-events .view-content {
@@ -14087,6 +14087,15 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.25rem;
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .date .rule-text .days {
+  display: inline-block;
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .date .rule-text .days:after {
+  content: ", ";
+}
+body.path-frontpage main#content .upcoming-events .view-content .views-row .date .rule-text .time {
+  display: inline-block;
 }
 body.path-frontpage main#content .home-research {
   max-width: 100%;
