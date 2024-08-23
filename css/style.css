@@ -13537,6 +13537,7 @@ main#content {
   padding: 0.25rem;
 }
 #title-div .content h1, #title-div .content .h1 {
+  margin: 0.5rem 0 0;
   text-align: center;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
