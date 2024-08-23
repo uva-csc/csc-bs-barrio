@@ -14903,7 +14903,7 @@ main#content .c-csc-image_text p {
   letter-spacing: 1px;
 }
 
-.view p.view-more {
+p.view-more {
   width: fit-content;
   margin: 1rem auto;
   padding: 0rem 1rem 0 1.2rem;
@@ -14914,7 +14914,7 @@ main#content .c-csc-image_text p {
   text-align: center;
   line-height: 1.15rem;
 }
-.view p.view-more a {
+p.view-more a {
   display: inline-block;
   padding-top: 0.5rem;
   color: #fdfdfd !important;
