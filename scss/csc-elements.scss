@@ -816,7 +816,13 @@ div.bc-teaser {
   }
 }
 
-// Calendar
+// Calendar (new)
+// Event listings on calendar
+.fc-event {
+  background-color: #abc0fd4d!important;
+}
+
+// Calendar (old)
 // Calendar Link
 #calendar-link {
   color: $white;
@@ -866,8 +872,8 @@ div.bc-teaser {
       }
     }
 
-    // Event listings on calendar
-    .fc-event-container {
+
+    /*.fc-event-container {
       &[colspan] {
         background-color: $csc-lt-gray;
       }
@@ -894,7 +900,8 @@ div.bc-teaser {
 
       }
 
-    }  // End of Event Container
+    }*/
+    // End of Event Container
 
     a.fc-more {
       font-size: 0.75rem !important;

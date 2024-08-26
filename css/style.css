@@ -16108,6 +16108,10 @@ div.bc-teaser .caption a {
   border: none !important;
 }
 
+.fc-event {
+  background-color: #abc0fd4d !important;
+}
+
 #calendar-link {
   color: #fdfdfd;
 }
@@ -16144,31 +16148,40 @@ div.bc-teaser .caption a {
 .block-views-blockcalendar-fullcalendar-block .csc-calendar {
   margin-top: 2rem;
   padding: 0 1rem;
+  /*.fc-event-container {
+    &[colspan] {
+      background-color: $csc-lt-gray;
+    }
+
+    a {
+      color: #0071b3; // color event listing old site #0071b3
+      background-color: transparent!important;
+      border: none;
+      font-size: 0.75rem !important;
+      // Time color #777
+
+    }
+    .fc-content {
+      .fc-title {
+        font-weight: 700;
+        letter-spacing: 0.1px;
+        white-space: normal;
+      }
+      .fc-time {
+        font-weight: 400;
+        color: $csc-dark-gray;
+        white-space: normal;
+      }
+
+    }
+
+  }*/
 }
 .block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link {
   margin: -0.75rem 0 -1rem;
 }
 .block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link a {
   border: none;
-}
-.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container[colspan] {
-  background-color: #eeeeee;
-}
-.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container a {
-  color: #0071b3;
-  background-color: transparent !important;
-  border: none;
-  font-size: 0.75rem !important;
-}
-.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-title {
-  font-weight: 700;
-  letter-spacing: 0.1px;
-  white-space: normal;
-}
-.block-views-blockcalendar-fullcalendar-block .csc-calendar .fc-event-container .fc-content .fc-time {
-  font-weight: 400;
-  color: #5a6172;
-  white-space: normal;
 }
 .block-views-blockcalendar-fullcalendar-block .csc-calendar a.fc-more {
   font-size: 0.75rem !important;
