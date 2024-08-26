@@ -15381,8 +15381,8 @@ p.view-more a {
   width: 100%;
   max-width: 790px;
   border-bottom: 2px solid #cdcdcd;
-  font-size: 1.25rem;
-  color: #E57325;
+  /* font-size: 1.25rem; */
+  color: #232D4B;
   text-transform: uppercase;
 }
 .view.view-people .view-header h3, .view.view-people .view-header .h3 {
