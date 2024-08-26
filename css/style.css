@@ -16085,6 +16085,7 @@ div.bc-teaser .caption {
   font-style: italic;
   text-decoration: none;
   margin-top: -0.4rem;
+  text-align: right;
 }
 div.bc-teaser .caption a {
   text-decoration: none !important;
