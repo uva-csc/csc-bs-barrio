@@ -647,6 +647,10 @@ body.node--type-class {
 
 // Hero Overlays
 .node--type-landing-page .c-csc-text_box {
+  &.hero-title {
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+  }
   &.bottom-right.caption {
     width: 25vw;
   }

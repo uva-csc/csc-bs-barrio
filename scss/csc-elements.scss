@@ -466,6 +466,12 @@ a.read-more, span.read-more {
   }
 }
 
+.field--name-field-image, .field--name-field-media-image {
+  &.bordered {
+    border: 3px solid $white;
+  }
+}
+
 .img-center {
   width: fit-content;
   margin: 0 auto;

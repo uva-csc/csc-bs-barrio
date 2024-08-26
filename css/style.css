@@ -14634,6 +14634,10 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   }
   */
 }
+.node--type-landing-page .c-csc-text_box.hero-title {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+}
 .node--type-landing-page .c-csc-text_box.bottom-right.caption {
   width: 25vw;
 }
@@ -15805,6 +15809,10 @@ a.read-more, span.read-more {
   border-bottom: 1px solid #888;
   border-radius: 15px;
    */
+}
+
+.field--name-field-image.bordered, .field--name-field-media-image.bordered {
+  border: 3px solid #fdfdfd;
 }
 
 .img-center {
