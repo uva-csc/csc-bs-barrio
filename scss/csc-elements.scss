@@ -791,6 +791,26 @@ body.path-webform {
 
 // End of Webforms
 
+// Breadcrumb teasers
+div.bc-teaser {
+  br, a p {
+    display: none;
+  }
+  img {
+    border: 4px #ddd outset;
+  }
+  .caption {
+    font-size: 90%;
+    font-style: italic;
+    text-decoration: none;
+    margin-top: -0.4rem;
+
+    a {
+      text-decoration: none!important;
+    }
+  }
+}
+
 // Calendar
 // Calendar Link
 #calendar-link {
