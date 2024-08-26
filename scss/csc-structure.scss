@@ -232,15 +232,28 @@ main#content {
 
       li {
         padding: 0 1rem;
+        &.active {
+          a {
+            color: #aaaaaa !important;
+            cursor: default;
+          }
+        }
+
+        &:active {
+          background-color: unset;
+        }
       }
 
       a, span.nav-link.dropdown-toggle {
         font-size: 1.1rem;
         color: $csc-lt-gray;
-
+        cursor: pointer;
         &:hover {
           color: $uva-orange;
           opacity: 1;
+        }
+        &:active {
+          background-color: unset;
         }
       }
 
@@ -320,10 +333,10 @@ main#content {
               background-color: transparent!important;
               a.active {
                 display: inline-block;
-                margin-left: -14px;
+                /*margin-left: -14px;*/
                 color: #00000060 !important;
                 cursor: default;
-                &:before {
+                /*&:before {
                   display: inline-block;
                   margin-right: 0.255em;
                   vertical-align: 0.255em;
@@ -333,7 +346,7 @@ main#content {
                   border-bottom: 0;
                   border-left: 0.3em solid transparent;
                   transform: rotate(-90deg) translate(-2px);
-                }
+                }*/
               }
             }
           }
