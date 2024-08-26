@@ -13506,12 +13506,15 @@ main#content {
 }
 #header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item a {
   color: #232D4B !important;
-  /* backgroud-color: $off-white;*/
+  backgroud-color: #dadada;
   text-transform: capitalize;
   line-height: 1;
 }
 #header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item a:hover {
   color: #E57325 !important;
+}
+#header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item.active {
+  background-color: transparent !important;
 }
 #header .navbar .nav-item.dropdown:hover .dropdown-menu li.dropdown-item.active a.active {
   display: inline-block;
