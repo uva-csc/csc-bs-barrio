@@ -30,9 +30,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
     $node = $variables['node'];
     $pg_type = $node->getType();
     if ($node->hasField('field_class_attribute')) {
-      $class = $node->get('field_class_attribute')->getValue(); // value
-
-      $variables['content_attributes']->addClass($class);
+      $class = $node->get('field_class_attribute')->value; // getValue() returns an array where [0]->value is the equivalent to this
     }
     if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
       $full_width_pages = ['page_full_width', 'landing_page', 'people'];

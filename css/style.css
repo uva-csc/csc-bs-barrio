@@ -14940,6 +14940,7 @@ p.view-more a {
 }
 .view.featured-event .views-field-view-node .csc-btn {
   display: inline-block;
+  padding-top: 0.55rem;
 }
 
 .view.event-col {
