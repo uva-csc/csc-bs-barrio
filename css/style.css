@@ -13453,9 +13453,12 @@ main#content {
 #header #navbar-main ul.navbar-nav li {
   padding: 0 1rem;
 }
-#header #navbar-main ul.navbar-nav li.active > a {
+#header #navbar-main ul.navbar-nav li.dropdown-item.active > a {
   color: #aaaaaa !important;
   cursor: default;
+}
+#header #navbar-main ul.navbar-nav li.dropdown-item:active {
+  background-color: unset;
 }
 #header #navbar-main ul.navbar-nav a, #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle {
   font-size: 1.1rem;
@@ -13465,9 +13468,6 @@ main#content {
 #header #navbar-main ul.navbar-nav a:hover, #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle:hover {
   color: #E57325;
   opacity: 1;
-}
-#header #navbar-main ul.navbar-nav a:active, #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle:active {
-  background-color: unset;
 }
 #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle {
   margin: 0 0.25rem 0 0;
