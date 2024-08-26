@@ -16088,6 +16088,7 @@ div.bc-teaser .caption {
 }
 div.bc-teaser .caption a {
   text-decoration: none !important;
+  border: none !important;
 }
 
 #calendar-link {
