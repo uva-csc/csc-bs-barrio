@@ -232,15 +232,9 @@ main#content {
 
       li {
         padding: 0 1rem;
-        &.active {
-          a {
-            color: #aaaaaa !important;
-            cursor: default;
-          }
-        }
-
-        &:active {
-          background-color: unset;
+        &.active > a {
+          color: #aaaaaa !important;
+          cursor: default;
         }
       }
 

@@ -13453,12 +13453,9 @@ main#content {
 #header #navbar-main ul.navbar-nav li {
   padding: 0 1rem;
 }
-#header #navbar-main ul.navbar-nav li.active a {
+#header #navbar-main ul.navbar-nav li.active > a {
   color: #aaaaaa !important;
   cursor: default;
-}
-#header #navbar-main ul.navbar-nav li:active {
-  background-color: unset;
 }
 #header #navbar-main ul.navbar-nav a, #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle {
   font-size: 1.1rem;
