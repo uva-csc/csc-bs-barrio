@@ -319,7 +319,7 @@ main#content {
 
             a {
               color: $uva-blue!important;
-              /*backgroud-color: $off-white;*/
+              /* backgroud-color: $off-white;*/
               text-transform: capitalize;
               line-height: 1;
               &:hover {
@@ -328,7 +328,6 @@ main#content {
             }
 
             &.active {
-              background-color: transparent!important;
               a.active {
                 display: inline-block;
                 /*margin-left: -14px;*/
