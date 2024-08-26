@@ -16074,6 +16074,9 @@ body.path-webform .help-curate {
   display: none;
 }
 
+div.bc-teaser {
+  width: fit-content;
+}
 div.bc-teaser br, div.bc-teaser a p {
   display: none;
 }
@@ -16086,6 +16089,7 @@ div.bc-teaser .caption {
   text-decoration: none;
   margin-top: -0.4rem;
   text-align: right;
+  width: 100%;
 }
 div.bc-teaser .caption a {
   text-decoration: none !important;

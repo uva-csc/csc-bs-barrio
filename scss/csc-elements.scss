@@ -793,6 +793,7 @@ body.path-webform {
 
 // Breadcrumb teasers
 div.bc-teaser {
+  width: fit-content;
   br, a p {
     display: none;
   }
@@ -805,6 +806,7 @@ div.bc-teaser {
     text-decoration: none;
     margin-top: -0.4rem;
     text-align: right;
+    width: 100%;
 
     a {
       text-decoration: none!important;
