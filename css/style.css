@@ -15197,6 +15197,11 @@ p.view-more a {
   border-bottom: 4px solid #E57325;
 }
 
+.view.view-classes p.location {
+  display: inline-block;
+  margin: 0;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
