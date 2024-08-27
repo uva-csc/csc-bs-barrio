@@ -16105,8 +16105,11 @@ div.bc-teaser .caption a {
   border: none !important;
 }
 
-.fc-event {
+.view.csc-calendar .fc-event {
   background-color: #abc0fd4d !important;
+}
+.view.csc-calendar .calendar-view-pager, .view.csc-calendar .calendar-view-pager__reset {
+  display: none;
 }
 
 #calendar-link {

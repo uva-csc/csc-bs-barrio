@@ -818,8 +818,14 @@ div.bc-teaser {
 
 // Calendar (new)
 // Event listings on calendar
-.fc-event {
-  background-color: #abc0fd4d!important;
+.view.csc-calendar {
+  .fc-event {
+    background-color: #abc0fd4d !important;
+  }
+
+  .calendar-view-pager, .calendar-view-pager__reset {
+    display: none;
+  }
 }
 
 // Calendar (old)
