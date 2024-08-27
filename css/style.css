@@ -14943,9 +14943,7 @@ p.view-more a {
   font-style: italic;
 }
 .view.featured-event .views-field-body {
-  font-size: 1rem;
-  line-height: 1;
-  letter-spacing: -0.03125em;
+  line-height: 1.3;
 }
 .view.featured-event .views-field-view-node {
   text-align: center;
