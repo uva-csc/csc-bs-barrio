@@ -391,8 +391,16 @@ p.view-more {
 
 // Classes View
 .view.view-classes {
+  // For Alt Teaser
   p.location {
     display: inline-block;
     margin: 0;
+  }
+  // For unordered list of multiple locationse
+  .views-field-field-location * {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
   }
 }

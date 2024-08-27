@@ -15201,6 +15201,12 @@ p.view-more a {
   display: inline-block;
   margin: 0;
 }
+.view.view-classes .views-field-field-location * {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
 
 /* VARIABLES */
 /** Bootstrap Overrides **/
