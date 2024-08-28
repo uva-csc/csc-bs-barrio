@@ -306,7 +306,7 @@ p.view-more {
     padding: 20px;
     position: relative;
     line-height: 1.3;
-    z-index: 1;
+    /*  z-index: 1; makes drop down menus transparent over views */
   }
 
 } // End of .view-events
