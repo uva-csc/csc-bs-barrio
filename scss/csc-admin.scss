@@ -23,17 +23,23 @@ body.toolbar-fixed #header #navbar-main {
 
 
 #toolbar-administration div.toolbar-menu-administration a,
+#toolbar-administration .toolbar-tab *,
 #node-admin-links a.nav-link.active {
   color: $uva-blue !important;
 }
+
+
 
 div.toolbar-tab {
   a#toolbar-item-announcement,
   a#toolbar-item-shortcuts,
   a#toolbar-item-user,
-  a#toolbar-item-devel
+  a#toolbar-item-devel,
+  a#toolbar-item-administration
   {
-    color: $white !important;
+    &:not(.is-active) {
+      color: $white !important;
+    }
   }
 }
 

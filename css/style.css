@@ -16474,14 +16474,16 @@ body.toolbar-fixed #header #navbar-main.node--type-landing-page {
 }
 
 #toolbar-administration div.toolbar-menu-administration a,
+#toolbar-administration .toolbar-tab *,
 #node-admin-links a.nav-link.active {
   color: #232D4B !important;
 }
 
-div.toolbar-tab a#toolbar-item-announcement,
-div.toolbar-tab a#toolbar-item-shortcuts,
-div.toolbar-tab a#toolbar-item-user,
-div.toolbar-tab a#toolbar-item-devel {
+div.toolbar-tab a#toolbar-item-announcement:not(.is-active),
+div.toolbar-tab a#toolbar-item-shortcuts:not(.is-active),
+div.toolbar-tab a#toolbar-item-user:not(.is-active),
+div.toolbar-tab a#toolbar-item-devel:not(.is-active),
+div.toolbar-tab a#toolbar-item-administration:not(.is-active) {
   color: #fdfdfd !important;
 }
 
