@@ -141,7 +141,7 @@ a {
 }
 
 // Nav Links
-nav li:not(.breadcrumb-item) a,
+nav ul:not(.contextual-links) li:not(.breadcrumb-item) a,
 span.btn a,
 div.csc-give-link a {
   color: $white !important;
