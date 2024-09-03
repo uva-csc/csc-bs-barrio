@@ -24,10 +24,14 @@ body {
   text-align: left;
   background-color: #fff;
 }
-
+/*
 #main-wrapper {
   min-height: 800px; // temporary TODO: remove this
 }
+
+body.node--type-page  #main-wrapper {
+  min-height: 500px; // temporary TODO: remove this
+}*/
 
 #main.container {
   margin-top: 2rem;
