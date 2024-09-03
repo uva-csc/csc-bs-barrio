@@ -16109,14 +16109,13 @@ div.bc-teaser .caption {
   font-size: 90%;
   font-style: italic;
   text-decoration: none;
-  margin-top: -0.4rem;
   text-align: right;
   width: 100%;
 }
 div.bc-teaser .caption a {
   text-decoration: none !important;
   border: none !important;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .view.csc-calendar .fc-event {
