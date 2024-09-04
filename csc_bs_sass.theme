@@ -431,6 +431,7 @@ function csc_bs_sass_preprocess_paragraph__highlight_row(&$variables) {
 
 /** End of paragraphs **/
 
+
 /** Utitlity functions */
 
 function csc_color_code($cstr) {
