@@ -652,7 +652,7 @@ body.node--type-class {
     padding-top: 1.5rem;
   }
   &.bottom-right.caption {
-    width: 25vw;
+    width: 40vw;
   }
 
   h2 {
@@ -690,6 +690,7 @@ body.node--type-class {
     p {
       color: $white!important;
       margin: 0;
+      text-align: left;
     }
   }
 } // End of Hero Overlays

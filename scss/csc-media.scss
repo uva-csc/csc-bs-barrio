@@ -24,6 +24,24 @@
     height: 0px !important;
   }
 
+  // Pre-Footer and Footer blocks
+  .block.help-curate .content {
+    position: unset;
+    width: 100%;
+    margin: -6rem 0 0;
+    padding: 1rem 2rem;
+  }
+  .block.email-updates {
+    margin: -1rem 0 0;
+  }
+
+  // Footer
+  #block-csc-bs-sass-footerblocklogo {
+    img {
+      width: 80vw !important;
+    }
+  }
+
   // Front page
   .path-frontpage {
     #main-wrapper {
@@ -139,6 +157,7 @@
         }
 
         .upcoming-events {
+          padding: 0;
 
           .text-white {
             color: $uva-orange !important;
@@ -159,18 +178,9 @@
         } // end of upcoming-events
 
         // Research highlight row
-        .c-csc-highlight_row > .wrapper {
-          padding: 0!important;
+        .home-research > .wrapper {
+          padding: 1.25rem;
           max-width: 100vw;
-
-          .field--name-field-highlight-box-content {
-            img {
-              width: 100%;
-              height: auto;
-              margin-bottom: 1rem;
-            }
-          }
-
         } // end of research highlight row
 
         // News
@@ -195,23 +205,6 @@
         } // end of main#content
     } // end of #main-wrapper
 
-    // Pre-Footer and Footer blocks
-    .block.help-curate .content {
-      position: unset;
-      width: 100%;
-      margin: -6rem 0 0;
-      padding: 1rem 2rem;
-    }
-
-    .block.email-updates {
-      margin: -1rem 0 0;
-    }
-
-    #block-csc-bs-sass-footerblocklogo {
-      img {
-        width: 80vw !important;
-      }
-    }
   }  // end of Front Page in phones & tablets
 
   // Dropdown menu
@@ -241,8 +234,74 @@
       .field--name-field-hero-top {
         margin-top: 1rem;
       }
-    } // End of main#content
+
+      .c-csc-text_box.bottom-right.caption {
+        width: 100vw;
+      }
+      .csc-row-75-25 .layout__region {
+        display: unset!important;
+      }
+
+      #env-flourish {
+        top: 300px;
+        left: 0px;
+        margin: 0px 12px 300px;
+
+        h2 {
+          span.part1 {
+            letter-spacing: 0.3rem;
+          }
+        }
+      }
+
+      // Commons page environments for flourishing
+      .green-skew-right.csc-row-75-25.layout.layout--onecol {
+        margin-top: -200px;
+      }
+    } // End of main#content Landing Page
   } // End of Landing Page
+
+  // Views
+  .view-events.featured-event {
+    margin-left: 0;
+  }
+  .view.event-col {
+    margin: 0 0 10px;
+
+    .view-header {
+      h2, .h2 {
+        margin: 2rem 0 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 0.5;
+
+        span {
+          display: block;
+          color: $uva-blue !important;
+          transform: unset;
+        }
+      }
+    }
+
+    .views-row {
+      display: grid;
+      margin: 0 0 25px -10px;
+      padding-bottom: 25px;
+      border-bottom: 2px solid $uva-blue;
+
+      & > div:first-child {
+        margin: 0;
+
+        img {
+          min-width: 355px;
+        }
+      }
+      & > div:nth-child(2) {
+        margin: 0;
+      }
+    }
+  }
 
 } // End of max-width: 767.9px (phones)
 
