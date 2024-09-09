@@ -15213,6 +15213,10 @@ p.view-more a {
   padding: 0;
 }
 
+div.view-empty {
+  text-align: center;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
