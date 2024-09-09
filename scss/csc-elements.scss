@@ -504,6 +504,23 @@ div.csc-news-block {
   }
 }
 
+// Research page: Circl and JCS teasers (also see media)
+.layout--twocol-section .layout__region {
+  .node--type-landing-page,
+  .node--type-page-full-width {
+    .field--name-field-teaser-image,
+    .field--name-field-image {
+      img {
+        height: 460px;
+        width: auto;
+      }
+    }
+  }
+}
+
+/** End of Image styles **/
+
+
 /** Teaser Rows **/
 .teaser-row {
   .field--name-field-teaser-caption p {

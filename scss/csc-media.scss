@@ -328,10 +328,31 @@
     }
   }
 
+  // Layouts for phones
+  .layout__region--second .node--view-mode-alt-teaser {
+    padding: 0;
+  }
 } // End of max-width: 767.9px (phones)
 
+
+@media (min-width: 640px) and (max-width: 991px) {
+  // Research page hack. see csc-elements ~ ln 507
+  .layout--twocol-section .layout__region {
+    .node--type-landing-page,
+    .node--type-page-full-width {
+      .field--name-field-teaser-image,
+      .field--name-field-image {
+        img {
+          height: 250px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
 // Medium (Tablets)
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   body.node--type-landing-page main#content {
     .field--name-field-text-overlay .c-csc-text_box {
       &.caption {
@@ -339,6 +360,7 @@
       }
     } // End of Overlay text box
   }// End of Landing pages medium
+
 } // End of Tablets
 
 // Only Large (small laptops)
@@ -406,6 +428,19 @@
     }
   }  // end of Front page Medium
 
+  // Research page hack. see csc-elements ~ ln 507
+  .layout--twocol-section .layout__region {
+    .node--type-landing-page,
+    .node--type-page-full-width {
+      .field--name-field-teaser-image,
+      .field--name-field-image {
+        img {
+          height: 310px;
+          width: auto;
+        }
+      }
+    }
+  }
 } // End of min-width: 992 and max-width: 1199.9px
 
 // Only XLarge Most Small Laptops
@@ -417,6 +452,20 @@
       }
     } // End of Overlay text box
   }// End of Landing pages XLarge
+
+  // Research page hack. see csc-elements ~ ln 507
+  .layout--twocol-section .layout__region {
+    .node--type-landing-page,
+    .node--type-page-full-width {
+      .field--name-field-teaser-image,
+      .field--name-field-image {
+        img {
+          height: 380px;
+          width: auto;
+        }
+      }
+    }
+  }
 } // End XLarge between 1200-1400px
 
 // XXL
