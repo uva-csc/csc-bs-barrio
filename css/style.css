@@ -14334,7 +14334,6 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
 .node--type-page-full-width.node--view-mode-alt-teaser .field--name-body.field--type-text-with-summary, .node--type-page-full-width.node--view-mode-alt-teaser p {
   font-size: 1.1rem;
   line-height: 1.5;
-  text-align: justify;
 }
 
 .node--type-page h2:first-child, .node--type-page .h2:first-child {
