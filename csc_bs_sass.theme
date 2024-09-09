@@ -185,16 +185,16 @@ function csc_bs_sass_preprocess_field(&$variables) {
 function csc_bs_sass_preprocess_views_view(&$variables) {
   $view = $variables['view'];
   $viewId = $view->storage->id();
+  $roles = Array(
+    'roles:staff' => 'Staff',
+    'roles:advisory_board' => 'Advisory Board',
+  );
   // Add chosen role facet as a secondary header on the people page
   if ($viewId == 'people') {
     $query_parameters = Drupal::request()->query->all();
-    if (!empty($query_parameters['f'])) {
-      $role = ucwords(str_replace(array('roles:', '_'), array('', ' '), $query_parameters['f'][0]));
-      // Role is singluar, use plural for header where appropriate
-      if (!in_array(strtolower($role), ['staff', 'advisory board'])) {
-        $role .= 's';
-      }
-      $variables['header']['area']['#text'] .= "<h3>" . Html::escape($role) . "</h3>";
+    $rolep = $query_parameters['f'][0] ?? false;
+    if (in_array($rolep, array_keys($roles))) {
+      $variables['header']['area']['#text'] .= "<h3>" . $roles[$rolep] . "</h3>";
     }
   }
 }
