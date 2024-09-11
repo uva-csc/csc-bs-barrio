@@ -415,6 +415,44 @@ a.read-more, span.read-more {
     }
   }
 }
+
+// Give Button
+div.csc-give-link {
+  position: relative;
+  max-height: 32px;
+  width: fit-content;
+  color: #ffffff;
+  background-color: transparent;
+  border: $csc-link;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 600;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transform: skewX(-20deg);
+  cursor: pointer;
+
+  .content .field--name-body p {
+    max-height: 20px;
+    width: fit-content;
+    transform: skewX(20deg);
+    padding: 0.2rem 0.25rem 0 0;
+    a {
+      font-family: $font-bodoni;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: $white;
+      text-transform: uppercase;
+      white-space: nowrap;
+      letter-spacing: 0.05rem;
+      &:hover {
+        color: $uva-orange;
+      }
+    }
+  }
+} // End of Give Button
+
 // End of  CSC Buttons
 
 /** Page Title Styles **/

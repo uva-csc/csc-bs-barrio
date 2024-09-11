@@ -82,6 +82,7 @@
     'img-no-shadow',
   ]
 %}
+{% set is_alt_title = content.field_alt_teaser_title|render|striptags|trim|length  %}
 
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(content_classes) }}>
@@ -92,13 +93,14 @@
     {% endif %}
 
     <a href="{{ url }}" class="plain">
-      <h3>
-        {% if node.field_alt_teaser_title is empty %}
-          {{ label }}
+      <div class="title h5 my-1 plain">
+        {% if is_alt_title %}
+          {{ content.field_alt_teaser_title }}
         {% else %}
-          {{ content.field_alt_teaser_title|raw }}
+          {{ label }}
         {% endif %}
-      </h3>
+      </div>
+      <div class="desc">{{ body }}</div>
     </a>
   </div>
 </article>
