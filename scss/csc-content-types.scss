@@ -269,6 +269,11 @@ body.node--type-landing-page  main#content {
 .node--type-news-item {
   .block-field-blocknodenews-itemfield-date {
     margin: -0.75rem 0 0.5rem;
+    .field__item {
+      font-size: 90%;
+      font-weight: bold;
+      font-style: italic;
+    }
   }
 } // End of News Content type
 

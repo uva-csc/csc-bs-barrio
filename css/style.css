@@ -14314,6 +14314,11 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
 .node--type-news-item .block-field-blocknodenews-itemfield-date {
   margin: -0.75rem 0 0.5rem;
 }
+.node--type-news-item .block-field-blocknodenews-itemfield-date .field__item {
+  font-size: 90%;
+  font-weight: bold;
+  font-style: italic;
+}
 
 .node--type-page h2:first-child, .node--type-page .h2:first-child {
   margin-top: 0;
