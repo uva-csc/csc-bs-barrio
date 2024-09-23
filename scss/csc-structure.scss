@@ -496,6 +496,15 @@ footer.site-footer {
   }
 }
 
+.titled-hero {
+  .layout-title {
+    position: absolute;
+    top: 0px;
+    color: white;
+    background: #00000050;
+  }
+}
+
 // Two column sticky first
 .sticky-first .layout__region--first .wrapper {
   position: sticky;
