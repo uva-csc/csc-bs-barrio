@@ -542,6 +542,15 @@ div.csc-news-block {
   }
 }
 
+// Image float right in layout builder
+.layout.img-right .layout__region {
+  .field--name-field-image {
+    width: fit-content;
+    float: right;
+    padding: 0 0.5rem 0.5rem;
+  }
+}
+
 // Research page: Circl and JCS teasers (also see media)
 .layout--twocol-section .layout__region {
   .node--type-landing-page,
