@@ -335,6 +335,7 @@ main#content {
 
       p {
         margin: 0 !important;
+        min-height: 32px;
       }
     }
   }
@@ -480,7 +481,7 @@ footer.site-footer {
 
 // End of Footer
 .path-frontpage #main-wrapper {
-  margin-top: -1rem; // There is whitespace before the hero on the homepage. Not sure where it is coming from.
+  margin-top: -0.75rem; // There is whitespace before the hero on the homepage. Not sure where it is coming from.
 }
 
 // Layout Styles

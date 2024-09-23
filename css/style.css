@@ -13514,6 +13514,7 @@ main#content {
 }
 .region-featured-top .block .content p {
   margin: 0 !important;
+  min-height: 32px;
 }
 
 .container article .node__content div:not(.container) {
@@ -13621,7 +13622,7 @@ footer.site-footer .rector-visitor-block {
 }
 
 .path-frontpage #main-wrapper {
-  margin-top: -1rem;
+  margin-top: -0.75rem;
 }
 
 .layout-title {
