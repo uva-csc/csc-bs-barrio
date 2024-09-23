@@ -332,6 +332,10 @@ main#content {
     .content {
       text-align: center;
       padding-top: 0.25rem;
+
+      p {
+        margin: 0 !important;
+      }
     }
   }
 } // End of Featured Top Section

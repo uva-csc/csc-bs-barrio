@@ -13512,6 +13512,9 @@ main#content {
   text-align: center;
   padding-top: 0.25rem;
 }
+.region-featured-top .block .content p {
+  margin: 0 !important;
+}
 
 .container article .node__content div:not(.container) {
   max-width: 1320px;
