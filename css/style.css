@@ -13928,7 +13928,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line
   font-size: 1.65rem;
   font-weight: bold;
   color: #E57325;
-  /* text-shadow: 2px 1px 2px #000000; */
+  text-shadow: 1px 1px 1px #000000dd;
   /* background-color: $white; */
   width: fit-content;
   margin: 0 auto;
