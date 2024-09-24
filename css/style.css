@@ -15889,6 +15889,10 @@ div.csc-give-link .content .field--name-body p a:hover {
   border: 3px solid #fdfdfd;
 }
 
+.img-border img {
+  border: thin solid #aaa;
+}
+
 .img-center {
   width: fit-content;
   margin: 0 auto;
@@ -16555,6 +16559,11 @@ div.bc-teaser .caption a {
     width: 50%;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body.path-frontpage .teaser-row .field--name-field-teaser-image img, body.path-frontpage .teaser-row .field--name-field-image img, body.path-frontpage .teaser-row .views-field-field-teaser-image img {
+    max-width: 200px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199.9px) {
   #header #navbar-top {
     max-width: 100vw;
@@ -16576,6 +16585,9 @@ div.bc-teaser .caption a {
   }
   body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1 {
     background-position-x: 8vw;
+  }
+  body.path-frontpage main#content .teaser-row .field--name-field-teaser-image img, body.path-frontpage main#content .teaser-row .field--name-field-image img, body.path-frontpage main#content .teaser-row .views-field-field-teaser-image img {
+    max-width: 250px;
   }
   body.path-frontpage main#content .events-row .wrapper {
     padding: 0;
@@ -16607,7 +16619,7 @@ div.bc-teaser .caption a {
     width: auto;
   }
 }
-@media (min-width: 1200px) and (max-width: 1399.9px) {
+@media (min-width: 1200px) and (max-width: 1420px) {
   body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
     width: 40%;
   }
@@ -16618,6 +16630,10 @@ div.bc-teaser .caption a {
 .layout--twocol-section .layout__region .node--type-page-full-width .field--name-field-image img {
     height: 380px;
     width: auto;
+  }
+
+  body.path-frontpage main#content .field--name-field-teaser-image img, body.path-frontpage main#content .field--name-field-image img, body.path-frontpage main#content .views-field-field-teaser-image img {
+    max-width: 300px;
   }
 }
 @media (min-width: 1400px) {

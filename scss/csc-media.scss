@@ -353,6 +353,7 @@
 
 // Medium (Tablets)
 @media (min-width: 768px) and (max-width: 991px) {
+
   body.node--type-landing-page main#content {
     .field--name-field-text-overlay .c-csc-text_box {
       &.caption {
@@ -362,6 +363,17 @@
   }// End of Landing pages medium
 
 } // End of Tablets
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body.path-frontpage {
+    // Teaser row
+    .teaser-row {
+      .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
+        max-width: 200px;
+      }
+    }
+  }
+}
 
 // Only Large (small laptops)
 @media (min-width: 992px) and (max-width: 1199.9px) {
@@ -395,6 +407,13 @@
         background-position-x: 8vw;
       }
 
+      // Teaser row
+      .teaser-row {
+        .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
+          max-width: 250px;
+        }
+      }
+
       // Events row on home page
       .events-row .wrapper {
         padding: 0;
@@ -418,6 +437,7 @@
       .c-csc-highlight_row .wrapper {
         max-width: 95vw;
       }
+
 
     } // End of Front page
 
@@ -444,7 +464,7 @@
 } // End of min-width: 992 and max-width: 1199.9px
 
 // Only XLarge Most Small Laptops
-@media (min-width: 1200px) and (max-width: 1399.9px) {
+@media (min-width: 1200px) and (max-width: 1420px) {
   body.node--type-landing-page main#content {
     .field--name-field-text-overlay .c-csc-text_box {
       &.caption {
@@ -466,7 +486,14 @@
       }
     }
   }
-} // End XLarge between 1200-1400px
+  // Front page
+  body.path-frontpage main#content {
+    .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
+      max-width: 300px;
+    }
+  }
+} // End XLarge between 1200-1420px
+
 
 // XXL
 @media (min-width: 1400px) {
