@@ -13929,11 +13929,12 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line
   font-weight: bold;
   color: #E57325;
   text-shadow: 1px 1px 1px #ffffff80;
-  /* background-color: $white; */
+  /* background-color: #fdfdfd99;  $white; /**/
   width: fit-content;
   margin: 0 auto;
-  /* padding: 0.6rem 1rem 0.25rem; */
-  /* border-radius: 25px; */
+  /*
+  padding: 0.6rem 1rem 0.25rem;
+  border-radius: 25px; /* */
 }
 body.path-frontpage main#content .block-views-blockhomepage-slideshow-block-1, body.path-frontpage main#content .block-views-blockmedia-slideshow-block-1 {
   min-height: 400px;
