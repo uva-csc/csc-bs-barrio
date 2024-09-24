@@ -13637,9 +13637,13 @@ footer.site-footer .rector-visitor-block {
 
 .titled-hero .layout-title {
   position: absolute;
-  top: 0px;
+  top: 125px;
   color: white;
   background: #00000050;
+}
+
+.user-logged-in .titled-hero .layout-title {
+  top: 0px;
 }
 
 .sticky-first .layout__region--first .wrapper {

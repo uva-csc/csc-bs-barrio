@@ -499,13 +499,21 @@ footer.site-footer {
 .titled-hero {
   .layout-title {
     position: absolute;
-    top: 0px;
+    top: 125px;
     color: white;
     background: #00000050;
   }
 }
 
-// Two column sticky first
+.user-logged-in {
+  .titled-hero {
+    .layout-title {
+      top: 0px;
+    }
+  }
+}
+
+  // Two column sticky first
 .sticky-first .layout__region--first .wrapper {
   position: sticky;
   top: 100px;
