@@ -13902,19 +13902,17 @@ body.path-frontpage main#content .c-csc-hero .field--name-field-text-overlay .fi
   grid-column: 1/-1;
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay {
-  background: #ffffffd0;
+  /*background: #ffffffd0;
   padding: 1rem;
   width: fit-content;
   margin: 0 auto;
-  border-radius: 0 0 20px 20px;
-  /* was
-  linear-gradient(#ffffff, #ffffff09);
+  border-radius: 0 0 20px 20px; */
+  background: linear-gradient(#ffffff, #ffffff09);
   padding-bottom: 8rem;
-  */
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h2, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h2 {
   margin: 0;
-  /* padding: 5rem 0 0; */
+  padding: 1rem 0 0;
   font-size: 300%;
   font-weight: bold;
   letter-spacing: 0.1rem;
