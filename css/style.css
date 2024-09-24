@@ -14462,6 +14462,9 @@ body.node--type-event .layout__region.layout__region--second .wrapper .field--na
 body.node--type-event .layout__region.layout__region--second .wrapper article.node--type-location .country {
   display: none;
 }
+body.node--type-event .layout__region.layout__region--second .wrapper .field--name-field-target-audience {
+  margin-bottom: 1rem;
+}
 
 body.node--type-class .bc-inline.layout.layout--onecol {
   margin-left: -10rem;
@@ -15003,6 +15006,11 @@ p.view-more a {
 }
 .view.event-col .views-row .views-field.date, .view.event-col .views-row .views-field.time {
   margin: 0.25rem 0 0 0;
+  font-size: 90%;
+  font-weight: normal;
+  line-height: 1;
+}
+.view.event-col .views-row .views-field.audience {
   font-size: 90%;
   font-weight: normal;
   line-height: 1;
