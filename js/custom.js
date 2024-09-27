@@ -43,7 +43,7 @@
         // Search box expanding
         // console.log("adding click handler", $('.search-container .search-button')?.length);
         $('.search-container .search-button').on('click', function(e) {
-          console.log("Clicked", e.which, e);
+          // console.log("Clicked", e.which, e);
           e.preventDefault();
           let inbox = $(this).parents('.search-container').find('.search-input');
           if (inbox.hasClass('active')) {
