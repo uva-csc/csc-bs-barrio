@@ -993,6 +993,57 @@ div.bc-teaser {
 
 // End of Calendar styles
 
+// Search
+#block-csc-bs-sass-searchbox {
+  margin: 0.35rem 0 0 -1rem;
+  padding: 0;
+
+  .contextual {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+.search-container {
+  margin: 0 0 0 -1.25rem;
+  padding: 0;
+  width: fit-content;
+  background: transparent;
+
+  * {
+    display: inline-block;
+  }
+
+  .search-input {
+    width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: width 0.5s ease;
+    font-family: $font-frankgoth-std;
+    font-size: 90%;
+
+    &.active {
+      width: 150px;
+      opacity: 1;
+      margin-left: 1rem;
+      border: inherit;
+      padding: 0.25rem 0.25rem 0;
+    }
+  }
+  .search-button {
+    background: transparent;
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    padding: 0;
+    color: $white;
+    i {
+      color: $white;
+    }
+  }
+}
+
 
 // Animations
 @keyframes fade-in {
