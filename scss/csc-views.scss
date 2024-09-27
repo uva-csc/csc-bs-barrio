@@ -140,17 +140,10 @@ p.view-more {
         border-bottom: $csc-link;
       }*/
     }
-    .views-field.date, .views-field.time {
-      margin: 0.25rem 0 0 0;
+    .views-field.date, .views-field.time, .views-field.audience {
       font-size: 90%;
       font-weight: normal;
-      line-height: 1;
-    }
-
-    .views-field.audience {
-      font-size: 90%;
-      font-weight: normal;
-      line-height: 1;
+      line-height: 1.3;
     }
   }
 }

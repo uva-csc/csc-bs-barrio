@@ -13841,6 +13841,10 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   border: none;
 }
 
+.node--unpublished {
+  background: #ffc0cb40;
+}
+
 .path-frontpage .home-link {
   display: none;
 }
@@ -15014,16 +15018,10 @@ p.view-more a {
 .view.event-col .views-row .views-field.title a {
   border-bottom: none;
 }
-.view.event-col .views-row .views-field.date, .view.event-col .views-row .views-field.time {
-  margin: 0.25rem 0 0 0;
+.view.event-col .views-row .views-field.date, .view.event-col .views-row .views-field.time, .view.event-col .views-row .views-field.audience {
   font-size: 90%;
   font-weight: normal;
-  line-height: 1;
-}
-.view.event-col .views-row .views-field.audience {
-  font-size: 90%;
-  font-weight: normal;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 .view-events.events-row-teasers {
@@ -15910,6 +15908,10 @@ div.csc-give-link .content .field--name-body p a:hover {
 
 .img-no-shadow img {
   filter: none !important;
+}
+
+.caption {
+  font-style: italic;
 }
 
 a img:hover {
