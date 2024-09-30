@@ -13519,7 +13519,7 @@ aside.featured-top__inner.section.container.clearfix {
   padding-top: 0.25rem;
 }
 .region-featured-top .block .content p {
-  margin: 0 !important;
+  margin: 0;
   min-height: 32px;
 }
 
