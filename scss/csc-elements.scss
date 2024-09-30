@@ -47,8 +47,37 @@ p {
 }
 
 blockquote {
-  margin: 0 0 1.5rem;
-  margin-inline-start: 40px;
+  /*margin: 0 0 1.5rem;
+  margin-inline-start: 40px; */
+    background: #f7f7f7;
+    border-left: 1px solid #bbb;
+    font-style: italic;
+    margin: 1.5em 20px !important;
+    padding: 0.5em 10px;
+
+  p  {
+    display: inline !important;
+  }
+
+  &:before {
+    display: inline-block;
+    font-family: $font-opensans;
+    color: #bbb;
+    content: "\201C";
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.2em;
+    vertical-align: -.4em;
+  }
+  &:after {
+    display: inline-block;
+    font-family: $font-opensans;
+    color: #bbb;
+    content: "\201D";
+    font-size: 3em;
+    line-height: 0.1em;
+    vertical-align: -.45em;
+  }
 }
 
 /** Breadcrumbs **/
