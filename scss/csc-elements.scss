@@ -115,7 +115,8 @@ nav ol.breadcrumb {
   width: fit-content;
 }
 
-div.layout.bc-inline .block-system-breadcrumb-block {
+div.layout.bc-inline .block-system-breadcrumb-block,
+#breadcrumbs.inline {
   margin: -1rem 0 1rem;
 
   nav ol.breadcrumb {
@@ -126,7 +127,11 @@ div.layout.bc-inline .block-system-breadcrumb-block {
       padding-inline-start: 0px;
     }
   }
-}  // End of Breadcrumbs
+}
+#breadcrumbs.inline {
+  margin-bottom: 0;
+}
+// End of Breadcrumbs
 
 // Separators
 main#content {
