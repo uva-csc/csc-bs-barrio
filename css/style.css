@@ -14348,6 +14348,13 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-style: italic;
 }
 
+.node--type-page #title-div {
+  margin-top: 0.25rem;
+  margin-bottom: -0.25rem;
+}
+.node--type-page #main.container {
+  margin-top: 0;
+}
 .node--type-page h2:first-child, .node--type-page .h2:first-child {
   margin-top: 0;
 }

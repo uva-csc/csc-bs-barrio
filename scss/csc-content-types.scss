@@ -300,6 +300,14 @@ body.node--type-landing-page {
 
 // Basic Pages
 .node--type-page {
+  #title-div {
+    margin-top: 0.25rem;
+    margin-bottom: -0.25rem;
+  }
+
+  #main.container {
+    margin-top: 0;
+  }
 
   // First h2 is next to image so no top margin
   h2:first-child {
