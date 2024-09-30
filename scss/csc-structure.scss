@@ -328,6 +328,11 @@ main#content {
 } // End #header
 
 // Featured Top Section
+
+aside.featured-top__inner.section.container.clearfix {
+  max-width: unset;
+}
+
 .region-featured-top {
   background-color: #EEEEEE;
   .block {

@@ -13507,6 +13507,10 @@ main#content {
   }*/
 }
 
+aside.featured-top__inner.section.container.clearfix {
+  max-width: unset;
+}
+
 .region-featured-top {
   background-color: #EEEEEE;
 }
