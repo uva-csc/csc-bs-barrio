@@ -50,6 +50,12 @@
             inbox.removeClass('active');
           } else {
             inbox.addClass('active');
+            // Somehow Calendar JS removes this or doesn't allow it to get set. This is for calendar page.
+            setTimeout(function() {
+              if (!inbox.hasClass('active')) {
+                inbox.addClass('active');
+              }
+            }, 200, inbox);
           }
           return false;
         });
