@@ -15209,6 +15209,11 @@ p.view-more a {
   padding: 0;
 }
 
+.view.csc-calendar .js-drupal-fullcalendar {
+  position: relative;
+  z-index: 0;
+}
+
 div.row.results-header {
   display: flex;
   justify-content: space-between;

@@ -394,6 +394,12 @@ p.view-more {
   }
 }
 
+// Calendar View
+.view.csc-calendar .js-drupal-fullcalendar {
+  position: relative;
+  z-index: 0;
+}
+
 // Search View
 // Result header (refers to views-view.html.twig in this theme)
 div.row.results-header {
