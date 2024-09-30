@@ -2,232 +2,253 @@
 
 // Page Type Styles (Content types)
 // Landing pages
-body.node--type-landing-page  main#content {
-  &.csc-lg-hero {
-    .c-csc-hero {
-      height: fit-content;
+body.node--type-landing-page {
+  main#content {
+    margin-top: -0.5rem;
 
-      .c-csc-text_box.hero-title {
-        h1 {
-          padding: 35px 0 0;
-          color: $white;
-          font-family: $font-frankgoth-hvy;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 0.1rem;
-          font-size: 3rem;
-        }
-      } // End of .hero-title
+    &.csc-lg-hero {
+      .c-csc-hero {
+        height: fit-content;
 
-      p.breadcrumbs {
-        margin-left: 15vw;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 90%;
-      }
-
-      .c-csc-text_box {
-        h2 {
-          font-family: $font-frankgoth-hvy;
-          text-align: left;
-          margin: 1.5rem 0 0.5rem 500px;
-          font-size: 2.75rem;
-          text-shadow: 2px 2px 5px black;
-        }
-        .student-links1 {
-          margin-top: 1rem;
-
-          .row {
-            .col-md:first-child, .col-md:first-child * {
-              text-align: right !important;
-            }
-
-            .col-md:nth-child(2), .col-md:nth-child(2) * {
-              text-align: left !important;
-            }
-
-            & > div {
-              text-align: left;
-
-              a {
-                font-weight: bold;
-                text-transform: uppercase;
-              }
-            }
-
-            h3 {
-              margin: 1rem 0 0 0;
-              padding: 0;
-              text-transform: uppercase;
-              font-size: 2rem;
-              letter-spacing: 0.05rem;
-            }
-
-            h4 {
-              margin: 0;
-              padding: 0;
-              font-family: 'Bodoni Bold', serif;
-              text-transform: capitalize;
-              letter-spacing: 0.05rem;
-
-              a {
-                text-transform: capitalize;
-                border: none;
-
-                &:hover, &:hover span {
-                  color: $uva-orange!important;
-                }
-              }
-            }
-
-            p {
-              margin: 0.5rem 0;
-              padding: 0;
-            }
-
-            img {
-              border: 4px solid white;
-              max-height: 200px;
-            }
-          } // End of Row
-        }  // End of .student-links1
-      } // end of csc-text-box in .csc-hero
-
-      // Overlay (see below .csc-2col-tbl general definition for grid layout specs)
-      .csc-2col-tbl {
-
-        & > div {
-          text-align: left;
-
-          a {
+        .c-csc-text_box.hero-title {
+          h1 {
+            padding: 35px 0 0;
+            color: $white;
+            font-family: $font-frankgoth-hvy;
             font-weight: bold;
             text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 3rem;
           }
         }
 
-        h3 {
-          margin: 1rem 0 0 0;
-          padding: 0;
+        // End of .hero-title
+
+        p.breadcrumbs {
+          margin-left: 15vw;
+          font-weight: bold;
           text-transform: uppercase;
-          font-size: 2rem;
-          letter-spacing: 0.05rem;
+          font-size: 90%;
         }
 
-        h4 {
-          margin: 0;
-          padding: 0;
-          font-family: 'Bodoni Bold', serif;
-          text-transform: capitalize;
-          letter-spacing: 0.05rem;
+        .c-csc-text_box {
+          h2 {
+            font-family: $font-frankgoth-hvy;
+            text-align: left;
+            margin: 1.5rem 0 0.5rem 500px;
+            font-size: 2.75rem;
+            text-shadow: 2px 2px 5px black;
+          }
 
-          a {
-            text-transform: capitalize;
-            border: none;
+          .student-links1 {
+            margin-top: 1rem;
 
-            &:hover, &:hover span {
-              color: $uva-orange!important;
+            .row {
+              .col-md:first-child, .col-md:first-child * {
+                text-align: right !important;
+              }
+
+              .col-md:nth-child(2), .col-md:nth-child(2) * {
+                text-align: left !important;
+              }
+
+              & > div {
+                text-align: left;
+
+                a {
+                  font-weight: bold;
+                  text-transform: uppercase;
+                }
+              }
+
+              h3 {
+                margin: 1rem 0 0 0;
+                padding: 0;
+                text-transform: uppercase;
+                font-size: 2rem;
+                letter-spacing: 0.05rem;
+              }
+
+              h4 {
+                margin: 0;
+                padding: 0;
+                font-family: 'Bodoni Bold', serif;
+                text-transform: capitalize;
+                letter-spacing: 0.05rem;
+
+                a {
+                  text-transform: capitalize;
+                  border: none;
+
+                  &:hover, &:hover span {
+                    color: $uva-orange !important;
+                  }
+                }
+              }
+
+              p {
+                margin: 0.5rem 0;
+                padding: 0;
+              }
+
+              img {
+                border: 4px solid white;
+                max-height: 200px;
+              }
+            }
+
+            // End of Row
+          }
+
+          // End of .student-links1
+        }
+
+        // end of csc-text-box in .csc-hero
+
+        // Overlay (see below .csc-2col-tbl general definition for grid layout specs)
+        .csc-2col-tbl {
+
+          & > div {
+            text-align: left;
+
+            a {
+              font-weight: bold;
+              text-transform: uppercase;
             }
           }
+
+          h3 {
+            margin: 1rem 0 0 0;
+            padding: 0;
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 0.05rem;
+          }
+
+          h4 {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bodoni Bold', serif;
+            text-transform: capitalize;
+            letter-spacing: 0.05rem;
+
+            a {
+              text-transform: capitalize;
+              border: none;
+
+              &:hover, &:hover span {
+                color: $uva-orange !important;
+              }
+            }
+          }
+
+          p {
+            margin: 0.5rem 0;
+            padding: 0;
+          }
+
+          img {
+            border: 4px solid white;
+            max-height: 200px;
+          }
+        }
+      }
+
+      // End of .csc-hero
+
+    }
+
+    // End of Large Hero pages (like Student)
+
+    h1.title-overlay {
+      padding: 25px 0 10px;
+      background-color: $title-bg;
+      color: $white;
+      font-family: $font-frankgoth-hvy;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 2rem;
+    }
+
+    // Hero Overlays
+    .field--name-field-text-overlay .c-csc-text_box {
+      h2 {
+        font-family: $font-frankgoth-med;
+        text-align: left;
+        margin: 1.5rem 0 0.5rem 25vw;
+        font-size: 2.75rem;
+      }
+
+      /*
+
+      p {
+        color: $uva-blue;
+        max-width: 650px;
+        text-align: left;
+        margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
+        line-height: 1.5rem;
+      }
+      */
+
+      &.caption {
+        position: absolute;
+        width: 100%;
+        padding: 1rem;
+        background-color: #13192999; // #232D4B99;
+
+        &.bottom-right {
+          right: 0;
+          bottom: 50px;
+        }
+
+        &.bottom-left {
+          left: 0;
+          bottom: 50px;
         }
 
         p {
-          margin: 0.5rem 0;
-          padding: 0;
-        }
-
-        img {
-          border: 4px solid white;
-          max-height: 200px;
+          color: $white !important;
+          margin: 0;
         }
       }
-    } // End of .csc-hero
-
-  } // End of Large Hero pages (like Student)
-
-  h1.title-overlay {
-    padding: 25px 0 10px;
-    background-color: $title-bg;
-    color: $white;
-    font-family: $font-frankgoth-hvy;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 2rem;
-  }
-
-  // Hero Overlays
-  .field--name-field-text-overlay .c-csc-text_box {
-    h2 {
-      font-family: $font-frankgoth-med;
-      text-align: left;
-      margin: 1.5rem 0 0.5rem 25vw;
-      font-size: 2.75rem;
     }
-    /*
 
-    p {
-      color: $uva-blue;
-      max-width: 650px;
-      text-align: left;
-      margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
-      line-height: 1.5rem;
-    }
-    */
+    // End of Hero Overlays
 
-    &.caption {
-      position: absolute;
-      width: 100%;
-      padding: 1rem;
-      background-color: #13192999; // #232D4B99;
-
-      &.bottom-right {
-        right: 0;
-        bottom: 50px;
+    .field--name-field-hero-top {
+      /* margin-top: -1.5rem;*/
+      .c-csc-hero {
+        position: relative;
+        margin: 0.5rem 0 1.5rem;
+        padding-bottom: 2rem;
       }
-      &.bottom-left {
-        left: 0;
-        bottom: 50px;
+
+      .hero-caption {
+        width: fit-content;
+        margin: -1rem 1rem 0 0;
+        padding: 0 0 1.5rem 1rem;
+        color: $caption-color;
+        font-size: 80%;
+        font-family: $font-libre-caslon;
+
+        a {
+          color: $caption-color;
+        }
+      }
+    }
+
+    .block-field-blocknodelanding-pagebody {
+      .content {
+        /* width: 75%; */
+        margin-bottom: 4rem;
       }
 
       p {
-        color: $white!important;
-        margin: 0;
-      }
-    }
-  } // End of Hero Overlays
-
-  .field--name-field-hero-top {
-    /* margin-top: -1.5rem;*/
-    .c-csc-hero {
-      position: relative;
-      margin: 0.5rem 0 1.5rem;
-      padding-bottom: 2rem;
-    }
-
-    .hero-caption {
-      width: fit-content;
-      margin: -1rem 1rem 0 0;
-      padding: 0 0 1.5rem 1rem;
-      color: $caption-color;
-      font-size: 80%;
-      font-family: $font-libre-caslon;
-
-      a {
-        color: $caption-color;
+        font-family: $font-frankgoth-std;
       }
     }
   }
-
-  .block-field-blocknodelanding-pagebody {
-    .content {
-      /* width: 75%; */
-      margin-bottom: 4rem;
-    }
-    p {
-      font-family: $font-frankgoth-std;
-    }
-  }
-
 } // End of Landing page styles
 
 // Full Width Pages

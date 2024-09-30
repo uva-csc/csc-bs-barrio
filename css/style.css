@@ -13285,10 +13285,6 @@ main#content {
   padding: 0;
 }
 
-.node--type-landing-page main#content {
-  margin-top: -1rem;
-}
-
 #header {
   font-family: "ITC Franklin Gothic Hvy", sans-serif;
 }
@@ -14140,6 +14136,9 @@ body.path-frontpage main#content .home-research .wrapper h3, body.path-frontpage
 
 /* VARIABLES */
 /** Bootstrap Overrides **/
+body.node--type-landing-page main#content {
+  margin-top: -0.5rem;
+}
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero {
   height: fit-content;
 }
