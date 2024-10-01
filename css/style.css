@@ -15114,7 +15114,7 @@ p.view-more a {
   display: none;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.15rem 0;
   max-width: 300px;
   line-height: 1.05rem;
   font-size: 0.85rem;
@@ -15128,12 +15128,12 @@ p.view-more a {
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-location, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-location, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-location, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-location {
   margin: 0 8px;
-  /* font-size: 90%;*/
+  font-size: 95%;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title {
-  margin: 0.65rem 0;
+  margin: 0.5rem 0;
   line-height: 1.2;
-  font-size: 115%;
+  font-size: 1.15rem;
   font-weight: bold;
   max-width: 400px;
 }
@@ -15193,6 +15193,9 @@ p.view-more a {
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-field-image img.image-style-news-teaser:hover {
   transform: scale(1.15);
+}
+.view.csc-news-block .node--view-mode-teaser .block-field-blocknodenews-itemfield-date {
+  margin: -0.5rem 0 0 0;
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-field-date {
   margin-top: 0.75rem;
