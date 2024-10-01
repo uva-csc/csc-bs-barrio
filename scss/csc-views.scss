@@ -421,6 +421,15 @@ div.view-empty {
   text-align: center;
 }
 
+// Pager (mini)
+.js-pager__items.pagination li.page-item {
+  span.page-link {
+    color: $csc-dark-gray !important;
+  }
+  a.page-link span {
+    color: #0d6efd !important;
+  }
+}
 
 // View Rows (wraps a shaded border around row and adds spacing, etc.)
 

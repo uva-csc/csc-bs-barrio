@@ -15238,6 +15238,13 @@ div.view-empty {
   text-align: center;
 }
 
+.js-pager__items.pagination li.page-item span.page-link {
+  color: #5a6172 !important;
+}
+.js-pager__items.pagination li.page-item a.page-link span {
+  color: #0d6efd !important;
+}
+
 .view-events.events-list-alt .row.views-row,
 .view-news.view-display-id-page_1 .row.views-row,
 .view-search-content.view-display-id-result_page .row.views-row {
