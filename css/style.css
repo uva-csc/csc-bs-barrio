@@ -15034,6 +15034,9 @@ p.view-more a {
   max-width: 76vw;
   padding: 0;
 }
+.view-events.events-row-teasers .view-header {
+  margin: 0 auto;
+}
 .view-events.events-row, .view-events.events-row-teasers {
   /* Generalized to use in any view above at top
   .view-footer {

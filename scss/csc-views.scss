@@ -153,6 +153,9 @@ p.view-more {
   &.events-row-teasers {
     max-width: 76vw;
     padding: 0;
+    .view-header {
+      margin: 0 auto;
+    }
   }
   // Block 3 of View. Shows row of latest events.
   &.events-row, &.events-row-teasers {
