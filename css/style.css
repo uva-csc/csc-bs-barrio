@@ -16384,6 +16384,10 @@ div.bc-teaser .caption a {
 .search-container .search-button i {
   color: #fdfdfd;
 }
+.search-container .search-button i:before {
+  display: inline-block;
+  margin-top: 3px;
+}
 
 @keyframes fade-in {
   100% {

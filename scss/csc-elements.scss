@@ -1074,6 +1074,10 @@ div.bc-teaser {
     color: $white;
     i {
       color: $white;
+      &:before {
+        display: inline-block;
+        margin-top: 3px;
+      }
     }
   }
 }

@@ -41,23 +41,18 @@
           duration: 1200,
         });
         // Search box expanding
-        // console.log("adding click handler", $('.search-container .search-button')?.length);
-        $('.search-container .search-button').on('click', function(e) {
-          // console.log("Clicked", e.which, e);
-          e.preventDefault();
-          let inbox = $(this).parents('.search-container').find('.search-input');
-          if (inbox.hasClass('active')) {
-            inbox.removeClass('active');
-          } else {
-            inbox.addClass('active');
-            // Somehow Calendar JS removes this or doesn't allow it to get set. This is for calendar page.
-            setTimeout(function() {
-              if (!inbox.hasClass('active')) {
-                inbox.addClass('active');
-              }
-            }, 200, inbox);
-          }
-          return false;
+        const els = once('.search-container', '.search-button', context);
+        els.forEach(function (el) {
+          $(el).on('click', function(e) {
+            e.preventDefault();
+            let inbox = $(this).parents('.search-container').find('.search-input');
+            if (inbox.hasClass('active')) {
+              inbox.removeClass('active');
+            } else {
+              inbox.addClass('active');
+            }
+            return false;
+          });
         });
       });
     }
