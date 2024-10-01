@@ -203,6 +203,7 @@ p.view-more {
               border-radius: 0;
               padding: 0;
               filter: none;
+              max-height: 200px
             }
           } // End of .field--name-field-image
 
@@ -249,6 +250,7 @@ p.view-more {
             font-size: 1.15rem;
             font-weight: bold;
             max-width: 400px;
+            max-height: 200px;
 
             a {
               border-bottom: none;
@@ -357,6 +359,7 @@ p.view-more {
         border: thin solid #aaa;
         border-radius: 0;
         padding: 0;
+        max-height: 200px;
         transition: transform .2s; /* Animation */
         &:hover {
           transform: scale(1.15);

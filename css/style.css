@@ -15103,6 +15103,7 @@ p.view-more a {
   border-radius: 0;
   padding: 0;
   filter: none;
+  max-height: 200px;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date {
   margin: 0 8px;
@@ -15136,6 +15137,7 @@ p.view-more a {
   font-size: 1.15rem;
   font-weight: bold;
   max-width: 400px;
+  max-height: 200px;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title a, .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title a, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-title a, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-short-title a {
   border-bottom: none;
@@ -15188,6 +15190,7 @@ p.view-more a {
   border: thin solid #aaa;
   border-radius: 0;
   padding: 0;
+  max-height: 200px;
   transition: transform 0.2s;
   /* Animation */
 }
