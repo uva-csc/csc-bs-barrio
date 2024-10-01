@@ -181,6 +181,7 @@ p.view-more {
           article.node--type-event {
             margin: 0;
             padding: 0;
+            height: 100%;
           }
 
           p.location {
@@ -240,7 +241,7 @@ p.view-more {
           }
 
           .views-field-field-location, .field--name-field-location {
-            margin: 0 8px;
+            margin: 0 8px 18px;
             font-size: 95%
           }
 
@@ -255,6 +256,14 @@ p.view-more {
             a {
               border-bottom: none;
             }
+          }
+
+          .field--name-field-target-audience {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 90%;
+            color: $uva-orange;
           }
 
           // New way with teasers

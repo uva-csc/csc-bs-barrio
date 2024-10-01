@@ -52,6 +52,7 @@
   ]
 %}
 
+
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
@@ -73,7 +74,7 @@
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item') }}>
         {% if item.content is not null and item.content is not empty %}
-          Open to
+          Open {% if 'registration' in item.content %} for {% else %} to {% endif %}
         {% endif %}
         {{ item.content }}
       </div>
