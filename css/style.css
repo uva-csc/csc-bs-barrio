@@ -15223,15 +15223,36 @@ p.view-more a {
   z-index: 0;
 }
 
-div.row.results-header {
+.view.view-search-content div.row.results-header {
   display: flex;
   justify-content: space-between;
 }
-div.row.results-header > * {
+.view.view-search-content div.row.results-header > * {
   width: fit-content;
 }
-div.row.results-header .views-exposed-form .d-flex {
+.view.view-search-content div.row.results-header .views-exposed-form .d-flex {
   gap: 1rem;
+}
+.view.view-search-content .row.type-class .views-field-body .title:after {
+  display: inline-block;
+  content: "(Class)";
+  margin-left: 5px;
+}
+.view.view-search-content .row.type-event .views-field-body .title:after {
+  display: inline-block;
+  content: "(Event)";
+  margin-left: 5px;
+}
+.view.view-search-content .row.type-news-item .views-field-body .title:after {
+  display: inline-block;
+  content: "(News)";
+  margin-left: 5px;
+}
+.view.view-search-content .row.type-landing-page .views-field-body .title:after .row.type-page .views-field-body .title:after,
+.view.view-search-content .row.type-page-full-width .views-field-body .title:after {
+  display: inline-block;
+  content: "(Page)";
+  margin-left: 5px;
 }
 
 div.view-empty {

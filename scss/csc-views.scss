@@ -405,17 +405,44 @@ p.view-more {
 
 // Search View
 // Result header (refers to views-view.html.twig in this theme)
-div.row.results-header {
-  display: flex;
-  justify-content: space-between;
-  & > * {
-    width: fit-content;
+.view.view-search-content {
+  div.row.results-header {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      width: fit-content;
+    }
+
+    .views-exposed-form .d-flex {
+      gap: 1rem;
+    }
   }
-  .views-exposed-form .d-flex {
-    gap: 1rem;
+
+  .row.type-class .views-field-body .title:after {
+    display: inline-block;
+    content: '(Class)';
+    margin-left: 5px;
+  }
+  .row.type-event .views-field-body .title:after {
+    display: inline-block;
+    content: '(Event)';
+    margin-left: 5px;
+  }
+  .row.type-news-item .views-field-body .title:after {
+    display: inline-block;
+    content: '(News)';
+    margin-left: 5px;
+  }
+
+  .row.type-landing-page .views-field-body .title:after
+  .row.type-page .views-field-body .title:after,
+  .row.type-page-full-width .views-field-body .title:after {
+    display: inline-block;
+    content: '(Page)';
+    margin-left: 5px;
   }
 }
-
 // General Views
 div.view-empty {
   text-align: center;
