@@ -39,7 +39,8 @@ p.view-more {
   padding: 0rem 1rem 0 1.2rem;
   border-radius: 15px;
   background-color: $uva-orange;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: $font-frankgoth-std;
+  font-weight: 900!important;
   font-size: 80%;
   text-align: center;
   line-height: 1.15rem;
@@ -162,7 +163,8 @@ p.view-more {
   &.events-row, &.events-row-teasers {
 
     .view-header h2 {
-      font-family: $font-frankgoth-hvy;
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
       text-align: center;
       text-transform: uppercase;
       font-size: 250%;
@@ -281,7 +283,8 @@ p.view-more {
       text-align: center;
 
       p { // The "More Events Button"
-        font-family: $font-frankgoth-hvy;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
         font-size: 90%;
         padding: 0rem 3.5rem;
         border-radius: 3px;

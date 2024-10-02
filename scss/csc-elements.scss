@@ -31,7 +31,8 @@ h2.hero-title {
 
 /** General Block Styles **/
 h1, h2, h3 {
-  font-family: $font-frankgoth-hvy;
+  font-family: $font-frankgoth-std;
+  font-weight: 900!important;
   margin-top: 1rem;
 }
 
@@ -753,7 +754,8 @@ div.geolocation-map-wrapper {
 
       .card-title {
         margin: 0 0 0.75rem;
-        font-family: $font-frankgoth-hvy;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
         font-size: 1.5rem;  // tried 1.25
         text-transform: capitalize!important;
       }
@@ -791,7 +793,8 @@ div.geolocation-map-wrapper {
     h3 {
       color: $white;
       text-align: center;
-      font-family: "ITC Franklin Gothic Hvy", sans-serif;
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
       text-transform: uppercase;
       font-size: 100%;
     }

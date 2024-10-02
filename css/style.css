@@ -13001,6 +13001,150 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCpIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCpIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Hvy";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Hvy";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-BoldItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Poster.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-PosterItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Italic.ttf") format("truetype");
+}
 /* VARIABLES */
 /** Bootstrap Overrides **/
 .font-medium, .font-medium p {
@@ -13008,7 +13152,8 @@ textarea.form-control-lg {
 }
 
 .font-heavy, .font-heavy p {
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
 }
 
 .text-small, .text-sm {
@@ -13142,7 +13287,8 @@ main#content {
 }
 
 #header {
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
 }
 #header #navbar-top {
   padding: 10px 5rem 10px 1rem;
@@ -13560,7 +13706,8 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   width: 100%;
   text-align: center;
   color: #E57325;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   text-transform: uppercase;
   border: none;
 }
@@ -13997,8 +14144,8 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero {
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title h1, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title .h1 {
   padding: 35px 0 0;
   color: #fdfdfd;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
-  font-weight: bold;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 3rem;
@@ -14010,7 +14157,8 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero p.breadcrumbs 
   font-size: 90%;
 }
 body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box h2, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box .h2 {
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   text-align: left;
   margin: 1.5rem 0 0.5rem 500px;
   font-size: 2.75rem;
@@ -14101,8 +14249,8 @@ body.node--type-landing-page main#content h1.title-overlay, body.node--type-land
   padding: 25px 0 10px;
   background-color: #22222277;
   color: #fdfdfd;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
-  font-weight: bold;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 2rem;
@@ -14674,10 +14822,10 @@ main#content .field--name-field-text-overlay .c-csc-text_box.title-banner .field
   margin: 0;
   padding: 20px 0 10px;
   text-align: center;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   color: #fdfdfd;
   font-size: 2rem;
-  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
@@ -14799,7 +14947,8 @@ p.view-more {
   padding: 0rem 1rem 0 1.2rem;
   border-radius: 15px;
   background-color: #E57325;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   font-size: 80%;
   text-align: center;
   line-height: 1.15rem;
@@ -14904,7 +15053,8 @@ p.view-more a {
     text-align: center;
 
     p { // The "More Events Button"
-      font-family: $font-frankgoth-hvy;
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
       font-size: 90%;
       padding: 0rem 3.5rem;
       border-radius: 3px;
@@ -14921,7 +15071,8 @@ p.view-more a {
   } // End of .events-row .footer*/
 }
 .view-events.events-row .view-header h2, .view-events.events-row .view-header .h2, .view-events.events-row-teasers .view-header h2, .view-events.events-row-teasers .view-header .h2 {
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   text-align: center;
   text-transform: uppercase;
   font-size: 250%;
@@ -15219,7 +15370,8 @@ div.view-empty {
 }
 .student-resources.layout .field--name-body h2 span, .student-resources.layout .field--name-body .h2 span {
   display: inline-block;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   font-size: 130%;
   line-height: 0.2rem;
   vertical-align: sub;
@@ -15418,7 +15570,8 @@ h2.hero-title, .hero-title.h2 {
 
 /** General Block Styles **/
 h1, .h1, h2, .h2, h3, .h3 {
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   margin-top: 1rem;
 }
 
@@ -16023,7 +16176,8 @@ div.geolocation-map-wrapper {
 }
 .view-people .card.people .card-body .card-title, .view-people-indexed .card.people .card-body .card-title {
   margin: 0 0 0.75rem;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   font-size: 1.5rem;
   text-transform: capitalize !important;
 }
@@ -16044,7 +16198,8 @@ div.geolocation-map-wrapper {
 .media-feeds .block-csc-social-feeds.csc-social-feed-block h3, .media-feeds .block-csc-social-feeds.csc-social-feed-block .h3 {
   color: #fdfdfd;
   text-align: center;
-  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+  font-weight: 900 !important;
   text-transform: uppercase;
   font-size: 100%;
 }

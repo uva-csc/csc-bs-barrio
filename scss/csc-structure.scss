@@ -45,7 +45,8 @@ main#content {
 
 // Header
 #header {
-  font-family: $font-frankgoth-hvy;
+  font-family: $font-frankgoth-std;
+  font-weight: 900!important;
 
   // Top Navbar
   #navbar-top {
@@ -591,7 +592,8 @@ div.layout--twocol-section--33-67 {
       width: 100%;
       text-align: center;
       color: $uva-orange;
-      font-family: $font-frankgoth-hvy;
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
       text-transform: uppercase;
       border: none;
     }

@@ -72,7 +72,8 @@
 
       span {
         display: inline-block;
-        font-family: $font-frankgoth-hvy;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
         font-size: 130%;
         line-height: 0.2rem;
         vertical-align: sub;

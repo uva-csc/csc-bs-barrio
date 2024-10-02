@@ -170,10 +170,10 @@ main#content {
         margin: 0;
         padding: 20px 0 10px;
         text-align: center;
-        font-family: "ITC Franklin Gothic Hvy", sans-serif;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
         color: #fdfdfd;
         font-size: 2rem;
-        font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
       }

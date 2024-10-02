@@ -5,7 +5,8 @@
 }
 
 .font-heavy, .font-heavy p {
-  font-family: 'ITC Franklin Gothic Hvy', sans-serif;
+  font-family: $font-frankgoth-std;
+  font-weight: 900!important;
 }
 
 .text-small, .text-sm {
