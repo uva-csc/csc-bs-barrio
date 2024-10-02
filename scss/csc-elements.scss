@@ -37,7 +37,8 @@ h1, h2, h3 {
 }
 
 h4, h5, h6 {
-  font-family: $font-frankgoth-med;
+  font-family: $font-frankgoth-std;
+  font-weight: 500!important;
   text-transform: uppercase;
   margin-top: 1rem;
 }
@@ -710,7 +711,8 @@ div.geolocation-map-wrapper {
 
       &.part3 {
         margin-top: 4rem;
-        font-family: $font-frankgoth-med;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
         font-size: 90%;
         letter-spacing: 2px;
       }
@@ -803,7 +805,8 @@ div.geolocation-map-wrapper {
 
 // Tags
 div.type-tag a {
-  font-family: $font-frankgoth-med;
+  font-family: $font-frankgoth-std;
+  font-weight: 500!important;
   font-size: 80%;
   text-transform: uppercase;
   color: $csc-dark-gray;

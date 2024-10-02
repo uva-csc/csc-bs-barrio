@@ -49,7 +49,7 @@ body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--
   }
   #header #navbar-main div.csc-give-link .content .field--name-body p a {
     font-family: "franklin-gothic-urw", sans-serif;
-    font-weight: bold;
+    font-weight: 500 !important;
     font-size: 0.8rem;
   }
 

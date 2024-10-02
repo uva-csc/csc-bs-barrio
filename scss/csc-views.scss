@@ -24,7 +24,8 @@
 .views-field.event-type  {
   /* padding-top: 0.3rem; */
   a {
-    font-family: $font-frankgoth-med;
+    font-family: $font-frankgoth-std;
+    font-weight: 500!important;
     font-size: 80%;
     text-transform: uppercase;
     color: $csc-dark-gray;
@@ -88,7 +89,8 @@ p.view-more {
   .view-header {
     padding-top: 3.5rem;
     h2 {
-      font-family: $font-frankgoth-med;
+      font-family: $font-frankgoth-std;
+      font-weight: 500!important;
       font-size: 5.5rem;
       font-weight: bold;
       text-transform: uppercase;

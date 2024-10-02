@@ -175,7 +175,8 @@ body.node--type-landing-page {
     // Hero Overlays
     .field--name-field-text-overlay .c-csc-text_box {
       h2 {
-        font-family: $font-frankgoth-med;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
         text-align: left;
         margin: 1.5rem 0 0.5rem 25vw;
         font-size: 2.75rem;
@@ -398,7 +399,8 @@ body.node--type-event {
 
         text-align: right;
         a {
-          font-family: $font-frankgoth-med;
+          font-family: $font-frankgoth-std;
+          font-weight: 500!important;
           font-size: 90%;
           text-transform: uppercase;
           border: none;
@@ -409,7 +411,8 @@ body.node--type-event {
     .block-field-blocknodeeventfield-event-type .field--name-field-event-type  {
       padding-top: 0.5rem;
       a {
-        font-family: $font-frankgoth-med;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
         font-size: 80%;
         text-transform: uppercase;
         color: $csc-dark-gray;
@@ -428,7 +431,8 @@ body.node--type-event {
       border-bottom: thin solid grey;
       span {
         font-size: 3rem;
-        font-family: $font-frankgoth-med;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
         line-height: 1.03846;
         letter-spacing: -0.02885em;
       }
@@ -509,7 +513,8 @@ body.node--type-class {
 
         text-align: right;
         a {
-          font-family: $font-frankgoth-med;
+          font-family: $font-frankgoth-std;
+          font-weight: 500!important;
           font-size: 90%;
           text-transform: uppercase;
           border: none;
@@ -520,7 +525,8 @@ body.node--type-class {
     .block-field-blocknodeclassfield-class-type .field--name-field-class-type  {
       padding-top: 0.5rem;
       a {
-        font-family: $font-frankgoth-med;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
         font-size: 80%;
         text-transform: uppercase;
         color: $csc-dark-gray;
@@ -539,7 +545,8 @@ body.node--type-class {
       border-bottom: thin solid grey;
       span {
         font-size: 3rem;
-        font-family: $font-frankgoth-med;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
         line-height: 1.03846;
         letter-spacing: -0.02885em;
       }
@@ -700,7 +707,8 @@ body.node--type-class {
   }
 
   h2 {
-    font-family: $font-frankgoth-med;
+    font-family: $font-frankgoth-std;
+    font-weight: 500!important;
     text-align: left;
     margin: 1.5rem 0 0.5rem 25vw;
     font-size: 2.75rem;

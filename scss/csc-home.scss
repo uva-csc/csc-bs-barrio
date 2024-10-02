@@ -333,7 +333,8 @@ body.path-frontpage main#content {
       }
 
       h3 {
-        font-family: $font-frankgoth-med;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
         font-size: 1.5rem;
       }
     }

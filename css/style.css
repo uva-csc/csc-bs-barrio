@@ -13001,150 +13001,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@font-face {
-  font-family: "ITC Franklin Gothic Std";
-  font-weight: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Std";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Std";
-  font-weight: bold;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Demi.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Std";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Condensed";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCd.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Condensed";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCdIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Condensed";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCd.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Condensed";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCdIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Med Condensed";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCd.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Med Condensed";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCdIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Compressed";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCp.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Compressed";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCpIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Compressed";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCp.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Compressed";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCpIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Med";
-  font-weight: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Med";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Hvy";
-  font-weight: normal;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
-}
-@font-face {
-  font-family: "ITC Franklin Gothic Hvy";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
-}
-@font-face {
-  font-family: "Bodoni Bold";
-  font-weight: normal;
-  src: url("../css/fonts/bodoni/BodoniStd-Bold.otf") format("opentype");
-}
-@font-face {
-  font-family: "Bodoni Bold";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/bodoni/BodoniStd-BoldItalic.otf") format("opentype");
-}
-@font-face {
-  font-family: "Bodoni Poster";
-  font-weight: normal;
-  src: url("../css/fonts/bodoni/BodoniStd-Poster.otf") format("opentype");
-}
-@font-face {
-  font-family: "Bodoni Poster";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/bodoni/BodoniStd-PosterItalic.otf") format("opentype");
-}
-@font-face {
-  font-family: "Libre Caslon Text";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../css/fonts/librecaslon/LibreCaslonText-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Libre Caslon Text";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../css/fonts/librecaslon/LibreCaslonText-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Libre Caslon Text";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../css/fonts/librecaslon/LibreCaslonText-Italic.ttf") format("truetype");
-}
 /* VARIABLES */
 /** Bootstrap Overrides **/
 .font-medium, .font-medium p {
@@ -14130,6 +13986,7 @@ body.path-frontpage main#content .home-research .wrapper h2, body.path-frontpage
 }
 body.path-frontpage main#content .home-research .wrapper h3, body.path-frontpage main#content .home-research .wrapper .h3 {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 1.5rem;
 }
 
@@ -14269,6 +14126,7 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
 }
 body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box h2, body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box .h2 {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   text-align: left;
   margin: 1.5rem 0 0.5rem 25vw;
   font-size: 2.75rem;
@@ -14426,6 +14284,7 @@ body.node--type-event .layout__region.layout__region--first .block-field-blockno
 }
 body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li a {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 90%;
   text-transform: uppercase;
   border: none;
@@ -14436,6 +14295,7 @@ body.node--type-event .layout__region.layout__region--first .block-field-blockno
 }
 body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-event-type .field--name-field-event-type a {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 80%;
   text-transform: uppercase;
   color: #5a6172;
@@ -14453,6 +14313,7 @@ body.node--type-event .layout__region.layout__region--first .block-field-blockno
 body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle span {
   font-size: 3rem;
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   line-height: 1.03846;
   letter-spacing: -0.02885em;
 }
@@ -14521,6 +14382,7 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
 }
 body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-tags li a {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 90%;
   text-transform: uppercase;
   border: none;
@@ -14531,6 +14393,7 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
 }
 body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-class-type .field--name-field-class-type a {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 80%;
   text-transform: uppercase;
   color: #5a6172;
@@ -14548,6 +14411,7 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
 body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclasstitle span {
   font-size: 3rem;
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   line-height: 1.03846;
   letter-spacing: -0.02885em;
 }
@@ -14676,6 +14540,7 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 }
 .node--type-landing-page .c-csc-text_box h2, .node--type-landing-page .c-csc-text_box .h2 {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   text-align: left;
   margin: 1.5rem 0 0.5rem 25vw;
   font-size: 2.75rem;
@@ -14935,6 +14800,7 @@ main#content .c-csc-image_text p {
 }
 .views-field.event-type a {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 80%;
   text-transform: uppercase;
   color: #5a6172;
@@ -14988,6 +14854,7 @@ p.view-more a {
 }
 .view.event-col .view-header h2, .view.event-col .view-header .h2 {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 5.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -15365,6 +15232,7 @@ div.view-empty {
   border-bottom: solid 0.8rem #E57325;
   line-height: 1rem;
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-style: italic;
   margin-bottom: 1.5rem;
 }
@@ -15577,6 +15445,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 h4, .h4, h5, .h5, h6, .h6 {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   text-transform: uppercase;
   margin-top: 1rem;
 }
@@ -15947,7 +15816,7 @@ div.csc-give-link .content .field--name-body p {
   padding: 0.2rem 0.25rem 0 0;
 }
 div.csc-give-link .content .field--name-body p a {
-  font-family: "Bodoni", serif;
+  font-family: "bodoni-urw", serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: #fdfdfd;
@@ -16142,6 +16011,7 @@ div.geolocation-map-wrapper {
 #env-flourish h2 span.part3, #env-flourish .h2 span.part3 {
   margin-top: 4rem;
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 90%;
   letter-spacing: 2px;
 }
@@ -16206,6 +16076,7 @@ div.geolocation-map-wrapper {
 
 div.type-tag a {
   font-family: "franklin-gothic-urw", sans-serif;
+  font-weight: 500 !important;
   font-size: 80%;
   text-transform: uppercase;
   color: #5a6172;
