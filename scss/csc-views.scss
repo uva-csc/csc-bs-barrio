@@ -85,6 +85,7 @@ p.view-more {
   margin: 0 0 0 30px;
 
   .view-header {
+    padding-top: 3.5rem;
     h2 {
       font-family: $font-frankgoth-med;
       font-size: 5.5rem;
@@ -101,7 +102,7 @@ p.view-more {
     }
   }
 
-  $event-row-gap: 30px;
+  $event-row-gap: 20px;
 
   .views-row {
     display: flex;
@@ -120,7 +121,7 @@ p.view-more {
     }
 
     .views-field.event-type {
-      /* margin-top: 0.75rem; */
+      margin-top: -0.5rem;
       a {
         font-size: 70%;
         letter-spacing: unset;

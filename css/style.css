@@ -14978,6 +14978,9 @@ p.view-more a {
 .view.event-col {
   margin: 0 0 0 30px;
 }
+.view.event-col .view-header {
+  padding-top: 3.5rem;
+}
 .view.event-col .view-header h2, .view.event-col .view-header .h2 {
   font-family: "ITC Franklin Gothic Med", sans-serif;
   font-size: 5.5rem;
@@ -14995,17 +14998,17 @@ p.view-more a {
   display: flex;
 }
 .view.event-col .views-row > div:first-child {
-  margin: 30px;
+  margin: 20px;
 }
 .view.event-col .views-row > div:nth-child(2) {
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 0;
 }
 .view.event-col .views-row .views-field-field-image {
   flex-shrink: 0;
   max-width: 280px;
 }
 .view.event-col .views-row .views-field.event-type {
-  /* margin-top: 0.75rem; */
+  margin-top: -0.5rem;
 }
 .view.event-col .views-row .views-field.event-type a {
   font-size: 70%;
