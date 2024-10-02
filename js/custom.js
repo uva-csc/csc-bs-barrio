@@ -55,13 +55,6 @@
           });
         });
 
-        // Event View audience fix
-        $('.views-field.audience').each((ind, el) => {
-          if ($(el).text().includes("to registration")) {
-            console.log('aud field', el);
-            $(el).text("Open for registration");
-          }
-        });
       }); // End of Document Ready
     }
   };
