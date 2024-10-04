@@ -4,6 +4,29 @@
 @media (max-width: 576px) {
   #page-wrapper {
     overflow: hidden;
+
+    .featured-bottom {
+      margin-top: 5rem;
+    }
+  }
+
+  // View modes
+  .node--view-mode-alt-teaser {
+    .node__content {
+      width: 390px !important;
+    }
+  }
+
+  // Landing pages
+  body.node--type-landing-page {
+    .node--view-mode-full {
+      .field--name-field-teaser-image {
+        img {
+          height: unset!important;
+          margin: 0.25rem auto;
+        }
+      }
+    }
   }
 
   // People pages
@@ -68,6 +91,34 @@
     }
   } // end of individual people pages
 
+  // Events
+  .view-events.events-row-teasers {
+    .field--name-field-target-audience {
+      position: relative!important;
+    }
+  }
+  .block-views {
+    h2 {
+      text-align: center;
+    }
+  }
+  // Individual Event Pages
+  body.node--type-event {
+    .block-field-blocknodeeventtitle {
+      span {
+        font-size: 2.5rem !important;
+      }
+    }
+    .layout__region--second {
+      width: unset;
+      max-width: unset;
+      height: fit-content;
+      padding: 0;
+    }
+
+  } // End of events
+
+  // Research
 }
 @media (max-width: 767.9px) {
   main#content {

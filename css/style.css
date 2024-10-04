@@ -14765,10 +14765,9 @@ main#content .c-csc-image_text p {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
 .c-csc-captioned_image .field--name-field-caption {
-  margin-top: 0.5rem;
-  max-width: 90%;
+  margin-top: 0.25rem;
   font-size: 0.95rem;
-  text-align: right;
+  text-align: center;
   line-height: 1.25;
 }
 
@@ -16333,6 +16332,18 @@ div.bc-teaser .caption a {
   #page-wrapper {
     overflow: hidden;
   }
+  #page-wrapper .featured-bottom {
+    margin-top: 5rem;
+  }
+
+  .node--view-mode-alt-teaser .node__content {
+    width: 390px !important;
+  }
+
+  body.node--type-landing-page .node--view-mode-full .field--name-field-teaser-image img {
+    height: unset !important;
+    margin: 0.25rem auto;
+  }
 
   body.path-people .facets-widget-links {
     padding: 0;
@@ -16381,6 +16392,24 @@ div.bc-teaser .caption a {
   }
   .node--type-people .image-bio .wrapper .block-field-blocknodepeoplefield-description {
     margin-top: 1rem !important;
+  }
+
+  .view-events.events-row-teasers .field--name-field-target-audience {
+    position: relative !important;
+  }
+
+  .block-views h2, .block-views .h2 {
+    text-align: center;
+  }
+
+  body.node--type-event .block-field-blocknodeeventtitle span {
+    font-size: 2.5rem !important;
+  }
+  body.node--type-event .layout__region--second {
+    width: unset;
+    max-width: unset;
+    height: fit-content;
+    padding: 0;
   }
 }
 @media (max-width: 767.9px) {
