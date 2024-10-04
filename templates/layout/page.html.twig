@@ -69,6 +69,9 @@
 #}
 {# see https://www.drupal.org/project/drupal/issues/953034#comment-14192130 #}
 {% set sidebar_first_exists = page.sidebar_first|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
+{% if sidebar_first_attributes.hasClass('col-md-4') %}
+  {% set sidebar_first_attributes = sidebar_first_attributes.removeClass('col-md-4').addClass(['col-md-3', 'col-sm-12']) %}
+{% endif %}
 {% set sidebar_second_exists = page.sidebar_second|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 {% set full_title_types = 'page|location' %}
 <div id="page-wrapper">

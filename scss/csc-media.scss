@@ -1,6 +1,74 @@
 @import 'variables.scss';
 
 // Phones
+@media (max-width: 576px) {
+  #page-wrapper {
+    overflow: hidden;
+  }
+
+  // People pages
+  body.path-people {  // The list of people
+    .facets-widget-links {
+      padding: 0;
+      ul.item-list__links {
+        max-width: unset;
+      }
+    }
+
+    .view-people {
+      .results-header {
+        text-align: center;
+      }
+      .views-row {
+        margin: 0 auto;
+        .card.people {
+          width: 300px;
+        }
+      }
+    }
+  } // end of list of people /people
+
+  // Invidual people pages
+  .node--type-people {
+    .block-system-breadcrumb-block {
+      margin: -15px 0 0!important;
+      ol.breadcrumb {
+        margin: 0!important;
+        ol, .breadcrumb-item {
+          display: inline-block;
+        }
+      }
+    }
+    .image-bio {
+      margin-top: -210px;
+
+      * {
+        color: $uva-blue;
+      }
+      .wrapper {
+        padding-top: 1rem;
+        text-align: center;
+
+        p {
+          padding: 0;
+          text-align: left;
+        }
+
+        .field--name-title {
+          font-size: 1.75rem;
+        }
+        .field--name-field-image img {
+          margin: 0 auto;
+        }
+        .block-field-blocknodepeoplefield-description {
+          margin-top: 1rem !important;
+        }
+
+      } // end of .wrapper
+    }
+  } // end of individual people pages
+
+}
 @media (max-width: 767.9px) {
   main#content {
     padding: 0;

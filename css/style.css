@@ -15356,10 +15356,6 @@ div.view-empty {
   letter-spacing: -0.03125em;
 }
 
-.page-view-people .sidebar_first {
-  width: 25%;
-}
-
 .view.view-people .view-header h2, .view.view-people .view-header .h2 {
   margin: 0;
   padding: 0 0 1rem 0;
@@ -16333,6 +16329,60 @@ div.bc-teaser .caption a {
 }
 /* VARIABLES */
 /** Bootstrap Overrides **/
+@media (max-width: 576px) {
+  #page-wrapper {
+    overflow: hidden;
+  }
+
+  body.path-people .facets-widget-links {
+    padding: 0;
+  }
+  body.path-people .facets-widget-links ul.item-list__links {
+    max-width: unset;
+  }
+  body.path-people .view-people .results-header {
+    text-align: center;
+  }
+  body.path-people .view-people .views-row {
+    margin: 0 auto;
+  }
+  body.path-people .view-people .views-row .card.people {
+    width: 300px;
+  }
+
+  .node--type-people .block-system-breadcrumb-block {
+    margin: -15px 0 0 !important;
+  }
+  .node--type-people .block-system-breadcrumb-block ol.breadcrumb {
+    margin: 0 !important;
+  }
+  .node--type-people .block-system-breadcrumb-block ol.breadcrumb ol, .node--type-people .block-system-breadcrumb-block ol.breadcrumb .breadcrumb-item {
+    display: inline-block;
+  }
+  .node--type-people .image-bio {
+    margin-top: -210px;
+  }
+  .node--type-people .image-bio * {
+    color: #232D4B;
+  }
+  .node--type-people .image-bio .wrapper {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .node--type-people .image-bio .wrapper p {
+    padding: 0;
+    text-align: left;
+  }
+  .node--type-people .image-bio .wrapper .field--name-title {
+    font-size: 1.75rem;
+  }
+  .node--type-people .image-bio .wrapper .field--name-field-image img {
+    margin: 0 auto;
+  }
+  .node--type-people .image-bio .wrapper .block-field-blocknodepeoplefield-description {
+    margin-top: 1rem !important;
+  }
+}
 @media (max-width: 767.9px) {
   main#content {
     padding: 0;
