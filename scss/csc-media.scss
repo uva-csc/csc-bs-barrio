@@ -133,11 +133,11 @@
         font-size: 2.5rem !important;
       }
     }
-    .layout__region--second {
+    .layout__region.layout__region--second .wrapper {
       width: unset;
       max-width: unset;
       height: fit-content;
-      padding: 0;
+      margin: 0.5rem 0 0 -1rem;
     }
 
   } // End of events
