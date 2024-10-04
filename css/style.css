@@ -16336,6 +16336,15 @@ div.bc-teaser .caption a {
     margin-top: 5rem;
   }
 
+  .field--name-body .field--name-field-media-image .field__item img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .layout-title h1, .layout-title .h1 {
+    text-align: center;
+  }
+
   .node--view-mode-alt-teaser .node__content {
     width: 390px !important;
   }
@@ -16343,6 +16352,10 @@ div.bc-teaser .caption a {
   body.node--type-landing-page .node--view-mode-full .field--name-field-teaser-image img {
     height: unset !important;
     margin: 0.25rem auto;
+  }
+
+  .titled-hero .layout-title {
+    top: 158px;
   }
 
   body.path-people .facets-widget-links {

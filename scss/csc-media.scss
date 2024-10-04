@@ -8,6 +8,22 @@
     .featured-bottom {
       margin-top: 5rem;
     }
+
+  } // end of page wrapper
+
+  .field--name-body {
+    .field--name-field-media-image {
+      .field__item {
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .layout-title h1 {
+    text-align: center;
   }
 
   // View modes
@@ -28,6 +44,14 @@
       }
     }
   }
+
+  // Elements
+  .titled-hero {
+    .layout-title {
+      top: 158px;
+    }
+  }
+
 
   // People pages
   body.path-people {  // The list of people
