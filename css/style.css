@@ -15865,6 +15865,8 @@ div.csc-give-link .content .field--name-body p a:hover {
 
 .field--name-field-image.bordered, .field--name-field-media-image.bordered {
   border: 3px solid #fdfdfd;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .img-border img {

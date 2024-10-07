@@ -26,6 +26,8 @@ const DAY_MAPPING = [
 
 ////********* Preprocessing ************////
 function csc_bs_sass_preprocess_page(&$variables) {
+  // Make sure jquery once is included
+  $variables['#attached']['library'][] = 'core/jquery.once';
   // Node pages
   if (array_key_exists('node', $variables) && $variables['node'] instanceof NodeInterface) {
     $node = $variables['node'];
