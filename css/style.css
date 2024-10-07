@@ -16427,9 +16427,15 @@ div.bc-teaser .caption a {
     margin: 0.5rem 0 0 -1rem;
   }
 
-  main#content .csc-sep.dotted-blue {
+  .node--type-landing-page main#content .csc-sep.dotted-blue {
     margin: 0;
     padding-top: 2rem;
+  }
+
+  .c-csc-text_box h2, .c-csc-text_box .h2 {
+    width: 100vw;
+    margin: 0 0 0.5rem !important;
+    text-align: center !important;
   }
 
   .features-1over2 > .layout__region > .block {
