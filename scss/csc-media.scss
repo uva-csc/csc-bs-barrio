@@ -141,9 +141,54 @@
     }
 
   } // End of events
+  // Student hub pages
+  main#content .csc-sep.dotted-blue {
+    margin: 0;
+    padding-top: 2rem;
+  }
 
-  // Research
-}
+  .features-1over2 > .layout__region {
+    & > .block {
+      .content {
+        width: 100vw;
+        margin: 0 !important;
+      }
+
+      /*.block-entity-blocknode */
+    }
+    .node--view-mode-alt-teaser .node__content {
+      width: 100vw!important;
+    }
+
+    & > .block:nth-child(2) {
+      width: 100vw;
+    }
+
+    .field--name-field-teaser-image,
+    .field--name-field-image {
+      width: 100vw;
+
+      img {
+        filter: none;
+      }
+    }
+  }
+  .student-resources {
+    .field--name-body {
+      display: block!important;
+      h2 {
+        line-height: unset !important;
+      }
+    }
+  }
+
+  .csc-news-block {
+    .views-view-responsive-grid.views-view-responsive-grid--horizontal {
+      --views-responsive-grid--column-count: 1 !important;
+    }
+  }
+  // End of Student Hub
+} // End Media 576px
 @media (max-width: 767.9px) {
   main#content {
     padding: 0;

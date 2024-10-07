@@ -16426,6 +16426,44 @@ div.bc-teaser .caption a {
     height: fit-content;
     margin: 0.5rem 0 0 -1rem;
   }
+
+  main#content .csc-sep.dotted-blue {
+    margin: 0;
+    padding-top: 2rem;
+  }
+
+  .features-1over2 > .layout__region > .block {
+    /*.block-entity-blocknode */
+  }
+  .features-1over2 > .layout__region > .block .content {
+    width: 100vw;
+    margin: 0 !important;
+  }
+  .features-1over2 > .layout__region .node--view-mode-alt-teaser .node__content {
+    width: 100vw !important;
+  }
+  .features-1over2 > .layout__region > .block:nth-child(2) {
+    width: 100vw;
+  }
+  .features-1over2 > .layout__region .field--name-field-teaser-image,
+.features-1over2 > .layout__region .field--name-field-image {
+    width: 100vw;
+  }
+  .features-1over2 > .layout__region .field--name-field-teaser-image img,
+.features-1over2 > .layout__region .field--name-field-image img {
+    filter: none;
+  }
+
+  .student-resources .field--name-body {
+    display: block !important;
+  }
+  .student-resources .field--name-body h2, .student-resources .field--name-body .h2 {
+    line-height: unset !important;
+  }
+
+  .csc-news-block .views-view-responsive-grid.views-view-responsive-grid--horizontal {
+    --views-responsive-grid--column-count: 1 !important;
+  }
 }
 @media (max-width: 767.9px) {
   main#content {
