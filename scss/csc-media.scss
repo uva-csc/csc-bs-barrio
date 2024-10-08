@@ -75,7 +75,7 @@
     }
   } // end of list of people /people
 
-  // Invidual people pages
+  // Individual people pages
   .node--type-people {
     .block-system-breadcrumb-block {
       margin: -15px 0 0!important;
@@ -193,6 +193,24 @@
     }
   }
   // End of Student Hub
+
+  // Calendar Styles
+  .csc-calendar .js-drupal-fullcalendar {
+    .fc-toolbar {
+      display: grid;
+      justify-items: center;
+
+      & > div {
+        margin: 0.5rem auto;
+        width: 100vw;
+        text-align: center;
+        &:first-child {
+          margin-top: -0.5rem;
+        }
+      }
+    }
+  } // End of calendar styles
+
 } // End Media 576px
 
 @media (max-width: 767.9px) {

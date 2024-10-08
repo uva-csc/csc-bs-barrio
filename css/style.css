@@ -16470,6 +16470,19 @@ div.bc-teaser .caption a {
   .csc-news-block .views-view-responsive-grid.views-view-responsive-grid--horizontal {
     --views-responsive-grid--column-count: 1 !important;
   }
+
+  .csc-calendar .js-drupal-fullcalendar .fc-toolbar {
+    display: grid;
+    justify-items: center;
+  }
+  .csc-calendar .js-drupal-fullcalendar .fc-toolbar > div {
+    margin: 0.5rem auto;
+    width: 100vw;
+    text-align: center;
+  }
+  .csc-calendar .js-drupal-fullcalendar .fc-toolbar > div:first-child {
+    margin-top: -0.5rem;
+  }
 }
 @media (max-width: 767.9px) {
   main#content {
