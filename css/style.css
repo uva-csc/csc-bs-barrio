@@ -14506,16 +14506,16 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   font-size: 3rem;
   font-weight: bold;
 }
-.node--type-people .image-bio .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-description {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
   margin-top: 75px;
 }
-.node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-description {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
   margin-top: 120px;
 }
-.node--type-people .image-bio .block-field-blocknodepeoplefield-description {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-bio {
   margin-top: 130px;
 }
-.node--type-people .image-bio .block-field-blocknodepeoplefield-description * {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-bio * {
   color: #232D4B;
 }
 
@@ -16417,7 +16417,7 @@ div.bc-teaser .caption a {
   .node--type-people .image-bio .wrapper .field--name-field-image img {
     margin: 0 auto;
   }
-  .node--type-people .image-bio .wrapper .block-field-blocknodepeoplefield-description {
+  .node--type-people .image-bio .wrapper .block-field-blocknodepeoplefield-bio {
     margin-top: 1rem !important;
   }
 
