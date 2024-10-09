@@ -14330,7 +14330,7 @@ body.node--type-event .layout__region.layout__region--second {
   max-width: 300px;
 }
 body.node--type-event .layout__region.layout__region--second .wrapper {
-  height: 430px;
+  height: fit-content;
   width: 300px;
   background-color: #eeeeee;
   margin-top: 20px;

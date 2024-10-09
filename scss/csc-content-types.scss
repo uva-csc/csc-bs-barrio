@@ -454,7 +454,7 @@ body.node--type-event {
     width: 25%;
     max-width: 300px;
     .wrapper {
-      height: 430px;
+      height: fit-content;
       width: 300px;
       background-color: $csc-lt-gray;
       margin-top: 20px;
