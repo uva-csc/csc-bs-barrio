@@ -285,5 +285,45 @@
 
  // End of People pages
 
+// CIRCL Page (Research)
+body.page-node-144 {
+  .circl-overlay {
+    position: relative;
+    padding-top: 10%;
+    /* top: 10rem;*/
+    left: 13rem;
+    font-size: 2.5rem;
+    text-align: left;
+
+    .logo {
+      width: fit-content;
+    }
+
+    .text-overlay {
+      margin-top: 2.5rem;
+      width: fit-content;
+      p {
+        font-family: $font-roboto !important;
+
+        &.p1 {
+          font-size: 2.75rem;
+          font-weight: 900 !important;
+          letter-spacing: 6px;
+        }
+
+        &.p2 {
+          padding-top: 0.5rem;
+          line-height: 1.2;
+          font-weight: 100 !important;
+          font-size: 2.25rem;
+          color: #efefef;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+  }
+}
+
 
 /** End of Individual Page Styles **/

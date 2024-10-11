@@ -15401,6 +15401,38 @@ div.view-empty {
   display: none;
 }
 
+body.page-node-144 .circl-overlay {
+  position: relative;
+  padding-top: 10%;
+  /* top: 10rem;*/
+  left: 13rem;
+  font-size: 2.5rem;
+  text-align: left;
+}
+body.page-node-144 .circl-overlay .logo {
+  width: fit-content;
+}
+body.page-node-144 .circl-overlay .text-overlay {
+  margin-top: 2.5rem;
+  width: fit-content;
+}
+body.page-node-144 .circl-overlay .text-overlay p {
+  font-family: "Roboto", sans-serif !important;
+}
+body.page-node-144 .circl-overlay .text-overlay p.p1 {
+  font-size: 2.75rem;
+  font-weight: 900 !important;
+  letter-spacing: 6px;
+}
+body.page-node-144 .circl-overlay .text-overlay p.p2 {
+  padding-top: 0.5rem;
+  line-height: 1.2;
+  font-weight: 100 !important;
+  font-size: 2.25rem;
+  color: #efefef;
+  letter-spacing: 2px;
+}
+
 /** End of Individual Page Styles **/
 /* VARIABLES */
 /** Bootstrap Overrides **/
@@ -16758,6 +16790,10 @@ div.bc-teaser .caption a {
     height: 250px;
     width: auto;
   }
+
+  body.page-node-144 .circl-overlay {
+    left: 0 !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
@@ -16767,6 +16803,10 @@ div.bc-teaser .caption a {
 @media (min-width: 768px) and (max-width: 1024px) {
   body.path-frontpage .teaser-row .field--name-field-teaser-image img, body.path-frontpage .teaser-row .field--name-field-image img, body.path-frontpage .teaser-row .views-field-field-teaser-image img {
     max-width: 200px;
+  }
+
+  body.page-node-144 .circl-overlay {
+    left: 3rem;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.9px) {

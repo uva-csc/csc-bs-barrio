@@ -561,6 +561,12 @@
       }
     }
   }
+  // Circl page
+  body.page-node-144 {
+    .circl-overlay {
+      left: 0 !important;
+    }
+  }
 }
 
 // Medium (Tablets)
@@ -583,6 +589,12 @@
       .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
         max-width: 200px;
       }
+    }
+  }
+  // Circl page
+  body.page-node-144 {
+    .circl-overlay {
+      left: 3rem;
     }
   }
 }
