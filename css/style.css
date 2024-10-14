@@ -16382,6 +16382,9 @@ div.bc-teaser .caption a {
   #page-wrapper {
     overflow: hidden;
   }
+  #page-wrapper main#content .c-csc-hero {
+    background-position: center center !important;
+  }
   #page-wrapper .featured-bottom {
     margin-top: 5rem;
   }
@@ -16818,6 +16821,21 @@ div.bc-teaser .caption a {
   div#main-menu-list ul.navbar-nav ul.dropdown-menu {
     margin: unset !important;
     background-color: #C8CBD2;
+  }
+
+  .block-facet-blockroles .facets-widget-links ul.item-list__links li a span.facet-item__count {
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  body.path-people .facets-widget-links {
+    margin: 0;
+    padding: 0;
+  }
+  body.path-people .facets-widget-links ul.item-list__links {
+    max-width: unset;
+    margin: 0 0 1rem 0;
+    padding: 0;
   }
 }
 @media (min-width: 640px) and (max-width: 991px) {

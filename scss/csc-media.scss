@@ -4,6 +4,11 @@
 @media (max-width: 576px) {
   #page-wrapper {
     overflow: hidden;
+    main#content {
+      .c-csc-hero {
+        background-position: center center !important;
+      }
+    }
 
     .featured-bottom {
       margin-top: 5rem;
@@ -47,6 +52,8 @@
       }
     }
   }
+
+
 
   .layout-title h1 {
     text-align: center;
@@ -588,9 +595,29 @@
         background-color: $uva-blue-25;
       }
     }
+  }  // End of drop down menu for max-width: 992
+
+  .block-facet-blockroles .facets-widget-links ul.item-list__links {
+      li a span.facet-item__count {
+          display: none;
+     }
+  }
+} // end of max-width 992
+
+@media (min-width: 576px) and (max-width: 767px) {
+  body.path-people {
+    .facets-widget-links {
+      margin: 0;
+      padding: 0;
+
+      ul.item-list__links {
+        max-width: unset;
+        margin: 0 0 1rem 0;
+        padding: 0;
+      }
+    }
   }
 }
-
 @media (min-width: 640px) and (max-width: 991px) {
   // Research page hack. see csc-elements ~ ln 507
   .layout--twocol-section .layout__region {
