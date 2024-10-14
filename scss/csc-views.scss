@@ -197,7 +197,9 @@ p.view-more {
           .node--view-mode-teaser {
             margin-bottom: 10px;
             .node__content {
-              margin-top: 0;
+              display: grid;
+              margin: 0;
+              padding: 0;
               text-align: center
             }
           }
@@ -262,9 +264,12 @@ p.view-more {
               border-bottom: none;
             }
           }
-
+          .field--name-field-short-title .field--name-field-short-title  {
+            margin: 0;
+          }
           .field--name-field-target-audience {
-            position: relative;
+            position: absolute;
+            bottom: 0;
             width: 100%;
             font-size: 90%;
             color: $uva-orange;
