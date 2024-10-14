@@ -72,8 +72,8 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $val['allday'] = isDateAllDay($stts, $etts, $tz) ? 'true' : 'false';
       $val['month'] = date('M', $stts);
       $val['day'] = date('j', $stts);
-      $val['day_name'] = date('l', $stts);
-      $val['full'] = date('M j, Y', $stts);
+      $val['day_name'] = date('D', $stts);
+      $val['full'] = date('M j Y', $stts);
       $vals[$n] = $val;
     }
     // $date->setValue($vals); // Took out 8/21/2024 as I don't think it does anything (good).
@@ -81,6 +81,11 @@ function csc_bs_sass_preprocess_node(&$variables) {
     if ($variables['valnums'] > 0) {
       $variables['stdt'] = $vals[0]['value'];
       $variables['starts_on'] = ($rrid && $variables['stdt'] > time()) ? $vals[0]['day_name'] . ', ' . $vals[0]['full'] : NULL;
+      $enddate = $node->get('field_end_date')->getValue();
+      $edts =  (count($enddate) > 0) ? date_create($enddate[0]['value']) : false;
+      if ($edts) {
+        $variables['ends_on'] = date_format($edts, 'D, M j Y');
+      }
     }
   } else if ($node_type == 'people') {
     // PEOPLE

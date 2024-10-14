@@ -89,8 +89,12 @@
     </div>
     {{ content.field_date }}
     {% if starts_on %}
-      <div class="field--name-field-date starts-on">Starts {{ starts_on }}</div>
+      {% if ends_on  %}
+        <div class="field--name-field-date starts-on">{{ starts_on }} - {{ ends_on }}</div>
+      {% else %}
+        <div class="field--name-field-date starts-on">Starts on {{ starts_on }}</div>
+      {% endif %}
     {% endif %}
-    {{ content|without('field_image', 'field_short_title', 'field_date') }}
+    {{ content|without('field_image', 'field_short_title', 'field_date', 'field_end_date') }}
   </div>
 </article>
