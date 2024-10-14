@@ -11,6 +11,32 @@
 
   } // end of page wrapper
 
+  // Dropdown menus
+  #header #navbar-main ul.navbar-nav {
+    .dropdown-menu li.dropdown-item {
+      white-space: wrap;
+      line-height: 1.3;
+      padding: 0.5rem !important;
+      &:hover {
+        background-color: $white !important;
+        color: $uva-orange !important;
+      }
+      &.active {
+        background-color: $white !important;
+        a {
+          color: $uva-blue !important;
+        }
+      }
+      a {
+        color: $uva-blue;
+        &:hover {
+          background-color: $white !important;
+          color: $uva-orange !important;
+        }
+      }
+    }
+  }
+
   .field--name-body {
     .field--name-field-media-image {
       .field__item {
@@ -223,19 +249,6 @@
     padding: 0 8px;
   }
 
-  // Move navbar toggle up to top header
-  button.navbar-toggler {
-    position: absolute;
-    top: -45px;
-    right: 10px;
-    background-color: white;
-  }
-
-  // Remove secondary header strip
-  #header #navbar-main.bg-primary {
-    height: 0px !important;
-  }
-
   // Pre-Footer and Footer blocks
   .block.help-curate .content {
     position: unset;
@@ -420,19 +433,6 @@
 
   }  // end of Front Page in phones & tablets
 
-  // Dropdown menu (Phones)
-  div#main-menu-list {
-    background-color: $csc-grey-blue;
-
-    ul.navbar-nav {
-      padding: 0 0 0 1rem;
-
-      ul.dropdown-menu {
-        margin: unset!important;
-        background-color: $uva-blue-25;
-      }
-    }
-  }
   // Landing pages for Phones
   body.node--type-landing-page {
     main#content {
@@ -544,8 +544,52 @@
   .layout__region--second .node--view-mode-alt-teaser {
     padding: 0;
   }
+
+  // Specific pages
+
+  // Circl page
+  body.page-node-144 {
+    .circl-overlay {
+      left: 0 !important;
+
+      .field--type-image img {
+        margin-left: 4rem;
+      }
+      .text-overlay {
+        text-align: center;
+      }
+    }
+  }
 } // End of max-width: 767.9px (phones)
 
+@media (max-width: 992px) {
+  // Move navbar toggle up to top header
+  button.navbar-toggler {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    background-color: white;
+  }
+
+  // Remove secondary header strip
+  #header #navbar-main.bg-primary {
+    height: 0px !important;
+  }
+
+  // Dropdown menu
+  div#main-menu-list {
+    background-color: $csc-grey-blue;
+
+    ul.navbar-nav {
+      padding: 0 0 0 1rem;
+
+      ul.dropdown-menu {
+        margin: unset!important;
+        background-color: $uva-blue-25;
+      }
+    }
+  }
+}
 
 @media (min-width: 640px) and (max-width: 991px) {
   // Research page hack. see csc-elements ~ ln 507
@@ -601,13 +645,22 @@
 
 // Only Large (small laptops)
 @media (min-width: 992px) and (max-width: 1199.9px) {
-  #header #navbar-top {
-    max-width: 100vw;
-    overflow: hidden;
-    padding: 0.5rem;
+  #header {
+    #navbar-top {
+      max-width: 100vw;
+      overflow: hidden;
+      padding: 0.5rem;
 
-    nav#block-csc-bs-sass-topmenu {
-      margin-left: -3rem;
+      nav#block-csc-bs-sass-topmenu {
+        margin-left: -3rem;
+      }
+    }
+    #navbar-main {
+      ul.navbar-nav {
+        li {
+          padding: 0;
+        }
+      }
     }
   }
   // TODO: should be front page onlye

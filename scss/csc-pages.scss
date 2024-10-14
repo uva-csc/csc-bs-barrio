@@ -290,8 +290,7 @@ body.page-node-144 {
   .circl-overlay {
     position: relative;
     padding-top: 10%;
-    /* top: 10rem;*/
-    left: 13rem;
+    left: 13vw;
     font-size: 2.5rem;
     text-align: left;
 
@@ -303,7 +302,7 @@ body.page-node-144 {
       margin-top: 2.5rem;
       width: fit-content;
       p {
-        font-family: $font-roboto !important;
+        font-family: $font-lfranklin !important;
 
         &.p1 {
           font-size: 2.75rem;

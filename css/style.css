@@ -15020,8 +15020,7 @@ p.view-more a {
   border-bottom: none;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-target-audience, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-target-audience {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
   font-size: 90%;
   color: #E57325;
@@ -15404,8 +15403,7 @@ div.view-empty {
 body.page-node-144 .circl-overlay {
   position: relative;
   padding-top: 10%;
-  /* top: 10rem;*/
-  left: 13rem;
+  left: 13vw;
   font-size: 2.5rem;
   text-align: left;
 }
@@ -15417,7 +15415,7 @@ body.page-node-144 .circl-overlay .text-overlay {
   width: fit-content;
 }
 body.page-node-144 .circl-overlay .text-overlay p {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Libre Franklin", sans-serif !important;
 }
 body.page-node-144 .circl-overlay .text-overlay p.p1 {
   font-size: 2.75rem;
@@ -16382,6 +16380,29 @@ div.bc-teaser .caption a {
     margin-top: 5rem;
   }
 
+  #header #navbar-main ul.navbar-nav .dropdown-menu li.dropdown-item {
+    white-space: wrap;
+    line-height: 1.3;
+    padding: 0.5rem !important;
+  }
+  #header #navbar-main ul.navbar-nav .dropdown-menu li.dropdown-item:hover {
+    background-color: #fdfdfd !important;
+    color: #E57325 !important;
+  }
+  #header #navbar-main ul.navbar-nav .dropdown-menu li.dropdown-item.active {
+    background-color: #fdfdfd !important;
+  }
+  #header #navbar-main ul.navbar-nav .dropdown-menu li.dropdown-item.active a {
+    color: #232D4B !important;
+  }
+  #header #navbar-main ul.navbar-nav .dropdown-menu li.dropdown-item a {
+    color: #232D4B;
+  }
+  #header #navbar-main ul.navbar-nav .dropdown-menu li.dropdown-item a:hover {
+    background-color: #fdfdfd !important;
+    color: #E57325 !important;
+  }
+
   .field--name-body .field--name-field-media-image .field__item img {
     display: block;
     margin: 0 auto;
@@ -16537,17 +16558,6 @@ div.bc-teaser .caption a {
     padding: 0 8px;
   }
 
-  button.navbar-toggler {
-    position: absolute;
-    top: -45px;
-    right: 10px;
-    background-color: white;
-  }
-
-  #header #navbar-main.bg-primary {
-    height: 0px !important;
-  }
-
   .block.help-curate .content {
     position: unset;
     width: 100%;
@@ -16688,17 +16698,6 @@ div.bc-teaser .caption a {
     filter: none;
   }
 
-  div#main-menu-list {
-    background-color: #434b64;
-  }
-  div#main-menu-list ul.navbar-nav {
-    padding: 0 0 0 1rem;
-  }
-  div#main-menu-list ul.navbar-nav ul.dropdown-menu {
-    margin: unset !important;
-    background-color: #C8CBD2;
-  }
-
   body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title h1, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title .h1 {
     font-size: 2rem;
   }
@@ -16781,6 +16780,39 @@ div.bc-teaser .caption a {
   .layout__region--second .node--view-mode-alt-teaser {
     padding: 0;
   }
+
+  body.page-node-144 .circl-overlay {
+    left: 0 !important;
+  }
+  body.page-node-144 .circl-overlay .field--type-image img {
+    margin-left: 4rem;
+  }
+  body.page-node-144 .circl-overlay .text-overlay {
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  button.navbar-toggler {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    background-color: white;
+  }
+
+  #header #navbar-main.bg-primary {
+    height: 0px !important;
+  }
+
+  div#main-menu-list {
+    background-color: #434b64;
+  }
+  div#main-menu-list ul.navbar-nav {
+    padding: 0 0 0 1rem;
+  }
+  div#main-menu-list ul.navbar-nav ul.dropdown-menu {
+    margin: unset !important;
+    background-color: #C8CBD2;
+  }
 }
 @media (min-width: 640px) and (max-width: 991px) {
   .layout--twocol-section .layout__region .node--type-landing-page .field--name-field-teaser-image img,
@@ -16817,6 +16849,9 @@ div.bc-teaser .caption a {
   }
   #header #navbar-top nav#block-csc-bs-sass-topmenu {
     margin-left: -3rem;
+  }
+  #header #navbar-main ul.navbar-nav li {
+    padding: 0;
   }
 
   body.path-frontpage main#content .c-csc-text_row .field--name-field-text-boxes {
