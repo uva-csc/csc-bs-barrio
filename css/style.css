@@ -14325,16 +14325,12 @@ body.node--type-event .layout__region.layout__region--first .field--name-field-i
   height: auto;
   filter: drop-shadow(8px 10px 3px #00000095);
 }
-body.node--type-event .layout__region.layout__region--second {
-  width: 25%;
-  max-width: 300px;
-}
 body.node--type-event .layout__region.layout__region--second .wrapper {
   height: fit-content;
-  width: 300px;
+  width: 100%;
   background-color: #eeeeee;
-  margin-top: 20px;
-  padding: 40px 50px;
+  margin-top: 40px;
+  padding: 40px;
 }
 body.node--type-event .layout__region.layout__region--second .wrapper .field__item, body.node--type-event .layout__region.layout__region--second .wrapper .field__item p.address {
   font-family: franklin-gothic-urw-cond, sans-serif;

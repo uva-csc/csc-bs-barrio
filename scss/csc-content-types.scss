@@ -451,14 +451,12 @@ body.node--type-event {
 
   // Side bar on events
   .layout__region.layout__region--second {
-    width: 25%;
-    max-width: 300px;
     .wrapper {
       height: fit-content;
-      width: 300px;
+      width: 100%;
       background-color: $csc-lt-gray;
-      margin-top: 20px;
-      padding: 40px 50px;
+      margin-top: 40px;
+      padding: 40px;
 
       .field__item, .field__item p.address {
         font-family: $font-frankgoth-cd;
