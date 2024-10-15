@@ -13872,7 +13872,7 @@ body.path-frontpage main#content .featured-event .views-field-title {
   text-align: center;
 }
 body.path-frontpage main#content .featured-event .views-field-title a {
-  color: white;
+  color: white !important;
   font-size: 100%;
   border: none;
 }
