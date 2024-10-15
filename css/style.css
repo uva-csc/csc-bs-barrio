@@ -13699,6 +13699,14 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   border: none;
 }
 
+article.node--unpublished::before {
+  display: block;
+  width: 100vw;
+  color: red;
+  content: "The pink background shows that this page is unpublished and not viewable except by site admins.";
+  height: 30px;
+}
+
 .node--unpublished {
   background: #ffc0cb91;
 }
