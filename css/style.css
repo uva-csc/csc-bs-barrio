@@ -13785,7 +13785,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
 body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line {
   font-family: "ITC Franklin Gothic Std";
   font-size: 1.65rem;
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: #E57325;
   text-shadow: 1px 1px 1px #ffffff80;
   /* background-color: #fdfdfd99;  $white; /**/
@@ -16861,7 +16861,7 @@ div.bc-teaser .caption a {
     left: 3rem;
   }
 }
-@media (min-width: 992px) and (max-width: 1199.9px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   #header #navbar-top {
     max-width: 100vw;
     overflow: hidden;
@@ -16934,6 +16934,15 @@ div.bc-teaser .caption a {
 
   body.path-frontpage main#content .field--name-field-teaser-image img, body.path-frontpage main#content .field--name-field-image img, body.path-frontpage main#content .views-field-field-teaser-image img {
     max-width: 300px;
+  }
+}
+@media (min-width: 1260px) and (max-width: 1600px) {
+  body.path-frontpage main#content .upcoming-events {
+    padding: 0;
+  }
+  body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3,
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 {
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1400px) {
