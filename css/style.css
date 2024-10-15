@@ -13286,7 +13286,7 @@ main#content {
   background-color: unset;
 }
 #header #navbar-main ul.navbar-nav a, #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #eeeeee;
   cursor: pointer;
 }
@@ -13374,6 +13374,7 @@ aside.featured-top__inner.section.container.clearfix {
 }
 .region-featured-top .block .content p {
   margin: 0;
+  font-size: 15.5px;
 }
 
 .container article .node__content div:not(.container) {

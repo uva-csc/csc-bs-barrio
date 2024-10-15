@@ -213,7 +213,7 @@ main#content {
       }
 
       a, span.nav-link.dropdown-toggle {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: $csc-lt-gray;
         cursor: pointer;
         &:hover {
@@ -339,6 +339,7 @@ aside.featured-top__inner.section.container.clearfix {
 
       p {
         margin: 0;
+        font-size: 15.5px;
       }
     }
   }
