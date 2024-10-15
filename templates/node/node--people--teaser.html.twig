@@ -97,11 +97,11 @@
   <div class="card-body">
     <h5 class="card-title"><a href="{{ url }}" class="plain">{{ label }}</a></h5>
     <div class="card-text">
+      {{ content.field_csc_role }}
       {% if role == job %}
       {% else %}
         {{ content.field_job_title }}
       {% endif %}
-      {{ content.field_csc_role }}
       {{ content.pronouns }}
       <div class="field field-email">
         <a class="link-orange link-underline" href="mailto:{{ email }}">{{ email }}</a>

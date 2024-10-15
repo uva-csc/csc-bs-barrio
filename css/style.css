@@ -13700,7 +13700,7 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 }
 
 .node--unpublished {
-  background: #ffc0cb40;
+  background: #ffc0cb91;
 }
 
 .path-frontpage .home-link {
@@ -16089,7 +16089,7 @@ div.geolocation-map-wrapper {
   background-color: #f7f7f7;
 }
 .view-people .card.people .card-body .card-title, .view-people-indexed .card.people .card-body .card-title {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 900 !important;
   font-size: 1.5rem;
@@ -16101,6 +16101,7 @@ div.geolocation-map-wrapper {
 .view-people .card.people .card-body .card-text .field--name-field-job-title, .view-people-indexed .card.people .card-body .card-text .field--name-field-job-title {
   font-weight: bold;
   margin: 0 0 0.5rem;
+  line-height: 1.2;
 }
 .view-people .card.people .card-body .card-text .field--name-field-csc-role, .view-people-indexed .card.people .card-body .card-text .field--name-field-csc-role {
   margin: 0 0 0.25rem;

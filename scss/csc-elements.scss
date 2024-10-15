@@ -776,7 +776,7 @@ div.geolocation-map-wrapper {
       background-color: #f7f7f7;
 
       .card-title {
-        margin: 0 0 0.75rem;
+        margin: 0 0 0.5rem;
         font-family: $font-frankgoth-std;
         font-weight: 900!important;
         font-size: 1.5rem;  // tried 1.25
@@ -791,6 +791,7 @@ div.geolocation-map-wrapper {
         .field--name-field-job-title {
           font-weight: bold;
           margin: 0 0 0.5rem;
+          line-height: 1.2;
         }
 
         .field--name-field-job-title {
