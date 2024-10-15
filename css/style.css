@@ -14949,7 +14949,7 @@ p.view-more a {
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
   border: thin solid #939292;
   height: 100%;
-  border-top: 16px solid #E57325;
+  /* border-top: 16px solid $uva-orange; */
   background-color: #fdfdfd;
   /*margin: 10px 8px 0;
   padding-top: 0.5rem;
