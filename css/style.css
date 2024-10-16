@@ -14244,7 +14244,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   }*/
 }
 .node--type-news-item .block-field-blocknodenews-itemfield-image {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
 .node--type-news-item .block-field-blocknodenews-itemfield-image img {
   border: thin solid #DDD;
