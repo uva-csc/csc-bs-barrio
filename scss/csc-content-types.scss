@@ -290,6 +290,10 @@ body.node--type-landing-page {
 
 // News Content Type
 .node--type-news-item {
+  .node__content .layout--onecol .layout__region {
+    max-width: 830px;
+  }
+
   div.content > h1.title {
     display: none;
   }

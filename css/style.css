@@ -14208,6 +14208,9 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   line-height: 1.5;
 }
 
+.node--type-news-item .node__content .layout--onecol .layout__region {
+  max-width: 830px;
+}
 .node--type-news-item div.content > h1.title, .node--type-news-item div.content > .title.h1 {
   display: none;
 }
