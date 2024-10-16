@@ -14208,8 +14208,18 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   line-height: 1.5;
 }
 
-.node--type-news-item .block-field-blocknodenews-itemfield-date {
-  margin: -0.75rem 0 0.5rem;
+.node--type-news-item div.content > h1.title, .node--type-news-item div.content > .title.h1 {
+  display: none;
+}
+.node--type-news-item .block-system-breadcrumb-block {
+  max-height: 24px;
+}
+.node--type-news-item .block-field-blocknodenews-itemtitle {
+  font-family: franklin-gothic-urw, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
 }
 .node--type-news-item .block-field-blocknodenews-itemfield-date .field__item {
   font-size: 90%;

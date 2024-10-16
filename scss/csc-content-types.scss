@@ -290,14 +290,30 @@ body.node--type-landing-page {
 
 // News Content Type
 .node--type-news-item {
+  div.content > h1.title {
+    display: none;
+  }
+
+  .block-system-breadcrumb-block {
+    max-height: 24px;
+  }
+
+  .block-field-blocknodenews-itemtitle {
+    font-family: $font-frankgoth-std;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 0.02rem;
+  }
+
   .block-field-blocknodenews-itemfield-date {
-    margin: -0.75rem 0 0.5rem;
     .field__item {
       font-size: 90%;
       font-weight: bold;
       font-style: italic;
     }
   }
+
   .block-field-blocknodenews-itemfield-image {
     margin-top: 0.5rem;
   }
