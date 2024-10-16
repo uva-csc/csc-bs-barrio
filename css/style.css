@@ -14216,6 +14216,9 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-weight: bold;
   font-style: italic;
 }
+.node--type-news-item .block-field-blocknodenews-itemfield-image {
+  margin-top: 0.5rem;
+}
 
 .node--type-page #title-div {
   margin-top: 0.25rem;
