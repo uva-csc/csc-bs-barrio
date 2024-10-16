@@ -14218,6 +14218,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
 .node--type-news-item .block-field-blocknodenews-itemtitle {
   width: fit-content;
   margin: 0.5rem 0;
+  padding: 0 0.75rem 0 0;
   border-bottom: thin solid grey;
 }
 .node--type-news-item .block-field-blocknodenews-itemtitle span {
