@@ -316,6 +316,10 @@ body.node--type-landing-page {
 
   .block-field-blocknodenews-itemfield-image {
     margin-top: 0.5rem;
+
+    img {
+      border: thin solid #DDD;
+    }
   }
 } // End of News Content type
 
