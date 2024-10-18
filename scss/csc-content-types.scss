@@ -290,56 +290,58 @@ body.node--type-landing-page {
 
 // News Content Type
 .node--type-news-item {
-  .node__content .layout--onecol .layout__region {
-    max-width: 830px;
-  }
-
-  div.content > h1.title {
-    display: none;
-  }
-
-  .block-system-breadcrumb-block {
-    max-height: 24px;
-    margin: 0;
-  }
-
-  .block-field-blocknodenews-itemtitle {
-    width: fit-content;
-    margin: 0.5rem 0;
-    padding: 0 0.75rem 0 0;
-    border-bottom: thin solid grey;
-
-    span {
-      font-size: 2.25rem;
-      font-family: franklin-gothic-urw, sans-serif;
-      font-weight: 500 !important;
-      line-height: 1.03846;
-      letter-spacing: -0.02885em;
+  .node--view-mode-full {
+    .node__content .layout--onecol .layout__region {
+      max-width: 830px;
     }
-  }
 
-  .block-field-blocknodenews-itemfield-date {
-    margin-top: 2rem;
-    font-family: $font-frankgoth-std;
-    font-weight: 500 !important;
-    font-size: 80%;
-    text-transform: uppercase;
-    color: #5a6172;
-    letter-spacing: 1px;
-    border: none;
-    /*
-    .field__item {
-      font-size: 90%;
-      font-weight: bold;
-      font-style: italic;
-    }*/
-  }
+    div.content > h1.title {
+      display: none;
+    }
 
-  .block-field-blocknodenews-itemfield-image {
-    margin: 1.5rem 0;
+    .block-system-breadcrumb-block {
+      max-height: 24px;
+      margin: 0;
+    }
 
-    img {
-      border: thin solid #DDD;
+    .block-field-blocknodenews-itemtitle {
+      width: fit-content;
+      margin: 0.5rem 0;
+      padding: 0 0.75rem 0 0;
+      border-bottom: thin solid grey;
+
+      span {
+        font-size: 2.25rem;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 500 !important;
+        line-height: 1.03846;
+        letter-spacing: -0.02885em;
+      }
+    }
+
+    .block-field-blocknodenews-itemfield-date {
+      margin-top: 2rem;
+      font-family: $font-frankgoth-std;
+      font-weight: 500 !important;
+      font-size: 80%;
+      text-transform: uppercase;
+      color: #5a6172;
+      letter-spacing: 1px;
+      border: none;
+      /*
+      .field__item {
+        font-size: 90%;
+        font-weight: bold;
+        font-style: italic;
+      }*/
+    }
+
+    .block-field-blocknodenews-itemfield-image {
+      margin: 1.5rem 0;
+
+      img {
+        border: thin solid #DDD;
+      }
     }
   }
 } // End of News Content type
