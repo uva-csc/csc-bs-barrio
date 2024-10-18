@@ -14208,30 +14208,30 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   line-height: 1.5;
 }
 
-.node--type-news-item .node--view-mode-full .node__content .layout--onecol .layout__region {
+body.node--type-news-item .node__content .layout--onecol .layout__region {
   max-width: 830px;
 }
-.node--type-news-item .node--view-mode-full div.content > h1.title, .node--type-news-item .node--view-mode-full div.content > .title.h1 {
+body.node--type-news-item #block-csc-bs-sass-page-title, body.node--type-news-item div.content > h1.title, body.node--type-news-item div.content > .title.h1 {
   display: none;
 }
-.node--type-news-item .node--view-mode-full .block-system-breadcrumb-block {
+body.node--type-news-item .block-system-breadcrumb-block {
   max-height: 24px;
   margin: 0;
 }
-.node--type-news-item .node--view-mode-full .block-field-blocknodenews-itemtitle {
+body.node--type-news-item .block-field-blocknodenews-itemtitle {
   width: fit-content;
   margin: 0.5rem 0;
   padding: 0 0.75rem 0 0;
   border-bottom: thin solid grey;
 }
-.node--type-news-item .node--view-mode-full .block-field-blocknodenews-itemtitle span {
+body.node--type-news-item .block-field-blocknodenews-itemtitle span {
   font-size: 2.25rem;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 500 !important;
   line-height: 1.03846;
   letter-spacing: -0.02885em;
 }
-.node--type-news-item .node--view-mode-full .block-field-blocknodenews-itemfield-date {
+body.node--type-news-item .block-field-blocknodenews-itemfield-date {
   margin-top: 2rem;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 500 !important;
@@ -14247,10 +14247,10 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
     font-style: italic;
   }*/
 }
-.node--type-news-item .node--view-mode-full .block-field-blocknodenews-itemfield-image {
+body.node--type-news-item .block-field-blocknodenews-itemfield-image {
   margin: 1.5rem 0;
 }
-.node--type-news-item .node--view-mode-full .block-field-blocknodenews-itemfield-image img {
+body.node--type-news-item .block-field-blocknodenews-itemfield-image img {
   border: thin solid #DDD;
 }
 
