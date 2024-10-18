@@ -13003,6 +13003,10 @@ textarea.form-control-lg {
 }
 /* VARIABLES */
 /** Bootstrap Overrides **/
+.node__content {
+  font-size: 1rem;
+}
+
 .font-medium, .font-medium p {
   font-family: "ITC Franklin Gothic Med", sans-serif;
 }
