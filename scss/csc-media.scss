@@ -754,6 +754,7 @@
 
   // Research page hack. see csc-elements ~ ln 507
   .layout--twocol-section .layout__region {
+    max-width: 45vw;
     .node--type-landing-page,
     .node--type-page-full-width {
       .field--name-field-teaser-image,
@@ -765,7 +766,18 @@
       }
     }
   }
-} // End of min-width: 992 and max-width: 1199.9px
+
+  // Views
+  .view.event-col {
+    .view-header h2, .view.event-col .view-header .h2 {
+      font-size: 3.5rem;
+    }
+    .views-field-field-image img {
+      max-width: 200px;
+    }
+  }
+
+} // End of Large min-width: 992 and max-width: 1199.9px
 
 // Only XLarge Most Small Laptops
 @media (min-width: 1200px) and (max-width: 1420px) {

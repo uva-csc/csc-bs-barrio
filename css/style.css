@@ -16968,12 +16968,22 @@ div.bc-teaser .caption a {
     gap: 10px;
   }
 
+  .layout--twocol-section .layout__region {
+    max-width: 45vw;
+  }
   .layout--twocol-section .layout__region .node--type-landing-page .field--name-field-teaser-image img,
 .layout--twocol-section .layout__region .node--type-landing-page .field--name-field-image img,
 .layout--twocol-section .layout__region .node--type-page-full-width .field--name-field-teaser-image img,
 .layout--twocol-section .layout__region .node--type-page-full-width .field--name-field-image img {
     height: 310px;
     width: auto;
+  }
+
+  .view.event-col .view-header h2, .view.event-col .view-header .h2, .view.event-col .view.event-col .view-header .h2 {
+    font-size: 3.5rem;
+  }
+  .view.event-col .views-field-field-image img {
+    max-width: 200px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1420px) {
