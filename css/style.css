@@ -16968,9 +16968,10 @@ div.bc-teaser .caption a {
     gap: 10px;
   }
 
-  .layout--twocol-section .layout__region {
+  .layout--twocol-section--50-50 .layout__region {
     max-width: 45vw;
   }
+
   .layout--twocol-section .layout__region .node--type-landing-page .field--name-field-teaser-image img,
 .layout--twocol-section .layout__region .node--type-landing-page .field--name-field-image img,
 .layout--twocol-section .layout__region .node--type-page-full-width .field--name-field-teaser-image img,

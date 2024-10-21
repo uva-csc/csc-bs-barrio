@@ -752,9 +752,13 @@
     }
   }  // end of Front page Medium
 
+  // Events two colums
+  .layout--twocol-section--50-50 .layout__region {
+    max-width: 45vw;
+  }
+
   // Research page hack. see csc-elements ~ ln 507
   .layout--twocol-section .layout__region {
-    max-width: 45vw;
     .node--type-landing-page,
     .node--type-page-full-width {
       .field--name-field-teaser-image,
