@@ -14547,7 +14547,7 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 }
 .node--type-people .image-bio .field--name-field-image img {
   position: relative;
-  margin-left: 100px;
+  margin-left: 0;
 }
 .node--type-people .image-bio .field--name-title {
   font-family: "ITC Franklin Gothic Med", sans-serif;
@@ -16503,39 +16503,6 @@ div.bc-teaser .caption a {
     width: 300px;
   }
 
-  .node--type-people .block-system-breadcrumb-block {
-    margin: -15px 0 0 !important;
-  }
-  .node--type-people .block-system-breadcrumb-block ol.breadcrumb {
-    margin: 0 !important;
-  }
-  .node--type-people .block-system-breadcrumb-block ol.breadcrumb ol, .node--type-people .block-system-breadcrumb-block ol.breadcrumb .breadcrumb-item {
-    display: inline-block;
-  }
-  .node--type-people .image-bio {
-    margin-top: -210px;
-  }
-  .node--type-people .image-bio * {
-    color: #232D4B;
-  }
-  .node--type-people .image-bio .wrapper {
-    padding-top: 1rem;
-    text-align: center;
-  }
-  .node--type-people .image-bio .wrapper p {
-    padding: 0;
-    text-align: left;
-  }
-  .node--type-people .image-bio .wrapper .field--name-title {
-    font-size: 1.75rem;
-  }
-  .node--type-people .image-bio .wrapper .field--name-field-image img {
-    margin: 0 auto;
-  }
-  .node--type-people .image-bio .wrapper .block-field-blocknodepeoplefield-bio {
-    margin-top: 1rem !important;
-  }
-
   .view-events.events-row-teasers .field--name-field-target-audience {
     position: relative !important;
   }
@@ -16609,6 +16576,40 @@ div.bc-teaser .caption a {
   }
   .csc-calendar .js-drupal-fullcalendar .fc-toolbar > div:first-child {
     margin-top: -0.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .node--type-people .block-system-breadcrumb-block {
+    margin: -15px 0 0 !important;
+  }
+  .node--type-people .block-system-breadcrumb-block ol.breadcrumb {
+    margin: 0 !important;
+  }
+  .node--type-people .block-system-breadcrumb-block ol.breadcrumb ol, .node--type-people .block-system-breadcrumb-block ol.breadcrumb .breadcrumb-item {
+    display: inline-block;
+  }
+  .node--type-people .image-bio {
+    margin-top: -210px;
+  }
+  .node--type-people .image-bio * {
+    color: #232D4B;
+  }
+  .node--type-people .image-bio .wrapper {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .node--type-people .image-bio .wrapper p {
+    padding: 0;
+    text-align: left;
+  }
+  .node--type-people .image-bio .wrapper .field--name-title {
+    font-size: 1.75rem;
+  }
+  .node--type-people .image-bio .wrapper .field--name-field-image img {
+    margin: 0 auto;
+  }
+  .node--type-people .image-bio .wrapper .block-field-blocknodepeoplefield-bio {
+    margin-top: 1rem !important;
   }
 }
 @media (max-width: 767.9px) {
@@ -16968,6 +16969,15 @@ div.bc-teaser .caption a {
     gap: 10px;
   }
 
+  .custom-paragraphs .c-csc-text_box.centered-intro p img {
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .node--type-people .image-bio .field--name-field-image img {
+    margin-left: 0;
+  }
+
   .layout--twocol-section--50-50 .layout__region {
     max-width: 45vw;
   }
@@ -17016,6 +17026,10 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
 @media (min-width: 1400px) {
   body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
     width: 30%;
+  }
+
+  .node--type-people .image-bio .field--name-field-image img {
+    margin-left: 100px;
   }
 
   .footer-contact, .navigation, .media-links {

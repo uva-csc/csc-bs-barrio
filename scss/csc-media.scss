@@ -108,45 +108,6 @@
     }
   } // end of list of people /people
 
-  // Individual people pages
-  .node--type-people {
-    .block-system-breadcrumb-block {
-      margin: -15px 0 0!important;
-      ol.breadcrumb {
-        margin: 0!important;
-        ol, .breadcrumb-item {
-          display: inline-block;
-        }
-      }
-    }
-    .image-bio {
-      margin-top: -210px;
-
-      * {
-        color: $uva-blue;
-      }
-      .wrapper {
-        padding-top: 1rem;
-        text-align: center;
-
-        p {
-          padding: 0;
-          text-align: left;
-        }
-
-        .field--name-title {
-          font-size: 1.75rem;
-        }
-        .field--name-field-image img {
-          margin: 0 auto;
-        }
-        .block-field-blocknodepeoplefield-bio {
-          margin-top: 1rem !important;
-        }
-
-      } // end of .wrapper
-    }
-  } // end of individual people pages
 
   // Events
   .view-events.events-row-teasers {
@@ -245,6 +206,47 @@
   } // End of calendar styles
 
 } // End Media 576px
+@media (max-width: 640px) {
+  // Individual people pages
+  .node--type-people {
+    .block-system-breadcrumb-block {
+      margin: -15px 0 0!important;
+      ol.breadcrumb {
+        margin: 0!important;
+        ol, .breadcrumb-item {
+          display: inline-block;
+        }
+      }
+    }
+    .image-bio {
+      margin-top: -210px;
+
+      * {
+        color: $uva-blue;
+      }
+      .wrapper {
+        padding-top: 1rem;
+        text-align: center;
+
+        p {
+          padding: 0;
+          text-align: left;
+        }
+
+        .field--name-title {
+          font-size: 1.75rem;
+        }
+        .field--name-field-image img {
+          margin: 0 auto;
+        }
+        .block-field-blocknodepeoplefield-bio {
+          margin-top: 1rem !important;
+        }
+
+      } // end of .wrapper
+    }
+  } // end of individual people pages
+}
 
 @media (max-width: 767.9px) {
   main#content {
@@ -752,7 +754,22 @@
     }
   }  // end of Front page Medium
 
-  // Events two colums
+  // Student CLF page img
+  .custom-paragraphs {
+    .c-csc-text_box.centered-intro {
+      p img {
+        max-width: 90vw;
+        height: auto;
+      }
+    }
+  }
+
+  // People pages
+  .node--type-people .image-bio .field--name-field-image img {
+    margin-left: 0;
+  }
+
+  // Events two columns
   .layout--twocol-section--50-50 .layout__region {
     max-width: 45vw;
   }
@@ -835,6 +852,13 @@
       }
     } // End of Overlay text box
   } // End of Landing pages XXLarge
+
+  // XXL People
+  .node--type-people .image-bio .field--name-field-image img {
+    margin-left: 100px;
+  }
+
+  // XXL Footer
   .footer-contact, .navigation, .media-links { padding-left: 5%; }
 }
 
