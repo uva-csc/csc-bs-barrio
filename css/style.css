@@ -16965,6 +16965,9 @@ div.bc-teaser .caption a {
   body.path-frontpage main#content .c-csc-highlight_row .wrapper {
     max-width: 95vw;
   }
+  body.path-frontpage main#content .teaser-row.layout--fourcol-section .field--name-field-teaser-image img {
+    max-width: 80%;
+  }
   body.path-frontpage .c-csc-teaser_row .field.field--name-field-teasers {
     gap: 10px;
   }
@@ -16997,7 +17000,7 @@ div.bc-teaser .caption a {
     max-width: 200px;
   }
 }
-@media (min-width: 1200px) and (max-width: 1420px) {
+@media (min-width: 1200px) and (max-width: 1490px) {
   body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
     width: 40%;
   }
@@ -17012,6 +17015,9 @@ div.bc-teaser .caption a {
 
   body.path-frontpage main#content .field--name-field-teaser-image img, body.path-frontpage main#content .field--name-field-image img, body.path-frontpage main#content .views-field-field-teaser-image img {
     max-width: 300px;
+  }
+  body.path-frontpage main#content .teaser-row.layout--fourcol-section .field--name-field-teaser-image img {
+    max-width: 90%;
   }
 }
 @media (min-width: 1260px) and (max-width: 1600px) {

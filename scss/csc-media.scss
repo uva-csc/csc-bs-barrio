@@ -744,6 +744,14 @@
         max-width: 95vw;
       }
 
+      .teaser-row.layout--fourcol-section {
+        .field--name-field-teaser-image {
+          // .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img
+          img {
+            max-width: 80%;
+          }
+        }
+      }
 
     } // End of Front page
 
@@ -801,7 +809,7 @@
 } // End of Large min-width: 992 and max-width: 1199.9px
 
 // Only XLarge Most Small Laptops
-@media (min-width: 1200px) and (max-width: 1420px) {
+@media (min-width: 1200px) and (max-width: 1490px) {
   body.node--type-landing-page main#content {
     .field--name-field-text-overlay .c-csc-text_box {
       &.caption {
@@ -828,7 +836,16 @@
     .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
       max-width: 300px;
     }
-  }
+
+    .teaser-row.layout--fourcol-section {
+      .field--name-field-teaser-image {
+        // .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img
+        img {
+          max-width: 90%;
+        }
+      }
+    }
+  } // End of Front page
 } // End XLarge between 1200-1420px
 
 @media (min-width: 1260px) and (max-width: 1600px) {
