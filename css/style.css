@@ -13800,7 +13800,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
 body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line {
   font-family: "ITC Franklin Gothic Std";
   font-size: 1.65rem;
-  /*font-weight: bold;*/
+  font-weight: 500;
   color: #E57325;
   text-shadow: 1px 1px 1px #ffffff80;
   /* background-color: #fdfdfd99;  $white; /**/
