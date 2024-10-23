@@ -371,20 +371,22 @@ p.view-more {
     }
 
     // New teaser image
-    .field--name-field-image {
+    .field--name-field-image,
+    .field--name-field-teaser-image {
       float: none;
       overflow: hidden;
       margin-right: 0.25rem;
 
-      img.image-style-news-teaser {
+      img {
         border: thin solid #aaa;
         border-radius: 0;
         padding: 0;
         max-height: 200px;
-        transition: transform .2s; /* Animation */
+        filter: none;
+        /* transition: transform .2s; Animation
         &:hover {
           transform: scale(1.15);
-        }
+        }*/
       }
     } // end of new teaser image
     .block-field-blocknodenews-itemfield-date {
@@ -392,10 +394,17 @@ p.view-more {
     }
 
     .field--name-field-date {
-      margin-top: 0.75rem;
-      font-weight: bold;
+      margin-top: 0.15rem;
+      font-size: 1rem;
+      font-weight: 500;
       color: $csc-lt-blue;
       text-transform: uppercase;
+    }
+
+    .field--name-title {
+      font-size: 1rem;
+      padding-right: 2px;
+      line-height: 1.2;
     }
   }  // end of News node teaser
 

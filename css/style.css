@@ -15120,30 +15120,38 @@ p.view-more a {
   line-height: 1.1rem;
   font-size: 90%;
 }
-.view.csc-news-block .node--view-mode-teaser .field--name-field-image {
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image,
+.view.csc-news-block .node--view-mode-teaser .field--name-field-teaser-image {
   float: none;
   overflow: hidden;
   margin-right: 0.25rem;
 }
-.view.csc-news-block .node--view-mode-teaser .field--name-field-image img.image-style-news-teaser {
+.view.csc-news-block .node--view-mode-teaser .field--name-field-image img,
+.view.csc-news-block .node--view-mode-teaser .field--name-field-teaser-image img {
   border: thin solid #aaa;
   border-radius: 0;
   padding: 0;
   max-height: 200px;
-  transition: transform 0.2s;
-  /* Animation */
-}
-.view.csc-news-block .node--view-mode-teaser .field--name-field-image img.image-style-news-teaser:hover {
-  transform: scale(1.15);
+  filter: none;
+  /* transition: transform .2s; Animation
+  &:hover {
+    transform: scale(1.15);
+  }*/
 }
 .view.csc-news-block .node--view-mode-teaser .block-field-blocknodenews-itemfield-date {
   margin: -0.5rem 0 0 0;
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-field-date {
-  margin-top: 0.75rem;
-  font-weight: bold;
+  margin-top: 0.15rem;
+  font-size: 1rem;
+  font-weight: 500;
   color: #009fdf;
   text-transform: uppercase;
+}
+.view.csc-news-block .node--view-mode-teaser .field--name-title {
+  font-size: 1rem;
+  padding-right: 2px;
+  line-height: 1.2;
 }
 .view.csc-news-block .view-footer {
   float: right;

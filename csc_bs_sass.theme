@@ -98,6 +98,8 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $furl = midToUrl($mid, 'people_teaser');
       $variables['image_url'] = $furl;
     }
+  } else if ($node_type == 'news_item') {
+    $variables['no_teaser_image'] = $node->get('field_teaser_image')->isEmpty();
   // Teasers for Common Pages
   } else if (in_array($node_type, array('page_full_width', 'page', 'landing_page')) && in_array($variables['view_mode'], array('teaser', 'alt_teaser'))) {
     if (empty($variables['title_attributes']['class'])) {
@@ -110,8 +112,6 @@ function csc_bs_sass_preprocess_node(&$variables) {
     } else {
       $variables['content_attributes']['class'] = array_merge($variables['content_attributes']['class'], array('img-center', 'img-link'));
     }
-  // CLASSES
-    // Code would go here
   }
 }
 
