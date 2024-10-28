@@ -16863,6 +16863,13 @@ div.bc-teaser .caption a {
   }
 }
 @media (max-width: 992px) {
+  .layout--twocol-section--75-25 .layout__region {
+    flex: 0 0 100% !important;
+    width: 100%;
+    padding: 0;
+    --bs-gutter-x: 0;
+  }
+
   button.navbar-toggler {
     position: absolute;
     top: -45px;

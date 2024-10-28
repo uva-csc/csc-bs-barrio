@@ -572,6 +572,13 @@
 } // End of max-width: 767.9px (phones)
 
 @media (max-width: 992px) {
+  .layout--twocol-section--75-25 .layout__region {
+    flex: 0 0 100% !important;
+    width: 100%;
+    padding: 0;
+    --bs-gutter-x: 0;
+  }
+
   // Move navbar toggle up to top header
   button.navbar-toggler {
     position: absolute;
