@@ -289,7 +289,7 @@
           .home-title-overlay {
             h2, .h2 {
               margin: 2rem auto;
-              padding: 0;
+              /* padding: 0; */
               font-size: 150%;
             }
 
@@ -331,25 +331,10 @@
           margin-top: -2.75rem !important;
         }
 
-        .c-csc-teaser_row .field--name-field-teasers {
-          display: unset !important;
-          /*
-          .field__item a {
-            display: block;
-            position: relative;
-            margin-top: -50%;
-            margin-bottom: 50%;
-            color: white;
-            border: none;
-
-            .field--name-field-teaser-caption p {
-              border: none;
-              color: white;
-            }
-
-          }
-           */
-        } // end of .c-csc-teaser_row
+        .teaser-row {
+          padding-left: 1.5rem;
+        }
+        // end of .c-csc-teaser_row
 
         // Don't show slide show on smaller devices
         .block-views-blockhomepage-slideshow-block-1 {
@@ -572,12 +557,48 @@
 } // End of max-width: 767.9px (phones)
 
 @media (max-width: 992px) {
-  .layout--twocol-section--75-25 .layout__region {
-    flex: 0 0 100% !important;
-    width: 100%;
-    padding: 0;
-    --bs-gutter-x: 0;
+  .layout--twocol-section {
+    .layout__region {
+      flex: 0 0 100% !important;
+      width: 100%;
+      padding: 0;
+      --bs-gutter-x: 0;
+    }
   }
+
+  body.path-frontpage {
+    main#content {
+      .c-csc-hero {
+        min-height: unset;
+
+        .c-csc-text_box.home-title-overlay {
+          h2 {
+            font-size: 200%;
+          }
+          p.home-tag-line {
+            font-size: 125%;
+          }
+        }
+      }
+
+      .featured-event {
+        max-width: unset;
+        padding: 2rem;
+      }
+
+      .teaser-row.layout--fourcol-section {
+        .layout__region {
+          flex: 0 1 50%;
+
+          .field--name-field-teaser-image img,
+          .field--name-field-image img,
+          .views-field-field-teaser-image img {
+            max-width: 300px;
+          }
+        }
+      }
+    } // maincontent max 992
+  } // end of front page max 992
 
   // Move navbar toggle up to top header
   button.navbar-toggler {
@@ -610,6 +631,29 @@
       li a span.facet-item__count {
           display: none;
      }
+  }
+
+  // News view
+  .view-news {
+    .views-row {
+      .views-field-field-teaser-image {
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      .views-field-body {
+        .title {
+          a {
+            color: $uva-blue;
+            border: none;
+
+            &:hover {
+              color: $uva-orange !important;
+            }
+          }
+        }
+      }
+    }
   }
 } // end of max-width 992
 
