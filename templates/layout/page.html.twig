@@ -200,7 +200,9 @@
               {{ page.footer_first }}
               {{ page.footer_second }}
               {{ page.footer_third }}
-              {{ page.footer_fourth }}
+              {% if page.footer_fourth %}
+                {{ page.footer_fourth }}
+              {% endif %}
             </div>
           {% endif %}
           {% if page.footer_fifth %}

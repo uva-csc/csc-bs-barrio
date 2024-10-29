@@ -13415,6 +13415,9 @@ footer.site-footer a {
 footer.site-footer section.row.region {
   margin-bottom: 1.75rem !important;
 }
+footer.site-footer section.row.region:last-of-type {
+  margin-bottom: 0 !important;
+}
 footer.site-footer section.region-footer-first div.footer-logo img {
   max-width: 500px;
   height: auto;
@@ -13475,9 +13478,45 @@ footer.site-footer section.region-footer-second .media-links a {
 footer.site-footer section.region-footer-second .media-links a span {
   font-size: 1.5rem;
 }
-footer.site-footer .rector-visitor-block {
+footer.site-footer #block-csc-bs-sass-legal {
+  width: 100%;
+}
+footer.site-footer #block-csc-bs-sass-legal ul.menu {
+  width: 100%;
+  margin: 1rem auto 0.5rem;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+footer.site-footer #block-csc-bs-sass-legal ul.menu li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 3rem;
+}
+footer.site-footer #block-csc-bs-sass-legal ul.menu li a {
+  text-transform: uppercase;
+  border: none;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+footer.site-footer #block-csc-bs-sass-legal ul.menu li a:hover {
+  color: #E57325 !important;
+}
+footer.site-footer #block-csc-bs-sass-footerblockrectorandvisitors {
+  /* .rector-visitor-block {
   display: unset;
   grid-column: 1/-1;
+   ...
+   */
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+footer.site-footer #block-csc-bs-sass-footerblockrectorandvisitors .field--name-body p {
+  margin: 0;
+  padding: 0;
   width: 100%;
   text-align: center;
 }

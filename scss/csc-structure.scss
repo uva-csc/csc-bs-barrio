@@ -388,6 +388,10 @@ footer.site-footer {
   // Footer grid for placing blocks
   section.row.region {
     margin-bottom: 1.75rem !important;
+
+    &:last-of-type {
+      margin-bottom: 0 !important;
+    }
   }
 
   section.region-footer-first {
@@ -468,13 +472,52 @@ footer.site-footer {
 
   } // end of div.site-footer__second
 
+  #block-csc-bs-sass-legal {
+    width: 100%;
+    ul.menu {
+      width: 100%;
+      margin: 1rem auto 0.5rem;
+      padding: 0;
+      text-align: center;
+      list-style: none;
 
-  .rector-visitor-block {
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 3rem;
+        a {
+          text-transform: uppercase;
+          border: none;
+          font-family: $font-frankgoth-std;
+          font-size: 12px;
+          font-weight: 500;
+          &:hover {
+            color: $uva-orange !important;
+          }
+        }
+      }
+    }
+  } // End of Legal
+
+  #block-csc-bs-sass-footerblockrectorandvisitors {
+    /* .rector-visitor-block {
     display: unset;
     grid-column: 1/-1;
+     ...
+     */
+    display: block;
     width: 100%;
     text-align: center;
+    margin: 0;
+
+    .field--name-body p {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
+
 
 } // end of footer.site-footer
 
