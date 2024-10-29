@@ -1110,6 +1110,11 @@ div.bc-teaser {
   }
 }
 
+// Cookie Compliance Message
+div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {
+  background: #434b64;
+}
+
 
 // Animations
 @keyframes fade-in {

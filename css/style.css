@@ -16422,6 +16422,10 @@ div.bc-teaser .caption a {
   margin-top: 3px;
 }
 
+div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {
+  background: #434b64;
+}
+
 @keyframes fade-in {
   100% {
     opacity: 1;
