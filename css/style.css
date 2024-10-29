@@ -16426,6 +16426,16 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   background: #434b64;
 }
 
+#popup-text.eu-cookie-compliance-message h2, #popup-text.eu-cookie-compliance-message .h2 {
+  margin: 0.5rem 0 0 0;
+}
+#popup-text.eu-cookie-compliance-message p, #popup-text.eu-cookie-compliance-message button {
+  position: relative;
+  top: -0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 @keyframes fade-in {
   100% {
     opacity: 1;
