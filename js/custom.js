@@ -57,7 +57,6 @@
         });
 
         // Menu links can't be set to target=_blank, only link=_blank, so converting classes 'new-window' to target=_blank
-        console.log("new way");
         $('.new-window a, a.new-window').attr('target', '_blank');
       }); // End of Document Ready
     }

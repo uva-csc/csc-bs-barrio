@@ -13773,39 +13773,6 @@ article.node--unpublished::before {
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Home Page Styles ***/
-body.path-frontpage main#content .c-csc-hero {
-  /*
-      .home-title-overlay {
-        !*transform: translateY(30px);*!
-
-        h2 {
-          margin: 5rem 0 0;
-          font-size: 300%;
-          font-weight: bold;
-          letter-spacing: 0.1rem;
-          color: $uva-blue;
-        }
-
-        h3 {
-          margin-top: 0;
-          font-size: 220%;
-          letter-spacing: 0.03rem;
-        }
-
-        p.home-tag-line {
-          font-family: "ITC Franklin Gothic Std";
-          font-size: 1.65rem;
-          font-weight: bold;
-          color: #E57325;
-          !* text-shadow: 2px 1px 2px #000000; *!
-          background-color: $white;
-          width: fit-content;
-          margin: 0 auto;
-          padding: 0.6rem 1rem 0.25rem;
-          border-radius: 25px;
-        }
-      }*/
-}
 body.path-frontpage main#content .c-csc-hero .field--name-field-text-overlay {
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -13837,7 +13804,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
   letter-spacing: 0.03rem;
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line {
-  font-family: "ITC Franklin Gothic Std";
+  font-family: franklin-gothic-urw, sans-serif;
   font-size: 1.65rem;
   font-weight: 500;
   color: #E57325;

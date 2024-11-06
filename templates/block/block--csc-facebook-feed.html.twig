@@ -1,0 +1,19 @@
+{# block--csc-facebook-feed.html.twig #}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'csc-facebook-feed-block'
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="content">
+    <h2>CSC Fb Feed 4 w/ MU @@@@2.2</h2>
+    {{ content }}
+  </div>
+</div>
+
+
