@@ -15287,6 +15287,54 @@ div.view-empty {
   justify-content: space-evenly;
   width: 100%;
 }
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-social-feed-block h2, .layout.media-feeds .layout__region .block-csc-social-feeds.csc-social-feed-block .h2 {
+  width: 100%;
+  text-align: center;
+}
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-social-feed-block h3, .layout.media-feeds .layout__region .block-csc-social-feeds.csc-social-feed-block .h3 {
+  color: #fdfdfd;
+  text-align: center;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  font-size: 100%;
+}
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block {
+  width: 326px;
+  height: 464px;
+  font-size: 85%;
+}
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block h2, .layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block .h2 {
+  width: 100%;
+  text-align: center;
+}
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block h2 img.fb-logo, .layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block .h2 img.fb-logo {
+  width: 50px;
+}
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block .feed {
+  width: 326px;
+  height: 408px;
+  border: 2px outset #fdfdfd;
+  background-color: #fdfdfd;
+  overflow-y: scroll;
+  padding: 0.5rem;
+}
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block .feed .entry {
+  color: #232D4B;
+}
+.layout.media-feeds .layout__region .block-csc-social-feeds.csc-fb-feed-block .feed .entry .date {
+  display: block;
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+  width: 100%;
+  text-align: center;
+}
+.layout.media-feeds.bg-trans {
+  background-color: transparent;
+}
+.layout.media-feeds.bg-trans h3, .layout.media-feeds.bg-trans .h3 {
+  color: #232D4B;
+}
 
 .student-resources.layout {
   padding: 0.5rem 10vw;
@@ -15327,6 +15375,48 @@ div.view-empty {
 .student-resources.layout .field--name-body ul li a {
   font-family: franklin-gothic-urw, sans-serif;
   font-size: 1.25rem;
+  /* font-weight: bold; */
+  letter-spacing: 0.05rem;
+  border-bottom-width: 1px !important;
+}
+
+.field--name-body .student-resources {
+  padding-top: 1.25rem;
+  color: #fdfdfd !important;
+}
+.field--name-body .student-resources h2, .field--name-body .student-resources .h2 {
+  width: fit-content;
+  border-bottom: solid 0.8rem #E57325;
+  line-height: 1rem;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 500 !important;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.field--name-body .student-resources h2 span, .field--name-body .student-resources .h2 span {
+  display: inline-block;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 900 !important;
+  font-size: 130%;
+  line-height: 0.2rem;
+  vertical-align: sub;
+  font-style: normal;
+  color: #009fdf !important;
+}
+.field--name-body .student-resources hr {
+  display: none;
+}
+.field--name-body .student-resources ul {
+  list-style-type: none;
+  color: #fdfdfd !important;
+}
+.field--name-body .student-resources ul li {
+  margin-bottom: 1.25rem;
+}
+.field--name-body .student-resources ul li a {
+  font-family: franklin-gothic-urw, sans-serif;
+  font-size: 1.25rem;
+  color: #fdfdfd !important;
   /* font-weight: bold; */
   letter-spacing: 0.05rem;
   border-bottom-width: 1px !important;
@@ -16175,15 +16265,6 @@ div.geolocation-map-wrapper {
 }
 .view-people .card.people .card-body .card-text .field--name-field-csc-role:first-child, .view-people-indexed .card.people .card-body .card-text .field--name-field-csc-role:first-child {
   font-weight: bold;
-}
-
-.media-feeds .block-csc-social-feeds.csc-social-feed-block h3, .media-feeds .block-csc-social-feeds.csc-social-feed-block .h3 {
-  color: #fdfdfd;
-  text-align: center;
-  font-family: franklin-gothic-urw, sans-serif;
-  font-weight: 900 !important;
-  text-transform: uppercase;
-  font-size: 100%;
 }
 
 div.type-tag a {

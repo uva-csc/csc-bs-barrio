@@ -51,10 +51,66 @@
     justify-content: space-evenly;
     width: 100%;
 
-  }
-} // End Student Social Media
+    .block-csc-social-feeds.csc-social-feed-block {
+      h2 {
+        width: 100%;
+        text-align: center;
+      }
 
-// Student Resources
+      h3 {
+        color: $white;
+        text-align: center;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
+        text-transform: uppercase;
+        font-size: 100%;
+      }
+    }
+
+    // New FB Feed block
+    .block-csc-social-feeds.csc-fb-feed-block {
+      width: 326px;
+      height: 464px;
+      font-size: 85%;
+
+      h2 {
+        width: 100%;
+        text-align: center;
+        img.fb-logo {
+          width: 50px;
+        }
+      }
+      .feed {
+        width: 326px;
+        height: 408px;
+        border: 2px outset $white;
+        background-color: $white;
+        overflow-y: scroll;
+        padding: 0.5rem;
+
+        .entry {
+          color: $uva-blue;
+          .date {
+            display: block;
+            font-weight: 700;
+            margin: 0.5rem 0 0 0;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  &.bg-trans {
+    background-color: transparent;
+    h3 {
+      color: $uva-blue;
+    }
+  }
+} // End Student Social Media (layout.media-feeds)
+
+// Student Resources (original way)
 .student-resources.layout {
   padding: 0.5rem 10vw;
 
@@ -106,6 +162,53 @@
   }
 
 } // End Student Resources
+// New way for student resources.
+.field--name-body {
+  .student-resources {
+    padding-top: 1.25rem;
+    color: $white!important;
+    h2 {
+      width: fit-content;
+      border-bottom: solid 0.8rem $uva-orange;
+      line-height: 1rem;
+      font-family: $font-frankgoth-std;
+      font-weight: 500!important;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+
+      span {
+        display: inline-block;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
+        font-size: 130%;
+        line-height: 0.2rem;
+        vertical-align: sub;
+        font-style: normal;
+        color: $csc-lt-blue!important;
+      }
+    }
+
+    hr {
+      display: none;
+    }
+
+    ul {
+      list-style-type: none;
+      color: $white!important;
+      li {
+        margin-bottom: 1.25rem;
+        a {
+          font-family: $font-frankgoth-std;
+          font-size: 1.25rem;
+          color: $white!important;
+          /* font-weight: bold; */
+          letter-spacing: 0.05rem;
+          border-bottom-width: 1px!important;
+        }
+      }
+    }
+  }
+}
 
 // End of Students Page
 
