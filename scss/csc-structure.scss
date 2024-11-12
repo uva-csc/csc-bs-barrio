@@ -573,7 +573,7 @@ footer.site-footer {
 // Media Images on left in a 33%/67% layout builder layout
 .layout--twocol-section {
   .layout__region--second {
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
 }
 
@@ -651,6 +651,70 @@ div.layout--twocol-section--33-67 {
         border: 2px solid #fcfcfc;
         border-top: none;
         border-bottom: none;
+      }
+    }
+  }
+}
+
+#student-featured.features {
+  & > .layout__region {
+    display: flex;
+    flex-wrap: wrap;
+    & > .block {
+      display: inline-block;
+      .content {
+        width: 28vw;
+      }
+    }
+
+    & > .block:first-child {
+      flex: 0 0 100%;
+      .content {
+        margin: 1rem auto;
+      }
+    }
+    /*
+    & > .block:nth-child(2) {
+      flex: 2;
+      width: 45vw;
+
+    }
+*/
+    & > .block:nth-child(3) {
+      flex: 1;
+      width: 30%;
+    }
+
+    h2, h3 {
+      margin-bottom: 0;
+      font-size: 1.65rem;
+      padding: 0.5rem 0 0.25rem
+    }
+
+    .img-center {
+      width: unset;
+    }
+
+    .field--name-field-alt-teaser-title {
+      width: 100%;
+      text-align: center;
+      color: $uva-orange;
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
+      text-transform: uppercase;
+      border: none;
+    }
+
+    .field--name-field-teaser-image, .field--name-field-image {
+      display: flex;
+      justify-content: center;
+      height: 30vh;
+      img {
+        border: 2px solid #fcfcfc;
+        border-top: none;
+        border-bottom: none;
+        height: 30vh;
+        width: auto;
       }
     }
   }

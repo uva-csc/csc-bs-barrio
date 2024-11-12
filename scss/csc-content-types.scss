@@ -347,8 +347,12 @@ body.node--type-news-item {
 // Basic Pages
 .node--type-page {
   #title-div {
+    margin: 1rem 0 0.5rem;
+    /*
     margin-top: 0.25rem;
     margin-bottom: -0.25rem;
+
+     */
   }
 
   #main.container {

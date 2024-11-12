@@ -29,18 +29,19 @@
 
 // Students Page
 // Students Features
-.features-1over2 > .layout__region .field--name-field-teaser-image,
-.features-1over2 > .layout__region .field--name-field-image {
-    width: 30vw;
+#student-featured {
+  .layout__region .field--name-field-teaser-image,
+  .layout__region .field--name-field-image {
     max-height: 300px;
     overflow: hidden;
     background-image: url("/sites/default/files/2024-04/South_Lawn_Commons_Students_16_1V3A1133_160over90.jpg");
     background-size: cover;
+  }
 }
 
 // Student social media
 .layout.media-feeds {
-  background-color: $uva-blue;
+  /*background-color: $uva-blue;*/
   min-height: 500px;
   margin-top: 3rem;
   padding: 2rem;
@@ -208,6 +209,10 @@
       }
     }
   }
+}
+
+.student-hero .field.field--name-field-hero-top {
+  margin-top: -0.5rem;
 }
 
 // End of Students Page

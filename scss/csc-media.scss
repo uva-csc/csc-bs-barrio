@@ -859,6 +859,13 @@
 
 } // End of Large min-width: 992 and max-width: 1199.9px
 
+// Anything less thatn 1263px
+@media (max-width: 1263px) {
+  #header #navbar-top {
+    padding: 10px 0;
+  }
+}
+
 // Only XLarge Most Small Laptops
 @media (min-width: 1200px) and (max-width: 1490px) {
   body.node--type-landing-page main#content {
