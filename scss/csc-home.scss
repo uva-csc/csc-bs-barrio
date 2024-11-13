@@ -164,11 +164,16 @@ body.path-frontpage main#content {
     }
 
     // Body
-    .views-field-body p {
-      font-weight: normal;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      // margin: 0.5rem 0 0;
+    .views-field-body {
+      p {
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        // margin: 0.5rem 0 0;
+        a {
+          color: white!important;
+        }
+      }
     }
 
     // Links (read more)

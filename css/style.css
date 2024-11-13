@@ -13963,6 +13963,9 @@ body.path-frontpage main#content .featured-event .views-field-body p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+body.path-frontpage main#content .featured-event .views-field-body p a {
+  color: white !important;
+}
 body.path-frontpage main#content .featured-event .views-field-view-node, body.path-frontpage main#content .featured-event .views-field-nothing {
   text-align: right;
 }
