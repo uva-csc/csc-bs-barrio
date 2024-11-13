@@ -15079,7 +15079,7 @@ p.view-more a {
   line-height: 1.35rem;*/
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field {
-  max-width: 300px;
+  max-width: 300px !important;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article.node--type-event, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner article.node--type-event {
   margin: 0;
