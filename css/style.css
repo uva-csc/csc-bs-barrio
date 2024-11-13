@@ -15163,6 +15163,11 @@ p.view-more a {
   margin-top: 0.8rem;
 }
 
+#special-events .view-events .row .view-field-body .desc p,
+#dropins .view-events .row .view-field-body .desc p {
+  display: inline-block;
+}
+
 .view.csc-news-block {
   max-width: 75vw;
   margin: 2rem auto;

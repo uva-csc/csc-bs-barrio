@@ -153,6 +153,7 @@ p.view-more {
 }
 
 // Event Views Blocks (Some on Home page css too)
+
 .view-events {
   &.events-row-teasers {
     max-width: 76vw;
@@ -320,6 +321,18 @@ p.view-more {
   }
 
 } // End of .view-events
+
+// Events blocks on Events home page
+#special-events,
+#dropins {
+  .view-events {
+    .row .view-field-body {
+      .desc {
+        p { display: inline-block; }
+      }
+    }
+  }
+}
 
 // News view
 .view-news {
