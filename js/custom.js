@@ -41,6 +41,7 @@
         AOS.init({
           duration: 1200,
         });
+
         // Search box expanding
         const els = once('.search-container', '.search-button', context);
         els.forEach(function (el) {
@@ -58,6 +59,17 @@
 
         // Menu links can't be set to target=_blank, only link=_blank, so converting classes 'new-window' to target=_blank
         $('.new-window a, a.new-window').attr('target', '_blank');
+
+        // Scroll to top links (a.scrolltop)
+        const aels = once('body', 'a.scrolltop', context);
+        aels.forEach(function (ael) {
+          $(ael).on('click', function(e) {
+            e.preventDefault();
+            window.scrollTo(0,0);
+            return false;
+          });
+        }); // End of scroll to top links
+
       }); // End of Document Ready
     }
   };

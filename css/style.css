@@ -15940,6 +15940,10 @@ a.read-more, span.read-more {
   white-space: nowrap;
 }
 
+a.scrolltop {
+  cursor: pointer;
+}
+
 /** End of Links **/
 /** Buttons (taken from Arts at UVA) **/
 .csc-btn {
