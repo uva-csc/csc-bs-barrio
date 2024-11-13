@@ -184,6 +184,10 @@ p.view-more {
           /* border-top: 16px solid $uva-orange; */
           background-color: $white;
 
+          .field {
+            max-width: 300px;
+          }
+
           article.node--type-event {
             margin: 0;
             padding: 0;
