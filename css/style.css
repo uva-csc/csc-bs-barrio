@@ -15163,8 +15163,8 @@ p.view-more a {
   margin-top: 0.8rem;
 }
 
-#special-events .view-events .row .view-field-body .desc p,
-#dropins .view-events .row .view-field-body .desc p {
+#special-events .view-events .row .views-field-body .desc p,
+#dropins .view-events .row .views-field-body .desc p {
   display: inline-block;
 }
 
