@@ -185,7 +185,7 @@ p.view-more {
           background-color: $white;
 
           .field {
-            max-width: 300px;
+            max-width: 300px!important;
           }
 
           article.node--type-event {
