@@ -15165,7 +15165,7 @@ p.view-more a {
 
 #special-events .view-events .row .views-field-body .desc p,
 #dropins .view-events .row .views-field-body .desc p {
-  display: inline-block;
+  display: inline;
 }
 
 .view.csc-news-block {
