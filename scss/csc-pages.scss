@@ -40,6 +40,38 @@
 }
 
 // Student social media
+.csc-social-feed-block {
+  .instagram-feed {
+    blockquote {
+      &:before, &:after { display: none; }
+
+      &.instagram-media.failed {
+        background-image: url("/sites/default/files/2024-11/CSC_IG_Screenshot 2024-11-13 at 12.57.09%E2%80%AFPM.png")!important;
+        background-size: contain !important;
+        cursor: pointer !important;
+        div {
+          display: none;
+        }
+      }
+    }
+  } // end of instagram feed
+
+  .fb-page.failed {
+    height: 520px;
+    min-width: 300px;
+    background-image: url("/sites/default/files/2024-11/CSC_FB_Screenshot 2024-11-13 at 2.13.06%E2%80%AFPM.png")!important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    cursor: pointer !important;
+
+    .fb-xfbml-parse-ignore {
+      display: none;
+    }
+  }
+} // End of csc-social-feed-block
+
+
+// Old Media Feeds (I believe)
 .layout.media-feeds {
   /*background-color: $uva-blue;*/
   min-height: 500px;

@@ -72,6 +72,33 @@
 
       }); // End of Document Ready
     }
-  };
+  };  // End of csc_bs_sass_other behavior
+
+  Drupal.behaviors.csc_bs_sass_social_media = {
+    attach: function(context, settings) {
+      $(document).ready(() => {
+        const checkIG = () => {
+          const igbq = $('div.instagram-feed blockquote.instagram-media');
+          if (igbq?.length > 0) {
+            igbq.addClass('failed').click((e) => {
+              window.open('https://www.instagram.com/uvacsc/', '_blank').focus();
+            });
+          }
+        };
+        setTimeout(checkIG, 1500);
+
+        const checkFB = () => {
+          const fbpg = $('div.fb-page blockquote.fb-xfbml-parse-ignore');
+          console.log(fbpg);
+          if (fbpg?.length > 0) {
+            $('div.fb-page').addClass('failed').click((e) => {
+              window.open('https://www.facebook.com/UVACSC/', '_blank').focus();
+            });
+          }
+        }
+        setTimeout(checkFB, 1500);
+      }); // End of document ready
+    }
+  } // End of csc_bs_sass_social_media behavior
 
 })(jQuery, Drupal);
