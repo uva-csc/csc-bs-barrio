@@ -38,9 +38,11 @@
     attach: function(context, settings) {
       $(document).ready(() => {
         // Initialize animate on scroll.
-        AOS.init({
-          duration: 1200,
-        });
+        if (AOS?.init) {
+          AOS.init({
+            duration: 1200,
+          });
+        }
 
         // Search box expanding
         const els = once('.search-container', '.search-button', context);
@@ -89,7 +91,7 @@
 
         const checkFB = () => {
           const fbpg = $('div.fb-page blockquote.fb-xfbml-parse-ignore');
-          console.log(fbpg);
+          // console.log(fbpg);
           if (fbpg?.length > 0) {
             $('div.fb-page').addClass('failed').click((e) => {
               window.open('https://www.facebook.com/UVACSC/', '_blank').focus();
