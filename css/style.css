@@ -15366,16 +15366,38 @@ div.view-empty {
   background-size: contain !important;
   cursor: pointer !important;
 }
+.csc-social-feed-block .instagram-feed blockquote.instagram-media.failed:after {
+  content: "Click to log into Instagram";
+  display: block;
+  color: black;
+  position: absolute;
+  top: 650px;
+  width: 576px;
+  text-align: center;
+  font-size: 1rem;
+}
 .csc-social-feed-block .instagram-feed blockquote.instagram-media.failed div {
   display: none;
 }
 .csc-social-feed-block .fb-page.failed {
+  margin-top: 1.5rem;
   height: 520px;
   min-width: 300px;
   background-image: url("/sites/default/files/2024-11/CSC_FB_Screenshot 2024-11-13 at 2.13.06%E2%80%AFPM.png") !important;
   background-size: contain !important;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat; */
   cursor: pointer !important;
+}
+.csc-social-feed-block .fb-page.failed:after {
+  content: "Click to log into Facebook";
+  display: block;
+  color: black;
+  position: absolute;
+  top: 650px;
+  width: 300px;
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
 }
 .csc-social-feed-block .fb-page.failed .fb-xfbml-parse-ignore {
   display: none;
