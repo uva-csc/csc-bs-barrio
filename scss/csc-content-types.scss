@@ -504,7 +504,7 @@ body.node--type-event {
       width: 100%;
       background-color: $csc-lt-gray;
       margin-top: 40px;
-      padding: 40px;
+      padding: 35px 25px;
 
       .field__item, .field__item p.address {
         font-family: $font-frankgoth-cd;
@@ -516,7 +516,16 @@ body.node--type-event {
         margin-bottom: 1rem;
       }
 
+      .exceptions {
+        font-style: italic;
+        width: 100%;
+        text-align: center;
+      }
+
       article.node--type-location {
+        .field--name-title {
+          font-size: 90%;
+        }
         .country {
           display: none;
         }
@@ -672,7 +681,7 @@ body.node--type-class {
 
 // Location Pages
 .node--type-location {
-  .field--name-field-image {
+  #main .field--name-field-image {
     float: right;
     padding: 0 1rem 0.5rem;
   }

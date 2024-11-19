@@ -14456,7 +14456,7 @@ body.node--type-event .layout__region.layout__region--second .wrapper {
   width: 100%;
   background-color: #eeeeee;
   margin-top: 40px;
-  padding: 40px;
+  padding: 35px 25px;
 }
 body.node--type-event .layout__region.layout__region--second .wrapper .field__item, body.node--type-event .layout__region.layout__region--second .wrapper .field__item p.address {
   font-family: franklin-gothic-urw-cond, sans-serif;
@@ -14465,6 +14465,14 @@ body.node--type-event .layout__region.layout__region--second .wrapper .field__it
 body.node--type-event .layout__region.layout__region--second .wrapper .field--name-field-date {
   font-weight: bold;
   margin-bottom: 1rem;
+}
+body.node--type-event .layout__region.layout__region--second .wrapper .exceptions {
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+body.node--type-event .layout__region.layout__region--second .wrapper article.node--type-location .field--name-title {
+  font-size: 90%;
 }
 body.node--type-event .layout__region.layout__region--second .wrapper article.node--type-location .country {
   display: none;
@@ -14592,7 +14600,7 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   display: none;
 }
 
-.node--type-location .field--name-field-image {
+.node--type-location #main .field--name-field-image {
   float: right;
   padding: 0 1rem 0.5rem;
 }

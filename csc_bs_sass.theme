@@ -57,6 +57,14 @@ function csc_bs_sass_preprocess_node(&$variables) {
     $rrid = $vals[0]['rrule'] ?? FALSE;
     if ($rrid) {
       $rrule = SmartDateRule::load($rrid);
+      $instances = $rrule->makeRuleInstances();
+      $ords = $rrule->getRuleOverrides();
+      $variables['excepts'] = [];
+      foreach($ords as $ind => $ord) {
+        $instance = $instances[$ind];
+        $variables['excepts'][] = $instance->getStart()->format('M j, Y');
+      }
+
       $rr_params = $rrule->getParametersArray();
       $dow = $rr_params['byday'];
       $full_dow = array_map(function ($abbr) use ($day_mapping) {
