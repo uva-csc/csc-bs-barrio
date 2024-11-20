@@ -29,6 +29,22 @@ h2.hero-title {
   font-size: 1.5rem!important;
 }
 
+.block.block-layout-builder .field.field--label-inline {
+  .field__label {
+    font-weight: bold;
+    display: inline-block;
+
+    &:after {
+      content: ':';
+      margin-right: 5px;
+    }
+  }
+
+  .field__item {
+    display: inline-block;
+  }
+}
+
 /** General Block Styles **/
 h1, h2, h3 {
   font-family: $font-frankgoth-std;
