@@ -82,7 +82,7 @@
         const checkIG = () => {
           const igbq = $('div.instagram-feed blockquote.instagram-media');
           if (igbq?.length > 0) {
-            igbq.addClass('failed').click((e) => {
+            igbq.addClass('failed').attr('title', 'Screenshot of CSC’s Instagram feed').click((e) => {
               window.open('https://www.instagram.com/uvacsc/', '_blank').focus();
             });
           }
@@ -93,7 +93,7 @@
           const fbpg = $('div.fb-page blockquote.fb-xfbml-parse-ignore');
           // console.log(fbpg);
           if (fbpg?.length > 0) {
-            $('div.fb-page').addClass('failed').click((e) => {
+            $('div.fb-page').addClass('failed').attr('title', 'Screenshot of CSC’s Facebook feed').click((e) => {
               window.open('https://www.facebook.com/UVACSC/', '_blank').focus();
             });
           }
