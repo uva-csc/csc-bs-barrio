@@ -532,3 +532,16 @@ div.view-empty {
     /*  z-index: 1; makes drop down menus transparent over views */
   }
 }
+
+// Fields
+.views-row {
+  .views-field {
+    // For Resources taxonomy "filters" but kept general in case it applies in other situations
+    .filters::before {
+      content: "Topics: ";
+      font-weight: bold;
+      font-style: italic;
+      font-size: 95%;
+    }
+  }
+}

@@ -15332,6 +15332,13 @@ div.view-empty {
   /*  z-index: 1; makes drop down menus transparent over views */
 }
 
+.views-row .views-field .filters::before {
+  content: "Topics: ";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 95%;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
