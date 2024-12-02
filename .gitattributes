@@ -1,2 +1,2 @@
 # Ignore CSS Map files
-**.css.map
+**.css.map -diff
