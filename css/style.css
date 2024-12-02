@@ -15921,7 +15921,9 @@ a[href^=mailto],
 }
 .reversed a:hover, a.reversed:hover,
 .link-reversed a:hover, .link-reversed:hover {
-  border-bottom: 2px solid #E57325;
+  /* border-bottom: $csc-link;*/
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
 }
 
 .link-orange {

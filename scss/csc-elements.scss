@@ -217,7 +217,9 @@ a[href^=mailto],
   border-bottom: none;
 
   &:hover {
-    border-bottom: $csc-link;
+    /* border-bottom: $csc-link;*/
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
   }
 }
 
