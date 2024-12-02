@@ -104,3 +104,9 @@
 .bg-trans-gray {
   background-color: $csc-trans-gray;
 }
+
+// Sizing (Max-width, etc.)
+.mw-300 {
+  max-width: 300px !important;
+  display: inline-block;
+}

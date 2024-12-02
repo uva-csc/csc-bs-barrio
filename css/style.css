@@ -13107,6 +13107,11 @@ textarea.form-control-lg {
   background-color: #22222260;
 }
 
+.mw-300 {
+  max-width: 300px !important;
+  display: inline-block;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /***  General Structural Styles ***/
@@ -15381,7 +15386,7 @@ div.view-empty {
   display: none;
 }
 .csc-social-feed-block .fb-page.failed {
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   height: 520px;
   min-width: 300px;
   background-image: url("/sites/default/files/2024-11/CSC_FB_Screenshot 2024-11-13 at 2.13.06%E2%80%AFPM.png") !important;

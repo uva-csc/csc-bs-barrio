@@ -98,7 +98,7 @@
             });
           }
         }
-        setTimeout(checkFB, 1500);
+        setTimeout(checkFB, 3000);
       }); // End of document ready
     }
   } // End of csc_bs_sass_social_media behavior
