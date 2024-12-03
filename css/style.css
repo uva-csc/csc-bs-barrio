@@ -15333,11 +15333,18 @@ div.view-empty {
   /*  z-index: 1; makes drop down menus transparent over views */
 }
 
+.view-resources div:has(> span.notags), .view-taxonomy-term div:has(> span.notags) {
+  display: none;
+}
+
 .views-row .views-field .filters::before {
   content: "Topics: ";
   font-weight: bold;
   font-style: italic;
   font-size: 95%;
+}
+.views-row .views-field .filters:has(> span.notags) {
+  display: none;
 }
 
 /* VARIABLES */

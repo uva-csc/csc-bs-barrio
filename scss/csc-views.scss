@@ -534,15 +534,27 @@ div.view-empty {
   }
 }
 
+// For Resources view and filter view
+.view-resources, .view-taxonomy-term {
+  div:has(> span.notags) {
+    display: none;
+  }
+}
+
 // Fields
 .views-row {
   .views-field {
     // For Resources taxonomy "filters" but kept general in case it applies in other situations
-    .filters::before {
-      content: "Topics: ";
-      font-weight: bold;
-      font-style: italic;
-      font-size: 95%;
+    .filters {
+      &::before {
+        content: "Topics: ";
+        font-weight: bold;
+        font-style: italic;
+        font-size: 95%;
+      }
+      &:has(> span.notags) {
+        display: none;
+      }
     }
   }
 }

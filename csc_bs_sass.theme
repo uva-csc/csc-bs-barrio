@@ -262,7 +262,14 @@ function csc_bs_sass_preprocess_facets_result_item(&$facet) {
   $facet['value'] = $new_label;
   $facet['raw_value'] = $facet['value'];
 }
-
+/*
+function csc_bs_sass_preprocess_taxonomy_term(&$variables) {
+  if ($variables['term']->bundle() === 'content_filters') {
+    $term = $variables['term'];
+    $variables['content'] = `<a href="/filtered/{$term->id()}">{$term->label()}</a>`;
+  }
+}
+*/
 
 /**
  * Implements custom classes for paragraphs with bundle name
