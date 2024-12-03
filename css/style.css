@@ -15317,7 +15317,8 @@ div.view-empty {
 .view-events.events-list-alt .row.views-row,
 .view-news.view-display-id-page_1 .row.views-row,
 .view-search-content.view-display-id-result_page .row.views-row,
-.view-resources .row.views-row {
+.view-resources .row.views-row,
+.view-taxonomy-term .row.views-row {
   padding: 30px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
   transition: background 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
