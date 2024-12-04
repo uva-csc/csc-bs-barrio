@@ -15347,6 +15347,10 @@ div.view-empty {
   display: none;
 }
 
+.js-form-item {
+  margin-right: 8px;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
