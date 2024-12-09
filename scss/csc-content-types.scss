@@ -801,3 +801,10 @@ body.node--type-class {
     }
   }
 } // End of Hero Overlays
+
+// Resource content type
+.node--type-resource {
+  .layout__region--second .field--name-field-image {
+    margin: 6.5rem 0 0 auto;
+  }
+}
