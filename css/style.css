@@ -15355,6 +15355,12 @@ div.view-empty {
   margin-right: 8px;
 }
 
+.res-sum {
+  float: right;
+  margin-bottom: -3rem;
+  margin-top: 1rem;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** Individual Page Styles ***/
