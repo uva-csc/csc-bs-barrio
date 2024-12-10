@@ -85,6 +85,16 @@
     }
   }
 
+  // Home Page
+  body.path-frontpage {
+    .block-field-blocknodepage-full-widthbody {
+      .field--name-body {
+        h2 {
+          text-align: center;
+        }
+      }
+    }
+  }
 
   // People pages
   body.path-people {  // The list of people

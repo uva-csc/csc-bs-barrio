@@ -16782,6 +16782,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     top: 158px;
   }
 
+  body.path-frontpage .block-field-blocknodepage-full-widthbody .field--name-body h2, body.path-frontpage .block-field-blocknodepage-full-widthbody .field--name-body .h2 {
+    text-align: center;
+  }
+
   body.path-people .facets-widget-links {
     padding: 0;
   }
