@@ -14193,6 +14193,7 @@ body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl 
   max-height: 200px;
 }
 body.node--type-landing-page main#content h1.title-overlay, body.node--type-landing-page main#content .title-overlay.h1 {
+  margin-top: 0;
   padding: 12px 0 10px;
   background-color: #22222277;
   color: #fdfdfd;
@@ -17002,11 +17003,11 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     background-position: center;
     background-size: 7%;
   }
-  .path-frontpage #main-wrapper main#content .events-row .layout__region--second > .wrapper {
+  .path-frontpage #main-wrapper main#content .events-row .layout__region--second .wrapper {
     padding: 0;
   }
-  .path-frontpage #main-wrapper main#content .events-row .layout__region--second .view-header {
-    margin: 0 0 -3rem -2rem;
+  .path-frontpage #main-wrapper main#content .events-row .layout__region--second .wrapper .view-header {
+    margin: 0 0 -3rem -3.2rem;
   }
   .path-frontpage #main-wrapper main#content .upcoming-events {
     padding: 0;
@@ -17138,7 +17139,26 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
 }
 @media (max-width: 992px) {
-  .layout--twocol-section .layout__region {
+  #header #navbar-top .navbar-brand img {
+    max-width: 80vw;
+    margin: 4px 0 4px 4px;
+  }
+  #header #navbar-main.bg-primary {
+    height: 0px !important;
+  }
+  #header #navbar-main.bg-primary .navbar-toggler-icon {
+    height: 1.25em;
+    width: 1.25em;
+  }
+
+  button.navbar-toggler {
+    position: absolute;
+    top: -45px;
+    right: 8px;
+    background-color: white;
+  }
+
+  #header .layout--twocol-section .layout__region {
     flex: 0 0 100% !important;
     width: 100%;
     padding: 0;
@@ -17167,17 +17187,6 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
     max-width: 300px;
   }
 
-  button.navbar-toggler {
-    position: absolute;
-    top: -45px;
-    right: 10px;
-    background-color: white;
-  }
-
-  #header #navbar-main.bg-primary {
-    height: 0px !important;
-  }
-
   div#main-menu-list {
     background-color: #434b64;
   }
@@ -17203,6 +17212,10 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
   }
   .view-news .views-row .views-field-body .title a:hover {
     color: #E57325 !important;
+  }
+
+  #sliding-popup .popup-content {
+    text-align: center;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
