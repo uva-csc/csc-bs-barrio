@@ -13403,6 +13403,7 @@ aside.featured-top__inner.section.container.clearfix {
 }
 #title-div .content h1, #title-div .content .h1 {
   margin: 0.5rem 0 0;
+  font-size: 2rem;
   text-align: center;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -17416,16 +17417,39 @@ div.toolbar-tab a#toolbar-item-administration:not(.is-active) {
   color: #fdfdfd !important;
 }
 
+div.highlighted, div.highlighted div, div.highlighted aside {
+  margin: 0;
+  padding: 0;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+#csc-admin-msg div {
+  margin: 0;
+  padding: 0;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
 #csc-admin-msg > div:not(.hidden) {
   text-align: center;
-  padding: 0 0 1.25rem;
+}
+#csc-admin-msg > div:not(.hidden) .messages__content.container {
+  width: 100vw;
+  max-width: unset;
+  background-color: var(--bs-green);
+  border-radius: 0;
 }
 #csc-admin-msg > div:not(.hidden) em.placeholder {
   background: transparent;
   opacity: 1;
 }
 #csc-admin-msg > div:not(.hidden) a {
-  color: #232D4B;
+  color: #fdfdfd !important;
+  border-bottom: none;
+}
+#csc-admin-msg > div:not(.hidden) button.btn-close {
+  padding: 0;
+  margin: 0.25rem 1rem 0 0;
 }
 
 #node-admin-links .nav.primary {
