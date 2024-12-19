@@ -161,6 +161,24 @@ p.view-more {
     .view-header {
       margin: 0 auto;
     }
+
+    .views-view-responsive-grid__item {
+      .field--type-smartdate {
+        color: transparent;
+        & > * {
+          color: $body-color;
+        }
+
+        &::before, &::after {
+          content: '';
+        }
+
+       & > div + div {
+            margin-top: -0.5rem;
+            margin-bottom: 0.25rem;
+        }
+      }
+    }
   }
   // Block 3 of View. Shows row of latest events.
   &.events-row, &.events-row-teasers {

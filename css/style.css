@@ -15052,6 +15052,19 @@ p.view-more a {
 .view-events.events-row-teasers .view-header {
   margin: 0 auto;
 }
+.view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate {
+  color: transparent;
+}
+.view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate > * {
+  color: #212529;
+}
+.view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate::before, .view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate::after {
+  content: "";
+}
+.view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate > div + div {
+  margin-top: -0.5rem;
+  margin-bottom: 0.25rem;
+}
 .view-events.events-row, .view-events.events-row-teasers {
   /* Generalized to use in any view above at top
   .view-footer {
