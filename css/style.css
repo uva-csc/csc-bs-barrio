@@ -13964,6 +13964,15 @@ body.path-frontpage main#content .featured-event .views-field-title a {
 body.path-frontpage main#content .featured-event .views-field-title a:hover {
   border-bottom: 2px solid #E57325;
 }
+body.path-frontpage main#content .featured-event .views-field-field-date .recurring-output--wrapper .day-time div {
+  display: inline-block;
+}
+body.path-frontpage main#content .featured-event .views-field-field-date .recurring-output--wrapper .day-time .time:before {
+  content: "(";
+}
+body.path-frontpage main#content .featured-event .views-field-field-date .recurring-output--wrapper .day-time .time:after {
+  content: ")";
+}
 body.path-frontpage main#content .featured-event .views-field-body p {
   font-weight: normal;
   font-size: 1rem;

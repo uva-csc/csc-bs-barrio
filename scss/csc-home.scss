@@ -163,6 +163,23 @@ body.path-frontpage main#content {
       }
     }
 
+    // Date
+    .views-field-field-date {
+      .recurring-output--wrapper {
+        .day-time {
+          div { display: inline-block; }
+          .time {
+            &:before {
+              content: '(';
+            }
+            &:after {
+              content: ')';
+            }
+          }
+        }
+      }
+    }
+
     // Body
     .views-field-body {
       p {
