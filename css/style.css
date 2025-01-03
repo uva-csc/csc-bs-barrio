@@ -14987,6 +14987,15 @@ p.view-more a {
 .view.featured-event .views-field-body {
   line-height: 1.3;
 }
+.view.featured-event .views-field-field-date .recurring-output--wrapper .day-time div {
+  display: inline-block;
+}
+.view.featured-event .views-field-field-date .recurring-output--wrapper .day-time .time:before {
+  content: "(";
+}
+.view.featured-event .views-field-field-date .recurring-output--wrapper .day-time .time:after {
+  content: ")";
+}
 .view.featured-event .views-field-view-node {
   text-align: center;
 }

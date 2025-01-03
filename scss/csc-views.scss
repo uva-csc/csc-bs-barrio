@@ -71,6 +71,22 @@ p.view-more {
     line-height: 1.3;
   }
 
+  // Date
+  .views-field-field-date {
+    .recurring-output--wrapper {
+      .day-time {
+        div { display: inline-block; }
+        .time {
+          &:before {
+            content: '(';
+          }
+          &:after {
+            content: ')';
+          }
+        }
+      }
+    }
+  }
   // Link to content
   .views-field-view-node {
     text-align: center;
