@@ -62,7 +62,9 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $variables['excepts'] = [];
       foreach($ords as $ind => $ord) {
         $instance = $instances[$ind];
-        $variables['excepts'][] = $instance->getStart()->format('M j, Y');
+        if (!empty($instance)) {
+          $variables['excepts'][] = $instance->getStart()->format('M j, Y');
+        }
       }
 
       $rr_params = $rrule->getParametersArray();
