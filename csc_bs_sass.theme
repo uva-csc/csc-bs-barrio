@@ -60,6 +60,19 @@ function csc_bs_sass_preprocess_page(&$variables) {
     }
   }
 }
+function pluralizeDays($string) {
+  $days = [
+    "Monday" => "Mondays",
+    "Tuesday" => "Tuesdays",
+    "Wednesday" => "Wednesdays",
+    "Thursday" => "Thursdays",
+    "Friday" => "Fridays",
+    "Saturday" => "Saturdays",
+    "Sunday" => "Sundays"
+  ];
+
+  return str_replace(array_keys($days), array_values($days), $string);
+}
 
 function csc_bs_sass_preprocess_node(&$variables) {
   $day_mapping = DAY_MAPPING;  // See constanct defined at top of this .theme script
@@ -195,6 +208,7 @@ function csc_bs_sass_preprocess_field(&$variables) {
               $end_dt->modify("+$duration weeks");
             }
             $variables['dayoweek'] = (!empty($rule['#days_array'])) ? implode(', ', $rule['#days_array']) : $rule['#day'];
+            $variables['dayoweek'] = pluralizeDays($variables['dayoweek']);
             $variables['time'] = ($tba == 1) ? "Time TBA" : $rule['#time'];
             $variables['start_date'] = date($class_dt_format, $start_ts); // Start display will adjust to first occurrence of class (but end does not)
             $variables['end_date'] = (str_contains($variables['limit'], 'until')) ? str_replace('until ', '', $variables['limit']) : $end_dt->format($class_dt_format);
