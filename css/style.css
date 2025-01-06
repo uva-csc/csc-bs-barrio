@@ -14496,6 +14496,17 @@ body.node--type-event .layout__region.layout__region--second .wrapper article.no
 body.node--type-event .layout__region.layout__region--second .wrapper .field--name-field-target-audience {
   margin-bottom: 1rem;
 }
+body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg {
+  margin: 1rem 0 0;
+  color: #E57325;
+  text-align: center;
+}
+body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg a {
+  color: #E57325 !important;
+}
+body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg a:hover {
+  color: #232D4B !important;
+}
 
 body.node--type-class .bc-inline.layout.layout--onecol {
   margin-left: -10rem;

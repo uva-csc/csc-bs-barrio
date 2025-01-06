@@ -534,6 +534,17 @@ body.node--type-event {
       .field--name-field-target-audience {
         margin-bottom: 1rem;
       }
+      .event-past-msg {
+        margin: 1rem 0 0;
+        color: $uva-orange;
+        text-align: center;
+        a {
+          color: $uva-orange!important;
+          &:hover {
+            color: $uva-blue!important;
+          }
+        }
+      }
     } // End of wrapper
   } // end of events layout region second
 } // End of Events Content Type
