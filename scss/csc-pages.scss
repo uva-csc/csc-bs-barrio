@@ -1,5 +1,24 @@
 @import 'variables.scss';
 
+/*** General Styles for All Pages ***/
+// When custom title is added through layout builder and page is given class "custom-title"
+body.custom-title {
+  #main-wrapper > #title-div {
+    display: none;
+  }
+  div.layout.bc-inline .block-system-breadcrumb-block, #breadcrumbs.inline {
+    margin: 1rem 0 0;
+  }
+  div.block-layout-builder.block-field-blocknodepagetitle {
+    margin-top: 0rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+} // end body.custom-title
+
 /*** Individual Page Styles ***/
 
 // Commons Page (new)

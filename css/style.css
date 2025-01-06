@@ -15407,6 +15407,22 @@ div.view-empty {
 
 /* VARIABLES */
 /** Bootstrap Overrides **/
+/*** General Styles for All Pages ***/
+body.custom-title #main-wrapper > #title-div {
+  display: none;
+}
+body.custom-title div.layout.bc-inline .block-system-breadcrumb-block, body.custom-title #breadcrumbs.inline {
+  margin: 1rem 0 0;
+}
+body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
+  margin-top: 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
 /*** Individual Page Styles ***/
 .commons-images {
   margin-top: 2rem;

@@ -25,6 +25,25 @@ const DAY_MAPPING = [
 ];
 
 ////********* Preprocessing ************////
+function  csc_bs_sass_preprocess_html(&$variables) {
+  // Get the current route match.
+  $route_match = \Drupal::routeMatch();
+
+  // Check if the current route is for a node.
+  if ($route_match->getRouteName() === 'entity.node.canonical') {
+    // Load the current node.
+    $node = $route_match->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      if ($node->hasField('field_class_attribute')) {
+        $class = $node->get('field_class_attribute')->value; // getValue() returns an array where [0]->value is the equivalent to this
+        if (is_string($class) && !empty($class)) {
+          $variables['attributes']['class'][] = $class;
+        }
+      }
+    }
+  }
+}
+
 function csc_bs_sass_preprocess_page(&$variables) {
   // Make sure jquery once is included
   $variables['#attached']['library'][] = 'core/jquery.once';
@@ -32,9 +51,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
   if (array_key_exists('node', $variables) && $variables['node'] instanceof NodeInterface) {
     $node = $variables['node'];
     $pg_type = $node->getType();
-    if ($node->hasField('field_class_attribute')) {
-      $class = $node->get('field_class_attribute')->value; // getValue() returns an array where [0]->value is the equivalent to this
-    }
+
     if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
       $full_width_pages = ['page_full_width', 'landing_page', 'people'];
       if (in_array($pg_type, $full_width_pages)) {
