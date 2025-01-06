@@ -14579,6 +14579,17 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
 body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-image img {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
+body.node--type-class .layout__region.layout__region--first .field--name-field-class-id {
+  margin-bottom: 0.5rem;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-class-id:before {
+  content: "Course Number: ";
+  display: inline-block;
+  font-weight: bold;
+}
+body.node--type-class .layout__region.layout__region--first .field--name-field-class-id .field__item {
+  display: inline-block;
+}
 body.node--type-class .layout__region.layout__region--first .field--name-field-contact-name {
   width: fit-content;
   padding-right: 0.5rem;

@@ -627,6 +627,18 @@ body.node--type-class {
       }
     }
 
+    .field--name-field-class-id {
+      margin-bottom: 0.5rem;
+      &:before {
+        content: "Course Number: ";
+        display: inline-block;
+        font-weight: bold;
+      }
+      .field__item {
+        display: inline-block;
+      }
+    }
+
     .field--name-field-contact-name {
       width: fit-content;
       padding-right: 0.5rem;
