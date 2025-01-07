@@ -197,7 +197,11 @@ p.view-more {
         }
       }
     }
-  }
+    .view-footer {
+      margin: 1rem auto;
+    }
+  } // end of view .events-row-teasers
+
   // Block 3 of View. Shows row of latest events.
   &.events-row, &.events-row-teasers {
 

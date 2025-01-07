@@ -15111,6 +15111,9 @@ p.view-more a {
   margin-top: -0.5rem;
   margin-bottom: 0.25rem;
 }
+.view-events.events-row-teasers .view-footer {
+  margin: 1rem auto;
+}
 .view-events.events-row, .view-events.events-row-teasers {
   /* Generalized to use in any view above at top
   .view-footer {
