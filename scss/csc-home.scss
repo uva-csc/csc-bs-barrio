@@ -107,8 +107,17 @@ body.path-frontpage main#content {
     }
   }
 
-  .events-row .wrapper {
-    padding: 0 30px;
+  .events-row {
+    .wrapper {
+      padding: 0 30px;
+    }
+    .layout__region--second {
+      p.view-more {
+        text-align: left;
+        margin-left: 8vw;
+        margin-bottom: 2rem;
+      }
+    }
   }
 
   // Featured Event (This week at the commons)
