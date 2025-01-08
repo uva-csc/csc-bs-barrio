@@ -15159,6 +15159,9 @@ p.view-more a {
   padding-top: 0.5rem;
   line-height: 1.35rem;*/
 }
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .node--type-event.node--view-mode-teaser, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .node--type-event.node--view-mode-teaser {
+  max-width: 300px;
+}
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field {
   max-width: 300px !important;
 }

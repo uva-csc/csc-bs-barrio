@@ -224,6 +224,10 @@ p.view-more {
           /* border-top: 16px solid $uva-orange; */
           background-color: $white;
 
+          .node--type-event.node--view-mode-teaser {
+            max-width: 300px;
+          }
+
           .field {
             max-width: 300px!important;
           }
