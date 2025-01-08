@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BookIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Std";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DemiIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCd.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med Condensed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MdCdIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-BkCpIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCp.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Compressed";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-DmCpIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Med.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Med";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-MedIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Hvy";
+  font-weight: normal;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-Hvy.otf") format("opentype");
+}
+@font-face {
+  font-family: "ITC Franklin Gothic Hvy";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/franklingothic/ITCFranklinGothicStd-HvyIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Bold";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-BoldItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  src: url("../css/fonts/bodoni/BodoniStd-Poster.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bodoni Poster";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/bodoni/BodoniStd-PosterItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Caslon Text";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../css/fonts/librecaslon/LibreCaslonText-Italic.ttf") format("truetype");
+}
+
+/*# sourceMappingURL=csc-fonts.css.map */
