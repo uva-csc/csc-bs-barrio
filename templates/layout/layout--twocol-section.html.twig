@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div{{ attributes }}>
+    {% if '-skew' in render_var(attributes) %}
+      <div class="skew-overlay"></div>
+    {% endif %}
+
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
+        <div class="wrapper">
+          {{ content.first }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
+        <div class="wrapper">
+          {{ content.second }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

@@ -1,0 +1,625 @@
+@import 'variables.scss';
+
+/** Views **/
+.views-field-title {
+  font-weight: bold;
+}
+
+.views-field-body {
+  font-family: $font-frankgoth-std;
+}
+
+.views-field-view-node a {
+  border-bottom: 4px solid #E57200;
+}
+
+.views-field-field-image img {
+  filter: $img-shadow;
+}
+
+.views-field-field-image + .views-field-field-date {
+  margin-top: 0.5rem;
+}
+
+.views-field.event-type  {
+  /* padding-top: 0.3rem; */
+  a {
+    font-family: $font-frankgoth-std;
+    font-weight: 500!important;
+    font-size: 80%;
+    text-transform: uppercase;
+    color: $csc-dark-gray;
+    letter-spacing: 1px;
+  }
+}
+
+// Date (recurring) and Time
+.views-field-field-date, .date {
+  .recurring-output--wrapper {
+    .day-time {
+      div { display: inline-block; }
+      .time {
+        &:before {
+          content: '(';
+        }
+        &:after {
+          content: ')';
+        }
+      }
+    }
+  }
+}
+
+// View more button in any view (orange button with white lettering)
+p.view-more {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0rem 1rem 0 1.2rem;
+  border-radius: 15px;
+  background-color: $uva-orange;
+  font-family: $font-frankgoth-std;
+  font-weight: 900!important;
+  font-size: 80%;
+  text-align: center;
+  line-height: 1.15rem;
+
+
+  a {
+    display: inline-block;
+    padding-top: 0.25rem;
+    color: #fdfdfd !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+// Feature event on the events page
+.view.featured-event {
+  .views-field-title {
+    font-size: 1.5rem;
+  }
+
+  .views-field-field-date {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  .views-field-body {
+    line-height: 1.3;
+  }
+
+
+  // Link to content
+  .views-field-view-node {
+    text-align: center;
+
+    .csc-btn {
+      display: inline-block;
+      padding-top: 0.55rem;
+    }
+  }
+}
+
+// Event Column View (used on events page)
+.view.event-col {
+  margin: 0 0 0 30px;
+
+  .view-header {
+    padding-top: 3.5rem;
+    h2 {
+      font-family: $font-frankgoth-std;
+      font-weight: 500!important;
+      font-size: 5.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 0.8;
+      /*margin: 25px 0 30px;*/
+      text-align: right;
+
+      span {
+        display: inline-block;
+        transform: translateX(-80px);
+      }
+    }
+  }
+
+  $event-row-gap: 20px;
+
+  .views-row {
+    display: flex;
+
+    &>div:first-child {
+      margin: $event-row-gap;
+    }
+
+    &>div:nth-child(2) {
+      margin: $event-row-gap 0 0 0;
+    }
+
+    .views-field-field-image {
+      flex-shrink: 0;
+      max-width: 280px;
+    }
+
+    .views-field.event-type {
+      margin-top: -0.5rem;
+      a {
+        font-size: 70%;
+        letter-spacing: unset;
+      }
+    }
+    .views-field.title {
+      margin: 0.25rem 0 0.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: -0.025rem;
+      line-height: 1.2;
+      a {
+        border-bottom: none;
+      }
+
+      /*&:hover {
+        border-bottom: $csc-link;
+      }*/
+    }
+    .views-field.date, .views-field.time, .views-field.audience {
+      font-size: 90%;
+      font-weight: normal;
+      line-height: 1.3;
+    }
+  }
+}
+
+// Event Views Blocks (Some on Home page css too)
+
+.view-events {
+  &.events-row-teasers {
+    max-width: 76vw;
+    padding: 0;
+    .view-header {
+      margin: 0 auto;
+    }
+
+    .views-view-responsive-grid__item {
+      .field--type-smartdate {
+        color: transparent;
+        & > * {
+          color: $body-color;
+        }
+
+        &::before, &::after {
+          content: '';
+        }
+
+       & > div + div {
+            margin-top: -0.5rem;
+            margin-bottom: 0.25rem;
+        }
+      }
+    }
+    .view-footer {
+      margin: 1rem auto;
+    }
+  } // end of view .events-row-teasers
+
+  // Block 3 of View. Shows row of latest events.
+  &.events-row, &.events-row-teasers {
+
+    .view-header h2 {
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 250%;
+    }
+
+    .view-content {
+      .views-view-responsive-grid {
+        justify-items: center;
+        grid-auto-rows: 1fr;
+
+        .views-view-responsive-grid__item-inner {
+          border: thin solid #939292;
+          height: 100%;
+          /* border-top: 16px solid $uva-orange; */
+          background-color: $white;
+
+          .node--type-event.node--view-mode-teaser {
+            max-width: 300px;
+          }
+
+          .field {
+            max-width: 300px!important;
+          }
+
+          article.node--type-event {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+          }
+
+          p.location {
+            margin: 0;
+            font-size: 105%;
+          }
+
+          .node--view-mode-teaser {
+            margin-bottom: 10px;
+            .node__content {
+              display: grid;
+              position: relative;
+              height: 100%;
+              margin: 0;
+              padding: 0;
+              text-align: center
+            }
+          }
+
+          .views-field-field-image, .field--name-field-image {
+            border-top: thin solid #939292;
+            img {
+              border: none;
+              border-radius: 0;
+              padding: 0;
+              filter: none;
+              max-height: 200px
+            }
+          } // End of .field--name-field-image
+
+
+          /*margin: 10px 8px 0;
+          padding-top: 0.5rem;
+          line-height: 1.35rem;*/
+
+          .views-field-field-date {
+            margin: 0 8px;
+            line-height: 1.35rem;
+            font-weight: bold;
+            max-width: 380px;
+
+            .smart-date--time {
+              display: none;
+            }
+          }
+
+          .field--name-field-date {
+            margin: 0 0 0.15rem 0;
+            max-width: 300px;
+            line-height: 1.05rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+
+            &.starts-on {
+              font-style: italic;
+            }
+          }
+
+          .views-field .field-content {
+            text-align: center;
+          }
+
+          .views-field-field-location, .field--name-field-location {
+            margin: 0 8px 18px;
+            font-size: 95%
+          }
+
+          .views-field-title, .field--name-field-short-title {
+            margin: 0.5rem 0;
+            line-height: 1.2;
+            font-size: 1.15rem;
+            font-weight: bold;
+            max-width: 400px;
+            max-height: 200px;
+
+            a {
+              border-bottom: none;
+            }
+          }
+          .field--name-field-short-title .field--name-field-short-title  {
+            margin: 0;
+          }
+          .field--name-field-target-audience {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 90%;
+            color: $uva-orange;
+          }
+
+
+        }  // End of views-view-responsive-grid__item-inner
+      } // End of views-view-responsive-grid
+    } // End of .view-events .view-content
+
+    /* Generalized to use in any view above at top
+    .view-footer {
+      width: fit-content;
+      margin: 3rem auto 1rem;
+      text-align: center;
+
+      p { // The "More Events Button"
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
+        font-size: 90%;
+        padding: 0rem 3.5rem;
+        border-radius: 3px;
+        line-height: 1.15rem;
+
+        a {
+          display: inline-block;
+          padding-top: 0.35rem;
+          color: $white !important;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    } // End of .events-row .footer*/
+
+  } // End of &.events-row
+
+  // Featured Event on Events Page
+  &.featured-event {
+    max-width: 500px;
+    /* margin-left: 5rem;*/
+    .views-field.event-type {
+      margin-top: 0.8rem;
+    }
+  }
+
+} // End of .view-events
+
+// Events blocks on Events home page
+#special-events,
+#dropins {
+  .view-events {
+    .row .views-field-body {
+      .desc {
+        p { display: inline; }
+      }
+    }
+  }
+}
+
+// News view
+.view-news {
+
+}
+
+// News block (view)
+.view.csc-news-block {
+  max-width: 75vw;
+  margin: 2rem auto;
+  padding-left: 1rem;
+
+  // No orange border on links
+  a {
+    border-bottom: none;
+  }
+
+  // News block header
+  .view-header {
+    position: relative;
+    width: 100%;
+    /* background-color: $uva-orange; */
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0 0;
+    /* border-radius: 15px; */
+
+    h2 {
+      margin: 1rem auto;
+      width: fit-content;
+      /*color: white;*/
+      font-size: 250%;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .views-view-responsive-grid__item {
+    // border-bottom: thin solid #ccc;
+  }
+
+  // The individual news item teasers in the view
+  .node--view-mode-teaser {
+    border: none;
+
+    // Every field has a .content
+    .content {
+      line-height: 1.1rem; // pack text close together
+      font-size: 90%;
+    }
+
+    // New teaser image
+    .field--name-field-image,
+    .field--name-field-teaser-image {
+      float: none;
+      overflow: hidden;
+      margin-right: 0.25rem;
+
+      img {
+        border: thin solid #aaa;
+        border-radius: 0;
+        padding: 0;
+        max-height: 200px;
+        filter: none;
+        /* transition: transform .2s; Animation
+        &:hover {
+          transform: scale(1.15);
+        }*/
+      }
+    } // end of new teaser image
+    .block-field-blocknodenews-itemfield-date {
+      margin: -0.5rem 0 0 0;
+    }
+
+    .field--name-field-date {
+      margin-top: 0.15rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: $csc-lt-blue;
+      text-transform: uppercase;
+    }
+
+    .field--name-title {
+      font-size: 1rem;
+      padding-right: 2px;
+      line-height: 1.2;
+    }
+  }  // end of News node teaser
+
+  .view-footer {
+    float: right;
+    a {
+      border-bottom: 4px solid $uva-orange;
+    }
+  }
+
+} // end of view news block
+
+// Classes View
+.view.view-classes {
+  // For Alt Teaser
+  p.location {
+    display: inline-block;
+    margin: 0;
+  }
+  // For unordered list of multiple locationse
+  .views-field-field-location * {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Calendar View
+.view.csc-calendar .js-drupal-fullcalendar {
+  position: relative;
+  z-index: 0;
+}
+
+// Search View
+// Result header (refers to views-view.html.twig in this theme)
+.view.view-search-content {
+  div.row.results-header {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      width: fit-content;
+    }
+
+    .views-exposed-form .d-flex {
+      gap: 1rem;
+    }
+  }
+
+  .row.type-class .views-field-body .title:after {
+    display: inline-block;
+    content: '(Class)';
+    margin-left: 5px;
+  }
+  .row.type-event .views-field-body .title:after {
+    display: inline-block;
+    content: '(Event)';
+    margin-left: 5px;
+  }
+  .row.type-news-item .views-field-body .title:after {
+    display: inline-block;
+    content: '(News)';
+    margin-left: 5px;
+  }
+
+  .row.type-landing-page .views-field-body .title:after
+  .row.type-page .views-field-body .title:after,
+  .row.type-page-full-width .views-field-body .title:after {
+    display: inline-block;
+    content: '(Page)';
+    margin-left: 5px;
+  }
+}
+// General Views
+div.view-empty {
+  text-align: center;
+}
+
+// Pager (mini)
+.js-pager__items.pagination li.page-item {
+  span.page-link {
+    color: $csc-dark-gray !important;
+  }
+  a.page-link span {
+    color: #0d6efd !important;
+  }
+}
+
+// View Rows (wraps a shaded border around row and adds spacing, etc.)
+
+.view-events.events-list-alt,
+.view-news.view-display-id-page_1,
+.view-search-content.view-display-id-result_page,
+.view-resources,
+.view-taxonomy-term {
+  .row.views-row {
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    min-height: 150px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    line-height: 1.3;
+    /*  z-index: 1; makes drop down menus transparent over views */
+  }
+}
+
+/*
+.events-list-alt {
+  .date:has(.recurring-output--wrapper) {
+      display: none;
+    & > div.recurring-output--wrapper {
+      display: block !important;
+    }
+  }
+}
+ */
+
+// For Resources view and filter view
+.view-resources, .view-taxonomy-term {
+  div:has(> span.notags) {
+    display: none;
+  }
+}
+
+// Fields
+.views-row {
+  .views-field {
+    // For Resources taxonomy "filters" but kept general in case it applies in other situations
+    .filters {
+      &::before {
+        content: "Topics: ";
+        font-weight: bold;
+        font-style: italic;
+        font-size: 95%;
+      }
+      &:has(> span.notags) {
+        display: none;
+      }
+    }
+  }
+}
+
+// Filter and Sorting Forms
+.js-form-item {
+  margin-right: 8px;
+}
+
+// Result summary
+.res-sum {
+  float: right;
+  margin-bottom: -3rem;
+  margin-top: 1rem;
+}

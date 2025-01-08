@@ -1,0 +1,834 @@
+@import 'variables.scss';
+
+// Page Type Styles (Content types)
+// Landing pages
+body.node--type-landing-page {
+  main#content {
+    margin-top: -0.5rem;
+
+    &.csc-lg-hero {
+      .c-csc-hero {
+        height: fit-content;
+
+        .c-csc-text_box.hero-title {
+          h1 {
+            padding: 35px 0 0;
+            color: $white;
+            font-family: $font-frankgoth-std;
+            font-weight: 900!important;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 3rem;
+          }
+        }
+
+        // End of .hero-title
+
+        p.breadcrumbs {
+          margin-left: 15vw;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 90%;
+        }
+
+        .c-csc-text_box {
+          h2 {
+            font-family: $font-frankgoth-std;
+            font-weight: 900!important;
+            text-align: left;
+            margin: 1.5rem 0 0.5rem 500px;
+            font-size: 2.75rem;
+            text-shadow: 2px 2px 5px black;
+          }
+
+          .student-links1 {
+            margin-top: 1rem;
+
+            .row {
+              .col-md:first-child, .col-md:first-child * {
+                text-align: right !important;
+              }
+
+              .col-md:nth-child(2), .col-md:nth-child(2) * {
+                text-align: left !important;
+              }
+
+              & > div {
+                text-align: left;
+
+                a {
+                  font-weight: bold;
+                  text-transform: uppercase;
+                }
+              }
+
+              h3 {
+                margin: 1rem 0 0 0;
+                padding: 0;
+                text-transform: uppercase;
+                font-size: 2rem;
+                letter-spacing: 0.05rem;
+              }
+
+              h4 {
+                margin: 0;
+                padding: 0;
+                font-family: 'Bodoni Bold', serif;
+                text-transform: capitalize;
+                letter-spacing: 0.05rem;
+
+                a {
+                  text-transform: capitalize;
+                  border: none;
+
+                  &:hover, &:hover span {
+                    color: $uva-orange !important;
+                  }
+                }
+              }
+
+              p {
+                margin: 0.5rem 0;
+                padding: 0;
+              }
+
+              img {
+                border: 4px solid white;
+                max-height: 200px;
+              }
+            }
+
+            // End of Row
+          }
+
+          // End of .student-links1
+        }
+
+        // end of csc-text-box in .csc-hero
+
+        // Overlay (see below .csc-2col-tbl general definition for grid layout specs)
+        .csc-2col-tbl {
+
+          & > div {
+            text-align: left;
+
+            a {
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+          }
+
+          h3 {
+            margin: 1rem 0 0 0;
+            padding: 0;
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 0.05rem;
+          }
+
+          h4 {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bodoni Bold', serif;
+            text-transform: capitalize;
+            letter-spacing: 0.05rem;
+
+            a {
+              text-transform: capitalize;
+              border: none;
+
+              &:hover, &:hover span {
+                color: $uva-orange !important;
+              }
+            }
+          }
+
+          p {
+            margin: 0.5rem 0;
+            padding: 0;
+          }
+
+          img {
+            border: 4px solid white;
+            max-height: 200px;
+          }
+        }
+      }
+
+      // End of .csc-hero
+
+    }
+
+    // End of Large Hero pages (like Student)
+
+    h1.title-overlay {
+      margin-top: 0;
+      padding: 12px 0 10px;
+      background-color: $title-bg;
+      color: $white;
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 2rem;
+    }
+
+    // Hero Overlays
+    .field--name-field-text-overlay .c-csc-text_box {
+      h2 {
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
+        text-align: left;
+        margin: 1.5rem 0 0.5rem 25vw;
+        font-size: 2.75rem;
+      }
+
+      /*
+
+      p {
+        color: $uva-blue;
+        max-width: 650px;
+        text-align: left;
+        margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
+        line-height: 1.5rem;
+      }
+      */
+
+      &.caption {
+        position: absolute;
+        width: 100%;
+        padding: 1rem;
+        background-color: #13192999; // #232D4B99;
+
+        &.bottom-right {
+          right: 0;
+          bottom: 50px;
+        }
+
+        &.bottom-left {
+          left: 0;
+          bottom: 50px;
+        }
+
+        p {
+          color: $white !important;
+          margin: 0;
+        }
+      }
+    }
+
+    // End of Hero Overlays
+
+    .field--name-field-hero-top {
+      /* margin-top: -1.5rem;*/
+      .c-csc-hero {
+        position: relative;
+        margin: 0.5rem 0 1.5rem;
+        padding-bottom: 2rem;
+      }
+
+      .hero-caption {
+        width: fit-content;
+        margin: -1rem 1rem 0 0;
+        padding: 0 0 1.5rem 1rem;
+        color: $caption-color;
+        font-size: 80%;
+        font-family: $font-libre-caslon;
+
+        a {
+          color: $caption-color;
+        }
+      }
+    }
+
+    .block-field-blocknodelanding-pagebody {
+      .content {
+        /* width: 75%; */
+        margin-bottom: 4rem;
+      }
+
+      p {
+        font-family: $font-frankgoth-std;
+      }
+    }
+  }
+} // End of Landing page styles
+
+// Full Width Pages
+.node--type-page-full-width {
+  // Full Width Page Teaser
+  &.node--view-mode-teaser {
+    .field--name-field-image,
+    .field--name-field-teaser-image {
+      img {
+        max-width: 410px;
+      }
+    }
+
+    h3 {
+      font-family: $font-frankgoth-cd;
+      font-size: 24px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+    }
+
+  } // End Teaser
+
+  &.node--view-mode-alt-teaser {
+    h3 {
+      font-family: $font-frankgoth-std;
+      font-weight: bold;
+      padding: 0.5rem 0 0.25rem;
+    }
+
+    .field--name-body.field--type-text-with-summary, p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  }
+} // End of Full Width Pages
+
+// News Content Type
+body.node--type-news-item {
+  .node__content .layout--onecol .layout__region {
+    max-width: 830px;
+  }
+
+  #block-csc-bs-sass-page-title, div.content > h1.title {
+    display: none;
+  }
+
+  .block-system-breadcrumb-block {
+    max-height: 24px;
+    margin: 0;
+  }
+
+  .block-field-blocknodenews-itemtitle {
+    width: fit-content;
+    margin: 0.5rem 0;
+    padding: 0 0.75rem 0 0;
+    border-bottom: thin solid grey;
+
+    span {
+      font-size: 2.25rem;
+      font-family: franklin-gothic-urw, sans-serif;
+      font-weight: 500 !important;
+      line-height: 1.03846;
+      letter-spacing: -0.02885em;
+    }
+  }
+
+  .block-field-blocknodenews-itemfield-date {
+    margin-top: 2rem;
+    font-family: $font-frankgoth-std;
+    font-weight: 500 !important;
+    font-size: 80%;
+    text-transform: uppercase;
+    color: #5a6172;
+    letter-spacing: 1px;
+    border: none;
+    /*
+    .field__item {
+      font-size: 90%;
+      font-weight: bold;
+      font-style: italic;
+    }*/
+  }
+
+  .block-field-blocknodenews-itemfield-image {
+    margin: 1.5rem 0;
+
+    img {
+      border: thin solid #DDD;
+    }
+  }
+} // End of News Content type
+
+// Basic Pages
+.node--type-page {
+  #title-div {
+    margin: 1rem 0 0.5rem;
+    /*
+    margin-top: 0.25rem;
+    margin-bottom: -0.25rem;
+
+     */
+  }
+
+  #main.container {
+    margin-top: 0;
+  }
+
+  // First h2 is next to image so no top margin
+  h2:first-child {
+    margin-top: 0;
+  }
+
+  .block-field-blocknodepagefield-image {
+    float: left;
+    margin: 0 1rem 2rem 0;
+
+    img {
+      filter: $img-shadow;
+    }
+  }
+  // Make sure large images fit in body of basic page
+  .block-field-blocknodepagebody {
+    padding-top: 1rem;
+    img {
+      max-width: 60vw;
+      height: auto;
+      filter: $img-shadow;
+    }
+  }
+
+  // Basic Page Teaser
+  &.node--view-mode-teaser {
+    .field--name-field-image,
+    .field--name-field-teaser-image  {
+      img {
+        max-width: 410px;
+      }
+    }
+
+    h3 {
+      font-family: $font-frankgoth-cd;
+      font-size: 24px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+    }
+
+  } // End Teaser
+
+  // Basic Page Alt Teaser
+  &.node--view-mode-alt-teaser {
+    h3 {
+      font-family: $font-frankgoth-std;
+      font-weight: bold;
+      padding: 0.5rem 0 0.25rem;
+    }
+    .field--name-body.field--type-text-with-summary, p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+  } // End Alt Teaser
+}  // End of Basic Pages
+
+// Event Content Type Pages
+body.node--type-event {
+  // Breadcrumbs on event page
+  .bc-inline.layout.layout--onecol {
+   /* margin-left: -10rem; */
+  }
+
+  article.node--type-event {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  div.event-content.layout--twocol-section {
+    gap: 75px;
+  }
+  .layout__region.layout__region--first {
+    max-width:800px;
+    padding-right: 5rem;
+
+    ol.breadcrumb {
+      margin-top: -1rem;
+      margin-left: -8rem;
+    }
+
+    .block-field-blocknodeeventfield-tags {
+      text-align: right;
+      ul, li { margin: 0; padding: 0;}
+      li {
+        list-style-type: none;
+
+        text-align: right;
+        a {
+          font-family: $font-frankgoth-std;
+          font-weight: 500!important;
+          font-size: 90%;
+          text-transform: uppercase;
+          border: none;
+          color: $csc-dark-gray;
+        }
+      }
+    }
+    .block-field-blocknodeeventfield-event-type .field--name-field-event-type  {
+      padding-top: 0.5rem;
+      a {
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
+        font-size: 80%;
+        text-transform: uppercase;
+        color: $csc-dark-gray;
+        letter-spacing: 1px;
+        border: none;
+
+        &:hover {
+          border-bottom: $csc-link;
+        }
+      }
+    }
+
+    .block-field-blocknodeeventtitle {
+      margin-bottom: 1rem;
+      padding-bottom: 0.25rem;
+      border-bottom: thin solid grey;
+      span {
+        font-size: 3rem;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
+        line-height: 1.03846;
+        letter-spacing: -0.02885em;
+      }
+    }
+
+    .field--name-field-image {
+      padding: 0.5rem 0 1.75rem;
+      img {
+        width: 100%;
+        height: auto;
+        filter: $img-shadow;
+      }
+    }
+
+  } // end of events layout region first
+
+  // Side bar on events
+  .layout__region.layout__region--second {
+    .wrapper {
+      height: fit-content;
+      width: 100%;
+      background-color: $csc-lt-gray;
+      margin-top: 40px;
+      padding: 35px 25px;
+
+      .field__item, .field__item p.address {
+        font-family: $font-frankgoth-cd;
+        text-align: center;
+      }
+
+      .field--name-field-date {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .exceptions {
+        font-style: italic;
+        width: 100%;
+        text-align: center;
+      }
+
+      article.node--type-location {
+        .field--name-title {
+          font-size: 90%;
+        }
+        .country {
+          display: none;
+        }
+      }
+      .field--name-field-target-audience {
+        margin-bottom: 1rem;
+      }
+      .event-past-msg {
+        margin: 1rem 0 0;
+        color: $uva-orange;
+        text-align: center;
+        a {
+          color: $uva-orange!important;
+          &:hover {
+            color: $uva-blue!important;
+          }
+        }
+      }
+    } // End of wrapper
+  } // end of events layout region second
+} // End of Events Content Type
+
+// Class Content Type Pages
+body.node--type-class {
+  // Breadcrumbs on event page
+  .bc-inline.layout.layout--onecol {
+    margin-left: -10rem;
+  }
+
+  article.node--type-class {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  div.event-content.layout--twocol-section {
+    gap: 75px;
+  }
+  .layout__region.layout__region--first {
+    max-width:800px !important;
+    padding-right: 5rem;
+
+    ol.breadcrumb {
+      margin-top: -1rem;
+      margin-left: -8rem;
+    }
+
+    .block-field-blocknodeclassfield-tags {
+      text-align: right;
+      ul, li { margin: 0; padding: 0;}
+      li {
+        list-style-type: none;
+
+        text-align: right;
+        a {
+          font-family: $font-frankgoth-std;
+          font-weight: 500!important;
+          font-size: 90%;
+          text-transform: uppercase;
+          border: none;
+          color: $csc-dark-gray;
+        }
+      }
+    }
+    .block-field-blocknodeclassfield-class-type .field--name-field-class-type  {
+      padding-top: 0.5rem;
+      a {
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
+        font-size: 80%;
+        text-transform: uppercase;
+        color: $csc-dark-gray;
+        letter-spacing: 1px;
+        border: none;
+
+        &:hover {
+          border-bottom: $csc-link;
+        }
+      }
+    }
+
+    .block-field-blocknodeclasstitle {
+      margin-bottom: 1rem;
+      padding-bottom: 0.25rem;
+      border-bottom: thin solid grey;
+      span {
+        font-size: 3rem;
+        font-family: $font-frankgoth-std;
+        font-weight: 500!important;
+        line-height: 1.03846;
+        letter-spacing: -0.02885em;
+      }
+    }
+
+    .block-field-blocknodeclassfield-image {
+      float: right;
+      margin: 0 0 1rem 1rem;
+      img {
+        filter: $img-shadow;
+      }
+    }
+
+    .field--name-field-class-id {
+      margin-bottom: 0.5rem;
+      &:before {
+        content: "Course Number: ";
+        display: inline-block;
+        font-weight: bold;
+      }
+      .field__item {
+        display: inline-block;
+      }
+    }
+
+    .field--name-field-contact-name {
+      width: fit-content;
+      padding-right: 0.5rem;
+
+      .field__item:before {
+        content: "Instructor:";
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .field--name-field-class-credits {
+      & > div {
+        display: inline-block;
+      }
+      .field__label {
+        font-weight: bold;
+        &:after {
+          content: ': ';
+          padding-right: 4px;
+        }
+      }
+    }
+
+    .field--name-field-contact-email {
+      .field__item {
+        text-decoration: underline;
+      }
+      .field__item:before {
+        content: '(';
+      }
+      .field__item:after {
+        content: ')';
+      }
+    }
+
+  } // end of class layout region first
+
+  // Side bar on events and classes
+  .layout__region.layout__region--second .wrapper {
+    height: 430px;
+    width: 300px;
+    background-color: $csc-lt-gray;
+    margin-top: 20px;
+    padding: 40px 50px;
+
+    .field__item, .field__item p.address {
+      font-family: $font-frankgoth-cd;
+      text-align: center;
+    }
+
+    .field--name-field-date {
+      font-weight: bold;
+      margin: 0 -1rem 1rem;
+    }
+
+    article.node--type-location {
+      .country { display: none; }
+    }
+  } // end of class layout region second
+} // End of Class Content Type
+
+
+// Location Pages
+.node--type-location {
+  #main .field--name-field-image {
+    float: right;
+    padding: 0 1rem 0.5rem;
+  }
+}
+
+// People Pages
+.node--type-people {
+
+  .blue-banner {
+    padding-top: 1rem;
+    background: $csc-grey-blue;
+    height: 300px;
+
+    .block-system-breadcrumb-block {
+      max-width: 1320px;
+      margin: 1rem auto !important;
+
+      ol.breadcrumb {
+        margin-left: 165px; // was 75px; for 300x400
+
+        li.breadcrumb-item * {
+          color: white !important;
+        }
+      }
+    }
+  } // End of people blue banner
+
+
+  .image-bio {
+    margin-top: -200px;
+
+    * {
+      color: white;
+    }
+
+    /* Too General, effects /people/ben-benson profile pages */
+    .field--name-field-image {
+      img {
+        position: relative;
+        margin-left: 0;
+      }
+    }
+
+    .field--name-title {
+      font-family: "ITC Franklin Gothic Med", sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
+      margin-top: 75px;
+    }
+
+    .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
+      margin-top: 120px;
+    }
+
+    .block-field-blocknodepeoplefield-bio {
+      margin-top: 130px;
+
+      * {
+        color: $uva-blue;
+      }
+    }
+  } // end of people image-bio
+} // End of People Pages
+
+// End of Content Type Styles
+
+// Hero Overlays
+.node--type-landing-page .c-csc-text_box {
+  &.hero-title {
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+  }
+  &.bottom-right.caption {
+    width: 40vw;
+  }
+
+  h2 {
+    font-family: $font-frankgoth-std;
+    font-weight: 500!important;
+    /*text-align: left;*/
+    margin: 1.5rem 0 0.5rem;
+    font-size: 2.75rem;
+  }
+  /*
+
+  p {
+    color: $uva-blue;
+    max-width: 650px;
+    text-align: left;
+    margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
+    line-height: 1.5rem;
+  }
+  */
+
+  &.caption {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    background-color: #13192999; // #232D4B99;
+
+    &.bottom-right {
+      right: 0;
+      bottom: 50px;
+    }
+    &.bottom-left {
+      left: 0;
+      bottom: 50px;
+    }
+
+    p {
+      color: $white!important;
+      margin: 0;
+      text-align: left;
+    }
+  }
+} // End of Hero Overlays
+
+// Resource content type
+.node--type-resource {
+  .layout__region--second .field--name-field-image {
+    margin: 3rem 0 0 auto;
+  }
+}

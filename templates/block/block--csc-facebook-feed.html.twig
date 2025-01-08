@@ -1,0 +1,21 @@
+{# block--csc-facebook-feed.html.twig #}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'csc-fb-feed-block'
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="content">
+    <h2><img src="/themes/custom/csc_bs_sass/images/icons/fb-logo.png" class="fb-logo" width="50"/></h2>
+    <div class="feed">
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+

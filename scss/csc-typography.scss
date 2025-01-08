@@ -1,0 +1,112 @@
+@import 'variables.scss';
+
+.node__content {
+  font-size: 1rem;
+}
+
+.font-medium, .font-medium p {
+  font-family: 'ITC Franklin Gothic Med', sans-serif;
+}
+
+.font-heavy, .font-heavy p {
+  font-family: $font-frankgoth-std;
+  font-weight: 900!important;
+}
+
+.text-small, .text-sm {
+  font-size: 90%;
+}
+
+.text-xsmall, .text-xsm {
+  font-size: 80%;
+}
+
+.text-underline-orange {
+  border-bottom: $csc-link;
+}
+
+.text-underline-blue {
+  border-bottom: 2px solid $uva-blue;
+}
+
+.text-shadow {
+  text-shadow: $csc-shadow;
+}
+
+.text-shadow-2 {
+  text-shadow: $csc-shadow-2;
+}
+
+.text-shadow-dark {
+  text-shadow: $csc-shadow-drk;
+}
+
+// Colors
+.text-blue {
+  color: $uva-blue !important;
+  a:not(*[class*='text-']) {
+    color: $uva-blue;
+  }
+}
+
+.text-orange {
+  color: $uva-orange;
+  a:not(*[class*='text-']) {
+    color: $uva-orange;
+  }
+}
+
+.text-lt-blue {
+  color: $csc-lt-blue;
+  a:not(*[class*='text-']) {
+    color: $csc-lt-blue;
+  }
+}
+
+.text-white {
+  color: $white;
+  a:not(*[class*='text-']) {
+    color: $white !important;
+  }
+}
+
+.text-black {
+  color: $black;
+  a:not(*[class*='text-']) {
+    color: $black;
+  }
+}
+
+.bg-blue {
+  background-color: $uva-blue;
+}
+
+.bg-lt-blue {
+  background-color: $csc-lt-blue;
+}
+
+.bg-grey-blue {
+  background-color: $csc-grey-blue;
+}
+
+.bg-orange {
+  background-color: $uva-orange;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-trans-gray {
+  background-color: $csc-trans-gray;
+}
+
+// Sizing (Max-width, etc.)
+.mw-300 {
+  max-width: 300px !important;
+  display: inline-block;
+}

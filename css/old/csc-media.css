@@ -1,0 +1,27 @@
+/* May already be in bootstrap took from uva law law.virginia.edu
+@media (min-width: 48em) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 1270px;
+  }
+}
+
+@media (min-width: 48em) {
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 36em) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+*/
+@media (min-width: 48em) {
+  body.node--type-page-full-width .fixed-width .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+body.node--type-page-full-width .fixed-width .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
+    flex: 0 1 45%;
+  }
+}
+
+/*# sourceMappingURL=csc-media.css.map */

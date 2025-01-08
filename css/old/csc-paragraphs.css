@@ -1,0 +1,167 @@
+/* VARIABLES */
+/** Bootstrap Overrides **/
+main#content .node__content {
+  margin-top: 0;
+}
+main#content .c-csc-hero {
+  width: 100vw;
+  min-height: 70vh;
+  background-position: top center;
+}
+main#content .c-csc-hero .text-formatted {
+  width: 100%;
+}
+main#content .c-csc-teaser_row .field--name-field-header h2 {
+  margin: 0px auto 12px;
+  width: fit-content;
+  text-align: center;
+  /*border-bottom: 4px solid $uva-orange;*/
+  line-height: 28px;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption {
+  color: #232D4B;
+  margin: 1rem auto;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p {
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child {
+  border-bottom: 2px solid #E57325;
+}
+main#content .c-csc-teaser_row .field.field--name-field-teasers .field--name-field-teaser-caption p:last-child:hover {
+  border-bottom: none;
+}
+main#content .c-csc-highlight_row {
+  background-color: #232D4B;
+}
+main#content .c-csc-highlight_row .wrapper {
+  margin: 0 auto;
+  max-width: 55vw;
+  padding-bottom: 3rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-plain-header {
+  padding-top: 1rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference {
+  padding: 2rem;
+  background-color: #e5f1f6;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference h2 {
+  width: 100%;
+  font-size: 250%;
+  font-weight: bold;
+  text-align: left;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h3 {
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted h4 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p:has(img) + h4 {
+  padding-top: 0.75rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted p {
+  margin-bottom: 0.5rem;
+  font-family: "ITC Franklin Gothic Book", sans-serif;
+  font-size: 1rem !important;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-left {
+  margin-right: 2rem;
+}
+main#content .c-csc-highlight_row .wrapper .field--name-field-content-reference .node__content .text-formatted img.align-right {
+  margin-left: 2rem;
+}
+main#content .c-csc-text_row .field--name-field-text-boxes {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 25% 50% 25%;
+}
+main#content .c-csc-text_row.equal-2 .field--name-field-text-boxes {
+  grid-template-columns: repeat(2, 50%);
+}
+main#content .c-csc-text_row.equal-3 .field--name-field-text-boxes {
+  grid-template-columns: repeat(3, 33%);
+}
+main#content .c-csc-text_row.equal-4 .field--name-field-text-boxes {
+  grid-template-columns: repeat(4, 25%);
+}
+main#content .c-csc-text_row.equal-5 .field--name-field-text-boxes {
+  grid-template-columns: repeat(5, 20%);
+}
+main#content .c-csc-skewed_colored_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 250px;
+  z-index: -1;
+}
+main#content .c-csc-skewed_colored_header > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main#content .c-csc-skewed_colored_header + .paragraph {
+  max-width: 80vw;
+  margin: inherit auto;
+}
+
+/** Paragraphs: class for paragraphs with custom formatting (not structural) **/
+.centered-intro {
+  margin: 0;
+}
+.centered-intro h2 {
+  font-size: 2.25rem;
+  text-shadow: 2px 2px 3px #00000040;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+.centered-intro p:not(:has(img)) {
+  max-width: 800px;
+  margin: 0.5rem auto;
+  font-weight: bold;
+}
+.centered-intro p:has(img) {
+  width: 100%;
+  max-width: unset;
+  margin: 0.5rem;
+}
+.centered-intro p:has(img) img {
+  display: block;
+  margin: 1.5rem auto;
+  filter: drop-shadow(8px 10px 3px #00000095);
+}
+
+.captioned-image .field--name-field-image {
+  max-width: 90%;
+  margin: 1rem auto 0.75rem;
+}
+.captioned-image .field--name-field-image img {
+  filter: drop-shadow(8px 10px 3px #00000095);
+}
+.captioned-image .field--name-field-caption {
+  max-width: 90%;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/*# sourceMappingURL=csc-paragraphs.css.map */

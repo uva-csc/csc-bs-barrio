@@ -1,0 +1,992 @@
+@import 'variables.scss';
+
+// Phones
+@media (max-width: 576px) {
+  #page-wrapper {
+    overflow: hidden;
+    main#content {
+      .c-csc-hero {
+        background-position: center center !important;
+      }
+    }
+
+    .featured-bottom {
+      margin-top: 5rem;
+    }
+
+  } // end of page wrapper
+
+  // Dropdown menus
+  #header #navbar-main ul.navbar-nav {
+    .dropdown-menu li.dropdown-item {
+      white-space: wrap;
+      line-height: 1.3;
+      padding: 0.5rem !important;
+      &:hover {
+        background-color: $white !important;
+        color: $uva-orange !important;
+      }
+      &.active {
+        background-color: $white !important;
+        a {
+          color: $uva-blue !important;
+        }
+      }
+      a {
+        color: $uva-blue;
+        &:hover {
+          background-color: $white !important;
+          color: $uva-orange !important;
+        }
+      }
+    }
+  }
+
+  .field--name-body {
+    .field--name-field-media-image {
+      .field__item {
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+
+
+  .layout-title h1 {
+    text-align: center;
+  }
+
+  // View modes
+  .node--view-mode-alt-teaser {
+    .node__content {
+      width: 390px !important;
+    }
+  }
+
+  // Landing pages
+  body.node--type-landing-page {
+    .node--view-mode-full {
+      .field--name-field-teaser-image {
+        img {
+          height: unset!important;
+          margin: 0.25rem auto;
+        }
+      }
+    }
+  }
+
+  // Elements
+  .titled-hero {
+    .layout-title {
+      top: 158px;
+    }
+  }
+
+  // Home Page
+  body.path-frontpage {
+    .block-field-blocknodepage-full-widthbody {
+      .field--name-body {
+        h2 {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // People pages
+  body.path-people {  // The list of people
+    .facets-widget-links {
+      padding: 0;
+      ul.item-list__links {
+        max-width: unset;
+      }
+    }
+
+    .view-people {
+      .results-header {
+        text-align: center;
+      }
+      .views-row {
+        margin: 0 auto;
+        .card.people {
+          width: 300px;
+        }
+      }
+    }
+  } // end of list of people /people
+
+
+  // Events
+  .view-events.events-row-teasers {
+    .field--name-field-target-audience {
+      position: relative!important;
+    }
+  }
+  .block-views {
+    h2 {
+      text-align: center;
+    }
+  }
+  // Individual Event Pages
+  body.node--type-event {
+    .block-field-blocknodeeventtitle {
+      span {
+        font-size: 2.5rem !important;
+      }
+    }
+    .layout__region.layout__region--second .wrapper {
+      width: unset;
+      max-width: unset;
+      height: fit-content;
+      margin: 0.5rem 0 0 -1rem;
+    }
+
+  } // End of events
+  // Student hub pages
+  .node--type-landing-page main#content .csc-sep.dotted-blue {
+    margin: 0;
+    padding-top: 2rem;
+  }
+
+  .c-csc-text_box h2 {
+    width: 100vw;
+    margin: 0 0 0.5rem !important;
+    text-align: center !important;
+  }
+  .features-1over2 > .layout__region {
+    & > .block {
+      .content {
+        width: 100vw;
+        margin: 0 !important;
+      }
+
+      /*.block-entity-blocknode */
+    }
+    .node--view-mode-alt-teaser .node__content {
+      width: 100vw!important;
+    }
+
+    & > .block:nth-child(2) {
+      width: 100vw;
+    }
+
+    .field--name-field-teaser-image,
+    .field--name-field-image {
+      width: 100vw;
+
+      img {
+        filter: none;
+      }
+    }
+  }
+  .student-resources {
+    .field--name-body {
+      display: block!important;
+      h2 {
+        line-height: unset !important;
+      }
+    }
+  }
+
+  .csc-news-block {
+    .views-view-responsive-grid.views-view-responsive-grid--horizontal {
+      --views-responsive-grid--column-count: 1 !important;
+    }
+  }
+  // End of Student Hub
+
+  // Calendar Styles
+  .csc-calendar .js-drupal-fullcalendar {
+    .fc-toolbar {
+      display: grid;
+      justify-items: center;
+
+      & > div {
+        margin: 0.5rem auto;
+        width: 100vw;
+        text-align: center;
+        &:first-child {
+          margin-top: -0.5rem;
+        }
+      }
+    }
+  } // End of calendar styles
+
+} // End Media 576px
+@media (max-width: 640px) {
+  // Individual people pages
+  .node--type-people {
+    .block-system-breadcrumb-block {
+      margin: -15px 0 0!important;
+      ol.breadcrumb {
+        margin: 0!important;
+        ol, .breadcrumb-item {
+          display: inline-block;
+        }
+      }
+    }
+    .image-bio {
+      margin-top: -210px;
+
+      * {
+        color: $uva-blue;
+      }
+      .wrapper {
+        padding-top: 1rem;
+        text-align: center;
+
+        p {
+          padding: 0;
+          text-align: left;
+        }
+
+        .field--name-title {
+          font-size: 1.75rem;
+        }
+        .field--name-field-image img {
+          margin: 0 auto;
+        }
+        .block-field-blocknodepeoplefield-bio {
+          margin-top: 1rem !important;
+        }
+
+      } // end of .wrapper
+    }
+  } // end of individual people pages
+}
+
+@media (max-width: 767.9px) {
+  main#content {
+    padding: 0;
+  }
+
+  // General styles:
+  p {
+    padding: 0 8px;
+  }
+
+  // Pre-Footer and Footer blocks
+  .block.help-curate .content {
+    position: unset;
+    width: 100%;
+    margin: -6rem 0 0;
+    padding: 1rem 2rem;
+  }
+  .block.email-updates {
+    margin: -1rem 0 0;
+  }
+
+  // Footer
+  #block-csc-bs-sass-footerblocklogo {
+    img {
+      width: 80vw !important;
+    }
+  }
+ // body.path-frontpage main#content .events-row .wrapper
+  // Front page
+  .path-frontpage {
+    #main-wrapper {
+      margin-top: unset;
+
+      main#content {
+        // CSC Hero
+        .c-csc-hero {
+          /*min-height: 650px;*/
+
+          .home-title-overlay {
+            h2, .h2 {
+              margin: 2rem auto;
+              /* padding: 0; */
+              font-size: 150%;
+            }
+
+            p.home-tag-line {
+              font-size: 100% !important;
+              border-radius: 0;
+            }
+          }
+        } // End of .c-csc-hero Front Page
+
+        // Hero Overlay Front Page
+        .c-csc-text_row .field--name-field-text-boxes {
+          grid-template-columns: 100%;
+          grid-gap: 0;
+
+          .c-csc-text_box {
+            width: 100%;
+            text-align: center;
+            color: $white;
+            background-color: $uva-blue;
+            padding: 0 5px;
+
+            a.read-more {
+              color: $uva-orange !important;
+            }
+          }
+
+          .c-csc-text_box {
+            padding: 1rem 0 2rem !important;
+          }
+
+          .c-csc-text_box.address {
+            background-color: $uva-blue;
+            padding: 1rem 0!important;
+          }
+        } // end of .c-csc-text_row
+
+        .c-csc-text_box.offerings {
+          margin-top: -2.75rem !important;
+        }
+
+        .teaser-row {
+          padding-left: 1.5rem;
+        }
+        // end of .c-csc-teaser_row
+
+        // Don't show slide show on smaller devices
+        .block-views-blockhomepage-slideshow-block-1 {
+          display: block;
+          width: 100%;
+          height: 150px;
+          min-height: 0;
+          /*
+          background-size: 80%;
+          background-position-y: 0px;
+          margin-left: -1.75rem;*/
+
+          & > div {
+            display: none;
+          }
+        }  // End of slideshow
+
+        .featured-event {
+          margin-top: -6rem;
+          padding: unset;
+          max-width: unset;
+
+          .wrapper:first-child {
+            &:before {
+              background-position: center;
+              background-size: 7%;
+            }
+            padding: 1rem 1rem 1rem 1.25rem;
+          }
+        } // end of featured event
+
+        .events-row {
+          .layout__region--second {
+            .wrapper {
+              padding: 0;
+
+              .view-header {
+                margin: 0 0 -3rem -3.2rem;
+              }
+            }
+          }
+        }
+
+        .upcoming-events {
+          padding: 0;
+
+          .text-white {
+            color: $uva-orange !important;
+          }
+          .view-content {
+            gap: 10px;
+
+            .views-row {
+              display: unset;
+              border-bottom: 1px solid $csc-grey-blue;
+              margin-bottom: 1rem;
+
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+        } // end of upcoming-events
+
+        // Research highlight row
+        .home-research > .wrapper {
+          padding: 1.25rem;
+          max-width: 100vw;
+        } // end of research highlight row
+
+        // News
+        .view.csc-news-block {
+          max-width: 90vw;
+          text-align: center;
+
+          .views-view-responsive-grid--horizontal {
+            display: unset;
+
+            .block-field-blocknodenews-itemfield-image {
+              width: fit-content;
+              margin: 0 auto;
+
+              img {
+                filter: none;
+              }
+            }
+          }
+        }
+
+        } // end of main#content
+    } // end of #main-wrapper
+
+  }  // end of Front Page in phones & tablets
+
+  // Landing pages for Phones
+  body.node--type-landing-page {
+    main#content {
+      &.csc-lg-hero {  // See csc-content-types.scss (l 11) for why it needs to be so specific TODO: clean this up
+        .c-csc-hero {
+          .c-csc-text_box.hero-title h1 {
+            font-size: 2rem;
+          }
+        } // End of .c-csc-hero
+      } // End of main#content.csc-lg-hero
+
+      .field--name-field-hero-top {
+        margin-top: 1rem;
+      }
+
+      .c-csc-text_box.bottom-right.caption {
+        width: 100vw;
+      }
+      .csc-row-75-25 .layout__region {
+        display: unset!important;
+      }
+
+      #env-flourish {
+        top: 300px;
+        left: 0px;
+        margin: 0px 12px 300px;
+
+        h2 {
+          span.part1 {
+            letter-spacing: 0.3rem;
+          }
+        }
+      }
+
+      // Commons page environments for flourishing
+      .green-skew-right.csc-row-75-25.layout.layout--onecol {
+        margin-top: -200px;
+      }
+    } // End of main#content Landing Page
+  } // End of Landing Page
+
+  // Events Pages for Phones
+  body.node--type-event {
+    .bc-inline.layout--onecol {
+      margin: -2rem 0 -1rem;
+
+      .block-system-breadcrumb-block {
+        margin: 0;
+      }
+    }
+    .block-field-blocknodeeventfield-event-type, .block-field-blocknodeeventtitle {
+      padding-left: 0.5rem;
+    }
+    .layout__region.layout__region--first {
+      padding: 0;
+    }
+  }
+  // Views
+  .view-events.featured-event {
+    margin-left: 0;
+  }
+  .view.event-col {
+    margin: 0 0 10px;
+
+    .view-header {
+      h2, .h2 {
+        margin: 2rem 0 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 0.5;
+
+        span {
+          display: block;
+          color: $uva-blue !important;
+          transform: unset;
+        }
+      }
+    }
+
+    .views-row {
+      display: grid;
+      margin: 0 0 25px -10px;
+      padding-bottom: 25px;
+      border-bottom: 2px solid $uva-blue;
+
+      & > div:first-child {
+        margin: 0;
+
+        img {
+          min-width: 355px;
+        }
+      }
+      & > div:nth-child(2) {
+        margin: 0;
+      }
+    }
+  }  // End of .events-col
+
+  .view-events.events-list-alt .row.views-row {
+    box-shadow: none;
+
+    .views-field-body {
+      margin: 1rem 0 0 0;
+    }
+  }
+
+  // Layouts for phones
+  .layout__region--second .node--view-mode-alt-teaser {
+    padding: 0;
+  }
+
+  // Specific pages
+
+  // Circl page
+  body.page-node-144 {
+    .circl-overlay {
+      left: 0 !important;
+
+      .field--type-image img {
+        margin-left: 4rem;
+      }
+      .text-overlay {
+        text-align: center;
+      }
+    }
+  }
+} // End of max-width: 767.9px (phones)
+
+@media (max-width: 992px) {
+  // Header
+  #header {
+    #navbar-top {
+      .navbar-brand {
+        img {
+          max-width: 80vw;
+          margin: 4px 0 4px 4px;
+        }
+      }
+    }
+    #navbar-main.bg-primary {
+      height: 0px !important;
+      .navbar-toggler-icon {
+        height: 1.25em;
+        width: 1.25em;
+      }
+    }
+  }
+
+  // Move navbar toggle up to top header
+  button.navbar-toggler {
+    position: absolute;
+    top: -45px;
+    right: 8px;
+    background-color: white;
+  }
+
+  // Remove secondary header strip
+  #header
+  .layout--twocol-section {
+    .layout__region {
+      flex: 0 0 100% !important;
+      width: 100%;
+      padding: 0;
+      --bs-gutter-x: 0;
+    }
+  }
+
+  body.path-frontpage {
+    main#content {
+
+      .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+      .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+      .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--first,
+      .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--second {
+        flex: 0 1 100%;
+      }
+
+      .c-csc-hero {
+        min-height: unset;
+
+        .c-csc-text_box.home-title-overlay {
+          h2 {
+            font-size: 200%;
+          }
+          p.home-tag-line {
+            font-size: 125%;
+          }
+        }
+      }
+
+      .featured-event {
+        max-width: unset;
+        padding: 2rem;
+      }
+
+      .upcoming-events .view-content .views-row h3 {
+        font-size: 1.25rem !important;
+      }
+
+      .teaser-row.layout--fourcol-section {
+        .layout__region {
+          flex: 0 1 50%;
+
+          .field--name-field-teaser-image img,
+          .field--name-field-image img,
+          .views-field-field-teaser-image img {
+            max-width: 300px;
+          }
+        }
+      }
+    } // maincontent max 992
+  } // end of front page max 992
+
+
+  // Dropdown menu
+  div#main-menu-list {
+    background-color: $csc-grey-blue;
+
+    ul.navbar-nav {
+      padding: 0 0 0 1rem;
+
+      ul.dropdown-menu {
+        margin: unset!important;
+        background-color: $uva-blue-25;
+      }
+    }
+  }  // End of drop down menu for max-width: 992
+
+  .block-facet-blockroles .facets-widget-links ul.item-list__links {
+      li a span.facet-item__count {
+          display: none;
+     }
+  }
+
+  // News view
+  .view-news {
+    .views-row {
+      .views-field-field-teaser-image {
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      .views-field-body {
+        .title {
+          a {
+            color: $uva-blue;
+            border: none;
+
+            &:hover {
+              color: $uva-orange !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // cookie message
+  #sliding-popup {
+    .popup-content {
+      text-align: center;
+    }
+  }
+} // end of max-width 992
+
+@media (min-width: 576px) and (max-width: 767px) {
+  body.path-people {
+    .facets-widget-links {
+      margin: 0;
+      padding: 0;
+
+      ul.item-list__links {
+        max-width: unset;
+        margin: 0 0 1rem 0;
+        padding: 0;
+      }
+    }
+  }
+}
+@media (min-width: 640px) and (max-width: 991px) {
+  // Research page hack. see csc-elements ~ ln 507
+  .layout--twocol-section .layout__region {
+    .node--type-landing-page,
+    .node--type-page-full-width {
+      .field--name-field-teaser-image,
+      .field--name-field-image {
+        img {
+          height: 250px;
+          width: auto;
+        }
+      }
+    }
+  }
+  // Circl page
+  body.page-node-144 {
+    .circl-overlay {
+      left: 0 !important;
+    }
+  }
+}
+
+// Medium (Tablets)
+@media (min-width: 768px) and (max-width: 991px) {
+
+  body.node--type-landing-page main#content {
+    .field--name-field-text-overlay .c-csc-text_box {
+      &.caption {
+        width: 50%;
+      }
+    } // End of Overlay text box
+  }// End of Landing pages medium
+
+} // End of Tablets
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body.path-frontpage {
+    // Teaser row
+    .teaser-row {
+      .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
+        max-width: 200px;
+      }
+    }
+  }
+  // Circl page
+  body.page-node-144 {
+    .circl-overlay {
+      left: 3rem;
+    }
+  }
+}
+
+// Only Large (small laptops)
+@media (min-width: 992px) and (max-width: 1200px) {
+  #header {
+    #navbar-top {
+      max-width: 100vw;
+      overflow: hidden;
+      padding: 0.5rem;
+
+      nav#block-csc-bs-sass-topmenu {
+        margin-left: -3rem;
+      }
+    }
+    #navbar-main {
+      ul.navbar-nav {
+        li {
+          padding: 0;
+        }
+      }
+    }
+  }
+  // TODO: should be front page onlye
+  body.path-frontpage {
+    main#content {
+      .c-csc-text_row .field--name-field-text-boxes {
+        grid-gap: 0;
+
+        .c-csc-text_box { // .hours-box, .c-csc-text_box.address
+          font-size: 90%;
+
+          &.p-5 {
+            padding: 1rem !important;
+          }
+        }
+
+      }
+
+      // End of Text boxes
+      .block-views-blockhomepage-slideshow-block-1 {
+        background-position-x: 8vw;
+      }
+
+      // Teaser row
+      .teaser-row {
+        .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
+          max-width: 250px;
+        }
+      }
+
+      // Events row on home page
+      .events-row .wrapper {
+        padding: 0;
+      }
+
+      .featured-event {
+        max-width: 45vw;
+        .wrapper {
+          padding: 1rem !important;
+        }
+      }
+
+      .upcoming-events {
+        max-width:48vw;
+
+        .view-content .views-row .views-group-meta h3 {
+          font-size: 1.4rem;
+        }
+      }
+
+      .c-csc-highlight_row .wrapper {
+        max-width: 95vw;
+      }
+
+      .teaser-row.layout--fourcol-section {
+        .field--name-field-teaser-image {
+          // .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img
+          img {
+            max-width: 80%;
+          }
+        }
+      }
+
+    } // End of Front page
+
+    // General
+
+    .c-csc-teaser_row .field.field--name-field-teasers {
+      gap: 10px;
+    }
+  }  // end of Front page Medium
+
+  // Student CLF page img
+  .custom-paragraphs {
+    .c-csc-text_box.centered-intro {
+      p img {
+        max-width: 90vw;
+        height: auto;
+      }
+    }
+  }
+
+  // People pages
+  .node--type-people .image-bio .field--name-field-image img {
+    margin-left: 0;
+  }
+
+  // Events two columns
+  .layout--twocol-section--50-50 .layout__region {
+    max-width: 45vw;
+  }
+
+  // Research page hack. see csc-elements ~ ln 507
+  .layout--twocol-section .layout__region {
+    .node--type-landing-page,
+    .node--type-page-full-width {
+      .field--name-field-teaser-image,
+      .field--name-field-image {
+        img {
+          height: 310px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  // Views
+  .view.event-col {
+    .view-header h2, .view.event-col .view-header .h2 {
+      font-size: 3.5rem;
+    }
+    .views-field-field-image img {
+      max-width: 200px;
+    }
+  }
+
+} // End of Large min-width: 992 and max-width: 1199.9px
+
+// Anything less thatn 1263px
+@media (max-width: 1263px) {
+  #header #navbar-top {
+    padding: 10px 0;
+  }
+}
+
+// Only XLarge Most Small Laptops
+@media (min-width: 1200px) and (max-width: 1490px) {
+  body.node--type-landing-page main#content {
+    .field--name-field-text-overlay .c-csc-text_box {
+      &.caption {
+        width: 40%;
+      }
+    } // End of Overlay text box
+  }// End of Landing pages XLarge
+
+  // Research page hack. see csc-elements ~ ln 507
+  .layout--twocol-section .layout__region {
+    .node--type-landing-page,
+    .node--type-page-full-width {
+      .field--name-field-teaser-image,
+      .field--name-field-image {
+        img {
+          height: 380px;
+          width: auto;
+        }
+      }
+    }
+  }
+  // Front page
+  body.path-frontpage main#content {
+    .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img {
+      max-width: 300px;
+    }
+
+    .teaser-row.layout--fourcol-section {
+      .field--name-field-teaser-image {
+        // .field--name-field-teaser-image img, .field--name-field-image img, .views-field-field-teaser-image img
+        img {
+          max-width: 90%;
+        }
+      }
+    }
+  } // End of Front page
+} // End XLarge between 1200-1420px
+
+@media (min-width: 1260px) and (max-width: 1600px) {
+  body.path-frontpage main#content  {
+    .upcoming-events {
+      padding: 0;
+      .view-content .views-row .views-group-meta h3,
+      .view-content .views-row .views-group-meta .h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// XXL
+@media (min-width: 1400px) {
+  body.node--type-landing-page main#content {
+    .field--name-field-text-overlay .c-csc-text_box {
+      &.caption {
+        width: 30%;
+      }
+    } // End of Overlay text box
+  } // End of Landing pages XXLarge
+
+  // XXL People
+  .node--type-people .image-bio .field--name-field-image img {
+    margin-left: 100px;
+  }
+
+  // XXL Footer
+  .footer-contact, .navigation, .media-links { padding-left: 5%; }
+}
+
+// Min widths only
+// Medium (Tablets) on up
+@media (min-width: 768px) {
+
+}

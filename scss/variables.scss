@@ -1,4 +1,15 @@
 /* VARIABLES */
+// Fonts
+$font-frankgoth-std: franklin-gothic-urw, sans-serif;
+$font-frankgoth-cd: franklin-gothic-urw-cond, sans-serif;
+$font-frankgoth-cp: franklin-gothic-urw-comp, sans-serif;
+$font-bodoni: bodoni-urw, serif;
+$font-bodoni-poster: bodoni-urw, serif;
+$font-libre-caslon: "Libre Caslon Text", serif;
+$font-opensans: "opensans-regular",helvetica,arial,sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-lfranklin: "Libre Franklin", sans-serif;
+
 // colors
 $primary-shade: #d5d5d5; // rgb(255, 78, 47);
 $primary-light: tint-color($primary-shade, 37%);
@@ -14,13 +25,35 @@ $yellow: #ffc107;
 $green: #28a745;
 $cyan: #17a2b8;
 $white: #fdfdfd;
+$off-white: #dadada;
 $black: #222222;
 $gray-100: #f8f9fa;
 $gray-800: #343a40;
 $uva-blue: #232D4B;
 $uva-blue-25: #C8CBD2;
-$uva-orange: #E57200;
+$uva-orange: #E57325; // uva orange is: #E57200;
 $uva-orange-25: #F9DCBF;
+$uva-green: #62BB46;
+$csc-lt-blue: #009fdf;
+$csc-white-blue: #f0f8fc; // was #e5f1f6;
+$csc-grey-blue: #434b64;
+$csc-lt-gray: #eeeeee;
+$csc-gray: #cdcdcd;
+$csc-dark-gray: #5a6172;
+$csc-trans-gray:#22222260;
+
+$caption-color: #727272;
+
+// Links
+$csc-link: 2px solid $uva-orange;
+
+// Shadows
+$img-shadow: drop-shadow(8px 10px 3px #00000095); // drop-shadow(2px 4px 6px #232D4B);  // use with "filter: ..."
+$map-shadow: drop-shadow(10px 10px #b2c0e3);      // use with filter
+$text-shadow: 2px 2px 5px #232D4B84;  // use with "text-shadow" OLD??
+$csc-shadow: 2px 2px 3px #00000040;
+$csc-shadow-2: 2px 2px 2px #FFF9;
+$csc-shadow-drk: 2px 2px 3px #00000080;
 
   // scss-docs-start theme-color-variables
 $primary:       $accent-shade;
@@ -43,9 +76,14 @@ $brand-inverse: $primary-shade;
 //
 // Settings for the `<body>` element.
 $body-bg: $white;
-$body-color: $gray-800;
+// $body-color: $gray-800;
+$body-color: #212529;
 $inverse-bg: $primary-shade;
 $inverse-color: $white;
+
+// Title
+$title-bg: #22222277;
+
 // Links
 //
 // Style anchor elements.

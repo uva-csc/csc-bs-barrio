@@ -5,36 +5,303 @@
  * Functions to support theming in the SASS Starterkit subtheme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\node\NodeInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\smart_date\SmartDateOccurrence;
+use Drupal\smart_date_recur\Entity\SmartDateRule;
 
-/**
- * Implements hook_form_system_theme_settings_alter() for settings form.
- *
- * Replace Barrio setting options with subtheme ones.
- */
-function csc_bs_sass_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
-    'bg-primary' => t('Primary'),
-    'bg-secondary' => t('Secondary'),
-    'bg-light' => t('Light'),
-    'bg-dark' => t('Dark'),
-    'bg-white' => t('White'),
-    'bg-transparent' => t('Transparent'),
-  );
-  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
-    'bg-primary' => t('Primary'),
-    'bg-secondary' => t('Secondary'),
-    'bg-light' => t('Light'),
-    'bg-dark' => t('Dark'),
-    'bg-white' => t('White'),
-    'bg-transparent' => t('Transparent'),
-  );
+const POSITION_RELATIVE = "position: relative;";
+const DAY_MAPPING = [
+  'MO' => 'Monday',
+  'TU' => 'Tuesday',
+  'WE' => 'Wednesday',
+  'TH' => 'Thursday',
+  'FR' => 'Friday',
+  'SA' => 'Saturday',
+  'SU' => 'Sunday',
+];
+
+////********* Preprocessing ************////
+function  csc_bs_sass_preprocess_html(&$variables) {
+  // Get the current route match.
+  $route_match = \Drupal::routeMatch();
+
+  // Check if the current route is for a node.
+  if ($route_match->getRouteName() === 'entity.node.canonical') {
+    // Load the current node.
+    $node = $route_match->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      if ($node->hasField('field_class_attribute')) {
+        $class = $node->get('field_class_attribute')->value; // getValue() returns an array where [0]->value is the equivalent to this
+        if (is_string($class) && !empty($class)) {
+          $variables['attributes']['class'][] = $class;
+        }
+      }
+    }
+  }
 }
 
+function csc_bs_sass_preprocess_page(&$variables) {
+  // Make sure jquery once is included
+  $variables['#attached']['library'][] = 'core/jquery.once';
+  // Node pages
+  if (array_key_exists('node', $variables) && $variables['node'] instanceof NodeInterface) {
+    $node = $variables['node'];
+    $pg_type = $node->getType();
+
+    if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
+      $full_width_pages = ['page_full_width', 'landing_page', 'people'];
+      if (in_array($pg_type, $full_width_pages)) {
+        $variables['container'] = 'container-fluid';
+      }
+    }
+  }
+}
+function pluralizeDays($string) {
+  $days = [
+    "Monday" => "Mondays",
+    "Tuesday" => "Tuesdays",
+    "Wednesday" => "Wednesdays",
+    "Thursday" => "Thursdays",
+    "Friday" => "Fridays",
+    "Saturday" => "Saturdays",
+    "Sunday" => "Sundays"
+  ];
+
+  return str_replace(array_keys($days), array_values($days), $string);
+}
+
+function csc_bs_sass_preprocess_node(&$variables) {
+  $day_mapping = DAY_MAPPING;  // See constanct defined at top of this .theme script
+  $node = $variables['node'];
+  $node_type = $node->bundle();
+  // $view_mode = $variables['view_mode'];
+  if ($node_type == 'event') {
+    // EVENTS
+    $date = $node->get('field_date');
+    $vals = $date->getValue();
+    // Get days of week for repeat rule (But can't access in Layout builder, may not be used)
+    $rrid = $vals[0]['rrule'] ?? FALSE;
+    if ($rrid) {
+      $rrule = SmartDateRule::load($rrid);
+      $instances = $rrule->makeRuleInstances();
+      $ords = $rrule->getRuleOverrides();
+      $variables['excepts'] = [];
+      foreach($ords as $ind => $ord) {
+        $instance = $instances[$ind];
+        if (!empty($instance)) {
+          $variables['excepts'][] = $instance->getStart()->format('M j, Y');
+        }
+      }
+
+      $rr_params = $rrule->getParametersArray();
+      $dow = $rr_params['byday'];
+      $full_dow = array_map(function ($abbr) use ($day_mapping) {
+        return $day_mapping[$abbr] . 's';  // Add plural here for display "Tuesdays and Thursdays"
+      }, $dow);
+      $variables['days_of_week'] = $full_dow;
+    }
+    // End of Days of week
+    foreach($vals as $n => $val) {
+      $stts = $val['value'];
+      $etts = $val['end_value'];
+      $tz = $val['timezone'];
+      $val['allday'] = isDateAllDay($stts, $etts, $tz) ? 'true' : 'false';
+      $val['month'] = date('M', $stts);
+      $val['day'] = date('j', $stts);
+      $val['day_name'] = date('D', $stts);
+      $val['full'] = date('M j Y', $stts);
+      $vals[$n] = $val;
+    }
+    // $date->setValue($vals); // Took out 8/21/2024 as I don't think it does anything (good).
+    $variables['valnums'] = count($vals);
+    if ($variables['valnums'] > 0) {
+      $variables['stdt'] = $vals[0]['value'];
+      $variables['starts_on'] = ($rrid && $variables['stdt'] > time()) ? $vals[0]['day_name'] . ', ' . $vals[0]['full'] : NULL;
+      $enddate = $node->get('field_end_date')->getValue();
+      $edts =  (count($enddate) > 0) ? date_create($enddate[0]['value']) : false;
+      if ($edts) {
+        $variables['ends_on'] = date_format($edts, 'D, M j Y');
+      }
+    }
+  } else if ($node_type == 'people') {
+    // PEOPLE
+    $fldimg = $node->get('field_image');
+    if (count($fldimg) > 0) {
+      $mid = $fldimg[0]?->get('target_id')?->getValue();
+      if (empty($mid)) {
+        $mid = theme_get_setting('default_profile_image');
+      }
+      $furl = midToUrl($mid, 'people_teaser');
+      $variables['image_url'] = $furl;
+    }
+  } else if ($node_type == 'news_item') {
+    $variables['no_teaser_image'] = $node->get('field_teaser_image')->isEmpty();
+  // Teasers for Common Pages
+  } else if (in_array($node_type, array('page_full_width', 'page', 'landing_page')) && in_array($variables['view_mode'], array('teaser', 'alt_teaser'))) {
+    if (empty($variables['title_attributes']['class'])) {
+      $variables['title_attributes']['class'] =  array('text-center');
+    } else {
+      $variables['title_attributes']['class'] = array_merge($variables['title_attributes']['class'], array('text-center'));
+    }
+    if (empty($variables['content_attributes']['class'])) {
+      $variables['content_attributes']['class'] =  array('img-center', 'img-link');
+    } else {
+      $variables['content_attributes']['class'] = array_merge($variables['content_attributes']['class'], array('img-center', 'img-link'));
+    }
+  }
+}
+
+function csc_bs_sass_preprocess_field(&$variables) {
+  // General use variables
+  $fld_name = $variables['field_name']; // Field name
+  $el = $variables['element'];  // Element array in variables
+  $node = $el['#object'];  // Entity object
+  $ctype = $node->bundle();  // Content Type of Entity (node)
+
+  // Add bootstrap row class to certain fields
+  $row_fields = Array('field_captioned_images');
+  if (in_array($fld_name, $row_fields)) {
+    $variables['attributes']['class'][] = 'row';
+  }
+
+  // Massage event and class dates
+  if ($fld_name == 'field_date') {
+    if ($ctype == 'event') {
+      // TODO: need to account for multiple dates, event with many different occurrences? If that uses multiple items.
+      // TODO: This may not be necessary anymore
+      $dt = $el['#items'][0]->getValue();
+      if (array_key_exists('allday', $dt)) {
+        $variables['is_allday'] = $dt['allday'];
+      }
+      if (array_key_exists('month', $dt)) {
+        $variables['csc_month'] = $dt['month'];
+      }
+      if (array_key_exists('day', $dt)) {
+        $variables['csc_day'] = $dt['day'];
+      }
+      if (array_key_exists('full', $dt)) {
+        $variables['csc_full'] = $dt['full'];
+      }
+    // end of Event dates
+    } elseif ($ctype == 'class') {
+      // kint("It's a class!");
+      // $dtval = $el['#items'][0]->getValue();
+      $class_dt_format = 'D M j, Y';
+      $nodedate = $node->get('field_date'); // The Date field in the node
+      $field_values = $nodedate->getValue(); // List of values for each date in recurring dates
+      if(!empty($field_values)) {
+        $tba = $node->get('field_time_tba')->value * 1;
+        $duration = $field_values[0]['duration'] * 1 / 10; // Number of repetitions 150 == 15 weeks. (Why the extra 0?)
+        $start_ts = $nodedate->value;  // Timestamp of first date;
+        $rule = $variables['items'][0]['content']['#rule_text']['rule'] ?? false;
+        if ($rule) {
+          try {
+            $variables['limit'] = (is_object($rule['#limit'])) ? $rule['#limit']->render() : '';
+            $variables['interval'] = $rule['#repeat'];
+            $end_dt = new DateTime(date('Y/m/d', $start_ts), new DateTimeZone('UTC'));
+            // TODO: need to broaden update
+            if ($variables['interval'] == 'Weekly') {
+              $end_dt->modify("+$duration weeks");
+            }
+            $variables['dayoweek'] = (!empty($rule['#days_array'])) ? implode(', ', $rule['#days_array']) : $rule['#day'];
+            $variables['dayoweek'] = pluralizeDays($variables['dayoweek']);
+            $variables['time'] = ($tba == 1) ? "Time TBA" : $rule['#time'];
+            $variables['start_date'] = date($class_dt_format, $start_ts); // Start display will adjust to first occurrence of class (but end does not)
+            $variables['end_date'] = (str_contains($variables['limit'], 'until')) ? str_replace('until ', '', $variables['limit']) : $end_dt->format($class_dt_format);
+          }
+          catch (Exception $e) {
+            csc_log("problem creating end date: " . $e);
+          }
+        }
+      }
+    } // End of class dates
+  } // end of field_date
+  // Captioned images field
+  elseif ($fld_name == 'field_captioned_images') {
+    $numchild = $el['#items']->count();
+    // Number of bs cols is 12 / num child if num child under 5
+    $variables['bscolspan'] = ($numchild < 5) ? 12 / $numchild : 2;
+  } // end of caption images field
+}
+
+/* View Preprocessing */
+function csc_bs_sass_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  $viewId = $view->storage->id();
+  $roles = Array(
+    'roles:staff' => 'Staff',
+    'roles:advisory_board' => 'Advisory Board',
+  );
+  // Add chosen role facet as a secondary header on the people page
+  if ($viewId == 'people') {
+    $query_parameters = Drupal::request()->query->all();
+    $rolep = $query_parameters['f'][0] ?? false;
+    if (in_array($rolep, array_keys($roles))) {
+      $variables['header']['area']['#text'] .= "<h3>" . $roles[$rolep] . "</h3>";
+    }
+  }
+}
+
+function csc_bs_sass_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  $field = $variables['field'];
+  $view_id = $view->storage->id();
+  if ($view_id == 'events') {
+    if ($field->field == 'field_tags') {
+      $output = [];
+      foreach ($view->result as $rid => $row) {
+        $tids = $view->field['field_tags']->getValue($row);
+        foreach ($tids as $tid) {
+          $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+          $bundle = $term->bundle();
+          if($bundle !== 'content_filters') {
+            $term_label = Html::escape($term->label());
+            $output[] = "<span class=\"tax-term\"><a href=\"/taxonomy/term/{$tid}\">$term_label</a></span>";
+          }
+        }
+      }
+      $variables['output'] = implode('', $output);
+    } // end views field tag
+  }
+
+  // For homepage events to move the read-more link inside the body's last </p>
+  // If Learn More link is created by view, it will necessarily be outside the </p> tag with some space between.
+  // If this code is to be used elsewhere, the <a> must have these classes: class="d-inline-block ms-2 lh-1"
+  if ($view->storage->id() == 'homepage_events' &&
+    $field->field == 'body') {
+    // csc_log(str_replace(array('<', '>'), array('&lt;', '&gt;'), $variables['output']));  // For debugging
+    $pattern = '/<\/p>\s*(<a[^>]+>[\s\S]+<\/a>)/'; // Looks for an <a> tag outside a </p> with some optional space
+    $rep = ' $1</p>'; // Places it inside <p> element
+    $variables['output'] = preg_replace($pattern, $rep, $variables['output']);
+  }
+}
+
+/** End of Views hooks */
+
+
+function csc_bs_sass_preprocess_facets_result_item(&$facet) {
+  // csc_log(json_encode([$variables['value'], array_keys($variables)]));
+  $label = $facet['value'];
+  $new_label = ucwords(str_replace('_', ' ', $label));
+  /* Pluralizes facet names in facet box  on the left side of the people page */
+  if (!in_array($new_label, ['Staff', 'Advisory Board'])) {
+    $new_label = $new_label . 's';
+  }
+  $facet['value'] = $new_label;
+  $facet['raw_value'] = $facet['value'];
+}
+/*
+function csc_bs_sass_preprocess_taxonomy_term(&$variables) {
+  if ($variables['term']->bundle() === 'content_filters') {
+    $term = $variables['term'];
+    $variables['content'] = `<a href="/filtered/{$term->id()}">{$term->label()}</a>`;
+  }
+}
+*/
 
 /**
  * Implements custom classes for paragraphs with bundle name
@@ -44,6 +311,76 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
   $pid = "para-" . $para->id();
   $variables['attributes']['class'][] = 'c-csc-' . $para->bundle();
   $variables['attributes']['id'] = $pid;
+  // Process text-color and background-color fields adding styles or classes as necessary
+  $vnames = array('text', 'bg');
+  foreach($vnames as $vnm) {
+    $fnm = "field_{$vnm}_color";
+    $varnm = "csc_{$vnm}_color";
+    $cval = $para->hasField($fnm) ? csc_color_code($para->get($fnm)->value) : '';
+    /*if ($vnm === 'bg' && $para->bundle() === "colored_text") {
+      kint("bg cval", $cval, $para);
+    }*/
+    $variables[$varnm] = $cval; // save as variable in case it is needed in templates.
+    if (!empty($cval)) {
+      if (str_starts_with($cval, '#')) {
+        $sattnm = ($vnm === 'bg') ? 'background-color' : 'color';
+        $variables['attributes']['style'][] = "$sattnm:$cval;";
+      } else {
+        $cval = ($vnm === 'bg') ? str_replace('text', 'bg', $cval) : $cval;
+        $variables['attributes']['class'][] = strtolower($cval);
+      }
+    }
+  }
+  // Use value of field text_box_position to custom size and align a text box (experimental)
+  if ($para->hasField('field_text_box_position')) {
+    $boxsize = $para->get('field_text_box_position')->value;
+    if (!empty($boxsize)) {
+      [$width, $height, $top, $left] = explode(',', str_replace(' ', '', $boxsize));
+      // kint("box size", $boxsize, $width, $height);
+      $top = (mb_substr($top, -1) === '%') ? $top : "{$top}px";
+      $left = (mb_substr($left, -1) === '%') ? $left : "{$left}px";
+      $variables['attributes']['style'][] = POSITION_RELATIVE;
+      $variables['attributes']['style'][] = "width: {$width}px;";
+      $variables['attributes']['style'][] = "height: {$height}px;";
+      $variables['attributes']['style'][] = "top: $top;";
+      $variables['attributes']['style'][] = "left: $left;";
+    }
+  }
+
+  // Use class attribute field and add to div
+  if ($para->hasField('field_class_attribute')) {
+    $cattval = $para->get('field_class_attribute')->value;
+    if (!empty($cattval)) {
+      [$cattval, $aosval] = csc_bs_sass_extract_aos_classes($cattval);
+      $variables['attributes']['class'][] = $cattval;
+      if ($aosval) {
+        $variables['attributes']['data-aos'] = $aosval;
+      }
+    }
+  }
+}
+
+/**
+ * Custom function that converts class attribute values in the form of "aos-command"
+ * into "data-aos=command" attributes for animation on scroll
+ *
+ * $cattval (string) : a space-delimited string of class attributes from the field of that name in a paragraph
+ *
+ * return (array): an array of 1. the class attribute string stripped of any aos attribute and 2. the aos command if found
+ */
+function csc_bs_sass_extract_aos_classes($cattval) {
+  $parts = explode(' ', $cattval); // Split space-delimited string into individual attributes
+  $classes = [];
+  $aosval = false;
+  foreach($parts as $val) {
+    if (str_contains($val, 'aos-')) {
+      $aosval = str_replace('aos-', '', $val); // Return just the aos command as parent function can create the data attribute
+    } else {
+      $classes[] = $val;
+    }
+  }
+  $classes = implode(' ', $classes);  // Recreate space-delimited string of only class attributes
+  return array($classes, $aosval);
 }
 
 /**
@@ -51,14 +388,174 @@ function csc_bs_sass_preprocess_paragraph(&$variables) {
  */
 function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
   $para = $variables['paragraph'];
-  $mid = $para->get('field_hero_image')[0]->get('target_id')->getValue();
-  $fid= Media::load($mid)->get('field_media_image')[0]->get('target_id')->getValue();
-  $file = FILE::load($fid); //->createFileUrl();
-  $file_url = ImageStyle::load('wide')->buildUrl($file->uri->value);
-  // kint("para", $para);
-  if (!empty($file_url)) {
-    $variables['attributes']['style'][] = 'background-image: url("' . $file_url . '");';
-    $variables['attributes']['style'][] = 'background-size: cover;';
-    /* $variables['attributes']['style'][] = 'background-position: center center;'; Set in scss depending on situation */
+  $node = $para->getParentEntity();
+  if (!empty($node) && $node->hasField('field_display_title')) {
+    if ($node->getType() == 'landing_page') {
+      $display_title = $node->get('field_display_title')->value;
+      if ($display_title) {
+        $variables['title_overlay'] = $display_title;
+      }
+    }
   }
+
+  // Hero Image
+  if (!empty($para) && $para->get('field_hero_image')) {
+    $mid = $para->get('field_hero_image')[0]?->get('target_id')?->getValue() ?? false;
+    if ($mid) {
+      $img_url = midToUrl($mid, 'hero');
+      if (!empty($img_url)) {
+        $variables['attributes']['style'][] = 'background-image: url("' . $img_url . '");';
+      }
+    }
+
+    // Setting for background-size and backgroud-repeat
+    $size = $para->get('field_background_size');
+    $size_style = 'background-size: cover;';
+    if ($size) {
+      $size = $size->value;
+      if (!empty($size)) {
+        if (str_contains($size, ':')) {
+          $size_style = $size;
+        } else {
+          $size_style =  "background-size: $size; background-repeat: no-repeat;";
+        }
+      }
+    }
+    $variables['attributes']['style'][] = $size_style;
+
+    $position = $para->get('field_background_position');
+    if ($position) {
+      $position = $position->value;
+      if (!empty($position)) {
+        $variables['attributes']['style'][] = "background-position: $position;";
+      }
+    }
+
+    // Setting for min-height
+    $minhgt = $para->get('field_min_height');
+    if ($minhgt) {
+      $minhgt = $minhgt->value;
+      if (!empty($minhgt)) {
+        $variables['attributes']['style'][] = "min-height: $minhgt";
+      }
+    }
+  }
+}
+
+/**
+ * Implements background image for teaser row paragraphs
+ */
+function csc_bs_sass_preprocess_paragraph__teaser_row(&$variables) {
+  $variables['class'][] = 'container-fluid';
+}
+
+function csc_bs_sass_preprocess_paragraph__feature_separator(&$variables) {
+  $para = $variables['paragraph'];
+  $septype = $para->get('field_separator_type')->value;
+  $sepcolor = $para->get('field_separator_color')->value;
+  $textcolor = $para->get('field_text_color')->value;
+  $variables['attributes']['class'][] = "csc-sep";
+  $variables['attributes']['class'][] = "$septype-$sepcolor";
+  $variables['attributes']['class'][] = "text-center";
+  $variables['attributes']['class'][] = "text-$textcolor";
+}
+
+function csc_bs_sass_preprocess_paragraph__skewed_colored_header(&$variables) {
+  $para = $variables['paragraph'];
+  $variables['color'] = $para->get('field_color')->value;
+  $variables['height'] = $para->get('field_height')->value;
+  $variables['angle'] = $para->get('field_skew_angle')->value;
+  $variables['custom_color'] = $para->get('field_custom_color')->value;
+}
+
+function csc_bs_sass_preprocess_paragraph__image_text(&$variables) {
+  $para = $variables['paragraph'];
+  $variables['pos'] = $para->get('field_image_position')->value;
+}
+
+function csc_bs_sass_preprocess_paragraph__highlight_row(&$variables) {
+  $para = $variables['paragraph'];
+  $head = $para->get('field_plain_header')->value;
+  if (empty($head)) {
+    $variables['attributes']['class'][] = 'no-head';
+  } else {
+    $variables['attributes']['class'][] = 'has-head';
+  }
+}
+
+/** End of paragraphs **/
+
+
+/** Utitlity functions */
+
+function csc_color_code($cstr) {
+  // kint("in color code function", $cstr);
+  if (empty($cstr)) { return ''; }
+  if (str_starts_with($cstr, '#') || is_hex_val($cstr)) {
+    $cstr = '#' . str_replace('#', '', $cstr); // Make sure there is a hash-sign for custom colors;
+  } else {
+    $cstr = "text-" . strtolower($cstr);
+  }
+  return $cstr;
+}
+
+function is_hex_val($hstr) {
+  $hstr = str_replace('#', '', $hstr);
+  $slen = strlen($hstr);
+  return (ctype_xdigit($hstr) && ($slen === 3 || $slen === 6 || $slen === 8));
+}
+
+function csc_log($msg='no message sent to log function', $ltype='notice', $sufx='') {
+  if (strlen($sufx) > 0) { $sufx = " $sufx"; }
+  if ($ltype == 'warning') {
+    Drupal::logger("csc_bs_sass$sufx")->warning($msg);
+  } elseif ($ltype == 'error') {
+    Drupal::logger("csc_bs_sass$sufx")->error($msg);
+  } else {
+    Drupal::logger("csc_bs_sass$sufx")->notice($msg);
+  }
+}
+
+
+// Taken from SmartDateTrait
+function isDateAllDay($start_ts, $end_ts, $timezone = NULL) {
+  if ($timezone) {
+    if ($timezone instanceof \DateTimeZone) {
+      // If provided as an object, convert to a string.
+      $timezone = $timezone->getName();
+    }
+    // Apply a specific timezone provided.
+    $default_tz = date_default_timezone_get();
+    date_default_timezone_set($timezone);
+  }
+  // Format timestamps to predictable format for comparison.
+  $temp_start = date('H:i', $start_ts);
+  $temp_end = date('H:i', $end_ts);
+  if ($timezone) {
+    // Revert to previous timezone.
+    date_default_timezone_set($default_tz);
+  }
+  if ($temp_start == '00:00' && $temp_end == '23:59') {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+function midToUrl($mid, $style=false) {
+  if (!empty($mid)) {
+    $fid = Media::load($mid)->get('field_media_image')[0]->get('target_id')
+      ->getValue();
+    if (!empty($fid)) {
+      $file = FILE::load($fid);
+      if ($file) {
+        if ($style) {
+          return ImageStyle::load($style)->buildUrl($file->getFileUri());
+        } else {
+          return FILE::load($fid)?->createFileUrl();
+        }
+      }
+    }
+  }
+
+  return false;
 }

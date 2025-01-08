@@ -56,7 +56,15 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-@import "mixins";
-// barrio
-@import "csc-barrio";
-
+// CSC Custom
+// @import "csc-fonts";
+@import "csc-typography";
+@import "csc-structure";
+@import "csc-home";
+@import "csc-content-types";
+@import "csc-paragraphs";
+@import "csc-views";
+@import "csc-pages";
+@import "csc-elements";
+@import "csc-media";
+@import "csc-admin";

@@ -1,0 +1,279 @@
+@import 'variables.scss';
+
+// Paragraph Types
+
+main#content {
+  .node__content {
+    margin-top: 0;
+  }
+
+  .c-csc-hero {
+    width: 100vw;
+    min-height: 65vh;  // was 70 (9/9/24)
+    background-position: top center;
+
+    .text-formatted {
+      width: 100%;
+    }
+  }
+
+  // Teaser row
+  .c-csc-teaser_row  {
+    .field--name-field-header h2 {
+      margin: 0 auto 12px;
+      width: fit-content;
+      text-align: center;
+      /*border-bottom: 4px solid $uva-orange;*/
+      line-height: 28px;
+    }
+
+    .field.field--name-field-teasers {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .field--name-field-teaser-caption {
+        color: $uva-blue;
+        margin: 1rem auto;
+
+        p {
+          margin: 0 auto;
+          padding: 0;
+          width: fit-content;
+          text-align: center;
+          line-height: 20px;
+          font-weight: bold;
+
+          &:last-child {
+            border-bottom: $csc-link;
+
+            &:hover {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  } // End of teaser row
+
+  // Highlight Rows
+  .c-csc-highlight_row {
+    background-color: $uva-blue;
+    &.no-head {
+      .wrapper {
+        padding-top: 48px;
+      }
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      max-width: 55vw;
+      padding-bottom: 3rem;
+
+      .field--name-field-plain-header {
+        padding-top: 1rem;
+        color: white;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .field--name-field-content-reference {
+        padding: 2rem;
+        background-color: $csc-white-blue;
+
+        h2 {
+          width: 100%;
+          margin: 0;
+          font-size: 250%;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .node__content .field--name-field-highlight-box-content {
+          font-size: 1rem;
+        }
+
+        .node__content .text-formatted {
+          h3 {
+            font-weight: bold;
+            font-size: 1.75rem
+          }
+          h4 {
+            font-weight: bold;
+            font-size: 1.25rem;
+
+          }
+          p:has(img) + h4 {
+            padding-top: 0.75rem;
+          }
+          p {
+            margin-bottom: 0.5rem;
+            font-family: 'ITC Franklin Gothic Book', sans-serif;
+            font-size: 1rem!important;
+          }
+
+          img.align-left {
+            margin-right: 2rem;
+          }
+          img.align-right {
+            margin-left: 2rem;
+          }
+        }
+      }
+    } // End of highlight row wrapper
+  } // End of Highlight row
+
+  // Text-Row Paragraph
+  .c-csc-text_row {
+    // Default arrangement of 3 columns 25/50/25
+    .field--name-field-text-boxes {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 5% 70% 25%;
+    }
+
+    // Two Equal Columns (when class field on paragraph is set to "equal-2"
+    &.equal-2 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(2, 50%);
+      }
+    }
+
+    // Three Equal Columns (equal-3)
+    &.equal-3 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(3, 33%);
+      }
+    }
+
+    // Four Equal columns (equal-4)
+    &.equal-4 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(4, 25%);
+      }
+    }
+
+    // Five Equal columns (equal-5)
+    &.equal-5 {
+      .field--name-field-text-boxes {
+        grid-template-columns: repeat(5, 20%);
+      }
+    }
+  } // End of text-row paragraph
+
+  .field--name-field-text-overlay .c-csc-text_box {
+    &.title-banner {
+      background-color: #22222265;
+      .field--name-field-text-box-text h2 {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 10px;
+        text-align: center;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
+        color: #fdfdfd;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+
+  // Skewed color header paragraph
+  .c-csc-skewed_colored_header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*max-height: 300px;*/
+    z-index: -1;
+
+    & > div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    & + .paragraph {
+      max-width: 80vw;
+      margin: inherit auto;
+    }
+  }
+
+  // Image-Text Paragraphs
+  .c-csc-image_text {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    &.image-left {
+      grid-template-columns: 550px auto;
+      gap: 100px;
+    }
+    &.image-right {
+      grid-template-columns: auto 550px;
+      gap: 100px;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+} // end of paragraph type styles
+
+
+
+/** Paragraphs: class for paragraphs with custom formatting (not structural) **/
+
+// Centered Intro, e.g. Citizen Leaders Fellowship
+.centered-intro {
+  margin: 0;
+
+  h2 {
+    font-size: 2.25rem;
+    text-shadow: $csc-shadow;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  p:not(:has(img)) {
+    max-width: 800px;
+    margin: 0.5rem auto;
+    font-weight: bold;
+  }
+
+  p:has(img) {
+    width: 100%;
+    max-width: unset;
+    margin: 0.5rem;
+
+    img {
+      display: block;
+      margin: 1.5rem auto;
+      filter: $img-shadow;
+    }
+  }
+}
+
+// Captioned Image Paragraph
+.c-csc-captioned_image {
+  width: fit-content;
+
+  .field--name-field-image {
+    padding-bottom: 0.5rem;
+
+    img {
+      filter: $img-shadow;
+    }
+  }
+
+  .field--name-field-caption {
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.25;
+  }
+}
+

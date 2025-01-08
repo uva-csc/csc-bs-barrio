@@ -1,0 +1,138 @@
+@import 'variables.scss';
+
+/** Admin Structure **/
+.page-user-login form#user-login-form {
+  max-width: 500px;
+  margin-left: 2rem;
+  height: 83vh;
+}
+
+// Hide overflow of relocated admin link/tabs
+#node-admin-links {
+  overflow: hidden;
+  height: 30px;
+}
+
+body.toolbar-fixed #header #navbar-main {
+  // padding: 8px 3rem 1.5rem !important;
+
+  &.node--type-landing-page {
+    padding-bottom: 0rem !important;
+  }
+}
+
+
+#toolbar-administration div.toolbar-menu-administration a,
+#toolbar-administration .toolbar-tab *,
+#node-admin-links a.nav-link.active {
+  color: $uva-blue !important;
+}
+
+
+
+div.toolbar-tab {
+  a#toolbar-item-announcement,
+  a#toolbar-item-shortcuts,
+  a#toolbar-item-user,
+  a#toolbar-item-devel,
+  a#toolbar-item-administration
+  {
+    &:not(.is-active) {
+      color: $white !important;
+    }
+  }
+}
+
+// Admin Messages
+div.highlighted, div.highlighted div, div.highlighted aside {
+  margin: 0;
+  padding: 0;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+#csc-admin-msg {
+  div {
+    margin: 0;
+    padding: 0;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+
+  & > div:not(.hidden) {
+    text-align: center;
+
+    .messages__content.container {
+      width: 100vw;
+      max-width: unset;
+      background-color: var(--bs-green);
+      border-radius: 0;
+    }
+
+    em.placeholder {
+      background: transparent;
+      opacity: 1;
+    }
+
+    a {
+      color: $white!important;
+      border-bottom: none;
+    }
+
+    button.btn-close {
+      padding: 0;
+      margin: 0.25rem 1rem 0 0;
+    }
+  }
+}
+
+// styling moved node action tabs. See custom.js
+#node-admin-links .nav.primary {
+  margin-top: 4px;
+}
+
+#toolbar-administration {
+  a {
+    border-bottom: none;
+  }
+  #toolbar-bar {
+    border-bottom: 1px solid gray;
+    margin-bottom: -4px;
+    max-height: 43px;
+  }
+}
+
+.contextual-links a {
+  border-bottom: none;
+}
+
+// Show muted text in Smart Date admin sidebar
+.ui-dialog-position-side .text-muted {
+  color: white!important;
+}
+
+// Layout Builder Form
+.layout-builder {
+  .blue-chevron > div.wrapper:first-child:before {
+    margin-top: 0px;
+  }
+
+  .block-csc-skewed-block {
+    .contextual:after {
+      display: block;
+      content: "Colored Skew Block";
+    }
+    .content {
+      display: none;
+    }
+  }
+}
+
+// Layout selection sidebar is not under class .layout-builder
+#drupal-off-canvas-wrapper .layout-selection .list-group-item a {
+  color: white !important;
+}
+
+div#drupal-off-canvas li:not(.ui-menu-item) a {
+  color: white!important;
+}

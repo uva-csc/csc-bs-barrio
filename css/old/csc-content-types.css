@@ -1,0 +1,177 @@
+/* VARIABLES */
+/** Bootstrap Overrides **/
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero {
+  height: fit-content;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box.hero-title h1 {
+  padding: 35px 0 0;
+  color: #fdfdfd;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 3rem;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero p.breadcrumbs {
+  margin-left: 15vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 90%;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .c-csc-text_box h2 {
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  text-align: left;
+  margin: 1.5rem 0 0.5rem 500px;
+  font-size: 2.75rem;
+  text-shadow: 2px 2px 5px black;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl {
+  margin: 1rem 8rem;
+  width: fit-content;
+  grid-gap: 1.5rem 5rem;
+  grid-template-columns: 300px 600px;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl > div {
+  text-align: left;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl > div a {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h3 {
+  margin: 1rem 0 0 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Bodoni Bold", serif;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h4 a {
+  text-transform: capitalize;
+  border: none;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h4 a:hover, body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl h4 a:hover span {
+  color: #E57325 !important;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl p {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+body.node--type-landing-page main#content.csc-lg-hero .c-csc-hero .csc-2col-tbl img {
+  border: 4px solid white;
+  max-height: 200px;
+}
+body.node--type-landing-page main#content h1.title-overlay {
+  padding: 25px 0 10px;
+  background-color: #22222277;
+  color: #fdfdfd;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+}
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box h2 {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  text-align: left;
+  margin: 1.5rem 0 0.5rem 25vw;
+  font-size: 2.75rem;
+}
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box p {
+  color: #232D4B;
+  max-width: 650px;
+  text-align: left;
+  margin-left: 27vw;
+  /* TODO: Make this more specific to its context?? */
+  line-height: 1.5rem;
+}
+body.node--type-landing-page main#content .field--name-field-hero-top {
+  margin-top: -1rem;
+}
+body.node--type-landing-page main#content .field--name-field-hero-top .c-csc-hero {
+  margin-bottom: 1.5rem;
+  padding-bottom: 2rem;
+}
+body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody .content {
+  width: 75%;
+  margin-bottom: 4rem;
+}
+body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody p {
+  font-family: "ITC Franklin Gothic Std", sans-serif;
+}
+
+/*
+body.node--type-page {
+  .field--name-field-image {
+    float: left;
+    margin: 0 1rem 0.25rem;
+    border: 2px solid #777;
+    padding: 5px;
+  }
+} */
+body.node--type-event article.node--type-event {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body.node--type-event div.event-content.layout--twocol-section {
+  gap: 75px;
+}
+body.node--type-event .layout__region.layout__region--first {
+  max-width: 800px;
+  padding-right: 5rem;
+}
+body.node--type-event .layout__region.layout__region--first ol.breadcrumb {
+  margin-top: -1rem;
+  margin-left: -8rem;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags {
+  text-align: right;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags ul, body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
+  margin: 0;
+  padding: 0;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li {
+  list-style-type: none;
+  text-align: right;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventfield-tags li a {
+  font-family: "ITC Franklin Gothic Med", sans-serif;
+  font-size: 90%;
+  text-transform: uppercase;
+  border: none;
+  color: #5a6172;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle {
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: thin solid grey;
+}
+body.node--type-event .layout__region.layout__region--first .block-field-blocknodeeventtitle span {
+  font-size: 3.5rem;
+  font-family: "ITC Franklin Gothic Hvy", sans-serif;
+  line-height: 1.03846;
+  letter-spacing: -0.02885em;
+}
+body.node--type-event .layout__region.layout__region--first .field--name-field-image {
+  margin-bottom: 1rem;
+}
+body.node--type-event .layout__region.layout__region--first .field--name-field-image img {
+  width: 100%;
+  height: auto;
+}
+body.node--type-event .layout__region.layout__region--second .wrapper {
+  height: 430px;
+  width: 300px;
+  background-color: #eeeeee;
+  margin-top: 20px;
+  padding: 40px 50px;
+}
+
+/*# sourceMappingURL=csc-content-types.css.map */
