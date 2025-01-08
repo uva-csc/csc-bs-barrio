@@ -25,6 +25,25 @@ const DAY_MAPPING = [
 ];
 
 ////********* Preprocessing ************////
+function  csc_bs_sass_preprocess_html(&$variables) {
+  // Get the current route match.
+  $route_match = \Drupal::routeMatch();
+
+  // Check if the current route is for a node.
+  if ($route_match->getRouteName() === 'entity.node.canonical') {
+    // Load the current node.
+    $node = $route_match->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      if ($node->hasField('field_class_attribute')) {
+        $class = $node->get('field_class_attribute')->value; // getValue() returns an array where [0]->value is the equivalent to this
+        if (is_string($class) && !empty($class)) {
+          $variables['attributes']['class'][] = $class;
+        }
+      }
+    }
+  }
+}
+
 function csc_bs_sass_preprocess_page(&$variables) {
   // Make sure jquery once is included
   $variables['#attached']['library'][] = 'core/jquery.once';
@@ -32,9 +51,7 @@ function csc_bs_sass_preprocess_page(&$variables) {
   if (array_key_exists('node', $variables) && $variables['node'] instanceof NodeInterface) {
     $node = $variables['node'];
     $pg_type = $node->getType();
-    if ($node->hasField('field_class_attribute')) {
-      $class = $node->get('field_class_attribute')->value; // getValue() returns an array where [0]->value is the equivalent to this
-    }
+
     if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
       $full_width_pages = ['page_full_width', 'landing_page', 'people'];
       if (in_array($pg_type, $full_width_pages)) {
@@ -42,6 +59,19 @@ function csc_bs_sass_preprocess_page(&$variables) {
       }
     }
   }
+}
+function pluralizeDays($string) {
+  $days = [
+    "Monday" => "Mondays",
+    "Tuesday" => "Tuesdays",
+    "Wednesday" => "Wednesdays",
+    "Thursday" => "Thursdays",
+    "Friday" => "Fridays",
+    "Saturday" => "Saturdays",
+    "Sunday" => "Sundays"
+  ];
+
+  return str_replace(array_keys($days), array_values($days), $string);
 }
 
 function csc_bs_sass_preprocess_node(&$variables) {
@@ -62,7 +92,9 @@ function csc_bs_sass_preprocess_node(&$variables) {
       $variables['excepts'] = [];
       foreach($ords as $ind => $ord) {
         $instance = $instances[$ind];
-        $variables['excepts'][] = $instance->getStart()->format('M j, Y');
+        if (!empty($instance)) {
+          $variables['excepts'][] = $instance->getStart()->format('M j, Y');
+        }
       }
 
       $rr_params = $rrule->getParametersArray();
@@ -176,6 +208,7 @@ function csc_bs_sass_preprocess_field(&$variables) {
               $end_dt->modify("+$duration weeks");
             }
             $variables['dayoweek'] = (!empty($rule['#days_array'])) ? implode(', ', $rule['#days_array']) : $rule['#day'];
+            $variables['dayoweek'] = pluralizeDays($variables['dayoweek']);
             $variables['time'] = ($tba == 1) ? "Time TBA" : $rule['#time'];
             $variables['start_date'] = date($class_dt_format, $start_ts); // Start display will adjust to first occurrence of class (but end does not)
             $variables['end_date'] = (str_contains($variables['limit'], 'until')) ? str_replace('until ', '', $variables['limit']) : $end_dt->format($class_dt_format);
@@ -194,7 +227,6 @@ function csc_bs_sass_preprocess_field(&$variables) {
     $variables['bscolspan'] = ($numchild < 5) ? 12 / $numchild : 2;
   } // end of caption images field
 }
-
 
 /* View Preprocessing */
 function csc_bs_sass_preprocess_views_view(&$variables) {

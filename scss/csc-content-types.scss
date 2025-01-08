@@ -162,6 +162,7 @@ body.node--type-landing-page {
     // End of Large Hero pages (like Student)
 
     h1.title-overlay {
+      margin-top: 0;
       padding: 12px 0 10px;
       background-color: $title-bg;
       color: $white;
@@ -533,6 +534,17 @@ body.node--type-event {
       .field--name-field-target-audience {
         margin-bottom: 1rem;
       }
+      .event-past-msg {
+        margin: 1rem 0 0;
+        color: $uva-orange;
+        text-align: center;
+        a {
+          color: $uva-orange!important;
+          &:hover {
+            color: $uva-blue!important;
+          }
+        }
+      }
     } // End of wrapper
   } // end of events layout region second
 } // End of Events Content Type
@@ -612,6 +624,18 @@ body.node--type-class {
       margin: 0 0 1rem 1rem;
       img {
         filter: $img-shadow;
+      }
+    }
+
+    .field--name-field-class-id {
+      margin-bottom: 0.5rem;
+      &:before {
+        content: "Course Number: ";
+        display: inline-block;
+        font-weight: bold;
+      }
+      .field__item {
+        display: inline-block;
       }
     }
 

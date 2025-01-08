@@ -33,10 +33,27 @@
   }
 }
 
+// Date (recurring) and Time
+.views-field-field-date, .date {
+  .recurring-output--wrapper {
+    .day-time {
+      div { display: inline-block; }
+      .time {
+        &:before {
+          content: '(';
+        }
+        &:after {
+          content: ')';
+        }
+      }
+    }
+  }
+}
+
 // View more button in any view (orange button with white lettering)
 p.view-more {
   width: fit-content;
-  margin: 1rem auto;
+  margin: 0 auto;
   padding: 0rem 1rem 0 1.2rem;
   border-radius: 15px;
   background-color: $uva-orange;
@@ -70,6 +87,7 @@ p.view-more {
   .views-field-body {
     line-height: 1.3;
   }
+
 
   // Link to content
   .views-field-view-node {
@@ -161,7 +179,29 @@ p.view-more {
     .view-header {
       margin: 0 auto;
     }
-  }
+
+    .views-view-responsive-grid__item {
+      .field--type-smartdate {
+        color: transparent;
+        & > * {
+          color: $body-color;
+        }
+
+        &::before, &::after {
+          content: '';
+        }
+
+       & > div + div {
+            margin-top: -0.5rem;
+            margin-bottom: 0.25rem;
+        }
+      }
+    }
+    .view-footer {
+      margin: 1rem auto;
+    }
+  } // end of view .events-row-teasers
+
   // Block 3 of View. Shows row of latest events.
   &.events-row, &.events-row-teasers {
 
@@ -183,6 +223,10 @@ p.view-more {
           height: 100%;
           /* border-top: 16px solid $uva-orange; */
           background-color: $white;
+
+          .node--type-event.node--view-mode-teaser {
+            max-width: 300px;
+          }
 
           .field {
             max-width: 300px!important;
@@ -281,8 +325,6 @@ p.view-more {
             font-size: 90%;
             color: $uva-orange;
           }
-
-          // New way with teasers
 
 
         }  // End of views-view-responsive-grid__item-inner
@@ -412,7 +454,7 @@ p.view-more {
 
     .field--name-field-date {
       margin-top: 0.15rem;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: $csc-lt-blue;
       text-transform: uppercase;
@@ -534,6 +576,17 @@ div.view-empty {
   }
 }
 
+/*
+.events-list-alt {
+  .date:has(.recurring-output--wrapper) {
+      display: none;
+    & > div.recurring-output--wrapper {
+      display: block !important;
+    }
+  }
+}
+ */
+
 // For Resources view and filter view
 .view-resources, .view-taxonomy-term {
   div:has(> span.notags) {
@@ -562,4 +615,11 @@ div.view-empty {
 // Filter and Sorting Forms
 .js-form-item {
   margin-right: 8px;
+}
+
+// Result summary
+.res-sum {
+  float: right;
+  margin-bottom: -3rem;
+  margin-top: 1rem;
 }

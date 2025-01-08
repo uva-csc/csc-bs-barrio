@@ -85,6 +85,16 @@
     }
   }
 
+  // Home Page
+  body.path-frontpage {
+    .block-field-blocknodepage-full-widthbody {
+      .field--name-body {
+        h2 {
+          text-align: center;
+        }
+      }
+    }
+  }
 
   // People pages
   body.path-people {  // The list of people
@@ -275,7 +285,7 @@
       width: 80vw !important;
     }
   }
-
+ // body.path-frontpage main#content .events-row .wrapper
   // Front page
   .path-frontpage {
     #main-wrapper {
@@ -366,13 +376,15 @@
           }
         } // end of featured event
 
-        .events-row .layout__region--second {
-          & > .wrapper {
-            padding: 0;
-          }
+        .events-row {
+          .layout__region--second {
+            .wrapper {
+              padding: 0;
 
-          .view-header {
-            margin: 0 0 -3rem -2rem;
+              .view-header {
+                margin: 0 0 -3rem -3.2rem;
+              }
+            }
           }
         }
 
@@ -557,6 +569,35 @@
 } // End of max-width: 767.9px (phones)
 
 @media (max-width: 992px) {
+  // Header
+  #header {
+    #navbar-top {
+      .navbar-brand {
+        img {
+          max-width: 80vw;
+          margin: 4px 0 4px 4px;
+        }
+      }
+    }
+    #navbar-main.bg-primary {
+      height: 0px !important;
+      .navbar-toggler-icon {
+        height: 1.25em;
+        width: 1.25em;
+      }
+    }
+  }
+
+  // Move navbar toggle up to top header
+  button.navbar-toggler {
+    position: absolute;
+    top: -45px;
+    right: 8px;
+    background-color: white;
+  }
+
+  // Remove secondary header strip
+  #header
   .layout--twocol-section {
     .layout__region {
       flex: 0 0 100% !important;
@@ -568,6 +609,14 @@
 
   body.path-frontpage {
     main#content {
+
+      .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+      .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second,
+      .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--first,
+      .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--second {
+        flex: 0 1 100%;
+      }
+
       .c-csc-hero {
         min-height: unset;
 
@@ -586,6 +635,10 @@
         padding: 2rem;
       }
 
+      .upcoming-events .view-content .views-row h3 {
+        font-size: 1.25rem !important;
+      }
+
       .teaser-row.layout--fourcol-section {
         .layout__region {
           flex: 0 1 50%;
@@ -600,18 +653,6 @@
     } // maincontent max 992
   } // end of front page max 992
 
-  // Move navbar toggle up to top header
-  button.navbar-toggler {
-    position: absolute;
-    top: -45px;
-    right: 10px;
-    background-color: white;
-  }
-
-  // Remove secondary header strip
-  #header #navbar-main.bg-primary {
-    height: 0px !important;
-  }
 
   // Dropdown menu
   div#main-menu-list {
@@ -653,6 +694,13 @@
           }
         }
       }
+    }
+  }
+
+  // cookie message
+  #sliding-popup {
+    .popup-content {
+      text-align: center;
     }
   }
 } // end of max-width 992

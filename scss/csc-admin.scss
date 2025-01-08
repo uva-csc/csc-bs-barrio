@@ -44,10 +44,30 @@ div.toolbar-tab {
 }
 
 // Admin Messages
+div.highlighted, div.highlighted div, div.highlighted aside {
+  margin: 0;
+  padding: 0;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
 #csc-admin-msg {
+  div {
+    margin: 0;
+    padding: 0;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+
   & > div:not(.hidden) {
     text-align: center;
-    padding: 0 0 1.25rem;
+
+    .messages__content.container {
+      width: 100vw;
+      max-width: unset;
+      background-color: var(--bs-green);
+      border-radius: 0;
+    }
 
     em.placeholder {
       background: transparent;
@@ -55,7 +75,13 @@ div.toolbar-tab {
     }
 
     a {
-      color: $uva-blue;
+      color: $white!important;
+      border-bottom: none;
+    }
+
+    button.btn-close {
+      padding: 0;
+      margin: 0.25rem 1rem 0 0;
     }
   }
 }
