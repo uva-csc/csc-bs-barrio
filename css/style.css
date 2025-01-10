@@ -15513,7 +15513,7 @@ body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
   min-width: 300px;
   background-image: url("/sites/default/files/2024-11/CSC_FB_Screenshot 2024-11-13 at 2.13.06%E2%80%AFPM.png") !important;
   background-size: contain !important;
-  /*background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   cursor: pointer !important;
 }
 .csc-social-feed-block .fb-page.failed:after {
@@ -16824,7 +16824,11 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     overflow: hidden;
   }
   #page-wrapper main#content .c-csc-hero {
+    margin-bottom: 0 !important;
     background-position: center center !important;
+  }
+  #page-wrapper main#content .csc-sep.dotted-blue {
+    width: 100%;
   }
   #page-wrapper .featured-bottom {
     margin-top: 5rem;
@@ -16853,6 +16857,13 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     color: #E57325 !important;
   }
 
+  nav ol.breadcrumb {
+    margin-left: 1rem;
+  }
+  nav ol.breadcrumb ol {
+    display: inline-block;
+  }
+
   .field--name-body .field--name-field-media-image .field__item img {
     display: block;
     margin: 0 auto;
@@ -16878,6 +16889,9 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   body.path-frontpage .block-field-blocknodepage-full-widthbody .field--name-body h2, body.path-frontpage .block-field-blocknodepage-full-widthbody .field--name-body .h2 {
     text-align: center;
   }
+  body.path-frontpage .csc-welcome p {
+    margin: 0 1rem;
+  }
   body.path-frontpage .events-row .layout__region--first .view-more {
     margin-top: 1rem;
   }
@@ -16886,7 +16900,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
   body.path-frontpage .upcoming-events .view-content .views-row .views-field-field-image img {
     max-width: unset !important;
-    width: 100%;
+    width: 100vw;
     margin: 0 0 0.5rem -1rem;
   }
   body.path-frontpage .home-research .row:after {
@@ -16937,6 +16951,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
 
   .node--type-landing-page main#content .csc-sep.dotted-blue {
     margin: 0;
+    width: 100%;
     padding-top: 2rem;
   }
 
@@ -16946,26 +16961,37 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     text-align: center !important;
   }
 
-  .features-1over2 > .layout__region > .block {
-    /*.block-entity-blocknode */
+  #student-featured.features > .layout__region > .block {
+    flex: unset;
   }
-  .features-1over2 > .layout__region > .block .content {
-    width: 100vw;
-    margin: 0 !important;
+  #student-featured.features > .layout__region > .block .content {
+    width: unset;
   }
-  .features-1over2 > .layout__region .node--view-mode-alt-teaser .node__content {
-    width: 100vw !important;
+
+  .layout.media-feeds {
+    padding: 0 0.5rem;
   }
-  .features-1over2 > .layout__region > .block:nth-child(2) {
-    width: 100vw;
-  }
-  .features-1over2 > .layout__region .field--name-field-teaser-image,
-.features-1over2 > .layout__region .field--name-field-image {
+  .layout.media-feeds .layout__region {
+    display: block;
     width: 100vw;
   }
-  .features-1over2 > .layout__region .field--name-field-teaser-image img,
-.features-1over2 > .layout__region .field--name-field-image img {
-    filter: none;
+  .layout.media-feeds .layout__region .csc-social-feed-block, .layout.media-feeds .layout__region .csc-social-feed-block .content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .layout.media-feeds .layout__region .csc-social-feed-block h2, .layout.media-feeds .layout__region .csc-social-feed-block .h2, .layout.media-feeds .layout__region .csc-social-feed-block .content h2 {
+    width: fit-content;
+    margin: 0 auto 1rem;
+  }
+  .layout.media-feeds .layout__region .csc-social-feed-block div.instagram-feed, .layout.media-feeds .layout__region .csc-social-feed-block .content div.instagram-feed {
+    margin: 1rem auto;
+  }
+  .layout.media-feeds .layout__region .csc-social-feed-block iframe, .layout.media-feeds .layout__region .csc-social-feed-block .content iframe {
+    margin: 1rem auto !important;
+  }
+  .layout.media-feeds .layout__region .csc-social-feed-block .failed:after, .layout.media-feeds .layout__region .csc-social-feed-block .content .failed:after {
+    display: none;
   }
 
   .student-resources .field--name-body {
@@ -16993,6 +17019,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
 }
 @media (max-width: 640px) {
+  body.node--type-landing-page main#content .field--name-field-hero-top {
+    margin-top: 0 !important;
+  }
+
   .node--type-people .block-system-breadcrumb-block {
     margin: -15px 0 0 !important;
   }
@@ -17031,8 +17061,12 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     padding: 0;
   }
 
-  p {
+  .layout--twocol-section .layout__region--second {
     padding: 0 1rem;
+  }
+
+  p {
+    padding: 0;
   }
 
   .block.help-curate .content {

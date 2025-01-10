@@ -6,7 +6,12 @@
     overflow: hidden;
     main#content {
       .c-csc-hero {
+        margin-bottom: 0 !important;
         background-position: center center !important;
+      }
+
+      .csc-sep.dotted-blue {
+        width: 100%;
       }
     }
 
@@ -42,6 +47,14 @@
     }
   }
 
+  // Breadcrumbs
+  nav ol.breadcrumb {
+    margin-left: 1rem;
+    ol {
+      display: inline-block;
+    }
+  }
+
   .field--name-body {
     .field--name-field-media-image {
       .field__item {
@@ -52,8 +65,6 @@
       }
     }
   }
-
-
 
   .layout-title h1 {
     text-align: center;
@@ -69,14 +80,15 @@
   // Landing pages
   body.node--type-landing-page {
     .node--view-mode-full {
+      // Teaser images
       .field--name-field-teaser-image {
         img {
           height: unset!important;
           margin: 0.25rem auto;
         }
       }
-    }
-  }
+    } // End node view mode full
+  } // End landing pages
 
   // Elements
   .titled-hero {
@@ -94,6 +106,14 @@
         }
       }
     }
+
+    // Welcome message and address
+    .csc-welcome {
+      p {
+        margin: 0 1rem;
+      }
+    }
+
     // Add space before "All Events" button under featured event
     .events-row {
       .layout__region--first .view-more {
@@ -107,7 +127,7 @@
     .upcoming-events .view-content .views-row {
       .views-field-field-image img {
         max-width: unset !important;
-        width: 100%;
+        width: 100vw;
         margin: 0 0 0.5rem -1rem;
       }
     }
@@ -178,9 +198,11 @@
     }
 
   } // End of events
+
   // Student hub pages
   .node--type-landing-page main#content .csc-sep.dotted-blue {
     margin: 0;
+    width: 100%;
     padding-top: 2rem;
   }
 
@@ -189,32 +211,48 @@
     margin: 0 0 0.5rem !important;
     text-align: center !important;
   }
-  .features-1over2 > .layout__region {
-    & > .block {
-      .content {
-        width: 100vw;
-        margin: 0 !important;
-      }
 
-      /*.block-entity-blocknode */
+  // Social Feed Blocks
+  #student-featured.features > .layout__region > .block {
+    flex: unset;
+    .content {
+      width: unset;
     }
-    .node--view-mode-alt-teaser .node__content {
-      width: 100vw!important;
-    }
+  }
 
-    & > .block:nth-child(2) {
-      width: 100vw;
-    }
-
-    .field--name-field-teaser-image,
-    .field--name-field-image {
+  // Instagram and FB Feeds
+  .layout.media-feeds {
+    padding: 0 0.5rem;
+    .layout__region {
+      display: block;
       width: 100vw;
 
-      img {
-        filter: none;
+      .csc-social-feed-block, .csc-social-feed-block .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        h2 {
+          width: fit-content;
+          margin: 0 auto 1rem;
+        }
+
+        div.instagram-feed {
+          margin: 1rem auto;
+        }
+
+        iframe {
+          margin: 1rem auto !important;
+        }
+
+        .failed:after {
+          display:none;
+        }
+
       }
     }
   }
+
   .student-resources {
     .field--name-body {
       display: block!important;
@@ -251,6 +289,12 @@
 } // End Media max-width: 576px (Phones)
 
 @media (max-width: 640px) {
+  // Landing Pages
+  body.node--type-landing-page main#content {
+    .field--name-field-hero-top {
+      margin-top: 0!important;
+    }
+  }
   // Individual people pages
   .node--type-people {
     .block-system-breadcrumb-block {
@@ -298,8 +342,12 @@
   }
 
   // General styles:
-  p {
+  .layout--twocol-section .layout__region--second {
     padding: 0 1rem;
+  }
+
+  p {
+    padding: 0;
   }
 
   // Pre-Footer and Footer blocks
@@ -369,7 +417,7 @@
             background-color: $uva-blue;
             padding: 1rem 0!important;
           }
-        } // end of .c-csc-text_row
+        } // end of Hero Overlay Front Page.c-csc-text_row
 
         .c-csc-text_box.offerings {
           margin-top: -2.75rem !important;
