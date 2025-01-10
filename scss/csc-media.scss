@@ -94,7 +94,38 @@
         }
       }
     }
-  }
+    // Add space before "All Events" button under featured event
+    .events-row {
+      .layout__region--first .view-more {
+        margin-top: 1rem;
+      }
+      .layout__region--second p.view-more {
+        margin-left: 34% !important;
+      }
+    }
+
+    .upcoming-events .view-content .views-row .views-field-field-image img {
+      max-width: unset!important;
+      width: 100%;
+      margin: 0 0 0.5rem -1rem;
+    }
+
+    .home-research {
+      .row {
+        &:after {
+          display: block;
+          margin: 1rem 0 1rem 1.5rem;
+          height: 1px;
+          width: 80vw;
+          border-bottom: solid $gray-400 1px;
+          content: ' ';
+        }
+        &:first-child:after, &:last-child:after {
+          display: none;
+        }
+      }
+    }
+  }  // End of front-page for max-width: 576px
 
   // People pages
   body.path-people {  // The list of people
@@ -265,7 +296,7 @@
 
   // General styles:
   p {
-    padding: 0 8px;
+    padding: 0 1rem;
   }
 
   // Pre-Footer and Footer blocks
@@ -399,11 +430,16 @@
 
             .views-row {
               display: unset;
-              border-bottom: 1px solid $csc-grey-blue;
-              margin-bottom: 1rem;
-
-              &:last-child {
-                border: none;
+              &:after {
+                  display: block;
+                  margin: 1rem 0 1rem;
+                  height: 1px;
+                  width: 80vw;
+                  border-bottom: solid $gray-400 1px;
+                  content: ' ';
+              }
+              &:last-child:after {
+                display: none;
               }
             }
           }
