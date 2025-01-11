@@ -16,7 +16,7 @@
     }
 
     .featured-bottom {
-      margin-top: 5rem;
+      /* margin-top: 5rem; */
     }
 
   } // end of page wrapper
@@ -49,7 +49,7 @@
 
   // Breadcrumbs
   nav ol.breadcrumb {
-    margin-left: 1rem;
+    margin: 1rem 0 0 0;
     ol {
       display: inline-block;
     }
@@ -76,6 +76,11 @@
       width: 390px !important;
     }
   }
+  .node--type-page-full-width {
+    .c-csc-skewed_colored_header {
+      display: none;
+    }
+  }
 
   // Landing pages
   body.node--type-landing-page {
@@ -85,6 +90,12 @@
         img {
           height: unset!important;
           margin: 0.25rem auto;
+        }
+      }
+      // Body
+      .block-field-blocknodelanding-pagebody {
+        .content {
+          margin: 0 1rem;
         }
       }
     } // End node view mode full
@@ -173,6 +184,29 @@
 
 
   // Events
+  .view.view-events {
+    &.featured-event {
+      .views-row {
+        .views-field:not(.views-field-field-image) {
+          margin-left: 1rem;
+        }
+      }
+    }
+    &.event-col {
+      .view-header {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        background-color: $uva-blue;
+        color: $uva-orange;
+
+        .text-white {
+          color: $uva-orange !important;
+        }
+      }
+    }
+  }
+
   .view-events.events-row-teasers {
     .field--name-field-target-audience {
       position: relative!important;
