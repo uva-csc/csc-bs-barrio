@@ -295,6 +295,16 @@ body.custom-title {
 // End of Students Page
 
 // Events Page
+.events-views {
+  .layout__region--first {
+    .wrapper {
+      padding-top: 1rem;
+    }
+  }
+
+} // End of layout section "events-views"
+
+// (Old code, I believe??)
 .events-main { // class set on content section of events page in layout builder
   // both views on event pages
   .view-events {

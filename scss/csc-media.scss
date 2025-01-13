@@ -20,6 +20,10 @@
         ol {
           display: inline-block;
         }
+
+        li.breadcrumb-item.active {
+          display: none!important;
+        }
       }
 
       .block-system-breadcrumb-block {
@@ -157,10 +161,12 @@
       padding: 0!important
     }
     nav ol.breadcrumb {
-      /*display: none!important; */
       margin: 0 0 1rem 0.5rem !important;
       *:not(.bi) {
         display: inline !important;
+      }
+      li.breadcrumb-item.active {
+        display: none!important;
       }
     }
   } // end of node-type news item
