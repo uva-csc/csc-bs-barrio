@@ -17131,6 +17131,43 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     display: inline-block;
   }
 
+  body.node--type-class div#main.container {
+    margin-top: unset;
+    /* margin-left: 0.5rem; */
+  }
+  body.node--type-class .bc-inline.layout.layout--onecol {
+    margin-left: 0rem;
+  }
+  body.node--type-class .layout--twocol-section .layout__region--first {
+    max-width: 100vw;
+    padding: 0;
+  }
+  body.node--type-class .layout--twocol-section .layout__region--first .field {
+    padding: 0 0.5rem;
+  }
+  body.node--type-class .layout--twocol-section .layout__region--first .block-field-blocknodeclasstitle {
+    border: none;
+  }
+  body.node--type-class .layout--twocol-section .layout__region--first .block-field-blocknodeclasstitle .field--name-title {
+    display: inline-block;
+    font-size: 1.75rem;
+  }
+  body.node--type-class .layout--twocol-section .layout__region--first .block-field-blocknodeclasstitle:after {
+    display: block;
+    width: 80vw;
+    margin: 0 1.5rem;
+    border-bottom: thin solid #333;
+    content: " ";
+  }
+  body.node--type-class .layout--twocol-section .layout__region--second {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  body.node--type-class .layout--twocol-section .layout__region--second .wrapper {
+    width: 100vw;
+  }
+
   .node--type-landing-page main#content .csc-sep.dotted-blue {
     margin: 0;
     width: 100%;
