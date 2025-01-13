@@ -4,7 +4,42 @@
 @media (max-width: 576px) {
   #page-wrapper {
     overflow: hidden;
+
+    .region-featured-top {
+      .block .content p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+    }
+
     main#content {
+
+      // Breadcrumbs
+      nav ol.breadcrumb {
+        margin: 1rem 0 0 0;
+        ol {
+          display: inline-block;
+        }
+      }
+
+      .block-system-breadcrumb-block {
+        margin: 0 !important;
+        padding: 0 0.5rem 1rem!important;
+      }
+
+      .layout--twocol-section .layout__region--second {
+        padding: 0 !important;
+      }
+
+      h2, h3, p, div.field--name-field-caption {
+        padding: 0 0.5rem !important;
+        max-width: 100vw;
+      }
+
+      div.field--name-field-caption {
+        text-align: left;
+      }
+
       .c-csc-hero {
         margin-bottom: 0 !important;
         background-position: center center !important;
@@ -13,10 +48,14 @@
       .csc-sep.dotted-blue {
         width: 100%;
       }
+      #commons-address {
+        width: 100vw;
+        text-align: center;
+      }
     }
 
     .featured-bottom {
-      /* margin-top: 5rem; */
+      margin-top: 3rem !important;
     }
 
   } // end of page wrapper
@@ -47,13 +86,7 @@
     }
   }
 
-  // Breadcrumbs
-  nav ol.breadcrumb {
-    margin: 1rem 0 0 0;
-    ol {
-      display: inline-block;
-    }
-  }
+
 
   .field--name-body {
     .field--name-field-media-image {
@@ -80,11 +113,13 @@
     .c-csc-skewed_colored_header {
       display: none;
     }
+
   }
 
   // Landing pages
   body.node--type-landing-page {
     .node--view-mode-full {
+
       // Teaser images
       .field--name-field-teaser-image {
         img {
@@ -95,21 +130,61 @@
       // Body
       .block-field-blocknodelanding-pagebody {
         .content {
-          margin: 0 1rem;
+          margin: 0 0.5rem!important;
         }
       }
     } // End node view mode full
   } // End landing pages
 
+
+  // News
+  .view.view-news.view-display-id-page_1 {
+    .row.views-row {
+      margin: 0;
+
+      a.plain:has(div.date) {
+        display: inline-block;
+        margin-top: 0.25rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  } // End of news view
+
+  .node--type-news-item {
+    #page-wrapper main#content .block-system-breadcrumb-block {
+      margin: 0 0 1rem!important;
+      padding: 0!important
+    }
+    nav ol.breadcrumb {
+      /*display: none!important; */
+      margin: 0 0 1rem 0.5rem !important;
+      *:not(.bi) {
+        display: inline !important;
+      }
+    }
+  } // end of node-type news item
+
+  // Contact page
+  .contact-page {
+    .page-content {
+      h5 {
+        margin: 0 0 0 0.5rem;
+      }
+    }
+  }
   // Elements
   .titled-hero {
     .layout-title {
-      top: 158px;
+      /* top: 158px; */
     }
   }
 
   // Home Page
   body.path-frontpage {
+    .region-featured-top {
+      margin-bottom: 1rem;
+    }
     .block-field-blocknodepage-full-widthbody {
       .field--name-body {
         h2 {
@@ -135,11 +210,34 @@
       }
     }
 
-    .upcoming-events .view-content .views-row {
-      .views-field-field-image img {
-        max-width: unset !important;
-        width: 100vw;
-        margin: 0 0 0.5rem -1rem;
+    .upcoming-events {
+      .view-header {
+        margin: 1rem 0 -2.5rem 0.2rem !important;
+      }
+      .view-content.row .views-row {
+        border-top: 2px solid #555;
+
+        &:after {
+          display: none !important;
+        }
+        .views-field-field-image img {
+          max-width: unset !important;
+          width: 100vw;
+          margin: 0;
+        }
+        .views-group-meta {
+          display: block;
+          margin-left: 0.5rem !important;
+          .evt-type {
+            padding-left: 0.5rem;
+          }
+          h3 {
+            margin: 0 !important;
+          }
+        }
+        div.days {
+          margin-left: 0.5rem !important;
+        }
       }
     }
 
@@ -193,6 +291,10 @@
       }
     }
     &.event-col {
+      .row {
+        margin: 0;
+        padding: 0;
+      }
       .view-header {
         margin: 0;
         padding: 0;
@@ -203,9 +305,41 @@
         .text-white {
           color: $uva-orange !important;
         }
+      } // end of event-col view header
+
+      .views-row {
+        --bs-gutter-x: 1.25rem;
+        margin-bottom: 0!important;
+        padding-bottom: 0;
+        & > div:first-child img {
+          min-width: 100vw;
+        }
+        .views-field-field-image {
+          max-width: unset;
+        }
+        .views-field.views-field-nothing {
+          margin: 0.5rem;
+        }
       }
     }
-  }
+
+
+    &.events-list-alt {
+      .view-header .res-sum {
+        float: none;
+        text-align: center;
+        margin: 0;
+      }
+
+      .view-filters {
+        display: none;
+      }
+
+      .row.views-row {
+        margin: 0;
+      }
+    }
+  } // end of .view.view-events
 
   .view-events.events-row-teasers {
     .field--name-field-target-audience {
@@ -220,8 +354,10 @@
   // Individual Event Pages
   body.node--type-event {
     .block-field-blocknodeeventtitle {
+      margin: 0 !important;
+      border: none!important;
       span {
-        font-size: 2.5rem !important;
+        font-size: 1.5rem !important;
       }
     }
     .layout__region.layout__region--second .wrapper {
@@ -232,6 +368,62 @@
     }
 
   } // End of events
+
+  // Classes page
+  .view.view-classes {
+    .views-view-table {
+      thead {
+        display: none;
+      }
+      tr {
+        display: flex;
+        flex-direction: column;
+
+        td.views-field {
+          padding: 0 0.5rem!important;
+          border: none;
+          &:first-of-type {
+            padding-top: 0.5rem!important;
+          }
+          &:last-of-type {
+            padding-bottom: 0.5rem!important;
+          }
+          &.text-nowrap {
+            white-space: normal!important;
+          }
+          &.views-field-field-short-title {
+            font-weight: bold;
+          }
+
+          &.views-field-field-semester:before {
+            content: 'Semester: ';
+            font-weight: bold;
+            font-size: 0.9rem;
+          }
+          &.views-field-field-credits:before {
+             content: 'Credits: ';
+             font-weight: bold;
+            font-size: 90%;
+           }
+          &.views-field-field-contact-name:before {
+            content: 'Instructor(s): ';
+            font-weight: bold;
+            font-size: 90%;
+          }
+          &.views-field-field-location {
+            &:before {
+              content: 'Room Number: ';
+              font-weight: bold;
+              font-size: 90%;
+            }
+            * {
+              display: inline-block;
+            }
+          }
+        } // end of td for classes
+      } // end of tr for classes
+    }
+  }
 
   // Student hub pages
   .node--type-landing-page main#content .csc-sep.dotted-blue {
@@ -302,6 +494,16 @@
     }
   }
   // End of Student Hub
+
+  // Student opportunities
+  .block-content-basic .bc-teaser {
+    margin: 0 auto;
+  }
+
+  // Research
+  body.page-node-144 .circl-overlay .field--type-image img {
+    margin-left: 0rem !important;
+  }
 
   // Calendar Styles
   .csc-calendar .js-drupal-fullcalendar {
@@ -421,6 +623,7 @@
 
             p.home-tag-line {
               font-size: 100% !important;
+              font-weight: bold!important;
               border-radius: 0;
             }
           }
