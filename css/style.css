@@ -17155,7 +17155,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   body.node--type-class .layout--twocol-section .layout__region--first .block-field-blocknodeclasstitle:after {
     display: block;
     width: 80vw;
-    margin: 0 1.5rem;
+    margin: 0 0.5rem;
     border-bottom: thin solid #333;
     content: " ";
   }
@@ -17166,6 +17166,11 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
   body.node--type-class .layout--twocol-section .layout__region--second .wrapper {
     width: 100vw;
+    height: unset;
+    padding: 20px 30px;
+  }
+  body.node--type-class .layout--twocol-section .layout__region--second .wrapper .field--name-field-location .field--name-title {
+    font-size: 1.2rem;
   }
 
   .node--type-landing-page main#content .csc-sep.dotted-blue {
