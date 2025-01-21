@@ -13315,6 +13315,7 @@ main#content {
   letter-spacing: 0.05rem;
 }
 #header .navbar .nav-item a, #header .navbar .menu-item a {
+  display: block;
   margin: 0 0.25rem 0 0;
   color: white;
   text-transform: uppercase;
@@ -17448,6 +17449,9 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     top: 300px;
     left: 0px;
     margin: 0px 12px 300px;
+  }
+  body.node--type-landing-page main#content #env-flourish h2, body.node--type-landing-page main#content #env-flourish .h2 {
+    padding: 0 !important;
   }
   body.node--type-landing-page main#content #env-flourish h2 span.part1, body.node--type-landing-page main#content #env-flourish .h2 span.part1 {
     letter-spacing: 0.3rem;

@@ -66,6 +66,7 @@
 
   // Dropdown menus
   #header #navbar-main ul.navbar-nav {
+
     .dropdown-menu li.dropdown-item {
       white-space: wrap;
       line-height: 1.3;
@@ -850,6 +851,7 @@
         margin: 0px 12px 300px;
 
         h2 {
+          padding: 0!important;
           span.part1 {
             letter-spacing: 0.3rem;
           }
