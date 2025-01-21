@@ -250,6 +250,7 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
   $view = $variables['view'];
   $field = $variables['field'];
   $view_id = $view->storage->id();
+  if ($view_id == 'calendar_new') { return; }
   if ($view_id == 'events') {
     if ($field->field == 'field_tags') {
       $output = [];
@@ -271,7 +272,7 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
   // For homepage events to move the read-more link inside the body's last </p>
   // If Learn More link is created by view, it will necessarily be outside the </p> tag with some space between.
   // If this code is to be used elsewhere, the <a> must have these classes: class="d-inline-block ms-2 lh-1"
-  if ($view->storage->id() == 'homepage_events' &&
+  if ($view_id == 'homepage_events' &&
     $field->field == 'body') {
     // csc_log(str_replace(array('<', '>'), array('&lt;', '&gt;'), $variables['output']));  // For debugging
     $pattern = '/<\/p>\s*(<a[^>]+>[\s\S]+<\/a>)/'; // Looks for an <a> tag outside a </p> with some optional space
