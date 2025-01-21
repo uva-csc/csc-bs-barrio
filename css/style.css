@@ -17020,6 +17020,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     width: 300px;
   }
 
+  .layout.event-views .layout__region--first .wrapper {
+    padding-top: 0;
+  }
+
   .view.view-events.featured-event .views-row .views-field:not(.views-field-field-image) {
     margin-left: 1rem;
   }

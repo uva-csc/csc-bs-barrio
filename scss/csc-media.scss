@@ -289,6 +289,12 @@
 
 
   // Events
+  .layout.event-views {
+    .layout__region--first .wrapper {
+      padding-top: 0;
+    }
+  }
+
   .view.view-events {
     &.featured-event {
       .views-row {
