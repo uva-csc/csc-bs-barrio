@@ -289,9 +289,9 @@
 
 
   // Events
-  .layout.event-views {
+  .layout.events-views {
     .layout__region--first .wrapper {
-      padding-top: 0;
+      padding-top: 0 !important;
     }
   }
 
