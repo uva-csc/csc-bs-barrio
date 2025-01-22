@@ -157,6 +157,9 @@
   } // End of news view
 
   .node--type-news-item {
+    #main.container {
+      margin-top: 0.25rem;
+    }
     #page-wrapper main#content .block-system-breadcrumb-block {
       margin: 0 0 1rem!important;
       padding: 0!important
@@ -169,6 +172,22 @@
       li.breadcrumb-item.active {
         display: none!important;
       }
+    } // end of ol.breadcrumb
+
+   .block-field-blocknodenews-itemfield-date {
+      margin-top: 0.5rem !important;
+      padding-left: 0.25rem !important;
+    }
+
+    .block-field-blocknodenews-itemtitle {
+      padding-left: 0.25rem !important;
+      span {
+        font-size: 2rem !important;
+      }
+    }
+
+    .block-field-blocknodenews-itemfield-image {
+      margin-top: 0rem !important;
     }
   } // end of node-type news item
 
