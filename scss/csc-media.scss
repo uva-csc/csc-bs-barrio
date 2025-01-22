@@ -1146,6 +1146,36 @@
 } // End of Tablets
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  #header {
+    // Logo spacing
+    #navbar-top > section a.navbar-brand {
+      padding-left: 1.25rem;
+    }
+
+    // Dropdown menu
+    div#main-menu-list {
+      background-color: $csc-grey-blue;
+
+      ul.navbar-nav {
+        padding: 0 0 0 1rem;
+
+        ul.dropdown-menu {
+          margin: unset !important;
+          background-color: $uva-blue;
+
+          li {
+            padding: 0.25rem 1rem;
+
+            &:hover {
+              color: $uva-orange;
+            }
+          }
+        }
+      }
+    } // End of drop down menu for min-width: 768 max-width 1024
+  } // End of #header
+
+  // Front Page
   body.path-frontpage {
     // Teaser row
     .teaser-row {
@@ -1154,13 +1184,19 @@
       }
     }
   }
+
   // Circl page
   body.page-node-144 {
     .circl-overlay {
       left: 3rem;
     }
   }
-}
+
+  // Staff Card size
+  .view-people .card.people {
+    width: 225px;
+  }
+} // End 768px to 1024px
 
 // Only Large (small laptops)
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -1176,7 +1212,7 @@
     }
     #navbar-main {
       ul.navbar-nav {
-        li {
+        & > li {
           padding: 0;
         }
       }
