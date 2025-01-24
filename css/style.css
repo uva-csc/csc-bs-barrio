@@ -15006,6 +15006,11 @@ p.view-more {
   text-align: center;
   line-height: 1.15rem;
 }
+p.view-more.left {
+  text-align: left;
+  margin-left: 8vw;
+  margin-bottom: 2rem;
+}
 p.view-more a {
   display: inline-block;
   padding-top: 0.25rem;

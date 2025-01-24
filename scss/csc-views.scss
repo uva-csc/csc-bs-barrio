@@ -63,6 +63,12 @@ p.view-more {
   text-align: center;
   line-height: 1.15rem;
 
+  &.left {
+    text-align: left;
+    margin-left: 8vw;
+    margin-bottom: 2rem;
+  }
+
 
   a {
     display: inline-block;
