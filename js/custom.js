@@ -72,6 +72,18 @@
           });
         }); // End of scroll to top links
 
+
+        // Calendar Time Titles
+        // Adds a title attribute with the event title to the time element in a calendar entry so hover over works for it as well
+        const ctels = once('.js-drupal-fullcalendar', '.fc-time[data-start]', context);
+        ctels.forEach(function (ctel) {
+          if (ctel?.nextSibling) {
+            const nsatt = ctel.nextSibling.getAttribute('title');
+            if (nsatt && nsatt?.length > 0) {
+              ctel.setAttribute('title', nsatt);
+            }
+          }
+        });
       }); // End of Document Ready
     }
   };  // End of csc_bs_sass_other behavior
