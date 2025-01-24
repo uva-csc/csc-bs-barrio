@@ -134,12 +134,12 @@ body.path-frontpage main#content {
     // This week at the commons
     // block header
     .view-header h3 {
-      span.text-white {
+      span:first-of-type {
         font-size: 180%;
         text-transform: uppercase;
       }
 
-      span.text-orange {
+      span:not(:first-of-type) {
         display: block;
         margin-left: 15%;
         margin-top: -1rem;

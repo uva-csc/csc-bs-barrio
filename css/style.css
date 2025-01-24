@@ -13940,11 +13940,11 @@ body.path-frontpage main#content .featured-event .wrapper {
   padding: 1rem 4rem;
   background-color: #232D4B;
 }
-body.path-frontpage main#content .featured-event .view-header h3 span.text-white, body.path-frontpage main#content .featured-event .view-header .h3 span.text-white {
+body.path-frontpage main#content .featured-event .view-header h3 span:first-of-type, body.path-frontpage main#content .featured-event .view-header .h3 span:first-of-type {
   font-size: 180%;
   text-transform: uppercase;
 }
-body.path-frontpage main#content .featured-event .view-header h3 span.text-orange, body.path-frontpage main#content .featured-event .view-header .h3 span.text-orange {
+body.path-frontpage main#content .featured-event .view-header h3 span:not(:first-of-type), body.path-frontpage main#content .featured-event .view-header .h3 span:not(:first-of-type) {
   display: block;
   margin-left: 15%;
   margin-top: -1rem;
