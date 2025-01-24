@@ -13961,6 +13961,8 @@ body.path-frontpage main#content .featured-event .views-field-title {
   margin: 0 0 0.5rem 0;
   width: 100%;
   text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.05px;
 }
 body.path-frontpage main#content .featured-event .views-field-title a {
   color: white !important;
