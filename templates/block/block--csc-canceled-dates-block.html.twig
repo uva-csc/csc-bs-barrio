@@ -1,2 +1,23 @@
-{# block--csc-canceled-dates-block.html.twig #}
-<p class="exceptions">Except for {{ content['#canceled_dates'] }}.</p>
+{#
+block--csc-canceled-dates-block.html.twig  — taken from block.html.twig
+#}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    <div{{ content_attributes.addClass('content') }}>
+      Except for {{ content['#canceled_dates'] }}.
+    </div>
+  {% endblock %}
+</div>
+
