@@ -15218,6 +15218,7 @@ p.view-more a {
   line-height: 1.05rem;
   font-size: 0.85rem;
   font-weight: bold;
+  color: #212529;
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date.starts-on, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .field--name-field-date.starts-on {
   font-style: italic;
