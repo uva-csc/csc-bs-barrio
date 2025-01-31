@@ -499,7 +499,7 @@ p.view-more {
   }
 }
 
-// Calendar View
+// Full Calendar View (old)
 .view.csc-calendar .js-drupal-fullcalendar {
   position: relative;
   z-index: 0;
@@ -557,6 +557,36 @@ div.view-empty {
   }
   a.page-link span {
     color: #0d6efd !important;
+  }
+}
+
+// Calendar View (new)
+.csc-calendar-new {
+  .calendar-view-pager {
+    list-style-type: none;
+    .pager__item {
+      a {
+        border: none;
+      }
+    }
+    .pager__current {
+      * {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        color: var(--bs-secondary-color);
+      }
+    }
+  }  // end of pager
+
+  table.calendar-view-table {
+    & > caption {
+      display: none;
+    }
+    thead {
+      th {
+        color: $white;
+      }
+    }
   }
 }
 

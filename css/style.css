@@ -15394,6 +15394,24 @@ div.view-empty {
   color: #0d6efd !important;
 }
 
+.csc-calendar-new .calendar-view-pager {
+  list-style-type: none;
+}
+.csc-calendar-new .calendar-view-pager .pager__item a {
+  border: none;
+}
+.csc-calendar-new .calendar-view-pager .pager__current * {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--bs-secondary-color);
+}
+.csc-calendar-new table.calendar-view-table > caption {
+  display: none;
+}
+.csc-calendar-new table.calendar-view-table thead th {
+  color: #fdfdfd;
+}
+
 .view-events.events-list-alt .row.views-row,
 .view-news.view-display-id-page_1 .row.views-row,
 .view-search-content.view-display-id-result_page .row.views-row,
