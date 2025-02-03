@@ -291,24 +291,17 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
 
 
 function csc_bs_sass_preprocess_facets_result_item(&$facet) {
-  // csc_log(json_encode([$variables['value'], array_keys($variables)]));
+  // Changing this to pluralizing only specific facets (none of which ar in use)
+  $pluralize = ['nobody'];
   $label = $facet['value'];
   $new_label = ucwords(str_replace('_', ' ', $label));
   /* Pluralizes facet names in facet box  on the left side of the people page */
-  if (!in_array($new_label, ['Staff', 'Advisory Board'])) {
+  if (in_array($new_label, $pluralize)) {
     $new_label = $new_label . 's';
   }
   $facet['value'] = $new_label;
   $facet['raw_value'] = $facet['value'];
 }
-/*
-function csc_bs_sass_preprocess_taxonomy_term(&$variables) {
-  if ($variables['term']->bundle() === 'content_filters') {
-    $term = $variables['term'];
-    $variables['content'] = `<a href="/filtered/{$term->id()}">{$term->label()}</a>`;
-  }
-}
-*/
 
 /**
  * Implements custom classes for paragraphs with bundle name
