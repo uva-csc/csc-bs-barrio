@@ -241,6 +241,7 @@ function csc_bs_sass_preprocess_views_view(&$variables) {
   $roles = Array(
     'roles:staff' => 'Staff',
     'roles:advisory_board' => 'Advisory Board',
+    'roles:faculty_research_council' => 'Faculty Research Council',
   );
   // Add chosen role facet as a secondary header on the people page
   if ($viewId == 'people') {
