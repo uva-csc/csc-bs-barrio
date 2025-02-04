@@ -561,19 +561,20 @@ div.view-empty {
 }
 
 // Calendar View (new)
-.csc-calendar-new {
+.csc-calendar-view {
   .calendar-view-pager {
     list-style-type: none;
     .pager__item {
       a {
         border: none;
+        color: $uva-blue;
       }
     }
     .pager__current {
       * {
         font-size: 1.2rem;
         text-transform: capitalize;
-        color: var(--bs-secondary-color);
+        color: $uva-blue;
       }
     }
   }  // end of pager
@@ -583,8 +584,10 @@ div.view-empty {
       display: none;
     }
     thead {
+      background-color: $csc-grey-blue;
       th {
         color: $white;
+        background-color: $csc-grey-blue;
       }
     }
   }

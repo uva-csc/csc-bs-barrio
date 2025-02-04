@@ -15394,22 +15394,27 @@ div.view-empty {
   color: #0d6efd !important;
 }
 
-.csc-calendar-new .calendar-view-pager {
+.csc-calendar-view .calendar-view-pager {
   list-style-type: none;
 }
-.csc-calendar-new .calendar-view-pager .pager__item a {
+.csc-calendar-view .calendar-view-pager .pager__item a {
   border: none;
+  color: #232D4B;
 }
-.csc-calendar-new .calendar-view-pager .pager__current * {
+.csc-calendar-view .calendar-view-pager .pager__current * {
   font-size: 1.2rem;
   text-transform: capitalize;
-  color: var(--bs-secondary-color);
+  color: #232D4B;
 }
-.csc-calendar-new table.calendar-view-table > caption {
+.csc-calendar-view table.calendar-view-table > caption {
   display: none;
 }
-.csc-calendar-new table.calendar-view-table thead th {
+.csc-calendar-view table.calendar-view-table thead {
+  background-color: #434b64;
+}
+.csc-calendar-view table.calendar-view-table thead th {
   color: #fdfdfd;
+  background-color: #434b64;
 }
 
 .view-events.events-list-alt .row.views-row,
