@@ -15416,6 +15416,42 @@ div.view-empty {
   color: #fdfdfd;
   background-color: #434b64;
 }
+.csc-calendar-view.day {
+  display: grid;
+  grid-template-rows: repeat(24, minmax(40px, auto));
+  /* row-gap: 5px;
+  border-left: 2px solid #ccc;*/
+  padding-left: 10px;
+}
+.csc-calendar-view.day .row.results-header {
+  margin: 0 0 1rem;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+.csc-calendar-view.day .row.results-header * {
+  border: none;
+}
+.csc-calendar-view.day h3, .csc-calendar-view.day .h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  background-color: #dddddd;
+  margin: 0;
+  padding: 0.5rem 0 0.25rem 0.5rem;
+}
+.csc-calendar-view.day .views-row {
+  background: "#C8CBD210";
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.csc-calendar-view.day .day-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .view-events.events-list-alt .row.views-row,
 .view-news.view-display-id-page_1 .row.views-row,
