@@ -16617,6 +16617,9 @@ div.geolocation-map-wrapper {
 .view-people .card.people .card-body .card-text .field--name-field-csc-role:first-child, .view-people-indexed .card.people .card-body .card-text .field--name-field-csc-role:first-child {
   font-weight: bold;
 }
+.view-people.frc, .view-people-indexed.frc {
+  max-width: unset;
+}
 
 div.type-tag a {
   font-family: franklin-gothic-urw, sans-serif;

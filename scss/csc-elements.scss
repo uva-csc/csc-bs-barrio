@@ -831,7 +831,10 @@ div.geolocation-map-wrapper {
       } // End of .card-text
     }
   }
-}
+  &.frc {
+    max-width: unset;
+  }
+}  // End of .view-people
 
 // Social Media Feeds
 
