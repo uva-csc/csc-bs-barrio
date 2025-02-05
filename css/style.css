@@ -16620,7 +16620,7 @@ div.geolocation-map-wrapper {
 .view-people .card.people .card-body .card-text .field--name-field-csc-role:first-child, .view-people-indexed .card.people .card-body .card-text .field--name-field-csc-role:first-child {
   font-weight: bold;
 }
-.view-people.frc, .view-people-indexed.frc {
+.view-people.frc .view-content, .view-people-indexed.frc .view-content {
   max-width: unset;
 }
 

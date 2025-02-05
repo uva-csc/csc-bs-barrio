@@ -832,7 +832,9 @@ div.geolocation-map-wrapper {
     }
   }
   &.frc {
-    max-width: unset;
+    .view-content {
+      max-width: unset;
+    }
   }
 }  // End of .view-people
 
