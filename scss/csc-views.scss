@@ -593,13 +593,6 @@ div.view-empty {
     } // end of thead
     .calendar-view-day__row {
       font-size: 1rem;
-
-      a {
-        border-bottom: none;
-        &:hover {
-          border-bottom: thin solid $uva-orange;
-        }
-      }
     }
 
   } // end of calendar-view-table
