@@ -562,6 +562,7 @@ div.view-empty {
 
 // Calendar View (new)
 .csc-calendar-view {
+
   .calendar-view-pager {
     list-style-type: none;
     .pager__item {
@@ -590,6 +591,9 @@ div.view-empty {
         background-color: $csc-grey-blue;
       }
     } // end of thead
+    .calendar-view-day__row {
+      font-size: 1rem;
+    }
 
   } // end of calendar-view-table
 
