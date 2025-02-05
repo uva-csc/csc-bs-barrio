@@ -16622,6 +16622,7 @@ div.geolocation-map-wrapper {
 }
 .view-people.frc .view-content, .view-people-indexed.frc .view-content {
   max-width: unset;
+  gap: 15px;
 }
 
 div.type-tag a {
