@@ -14279,7 +14279,7 @@ body.node--type-landing-page main#content .field--name-field-hero-top .hero-capt
 }
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody .content {
   /* width: 75%; */
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; // removing because of frc block on research page */
 }
 body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody p {
   font-family: franklin-gothic-urw, sans-serif;
