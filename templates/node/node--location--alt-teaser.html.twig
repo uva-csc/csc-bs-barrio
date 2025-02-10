@@ -63,4 +63,4 @@
 {% set display_title = is_short_title ? content.field_short_title|render|striptags|trim : label %}
 {{ attach_library('bootstrap_barrio/node') }}
 
-<p class="location"><a href="{{ url }}" rel="bookmark" class="reversed">{{ display_title }}</a></p>
+<p class="location">{{ display_title }}</p>

@@ -4,20 +4,69 @@
 @media (max-width: 576px) {
   #page-wrapper {
     overflow: hidden;
+
+    .region-featured-top {
+      .block .content p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+    }
+
     main#content {
+
+      // Breadcrumbs
+      nav ol.breadcrumb {
+        margin: 1rem 0 0 0;
+        ol {
+          display: inline-block;
+        }
+
+        li.breadcrumb-item.active {
+          display: none!important;
+        }
+      }
+
+      .block-system-breadcrumb-block {
+        margin: 0 !important;
+        padding: 0 0.5rem 1rem!important;
+      }
+
+      .layout--twocol-section .layout__region--second {
+        padding: 0 !important;
+      }
+
+      h2, h3, p, div.field--name-field-caption {
+        padding: 0 0.5rem !important;
+        max-width: 100vw;
+      }
+
+      div.field--name-field-caption {
+        text-align: left;
+      }
+
       .c-csc-hero {
+        margin-bottom: 0 !important;
         background-position: center center !important;
+      }
+
+      .csc-sep.dotted-blue {
+        width: 100%;
+      }
+      #commons-address {
+        width: 100vw;
+        text-align: center;
       }
     }
 
     .featured-bottom {
-      margin-top: 5rem;
+      margin-top: 3rem !important;
     }
 
   } // end of page wrapper
 
   // Dropdown menus
   #header #navbar-main ul.navbar-nav {
+
     .dropdown-menu li.dropdown-item {
       white-space: wrap;
       line-height: 1.3;
@@ -42,6 +91,8 @@
     }
   }
 
+
+
   .field--name-body {
     .field--name-field-media-image {
       .field__item {
@@ -53,8 +104,6 @@
     }
   }
 
-
-
   .layout-title h1 {
     text-align: center;
   }
@@ -65,28 +114,103 @@
       width: 390px !important;
     }
   }
+  .node--type-page-full-width {
+    .c-csc-skewed_colored_header {
+      display: none;
+    }
+
+  }
 
   // Landing pages
   body.node--type-landing-page {
     .node--view-mode-full {
+
+      // Teaser images
       .field--name-field-teaser-image {
         img {
           height: unset!important;
           margin: 0.25rem auto;
         }
       }
+      // Body
+      .block-field-blocknodelanding-pagebody {
+        .content {
+          margin: 0 0.5rem!important;
+        }
+      }
+    } // End node view mode full
+  } // End landing pages
+
+
+  // News
+  .view.view-news.view-display-id-page_1 {
+    .row.views-row {
+      margin: 0;
+
+      a.plain:has(div.date) {
+        display: inline-block;
+        margin-top: 0.25rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  } // End of news view
+
+  .node--type-news-item {
+    #main.container {
+      margin-top: 0.25rem;
+    }
+    #page-wrapper main#content .block-system-breadcrumb-block {
+      margin: 0 0 1rem!important;
+      padding: 0!important
+    }
+    nav ol.breadcrumb {
+      margin: 0 0 1rem 0.5rem !important;
+      *:not(.bi) {
+        display: inline !important;
+      }
+      li.breadcrumb-item.active {
+        display: none!important;
+      }
+    } // end of ol.breadcrumb
+
+   .block-field-blocknodenews-itemfield-date {
+      margin-top: 0.5rem !important;
+      padding-left: 0.25rem !important;
+    }
+
+    .block-field-blocknodenews-itemtitle {
+      padding-left: 0.25rem !important;
+      span {
+        font-size: 2rem !important;
+      }
+    }
+
+    .block-field-blocknodenews-itemfield-image {
+      margin-top: 0rem !important;
+    }
+  } // end of node-type news item
+
+  // Contact page
+  .contact-page {
+    .page-content {
+      h5 {
+        margin: 0 0 0 0.5rem;
+      }
     }
   }
-
   // Elements
   .titled-hero {
     .layout-title {
-      top: 158px;
+      /* top: 158px; */
     }
   }
 
   // Home Page
   body.path-frontpage {
+    .region-featured-top {
+      margin-bottom: 1rem;
+    }
     .block-field-blocknodepage-full-widthbody {
       .field--name-body {
         h2 {
@@ -94,7 +218,71 @@
         }
       }
     }
-  }
+
+    // Welcome message and address
+    .csc-welcome {
+      p {
+        margin: 0 1rem;
+      }
+    }
+
+    // Add space before "All Events" button under featured event
+    .events-row {
+      .layout__region--first .view-more {
+        margin-top: 1rem;
+      }
+      .layout__region--second p.view-more {
+        margin-left: 34% !important;
+      }
+    }
+
+    .upcoming-events {
+      .view-header {
+        margin: 1rem 0 -2.5rem 0.2rem !important;
+      }
+      .view-content.row .views-row {
+        border-top: 2px solid #555;
+
+        &:after {
+          display: none !important;
+        }
+        .views-field-field-image img {
+          max-width: unset !important;
+          width: 100vw;
+          margin: 0;
+        }
+        .views-group-meta {
+          display: block;
+          margin-left: 0.5rem !important;
+          .evt-type {
+            padding-left: 0.5rem;
+          }
+          h3 {
+            margin: 0 !important;
+          }
+        }
+        div.days {
+          margin-left: 0.5rem !important;
+        }
+      }
+    }
+
+    .home-research {
+      .row {
+        &:after {
+          display: block;
+          margin: 1rem 0 1rem 1.5rem;
+          height: 1px;
+          width: 80vw;
+          border-bottom: solid $gray-400 1px;
+          content: ' ';
+        }
+        &:first-child:after, &:last-child:after {
+          display: none;
+        }
+      }
+    }
+  }  // End of front-page for max-width: 576px
 
   // People pages
   body.path-people {  // The list of people
@@ -120,6 +308,71 @@
 
 
   // Events
+  .layout.events-views {
+    .layout__region--first .wrapper {
+      padding-top: 0 !important;
+    }
+  }
+
+  .view.view-events {
+    &.featured-event {
+      .views-row {
+        .views-field:not(.views-field-field-image) {
+          margin-left: 1rem;
+        }
+      }
+    }
+    &.event-col {
+      .row {
+        margin: 0;
+        padding: 0;
+      }
+      .view-header {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        background-color: $uva-blue;
+        color: $uva-orange;
+
+        .text-white {
+          color: $uva-orange !important;
+        }
+      } // end of event-col view header
+
+      .views-row {
+        --bs-gutter-x: 1.25rem;
+        margin-bottom: 0!important;
+        padding-bottom: 0;
+        & > div:first-child img {
+          min-width: 100vw;
+        }
+        .views-field-field-image {
+          max-width: unset;
+        }
+        .views-field.views-field-nothing {
+          margin: 0.5rem;
+        }
+      }
+    }
+
+
+    &.events-list-alt {
+      .view-header .res-sum {
+        float: none;
+        text-align: center;
+        margin: 0;
+      }
+
+      .view-filters {
+        display: none;
+      }
+
+      .row.views-row {
+        margin: 0;
+      }
+    }
+  } // end of .view.view-events
+
   .view-events.events-row-teasers {
     .field--name-field-target-audience {
       position: relative!important;
@@ -133,8 +386,10 @@
   // Individual Event Pages
   body.node--type-event {
     .block-field-blocknodeeventtitle {
+      margin: 0 !important;
+      border: none!important;
       span {
-        font-size: 2.5rem !important;
+        font-size: 1.5rem !important;
       }
     }
     .layout__region.layout__region--second .wrapper {
@@ -145,9 +400,120 @@
     }
 
   } // End of events
+
+  // Classes page
+  .view.view-classes {
+    .views-view-table {
+      thead {
+        display: none;
+      }
+      tr {
+        display: flex;
+        flex-direction: column;
+
+        td.views-field {
+          padding: 0 0.5rem!important;
+          border: none;
+          &:first-of-type {
+            padding-top: 0.5rem!important;
+          }
+          &:last-of-type {
+            padding-bottom: 0.5rem!important;
+          }
+          &.text-nowrap {
+            white-space: normal!important;
+          }
+          &.views-field-field-short-title {
+            font-weight: bold;
+          }
+
+          &.views-field-field-semester:before {
+            content: 'Semester: ';
+            font-weight: bold;
+            font-size: 0.9rem;
+          }
+          &.views-field-field-credits:before {
+             content: 'Credits: ';
+             font-weight: bold;
+            font-size: 90%;
+           }
+          &.views-field-field-contact-name:before {
+            content: 'Instructor(s): ';
+            font-weight: bold;
+            font-size: 90%;
+          }
+          &.views-field-field-location {
+            &:before {
+              content: 'Room Number: ';
+              font-weight: bold;
+              font-size: 90%;
+            }
+            * {
+              display: inline-block;
+            }
+          }
+        } // end of td for classes
+      } // end of tr for classes
+    }
+  } // End of classes view
+
+  body.node--type-class {
+
+    div#main.container {
+      margin-top: unset;
+     /* margin-left: 0.5rem; */
+    }
+    .bc-inline.layout.layout--onecol {
+      margin-left: 0rem;
+    }
+    .layout--twocol-section {
+      .layout__region--first {
+        max-width: 100vw;
+        padding: 0;
+
+        .field {
+          padding: 0 0.5rem;
+        }
+        .block-field-blocknodeclasstitle {
+          border: none;
+          .field--name-title {
+            display: inline-block;
+            font-size: 1.75rem;
+          }
+          &:after {
+            display: block;
+            width: 80vw;
+            margin: 0 .5rem;
+            border-bottom: thin solid #333;
+            content: ' ';
+          }
+        }
+      }
+
+      .layout__region--second {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+
+        .wrapper {
+          width: 100vw;
+          height: unset;
+          padding: 20px 30px;
+
+          .field--name-field-location {
+            .field--name-title {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
   // Student hub pages
   .node--type-landing-page main#content .csc-sep.dotted-blue {
     margin: 0;
+    width: 100%;
     padding-top: 2rem;
   }
 
@@ -156,32 +522,48 @@
     margin: 0 0 0.5rem !important;
     text-align: center !important;
   }
-  .features-1over2 > .layout__region {
-    & > .block {
-      .content {
-        width: 100vw;
-        margin: 0 !important;
-      }
 
-      /*.block-entity-blocknode */
+  // Social Feed Blocks
+  #student-featured.features > .layout__region > .block {
+    flex: unset;
+    .content {
+      width: unset;
     }
-    .node--view-mode-alt-teaser .node__content {
-      width: 100vw!important;
-    }
+  }
 
-    & > .block:nth-child(2) {
-      width: 100vw;
-    }
-
-    .field--name-field-teaser-image,
-    .field--name-field-image {
+  // Instagram and FB Feeds
+  .layout.media-feeds {
+    padding: 0 0.5rem;
+    .layout__region {
+      display: block;
       width: 100vw;
 
-      img {
-        filter: none;
+      .csc-social-feed-block, .csc-social-feed-block .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        h2 {
+          width: fit-content;
+          margin: 0 auto 1rem;
+        }
+
+        div.instagram-feed {
+          margin: 1rem auto;
+        }
+
+        iframe {
+          margin: 1rem auto !important;
+        }
+
+        .failed:after {
+          display:none;
+        }
+
       }
     }
   }
+
   .student-resources {
     .field--name-body {
       display: block!important;
@@ -197,6 +579,16 @@
     }
   }
   // End of Student Hub
+
+  // Student opportunities
+  .block-content-basic .bc-teaser {
+    margin: 0 auto;
+  }
+
+  // Research
+  body.page-node-144 .circl-overlay .field--type-image img {
+    margin-left: 0rem !important;
+  }
 
   // Calendar Styles
   .csc-calendar .js-drupal-fullcalendar {
@@ -215,8 +607,15 @@
     }
   } // End of calendar styles
 
-} // End Media 576px
+} // End Media max-width: 576px (Phones)
+
 @media (max-width: 640px) {
+  // Landing Pages
+  body.node--type-landing-page main#content {
+    .field--name-field-hero-top {
+      margin-top: 0!important;
+    }
+  }
   // Individual people pages
   .node--type-people {
     .block-system-breadcrumb-block {
@@ -264,8 +663,12 @@
   }
 
   // General styles:
+  .layout--twocol-section .layout__region--second {
+    padding: 0 1rem;
+  }
+
   p {
-    padding: 0 8px;
+    padding: 0;
   }
 
   // Pre-Footer and Footer blocks
@@ -305,6 +708,7 @@
 
             p.home-tag-line {
               font-size: 100% !important;
+              font-weight: bold!important;
               border-radius: 0;
             }
           }
@@ -335,7 +739,7 @@
             background-color: $uva-blue;
             padding: 1rem 0!important;
           }
-        } // end of .c-csc-text_row
+        } // end of Hero Overlay Front Page.c-csc-text_row
 
         .c-csc-text_box.offerings {
           margin-top: -2.75rem !important;
@@ -399,11 +803,16 @@
 
             .views-row {
               display: unset;
-              border-bottom: 1px solid $csc-grey-blue;
-              margin-bottom: 1rem;
-
-              &:last-child {
-                border: none;
+              &:after {
+                  display: block;
+                  margin: 1rem 0 1rem;
+                  height: 1px;
+                  width: 80vw;
+                  border-bottom: solid $gray-400 1px;
+                  content: ' ';
+              }
+              &:last-child:after {
+                display: none;
               }
             }
           }
@@ -467,6 +876,7 @@
         margin: 0px 12px 300px;
 
         h2 {
+          padding: 0!important;
           span.part1 {
             letter-spacing: 0.3rem;
           }
@@ -755,6 +1165,36 @@
 } // End of Tablets
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  #header {
+    // Logo spacing
+    #navbar-top > section a.navbar-brand {
+      padding-left: 1.25rem;
+    }
+
+    // Dropdown menu
+    div#main-menu-list {
+      background-color: $csc-grey-blue;
+
+      ul.navbar-nav {
+        padding: 0 0 0 1rem;
+
+        ul.dropdown-menu {
+          margin: unset !important;
+          background-color: $uva-blue;
+
+          li {
+            padding: 0.25rem 1rem;
+
+            &:hover {
+              color: $uva-orange;
+            }
+          }
+        }
+      }
+    } // End of drop down menu for min-width: 768 max-width 1024
+  } // End of #header
+
+  // Front Page
   body.path-frontpage {
     // Teaser row
     .teaser-row {
@@ -763,13 +1203,19 @@
       }
     }
   }
+
   // Circl page
   body.page-node-144 {
     .circl-overlay {
       left: 3rem;
     }
   }
-}
+
+  // Staff Card size
+  .view-people .card.people {
+    width: 225px;
+  }
+} // End 768px to 1024px
 
 // Only Large (small laptops)
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -785,7 +1231,7 @@
     }
     #navbar-main {
       ul.navbar-nav {
-        li {
+        & > li {
           padding: 0;
         }
       }
@@ -820,24 +1266,59 @@
       }
 
       // Events row on home page
-      .events-row .wrapper {
-        padding: 0;
-      }
+      .events-row {
+        // Regions
+        .layout__region .wrapper {
+          padding: 0;
 
-      .featured-event {
-        max-width: 45vw;
-        .wrapper {
-          padding: 1rem !important;
-        }
-      }
+          .featured-event {
+            max-width: 45vw;
 
-      .upcoming-events {
-        max-width:48vw;
+            .wrapper {
+              padding: 1rem !important;
+            }
+          }
 
-        .view-content .views-row .views-group-meta h3 {
-          font-size: 1.4rem;
-        }
-      }
+          .upcoming-events {
+            padding: 3rem 1rem 1rem 3rem;
+            max-width: 48vw;
+
+            h3 {
+              padding-left: 0;
+            }
+
+            .view-content .views-row {
+              display: unset;
+
+              &:after {
+                display: block;
+                margin: 1rem 0 1rem;
+                height: 1px;
+                width: 70%;
+                border-bottom: solid $gray-400 1px;
+                content: ' ';
+              }
+
+              &:last-child:after {
+                display: none;
+              }
+
+              .views-group-meta h3 {
+                font-size: 1.4rem;
+              }
+
+              .views-field-field-image img {
+                width: 100%;
+              }
+            }
+          }
+          .block-content-basic p.view-more {
+            width: fit-content;
+            margin: 1rem auto !important;
+          }
+        }  // End of regions .wrapper
+      } // End .events-row
+
 
       .c-csc-highlight_row .wrapper {
         max-width: 95vw;
@@ -849,6 +1330,13 @@
           img {
             max-width: 80%;
           }
+        }
+      }
+
+      .home-research {
+        padding: 0;
+        .wrapper {
+          max-width: 90vw;
         }
       }
 
@@ -865,7 +1353,7 @@
   .custom-paragraphs {
     .c-csc-text_box.centered-intro {
       p img {
-        max-width: 90vw;
+        max-width: 80vw;
         height: auto;
       }
     }
