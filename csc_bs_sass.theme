@@ -155,6 +155,12 @@ function csc_bs_sass_preprocess_node(&$variables) {
   }
 }
 
+/*
+function csc_bs_sass_preprocess_block(&$variables) {
+ // If it is needed
+}
+*/
+
 function csc_bs_sass_preprocess_field(&$variables) {
   // General use variables
   $fld_name = $variables['field_name']; // Field name
@@ -235,6 +241,7 @@ function csc_bs_sass_preprocess_views_view(&$variables) {
   $roles = Array(
     'roles:staff' => 'Staff',
     'roles:advisory_board' => 'Advisory Board',
+    'roles:faculty_research_council' => 'Faculty Research Council',
   );
   // Add chosen role facet as a secondary header on the people page
   if ($viewId == 'people') {
@@ -250,6 +257,7 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
   $view = $variables['view'];
   $field = $variables['field'];
   $view_id = $view->storage->id();
+  if ($view_id == 'calendar_new') { return; }
   if ($view_id == 'events') {
     if ($field->field == 'field_tags') {
       $output = [];
@@ -271,7 +279,7 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
   // For homepage events to move the read-more link inside the body's last </p>
   // If Learn More link is created by view, it will necessarily be outside the </p> tag with some space between.
   // If this code is to be used elsewhere, the <a> must have these classes: class="d-inline-block ms-2 lh-1"
-  if ($view->storage->id() == 'homepage_events' &&
+  if ($view_id == 'homepage_events' &&
     $field->field == 'body') {
     // csc_log(str_replace(array('<', '>'), array('&lt;', '&gt;'), $variables['output']));  // For debugging
     $pattern = '/<\/p>\s*(<a[^>]+>[\s\S]+<\/a>)/'; // Looks for an <a> tag outside a </p> with some optional space
@@ -284,24 +292,17 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
 
 
 function csc_bs_sass_preprocess_facets_result_item(&$facet) {
-  // csc_log(json_encode([$variables['value'], array_keys($variables)]));
+  // Changing this to pluralizing only specific facets (none of which ar in use)
+  $pluralize = ['nobody'];
   $label = $facet['value'];
   $new_label = ucwords(str_replace('_', ' ', $label));
   /* Pluralizes facet names in facet box  on the left side of the people page */
-  if (!in_array($new_label, ['Staff', 'Advisory Board'])) {
+  if (in_array($new_label, $pluralize)) {
     $new_label = $new_label . 's';
   }
   $facet['value'] = $new_label;
   $facet['raw_value'] = $facet['value'];
 }
-/*
-function csc_bs_sass_preprocess_taxonomy_term(&$variables) {
-  if ($variables['term']->bundle() === 'content_filters') {
-    $term = $variables['term'];
-    $variables['content'] = `<a href="/filtered/{$term->id()}">{$term->label()}</a>`;
-  }
-}
-*/
 
 /**
  * Implements custom classes for paragraphs with bundle name

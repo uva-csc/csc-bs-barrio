@@ -831,7 +831,13 @@ div.geolocation-map-wrapper {
       } // End of .card-text
     }
   }
-}
+  &.frc {
+    .view-content {
+      max-width: unset;
+      gap: 15px;
+    }
+  }
+}  // End of .view-people
 
 // Social Media Feeds
 
@@ -965,7 +971,7 @@ div.bc-teaser {
 // Event listings on calendar
 .view.csc-calendar {
   .fc-event {
-    background-color: #abc0fd4d !important;
+    background-color: #abc0fd !important;
   }
 
   .calendar-view-pager, .calendar-view-pager__reset {

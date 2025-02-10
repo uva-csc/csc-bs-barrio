@@ -253,6 +253,7 @@ main#content {
     // Top header menu uses .menu-item, while navigation menu in primary header uses .nav-item
     .nav-item, .menu-item {
       a {
+        display: block;
         margin: 0 0.25rem 0 0;
         color: white;
         text-transform: uppercase;
