@@ -14671,7 +14671,7 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   /* Too General, effects /people/ben-benson profile pages */
 }
 .node--type-people .image-bio * {
-  color: white;
+  color: white !important;
 }
 .node--type-people .image-bio .field--name-field-image img {
   position: relative;
