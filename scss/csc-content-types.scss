@@ -496,6 +496,10 @@ body.node--type-event {
       }
     }
 
+    .block-csc-canceled-dates-block {
+      text-align: center;
+    }
+
   } // end of events layout region first
 
   // Side bar on events
@@ -755,6 +759,30 @@ body.node--type-class {
       font-weight: bold;
     }
 
+    .block-field-blocknodepeoplefield-url {
+      a {
+        color: white !important;
+
+        &:after {
+          display: inline-block;
+          content: url(/themes/custom/csc_bs_sass/images/icons/external-link-svgrepo.svg);
+          height: 20px !important;
+          width: 20px !important;
+          margin-left: 0.3rem;
+          color: white !important;
+          vertical-align: text-bottom;
+        };
+
+        &:hover {
+          color: $uva-orange !important;
+
+          &:after {
+            content: url(/themes/custom/csc_bs_sass/images/icons/external-link-svgrepo-orange.svg);
+          }
+        }
+      }
+    }
+
     .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
       margin-top: 75px;
     }
@@ -764,7 +792,7 @@ body.node--type-class {
     }
 
     .block-field-blocknodepeoplefield-bio {
-      margin-top: 130px;
+      margin-top: 60px;
 
       * {
         color: $uva-blue;
