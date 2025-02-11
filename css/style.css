@@ -14475,6 +14475,9 @@ body.node--type-event .layout__region.layout__region--first .field--name-field-i
   height: auto;
   filter: drop-shadow(8px 10px 3px #00000095);
 }
+body.node--type-event .layout__region.layout__region--first .block-csc-canceled-dates-block {
+  text-align: center;
+}
 body.node--type-event .layout__region.layout__region--second .wrapper {
   height: fit-content;
   width: 100%;
@@ -14682,6 +14685,24 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   font-size: 3rem;
   font-weight: bold;
 }
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a {
+  color: white !important;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a:after {
+  display: inline-block;
+  content: url(/themes/custom/csc_bs_sass/images/icons/external-link-svgrepo.svg);
+  height: 20px !important;
+  width: 20px !important;
+  margin-left: 0.3rem;
+  color: white !important;
+  vertical-align: text-bottom;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover {
+  color: #E57325 !important;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover:after {
+  content: url(/themes/custom/csc_bs_sass/images/icons/external-link-svgrepo-orange.svg);
+}
 .node--type-people .image-bio .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
   margin-top: 75px;
 }
@@ -14689,7 +14710,7 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   margin-top: 120px;
 }
 .node--type-people .image-bio .block-field-blocknodepeoplefield-bio {
-  margin-top: 130px;
+  margin-top: 60px;
 }
 .node--type-people .image-bio .block-field-blocknodepeoplefield-bio * {
   color: #232D4B;
