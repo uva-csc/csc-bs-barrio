@@ -128,6 +128,14 @@
           selectors: 'nav-link--csc-contact-info'
         },
         {
+          path: '/research',
+          selectors: 'nav-link--research'
+        },
+        {
+          path: '/events',
+          selectors: 'nav-link--events'
+        },
+        {
           path: '/events',
           hashes: [
             {
@@ -138,6 +146,15 @@
               hash: '#special-events',
               selectors: 'nav-link--eventsspecial-events',
             }
+          ]
+        },
+        {
+          path: '/students/opportunities',
+          hashes: [
+            {
+              hash: '#ccsa',
+              selectors: 'nav-link--students-opportunitiesccsa',
+            },
           ]
         },
       ];
