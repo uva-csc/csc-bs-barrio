@@ -118,6 +118,9 @@
   // Fixes drop down menu items not getting highlighted when on their page
   Drupal.behaviors.csc_bs_sass_menu_highlight = {
     attach: function(context, settings) {
+      // fix give menu link so it opens in new window
+      $('a.nav-link-https--wwwgivecampuscom-campaigns-19165-donations-new').attr('target', '_blank');
+      // Fix menu highlighting (greyed out) for specific links that aren't working
       const paths = [
         {
           path: '/research/salon',
