@@ -115,4 +115,68 @@
     }
   } // End of csc_bs_sass_social_media behavior
 
+  // Fixes drop down menu items not getting highlighted when on their page
+  Drupal.behaviors.csc_bs_sass_menu_highlight = {
+    attach: function(context, settings) {
+      const paths = [
+        {
+          path: '/research/salon',
+          selectors: 'nav-link--research-salon'
+        },
+        {
+          path: '/contact-us',
+          selectors: 'nav-link--csc-contact-info'
+        },
+        {
+          path: '/events',
+          hashes: [
+            {
+              hash: '#dropins',
+              selectors: 'nav-link--eventsdropins',
+            },
+            {
+              hash: '#special-events',
+              selectors: 'nav-link--eventsspecial-events',
+            }
+          ]
+        },
+      ];
+      $(document).ready(() => {
+        const loc = window.location.pathname;
+        const myhash = window.location.hash;
+        paths.forEach((data, index) => {
+          if (data.path === loc) {
+            if (data?.hashes) {
+              data.hashes.forEach((hdata, hindex) => {
+                if (hdata.hash === myhash) {
+                  $('.nav-item li.dropdown-item a.active').removeClass('active');
+                  $(`.nav-item li.dropdown-item`).has(`a.${hdata.selectors}`).addClass('active');
+                }
+              });
+            } else {
+              $(`.nav-item li.dropdown-item`).has(`a.${data.selectors}`).addClass('active');
+            }
+          }
+        }); // end of paths.forEach
+
+        $(window).on('hashchange', function () {
+          console.log("Hash changed to: " + location.hash);
+          const loc = window.location.pathname;
+          const myhash = window.location.hash;
+          paths.forEach((data, index) => {
+            if (data.path === loc) {
+              data.hashes.forEach((hdata, hindex) => {
+                if (hdata.hash === myhash) {
+                  $('.nav-item li.dropdown-item a.is-active').removeClass('is-active');
+                  $('.nav-item li.dropdown-item.active').removeClass('active');
+                  $(`.nav-item li.dropdown-item`).has(`a.${hdata.selectors}`).addClass('active');
+                }
+              });
+            }
+          });
+        }); // End of on hash change
+      }); // End of document ready
+    } // End of attach
+  } // End of csc_bs_sass_menu_highlight behavior
+
 })(jQuery, Drupal);
