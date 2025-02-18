@@ -646,7 +646,8 @@ div.view-empty {
 .view-news.view-display-id-page_1,
 .view-search-content.view-display-id-result_page,
 .view-resources,
-.view-taxonomy-term {
+.view-taxonomy-term,
+.view.shadow-box {
   .row.views-row {
     padding: 30px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
