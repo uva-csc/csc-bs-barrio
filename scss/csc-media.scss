@@ -385,6 +385,7 @@
   }
   // Individual Event Pages
   body.node--type-event {
+
     .block-field-blocknodeeventtitle {
       margin: 0 !important;
       border: none!important;
@@ -392,11 +393,19 @@
         font-size: 1.5rem !important;
       }
     }
+
+    .layout__region.layout__region--first .field--name-field-image {
+      padding: 0.5rem 0 0;
+      img {
+        filter: none!important;
+      }
+    }
+
     .layout__region.layout__region--second .wrapper {
       width: unset;
       max-width: unset;
       height: fit-content;
-      margin: 0.5rem 0 0 -1rem;
+      margin: 0 0 1.5rem;
     }
 
   } // End of events

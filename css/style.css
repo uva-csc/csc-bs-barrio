@@ -17194,11 +17194,17 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   body.node--type-event .block-field-blocknodeeventtitle span {
     font-size: 1.5rem !important;
   }
+  body.node--type-event .layout__region.layout__region--first .field--name-field-image {
+    padding: 0.5rem 0 0;
+  }
+  body.node--type-event .layout__region.layout__region--first .field--name-field-image img {
+    filter: none !important;
+  }
   body.node--type-event .layout__region.layout__region--second .wrapper {
     width: unset;
     max-width: unset;
     height: fit-content;
-    margin: 0.5rem 0 0 -1rem;
+    margin: 0 0 1.5rem;
   }
 
   .view.view-classes .views-view-table thead {
