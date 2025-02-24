@@ -16933,9 +16933,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
   #page-wrapper main#content nav ol.breadcrumb ol {
     display: inline-block;
+    margin-left: -0.35rem;
   }
   #page-wrapper main#content nav ol.breadcrumb li.breadcrumb-item.active {
-    display: none !important;
+    /*display: none!important;*/
   }
   #page-wrapper main#content .block-system-breadcrumb-block {
     margin: 0 !important;

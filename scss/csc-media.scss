@@ -19,10 +19,11 @@
         margin: 1rem 0 0 0;
         ol {
           display: inline-block;
+          margin-left: -0.35rem;
         }
 
         li.breadcrumb-item.active {
-          display: none!important;
+          /*display: none!important;*/
         }
       }
 
