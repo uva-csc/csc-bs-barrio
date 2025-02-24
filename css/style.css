@@ -13677,6 +13677,7 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
   font-weight: 900 !important;
   text-transform: uppercase;
   border: none;
+  white-space: nowrap;
 }
 #student-featured.features > .layout__region .field--name-field-teaser-image, #student-featured.features > .layout__region .field--name-field-image {
   display: flex;
@@ -14493,7 +14494,7 @@ body.node--type-event .layout__region.layout__region--second .wrapper .field--na
   font-weight: bold;
   margin-bottom: 1rem;
 }
-body.node--type-event .layout__region.layout__region--second .wrapper .exceptions {
+body.node--type-event .layout__region.layout__region--second .wrapper .exceptions, body.node--type-event .layout__region.layout__region--second .wrapper .block-csc-canceled-dates-block {
   font-style: italic;
   width: 100%;
   text-align: center;
@@ -16081,6 +16082,7 @@ div.layout.bc-inline .block-system-breadcrumb-block nav ol.breadcrumb *,
 #breadcrumbs.inline nav ol.breadcrumb * {
   display: inline-block;
   padding-inline-start: 0px;
+  white-space: nowrap;
 }
 
 #breadcrumbs.inline {
@@ -17645,9 +17647,6 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   body.page-node-144 .circl-overlay {
     left: 0 !important;
   }
-  body.page-node-144 .circl-overlay .field--type-image img {
-    margin-left: 4rem;
-  }
   body.page-node-144 .circl-overlay .text-overlay {
     text-align: center;
   }
@@ -17725,6 +17724,10 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
     display: none;
   }
 
+  .circl-overlay.row .field--name-field-media-image {
+    max-width: 30vw;
+  }
+
   .view-news .views-row .views-field-field-teaser-image {
     width: fit-content;
     margin: 0 auto;
@@ -17796,11 +17799,23 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
   }
 
   body.page-node-144 .circl-overlay {
-    left: 3rem;
+    left: 6vw !important;
+  }
+  body.page-node-144 .circl-overlay .logo {
+    margin: 0;
+  }
+
+  .opportunities.bc-content .layout__region--first {
+    padding-right: 1rem;
   }
 
   .view-people .card.people {
     width: 225px;
+  }
+}
+@media (min-width: 992px) {
+  .teaser-row .layout__region {
+    text-align: center;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -17814,6 +17829,10 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
   }
   #header #navbar-main ul.navbar-nav > li {
     padding: 0;
+  }
+
+  .layout--twocol-section .layout__region--second {
+    padding-left: 0;
   }
 
   body.path-frontpage main#content .c-csc-text_row .field--name-field-text-boxes {
@@ -17830,6 +17849,9 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
   }
   body.path-frontpage main#content .teaser-row .field--name-field-teaser-image img, body.path-frontpage main#content .teaser-row .field--name-field-image img, body.path-frontpage main#content .teaser-row .views-field-field-teaser-image img {
     max-width: 250px;
+  }
+  body.path-frontpage main#content .your-space-row .layout__region--second {
+    padding-left: 0.5rem;
   }
   body.path-frontpage main#content .events-row .layout__region .wrapper {
     padding: 0;
@@ -17866,6 +17888,7 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
   }
   body.path-frontpage main#content .events-row .layout__region .wrapper .upcoming-events .view-content .views-row .views-field-field-image img {
     width: 100%;
+    max-width: unset;
   }
   body.path-frontpage main#content .events-row .layout__region .wrapper .block-content-basic p.view-more {
     width: fit-content;
@@ -17908,11 +17931,23 @@ body.path-frontpage main#content .teaser-row.layout--fourcol-section .layout__re
     width: auto;
   }
 
+  .layout--threecol-section.teaser-row {
+    justify-content: space-around;
+  }
+
+  .circl-overlay.row .field--name-field-media-image {
+    max-width: 30vw;
+  }
+
   .view.event-col .view-header h2, .view.event-col .view-header .h2, .view.event-col .view.event-col .view-header .h2 {
     font-size: 3.5rem;
   }
   .view.event-col .views-field-field-image img {
     max-width: 200px;
+  }
+
+  .page-view-calendar #main.container {
+    max-width: 100vw;
   }
 }
 @media (max-width: 1263px) {
