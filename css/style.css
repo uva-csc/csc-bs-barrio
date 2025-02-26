@@ -15444,6 +15444,9 @@ div.view-empty {
 .csc-calendar-view table.calendar-view-table .previous-month .calendar-view-day__rows, .csc-calendar-view table.calendar-view-table .next-month .calendar-view-day__rows {
   display: none;
 }
+.csc-calendar-view table.calendar-view-table td.is-today {
+  border: thick solid #aaa !important;
+}
 .csc-calendar-view.day {
   display: grid;
   grid-template-rows: repeat(24, minmax(40px, auto));

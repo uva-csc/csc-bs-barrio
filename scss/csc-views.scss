@@ -601,6 +601,10 @@ div.view-empty {
       }
     }
 
+    td.is-today {
+      border: thick solid #aaa !important;
+    }
+
   } // end of calendar-view-table
 
   // Calendar view day
