@@ -15428,6 +15428,17 @@ div.view-empty {
   text-transform: capitalize;
   color: #232D4B;
 }
+.csc-calendar-view .calendar-view-pager .pager__current div#today-link {
+  margin-top: -3rem;
+  font-weight: normal;
+}
+.csc-calendar-view .calendar-view-pager .pager__current div#today-link a {
+  font-size: 0.9rem !important;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+}
 .csc-calendar-view table.calendar-view-table > caption {
   display: none;
 }

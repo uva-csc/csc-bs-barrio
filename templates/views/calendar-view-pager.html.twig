@@ -1,0 +1,35 @@
+{#
+/**
+ * The template to display the Calendar Pager plugin.
+ *
+ * Important: `js-pager__items` class is required for Ajax.
+ *
+ * @see template_preprocess_calendar_view_pager()
+ */
+#}
+{%
+  set classes = [
+    'pager__items',
+    'js-pager__items',
+    'calendar-view-pager',
+  ]
+%}
+
+{% if items|length %}
+  <ul {{ attributes.addClass(classes) }}>
+    {% for key,item in items|without('reset') %}
+      <li class="pager__item {{ 'pager__' ~ key|clean_class }}">
+        {{- item -}}
+        {% if key == 'current' %}
+          <div id="today-link" class="text-center"><a href="#">Scroll to Today</a></div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if items.reset %}
+    <div class="calendar-view-pager__reset">
+      {{- items.reset -}}
+    </div>
+  {% endif %}
+{% endif %}

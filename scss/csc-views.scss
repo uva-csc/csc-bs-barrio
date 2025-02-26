@@ -577,6 +577,17 @@ div.view-empty {
         text-transform: capitalize;
         color: $uva-blue;
       }
+      div#today-link {
+        margin-top: -3rem;
+        font-weight: normal;
+        a {
+          font-size: 0.9rem !important;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0;
+          width: fit-content;
+        }
+      }
     }
   }  // end of pager
 
