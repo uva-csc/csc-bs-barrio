@@ -161,27 +161,25 @@
       $(document).ready(() => {
         const loc = window.location.pathname;
         const myhash = window.location.hash;
-        console.log('myhash', myhash);
         paths.forEach((data, index) => {
           if (data.path === loc) {
-            console.log("found path", loc, data);
-            data.hashes.forEach((hdata, hindex) => {
-              if (hdata.hash === myhash) {
-                $('.nav-item li.dropdown-item a.active').removeClass('active');
-                $(`.nav-item li.dropdown-item`).has(`a.${hdata.selectors}`).addClass('active');
-              }
-            });
+            if (myhash?.length > 0) {
+              data.hashes.forEach((hdata, hindex) => {
+                if (hdata.hash === myhash) {
+                  $('.nav-item li.dropdown-item a.active').removeClass('active');
+                  $(`.nav-item li.dropdown-item`).has(`a.${hdata.selectors}`).addClass('active');
+                }
+              });
+            }
             $(`.nav-item li.dropdown-item`).has(`a.${data.selectors}`).addClass('active');
           }
         }); // end of paths.forEach
 
         $(window).on('hashchange', function () {
-          console.log("Hash changed to: " + location.hash);
           const loc = window.location.pathname;
           const myhash = window.location.hash;
           paths.forEach((data, index) => {
             if (data.path === loc) {
-              console.log("data in loc match", data);
               data.hashes.forEach((hdata, hindex) => {
                 if (hdata.hash === myhash) {
                   $('.nav-item li.dropdown-item a.is-active').removeClass('is-active');
@@ -189,6 +187,7 @@
                   $(`.nav-item li.dropdown-item`).has(`a.${hdata.selectors}`).addClass('active');
                 }
               });
+              $(`.nav-item li.dropdown-item`).has(`a.${data.selectors}`).addClass('active');
             }
           });
         }); // End of on hash change
