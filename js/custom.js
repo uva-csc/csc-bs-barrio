@@ -199,4 +199,16 @@
     } // End of attach
   } // End of csc_bs_sass_menu_highlight behavior
 
+  Drupal.behaviors.csc_bs_sass_calendar = {
+    attach: function(context, settings) {
+      $(document).ready(() => {
+        $('div#today-link a').click((e) => {
+          e.preventDefault();
+          $('td.is-today').get(0).scrollIntoView();
+          return false;
+        })
+      });
+    }
+  } // End of Calendar
+
 })(jQuery, Drupal);

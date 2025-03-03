@@ -577,6 +577,17 @@ div.view-empty {
         text-transform: capitalize;
         color: $uva-blue;
       }
+      div#today-link {
+        margin-top: -3rem;
+        font-weight: normal;
+        a {
+          font-size: 0.9rem !important;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0;
+          width: fit-content;
+        }
+      }
     }
   }  // end of pager
 
@@ -593,6 +604,16 @@ div.view-empty {
     } // end of thead
     .calendar-view-day__row {
       font-size: 1rem;
+    }
+
+    .previous-month, .next-month {
+      .calendar-view-day__rows {
+        display: none;
+      }
+    }
+
+    td.is-today {
+      border: thick solid #aaa !important;
     }
 
   } // end of calendar-view-table
@@ -646,7 +667,8 @@ div.view-empty {
 .view-news.view-display-id-page_1,
 .view-search-content.view-display-id-result_page,
 .view-resources,
-.view-taxonomy-term {
+.view-taxonomy-term,
+.view.shadow-box {
   .row.views-row {
     padding: 30px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
