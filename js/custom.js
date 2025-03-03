@@ -136,10 +136,7 @@
         },
         {
           path: '/events',
-          selectors: 'nav-link--events'
-        },
-        {
-          path: '/events',
+          selectors: 'nav-link--events',
           hashes: [
             {
               hash: '#dropins',
@@ -164,18 +161,17 @@
       $(document).ready(() => {
         const loc = window.location.pathname;
         const myhash = window.location.hash;
+        console.log('myhash', myhash);
         paths.forEach((data, index) => {
           if (data.path === loc) {
-            if (data?.hashes) {
-              data.hashes.forEach((hdata, hindex) => {
-                if (hdata.hash === myhash) {
-                  $('.nav-item li.dropdown-item a.active').removeClass('active');
-                  $(`.nav-item li.dropdown-item`).has(`a.${hdata.selectors}`).addClass('active');
-                }
-              });
-            } else {
-              $(`.nav-item li.dropdown-item`).has(`a.${data.selectors}`).addClass('active');
-            }
+            console.log("found path", loc, data);
+            data.hashes.forEach((hdata, hindex) => {
+              if (hdata.hash === myhash) {
+                $('.nav-item li.dropdown-item a.active').removeClass('active');
+                $(`.nav-item li.dropdown-item`).has(`a.${hdata.selectors}`).addClass('active');
+              }
+            });
+            $(`.nav-item li.dropdown-item`).has(`a.${data.selectors}`).addClass('active');
           }
         }); // end of paths.forEach
 
@@ -185,6 +181,7 @@
           const myhash = window.location.hash;
           paths.forEach((data, index) => {
             if (data.path === loc) {
+              console.log("data in loc match", data);
               data.hashes.forEach((hdata, hindex) => {
                 if (hdata.hash === myhash) {
                   $('.nav-item li.dropdown-item a.is-active').removeClass('is-active');
