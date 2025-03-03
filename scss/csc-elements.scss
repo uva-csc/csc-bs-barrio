@@ -143,6 +143,7 @@ div.layout.bc-inline .block-system-breadcrumb-block,
     * {
       display: inline-block;
       padding-inline-start: 0px;
+      white-space: nowrap;
     }
   }
 }

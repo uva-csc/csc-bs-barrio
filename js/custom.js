@@ -115,4 +115,17 @@
     }
   } // End of csc_bs_sass_social_media behavior
 
+  Drupal.behaviors.csc_bs_sass_calendar = {
+    attach: function(context, settings) {
+      $(document).ready(() => {
+        $('div#today-link a').click((e) => {
+          e.preventDefault();
+          console.log($('td.is-today').get(0));
+          $('td.is-today').get(0).scrollIntoView();
+          return false;
+        })
+      });
+    }
+  } // End of Calendar
+
 })(jQuery, Drupal);
