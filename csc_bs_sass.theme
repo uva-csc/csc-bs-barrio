@@ -9,6 +9,7 @@ use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\node\NodeInterface;
+use Drupal\redirect\Entity\Redirect;
 use Drupal\Component\Utility\Html;
 use Drupal\smart_date\SmartDateOccurrence;
 use Drupal\smart_date_recur\Entity\SmartDateRule;
@@ -231,7 +232,21 @@ function csc_bs_sass_preprocess_field(&$variables) {
     $numchild = $el['#items']->count();
     // Number of bs cols is 12 / num child if num child under 5
     $variables['bscolspan'] = ($numchild < 5) ? 12 / $numchild : 2;
-  } // end of caption images field
+    // end of caption images field
+  // URL Field
+  } elseif ($fld_name == 'field_url') {
+    csc_log("URL field in a $ctype");
+    $view_mode = $el['#third_party_settings']['layout_builder']['view_mode'];
+    if ($ctype == 'news_item' && $view_mode == 'full') {
+      $show_link = $node->get('field_show_link')->value;
+      if (!$show_link) {
+        unset($variables['items']); // Remove the link (field_url) from render array so it doesn't display
+      }
+      $display_sl = ($show_link) ? 'true, true' : 'absolutely false';
+      csc_log("Show link? $display_sl ($show_link)");
+
+    }
+  }
 }
 
 /* View Preprocessing */
