@@ -235,16 +235,14 @@ function csc_bs_sass_preprocess_field(&$variables) {
     // end of caption images field
   // URL Field
   } elseif ($fld_name == 'field_url') {
-    csc_log("URL field in a $ctype");
+    // In Full view mode of News Item, show link if checkbox "Show Link" is checked. (i.e. if true, do nothing)
     $view_mode = $el['#third_party_settings']['layout_builder']['view_mode'];
     if ($ctype == 'news_item' && $view_mode == 'full') {
       $show_link = $node->get('field_show_link')->value;
+      // If checkbox is not checked, then
       if (!$show_link) {
         unset($variables['items']); // Remove the link (field_url) from render array so it doesn't display
       }
-      $display_sl = ($show_link) ? 'true, true' : 'absolutely false';
-      csc_log("Show link? $display_sl ($show_link)");
-
     }
   }
 }
