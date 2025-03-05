@@ -745,7 +745,13 @@ body.node--type-class {
   .image-bio {
     margin-top: -200px;
 
-    * {
+    .block-field-blocknodepeopletitle,
+    .block-field-blocknodepeoplefield-csc-role,
+    .block-field-blocknodepeoplefield-job-title,
+    .block-field-blocknodepeoplefield-email,
+    .block-field-blocknodepeoplefield-pronouns,
+    .block-field-blocknodepeoplefield-url
+    {
       color: white !important;
     }
 
@@ -788,7 +794,7 @@ body.node--type-class {
     }
 
     .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
-      margin-top: 75px;
+      margin-top: 50px;
     }
 
     .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {

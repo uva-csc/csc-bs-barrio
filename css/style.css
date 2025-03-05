@@ -14677,7 +14677,12 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   margin-top: -200px;
   /* Too General, effects /people/ben-benson profile pages */
 }
-.node--type-people .image-bio * {
+.node--type-people .image-bio .block-field-blocknodepeopletitle,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-csc-role,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-job-title,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-email,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url {
   color: white !important;
 }
 .node--type-people .image-bio .field--name-field-image img {
@@ -14708,7 +14713,7 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   content: url(/themes/custom/csc_bs_sass/images/icons/external-link-svgrepo-orange.svg);
 }
 .node--type-people .image-bio .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
-  margin-top: 75px;
+  margin-top: 50px;
 }
 .node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
   margin-top: 120px;
