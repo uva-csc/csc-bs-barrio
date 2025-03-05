@@ -14676,6 +14676,18 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio {
   margin-top: -200px;
   /* Too General, effects /people/ben-benson profile pages */
+  /*
+      .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
+        margin-top: 60px;
+      }*/
+  /*
+      .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
+        margin-top: 120px;
+      }
+
+      .block-field-blocknodepeoplefield-csc-role + .block-field-blocknodepeoplefield-bio {
+        margin-top: 135px !important;
+      }*/
 }
 .node--type-people .image-bio .block-field-blocknodepeopletitle,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-csc-role,
@@ -14712,14 +14724,20 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover:after {
   content: url(/themes/custom/csc_bs_sass/images/icons/external-link-svgrepo-orange.svg);
 }
-.node--type-people .image-bio .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-bio:nth-child(3) {
+  margin-top: 130px;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-bio:nth-child(4) {
+  margin-top: 110px;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-bio:nth-child(5) {
+  margin-top: 80px;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-bio:nth-child(6) {
   margin-top: 60px;
 }
-.node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
-  margin-top: 120px;
-}
-.node--type-people .image-bio .block-field-blocknodepeoplefield-csc-role + .block-field-blocknodepeoplefield-bio {
-  margin-top: 135px !important;
+.node--type-people .image-bio .block-field-blocknodepeoplefield-bio:nth-child(7) {
+  margin-top: 40px;
 }
 .node--type-people .image-bio .block-field-blocknodepeoplefield-bio {
   margin-top: 60px;
