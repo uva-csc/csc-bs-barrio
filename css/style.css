@@ -15481,7 +15481,7 @@ div.view-empty {
 .csc-calendar-view table.calendar-view-table .calendar-view-day__row {
   font-size: 1rem;
 }
-.csc-calendar-view table.calendar-view-table .previous-month .calendar-view-day__rows, .csc-calendar-view table.calendar-view-table .next-month .calendar-view-day__rows {
+.csc-calendar-view table.calendar-view-table .previous-month .calendar-view-day__rows {
   display: none;
 }
 .csc-calendar-view table.calendar-view-table td.is-today {
