@@ -256,6 +256,22 @@ body.node--type-landing-page {
 
 // Full Width Pages
 .node--type-page-full-width {
+  // Full Width Full Page
+  .c-csc-hero + .hero-caption {
+    .field--name-field-caption {
+      width: fit-content;
+      margin: -1rem 1rem 0 0;
+      padding: 0 0 1.5rem 1rem;
+      color: $caption-color;
+      font-size: 80%;
+      font-family: $font-libre-caslon;
+
+      a {
+        color: $caption-color;
+      }
+    }
+  }
+
   // Full Width Page Teaser
   &.node--view-mode-teaser {
     .field--name-field-image,
