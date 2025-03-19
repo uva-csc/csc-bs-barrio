@@ -14286,7 +14286,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-family: franklin-gothic-urw, sans-serif;
 }
 
-.node--type-page-full-width .c-csc-hero .field--name-field-overlay-text h2, .node--type-page-full-width .c-csc-hero .field--name-field-overlay-text .h2 {
+body.node--type-page-full-width:not(.path-frontpage) .c-csc-hero .field--name-field-overlay-text h2, body.node--type-page-full-width:not(.path-frontpage) .c-csc-hero .field--name-field-overlay-text .h2 {
   margin-top: 0;
   padding: 12px 0 10px;
   background-color: #22222277;
@@ -14297,7 +14297,7 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   letter-spacing: 0.1rem;
   font-size: 2rem;
 }
-.node--type-page-full-width .c-csc-hero + .hero-caption .field--name-field-caption {
+body.node--type-page-full-width:not(.path-frontpage) .c-csc-hero + .hero-caption .field--name-field-caption {
   width: fit-content;
   margin: 0.5rem 0 0 0.25rem;
   padding: 0 0 1.5rem 1rem;
@@ -14305,26 +14305,26 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-size: 80%;
   font-family: "Libre Caslon Text", serif;
 }
-.node--type-page-full-width .c-csc-hero + .hero-caption .field--name-field-caption a {
+body.node--type-page-full-width:not(.path-frontpage) .c-csc-hero + .hero-caption .field--name-field-caption a {
   color: #727272;
 }
-.node--type-page-full-width.node--view-mode-teaser .field--name-field-image img,
-.node--type-page-full-width.node--view-mode-teaser .field--name-field-teaser-image img {
+body.node--type-page-full-width:not(.path-frontpage).node--view-mode-teaser .field--name-field-image img,
+body.node--type-page-full-width:not(.path-frontpage).node--view-mode-teaser .field--name-field-teaser-image img {
   max-width: 410px;
 }
-.node--type-page-full-width.node--view-mode-teaser h3, .node--type-page-full-width.node--view-mode-teaser .h3 {
+body.node--type-page-full-width:not(.path-frontpage).node--view-mode-teaser h3, body.node--type-page-full-width:not(.path-frontpage).node--view-mode-teaser .h3 {
   font-family: franklin-gothic-urw-cond, sans-serif;
   font-size: 24px;
   font-weight: bold;
   width: 100%;
   text-align: center;
 }
-.node--type-page-full-width.node--view-mode-alt-teaser h3, .node--type-page-full-width.node--view-mode-alt-teaser .h3 {
+body.node--type-page-full-width:not(.path-frontpage).node--view-mode-alt-teaser h3, body.node--type-page-full-width:not(.path-frontpage).node--view-mode-alt-teaser .h3 {
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: bold;
   padding: 0.5rem 0 0.25rem;
 }
-.node--type-page-full-width.node--view-mode-alt-teaser .field--name-body.field--type-text-with-summary, .node--type-page-full-width.node--view-mode-alt-teaser p {
+body.node--type-page-full-width:not(.path-frontpage).node--view-mode-alt-teaser .field--name-body.field--type-text-with-summary, body.node--type-page-full-width:not(.path-frontpage).node--view-mode-alt-teaser p {
   font-size: 1.1rem;
   line-height: 1.5;
 }

@@ -255,7 +255,7 @@ body.node--type-landing-page {
 } // End of Landing page styles
 
 // Full Width Pages
-.node--type-page-full-width {
+body.node--type-page-full-width:not(.path-frontpage) {
   // Full Width Full Page
   .c-csc-hero {
     .field--name-field-overlay-text {
