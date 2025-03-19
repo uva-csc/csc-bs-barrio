@@ -477,6 +477,19 @@
       margin-left: 0rem;
     }
     .layout--twocol-section {
+      // For Teaser images on Circl page and JCS
+      .layout__region {
+        .node--type-landing-page,
+        .node--type-page-full-width {
+          .field--name-field-teaser-image,
+          .field--name-field-image {
+            img {
+              height: unset;
+            }
+          }
+        }
+      }
+
       .layout__region--first {
         max-width: 100vw;
         padding: 0;
@@ -517,7 +530,7 @@
           }
         }
       }
-    }
+    } // End of .layout--twcol-section
   }
 
   // Student hub pages

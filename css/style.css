@@ -17321,6 +17321,12 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   body.node--type-class .bc-inline.layout.layout--onecol {
     margin-left: 0rem;
   }
+  body.node--type-class .layout--twocol-section .layout__region .node--type-landing-page .field--name-field-teaser-image img,
+body.node--type-class .layout--twocol-section .layout__region .node--type-landing-page .field--name-field-image img,
+body.node--type-class .layout--twocol-section .layout__region .node--type-page-full-width .field--name-field-teaser-image img,
+body.node--type-class .layout--twocol-section .layout__region .node--type-page-full-width .field--name-field-image img {
+    height: unset;
+  }
   body.node--type-class .layout--twocol-section .layout__region--first {
     max-width: 100vw;
     padding: 0;
