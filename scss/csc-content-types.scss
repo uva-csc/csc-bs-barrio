@@ -744,9 +744,36 @@ body.node--type-class {
 
 // Location Pages
 .node--type-location {
-  #main .field--name-field-image {
-    float: right;
-    padding: 0 1rem 0.5rem;
+  #main {
+    .node--view-mode-full {
+      .block-field-blocknodelocationfield-short-title {
+        width: fit-content;
+        margin: -2rem auto 1.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .field--name-field-image {
+        float: right;
+        padding: 0 1rem 0.5rem;
+      }
+
+      .layout__region--second .wrapper {
+        background-color: #eeeeee;
+        margin-top: 40px;
+        padding: 35px 25px;
+
+        .field--name-field-hours {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          margin: 0.75rem 0 0.5rem;
+        }
+        .block-field-blocknodelocationfield-address {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 

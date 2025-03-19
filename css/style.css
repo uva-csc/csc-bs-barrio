@@ -14675,9 +14675,30 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   display: none;
 }
 
-.node--type-location #main .field--name-field-image {
+.node--type-location #main .node--view-mode-full .block-field-blocknodelocationfield-short-title {
+  width: fit-content;
+  margin: -2rem auto 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.node--type-location #main .node--view-mode-full .field--name-field-image {
   float: right;
   padding: 0 1rem 0.5rem;
+}
+.node--type-location #main .node--view-mode-full .layout__region--second .wrapper {
+  background-color: #eeeeee;
+  margin-top: 40px;
+  padding: 35px 25px;
+}
+.node--type-location #main .node--view-mode-full .layout__region--second .wrapper .field--name-field-hours {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0.75rem 0 0.5rem;
+}
+.node--type-location #main .node--view-mode-full .layout__region--second .wrapper .block-field-blocknodelocationfield-address {
+  display: block;
+  text-align: center;
 }
 
 .node--type-people .blue-banner {
