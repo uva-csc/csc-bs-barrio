@@ -14286,6 +14286,17 @@ body.node--type-landing-page main#content .block-field-blocknodelanding-pagebody
   font-family: franklin-gothic-urw, sans-serif;
 }
 
+.node--type-page-full-width .c-csc-hero .field--name-field-overlay-text h2, .node--type-page-full-width .c-csc-hero .field--name-field-overlay-text .h2 {
+  margin-top: 0;
+  padding: 12px 0 10px;
+  background-color: #22222277;
+  color: #fdfdfd;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+}
 .node--type-page-full-width .c-csc-hero + .hero-caption .field--name-field-caption {
   width: fit-content;
   margin: 0.5rem 0 0 0.25rem;

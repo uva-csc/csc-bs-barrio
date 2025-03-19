@@ -257,17 +257,32 @@ body.node--type-landing-page {
 // Full Width Pages
 .node--type-page-full-width {
   // Full Width Full Page
-  .c-csc-hero + .hero-caption {
-    .field--name-field-caption {
-      width: fit-content;
-      margin: 0.5rem 0 0 0.25rem;
-      padding: 0 0 1.5rem 1rem;
-      color: $caption-color;
-      font-size: 80%;
-      font-family: $font-libre-caslon;
-
-      a {
+  .c-csc-hero {
+    .field--name-field-overlay-text {
+      h2 {
+        margin-top: 0;
+        padding: 12px 0 10px;
+        background-color: #22222277;
+        color: #fdfdfd;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 900 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 2rem;
+      }
+    }
+    & + .hero-caption {
+      .field--name-field-caption {
+        width: fit-content;
+        margin: 0.5rem 0 0 0.25rem;
+        padding: 0 0 1.5rem 1rem;
         color: $caption-color;
+        font-size: 80%;
+        font-family: $font-libre-caslon;
+
+        a {
+          color: $caption-color;
+        }
       }
     }
   }
