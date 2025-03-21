@@ -15117,6 +15117,7 @@ p.view-more a {
 
 .view.featured-event .views-field-title {
   font-size: 1.5rem;
+  line-height: 1.25;
 }
 .view.featured-event .views-field-field-date {
   margin: 0 0 0.5rem;
