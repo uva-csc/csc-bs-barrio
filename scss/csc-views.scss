@@ -165,6 +165,10 @@ p.view-more {
         border-bottom: none;
       }
 
+      br {
+        display: none;
+      }
+
       /*&:hover {
         border-bottom: $csc-link;
       }*/

@@ -15188,6 +15188,9 @@ p.view-more a {
 .view.event-col .views-row .views-field.title a {
   border-bottom: none;
 }
+.view.event-col .views-row .views-field.title br {
+  display: none;
+}
 .view.event-col .views-row .views-field.date, .view.event-col .views-row .views-field.time, .view.event-col .views-row .views-field.audience {
   font-size: 90%;
   font-weight: normal;
