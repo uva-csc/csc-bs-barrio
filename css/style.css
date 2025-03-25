@@ -13329,7 +13329,8 @@ main#content {
 }
 #header .navbar .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  margin: -0.4rem 0 0 -4rem;
+  min-width: 250px;
+  margin: -0.4rem 0 0;
   padding: 0 1rem 0.5rem;
   line-height: 2.5;
   color: #232D4B;
@@ -18202,6 +18203,10 @@ div.highlighted, div.highlighted div, div.highlighted aside {
 
 div#drupal-off-canvas li:not(.ui-menu-item) a {
   color: white !important;
+}
+
+#edit-field-short-title-wrapper .filter-tips {
+  display: none;
 }
 
 /* GENERAL STYLES
