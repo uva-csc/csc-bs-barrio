@@ -14682,13 +14682,13 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   font-weight: bold;
 }
 .node--type-location #main .node--view-mode-full .field--name-field-image {
-  float: right;
+  /* float: right; */
   padding: 0 1rem 0.5rem;
 }
 .node--type-location #main .node--view-mode-full .layout__region--second .wrapper {
-  background-color: #eeeeee;
-  margin-top: 40px;
-  padding: 35px 25px;
+  /* background-color: #eeeeee;
+   margin-top: 40px;
+   padding: 35px 25px;*/
 }
 .node--type-location #main .node--view-mode-full .layout__region--second .wrapper .field--name-field-hours {
   display: inline-block;
@@ -15571,6 +15571,7 @@ div.view-empty {
   align-items: center;
 }
 
+.view.csc-list-wide .row.views-row,
 .view-events.events-list-alt .row.views-row,
 .view-news.view-display-id-page_1 .row.views-row,
 .view-search-content.view-display-id-result_page .row.views-row,
