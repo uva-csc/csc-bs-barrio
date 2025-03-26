@@ -584,13 +584,17 @@ div.view-empty {
       }
       div#today-link {
         margin-top: -3rem;
+        padding-right: 1.5rem;
         font-weight: normal;
         a {
           font-size: 0.9rem !important;
+          font-style: italic;
           display: inline-block;
           margin: 0 auto;
           padding: 0;
           width: fit-content;
+          line-height: 1.2;
+          border-bottom: $uva-orange solid 2px;
         }
       }
     }
