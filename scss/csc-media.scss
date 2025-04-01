@@ -332,10 +332,15 @@
     &.featured-event {
       .views-row {
         .views-field:not(.views-field-field-image) {
-          margin-left: 1rem;
+            margin-left: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .text-center hr {
+          color: transparent;
         }
       }
     }
+
     &.event-col {
       .row {
         margin: 0;
@@ -369,7 +374,6 @@
       }
     }
 
-
     &.events-list-alt {
       .view-header .res-sum {
         float: none;
@@ -383,10 +387,25 @@
 
       .row.views-row {
         margin: 0;
+        padding: 0;
+
+        .views-field-body {
+          padding:0 1.5rem 0.5rem !important;
+        }
       }
     }
   } // end of .view.view-events
 
+
+  #special-events {
+    &.mt-5 {
+      margin-top: 0!important;
+    }
+    .block-views-blockevents-block-5 h2 {
+      font-size: 220%;
+      text-transform: uppercase;
+    }
+  }
   .view-events.events-row-teasers {
     .field--name-field-target-audience {
       position: relative!important;
@@ -963,6 +982,10 @@
       padding-bottom: 25px;
       border-bottom: 2px solid $uva-blue;
 
+      &:last-of-type {
+        border-bottom: none;
+      }
+
       & > div:first-child {
         margin: 0;
 
@@ -972,6 +995,20 @@
       }
       & > div:nth-child(2) {
         margin: 0;
+      }
+    }
+
+    .view-footer {
+      width: 100vw;
+      p.view-more {
+        width: fit-content;
+        margin: 0 auto 1.5rem;
+      }
+      &:after {
+        display: block;
+        content: ' ';
+        border-bottom: 2px solid black;
+        margin: 0 0 0 0;
       }
     }
   }  // End of .events-col
