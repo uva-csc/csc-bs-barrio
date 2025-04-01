@@ -574,6 +574,10 @@
 
         div.instagram-feed {
           margin: 1rem auto;
+
+          blockquote {
+            min-width: 335px;
+          }
         }
 
         iframe {

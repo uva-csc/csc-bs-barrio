@@ -17442,6 +17442,9 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .layout.media-feeds .layout__region .csc-social-feed-block div.instagram-feed, .layout.media-feeds .layout__region .csc-social-feed-block .content div.instagram-feed {
     margin: 1rem auto;
   }
+  .layout.media-feeds .layout__region .csc-social-feed-block div.instagram-feed blockquote, .layout.media-feeds .layout__region .csc-social-feed-block .content div.instagram-feed blockquote {
+    min-width: 335px;
+  }
   .layout.media-feeds .layout__region .csc-social-feed-block iframe, .layout.media-feeds .layout__region .csc-social-feed-block .content iframe {
     margin: 1rem auto !important;
   }
