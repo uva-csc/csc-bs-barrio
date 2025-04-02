@@ -598,6 +598,21 @@ div.csc-give-link {
   filter: none!important;
 }
 
+// For Drupal Media images, classes wind up on enclosing div
+div.media-div {
+  &.rnd {
+    img {
+      border-radius: 0.3rem !important;
+    }
+  }
+
+  &.shad {
+    img {
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    }
+  }
+}
+
 .caption {
   font-style: italic;
 }

@@ -16561,6 +16561,13 @@ div.csc-give-link .content .field--name-body p a:hover {
   filter: none !important;
 }
 
+div.media-div.rnd img {
+  border-radius: 0.3rem !important;
+}
+div.media-div.shad img {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
 .caption {
   font-style: italic;
 }
@@ -17029,6 +17036,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     font-size: 0.8rem;
     line-height: 1.5;
   }
+  #page-wrapper main#content nav {
+    width: 90vw;
+    overflow: hidden;
+  }
   #page-wrapper main#content nav ol.breadcrumb {
     margin: 1rem 0 0 0;
   }
@@ -17160,6 +17171,26 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
   .node--type-news-item .block-field-blocknodenews-itemfield-image {
     margin-top: 0rem !important;
+  }
+
+  .view.csc-list-wide .row.views-row {
+    margin: 0 0 1rem;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .view.csc-list-wide .row.views-row .views-field-field-image img {
+    width: 100vw;
+  }
+  .view.csc-list-wide .row.views-row .views-field-body {
+    padding: 0.5rem 0.75rem;
+  }
+  .view.csc-list-wide .row.views-row .views-field-body .title {
+    padding-left: 0.5rem;
+  }
+  .view.csc-list-wide .row.views-row .views-field-body .url {
+    width: 100%;
+    text-align: center;
   }
 
   .contact-page .page-content h5, .contact-page .page-content .h5 {
