@@ -599,7 +599,7 @@ div.csc-give-link {
 }
 
 // For Drupal Media images, classes wind up on enclosing div
-div.media-div {
+.media-div {
   &.rnd {
     img {
       border-radius: 0.3rem !important;
