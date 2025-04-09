@@ -98,6 +98,11 @@ blockquote {
   }
 }
 
+// Bootstrap 5 accordion headers
+.accordion-header button.accordion-button {
+  background-color: #efefef;
+}
+
 /** Breadcrumbs **/
 
 nav ol.breadcrumb {
