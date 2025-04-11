@@ -15579,9 +15579,6 @@ div.view-empty {
 .view-galleries .views-view-responsive-grid__item .modal.show {
   left: 15vw !important;
 }
-.view-galleries .views-view-responsive-grid__item .modal.show .modal-body {
-  width: fit-content;
-}
 
 .view.csc-list-wide .row.views-row,
 .view-events.events-list-alt .row.views-row,
