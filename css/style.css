@@ -16081,6 +16081,10 @@ h2.hero-title, .hero-title.h2 {
   font-size: 1.5rem !important;
 }
 
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
 .block.block-layout-builder .field.field--label-inline .field__label {
   font-weight: bold;
   display: inline-block;
@@ -16142,6 +16146,10 @@ blockquote:after {
   font-size: 3em;
   line-height: 0.1em;
   vertical-align: -0.45em;
+}
+
+.accordion-header button.accordion-button {
+  background-color: #efefef;
 }
 
 /** Breadcrumbs **/
