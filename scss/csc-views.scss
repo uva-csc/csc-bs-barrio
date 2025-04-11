@@ -675,6 +675,9 @@ div.view-empty {
   .views-view-responsive-grid__item {
     .modal.show {
       left: 15vw!important;
+      .modal-body {
+        width: fit-content;
+      }
     }
   }
 }
