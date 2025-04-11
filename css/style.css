@@ -15576,6 +15576,10 @@ div.view-empty {
   align-items: center;
 }
 
+.view-galleries .views-view-responsive-grid__item .modal.show {
+  left: 15vw !important;
+}
+
 .view.csc-list-wide .row.views-row,
 .view-events.events-list-alt .row.views-row,
 .view-news.view-display-id-page_1 .row.views-row,

@@ -670,6 +670,15 @@ div.view-empty {
   }
 } // End of Calendar view
 
+// Gallery View
+.view-galleries {
+  .views-view-responsive-grid__item {
+    .modal.show {
+      left: 15vw!important;
+    }
+  }
+}
+
 // View Rows (wraps a shaded border around row and adds spacing, etc.)
 
 .view.csc-list-wide,
