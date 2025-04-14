@@ -16569,6 +16569,10 @@ div.csc-give-link .content .field--name-body p a:hover {
   filter: drop-shadow(8px 10px 3px #00000095);
 }
 
+.node--type-location div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
+  margin: unset;
+}
+
 .img-no-shadow img {
   filter: none !important;
 }
