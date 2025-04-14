@@ -5940,7 +5940,7 @@ textarea.form-control-lg {
 
 .modal {
   --bs-modal-zindex: 1055;
-  --bs-modal-width: 1000px;
+  --bs-modal-width: 500px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
@@ -15576,10 +15576,6 @@ div.view-empty {
   align-items: center;
 }
 
-.view-galleries .views-view-responsive-grid__item .modal.show {
-  left: 15vw !important;
-}
-
 .view.csc-list-wide .row.views-row,
 .view-events.events-list-alt .row.views-row,
 .view-news.view-display-id-page_1 .row.views-row,
@@ -16769,6 +16765,11 @@ div.geolocation-map-wrapper {
 .view-people.frc .view-content, .view-people-indexed.frc .view-content {
   max-width: unset;
   gap: 15px;
+}
+
+.modal-dialog.modal-dialog-centered.modal-lg {
+  width: 1000px !important;
+  max-width: unset;
 }
 
 div.type-tag a {
@@ -18297,10 +18298,6 @@ div#drupal-off-canvas li:not(.ui-menu-item) a {
 
 /* GENERAL STYLES
 -------------------------------------------------*/
-:root {
-  --bs-modal-width: 1000px !important;
-}
-
 body {
   background: #fdfdfd;
   color: #222222;

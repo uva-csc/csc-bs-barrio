@@ -868,8 +868,11 @@ div.geolocation-map-wrapper {
   }
 }  // End of .view-people
 
-// Social Media Feeds
-
+// Modals
+.modal-dialog.modal-dialog-centered.modal-lg {
+  width: 1000px !important;
+  max-width: unset;
+}
 
 // Tags
 div.type-tag a {
