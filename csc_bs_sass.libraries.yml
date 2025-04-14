@@ -24,3 +24,5 @@ bootstrap:
   css:
     component:
       /libraries/bootstrap/dist/css/bootstrap.min.css: {}
+
+
