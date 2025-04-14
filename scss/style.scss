@@ -8,6 +8,9 @@ Description: Bootstrap 4 with Sass
 
 /* GENERAL STYLES
 -------------------------------------------------*/
+:root {
+  --bs-modal-width: 1000px !important;
+}
 
 body {
     background: $white;

@@ -18297,6 +18297,10 @@ div#drupal-off-canvas li:not(.ui-menu-item) a {
 
 /* GENERAL STYLES
 -------------------------------------------------*/
+:root {
+  --bs-modal-width: 1000px !important;
+}
+
 body {
   background: #fdfdfd;
   color: #222222;
