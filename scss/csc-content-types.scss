@@ -347,13 +347,22 @@ body.node--type-news-item {
 
 // Basic Pages
 .node--type-page {
+  /*
   #title-div {
     margin: 1rem 0 0.5rem;
-    /*
-    margin-top: 0.25rem;
-    margin-bottom: -0.25rem;
-
-     */
+  }
+  */
+  #title-div h1 {
+    margin-top: 0;
+    padding: 17px 0 10px;
+    background-color: rgba(34, 34, 34, 0.1);
+    color: #333;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    border-top: thin solid #ccc;
   }
 
   #main.container {
