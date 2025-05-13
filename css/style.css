@@ -14343,7 +14343,7 @@ p.view-more a {
 }
 
 div.view-empty {
-  text-align: center;
+  text-align: left;
 }
 
 .js-pager__items.pagination li.page-item span.page-link {
@@ -15107,8 +15107,6 @@ div.csc-give-link a {
 
 a.plain,
 a[class^=social-media-link],
-a[href^=tel],
-a[href^=mailto],
 .csc-btn a {
   color: unset !important;
   border-bottom: none !important;

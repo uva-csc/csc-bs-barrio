@@ -224,13 +224,10 @@ div.csc-give-link a {
 }
 
 // Do not underline social media icons, telphone numbers, or email addresses or any link that is an animated link
+// Removed telephone numbers:a[href^=tel], and email links:a[href^=mailto] from below
 a.plain,
-// a.link--animated,
 a[class^=social-media-link],
-a[href^=tel],
-a[href^=mailto],
 .csc-btn a,
-// .captioned-image .field--name-field-caption a
 {
   color: unset!important;
   border-bottom: none!important;
