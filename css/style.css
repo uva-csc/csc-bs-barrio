@@ -17082,6 +17082,10 @@ div.highlighted, div.highlighted div, div.highlighted aside {
   display: none;
 }
 
+.layout-builder__section .skew-overlay:after {
+  display: none !important;
+}
+
 #drupal-off-canvas-wrapper .layout-selection .list-group-item a {
   color: white !important;
 }

@@ -128,6 +128,14 @@ div.highlighted, div.highlighted div, div.highlighted aside {
   }
 }
 
+// Layout Builder for Nodes
+
+.layout-builder__section {
+  .skew-overlay:after {
+    display: none !important;
+  }
+}
+
 // Layout selection sidebar is not under class .layout-builder
 #drupal-off-canvas-wrapper .layout-selection .list-group-item a {
   color: white !important;
