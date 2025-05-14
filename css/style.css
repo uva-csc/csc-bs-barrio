@@ -14075,8 +14075,10 @@ p.view-more a {
   content: "";
 }
 .view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate > div + div {
-  margin-top: -0.5rem;
-  margin-bottom: 0.25rem;
+  /* This doesn't work
+     margin-top: -0.5rem;
+     margin-bottom: 0.25rem;
+   */
 }
 .view-events.events-row-teasers .view-footer {
   margin: 1rem auto;

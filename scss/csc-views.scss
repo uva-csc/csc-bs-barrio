@@ -203,8 +203,11 @@ p.view-more {
         }
 
        & > div + div {
+         // Second or End Date/time in an event teaser
+         /* This doesn't work
             margin-top: -0.5rem;
             margin-bottom: 0.25rem;
+          */
         }
       }
     }
