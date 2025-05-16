@@ -1,6 +1,23 @@
 @import 'variables.scss';
 
 /** Views **/
+
+.views-view-responsive-grid:has(> .views-view-responsive-grid__item:nth-child(3)):not(:has(> .views-view-responsive-grid__item:nth-child(4))) {
+  --csc-grid-columns: 3;
+}
+
+.views-view-responsive-grid:has(> .views-view-responsive-grid__item:nth-child(2)):not(:has(> .views-view-responsive-grid__item:nth-child(3))) {
+  --csc-grid-columns: 2;
+}
+
+.views-view-responsive-grid:has(> .views-view-responsive-grid__item:nth-child(1)):not(:has(> .views-view-responsive-grid__item:nth-child(2))) {
+  --csc-grid-columns: 1;
+}
+
+.events-row-teasers .views-view-responsive-grid {
+  --views-responsive-grid--column-count: var(--csc-grid-columns, 4);
+}
+
 .views-field-title {
   font-weight: bold;
 }
