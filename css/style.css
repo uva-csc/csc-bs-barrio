@@ -13922,7 +13922,7 @@ main#content .c-csc-image_text p {
 }
 
 .events-row-teasers .views-view-responsive-grid {
-  --views-responsive-grid--column-count: var(--csc-grid-columns, 4);
+  --views-responsive-grid--column-count: var(--csc-grid-columns, 4) !important;
 }
 
 .views-field-title {
