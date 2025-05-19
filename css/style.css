@@ -15665,7 +15665,7 @@ div.geolocation-map-wrapper {
   border-radius: 0 0 10px 10px;
 }
 .ckeditor-accordion-container > dl dd {
-  padding: 1rem;
+  padding: 1rem !important;
 }
 
 .ckeditor-accordion-container > dl dt > a, .ckeditor-accordion-container > dl dt > a:not(.button) {
