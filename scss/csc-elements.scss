@@ -879,6 +879,30 @@ div.geolocation-map-wrapper {
   }
 }  // End of .view-people
 
+// Accordion (Ckeditor module)
+.ckeditor-accordion-container > dl {
+  border-color: $accordion-border-color;
+}
+
+.ckeditor-accordion-container > dl dt > a, .ckeditor-accordion-container > dl dt > a:not(.button) {
+  background-color: $csc-lt-gray;
+  border-color: $accordion-border-color;
+  color: $body-color;
+}
+
+.ckeditor-accordion-container > dl dt > a:hover, .ckeditor-accordion-container > dl dt > a:not(.button):hover {
+  background-color: #CCCCCC;
+  box-shadow: none;
+  text-decoration: none;
+  color: $body-color!important;
+}
+
+.ckeditor-accordion-container > dl dt > a > .ckeditor-accordion-toggle::before,
+.ckeditor-accordion-container > dl dt > a > .ckeditor-accordion-toggle::after {
+  background-color: #777 !important;
+}
+
+
 // Modals
 .modal-dialog.modal-dialog-centered.modal-lg {
   width: 1000px !important;

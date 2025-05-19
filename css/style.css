@@ -15654,6 +15654,28 @@ div.geolocation-map-wrapper {
   gap: 15px;
 }
 
+.ckeditor-accordion-container > dl {
+  border-color: var(--bs-border-color);
+}
+
+.ckeditor-accordion-container > dl dt > a, .ckeditor-accordion-container > dl dt > a:not(.button) {
+  background-color: #eeeeee;
+  border-color: var(--bs-border-color);
+  color: #212529;
+}
+
+.ckeditor-accordion-container > dl dt > a:hover, .ckeditor-accordion-container > dl dt > a:not(.button):hover {
+  background-color: #CCCCCC;
+  box-shadow: none;
+  text-decoration: none;
+  color: #212529 !important;
+}
+
+.ckeditor-accordion-container > dl dt > a > .ckeditor-accordion-toggle::before,
+.ckeditor-accordion-container > dl dt > a > .ckeditor-accordion-toggle::after {
+  background-color: #777 !important;
+}
+
 .modal-dialog.modal-dialog-centered.modal-lg {
   width: 1000px !important;
   max-width: unset;
