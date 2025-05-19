@@ -881,7 +881,19 @@ div.geolocation-map-wrapper {
 
 // Accordion (Ckeditor module)
 .ckeditor-accordion-container > dl {
-  border-color: $accordion-border-color;
+  border-color: $accordion-border-color !important;
+  border-radius: 10px;
+
+  dt:first-of-type a.ckeditor-accordion-toggler {
+    border-radius: 10px 10px 0 0;
+  }
+  dt:last-of-type:not(.active) a.ckeditor-accordion-toggler {
+    border-radius: 0 0 10px 10px;
+  }
+
+  dd {
+    padding: 1rem;
+  }
 }
 
 .ckeditor-accordion-container > dl dt > a, .ckeditor-accordion-container > dl dt > a:not(.button) {

@@ -15655,7 +15655,17 @@ div.geolocation-map-wrapper {
 }
 
 .ckeditor-accordion-container > dl {
-  border-color: var(--bs-border-color);
+  border-color: var(--bs-border-color) !important;
+  border-radius: 10px;
+}
+.ckeditor-accordion-container > dl dt:first-of-type a.ckeditor-accordion-toggler {
+  border-radius: 10px 10px 0 0;
+}
+.ckeditor-accordion-container > dl dt:last-of-type:not(.active) a.ckeditor-accordion-toggler {
+  border-radius: 0 0 10px 10px;
+}
+.ckeditor-accordion-container > dl dd {
+  padding: 1rem;
 }
 
 .ckeditor-accordion-container > dl dt > a, .ckeditor-accordion-container > dl dt > a:not(.button) {
