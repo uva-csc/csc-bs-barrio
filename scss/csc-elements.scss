@@ -138,6 +138,14 @@ ul.dashed {
   }
 }
 
+// Bootstrap Carousel
+// wrap carousel controls in div with class "carousel-controls"
+.carousel-controls {
+  .carousel-control-prev, .carousel-control-next {
+    height: 50%;
+  }
+}
+
 /** Breadcrumbs **/
 
 nav ol.breadcrumb {
