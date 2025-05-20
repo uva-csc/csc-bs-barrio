@@ -676,7 +676,17 @@ div.csc-news-block {
 
 /** End of Image styles **/
 
+table.csc-table-1 {
+  border: 3px ridge #777 !important;
 
+  tr:first-of-type td {
+    border-bottom: 2px solid #777 !important;
+  }
+
+  td {
+    padding: 5px;
+  }
+}
 /** Teaser Rows **/
 .teaser-row {
   .field--name-field-teaser-caption p {

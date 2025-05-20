@@ -15494,6 +15494,16 @@ div.csc-news-block a img:hover {
 }
 
 /** End of Image styles **/
+table.csc-table-1 {
+  border: 3px ridge #777 !important;
+}
+table.csc-table-1 tr:first-of-type td {
+  border-bottom: 2px solid #777 !important;
+}
+table.csc-table-1 td {
+  padding: 5px;
+}
+
 /** Teaser Rows **/
 .teaser-row .field--name-field-teaser-caption p {
   color: #232D4B;
