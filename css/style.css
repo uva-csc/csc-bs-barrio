@@ -15026,6 +15026,19 @@ blockquote:after {
   vertical-align: -0.45em;
 }
 
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "–";
+  text-indent: -5px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
 .accordion-header button.accordion-button {
   background-color: #efefef;
 }

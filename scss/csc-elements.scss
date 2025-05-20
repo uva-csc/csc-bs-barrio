@@ -102,6 +102,23 @@ blockquote {
   }
 }
 
+// Lists
+// Dashed lists
+ul.dashed {
+  list-style-type: none;
+
+  & > li {
+    text-indent: -5px;
+
+    &:before {
+      content: "–";
+      text-indent: -5px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+}
+
 // Bootstrap 5 accordion headers
 .accordion-header button.accordion-button {
   background-color: #efefef;
