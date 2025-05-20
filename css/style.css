@@ -15054,10 +15054,6 @@ ul.dashed > li:before {
   transition: transform 0.3s ease;
 }
 
-.carousel-controls .carousel-control-prev, .carousel-controls .carousel-control-next {
-  height: 50%;
-}
-
 /** Breadcrumbs **/
 nav ol.breadcrumb {
   display: block;
