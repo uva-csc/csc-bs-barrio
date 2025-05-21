@@ -31,29 +31,33 @@
         });
       });
 
-      // Scroll Open Accordion Item into View
-      document.addEventListener('DOMContentLoaded', function () {
-        const container = document.querySelector('.ckeditor-accordion-container');
+      // Accordion Scroll Fix (show open item)
+      // Prevent reattachment
+      if ($(context).hasClass('accordion-scroll-fix-processed')) {
+        return;
+      }
+      $(context).addClass('accordion-scroll-fix-processed');
 
-        if (!container) return;
-        container.addEventListener('click', function (e) {
-          const header = e.target.closest('dt');
-          if (!header) return;
+      const container = document.querySelector('.ckeditor-accordion-container');
+      if (!container) return;
 
-          // Small delay to allow class changes / animations
-          setTimeout(() => {
-            const activePanel = container.querySelector('dd.active');
-            if (activePanel) {
-              // Scroll to the <dt> just before the active <dd>
-              const relatedHeader = activePanel.previousElementSibling;
-              if (relatedHeader && relatedHeader.tagName.toLowerCase() === 'dt') {
-                relatedHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
+      container.addEventListener('click', function (e) {
+        const header = e.target.closest('dt');
+        if (!header) return;
+
+        setTimeout(() => {
+          const activePanel = container.querySelector('dd.active');
+          if (activePanel) {
+            const relatedHeader = activePanel.previousElementSibling;
+            if (relatedHeader && relatedHeader.tagName.toLowerCase() === 'dt') {
+              const yOffset = -80; // adjust this based on your sticky header height
+              const y = relatedHeader.getBoundingClientRect().top + window.scrollY + yOffset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
             }
-          }, 300); // adjust this delay to match the animation timing
-        });
+          }
+        }, 300);
       });
-      // End of Accordion update
+      // End of Accordion Scroll fix
     }
   };
 
@@ -229,5 +233,31 @@
       });
     }
   } // End of Calendar
+
+
+ /* // Scroll Open Accordion Item into View
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.ckeditor-accordion-container');
+
+    if (!container) return;
+    container.addEventListener('click', function (e) {
+      const header = e.target.closest('dt');
+      if (!header) return;
+      // Small delay to allow class changes / animations
+      setTimeout(() => {
+        const activePanel = container.querySelector('dd.active');
+        if (activePanel) {
+          // Scroll to the <dt> just before the active <dd>
+          const relatedHeader = activePanel.previousElementSibling;
+          if (relatedHeader && relatedHeader.tagName.toLowerCase() === 'dt') {
+            relatedHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }, 300); // adjust this delay to match the animation timing
+    });
+  });
+  // End of Accordion update
+
+  */
 
 })(jQuery, Drupal);
