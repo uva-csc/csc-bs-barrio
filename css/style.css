@@ -13601,6 +13601,24 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-url {
   color: white !important;
 }
+.node--type-people .image-bio .block-field-blocknodepeopletitle a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-csc-role a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-job-title a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-email a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a {
+  color: white !important;
+  border-bottom: none;
+}
+.node--type-people .image-bio .block-field-blocknodepeopletitle a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-csc-role a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-job-title a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-email a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover {
+  color: #E57325 !important;
+  border-bottom: 2px solid #E57325 !important;
+}
 .node--type-people .image-bio .field--name-field-image img {
   position: relative;
   margin-left: 0;
