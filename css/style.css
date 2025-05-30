@@ -14981,6 +14981,28 @@ h2.hero-title, .hero-title.h2 {
   cursor: pointer !important;
 }
 
+mark.marker-none, .marker-none.mark {
+  background-color: unset;
+}
+mark.marker-yellow, .marker-yellow.mark {
+  background-color: rgba(255, 255, 0, 0.4392156863);
+}
+mark.marker-green, .marker-green.mark {
+  background-color: rgba(51, 102, 0, 0.4392156863) !important;
+}
+mark.marker-pink, .marker-pink.mark {
+  background-color: rgba(255, 102, 102, 0.4392156863);
+}
+mark.marker-blue, .marker-blue.mark {
+  background-color: rgba(0, 76, 153, 0.6666666667);
+}
+mark.pen-red, .pen-red.mark {
+  color: red;
+}
+mark.pen-green, .pen-green.mark {
+  color: green;
+}
+
 .block.block-layout-builder .field.field--label-inline .field__label {
   font-weight: bold;
   display: inline-block;

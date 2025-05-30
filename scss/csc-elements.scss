@@ -33,6 +33,37 @@ h2.hero-title {
   cursor: pointer !important;
 }
 
+// Mark styles
+mark {
+  &.marker-none {
+    background-color: unset;
+  }
+
+  &.marker-yellow {
+    background-color: #ffff0070;
+  }
+
+  &.marker-green {
+    background-color: #33660070 !important;
+  }
+
+  &.marker-pink {
+    background-color: #ff666670;
+  }
+
+  &.marker-blue {
+    background-color: #004C99AA;
+  }
+
+  &.pen-red {
+    color: red;
+  }
+
+  &.pen-green {
+    color: green;
+  }
+} // End of Mark styles
+
 .block.block-layout-builder .field.field--label-inline {
   .field__label {
     font-weight: bold;
