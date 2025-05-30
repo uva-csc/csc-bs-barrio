@@ -14988,7 +14988,7 @@ mark.marker-yellow, .marker-yellow.mark {
   background-color: rgba(255, 255, 0, 0.4392156863);
 }
 mark.marker-green, .marker-green.mark {
-  background-color: rgba(51, 102, 0, 0.4392156863) !important;
+  background-color: rgba(51, 102, 0, 0.6666666667) !important;
 }
 mark.marker-pink, .marker-pink.mark {
   background-color: rgba(255, 102, 102, 0.4392156863);
@@ -15000,7 +15000,7 @@ mark.pen-red, .pen-red.mark {
   color: red;
 }
 mark.pen-green, .pen-green.mark {
-  color: green;
+  color: #004300;
 }
 
 .block.block-layout-builder .field.field--label-inline .field__label {
