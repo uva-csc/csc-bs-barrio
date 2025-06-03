@@ -15547,6 +15547,16 @@ div.csc-news-block a img:hover {
 }
 
 /** End of Image styles **/
+/** Media Styles **/
+.lg-video .block-entity-blockmedia {
+  margin: 1rem 0 1.5rem;
+}
+.lg-video .block-entity-blockmedia iframe {
+  width: 100%;
+  height: 650px;
+  max-width: none;
+}
+
 table.csc-table-1 {
   border: 3px ridge #777 !important;
 }
