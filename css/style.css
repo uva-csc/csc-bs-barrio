@@ -14110,6 +14110,9 @@ p.view-more a {
   font-weight: normal;
   line-height: 1.3;
 }
+.view.event-col .views-row .views-field.date p:has(br) {
+  line-height: 1.45;
+}
 
 .view-events.events-row-teasers {
   max-width: 76vw;
