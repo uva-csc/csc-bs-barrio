@@ -146,7 +146,6 @@ function csc_bs_sass_preprocess_node(&$variables) {
             '#markup' => '<div class="field field--name-field-date field--type-smartdate custom-date field--label-hidden field__item">' . $custom_date . '</div>',
             '#allowed_tags' => ['div', 'span', 'strong', 'em', 'a', 'br'],
           ];
-          csc_log(implode(", ", array_keys($variables['content'])));
         }
         /*else {
           // Use Smart Date as usual.

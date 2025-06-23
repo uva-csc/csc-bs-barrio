@@ -13379,6 +13379,9 @@ body.node--type-event .layout__region.layout__region--second .wrapper .block h2,
   font-size: 1.2rem;
   margin-bottom: 0.25rem;
 }
+body.node--type-event .layout__region.layout__region--second .wrapper .custom-date + .field--name-field-date.starts-on {
+  display: none;
+}
 body.node--type-event .layout__region.layout__region--second .wrapper .field.field--label-above .field__label {
   font-weight: bold;
 }
