@@ -575,11 +575,6 @@ body.node--type-event {
         }
       }
 
-      // When a custom date field is displayed for an event (see theme node preprocessing for event), then hide the starts-on string
-      .custom-date + .field--name-field-date.starts-on {
-        display: none;
-      }
-
       .field.field--label-above .field__label {
         font-weight: bold;
       }
