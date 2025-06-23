@@ -566,6 +566,10 @@ body.node--type-event {
       margin-top: 40px;
       padding: 35px 25px;
 
+      .block {
+        text-align: center; // Align all blocks in right sidebar to center text
+      }
+
       .field__item, .field__item p.address {
         font-family: $font-frankgoth-cd;
         text-align: center;

@@ -13372,6 +13372,9 @@ body.node--type-event .layout__region.layout__region--second .wrapper {
   margin-top: 40px;
   padding: 35px 25px;
 }
+body.node--type-event .layout__region.layout__region--second .wrapper .block {
+  text-align: center;
+}
 body.node--type-event .layout__region.layout__region--second .wrapper .field__item, body.node--type-event .layout__region.layout__region--second .wrapper .field__item p.address {
   font-family: franklin-gothic-urw-cond, sans-serif;
   text-align: center;
