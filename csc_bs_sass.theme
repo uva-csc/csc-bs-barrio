@@ -82,6 +82,7 @@ function csc_bs_sass_preprocess_node(&$variables) {
   // $view_mode = $variables['view_mode'];
   if ($node_type == 'event') {
     // EVENTS
+    // Event Date Massaging
     $date = $node->get('field_date');
     $vals = $date->getValue();
     // Get days of week for repeat rule (But can't access in Layout builder, may not be used)
@@ -128,6 +129,29 @@ function csc_bs_sass_preprocess_node(&$variables) {
         $variables['ends_on'] = date_format($edts, 'D, M j Y');
       }
     }
+
+    // Event Teasers
+      // Only target the teaser view mode and the event content type.
+      if (
+        $variables['view_mode'] === 'teaser'
+      ) {
+        $node = $variables['node'];
+
+        $custom_date = $node->get('field_custom_date_display')->value ?? '';
+        //$smart_date_render = $node->get('field_date')->view(['label' => 'hidden', 'type' => 'smartdate_default']);
+
+        if (!empty(trim($custom_date))) {
+          // Output the custom date instead of the Smart Date.
+          $variables['content']['field_smart_date'] = [
+            '#markup' => '<div class="custom-date">' . htmlspecialchars($custom_date) . '</div>',
+            '#allowed_tags' => ['div', 'span', 'strong', 'em', 'a'],
+          ];
+        }
+        /*else {
+          // Use Smart Date as usual.
+          $variables['content']['field_smart_date'] = $smart_date_render;
+        }*/
+      }
   } else if ($node_type == 'people') {
     // PEOPLE
     $fldimg = $node->get('field_image');
