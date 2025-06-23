@@ -14110,7 +14110,6 @@ p.view-more a {
   margin: 0 auto;
 }
 .view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate {
-  margin-bottom: 1.5rem;
   color: transparent;
 }
 .view-events.events-row-teasers .views-view-responsive-grid__item .field--type-smartdate > * {
@@ -14127,6 +14126,10 @@ p.view-more a {
 }
 .view-events.events-row-teasers .views-view-responsive-grid__item .custom-date + .field--name-field-date.starts-on {
   display: none;
+}
+.view-events.events-row-teasers .views-view-responsive-grid__item .node__content div.field:nth-last-child(2) {
+  color: green !important;
+  margin-bottom: 1.5rem;
 }
 .view-events.events-row-teasers .view-footer {
   margin: 1rem auto;

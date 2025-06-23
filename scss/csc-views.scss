@@ -210,7 +210,6 @@ p.view-more {
 
     .views-view-responsive-grid__item {
       .field--type-smartdate {
-        margin-bottom: 1.5rem;
         color: transparent;
         & > * {
           color: $body-color;
@@ -236,7 +235,12 @@ p.view-more {
         display: none;
       }
 
-
+      .node__content {
+        div.field:nth-last-child(2) {
+          color: green !important;
+          margin-bottom: 1.5rem;
+        }
+      }
     }
     .view-footer {
       margin: 1rem auto;
