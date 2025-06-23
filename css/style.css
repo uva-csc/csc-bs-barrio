@@ -14137,7 +14137,6 @@ p.view-more a {
   display: none;
 }
 .view-events.events-row-teasers .views-view-responsive-grid__item .node__content div.field:nth-last-child(2) {
-  color: green !important;
   margin-bottom: 1.5rem;
 }
 .view-events.events-row-teasers .view-footer {
