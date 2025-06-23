@@ -566,6 +566,18 @@ footer.site-footer {
   top: 100px;
 }
 
+.layout--twocol-section.sticky-left {
+  .layout__region--first .wrapper {
+    height: 100%;
+    position: relative;
+
+    div.block:first-of-type {
+      position: sticky;
+      top: 100px;
+    }
+  }
+}
+
 // Remove top margin for headers in body
 .layout .field--name-body {
   h2:first-child, h3:first-child, h4:first-child {
