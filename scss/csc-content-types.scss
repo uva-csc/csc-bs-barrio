@@ -568,6 +568,11 @@ body.node--type-event {
 
       .block {
         text-align: center; // Align all blocks in right sidebar to center text
+
+        h2 {
+          font-size: 1.2rem;
+          margin-bottom: 0.25rem;
+        }
       }
 
       .field.field--label-above .field__label {
