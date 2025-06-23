@@ -13375,6 +13375,9 @@ body.node--type-event .layout__region.layout__region--second .wrapper {
 body.node--type-event .layout__region.layout__region--second .wrapper .block {
   text-align: center;
 }
+body.node--type-event .layout__region.layout__region--second .wrapper .field.field--label-above .field__label {
+  font-weight: bold;
+}
 body.node--type-event .layout__region.layout__region--second .wrapper .field__item, body.node--type-event .layout__region.layout__region--second .wrapper .field__item p.address {
   font-family: franklin-gothic-urw-cond, sans-serif;
   text-align: center;
