@@ -574,7 +574,20 @@ footer.site-footer {
     div.block:first-of-type {
       position: sticky;
       top: 100px;
+
+      &:has(div.blue-chevron) {
+        top: 50px;
+      }
     }
+  }
+}
+
+// Make left column breadcrumbs sticky by default
+.layout--twocol-section, .layout--threecol-section {
+  .layout__region--first div.block-system-breadcrumb-block,
+  .layout__region--first .wrapper:has(div.block-system-breadcrumb-block) {
+    position: sticky;
+    top: 100px;
   }
 }
 
