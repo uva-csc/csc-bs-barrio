@@ -13385,6 +13385,8 @@ body.node--type-event .layout__region.layout__region--first .block-csc-canceled-
   text-align: center;
 }
 body.node--type-event .layout__region.layout__region--second .wrapper {
+  position: sticky;
+  top: 100px;
   height: fit-content;
   width: 100%;
   background-color: #eeeeee;
