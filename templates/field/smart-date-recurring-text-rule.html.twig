@@ -22,7 +22,10 @@
  */
 #}
 {% if days_array %}
-  {% set day = include('smart-date-recurring-comma-list.html.twig', {values: days_array}) %}
+  {% set day = include('smart-date-recurring-comma-list.html.twig', {
+    values: days_array,
+    counts: day_counts
+  }) %}
 {% else %}
   {% set day = (day|length > 0) ? day|replace({' to ':'s to '}) ~ 's' : '' %}
 {% endif %}
