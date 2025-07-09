@@ -15608,7 +15608,8 @@ table.csc-table-1 td {
 }
 
 /** Teaser Rows **/
-.teaser-row .field--name-field-teaser-caption p {
+.teaser-row .field--name-field-teaser-caption p,
+.teaser-row .field--name-field-teaser-caption:not(:has(p)) {
   color: #232D4B;
   margin: 1rem auto;
   padding: 0;
@@ -15617,7 +15618,8 @@ table.csc-table-1 td {
   line-height: 20px;
   font-weight: bold;
 }
-.teaser-row .field--name-field-teaser-caption p:last-child {
+.teaser-row .field--name-field-teaser-caption p:last-child,
+.teaser-row .field--name-field-teaser-caption:not(:has(p)):last-child {
   border-bottom: 2px solid #E57325;
 }
 

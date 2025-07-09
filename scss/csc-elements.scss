@@ -750,7 +750,8 @@ table.csc-table-1 {
 }
 /** Teaser Rows **/
 .teaser-row {
-  .field--name-field-teaser-caption p {
+  .field--name-field-teaser-caption p,
+  .field--name-field-teaser-caption:not(:has(p)) {
     color: #232D4B;
     margin: 1rem auto;
     padding: 0;
