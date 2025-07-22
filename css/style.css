@@ -13436,6 +13436,12 @@ body.node--type-event .layout__region.layout__region--second .wrapper .event-pas
 body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg a:hover {
   color: #232D4B !important;
 }
+body.node--type-event .layout--twocol-section ~ .layout--twocol-section .layout__region.layout__region--second .wrapper {
+  top: 0;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  background-color: transparent;
+}
 
 body.node--type-class .bc-inline.layout.layout--onecol {
   margin-left: -10rem;

@@ -621,6 +621,17 @@ body.node--type-event {
       }
     } // End of wrapper
   } // end of events layout region second
+
+  .layout--twocol-section ~ .layout--twocol-section {
+    .layout__region.layout__region--second {
+      .wrapper {
+        top: 0;
+        margin: 1rem 0 0 0;
+        padding: 0;
+        background-color: transparent;
+      }
+    }
+  }
 } // End of Events Content Type
 
 // Class Content Type Pages
