@@ -21,7 +21,7 @@
 */
 @media (min-width: 48em) {
   body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--first,
-body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--second {
+  body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--50-50.fixed-width > .layout__region--second {
     flex: 0 1 45%;
     padding: 1rem;
   }
@@ -30,7 +30,6 @@ body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--
   #block-csc-bs-sass-main-menu:not(.show) {
     display: none;
   }
-
   #header #navbar-main {
     justify-content: center;
     padding: 0.5rem;
@@ -52,7 +51,6 @@ body.node--type-page-full-width .layout--twocol-section.layout--twocol-section--
     font-weight: 500 !important;
     font-size: 0.8rem;
   }
-
   h2, h3, h4 {
     font-size: 115% !important;
   }

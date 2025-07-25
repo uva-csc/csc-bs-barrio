@@ -13442,6 +13442,18 @@ body.node--type-event .layout--twocol-section ~ .layout--twocol-section .layout_
   padding: 0;
   background-color: transparent;
 }
+body.node--type-event article.node--view-mode-full .short-title .layout__region.layout__region--first .block-field-blocknodeeventfield-short-title {
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: thin solid grey;
+}
+body.node--type-event article.node--view-mode-full .short-title .layout__region.layout__region--first .block-field-blocknodeeventfield-short-title .field__item {
+  font-size: 3rem;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 500 !important;
+  line-height: 1.03846;
+  letter-spacing: -0.02885em;
+}
 
 body.node--type-class .bc-inline.layout.layout--onecol {
   margin-left: -10rem;

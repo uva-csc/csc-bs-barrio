@@ -632,6 +632,23 @@ body.node--type-event {
       }
     }
   }
+
+  // Tweak to allow the Short title to be the title for cases where title needs markup (have to add short title in page layout builder)
+  article.node--view-mode-full .short-title .layout__region.layout__region--first .block-field-blocknodeeventfield-short-title {
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+    border-bottom: thin solid grey;
+
+    .field__item {
+      font-size: 3rem;
+      font-family: franklin-gothic-urw, sans-serif;
+      font-weight: 500 !important;
+      line-height: 1.03846;
+      letter-spacing: -0.02885em;
+
+    }
+  }
+
 } // End of Events Content Type
 
 // Class Content Type Pages
