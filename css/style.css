@@ -16015,6 +16015,32 @@ div.bc-teaser .caption a {
   display: none;
 }
 
+.calendar-link-block .dropdown-menu {
+  margin: 0;
+  padding: 0;
+}
+.calendar-link-block .dropdown-menu ul {
+  margin-bottom: 0;
+}
+.calendar-link-block .dropdown-menu ul li {
+  padding: 0;
+  margin: 0;
+}
+.calendar-link-block .dropdown-menu ul li:not(:last-of-type) {
+  border-bottom: 1px inset #F0F0F0;
+}
+.calendar-link-block .dropdown-menu ul li a {
+  margin: 0;
+  display: inline-block;
+  padding: 0.15rem 0.75rem;
+  width: 100%;
+  height: 100%;
+  line-height: 2;
+}
+.calendar-link-block .dropdown-menu ul li:hover {
+  background-color: #C8CBD2;
+}
+
 #block-csc-bs-sass-searchbox {
   margin: 0.35rem 0 0 -1rem;
   padding: 0;
