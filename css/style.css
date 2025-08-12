@@ -16021,6 +16021,7 @@ div.bc-teaser .caption a {
 .calendar-link-block .dropdown-menu {
   margin: 0;
   padding: 0;
+  z-index: 1000;
 }
 .calendar-link-block .dropdown-menu ul {
   margin-bottom: 0;
