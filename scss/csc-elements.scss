@@ -737,17 +737,29 @@ div.csc-news-block {
   }
 }
 
-table.csc-table-1 {
-  border: 3px ridge #777 !important;
+table {
+  &.no-padding {
+    padding: 0;
+    border: none;
 
-  tr:first-of-type td {
-    border-bottom: 2px solid #777 !important;
+    tbody, thead, th, tr, td {
+      padding: 0;
+      border: none;
+    }
   }
 
-  td {
-    padding: 5px;
-  }
-}
+  &.csc-table-1 {
+    border: 3px ridge #777 !important;
+
+    tr:first-of-type td {
+      border-bottom: 2px solid #777 !important;
+    }
+
+    td {
+      padding: 5px;
+    }
+  } // end of table.csc-table-1
+} // End of general table classes
 /** Teaser Rows **/
 .teaser-row {
   .field--name-field-teaser-caption p,

@@ -4,6 +4,10 @@
   font-size: 1rem;
 }
 
+.font-cambria, .font-cambria * {
+  font-family: $font-cambria !important;
+}
+
 .font-medium, .font-medium p {
   font-family: 'ITC Franklin Gothic Med', sans-serif;
 }
