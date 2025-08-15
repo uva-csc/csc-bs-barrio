@@ -11860,8 +11860,20 @@ textarea.form-control-lg {
   font-weight: 900 !important;
 }
 
+.font-16 p, .font-16 td {
+  font-size: 16px;
+}
+
 .font-17 p, .font-17 td {
   font-size: 17px;
+}
+
+.font-18 p, .font-18 td {
+  font-size: 18px;
+}
+
+.font-20 p, .font-20 td {
+  font-size: 20px;
 }
 
 .text-small, .text-sm {
