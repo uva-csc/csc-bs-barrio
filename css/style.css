@@ -11864,7 +11864,15 @@ textarea.form-control-lg {
   font-size: 16px;
 }
 
+p.font-16 {
+  font-size: 16px;
+}
+
 .font-17 p, .font-17 td {
+  font-size: 17px;
+}
+
+p.font-17 {
   font-size: 17px;
 }
 
@@ -11872,7 +11880,15 @@ textarea.form-control-lg {
   font-size: 18px;
 }
 
+p.font-18 {
+  font-size: 18px;
+}
+
 .font-20 p, .font-20 td {
+  font-size: 20px;
+}
+
+p.font-20 {
   font-size: 20px;
 }
 
