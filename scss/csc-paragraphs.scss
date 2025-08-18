@@ -254,6 +254,9 @@ main#content {
       margin: 1.5rem auto;
       filter: $img-shadow;
       border: 5px solid $white;
+      /* border: 5px solid #fdfdfd; */
+      padding: 5px;
+      background-color: white;
     }
   }
 }

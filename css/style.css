@@ -13995,6 +13995,9 @@ main#content .c-csc-image_text p {
   margin: 1.5rem auto;
   filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.5843137255));
   border: 5px solid #fdfdfd;
+  /* border: 5px solid #fdfdfd; */
+  padding: 5px;
+  background-color: white;
 }
 
 .c-csc-captioned_image {
