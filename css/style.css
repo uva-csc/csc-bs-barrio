@@ -13985,12 +13985,12 @@ main#content .c-csc-image_text p {
   margin: 0.5rem auto;
   font-weight: bold;
 }
-.centered-intro p:has(img) {
+.centered-intro p:has(img), .centered-intro div.field--type-image {
   width: 100%;
   max-width: unset;
   margin: 0.5rem;
 }
-.centered-intro p:has(img) img {
+.centered-intro p:has(img) img, .centered-intro div.field--type-image img {
   display: block;
   margin: 1.5rem auto;
   filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.5843137255));
