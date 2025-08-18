@@ -11860,15 +11860,11 @@ textarea.form-control-lg {
   font-weight: 900 !important;
 }
 
-.font-16 p, .font-16 td {
+.font-16 h6, .font-16 .h6, .font-16 p, .font-16 td {
   font-size: 16px;
 }
 
-p.font-16 {
-  font-size: 16px;
-}
-
-.font-17 p, .font-17 td {
+.font-17 h6, .font-17 .h6, .font-17 p, .font-17 td {
   font-size: 17px;
 }
 
@@ -11876,7 +11872,7 @@ p.font-17 {
   font-size: 17px;
 }
 
-.font-18 p, .font-18 td {
+.font-18 h6, .font-18 .h6, .font-18 p, .font-18 td {
   font-size: 18px;
 }
 
@@ -11884,7 +11880,7 @@ p.font-18 {
   font-size: 18px;
 }
 
-.font-20 p, .font-20 td {
+.font-20 h6, .font-20 .h6, .font-20 p, .font-20 td {
   font-size: 20px;
 }
 
