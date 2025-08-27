@@ -686,6 +686,28 @@
     }
   } // End of calendar styles
 
+  // Elements
+  .table-responsive table, table.responsive {
+    width: 100%;
+    tr {
+      display: block;
+
+      th, td {
+        display: block;
+        width: 100% !important;
+        text-align: left;
+      }
+
+      td:first-child {
+        background-color: aliceblue !important;
+      }
+
+      td:only-child {
+        background-color: lightgray !important;
+      }
+    }
+  }
+
 } // End Media max-width: 576px (Phones)
 
 @media (max-width: 640px) {
