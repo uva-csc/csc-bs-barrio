@@ -16649,6 +16649,9 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .csc-calendar .js-drupal-fullcalendar .fc-toolbar > div:first-child {
     margin-top: -0.5rem;
   }
+  h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7 {
+    text-align: center;
+  }
   .table-responsive table, table.responsive {
     width: 100%;
   }
@@ -16665,6 +16668,9 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
   .table-responsive table tr td:only-child, table.responsive tr td:only-child {
     background-color: lightgray !important;
+  }
+  .flex-column .field--type-image img:only-child {
+    margin-left: 24%;
   }
 }
 @media (max-width: 640px) {

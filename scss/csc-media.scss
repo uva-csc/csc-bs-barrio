@@ -686,7 +686,11 @@
     }
   } // End of calendar styles
 
-  // Elements
+  // General Elements
+  h2, h3, h4, h5, h6, h7 {
+    text-align: center;
+  }
+
   .table-responsive table, table.responsive {
     width: 100%;
     tr {
@@ -706,6 +710,10 @@
         background-color: lightgray !important;
       }
     }
+  }
+
+  .flex-column .field--type-image img:only-child {
+    margin-left: 24%;
   }
 
 } // End Media max-width: 576px (Phones)
