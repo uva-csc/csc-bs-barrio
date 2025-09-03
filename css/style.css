@@ -12749,7 +12749,7 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay {
   margin: 0 auto;
   border-radius: 0 0 20px 20px; */
   background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.0352941176));
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay h2, body.path-frontpage main#content .c-csc-hero .home-title-overlay .h2 {
   margin: 0;
