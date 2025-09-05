@@ -12473,7 +12473,7 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia {
   margin-top: 3rem;
 }
 div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
   max-width: 18vw;
   height: auto;
   display: inline-block;
@@ -13316,7 +13316,7 @@ body.node--type-news-item .block-field-blocknodenews-itemfield-url .field__item 
   margin: 0 1rem 2rem 0;
 }
 .node--type-page .block-field-blocknodepagefield-image img {
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 .node--type-page .block-field-blocknodepagebody {
   padding-top: 1rem;
@@ -13324,7 +13324,7 @@ body.node--type-news-item .block-field-blocknodenews-itemfield-url .field__item 
 .node--type-page .block-field-blocknodepagebody img {
   max-width: 60vw;
   height: auto;
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 .node--type-page.node--view-mode-teaser .field--name-field-image img,
 .node--type-page.node--view-mode-teaser .field--name-field-teaser-image img {
@@ -13418,7 +13418,7 @@ body.node--type-event .layout__region.layout__region--first .field--name-field-i
 body.node--type-event .layout__region.layout__region--first .field--name-field-image img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 body.node--type-event .layout__region.layout__region--first .block-csc-canceled-dates-block {
   text-align: center;
@@ -13563,7 +13563,7 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
   margin: 0 0 1rem 1rem;
 }
 body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclassfield-image img {
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 body.node--type-class .layout__region.layout__region--first .field--name-field-class-id {
   margin-bottom: 0.5rem;
@@ -13993,7 +13993,7 @@ main#content .c-csc-image_text p {
 .centered-intro p:has(img) img, .centered-intro div.field--type-image img {
   display: block;
   margin: 1.5rem auto;
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
   border: 3px inset #fdfdfd;
   /* border: 5px solid #fdfdfd; */
   padding: 5px;
@@ -14007,7 +14007,7 @@ main#content .c-csc-image_text p {
   padding-bottom: 0.5rem;
 }
 .c-csc-captioned_image .field--name-field-image img {
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 .c-csc-captioned_image .field--name-field-caption {
   margin-top: 0.25rem;
@@ -14048,7 +14048,8 @@ main#content .c-csc-image_text p {
 }
 
 .views-field-field-image img {
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
+  /*box-shadow: $box-shadow;*/
 }
 
 .views-field-field-image + .views-field-field-date {
@@ -15603,7 +15604,7 @@ div.csc-give-link .content .field--name-body p a:hover {
 .field--name-field-teaser-image img,
 .field--name-field-image img,
 .views-field-field-teaser-image img {
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 
 .node--type-location div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
@@ -15707,7 +15708,7 @@ div.geolocation-map-wrapper {
   position: relative;
   width: 500px;
   height: 300px;
-  filter: drop-shadow(8px 10px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 
 /** Blocks **/
