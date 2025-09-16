@@ -15083,6 +15083,9 @@ h2.hero-title, .hero-title.h2 {
   cursor: pointer !important;
 }
 
+mark, .mark {
+  padding: 0 !important;
+}
 mark.marker-none, .marker-none.mark {
   background-color: unset;
 }
@@ -15494,8 +15497,8 @@ a.scrolltop {
   content: "";
   bottom: 0;
   left: 0;
-  position: absolute;
   right: 0;
+  position: absolute;
   top: 0;
   transform-origin: center right;
   transform: scaleX(0);
