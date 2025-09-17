@@ -17311,6 +17311,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .shadow {
     box-shadow: none !important;
     filter: none !important;
+    background: transparent !important;
+  }
+  .shadow div {
+    background: transparent !important;
   }
 }
 /* VARIABLES */

@@ -1703,6 +1703,11 @@
   .shadow {
     box-shadow: none !important;
     filter: none !important;
+    background: transparent !important;
+
+    div {
+      background: transparent !important;
+    }
   }
 
 }
