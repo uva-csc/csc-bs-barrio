@@ -17273,6 +17273,45 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     padding-left: 5%;
   }
 }
+/* Print-specific styles */
+@media print {
+  @page {
+    size: letter; /* auto uses printer’s default size */
+    margin: 0.25in; /* sets all margins to half an inch */
+  }
+  body {
+    font-size: 12pt;
+    line-height: 1.2;
+    color: black;
+    background: none;
+    margin: 0;
+    padding: 0;
+    /*max-width: 8.5in;
+    padding: 0 0.25in;*/
+  }
+  #header, .featured-bottom, footer {
+    display: none;
+  }
+  .page-break {
+    page-break-before: always; /* Old syntax, widely supported */
+    break-before: page; /* Modern CSS3 syntax */
+  }
+  .hide {
+    display: none;
+  }
+  .shadow.align-right {
+    float: none;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+  }
+  .bottom-logos {
+    margin-top: -3rem;
+  }
+  .bottom-logos img {
+    width: 80%;
+  }
+}
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /** Admin Structure **/
