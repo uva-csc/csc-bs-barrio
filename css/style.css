@@ -17299,7 +17299,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .hide {
     display: none;
   }
-  .shadow.align-right {
+  .print-block {
     float: none;
     display: block;
     width: fit-content;
