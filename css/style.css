@@ -17308,6 +17308,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .bottom-logos img {
     width: 80%;
   }
+  .shadow {
+    box-shadow: none !important;
+    filter: none !important;
+  }
 }
 /* VARIABLES */
 /** Bootstrap Overrides **/
