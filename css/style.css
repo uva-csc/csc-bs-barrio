@@ -15618,6 +15618,13 @@ div.csc-give-link .content .field--name-body p a:hover {
   filter: none !important;
 }
 
+div.align-center {
+  width: fit-content;
+}
+div.align-center div {
+  width: fit-content;
+}
+
 .media-div.rnd img {
   border-radius: 0.3rem !important;
 }

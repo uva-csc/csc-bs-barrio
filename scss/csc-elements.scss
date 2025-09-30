@@ -671,6 +671,14 @@ div.csc-give-link {
   filter: none!important;
 }
 
+div.align-center {
+  width: fit-content;
+
+  div {
+    width: fit-content;
+  }
+}
+
 // For Drupal Media images, classes wind up on enclosing div
 .media-div {
   &.rnd {
