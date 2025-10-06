@@ -15702,6 +15702,12 @@ table.csc-table-1 td {
 .teaser-row .field--name-field-teaser-caption:not(:has(p)):last-child {
   border-bottom: 2px solid #E57325;
 }
+.teaser-row.layout--threecol-section.container .layout__region .block {
+  margin: 0 0.5rem;
+}
+.teaser-row.layout--threecol-section.container .layout__region .block .img-link .field--type-entity-reference img {
+  max-height: 250px;
+}
 
 /** Maps **/
 div.geolocation-map-wrapper {

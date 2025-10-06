@@ -769,6 +769,8 @@ table {
     }
   } // end of table.csc-table-1
 } // End of general table classes
+
+
 /** Teaser Rows **/
 .teaser-row {
   .field--name-field-teaser-caption p,
@@ -783,6 +785,16 @@ table {
 
     &:last-child {
       border-bottom: 2px solid #E57325;
+    }
+  }
+
+  // Specifically for 3 teasers on research page
+  &.layout--threecol-section.container {
+    .layout__region .block {
+      margin: 0 0.5rem;
+      .img-link .field--type-entity-reference img {
+        max-height: 250px;
+      }
     }
   }
 }
