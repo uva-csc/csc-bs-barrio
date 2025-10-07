@@ -13355,6 +13355,9 @@ body.node--type-event article.node--type-event {
   max-width: 1200px;
   margin: 0 auto;
 }
+body.node--type-event .node--view-mode-full .block-csc-canceled-dates-block {
+  margin-bottom: 1rem;
+}
 body.node--type-event div.event-content.layout--twocol-section {
   gap: 75px;
 }
