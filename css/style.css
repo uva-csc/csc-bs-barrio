@@ -519,12 +519,14 @@ legend {
   padding: 0;
   margin-bottom: 0.5rem;
   font-size: calc(1.275rem + 0.3vw);
-  line-height: inherit;
 }
 @media (min-width: 1200px) {
   legend {
     font-size: 1.5rem;
   }
+}
+legend {
+  line-height: inherit;
 }
 legend + * {
   clear: left;
@@ -598,68 +600,80 @@ progress {
 
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
-  font-weight: 300;
-  line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-1 {
     font-size: 5rem;
   }
 }
+.display-1 {
+  font-weight: 300;
+  line-height: 1.2;
+}
 
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
-  font-weight: 300;
-  line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-2 {
     font-size: 4.5rem;
   }
 }
+.display-2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
 
 .display-3 {
   font-size: calc(1.525rem + 3.3vw);
-  font-weight: 300;
-  line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-3 {
     font-size: 4rem;
   }
 }
+.display-3 {
+  font-weight: 300;
+  line-height: 1.2;
+}
 
 .display-4 {
   font-size: calc(1.475rem + 2.7vw);
-  font-weight: 300;
-  line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-4 {
     font-size: 3.5rem;
   }
 }
+.display-4 {
+  font-weight: 300;
+  line-height: 1.2;
+}
 
 .display-5 {
   font-size: calc(1.425rem + 2.1vw);
-  font-weight: 300;
-  line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-5 {
     font-size: 3rem;
   }
 }
+.display-5 {
+  font-weight: 300;
+  line-height: 1.2;
+}
 
 .display-6 {
   font-size: calc(1.375rem + 1.5vw);
-  font-weight: 300;
-  line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-6 {
     font-size: 2.5rem;
   }
+}
+.display-6 {
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .list-unstyled {
@@ -5750,12 +5764,14 @@ textarea.form-control-lg {
 }
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
-  transform: translate(0, -50px);
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
     transition: none;
   }
+}
+.modal.fade .modal-dialog {
+  transform: translate(0, -50px);
 }
 .modal.show .modal-dialog {
   transform: none;
@@ -12056,14 +12072,6 @@ main#content {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  /*
-  li:after {
-    content: '/';
-    color: $uva-orange;
-    display: inline-block;
-    margin-left: -4px;
-  }
-   */
 }
 #header #navbar-top > section nav.menu--top-menu ul li {
   display: flex;
@@ -12081,6 +12089,16 @@ main#content {
 }
 #header #navbar-top > section nav.menu--top-menu ul li:last-child:after {
   display: none;
+}
+#header #navbar-top > section nav.menu--top-menu ul {
+  /*
+  li:after {
+    content: '/';
+    color: $uva-orange;
+    display: inline-block;
+    margin-left: -4px;
+  }
+   */
 }
 #header #navbar-top .block-social-media-links-block ul.social-media-links--platforms {
   margin: 6px 0 0;
@@ -12131,21 +12149,6 @@ main#content {
 #header #navbar-main {
   height: 35px;
   padding: 4px 0 0 0;
-  /*
-      ul.dropdown-menu {
-        li {
-          padding-bottom: 0.5rem;
-          border-bottom: thin solid grey;
-        }
-        a {
-          font-weight: normal;
-          color: $uva-blue;
-
-          &:hover {
-            color: $uva-blue-25;
-          }
-        }
-      }*/
 }
 #header #navbar-main.bg-primary {
   background-color: #232D4B !important;
@@ -12185,6 +12188,23 @@ main#content {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.05rem;
+}
+#header #navbar-main {
+  /*
+      ul.dropdown-menu {
+        li {
+          padding-bottom: 0.5rem;
+          border-bottom: thin solid grey;
+        }
+        a {
+          font-weight: normal;
+          color: $uva-blue;
+
+          &:hover {
+            color: $uva-blue-25;
+          }
+        }
+      }*/
 }
 #header .navbar .nav-item a, #header .navbar .menu-item a {
   display: block;
@@ -12529,13 +12549,6 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 #student-featured.features > .layout__region {
   display: flex;
   flex-wrap: wrap;
-  /*
-      & > .block:nth-child(2) {
-        flex: 2;
-        width: 45vw;
-
-      }
-  */
 }
 #student-featured.features > .layout__region > .block {
   display: inline-block;
@@ -12548,6 +12561,15 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 }
 #student-featured.features > .layout__region > .block:first-child .content {
   margin: 1rem auto;
+}
+#student-featured.features > .layout__region {
+  /*
+      & > .block:nth-child(2) {
+        flex: 2;
+        width: 45vw;
+
+      }
+  */
 }
 #student-featured.features > .layout__region > .block:nth-child(3) {
   flex: 1;
@@ -13114,6 +13136,13 @@ body.node--type-landing-page main#content h1.title-overlay, body.node--type-land
   letter-spacing: 0.1rem;
   font-size: 2rem;
 }
+body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box h2, body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box .h2 {
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 500 !important;
+  text-align: left;
+  margin: 1.5rem 0 0.5rem 25vw;
+  font-size: 2.75rem;
+}
 body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box {
   /*
 
@@ -13125,13 +13154,6 @@ body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc
     line-height: 1.5rem;
   }
   */
-}
-body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box h2, body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box .h2 {
-  font-family: franklin-gothic-urw, sans-serif;
-  font-weight: 500 !important;
-  text-align: left;
-  margin: 1.5rem 0 0.5rem 25vw;
-  font-size: 2.75rem;
 }
 body.node--type-landing-page main#content .field--name-field-text-overlay .c-csc-text_box.caption {
   position: absolute;
@@ -13270,6 +13292,13 @@ body.node--type-news-item .block-field-blocknodenews-itemfield-url .field__item 
   font-weight: bold;
 }
 
+.node--type-page.no-title #title-div {
+  display: none;
+}
+.node--type-page.wd-width article {
+  max-width: 1056px;
+  margin: 0 auto;
+}
 .node--type-page {
   /*
   #title-div {
@@ -13279,13 +13308,6 @@ body.node--type-news-item .block-field-blocknodenews-itemfield-url .field__item 
     margin: 1rem 0 0.5rem;
   }
   */
-}
-.node--type-page.no-title #title-div {
-  display: none;
-}
-.node--type-page.wd-width article {
-  max-width: 1056px;
-  margin: 0 auto;
 }
 .node--type-page #title-div {
   margin-bottom: 0.5rem;
@@ -13670,19 +13692,6 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 }
 .node--type-people .image-bio {
   margin-top: -200px;
-  /* Too General, effects /people/ben-benson profile pages */
-  /*
-      .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
-        margin-top: 60px;
-      }*/
-  /*
-      .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
-        margin-top: 120px;
-      }
-
-      .block-field-blocknodepeoplefield-csc-role + .block-field-blocknodepeoplefield-bio {
-        margin-top: 135px !important;
-      }*/
 }
 .node--type-people .image-bio .block-field-blocknodepeopletitle,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-csc-role,
@@ -13709,6 +13718,9 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover {
   color: #E57325 !important;
   border-bottom: 2px solid #E57325 !important;
+}
+.node--type-people .image-bio {
+  /* Too General, effects /people/ben-benson profile pages */
 }
 .node--type-people .image-bio .field--name-field-image img {
   position: relative;
@@ -13737,6 +13749,12 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover:after {
   content: url(/themes/custom/csc_bs_sass/images/icons/external-link-svgrepo-orange.svg);
 }
+.node--type-people .image-bio {
+  /*
+      .block-field-blocknodepeoplefield-email ~ .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
+        margin-top: 60px;
+      }*/
+}
 .node--type-people .image-bio .block-field-blocknodepeoplefield-bio:nth-child(3) {
   margin-top: 130px;
 }
@@ -13752,6 +13770,16 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-bio:nth-child(7) {
   margin-top: 40px;
 }
+.node--type-people .image-bio {
+  /*
+      .block-field-blocknodepeoplefield-pronouns ~ .block-field-blocknodepeoplefield-bio {
+        margin-top: 120px;
+      }
+
+      .block-field-blocknodepeoplefield-csc-role + .block-field-blocknodepeoplefield-bio {
+        margin-top: 135px !important;
+      }*/
+}
 .node--type-people .image-bio .block-field-blocknodepeoplefield-bio {
   margin-top: 60px;
 }
@@ -13759,18 +13787,42 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   color: #232D4B;
 }
 
-.node--type-landing-page .c-csc-text_box {
-  /*
-
-  p {
-    color: $uva-blue;
-    max-width: 650px;
-    text-align: left;
-    margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
-    line-height: 1.5rem;
-  }
-  */
+body.node--type-article .block-field-blocknodearticlefield-tags .field--name-field-tags ul, body.node--type-article .block-field-blocknodearticlefield-tags .field--name-field-tags li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
+body.node--type-article .block-field-blocknodearticlefield-tags .field--name-field-tags a {
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 500 !important;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #5a6172;
+  letter-spacing: 1px;
+  border: none;
+}
+body.node--type-article .block-field-blocknodearticletitle {
+  margin-bottom: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: thin solid grey;
+}
+body.node--type-article .block-field-blocknodearticletitle span {
+  font-size: 3rem;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 500 !important;
+  line-height: 1.03846;
+  letter-spacing: -0.02885em;
+}
+body.node--type-article .block-field-blocknodearticlefield-byline {
+  margin-bottom: 0.5rem;
+  text-align: right;
+  font-style: italic;
+}
+body.node--type-article .block-field-blocknodearticlefield-image {
+  width: fit-content;
+  margin: 0 auto 1rem;
+}
+
 .node--type-landing-page .c-csc-text_box.hero-title {
   margin-top: 1rem;
   padding-top: 1.5rem;
@@ -13784,6 +13836,18 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   /*text-align: left;*/
   margin: 1.5rem 0 0.5rem;
   font-size: 2.75rem;
+}
+.node--type-landing-page .c-csc-text_box {
+  /*
+
+  p {
+    color: $uva-blue;
+    max-width: 650px;
+    text-align: left;
+    margin-left: 27vw; !* TODO: Make this more specific to its context?? *!
+    line-height: 1.5rem;
+  }
+  */
 }
 .node--type-landing-page .c-csc-text_box.caption {
   position: absolute;
@@ -14172,15 +14236,17 @@ p.view-more a {
   font-weight: bold;
   letter-spacing: -0.025rem;
   line-height: 1.2;
-  /*&:hover {
-    border-bottom: $csc-link;
-  }*/
 }
 .view.event-col .views-row .views-field.title a {
   border-bottom: none;
 }
 .view.event-col .views-row .views-field.title br {
   display: none;
+}
+.view.event-col .views-row .views-field.title {
+  /*&:hover {
+    border-bottom: $csc-link;
+  }*/
 }
 .view.event-col .views-row .views-field.date, .view.event-col .views-row .views-field.time, .view.event-col .views-row .views-field.audience {
   font-size: 90%;
@@ -14222,31 +14288,6 @@ p.view-more a {
 .view-events.events-row-teasers .view-footer {
   margin: 1rem auto;
 }
-.view-events.events-row, .view-events.events-row-teasers {
-  /* Generalized to use in any view above at top
-  .view-footer {
-    width: fit-content;
-    margin: 3rem auto 1rem;
-    text-align: center;
-
-    p { // The "More Events Button"
-      font-family: $font-frankgoth-std;
-      font-weight: 900!important;
-      font-size: 90%;
-      padding: 0rem 3.5rem;
-      border-radius: 3px;
-      line-height: 1.15rem;
-
-      a {
-        display: inline-block;
-        padding-top: 0.35rem;
-        color: $white !important;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-    }
-  } // End of .events-row .footer*/
-}
 .view-events.events-row .view-header h2, .view-events.events-row .view-header .h2, .view-events.events-row-teasers .view-header h2, .view-events.events-row-teasers .view-header .h2 {
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 900 !important;
@@ -14263,9 +14304,6 @@ p.view-more a {
   height: 100%;
   /* border-top: 16px solid $uva-orange; */
   background-color: #fdfdfd;
-  /*margin: 10px 8px 0;
-  padding-top: 0.5rem;
-  line-height: 1.35rem;*/
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .node--type-event.node--view-mode-teaser, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .node--type-event.node--view-mode-teaser {
   max-width: 300px;
@@ -14302,6 +14340,11 @@ p.view-more a {
   padding: 0;
   filter: none;
   max-height: 200px;
+}
+.view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner {
+  /*margin: 10px 8px 0;
+  padding-top: 0.5rem;
+  line-height: 1.35rem;*/
 }
 .view-events.events-row .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date, .view-events.events-row-teasers .view-content .views-view-responsive-grid .views-view-responsive-grid__item-inner .views-field-field-date {
   margin: 0 8px;
@@ -14350,6 +14393,31 @@ p.view-more a {
   width: 100%;
   font-size: 90%;
   color: #E57325;
+}
+.view-events.events-row, .view-events.events-row-teasers {
+  /* Generalized to use in any view above at top
+  .view-footer {
+    width: fit-content;
+    margin: 3rem auto 1rem;
+    text-align: center;
+
+    p { // The "More Events Button"
+      font-family: $font-frankgoth-std;
+      font-weight: 900!important;
+      font-size: 90%;
+      padding: 0rem 3.5rem;
+      border-radius: 3px;
+      line-height: 1.15rem;
+
+      a {
+        display: inline-block;
+        padding-top: 0.35rem;
+        color: $white !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  } // End of .events-row .footer*/
 }
 .view-events.featured-event {
   max-width: 500px;
@@ -16044,6 +16112,14 @@ div.bc-teaser .caption a {
 .block-views-blockcalendar-fullcalendar-block .csc-calendar {
   margin-top: 2rem;
   padding: 0 1rem;
+}
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link {
+  margin: -0.75rem 0 -1rem;
+}
+.block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link a {
+  border: none;
+}
+.block-views-blockcalendar-fullcalendar-block .csc-calendar {
   /*.fc-event-container {
     &[colspan] {
       background-color: $csc-lt-gray;
@@ -16072,12 +16148,6 @@ div.bc-teaser .caption a {
     }
 
   }*/
-}
-.block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link {
-  margin: -0.75rem 0 -1rem;
-}
-.block-views-blockcalendar-fullcalendar-block .csc-calendar .close-link a {
-  border: none;
 }
 .block-views-blockcalendar-fullcalendar-block .csc-calendar a.fc-more {
   font-size: 0.75rem !important;
@@ -16813,12 +16883,12 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     padding: unset;
     max-width: unset;
   }
-  .path-frontpage #main-wrapper main#content .featured-event .wrapper:first-child {
-    padding: 1rem 1rem 1rem 1.25rem;
-  }
   .path-frontpage #main-wrapper main#content .featured-event .wrapper:first-child:before {
     background-position: center;
     background-size: 7%;
+  }
+  .path-frontpage #main-wrapper main#content .featured-event .wrapper:first-child {
+    padding: 1rem 1rem 1rem 1.25rem;
   }
   .path-frontpage #main-wrapper main#content .events-row .layout__region--second .wrapper {
     padding: 0;

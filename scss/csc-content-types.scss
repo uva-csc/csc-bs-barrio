@@ -981,6 +981,51 @@ body.node--type-class {
   } // end of people image-bio
 } // End of People Pages
 
+// Article Content type
+body.node--type-article {
+  .block-field-blocknodearticlefield-tags .field--name-field-tags {
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    a {
+      font-family: franklin-gothic-urw, sans-serif;
+      font-weight: 500 !important;
+      font-size: 80%;
+      text-transform: uppercase;
+      color: #5a6172;
+      letter-spacing: 1px;
+      border: none;
+    }
+  } // End of article tags
+
+  .block-field-blocknodearticletitle {
+    margin-bottom: 0;
+    padding-bottom: 0.25rem;
+    border-bottom: thin solid grey;
+
+    span {
+      font-size: 3rem;
+      font-family: franklin-gothic-urw, sans-serif;
+      font-weight: 500 !important;
+      line-height: 1.03846;
+      letter-spacing: -0.02885em;
+    }
+  }
+
+  .block-field-blocknodearticlefield-byline {
+    margin-bottom: 0.5rem;
+    text-align: right;
+    font-style: italic;
+  }
+
+  .block-field-blocknodearticlefield-image {
+    width: fit-content;
+    margin: 0 auto 1rem;
+  }
+} // End of Article Content type
+
 // End of Content Type Styles
 
 // Hero Overlays
