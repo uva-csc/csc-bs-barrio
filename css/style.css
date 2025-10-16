@@ -15802,15 +15802,15 @@ div.geolocation-map-wrapper {
   width: fit-content;
   margin: 3rem auto;
 }
-.view-display-id-symposium_block #views_slideshow_cycle_teaser_section_homepage_slideshow-symposium_block {
+.view-display-id-symposium_block .views_slideshow_main .views_slideshow_cycle_teaser_section {
   width: 800px;
   height: 500px;
   filter: none !important;
 }
-.view-display-id-symposium_block #views_slideshow_cycle_teaser_section_homepage_slideshow-symposium_block img {
+.view-display-id-symposium_block .views_slideshow_main .views_slideshow_cycle_teaser_section img {
   filter: none !important;
 }
-.view-display-id-symposium_block #views_slideshow_cycle_teaser_section_homepage_slideshow-symposium_block .views-field-title {
+.view-display-id-symposium_block .views_slideshow_main .views_slideshow_cycle_teaser_section .views-field-title {
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: normal;
   font-style: italic;
