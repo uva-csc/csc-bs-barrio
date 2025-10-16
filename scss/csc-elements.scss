@@ -817,6 +817,52 @@ div.geolocation-map-wrapper {
   filter: $img-shadow;
 }
 
+
+.view-display-id-symposium_block {
+  width: fit-content;
+  margin: 3rem auto;
+
+  #views_slideshow_cycle_teaser_section_homepage_slideshow-symposium_block {
+    width: 800px;
+    height: 500px;
+    filter: none !important;
+
+    img {
+      filter: none !important;
+    }
+
+    .views-field-title {
+      font-family: $font-frankgoth-std;
+      font-weight: normal;
+      font-style: italic;
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  }
+
+
+  .views_slideshow_controls_text_previous {
+    position: absolute;
+    transform: translateY(200px);
+    z-index: 200;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .views_slideshow_controls_text_next {
+    position: absolute;
+    transform: translate(760px, 200px);
+    z-index: 200;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 /** Blocks **/
 
 .csc-skewed-block {

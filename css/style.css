@@ -15798,6 +15798,43 @@ div.geolocation-map-wrapper {
   filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 
+.view-display-id-symposium_block {
+  width: fit-content;
+  margin: 3rem auto;
+}
+.view-display-id-symposium_block #views_slideshow_cycle_teaser_section_homepage_slideshow-symposium_block {
+  width: 800px;
+  height: 500px;
+  filter: none !important;
+}
+.view-display-id-symposium_block #views_slideshow_cycle_teaser_section_homepage_slideshow-symposium_block img {
+  filter: none !important;
+}
+.view-display-id-symposium_block #views_slideshow_cycle_teaser_section_homepage_slideshow-symposium_block .views-field-title {
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.view-display-id-symposium_block .views_slideshow_controls_text_previous {
+  position: absolute;
+  transform: translateY(200px);
+  z-index: 200;
+}
+.view-display-id-symposium_block .views_slideshow_controls_text_previous:hover {
+  cursor: pointer;
+}
+.view-display-id-symposium_block .views_slideshow_controls_text_next {
+  position: absolute;
+  transform: translate(760px, 200px);
+  z-index: 200;
+}
+.view-display-id-symposium_block .views_slideshow_controls_text_next:hover {
+  cursor: pointer;
+}
+
 /** Blocks **/
 .csc-skewed-block {
   position: relative;
