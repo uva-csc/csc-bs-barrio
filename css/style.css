@@ -13820,7 +13820,7 @@ body.node--type-article .block-field-blocknodearticlefield-byline {
 }
 body.node--type-article .block-field-blocknodearticlefield-image {
   width: fit-content;
-  margin: 0 auto 1rem;
+  margin: 1rem auto;
 }
 
 .node--type-landing-page .c-csc-text_box.hero-title {
