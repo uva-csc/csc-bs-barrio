@@ -365,7 +365,7 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
 
 function csc_bs_sass_preprocess_facets_result_item(&$facet) {
   // Changing this to pluralizing only specific facets (none of which ar in use)
-  $pluralize = ['nobody'];
+  $pluralize = ['Intern'];
   $label = $facet['value'];
   $new_label = ucwords(str_replace('_', ' ', $label));
   /* Pluralizes facet names in facet box  on the left side of the people page */
