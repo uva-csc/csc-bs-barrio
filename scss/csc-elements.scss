@@ -810,6 +810,7 @@ div.geolocation-map-wrapper {
 
 
 /** Slideshows **/
+
 .views_slideshow_cycle_teaser_section {
   position: relative;
   width: 500px;
@@ -817,6 +818,14 @@ div.geolocation-map-wrapper {
   filter: $img-shadow;
 }
 
+// So Slideshows can be centered by editor
+.text-align-center .csc-slideshow {
+  margin: 0 auto;
+
+  * {
+    text-align: left;
+  }
+}
 
 .view-display-id-symposium_block {
   width: fit-content;

@@ -15798,6 +15798,13 @@ div.geolocation-map-wrapper {
   filter: drop-shadow(6px 8px 3px rgba(0, 0, 0, 0.3));
 }
 
+.text-align-center .csc-slideshow {
+  margin: 0 auto;
+}
+.text-align-center .csc-slideshow * {
+  text-align: left;
+}
+
 .view-display-id-symposium_block {
   width: fit-content;
   margin: 3rem 0 1rem;
