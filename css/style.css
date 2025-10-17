@@ -15799,7 +15799,7 @@ div.geolocation-map-wrapper {
 }
 
 .text-align-center .csc-slideshow {
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 .text-align-center .csc-slideshow * {
   text-align: left;
@@ -15807,7 +15807,7 @@ div.geolocation-map-wrapper {
 
 .view-display-id-symposium_block {
   width: fit-content;
-  margin: 3rem 0 1rem;
+  margin: 1rem 0;
 }
 .view-display-id-symposium_block .views_slideshow_main .views_slideshow_cycle_teaser_section {
   width: 800px;
