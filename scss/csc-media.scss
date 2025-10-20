@@ -739,10 +739,11 @@
     margin-left: 24%;
   }
 
-  // Individual page custom styles
+  // Individual page custom styles (Not coming through?)
   body.symposium-recap {
     .titled-hero .layout-title {
-      top: 60px;
+      top: 60px !important;
+      color: red;
     }
 
     #page-wrapper main#content .c-csc-hero {
