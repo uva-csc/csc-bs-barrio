@@ -16825,6 +16825,9 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .flex-column .field--type-image img:only-child {
     margin-left: 24%;
   }
+  .symposium-recap .titled-hero .layout-title {
+    top: 60px;
+  }
 }
 @media (max-width: 640px) {
   body.node--type-landing-page main#content .field--name-field-hero-top {

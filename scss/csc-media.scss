@@ -739,6 +739,14 @@
     margin-left: 24%;
   }
 
+  // Individual page custom styles
+  .symposium-recap {
+    .titled-hero .layout-title {
+      top: 60px;
+    }
+  }
+
+
 } // End Media max-width: 576px (Phones)
 
 @media (max-width: 640px) {
