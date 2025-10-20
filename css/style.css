@@ -16370,6 +16370,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
   #page-wrapper main#content .csc-slideshow img {
     margin: 0 !important;
+    max-width: 100vw !important;
   }
   #page-wrapper main#content .csc-slideshow .views-field-title {
     max-width: 90vw;
