@@ -62,7 +62,27 @@
         width: 100vw;
         text-align: center;
       }
-    }
+
+      .csc-slideshow {
+        span {
+           margin-top: -7.5rem;
+        }
+
+        span:nth-child(2) {
+          transform: translate(88vw, 200px);
+        }
+
+        img {
+          margin: 0!important;
+        }
+
+        .views-field-title {
+          max-width: 90vw;
+          font-size: 0.9rem;
+          line-height:1.25;
+        }
+      } // End of .csc-slideshow
+    } // End of main#content
 
     .featured-bottom {
       margin-top: 3rem !important;

@@ -827,6 +827,12 @@ div.geolocation-map-wrapper {
   }
 }
 
+.csc-slideshow {
+  img {
+    max-width: 100vw !important;
+  }
+}
+
 .view-display-id-symposium_block {
   width: fit-content;
   margin: 1rem 0;
