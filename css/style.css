@@ -16362,10 +16362,10 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     width: 100vw;
     text-align: center;
   }
-  #page-wrapper main#content .csc-slideshow span {
+  #page-wrapper main#content .csc-slideshow .views-slideshow-controls-top span {
     margin-top: -7.5rem;
   }
-  #page-wrapper main#content .csc-slideshow span:nth-child(2) {
+  #page-wrapper main#content .csc-slideshow .views-slideshow-controls-top span:nth-child(2) {
     transform: translate(88vw, 200px);
   }
   #page-wrapper main#content .csc-slideshow img {

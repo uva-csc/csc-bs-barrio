@@ -64,12 +64,14 @@
       }
 
       .csc-slideshow {
-        span {
-           margin-top: -7.5rem;
-        }
+        .views-slideshow-controls-top {
+          span {
+            margin-top: -7.5rem;
+          }
 
-        span:nth-child(2) {
-          transform: translate(88vw, 200px);
+          span:nth-child(2) {
+            transform: translate(88vw, 200px);
+          }
         }
 
         img {
