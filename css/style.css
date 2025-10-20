@@ -16825,12 +16825,11 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .flex-column .field--type-image img:only-child {
     margin-left: 24%;
   }
-  body.symposium-recap #page-wrapper main#content .c-csc-hero {
-    margin-bottom: 0 !important;
-    background-position: -700px !important;
+  body.symposium-recap .titled-hero .layout-title {
+    top: 60px;
   }
-  body.symposium-recap #page-wrapper main#content .titled-hero .layout-title {
-    top: 60px !important;
+  body.symposium-recap #page-wrapper main#content .c-csc-hero {
+    margin-top: 5rem !important;
   }
 }
 @media (max-width: 640px) {

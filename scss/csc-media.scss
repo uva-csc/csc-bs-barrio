@@ -741,18 +741,12 @@
 
   // Individual page custom styles
   body.symposium-recap {
-    #page-wrapper main#content {
+    .titled-hero .layout-title {
+      top: 60px;
+    }
 
-      .c-csc-hero {
-        margin-bottom: 0 !important;
-        background-position: -700px !important;
-      }
-
-      .titled-hero {
-        .layout-title {
-          top: 60px !important;
-        }
-      }
+    #page-wrapper main#content .c-csc-hero {
+      margin-top: 5rem !important;
     }
   }
 
