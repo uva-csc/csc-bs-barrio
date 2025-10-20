@@ -740,12 +740,20 @@
   }
 
   // Individual page custom styles
-  .symposium-recap {
-    .titled-hero .layout-title {
-      top: 60px;
+  body.symposium-recap {
+    #page-wrapper main#content {
+      .titled-hero {
+        .layout-title {
+          top: 60px !important;
+        }
+
+        .c-csc-hero {
+          margin-bottom: 0 !important;
+          background-position: -700px !important
+        }
+      }
     }
   }
-
 
 } // End Media max-width: 576px (Phones)
 
