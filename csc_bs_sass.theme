@@ -323,6 +323,12 @@ function csc_bs_sass_preprocess_views_view(&$variables) {
     if (in_array($rolep, array_keys($roles))) {
       $variables['header']['area']['#text'] .= "<h3>" . $roles[$rolep] . "</h3>";
     }
+
+    if($rolep == 'roles:student_staff') {
+      $variables['show_student_msg'] = TRUE;
+    } else {
+      $variables['show_student_msg'] = FALSE;
+    }
   }
 }
 

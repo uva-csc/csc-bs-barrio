@@ -15921,6 +15921,9 @@ div.geolocation-map-wrapper {
 }
 
 /** Cards **/
+.view-people .view-header, .view-people-indexed .view-header {
+  max-width: 800px;
+}
 .view-people .view-content, .view-people-indexed .view-content {
   display: flex;
   flex-direction: row;

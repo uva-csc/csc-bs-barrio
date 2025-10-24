@@ -973,6 +973,9 @@ div.geolocation-map-wrapper {
 
 /** Cards **/
 .view-people, .view-people-indexed {
+  .view-header {
+    max-width: 800px;
+  }
   .view-content {
     display: flex;
     flex-direction: row;
