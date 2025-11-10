@@ -14236,7 +14236,7 @@ p.view-more a {
   letter-spacing: unset;
 }
 .view.event-col .views-row .views-field.title {
-  margin: 0.25rem 0 0.5rem;
+  margin: 0.15rem 0 0.25rem;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: -0.025rem;
