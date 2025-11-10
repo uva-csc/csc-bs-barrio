@@ -352,7 +352,20 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
         }
       }
       $variables['output'] = implode('', $output);
-    } // end views field tag
+    } // end views events field tag
+
+    if ($view->current_display == 'block_1' && $field->field == 'field_date') {
+      $field_options = $view->field['field_date']->options;
+      $variables['smart_date_format_key'] = $field_options['settings']['format'] ?? 'default';
+      csc_log("Format key: " . $variables['smart_date_format_key']);
+      $row = $variables['row'];
+      $items = $row->_entity->get('field_date');
+      $sditems = [];
+      foreach ($items as $item) {
+        $sditems[] = [ '#value' => $item->value ];
+      }
+      $variables['smart_date_items'] = $sditems;
+    }
   }
 
   // For homepage events to move the read-more link inside the body's last </p>
