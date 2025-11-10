@@ -176,6 +176,11 @@ body.path-frontpage main#content {
 
     // Date
     .views-field-field-date {
+      .field-content {
+        text-align: center;
+        font-weight: bold;
+        font-style: normal;
+      }
       .recurring-output--wrapper {
         .day-time {
           div { display: inline-block; }
@@ -190,6 +195,7 @@ body.path-frontpage main#content {
         }
       }
     }
+
 
     // Body
     .views-field-body {
