@@ -14229,7 +14229,7 @@ p.view-more a {
   max-width: 280px;
 }
 .view.event-col .views-row .views-field.event-type {
-  margin-top: -0.5rem;
+  margin-top: -0.1rem;
 }
 .view.event-col .views-row .views-field.event-type a {
   font-size: 70%;
