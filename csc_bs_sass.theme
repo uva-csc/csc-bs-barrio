@@ -354,17 +354,30 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
       $variables['output'] = implode('', $output);
     } // end views events field tag
 
-    if ($view->current_display == 'block_1' && $field->field == 'field_date') {
-      $field_options = $view->field['field_date']->options;
-      $variables['smart_date_format_key'] = $field_options['settings']['format'] ?? 'default';
-      csc_log("Format key: " . $variables['smart_date_format_key']);
+    if ($view->current_display == 'block_1' && ($field->field == 'field_date' || $field->field == 'field_custom_date_display')) {
+      // Checks for lists of different dates and lists those separately
+      // Whereas recurring events are listed as a range.
       $row = $variables['row'];
       $items = $row->_entity->get('field_date');
-      $sditems = [];
-      foreach ($items as $item) {
-        $sditems[] = [ '#value' => $item->value ];
+      $firsti = $items->first();
+      // If there is not a rrule but more than one, it's not recurring but individual, separate dates
+      if (empty($firsti->rrule) && count($items) > 1) {
+        $sditems = [];
+        foreach ($items as $item) {
+          $endtime = $item->end_value;
+          $hour = date('g', $endtime);
+          $minutes = date('i', $endtime);
+          $ampm = date('a', $endtime);
+          $endtime = ($minutes === '00') ? "$hour$ampm" : "$hour:$minutes$ampm";
+          $sditems[] = ['#value' => $item->value, 'endtime' => $endtime]; // json_encode($aitem['end_value'])
+        }
+        // The list of formatted date items with an inital #value timestamp
+        // for the Twig smartdate function smart_date_format(smart_date_format_key)
+        $variables['smart_date_items'] = $sditems;
+        // Getting the Smartdate format key for the twig function
+        $field_options = $view->field['field_date']->options;
+        $variables['smart_date_format_key'] = $field_options['settings']['format'] ?? 'default';
       }
-      $variables['smart_date_items'] = $sditems;
     }
   }
 
