@@ -14696,8 +14696,9 @@ div.view-empty {
   border-bottom: 2px solid grey;
   font-family: bodoni-urw, serif;
 }
-.view-conferences div.conference-row {
+.view-conferences div.views-row {
   max-width: 1200px;
+  margin-bottom: 3rem;
 }
 
 .views-row .views-field .filters::before {
