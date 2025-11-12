@@ -14685,6 +14685,21 @@ div.view-empty {
   display: none;
 }
 
+.view-conferences div.month-header {
+  width: 100%;
+  margin: 1rem 0;
+  padding-right: 55%;
+}
+.view-conferences div.month-header h2, .view-conferences div.month-header .h2 {
+  padding: 0.5rem 0;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  font-family: bodoni-urw, serif;
+}
+.view-conferences div.conference-row {
+  max-width: 1200px;
+}
+
 .views-row .views-field .filters::before {
   content: "Topics: ";
   font-weight: bold;

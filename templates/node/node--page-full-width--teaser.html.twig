@@ -75,6 +75,12 @@
     content.field_class_attribute|render|clean_class
   ]
 %}
+{% set has_conferences = false %}
+{% for term in node.field_filter %}
+  {% if term.entity.label == 'Conferences' %}
+    {% set has_conferences = true %}
+  {% endif %}
+{% endfor %}
 {%
   set content_classes = [
     'node__content',
@@ -83,23 +89,35 @@
   ]
 %}
 
-<article{{ attributes.addClass(classes) }}>
-  <div{{ content_attributes.addClass(content_classes) }}>
-    {% if node.field_teaser_image is empty  %}
-      {{ content.field_image }}
-    {% else %}
-      {{ content.field_teaser_image }}
-    {% endif %}
-    <div class="mt-3">
-      <a href="{{ url }}" class="plain">
-        <h3>
-          {% if node.field_alt_teaser_title is empty %}
-            {{ label }}
-          {% else %}
-            {{ content.field_alt_teaser_title|raw }}
-          {% endif %}
-        </h3>
-      </a>
+{% if has_conferences %}
+
+  <article{{ attributes.addClass(classes) }}>
+    <div{{ content_attributes.addClass(content_classes) }}>
+      {{ content }}
     </div>
-  </div>
-</article>
+  </article>
+
+{% else %}
+
+  <article{{ attributes.addClass(classes) }}>
+    <div{{ content_attributes.addClass(content_classes) }}>
+      {% if node.field_teaser_image is empty  %}
+        {{ content.field_image }}
+      {% else %}
+        {{ content.field_teaser_image }}
+      {% endif %}
+      <div class="mt-3">
+        <a href="{{ url }}" class="plain">
+          <h3>
+            {% if node.field_alt_teaser_title is empty %}
+              {{ label }}
+            {% else %}
+              {{ content.field_alt_teaser_title|raw }}
+            {% endif %}
+          </h3>
+        </a>
+      </div>
+    </div>
+  </article>
+
+{% endif %}

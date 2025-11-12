@@ -757,6 +757,26 @@ div.view-empty {
   }
 }
 
+// Conferences View
+.view-conferences {
+  div.month-header {
+    width: 100%;
+    margin: 1rem 0;
+    padding-right: 55%;
+
+    h2 {
+      padding: 0.5rem 0;
+      border-top: 2px solid grey;
+      border-bottom: 2px solid grey;
+      font-family: $font-bodoni;
+    }
+  }
+
+  div.conference-row {
+    max-width: 1200px;
+  }
+}
+
 // Fields
 .views-row {
   .views-field {
