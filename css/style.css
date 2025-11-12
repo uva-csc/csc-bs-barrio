@@ -14698,7 +14698,8 @@ div.view-empty {
 }
 .view-conferences div.views-row {
   max-width: 1200px;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .views-row .views-field .filters::before {
