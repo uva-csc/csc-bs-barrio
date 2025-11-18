@@ -14258,8 +14258,17 @@ p.view-more a {
   font-weight: normal;
   line-height: 1.3;
 }
+.view.event-col .views-row .views-field.date p {
+  margin: 0;
+}
 .view.event-col .views-row .views-field.date p:has(br) {
   line-height: 1.45;
+}
+.view.event-col .views-row .views-field.date p.text-align-center {
+  text-align: left !important;
+}
+.view.event-col .views-row .views-field.date p.text-align-center strong {
+  font-weight: normal !important;
 }
 
 .view-events.events-row-teasers {
