@@ -15667,6 +15667,10 @@ div.csc-give-link .content .field--name-body p a:hover {
   margin-bottom: 0.5rem;
 }
 
+.rounded-4 img {
+  border-radius: var(--bs-border-radius-xl) !important;
+}
+
 .field--name-field-image {
   /* Not sure why these are here. Maybe old code...
   float: left;
@@ -16006,6 +16010,11 @@ div.geolocation-map-wrapper {
 .view-people.frc .view-content, .view-people-indexed.frc .view-content {
   max-width: unset;
   gap: 15px;
+}
+
+.view-people.view-display-id-clf_page .view-header {
+  width: 90%;
+  max-width: 90%;
 }
 
 .ckeditor-accordion-container > dl {

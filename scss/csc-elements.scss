@@ -612,6 +612,10 @@ div.csc-give-link {
   margin-bottom: 0.5rem;
 }
 
+.rounded-4 img {
+    border-radius: var(--bs-border-radius-xl) !important;
+}
+
 // ONly allowing Drupal media items in CKEditor so this may be obsolete.
 .field--name-field-image {
   /* Not sure why these are here. Maybe old code...
@@ -1047,6 +1051,13 @@ div.geolocation-map-wrapper {
     }
   }
 }  // End of .view-people
+
+.view-people.view-display-id-clf_page {
+  .view-header {
+    width: 90%;
+    max-width: 90%;
+  }
+}
 
 // Accordion (Ckeditor module)
 .ckeditor-accordion-container > dl {
