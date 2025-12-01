@@ -790,6 +790,100 @@ div.view-empty {
   }
 }
 
+// People view
+.view-people, .view-people-indexed {
+  .view-header {
+    max-width: 800px;
+  }
+  .view-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: stretch;
+    max-width: 800px;
+
+    // Unset values in _grid.scss (Should I be using Grid instead?) Or is looks like a barrio theme setting... @if $enable-grid-classes
+    & > * {
+      flex-shrink: unset;
+      width: unset;
+      max-width: unset;
+      padding-right: unset;
+      padding-left: unset;
+      margin-top: unset;
+    }
+  }
+
+  .card.people {
+    width: 250px;  // tried 175
+    height: 100%;
+    border: none;
+
+    .card-image {
+      border-bottom: solid $uva-orange 10px;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+      background-color: #f7f7f7;
+
+      .card-title {
+        margin: 0 0 0.5rem;
+        font-family: $font-frankgoth-std;
+        font-weight: 900!important;
+        font-size: 1.5rem;  // tried 1.25
+        text-transform: capitalize!important;
+      }
+
+      .card-text {
+        .field {
+          font-size: 1rem;  // was tried 0.9
+        }
+
+        .field--name-field-job-title {
+          font-weight: bold;
+          margin: 0 0 0.5rem;
+          line-height: 1.2;
+        }
+
+        .field--name-field-job-title {
+
+        }
+
+        .field--name-field-csc-role {
+          margin: 0 0 0.25rem;
+
+          &:first-child {
+            font-weight: bold;
+          }
+        }
+      } // End of .card-text
+    }
+  }
+
+  .views-row {
+    .node--view-mode-highlight-box {
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.frc {
+    .view-content {
+      max-width: unset;
+      gap: 15px;
+    }
+  }
+
+  &.view-display-id-clf_page {
+    .view-header {
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+}  // End of .view-people
+
+
 // Fields
 .views-row {
   .views-field {
