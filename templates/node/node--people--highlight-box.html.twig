@@ -80,14 +80,18 @@
      'my-4'
   ]
 %}
+{% set styear = node.field_start_year.value * 1 %}
+{% set endyear = node.field_end_year.value * 1 %}
+
 <div{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(content_classes) }}>
     <div class="col-md-4 img-no-shadow">
-      {{ content.field_image  }}
+      <a href="{{ url }}">{{ content.field_image }}</a>
     </div>
     <div class="col-md-8">
-      <h2>{{ label }}</h2>
-      <p class="fw-bold fs-large fst-italic">{{ content.field_csc_role }} {{ content.field_job_title }}</p>
+      <h2><a href="{{ url }}">{{ label }}</a></h2>
+      <div class="mt-2 csc-role fst-italic">{{ content.field_csc_role|raw }}</div>
+      <div class="mb-2 csc-years">{{ styear }}{% if endyear > styear %}-{{ endyear }}{% endif %}</div>
       {{ content.field_bio }}
     </div>
   </div>
