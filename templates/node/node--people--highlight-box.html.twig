@@ -91,7 +91,7 @@
     <div class="col-md-8">
       <h2><a href="{{ url }}">{{ label }}</a></h2>
       <div class="mt-2 csc-role fst-italic">{{ content.field_csc_role|raw }}</div>
-      <div class="mt-2 csc-job fst-italic">{{ content.field_csc_job_title|raw }}</div>
+      <div class="mt-2 csc-job fst-italic">{{ content.field_job_title|raw }}</div>
       <div class="mb-2 csc-years">{{ styear }}{% if endyear > styear %}-{{ endyear }}{% endif %}</div>
       {{ content.field_bio }}
     </div>

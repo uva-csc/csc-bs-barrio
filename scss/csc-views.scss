@@ -900,7 +900,15 @@ div.view-empty {
         }
       }
     }
-  }
+
+    .field--name-field-job-title {
+      margin: -0.25rem 0 0.5rem;
+    }
+
+    .field--name-field-csc-role, .csc-years {
+      display: none;
+    }
+  } // end of .views-row
 }
 
 

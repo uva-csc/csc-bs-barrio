@@ -14793,6 +14793,12 @@ div.view-empty {
   color: unset !important;
   border-bottom: #E57325 solid 2px;
 }
+.view-clf .views-row .field--name-field-job-title {
+  margin: -0.25rem 0 0.5rem;
+}
+.view-clf .views-row .field--name-field-csc-role, .view-clf .views-row .csc-years {
+  display: none;
+}
 
 .views-row .views-field .filters::before {
   content: "Topics: ";
