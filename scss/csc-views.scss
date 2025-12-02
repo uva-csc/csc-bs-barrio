@@ -550,9 +550,40 @@ p.view-more {
     margin: 0;
     padding: 0;
   }
+} // End of old classes view
+
+// New classes view (classes-fields)
+.view.view-classes-fields {
+  .views-field-title, .views-field-field-short-title {
+    font-weight: normal;
+    white-space: nowrap;
+  }
+
+  .views-field-field-class-id {
+    white-space: nowrap;
+  }
+
+  .views-field-field-date {
+    white-space: nowrap;
+    div.days {
+      display: block
+    }
+    div.time {
+      &:before, &:after {
+        content: "";
+      }
+    }
+  }
+
+  .views-field-field-contact-name {
+  }
+
+  .views-field-field-location {
+    white-space: nowrap;
+  }
 }
 
-// Full Calendar View (old)
+  // Full Calendar View (old)
 .view.csc-calendar .js-drupal-fullcalendar {
   position: relative;
   z-index: 0;
@@ -598,6 +629,7 @@ p.view-more {
     margin-left: 5px;
   }
 }
+
 // General Views
 div.view-empty {
   text-align: left;
@@ -880,8 +912,8 @@ div.view-empty {
 // Citizen Leader fellows pages
 .view-clf {
   .view-header {
-    width: 90%;
-    max-width: 90%;
+    width: 95%;
+    max-width: 95%;
   }
 
   .views-row {

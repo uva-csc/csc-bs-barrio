@@ -14533,6 +14533,26 @@ p.view-more a {
   padding: 0;
 }
 
+.view.view-classes-fields .views-field-title, .view.view-classes-fields .views-field-field-short-title {
+  font-weight: normal;
+  white-space: nowrap;
+}
+.view.view-classes-fields .views-field-field-class-id {
+  white-space: nowrap;
+}
+.view.view-classes-fields .views-field-field-date {
+  white-space: nowrap;
+}
+.view.view-classes-fields .views-field-field-date div.days {
+  display: block;
+}
+.view.view-classes-fields .views-field-field-date div.time:before, .view.view-classes-fields .views-field-field-date div.time:after {
+  content: "";
+}
+.view.view-classes-fields .views-field-field-location {
+  white-space: nowrap;
+}
+
 .view.csc-calendar .js-drupal-fullcalendar {
   position: relative;
   z-index: 0;
@@ -14776,8 +14796,8 @@ div.view-empty {
 }
 
 .view-clf .view-header {
-  width: 90%;
-  max-width: 90%;
+  width: 95%;
+  max-width: 95%;
 }
 .view-clf .views-row h2, .view-clf .views-row .h2 {
   margin: 0 0 0.5rem;
