@@ -981,6 +981,12 @@ body.node--type-class {
   } // end of people image-bio
 } // End of People Pages
 
+// Extra people styles
+.hide-years .node--type-people .csc-years {
+  color: transparent;
+  margin-top: -1.5rem;
+}
+
 // Article Content type
 body.node--type-article {
   .block-field-blocknodearticlefield-tags .field--name-field-tags {

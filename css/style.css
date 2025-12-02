@@ -13792,6 +13792,11 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
   color: #232D4B;
 }
 
+.hide-years .node--type-people .csc-years {
+  color: transparent;
+  margin-top: -1.5rem;
+}
+
 body.node--type-article .block-field-blocknodearticlefield-tags .field--name-field-tags ul, body.node--type-article .block-field-blocknodearticlefield-tags .field--name-field-tags li {
   margin: 0;
   padding: 0;
