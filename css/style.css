@@ -14769,9 +14769,24 @@ div.view-empty {
   max-width: unset;
   gap: 15px;
 }
-.view-people.view-display-id-clf_page .view-header, .view-people-indexed.view-display-id-clf_page .view-header {
+
+.view-clf .view-header {
   width: 90%;
   max-width: 90%;
+}
+.view-clf .views-row h2, .view-clf .views-row .h2 {
+  margin: 0 0 0.5rem;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 900 !important;
+  font-size: 1.5rem;
+  text-transform: capitalize !important;
+}
+.view-clf .views-row h2 a, .view-clf .views-row .h2 a {
+  border: none;
+}
+.view-clf .views-row h2 a:hover, .view-clf .views-row .h2 a:hover {
+  color: unset !important;
+  border-bottom: #E57325 solid 2px;
 }
 
 .views-row .views-field .filters::before {
