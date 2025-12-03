@@ -554,7 +554,7 @@ p.view-more {
 
 // New classes view (classes-fields)
 .view.view-classes-fields {
-  .views-field-title, .views-field-field-short-title {
+  td.views-field-title, td.views-field-field-short-title {
     font-weight: normal;
     white-space: nowrap;
   }
@@ -573,6 +573,10 @@ p.view-more {
         content: "";
       }
     }
+  }
+
+  .views-field-field-semester {
+    white-space: nowrap;
   }
 
   .views-field-field-contact-name {
