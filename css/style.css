@@ -14544,7 +14544,10 @@ p.view-more a {
   white-space: nowrap;
 }
 .view.view-classes-fields .views-field-field-date div.days {
-  display: block;
+  display: inline-block;
+}
+.view.view-classes-fields .views-field-field-date div.days:after {
+  content: ": ";
 }
 .view.view-classes-fields .views-field-field-date div.time:before, .view.view-classes-fields .views-field-field-date div.time:after {
   content: "";

@@ -566,7 +566,10 @@ p.view-more {
   .views-field-field-date {
     white-space: nowrap;
     div.days {
-      display: block
+      display: inline-block;
+      &:after {
+        content: ': ';
+      }
     }
     div.time {
       &:before, &:after {
