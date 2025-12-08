@@ -81,8 +81,8 @@
   ]
 %}
 
-{% set styear = node.field_start_year.value[0] * 1 %}
-{% set endyear = node.field_end_year.value[0] * 1 %}
+{% set styear = node.field_start_year[0].value %}
+{% set endyear = node.field_end_year[0].value %}
 
 <div{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(content_classes) }}>
