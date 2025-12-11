@@ -16357,7 +16357,7 @@ div.bc-teaser .caption a {
   font-family: franklin-gothic-urw, sans-serif;
   font-size: 90%;
 }
-.search-container .search-input.active {
+.search-container .search-input.active, .search-container .search-input:focus {
   width: 150px;
   opacity: 1;
   margin-left: 1rem;
@@ -17682,6 +17682,32 @@ div#drupal-off-canvas li:not(.ui-menu-item) a {
 
 #edit-field-short-title-wrapper .filter-tips {
   display: none;
+}
+
+/*
+    Styles for implementing WCAG 2.2 AA accessibility on the csc site
+ */
+header#header .navbar#navbar-main ul.navbar-nav li.nav-item a.nav-link:focus-visible {
+  outline: 1px solid rgba(255, 0, 34, 0.75);
+  outline-offset: 1px;
+}
+header#header .navbar#navbar-main ul.navbar-nav li.nav-item ul.dropdown-menu.show {
+  display: block;
+  min-width: 250px;
+  margin: -0.4rem 0 0;
+  padding: 0 1rem 0.5rem;
+  line-height: 2.5;
+  background-color: #fdfdfd;
+  color: #232D4B;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+header#header .navbar#navbar-main ul.navbar-nav li.nav-item ul.dropdown-menu.show li.dropdown-item {
+  padding-top: 0.35rem !important;
+  border-bottom: thin solid lightgray;
+}
+header#header .navbar#navbar-main ul.navbar-nav li.nav-item ul.dropdown-menu.show li.dropdown-item a {
+  color: #232D4B !important;
 }
 
 /* GENERAL STYLES

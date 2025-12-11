@@ -1,0 +1,39 @@
+/*
+    Styles for implementing WCAG 2.2 AA accessibility on the csc site
+ */
+
+// Header Updates
+header#header {
+  // Nav menu updates (Bootstrap drop downs)
+  .navbar#navbar-main {
+    ul.navbar-nav {
+      li.nav-item {
+        // Make the tab focus clear by using red
+        a.nav-link:focus-visible {
+          outline: 1px solid rgba(255, 0, 34, .75);
+          outline-offset: 1px;
+        }
+        // Make the dropdown menus show blue font on white bg when tab and enter are used (not hover)
+        ul.dropdown-menu.show {
+          display: block;
+          min-width: 250px;
+          margin: -0.4rem 0 0;
+          padding: 0 1rem 0.5rem;
+          line-height: 2.5;
+          background-color: $white;
+          color: $uva-blue;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+
+          li.dropdown-item {
+            padding-top: 0.35rem !important;
+            border-bottom: thin solid lightgray;
+            a {
+              color: $uva-blue !important;
+            }
+          }
+        }  // End of ul.dropdown-menu.show
+      } // End of li.nav-item
+    } // End of ul.navbar-nav
+  } // End of .navbar#navbar-mai
+} // End of header#header
