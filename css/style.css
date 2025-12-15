@@ -13829,13 +13829,20 @@ body.node--type-article .block-field-blocknodearticlefield-byline {
   font-style: italic;
 }
 body.node--type-article .block-field-blocknodearticlefield-image {
+  width: fit-content;
+  margin: 1rem auto;
+  /*
   width: 60%;
   float: left;
-  margin: 1rem auto;
   padding: 0 2rem 0 0;
+   */
 }
-body.node--type-article .block-field-blocknodearticlebody {
-  padding-top: 1rem;
+body.node--type-article {
+  /*
+  .block-field-blocknodearticlebody {
+    padding-top: 1rem;
+  }
+   */
 }
 
 .node--type-landing-page .c-csc-text_box.hero-title {
