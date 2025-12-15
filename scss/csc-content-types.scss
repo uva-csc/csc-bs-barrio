@@ -1027,8 +1027,14 @@ body.node--type-article {
   }
 
   .block-field-blocknodearticlefield-image {
-    width: fit-content;
+    width: 60%;
+    float: left;
     margin: 1rem auto;
+    padding: 0 2rem 0 0;
+  }
+
+  .block-field-blocknodearticlebody {
+    padding-top: 1rem;
   }
 } // End of Article Content type
 
