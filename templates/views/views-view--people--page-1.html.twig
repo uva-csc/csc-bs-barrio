@@ -50,8 +50,8 @@
         {{ header }}
         {% if show_student_msg %}
           <div class="student-message">
-            <p>The Contemplative Sciences Center is pleased to work with over 50 student staff.
-              We will be adding more profiles to this page in the coming weeks.</p>
+            <p>The Contemplative Sciences Center is pleased to work with 54 student staff who support center staff
+              and help keep the Contemplative Commons building and programming running smoothly.</p>
           </div>
         {% endif %}
       </div>
@@ -67,7 +67,7 @@
     </div>
   {% endif %}
 
-  {% if rows %}
+  {% if rows and not show_student_msg %}
     <div class="view-content row">
       {{ rows }}
     </div>

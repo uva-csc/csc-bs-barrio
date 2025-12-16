@@ -629,12 +629,12 @@ body.node--type-event {
       }
       .event-past-msg {
         margin: 1rem 0 0;
-        color: $uva-orange;
+        color: $uva-blue;
         text-align: center;
         a {
-          color: $uva-orange!important;
           &:hover {
-            color: $uva-blue!important;
+            font-weight: bold;
+            color: unset!important;
           }
         }
       }

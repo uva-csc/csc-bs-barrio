@@ -13496,14 +13496,12 @@ body.node--type-event .layout__region.layout__region--second .wrapper .field--na
 }
 body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg {
   margin: 1rem 0 0;
-  color: #E57200;
+  color: #232D4B;
   text-align: center;
 }
-body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg a {
-  color: #E57200 !important;
-}
 body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg a:hover {
-  color: #232D4B !important;
+  font-weight: bold;
+  color: unset !important;
 }
 body.node--type-event .layout--twocol-section ~ .layout--twocol-section .layout__region.layout__region--second .wrapper {
   top: 0;
@@ -14811,6 +14809,13 @@ div.view-empty {
 .view-people.frc .view-content, .view-people-indexed.frc .view-content {
   max-width: unset;
   gap: 15px;
+}
+
+aside .block-facet-blockroles a[data-drupal-facet-item-value=student_staff]:after {
+  content: " (54)";
+}
+aside .block-facet-blockroles a[data-drupal-facet-item-value=student_staff] span.facet-item__count {
+  display: none !important;
 }
 
 .view-clf .view-header {

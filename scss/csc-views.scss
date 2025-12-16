@@ -897,7 +897,7 @@ div.view-empty {
         }
       } // End of .card-text
     }
-  }
+  } // End of .card.people
 
   .views-row {
     .node--view-mode-highlight-box {
@@ -913,7 +913,22 @@ div.view-empty {
       gap: 15px;
     }
   }
+
+
 }  // End of .view-people
+
+// People page aside is for facets
+aside .block-facet-blockroles {
+  // Remove facet count for student staff since all are not in db
+  a[data-drupal-facet-item-value='student_staff'] {
+    &:after {
+      content: ' (54)';
+    }
+    span.facet-item__count {
+      display: none !important;
+    }
+  }
+}
 
 
 // Citizen Leader fellows pages
