@@ -13830,7 +13830,19 @@ body.node--type-article .block-field-blocknodearticlefield-byline {
 }
 body.node--type-article .block-field-blocknodearticlefield-image {
   width: fit-content;
-  margin: 1rem auto;
+  margin: 1rem 0;
+  /*
+  width: 60%;
+  float: left;
+  padding: 0 2rem 0 0;
+   */
+}
+body.node--type-article {
+  /*
+  .block-field-blocknodearticlebody {
+    padding-top: 1rem;
+  }
+   */
 }
 
 .node--type-landing-page .c-csc-text_box.hero-title {
