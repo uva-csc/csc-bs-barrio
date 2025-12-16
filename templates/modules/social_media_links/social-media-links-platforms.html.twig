@@ -16,11 +16,11 @@
   {% for platform in platforms %}
     <li>
       {% if platform.id == 'email' %}
-        <a class="social-media-link-icon--{{ platform.id }}" href="/csc-contact-info" {{ platform.attributes }} >
+        <a class="social-media-link-icon--{{ platform.id }}" href="/csc-contact-info" {{ platform.attributes.setAttribute('tabindex', '0') }} >
           {{ platform.element }}
         </a>
       {% else %}
-        <a class="social-media-link-icon--{{ platform.id }}" href="{{ platform.url | safe_link }}" {{ platform.attributes }} >
+        <a class="social-media-link-icon--{{ platform.id }}" href="{{ platform.url | safe_link }}" {{ platform.attributes.setAttribute('tabindex', '0') }} >
           {{ platform.element }}
         </a>
       {% endif %}
@@ -29,7 +29,7 @@
         {% if appearance.orientation == 'h' %}
           <br />
         {% endif %}
-        <span><a class="social-media-link--{{ platform.id }}" href="{{ platform.url | safe_link  }}" {{ platform.attributes }}>{{ platform.name }}</a></span>
+        <span><a class="social-media-link--{{ platform.id }}" href="{{ platform.url | safe_link  }}" {{ platform.attributes.setAttribute('tabindex', '0') }}>{{ platform.name }}</a></span>
       {% endif %}
     </li>
   {% endfor %}
