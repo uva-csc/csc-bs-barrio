@@ -110,7 +110,16 @@
               ctel.setAttribute('title', nsatt);
             }
           }
-        });
+        }); // End of Calendar Time Titles
+
+        // Social media link fix
+        const smlinks = once('fixSocialLinks', 'ul.social-media-links--platforms a', context);
+        // console.log("smlinks", smlinks);
+        setTimeout(() => {
+          smlinks.forEach(function (ael) {
+            ael.setAttribute('tabindex', '0');
+          });
+        }, 500);
       }); // End of Document Ready
     }
   };  // End of csc_bs_sass_other behavior
