@@ -1,5 +1,10 @@
 @import 'variables.scss';
 
+// Overrides
+:root {
+  --bs-secondary-rgb: #737373;
+}
+
 .node__content {
   font-size: 1rem;
 }
