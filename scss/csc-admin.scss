@@ -137,11 +137,12 @@ div.highlighted, div.highlighted div, div.highlighted aside {
 }
 
 // Layout selection sidebar is not under class .layout-builder
-#drupal-off-canvas-wrapper .layout-selection .list-group-item a {
+//#drupal-off-canvas-wrapper
+.off-canvas .layout-selection .list-group-item a {
   color: white !important;
 }
-
-div#drupal-off-canvas li:not(.ui-menu-item) a {
+// div#drupal-off-canvas
+.off-canvas li:not(.ui-menu-item) a {
   color: white!important;
 }
 

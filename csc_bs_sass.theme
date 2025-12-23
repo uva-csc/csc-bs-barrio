@@ -405,6 +405,9 @@ function csc_bs_sass_preprocess_facets_result_item(&$facet) {
   if (in_array($new_label, $pluralize)) {
     $new_label = $new_label . 's';
   }
+  if ($label == 'citizen_leader_fellow') {
+    $new_label = 'Citizen Leaders Fellows';
+  }
   $facet['value'] = $new_label;
   $facet['raw_value'] = $facet['value'];
 }

@@ -17693,11 +17693,11 @@ div.highlighted, div.highlighted div, div.highlighted aside {
   display: none !important;
 }
 
-#drupal-off-canvas-wrapper .layout-selection .list-group-item a {
+.off-canvas .layout-selection .list-group-item a {
   color: white !important;
 }
 
-div#drupal-off-canvas li:not(.ui-menu-item) a {
+.off-canvas li:not(.ui-menu-item) a {
   color: white !important;
 }
 

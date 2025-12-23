@@ -46,12 +46,12 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} role="hero" aria-label="{{ content.field_hero_alt_text.value }}">
     {% if title_overlay %}
       <h1 class="title-overlay">{{ title_overlay | raw }}</h1>
     {% endif %}
     {% block content %}
-      {{ content|without('field_hero_image', 'field_caption') }}
+      {{ content|without('field_hero_image', 'field_caption', 'field_hero_alt_text') }}
     {% endblock %}
   </div>
   <div class="hero-caption">
