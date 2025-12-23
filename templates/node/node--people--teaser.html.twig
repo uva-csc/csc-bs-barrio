@@ -86,6 +86,9 @@
 {%
   set email, website = content.field_email['#items'].getValue()|first['value']|raw, content.field_url|render|striptags
 %}
+{% set endyear =  node.field_end_year.value %}
+{% set years =  node.field_start_year.value ? node.field_start_year.value ~ '-' ~ endyear: '' %}
+
 
 
 <div class="card people">
@@ -102,6 +105,7 @@
       {% else %}
         {{ content.field_job_title }}
       {% endif %}
+      {{ years }}
       {{ content.pronouns }}
       <div class="field field-email">
         <a class="link-orange link-underline" href="mailto:{{ email }}">{{ email }}</a>

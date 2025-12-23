@@ -890,7 +890,9 @@ body.node--type-class {
     .block-field-blocknodepeoplefield-job-title,
     .block-field-blocknodepeoplefield-email,
     .block-field-blocknodepeoplefield-pronouns,
-    .block-field-blocknodepeoplefield-url
+    .block-field-blocknodepeoplefield-url,
+    .block-field-blocknodepeoplefield-start-year,
+    .block-field-blocknodepeoplefield-end-year,
     {
       color: white !important;
       a {
@@ -902,6 +904,17 @@ body.node--type-class {
           border-bottom: 2px solid $uva-orange !important;
         }
       }
+    }
+
+    .block-field-blocknodepeoplefield-start-year,
+    .block-field-blocknodepeoplefield-start-year *,
+    .block-field-blocknodepeoplefield-end-year,
+    .block-field-blocknodepeoplefield-end-year * {
+      display: inline-block;
+    }
+
+    .block-field-blocknodepeoplefield-start-year:after {
+      content: '-';
     }
 
     /* Too General, effects /people/ben-benson profile pages */

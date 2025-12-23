@@ -13705,7 +13705,9 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-job-title,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-email,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns,
-.node--type-people .image-bio .block-field-blocknodepeoplefield-url {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-start-year,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year {
   color: white !important;
 }
 .node--type-people .image-bio .block-field-blocknodepeopletitle a,
@@ -13713,7 +13715,9 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-job-title a,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-email a,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns a,
-.node--type-people .image-bio .block-field-blocknodepeoplefield-url a {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-start-year a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year a {
   color: white !important;
   border-bottom: none;
 }
@@ -13722,9 +13726,20 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-job-title a:hover,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-email a:hover,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns a:hover,
-.node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-start-year a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year a:hover {
   color: #E57200 !important;
   border-bottom: 2px solid #E57200 !important;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-start-year,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-start-year *,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year * {
+  display: inline-block;
+}
+.node--type-people .image-bio .block-field-blocknodepeoplefield-start-year:after {
+  content: "-";
 }
 .node--type-people .image-bio {
   /* Too General, effects /people/ben-benson profile pages */
