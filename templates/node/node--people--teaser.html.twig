@@ -101,11 +101,13 @@
     <h5 class="card-title"><a href="{{ url }}" class="plain">{{ label }}</a></h5>
     <div class="card-text">
       {{ content.field_csc_role }}
+      {% if years %}
+        <div class="my-1"><strong>{{ years }}</strong></div>
+      {% endif %}
       {% if role == job %}
       {% else %}
         {{ content.field_job_title }}
       {% endif %}
-      {{ years }}
       {{ content.pronouns }}
       <div class="field field-email">
         <a class="link-orange link-underline" href="mailto:{{ email }}">{{ email }}</a>
