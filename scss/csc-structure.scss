@@ -386,6 +386,12 @@ footer.site-footer {
   a {
     color: $off-white !important;
     border-bottom-width: 2px;
+    &:hover {
+      font-style: italic;
+      span {
+        border-bottom: none;
+      }
+    }
   }
 
   // Footer grid for placing blocks
@@ -424,6 +430,9 @@ footer.site-footer {
           font-size: 1.1rem;
           font-weight: bolder;
           letter-spacing: 0.05rem;
+        &:hover {
+          border-bottom: none;
+        }
       }
 
       ul {
@@ -496,6 +505,7 @@ footer.site-footer {
           font-weight: 500;
           &:hover {
             color: $uva-orange !important;
+            border-bottom: thin solid $uva-orange;
           }
         }
       }

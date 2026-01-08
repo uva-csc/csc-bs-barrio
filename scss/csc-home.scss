@@ -43,8 +43,12 @@ body.path-frontpage main#content {
         font-family: $font-frankgoth-std;
         font-size: 1.65rem;
         font-weight: 500;
+        color: $uva-blue;
+        text-shadow: 1px 2px 0 $white;
+        /*
+        text-shadow: 1px 2px 0 $uva-orange;
         color: #E57325;
-        text-shadow: 1px 1px 1px #ffffff80;
+        text-shadow: 1px 1px 1px #ffffff80; */
         /* background-color: #fdfdfd99;  $white; /**/
         width: fit-content;
         margin: 0 auto;
@@ -137,6 +141,7 @@ body.path-frontpage main#content {
       span:first-of-type {
         font-size: 180%;
         text-transform: uppercase;
+        text-shadow: 1px 1px 1px white;
       }
 
       span:not(:first-of-type) {
@@ -228,25 +233,26 @@ body.path-frontpage main#content {
       margin-bottom: 5rem;
       padding-bottom: .75rem;
       padding-left: 10%;
+      line-height: 1.3;
 
       span {
         position: absolute;
         display: inline-block;
         font-weight: bold;
       }
-      span.text-white:first-child {
-          text-transform: uppercase;
-          font-size: 200%;
+      span.part1 {
+        text-transform: uppercase;
+        font-size: 200%;
       }
-      span.text-blue {
+      span.part2 {
         margin-top: 0.5rem;
         padding-left: 3.5rem;
         text-transform: uppercase;
         font-size: 300%;
       }
 
-      span.text-white:last-child {
-        margin-top: 3rem;
+      span.part3 {
+        margin-top: 3.5rem;
         padding-left: 7rem;
         font-size: 110%;
         font-style: italic;

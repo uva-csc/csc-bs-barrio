@@ -77,9 +77,13 @@ p.view-more {
   background-color: $uva-orange;
   font-family: $font-frankgoth-std;
   font-weight: 900!important;
-  font-size: 80%;
+  /*font-size: 80%; */
   text-align: center;
   line-height: 1.15rem;
+
+  &:hover {
+    background-color: $csc-md-orange !important;
+  }
 
   &.left {
     text-align: left;
@@ -91,9 +95,12 @@ p.view-more {
   a {
     display: inline-block;
     padding-top: 0.25rem;
-    color: #fdfdfd !important;
+    color: $black !important;
     text-transform: uppercase;
     letter-spacing: 1px;
+    &:hover {
+      border-bottom: 2px solid $uva-blue;
+    }
   }
 }
 
@@ -486,7 +493,7 @@ p.view-more {
     // Every field has a .content
     .content {
       line-height: 1.1rem; // pack text close together
-      font-size: 90%;
+      /*font-size: 90%;*/
     }
 
     // New teaser image
@@ -514,14 +521,12 @@ p.view-more {
 
     .field--name-field-date {
       margin-top: 0.15rem;
-      font-size: 0.8rem;
       font-weight: 500;
-      color: $csc-lt-blue;
+      color: $csc-md-blue;
       text-transform: uppercase;
     }
 
     .field--name-title {
-      font-size: 1rem;
       padding-right: 2px;
       line-height: 1.2;
     }

@@ -12320,6 +12320,12 @@ footer.site-footer a {
   color: #dadada !important;
   border-bottom-width: 2px;
 }
+footer.site-footer a:hover {
+  font-style: italic;
+}
+footer.site-footer a:hover span {
+  border-bottom: none;
+}
 footer.site-footer section.row.region {
   margin-bottom: 1.75rem !important;
 }
@@ -12347,6 +12353,9 @@ footer.site-footer section.region-footer-second .footer-contact h2, footer.site-
   font-size: 1.1rem;
   font-weight: bolder;
   letter-spacing: 0.05rem;
+}
+footer.site-footer section.region-footer-second .footer-contact h2:hover, footer.site-footer section.region-footer-second .footer-contact .h2:hover {
+  border-bottom: none;
 }
 footer.site-footer section.region-footer-second .footer-contact ul {
   margin: 0;
@@ -12410,6 +12419,7 @@ footer.site-footer #block-csc-bs-sass-legal ul.menu li a {
 }
 footer.site-footer #block-csc-bs-sass-legal ul.menu li a:hover {
   color: #E57200 !important;
+  border-bottom: thin solid #E57200;
 }
 footer.site-footer #block-csc-bs-sass-footerblockrectorandvisitors {
   /* .rector-visitor-block {
@@ -12794,8 +12804,12 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line
   font-family: franklin-gothic-urw, sans-serif;
   font-size: 1.65rem;
   font-weight: 500;
+  color: #232D4B;
+  text-shadow: 1px 2px 0 #fdfdfd;
+  /*
+  text-shadow: 1px 2px 0 $uva-orange;
   color: #E57325;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5019607843);
+  text-shadow: 1px 1px 1px #ffffff80; */
   /* background-color: #fdfdfd99;  $white; /**/
   width: fit-content;
   margin: 0 auto;
@@ -12862,6 +12876,7 @@ body.path-frontpage main#content .featured-event .wrapper {
 body.path-frontpage main#content .featured-event .view-header h3 span:first-of-type, body.path-frontpage main#content .featured-event .view-header .h3 span:first-of-type {
   font-size: 180%;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px white;
 }
 body.path-frontpage main#content .featured-event .view-header h3 span:not(:first-of-type), body.path-frontpage main#content .featured-event .view-header .h3 span:not(:first-of-type) {
   display: block;
@@ -12928,24 +12943,25 @@ body.path-frontpage main#content .upcoming-events h3, body.path-frontpage main#c
   margin-bottom: 5rem;
   padding-bottom: 0.75rem;
   padding-left: 10%;
+  line-height: 1.3;
 }
 body.path-frontpage main#content .upcoming-events h3 span, body.path-frontpage main#content .upcoming-events .h3 span {
   position: absolute;
   display: inline-block;
   font-weight: bold;
 }
-body.path-frontpage main#content .upcoming-events h3 span.text-white:first-child, body.path-frontpage main#content .upcoming-events .h3 span.text-white:first-child {
+body.path-frontpage main#content .upcoming-events h3 span.part1, body.path-frontpage main#content .upcoming-events .h3 span.part1 {
   text-transform: uppercase;
   font-size: 200%;
 }
-body.path-frontpage main#content .upcoming-events h3 span.text-blue, body.path-frontpage main#content .upcoming-events .h3 span.text-blue {
+body.path-frontpage main#content .upcoming-events h3 span.part2, body.path-frontpage main#content .upcoming-events .h3 span.part2 {
   margin-top: 0.5rem;
   padding-left: 3.5rem;
   text-transform: uppercase;
   font-size: 300%;
 }
-body.path-frontpage main#content .upcoming-events h3 span.text-white:last-child, body.path-frontpage main#content .upcoming-events .h3 span.text-white:last-child {
-  margin-top: 3rem;
+body.path-frontpage main#content .upcoming-events h3 span.part3, body.path-frontpage main#content .upcoming-events .h3 span.part3 {
+  margin-top: 3.5rem;
   padding-left: 7rem;
   font-size: 110%;
   font-style: italic;
@@ -14192,9 +14208,12 @@ p.view-more {
   background-color: #E57200;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 900 !important;
-  font-size: 80%;
+  /*font-size: 80%; */
   text-align: center;
   line-height: 1.15rem;
+}
+p.view-more:hover {
+  background-color: #FEA14A !important;
 }
 p.view-more.left {
   text-align: left;
@@ -14204,9 +14223,12 @@ p.view-more.left {
 p.view-more a {
   display: inline-block;
   padding-top: 0.25rem;
-  color: #fdfdfd !important;
+  color: #222222 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+p.view-more a:hover {
+  border-bottom: 2px solid #232D4B;
 }
 
 .view.featured-event .views-field-title {
@@ -14509,7 +14531,7 @@ p.view-more a {
 }
 .view.csc-news-block .node--view-mode-teaser .content {
   line-height: 1.1rem;
-  font-size: 90%;
+  /*font-size: 90%;*/
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-field-image,
 .view.csc-news-block .node--view-mode-teaser .field--name-field-teaser-image {
@@ -14534,13 +14556,11 @@ p.view-more a {
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-field-date {
   margin-top: 0.15rem;
-  font-size: 0.8rem;
   font-weight: 500;
-  color: #009fdf;
+  color: #017aab;
   text-transform: uppercase;
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-title {
-  font-size: 1rem;
   padding-right: 2px;
   line-height: 1.2;
 }
@@ -15525,7 +15545,7 @@ a {
 }
 a:hover {
   border-bottom: none;
-  color: #E57200 !important;
+  color: #017aab !important;
 }
 
 nav ul:not(.contextual-links):not(.pagination) li:not(.breadcrumb-item) a,
@@ -15640,12 +15660,18 @@ p.read-more a {
 }
 
 a.read-more, span.read-more {
-  font-size: 85%;
+  /*font-size: 85%;*/
   font-weight: bold;
   font-style: italic;
   position: relative;
   text-transform: uppercase;
   white-space: nowrap;
+}
+a.read-more:hover, span.read-more:hover {
+  font-style: normal !important;
+}
+a.read-more.text-white:hover, span.read-more.text-white:hover {
+  color: #fdfdfd !important;
 }
 
 a.scrolltop {
@@ -16166,7 +16192,7 @@ div.type-tag a:hover {
   width: fit-content;
   font-size: 100%;
   font-weight: bold;
-  color: white;
+  color: #222222; /*white;*/
   background-color: #E57200;
   letter-spacing: 0.05rem;
   padding: 1.5rem 2rem 0rem;
@@ -16184,8 +16210,8 @@ div.type-tag a:hover {
   display: inline-block;
   margin-top: -0.8rem;
   background: transparent;
-  color: white;
-  border: thin solid white;
+  color: #222222;
+  border: thin solid #222222;
   height: 38px;
   padding: 0.25rem 1.5rem 0;
   font-weight: bold;

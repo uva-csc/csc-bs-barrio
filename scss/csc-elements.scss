@@ -261,7 +261,8 @@ a {
 
   &:hover {
     border-bottom: none;
-    color: $uva-orange!important;
+    color: $csc-md-blue!important;
+    // color: $uva-orange!important;
   }
 }
 
@@ -387,12 +388,19 @@ p.read-more {
 }
 
 a.read-more, span.read-more {
-  font-size: 85%;
+  /*font-size: 85%;*/
   font-weight: bold;
   font-style: italic;
   position: relative;
   text-transform: uppercase;
   white-space: nowrap;
+  &:hover {
+    font-style: normal!important;
+  }
+
+  &.text-white:hover {
+    color: $white !important;
+  }
 }
 
 // Scroll to top Links
@@ -1044,7 +1052,7 @@ div.type-tag a {
     width: fit-content;
     font-size: 100%;
     font-weight: bold;
-    color: white;
+    color: $black; /*white;*/
     background-color: $uva-orange;
     letter-spacing: 0.05rem;
     padding: 1.5rem 2rem 0rem;
@@ -1063,8 +1071,8 @@ div.type-tag a {
         display: inline-block;
         margin-top: -0.8rem;
         background: transparent;
-        color: white;
-        border: thin solid white;
+        color: $black;
+        border: thin solid $black;
         height: 38px;
         padding: 0.25rem 1.5rem 0;
         font-weight: bold;
