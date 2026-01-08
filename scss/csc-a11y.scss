@@ -10,8 +10,11 @@ header#header {
       li.nav-item {
         // Make the tab focus clear by using red
         a.nav-link:focus-visible {
-          outline: 1px solid rgba(255, 0, 34, .75);
+          outline: 1px solid white;
           outline-offset: 1px;
+          margin: 8px;
+          padding: 0 4px;
+          border-radius: 2px;
         }
         // Make the dropdown menus show blue font on white bg when tab and enter are used (not hover)
         ul.dropdown-menu.show {
@@ -35,5 +38,11 @@ header#header {
         }  // End of ul.dropdown-menu.show
       } // End of li.nav-item
     } // End of ul.navbar-nav
+
+    button.navbar-toggler {
+      &:focus {
+        outline: 2px solid red;
+      }
+    }
   } // End of .navbar#navbar-mai
 } // End of header#header

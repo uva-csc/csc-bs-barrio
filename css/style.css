@@ -17724,8 +17724,11 @@ div.highlighted, div.highlighted div, div.highlighted aside {
     Styles for implementing WCAG 2.2 AA accessibility on the csc site
  */
 header#header .navbar#navbar-main ul.navbar-nav li.nav-item a.nav-link:focus-visible {
-  outline: 1px solid rgba(255, 0, 34, 0.75);
+  outline: 1px solid white;
   outline-offset: 1px;
+  margin: 8px;
+  padding: 0 4px;
+  border-radius: 2px;
 }
 header#header .navbar#navbar-main ul.navbar-nav li.nav-item ul.dropdown-menu.show {
   display: block;
@@ -17744,6 +17747,9 @@ header#header .navbar#navbar-main ul.navbar-nav li.nav-item ul.dropdown-menu.sho
 }
 header#header .navbar#navbar-main ul.navbar-nav li.nav-item ul.dropdown-menu.show li.dropdown-item a {
   color: #232D4B !important;
+}
+header#header .navbar#navbar-main button.navbar-toggler:focus {
+  outline: 2px solid red;
 }
 
 /* GENERAL STYLES
