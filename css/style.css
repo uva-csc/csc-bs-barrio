@@ -13498,6 +13498,9 @@ body.node--type-event .layout__region.layout__region--second .wrapper article.no
 body.node--type-event .layout__region.layout__region--second .wrapper .field--name-field-target-audience {
   margin-bottom: 1rem;
 }
+body.node--type-event .layout__region.layout__region--second .wrapper .block-field-blocknodeeventfield-url {
+  margin-bottom: 1rem;
+}
 body.node--type-event .layout__region.layout__region--second .wrapper .event-past-msg {
   margin: 1rem 0 0;
   color: #232D4B;
@@ -14147,6 +14150,20 @@ main#content .c-csc-image_text p {
 
 .views-field-body {
   font-family: franklin-gothic-urw, sans-serif;
+}
+
+.view .page-only {
+  display: none !important;
+}
+.view .views-only {
+  margin-bottom: 0.5rem;
+}
+.view .views-only p {
+  margin: 0;
+}
+
+article.node--type-event .field--name-field-custom-date-display .views-only {
+  display: none !important;
 }
 
 .views-field-view-node a {
