@@ -13567,6 +13567,7 @@ body.node--type-event article.node--view-mode-full .short-title .layout__region.
 }
 .node--type-event.node--view-mode-teaser .event-content .views-field-title, .node--type-event.node--view-mode-teaser .event-content .field--name-field-short-title {
   margin-top: 0.5rem;
+  line-height: 1.4;
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -13589,8 +13590,19 @@ body.node--type-event article.node--view-mode-full .short-title .layout__region.
 .node--type-event.node--view-mode-teaser .event-content .field--name-field-date.starts-on {
   display: none;
 }
-.node--type-event.node--view-mode-teaser .event-content p.location {
-  margin: 0;
+.node--type-event.node--view-mode-teaser .event-content {
+  /*
+      p.location {
+        margin: 0;
+      }
+  */
+}
+.node--type-event.node--view-mode-teaser .event-content .views-field-field-location, .node--type-event.node--view-mode-teaser .event-content .field--name-field-location {
+  margin-top: auto;
+}
+.node--type-event.node--view-mode-teaser .event-content .views-field-field-location p.location, .node--type-event.node--view-mode-teaser .event-content .field--name-field-location p.location {
+  margin-top: auto;
+  margin-bottom: 0.5rem;
 }
 .node--type-event.node--view-mode-teaser .event-footer {
   margin-top: auto !important;

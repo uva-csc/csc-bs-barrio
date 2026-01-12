@@ -718,6 +718,7 @@ body.node--type-event {
 
     .views-field-title, .field--name-field-short-title {
       margin-top: 0.5rem;
+      line-height: 1.4;
       font-size: 1.25rem;
       font-weight: bold;
 
@@ -746,12 +747,17 @@ body.node--type-event {
         display: none;
       }
     }
-
+/*
     p.location {
       margin: 0;
     }
-
+*/
     .views-field-field-location, .field--name-field-location {
+      margin-top: auto;
+      p.location {
+        margin-top: auto;
+        margin-bottom: 0.5rem;
+      }
     }
 
 
