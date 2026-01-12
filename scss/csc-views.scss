@@ -266,11 +266,13 @@ p.view-more {
         display: none;
       }
 
+      /*
       .node__content {
         div.field:nth-last-child(2) {
           margin-bottom: 1.5rem;
         }
       }
+       */
     }
     .view-footer {
       margin: 1rem auto;
@@ -298,110 +300,6 @@ p.view-more {
           height: 100%;
           /* border-top: 16px solid $uva-orange; */
           background-color: $white;
-
-          .node--type-event.node--view-mode-teaser {
-            max-width: 300px;
-          }
-
-          .field {
-            max-width: 300px!important;
-          }
-
-          article.node--type-event {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-          }
-
-          p.location {
-            margin: 0;
-            font-size: 105%;
-          }
-
-          .node--view-mode-teaser {
-            margin-bottom: 10px;
-            .node__content {
-              display: grid;
-              position: relative;
-              height: 100%;
-              margin: 0;
-              padding: 0;
-              text-align: center
-            }
-          }
-
-          .views-field-field-image, .field--name-field-image {
-            border-top: thin solid #939292;
-            img {
-              border: none;
-              border-radius: 0;
-              padding: 0;
-              filter: none;
-              max-height: 200px
-            }
-          } // End of .field--name-field-image
-
-
-          /*margin: 10px 8px 0;
-          padding-top: 0.5rem;
-          line-height: 1.35rem;*/
-
-          .views-field-field-date {
-            margin: 0 8px;
-            line-height: 1.35rem;
-            font-weight: bold;
-            max-width: 380px;
-
-            .smart-date--time {
-              display: none;
-            }
-          }
-
-          .field--name-field-date {
-            margin: 0 0 0.15rem 0;
-            max-width: 300px;
-            line-height: 1.05rem;
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: $body-color;
-
-            &.starts-on {
-              font-style: italic;
-            }
-          }
-
-          .views-field .field-content {
-            text-align: center;
-          }
-
-          .views-field-field-location, .field--name-field-location {
-            margin: 0 8px 18px;
-            font-size: 95%
-          }
-
-          .views-field-title, .field--name-field-short-title {
-            margin: 0.5rem 0;
-            line-height: 1.2;
-            font-size: 1.15rem;
-            font-weight: bold;
-            max-width: 400px;
-            max-height: 200px;
-
-            a {
-              border-bottom: none;
-            }
-          }
-          .field--name-field-short-title .field--name-field-short-title  {
-            margin: 0;
-          }
-          .field--name-field-target-audience {
-            position: absolute;
-            bottom: 5px;
-            width: 100%;
-            font-size: 90%;
-            color: $uva-orange;
-          }
-
 
         }  // End of views-view-responsive-grid__item-inner
       } // End of views-view-responsive-grid

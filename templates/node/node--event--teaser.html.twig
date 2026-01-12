@@ -75,9 +75,11 @@
 %}
 {% set is_short_title = content.field_short_title|render|striptags|trim|length  %}
 
-<article{{ attributes.addClass(classes) }}>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+<div{{ attributes.addClass(classes, 'node__content', 'clearfix', 'event-card') }}>
+  <div class="event-image">
     {{ content.field_image }}
+  </div>
+  <div class="event-content">
     <div class="clearfix text-formatted field field--name-field-short-title field--type-text field--label-hidden field__item">
       <a href="{{ url }}">
         {% if is_short_title %}
@@ -95,6 +97,9 @@
         <div class="field--name-field-date starts-on">Starts on {{ starts_on }}</div>
       {% endif %}
     {% endif %}
-    {{ content|without('field_image', 'field_short_title', 'field_date', 'field_end_date') }}
+    {{ content|without('field_image', 'field_short_title', 'field_date', 'field_end_date', 'field_custom_date_display', 'field_target_audience') }}
   </div>
-</article>
+  <div class="event-footer">
+    {{ content.field_target_audience }}
+  </div>
+</div>
