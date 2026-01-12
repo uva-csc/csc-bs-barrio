@@ -141,13 +141,12 @@ function csc_bs_sass_preprocess_node(&$variables) {
         $node = $variables['node'];
 
         $custom_date = $node->get('field_custom_date_display')->value ?? '';
-        //$smart_date_render = $node->get('field_date')->view(['label' => 'hidden', 'type' => 'smartdate_default']);
 
         if (!empty(trim($custom_date))) {
           // Output the custom date instead of the Smart Date.
           $variables['content']['field_date'] = [
             '#markup' => '<div class="field field--name-field-date field--type-smartdate custom-date field--label-hidden field__item">' . $custom_date . '</div>',
-            '#allowed_tags' => ['div', 'span', 'strong', 'em', 'a', 'br'],
+            '#allowed_tags' => ['div', 'p', 'span', 'strong', 'em', 'a', 'br'],
           ];
         }
         /*else {
