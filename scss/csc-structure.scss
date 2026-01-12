@@ -85,6 +85,9 @@ main#content {
           a {
             font-family: $font-frankgoth-std !important;
             font-size: 0.75rem;
+            &:hover {
+              border-bottom: solid !important;
+            }
           }
 
           &:after {
@@ -388,6 +391,7 @@ footer.site-footer {
     border-bottom-width: 2px;
     &:hover {
       font-style: italic;
+      border-bottom: solid!important;
       span {
         border-bottom: none;
       }

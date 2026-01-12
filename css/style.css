@@ -12085,6 +12085,9 @@ main#content {
   font-family: franklin-gothic-urw, sans-serif !important;
   font-size: 0.75rem;
 }
+#header #navbar-top > section nav.menu--top-menu ul li a:hover {
+  border-bottom: solid !important;
+}
 #header #navbar-top > section nav.menu--top-menu ul li:after {
   content: "/";
   color: #E57200;
@@ -12322,6 +12325,7 @@ footer.site-footer a {
 }
 footer.site-footer a:hover {
   font-style: italic;
+  border-bottom: solid !important;
 }
 footer.site-footer a:hover span {
   border-bottom: none;
