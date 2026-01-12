@@ -13566,6 +13566,7 @@ body.node--type-event article.node--view-mode-full .short-title .layout__region.
   text-align: center;
 }
 .node--type-event.node--view-mode-teaser .event-content .views-field-title, .node--type-event.node--view-mode-teaser .event-content .field--name-field-short-title {
+  margin-top: 0.5rem;
   font-size: 1.25rem;
   font-weight: bold;
 }
