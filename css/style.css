@@ -13585,6 +13585,7 @@ body.node--type-event article.node--view-mode-full .short-title .layout__region.
 }
 .node--type-event.node--view-mode-teaser .event-content .field--name-field-date {
   color: #212529;
+  margin-top: auto;
   padding: 0.5rem 0;
 }
 .node--type-event.node--view-mode-teaser .event-content .field--name-field-date.starts-on {
