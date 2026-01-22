@@ -225,6 +225,13 @@ body.node--type-landing-page {
         position: relative;
         margin: 0.5rem 0 1.5rem;
         padding-bottom: 2rem;
+
+        .csc-hero-overlay {
+          height: 100%!important;
+          position: absolute;
+          width: 100%;
+          background-color: #00000050;
+        }
       }
 
       .hero-caption {

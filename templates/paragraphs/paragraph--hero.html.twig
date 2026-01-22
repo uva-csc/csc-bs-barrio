@@ -47,6 +47,7 @@
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }} role="hero" aria-label="{{ content.field_hero_alt_text.value }}">
+    <div class="csc-hero-overlay"></div>
     {% if title_overlay %}
       <h1 class="title-overlay">{{ title_overlay | raw }}</h1>
     {% endif %}
