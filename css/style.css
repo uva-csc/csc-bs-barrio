@@ -14592,7 +14592,7 @@ p.view-more a:hover {
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-title {
   padding-right: 2px;
-  line-height: 1.2;
+  /*line-height: 1.2;*/
 }
 .view.csc-news-block .view-footer {
   float: right;
