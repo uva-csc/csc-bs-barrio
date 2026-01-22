@@ -220,7 +220,7 @@ main#content {
         color: $csc-lt-gray;
         cursor: pointer;
         &:hover {
-          color: $uva-orange;
+          /* color: $uva-orange; */
           opacity: 1;
         }
       }
@@ -263,10 +263,11 @@ main#content {
         font-size: 0.9rem;
         font-weight: bold;
         letter-spacing: .05rem;
+        /*
         &:hover {
           color: $uva-orange;
           opacity: 1;
-        }
+        }*/
       }
     }
 
@@ -289,6 +290,10 @@ main#content {
               border-bottom: none;
             }
 
+            &:hover {
+              background-color: $uva-blue-25 !important;
+            }
+
             a {
               display: inline-block;
               width: 100%;
@@ -296,8 +301,11 @@ main#content {
               color: $uva-blue!important;
               backgroud-color: $off-white;
               text-transform: capitalize;
+
               &:hover {
-                color: $uva-orange !important;
+                color: $uva-blue !important;
+                font-weight: bold !important;
+                text-decoration: underline !important;
               }
             }
 
