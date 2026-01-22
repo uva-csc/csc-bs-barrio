@@ -392,6 +392,9 @@ footer.site-footer {
     &:hover {
       font-style: italic;
       border-bottom: solid!important;
+      padding-bottom: 0;
+      margin-bottom: 0.5rem;
+
       span {
         border-bottom: none;
       }

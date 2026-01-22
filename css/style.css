@@ -12326,6 +12326,8 @@ footer.site-footer a {
 footer.site-footer a:hover {
   font-style: italic;
   border-bottom: solid !important;
+  padding-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 footer.site-footer a:hover span {
   border-bottom: none;
@@ -14352,7 +14354,7 @@ p.view-more a:hover {
   font-style: italic;
 }
 .view.featured-event .views-field-body {
-  line-height: 1.3;
+  /* line-height: 1.3; */
 }
 .view.featured-event .views-field-view-node {
   text-align: center;
