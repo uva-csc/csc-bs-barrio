@@ -14029,6 +14029,13 @@ body.node--type-article {
 
 /* VARIABLES */
 /** Bootstrap Overrides **/
+body.csc-darkened-hero .c-csc-hero .csc-hero-overlay {
+  height: 100% !important;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3137254902); /* overlay */
+}
+
 main#content .node__content {
   margin-top: 0;
 }
