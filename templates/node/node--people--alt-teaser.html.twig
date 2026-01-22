@@ -70,11 +70,11 @@
 #}
 
 <div{{ attributes.addClass(content.field_class_attribute.value) }}>
-  <h2{{ title_attributes }}>
+  <h3{{ title_attributes }}>
     <a href="{{ url }}">{{ content.field_alt_teaser_title }}</a>
-  </h2>
+  </h3>
   <div{{ content_attributes }}>
       {{ content.field_image }}
-      <div class="title text-center fst-italic">{{ label|render|striptags }}</div>
+    <div class="title text-center fst-italic"><a href="{{ url }}" class="link-reversed">{{ label|render|striptags }}</a></div>
   </div>
 </div>

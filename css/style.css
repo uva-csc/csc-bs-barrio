@@ -12603,15 +12603,18 @@ div.layout--twocol-section--33-67 .block.block-entity-blockmedia img {
 #student-featured.features > .layout__region .img-center {
   width: unset;
 }
-#student-featured.features > .layout__region .field--name-field-alt-teaser-title {
+#student-featured.features > .layout__region h3.field--name-field-alt-teaser-title, #student-featured.features > .layout__region .field--name-field-alt-teaser-title.h3, #student-featured.features > .layout__region h3 div.field--name-field-alt-teaser-title, #student-featured.features > .layout__region .h3 div.field--name-field-alt-teaser-title {
   width: 100%;
   text-align: center;
-  color: #E57200;
+  color: #232D4B;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 900 !important;
   text-transform: uppercase;
   border: none;
   white-space: nowrap;
+}
+#student-featured.features > .layout__region h3.field--name-field-alt-teaser-title:hover, #student-featured.features > .layout__region .field--name-field-alt-teaser-title.h3:hover, #student-featured.features > .layout__region h3 div.field--name-field-alt-teaser-title:hover, #student-featured.features > .layout__region .h3 div.field--name-field-alt-teaser-title:hover {
+  text-decoration: underline;
 }
 #student-featured.features > .layout__region .field--name-field-teaser-image, #student-featured.features > .layout__region .field--name-field-image {
   display: flex;
@@ -14030,7 +14033,8 @@ body.node--type-article {
 /* VARIABLES */
 /** Bootstrap Overrides **/
 body.csc-darkened-hero .c-csc-hero .csc-hero-overlay {
-  height: 100% !important;
+  margin: 60px 0;
+  height: calc(100% - 60px);
   position: absolute;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3137254902); /* overlay */
@@ -15105,7 +15109,6 @@ body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
   grid-column: 1/4;
   width: fit-content;
   border-bottom: solid 0.8rem #E57200;
-  line-height: 1rem;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 500 !important;
   font-style: italic;
@@ -15135,6 +15138,11 @@ body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
   /* font-weight: bold; */
   letter-spacing: 0.05rem;
   border-bottom-width: 1px !important;
+}
+.student-resources.layout .field--name-body ul li a:hover {
+  color: #232D4B !important;
+  border: none;
+  font-weight: bold;
 }
 
 .field--name-body .student-resources {
@@ -16020,7 +16028,7 @@ table.csc-table-1 td {
 }
 .teaser-row .field--name-field-teaser-caption p:last-child,
 .teaser-row .field--name-field-teaser-caption:not(:has(p)):last-child {
-  border-bottom: 2px solid #E57325;
+  border-bottom: 2px solid #E57200;
 }
 .teaser-row.layout--threecol-section.container .layout__region .block {
   margin: 0 0.5rem;

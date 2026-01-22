@@ -199,7 +199,6 @@ body.custom-title {
       grid-column: 1 / 4;
       width: fit-content;
       border-bottom: solid 0.8rem $uva-orange;
-      line-height: 1rem;
       font-family: $font-frankgoth-std;
       font-weight: 500!important;
       font-style: italic;
@@ -231,6 +230,12 @@ body.custom-title {
           /* font-weight: bold; */
           letter-spacing: 0.05rem;
           border-bottom-width: 1px!important;
+
+          &:hover {
+            color: $uva-blue !important;
+            border: none;
+            font-weight: bold;
+          }
         }
       }
     }

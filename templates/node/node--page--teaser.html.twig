@@ -91,16 +91,17 @@
     {% else %}
       {{ content.field_teaser_image }}
     {% endif %}
-
-    <a href="{{ url }}" class="plain">
       <div class="title h5 my-1 plain">
-        {% if is_alt_title %}
-          {{ content.field_alt_teaser_title }}
-        {% else %}
-          {{ label }}
-        {% endif %}
+        <a href="{{ url }}" class="plain">
+          {% if is_alt_title %}
+            {{ content.field_alt_teaser_title }}
+          {% else %}
+            {{ label }}
+          {% endif %}
+        </a>
       </div>
-      <div class="desc">{{ body }}</div>
-    </a>
+      <div class="desc">
+        <a href="{{ url }}" class="plain">{{ body }}</a>
+      </div>
   </div>
 </article>

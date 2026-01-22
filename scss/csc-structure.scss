@@ -740,15 +740,19 @@ div.layout--twocol-section--33-67 {
       width: unset;
     }
 
-    .field--name-field-alt-teaser-title {
+    h3.field--name-field-alt-teaser-title, h3 div.field--name-field-alt-teaser-title {
       width: 100%;
       text-align: center;
-      color: $uva-orange;
+      color: $uva-blue;
       font-family: $font-frankgoth-std;
       font-weight: 900!important;
       text-transform: uppercase;
       border: none;
       white-space: nowrap;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .field--name-field-teaser-image, .field--name-field-image {

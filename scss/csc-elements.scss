@@ -787,7 +787,7 @@ table {
 .teaser-row {
   .field--name-field-teaser-caption p,
   .field--name-field-teaser-caption:not(:has(p)) {
-    color: #232D4B;
+    color: $uva-blue;
     margin: 1rem auto;
     padding: 0;
     width: fit-content;
@@ -796,7 +796,7 @@ table {
     font-weight: bold;
 
     &:last-child {
-      border-bottom: 2px solid #E57325;
+      border-bottom: 2px solid $uva-orange;
     }
   }
 
