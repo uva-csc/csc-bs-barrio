@@ -13642,7 +13642,8 @@ body.node--type-event article.node--view-mode-full .short-title .layout__region.
 .node--type-event.node--view-mode-teaser .event-footer .field--name-field-target-audience, .node--type-event.node--view-mode-teaser .event-footer .event-footer {
   width: 100%;
   text-align: center;
-  color: #E57200 !important;
+  color: #222222 !important;
+  background-color: #E57200;
 }
 .node--type-event.node--view-mode-teaser {
   /*margin: 10px 8px 0;
@@ -16142,7 +16143,7 @@ div.geolocation-map-wrapper {
   padding: 0 1rem;
   font-size: 0.9rem;
   font-weight: bold;
-  color: white;
+  color: #232D4B;
   line-height: 1.3;
   letter-spacing: 0.6px;
 }
@@ -16155,7 +16156,7 @@ div.geolocation-map-wrapper {
 }
 #env-flourish h2, #env-flourish .h2, #env-flourish p {
   font-family: franklin-gothic-urw, sans-serif;
-  color: #fdfdfd;
+  color: #232D4B;
 }
 #env-flourish h2, #env-flourish .h2 {
   margin: 0;

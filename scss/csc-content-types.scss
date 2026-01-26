@@ -769,7 +769,8 @@ body.node--type-event {
     .field--name-field-target-audience, .event-footer {
       width: 100%;
       text-align: center;
-      color: $uva-orange !important;
+      color: #222222 !important;
+      background-color: $uva-orange;
     }
   }
 
