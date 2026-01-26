@@ -13642,8 +13642,8 @@ body.node--type-event article.node--view-mode-full .short-title .layout__region.
 .node--type-event.node--view-mode-teaser .event-footer .field--name-field-target-audience, .node--type-event.node--view-mode-teaser .event-footer .event-footer {
   width: 100%;
   text-align: center;
-  color: #222222 !important;
-  background-color: #F9DCBF;
+  color: #fdfdfd !important;
+  background-color: #232D4B;
 }
 .node--type-event.node--view-mode-teaser {
   /*margin: 10px 8px 0;
