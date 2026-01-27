@@ -11948,6 +11948,15 @@ p.font-20 {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5019607843);
 }
 
+.dropcap:first-letter {
+  float: left;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0 0.1em 0 0;
+  font-weight: bold;
+  font-family: Times New Roman, serif;
+}
+
 .text-blue {
   color: #232D4B !important;
 }

@@ -98,6 +98,15 @@ p.font-20 {
   text-shadow: $csc-shadow-drk;
 }
 
+.dropcap:first-letter {
+  float: left;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0 0.1em 0 0;
+  font-weight: bold;
+  font-family: Times New Roman, serif;
+}
+
 // Colors
 .text-blue {
   color: $uva-blue !important;
