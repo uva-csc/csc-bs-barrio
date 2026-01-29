@@ -1232,7 +1232,7 @@
 
       ul.dropdown-menu {
         margin: unset!important;
-        background-color: $uva-blue-25;
+        background-color: $gray-100 !important; //$uva-blue-25
       }
     }
   }  // End of drop down menu for max-width: 992

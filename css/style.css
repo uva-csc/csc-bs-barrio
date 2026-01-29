@@ -17404,7 +17404,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
   div#main-menu-list ul.navbar-nav ul.dropdown-menu {
     margin: unset !important;
-    background-color: #C8CBD2;
+    background-color: #f8f9fa !important;
   }
   .block-facet-blockroles .facets-widget-links ul.item-list__links li a span.facet-item__count {
     display: none;
