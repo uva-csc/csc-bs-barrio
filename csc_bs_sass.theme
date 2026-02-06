@@ -516,6 +516,15 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
       }
     }
 
+    if ($mid) {
+      $media = Media::load($mid);
+
+      if ($media && !$media->get('field_media_image')->isEmpty()) {
+        $variables['halt'] = $media->get('field_media_image')->alt;
+      }
+    }
+
+
     // Setting for background-size and backgroud-repeat
     $size = $para->get('field_background_size');
     $size_style = 'background-size: cover;';
