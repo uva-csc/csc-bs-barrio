@@ -88,13 +88,12 @@
 %}
 {% set endyear =  node.field_end_year.value %}
 {% set years =  node.field_start_year.value ? node.field_start_year.value ~ '-' ~ endyear: '' %}
-
-
+{% set name = node.title.value %}
 
 <div class="card people">
   <div class="card-image">
     <a href="{{ url }}" class="plain">
-      <img src="{{ image_url }}" width="400" class="card-img-top" />
+      <img src="{{ image_url }}" width="400" class="card-img-top" alt="{{ name }} headshot"/>
     </a>
   </div>
   <div class="card-body">
