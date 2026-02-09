@@ -74,19 +74,18 @@
   ]
 %}
 {% set is_short_title = content.field_short_title|render|striptags|trim|length  %}
+{% set title_use = is_short_title ? content.field_short_title : label %}
 
 <div{{ attributes.addClass(classes, 'node__content', 'clearfix', 'event-card') }}>
   <div class="event-image">
-    {{ content.field_image }}
+    <a href="{{ url }}" aria-label="View the event, {{ title_use|render|striptags|trim|raw }}">
+      {{ content.field_image }}
+    </a>
   </div>
   <div class="event-content">
     <div class="clearfix text-formatted field field--name-field-short-title field--type-text field--label-hidden field__item">
       <a href="{{ url }}">
-        {% if is_short_title %}
-          {{ content.field_short_title }}
-        {% else %}
-          {{ label }}
-        {% endif %}
+        {{ title_use }}
       </a>
     </div>
     {{ content.field_date }}
