@@ -12,6 +12,9 @@ body.csc-darkened-hero {
       background-color: #00000080; /* overlay */
     }
   }
+  h1.title-overlay {
+    background-color: #00000080!important; /* overlay */
+  }
 }
 
 main#content {
