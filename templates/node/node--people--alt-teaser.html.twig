@@ -74,7 +74,7 @@
     <a href="{{ url }}">{{ content.field_alt_teaser_title }}</a>
   </h3>
   <div{{ content_attributes }}>
-      {{ content.field_image }}
-    <div class="title text-center fst-italic"><a href="{{ url }}" class="link-reversed">{{ label|render|striptags }}</a></div>
+    <a href="{{ url }}" aria-label="View {{ label|render|striptags|trim|raw }}’s profile">{{ content.field_image|raw }}</a>
+    <div class="title text-center fst-italic"><a href="{{ url }}" class="link-reversed">{{ label|render|striptags|trim }}</a></div>
   </div>
 </div>

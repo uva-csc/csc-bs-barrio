@@ -96,11 +96,15 @@
         </a>
       </h3>
 
-      {% if node.field_teaser_image is empty  %}
-        {{ content.field_image }}
-      {% else %}
-        {{ content.field_teaser_image }}
-      {% endif %}
+    <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item">
+      <a href="{{ url }}" aria-label="View {{ label|render|striptags|trim|raw }}">
+        {% if node.field_teaser_image is empty  %}
+          {{ content.field_image }}
+        {% else %}
+          {{ content.field_teaser_image }}
+        {% endif %}
+      </a>
+    </div>
       <div class="title text-center fst-italic">
         <a href="{{ url }}" class="link-reversed">{{ label|render|striptags }}</a>
       </div>
