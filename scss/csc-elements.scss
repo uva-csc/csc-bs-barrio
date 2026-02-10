@@ -628,6 +628,10 @@ div.csc-give-link {
     border-radius: var(--bs-border-radius-xl) !important;
 }
 
+.align-right .field--type-image {
+  padding-left: 0.8rem;
+}
+
 // ONly allowing Drupal media items in CKEditor so this may be obsolete.
 .field--name-field-image {
   /* Not sure why these are here. Maybe old code...

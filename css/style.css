@@ -15933,6 +15933,10 @@ div.csc-give-link .content .field--name-body p a:hover {
   border-radius: var(--bs-border-radius-xl) !important;
 }
 
+.align-right .field--type-image {
+  padding-left: 0.8rem;
+}
+
 .field--name-field-image {
   /* Not sure why these are here. Maybe old code...
   float: left;
