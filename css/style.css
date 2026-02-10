@@ -16284,7 +16284,7 @@ div.type-tag a:hover {
   color: #222222; /*white;*/
   background-color: #E57200;
   letter-spacing: 0.05rem;
-  padding: 1.5rem 2rem 0rem;
+  padding: 1rem 2rem 1.25rem;
   z-index: 10;
 }
 .block.help-curate .content p:last-child {
@@ -16305,6 +16305,28 @@ div.type-tag a:hover {
   padding: 0.25rem 1.5rem 0;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.cta-actions a {
+  display: inline-block;
+  margin-top: -0.8rem;
+  background: transparent;
+  color: #222222;
+  border: thin solid #222222;
+  height: 38px;
+  padding: 0.5rem 1.5rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.cta-actions a:first-child {
+  margin-right: 1rem;
+}
+.cta-actions a:last-child {
+  padding-right: 1rem;
+}
+.cta-actions a:hover {
+  text-decoration: underline !important;
+  color: #222222 !important;
 }
 
 .block.email-updates {
