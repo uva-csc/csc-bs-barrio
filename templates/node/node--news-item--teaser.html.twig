@@ -80,11 +80,13 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(content_classes) }}>
-    {% if no_teaser_image %}
-      {{ content.field_image }}
-    {% else %}
-      {{ content.field_teaser_image }}
-    {% endif %}
+    <a href="{{ url }}" aria-label="View news item, {{ label|render|striptags|trim|raw }}">
+      {% if no_teaser_image %}
+        {{ content.field_image }}
+      {% else %}
+        {{ content.field_teaser_image }}
+      {% endif %}
+    </a>
     {{ content.field_date }}
     <div class="field--name-title"><a href="{{ url }}" class="plain">{{ label }}</a></div>
   </div>

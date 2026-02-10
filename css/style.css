@@ -14633,7 +14633,7 @@ p.view-more a:hover {
 }
 .view.csc-news-block .node--view-mode-teaser .field--name-field-date {
   margin-top: 0.15rem;
-  font-weight: 500;
+  font-weight: bold;
   color: #017aab;
   text-transform: uppercase;
 }
