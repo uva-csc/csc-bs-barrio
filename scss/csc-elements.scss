@@ -294,6 +294,10 @@ a[class^=social-media-link],
   }
 }
 
+a.link-reversed.text-white:hover {
+  color: $white !important;
+}
+
 .link-orange {
   border-bottom: none!important;
   &:hover {

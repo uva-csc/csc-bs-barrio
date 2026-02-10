@@ -14069,7 +14069,7 @@ body.csc-darkened-hero .c-csc-hero .csc-hero-overlay {
   height: calc(100% - 60px);
   position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3137254902); /* overlay */
+  background-color: rgba(0, 0, 0, 0.5019607843); /* overlay */
 }
 
 main#content .node__content {
@@ -15648,6 +15648,10 @@ a[class^=social-media-link],
   /* border-bottom: $csc-link;*/
   text-decoration: underline !important;
   text-decoration-thickness: 2px !important;
+}
+
+a.link-reversed.text-white:hover {
+  color: #fdfdfd !important;
 }
 
 .link-orange {
