@@ -15456,7 +15456,7 @@ mark.marker-blue, .marker-blue.mark {
   background-color: rgba(0, 76, 153, 0.6666666667);
 }
 mark.pen-red, .pen-red.mark {
-  color: red;
+  color: #b00000;
 }
 mark.pen-green, .pen-green.mark {
   color: #004300;
