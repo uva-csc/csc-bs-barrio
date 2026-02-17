@@ -35,7 +35,8 @@ h2.hero-title {
 
 // Mark styles
 mark {
-  padding: 0 !important;
+  /* padding: 0 !important; */
+
   &.marker-none {
     background-color: unset;
   }

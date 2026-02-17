@@ -15438,7 +15438,7 @@ h2.hero-title, .hero-title.h2 {
 }
 
 mark, .mark {
-  padding: 0 !important;
+  /* padding: 0 !important; */
 }
 mark.marker-none, .marker-none.mark {
   background-color: unset;
