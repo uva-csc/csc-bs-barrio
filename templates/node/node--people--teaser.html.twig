@@ -108,9 +108,11 @@
         {{ content.field_job_title }}
       {% endif %}
       {{ content.pronouns }}
-      <div class="field field-email">
-        <a class="link-orange link-underline" href="mailto:{{ email }}">{{ email }}</a>
-      </div>
+      {% if email %}
+        <div class="field field-email">
+          <a class="link-orange link-underline" href="mailto:{{ email }}">{{ email }}</a>
+        </div>
+      {% endif %}
       {% if website %}
         <div class="field field-website">
           <a class="link-orange link-underline" href="{{ website }}">{{ website }}</a>
