@@ -12518,9 +12518,9 @@ footer.site-footer #block-csc-bs-sass-footerblockrectorandvisitors .field--name-
   top: 50px;
 }
 
-.layout--twocol-section .layout__region--first div.block-system-breadcrumb-block,
-.layout--twocol-section .layout__region--first .wrapper:has(div.block-system-breadcrumb-block), .layout--threecol-section .layout__region--first div.block-system-breadcrumb-block,
-.layout--threecol-section .layout__region--first .wrapper:has(div.block-system-breadcrumb-block) {
+.layout--twocol-section:not(.bc-inline) .layout__region--first div.block-system-breadcrumb-block,
+.layout--twocol-section:not(.bc-inline) .layout__region--first .wrapper:has(div.block-system-breadcrumb-block), .layout--threecol-section:not(.bc-inline) .layout__region--first div.block-system-breadcrumb-block,
+.layout--threecol-section:not(.bc-inline) .layout__region--first .wrapper:has(div.block-system-breadcrumb-block) {
   position: sticky;
   top: 100px;
 }

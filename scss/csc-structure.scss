@@ -608,7 +608,7 @@ footer.site-footer {
 }
 
 // Make left column breadcrumbs sticky by default
-.layout--twocol-section, .layout--threecol-section {
+.layout--twocol-section:not(.bc-inline), .layout--threecol-section:not(.bc-inline) {
   .layout__region--first div.block-system-breadcrumb-block,
   .layout__region--first .wrapper:has(div.block-system-breadcrumb-block) {
     position: sticky;
