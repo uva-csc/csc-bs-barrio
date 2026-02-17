@@ -16281,7 +16281,7 @@ div.type-tag a:hover {
   width: fit-content;
   font-size: 100%;
   font-weight: bold;
-  color: #222222; /*white;*/
+  color: #222222 !important; /*white;*/
   background-color: #E57200;
   letter-spacing: 0.05rem;
   padding: 1rem 2rem 1.25rem;
