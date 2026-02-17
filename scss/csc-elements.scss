@@ -1094,7 +1094,7 @@ div.type-tag a {
   display: inline-block;
   margin-top: -0.8rem;
   background: transparent;
-  color: $black;
+  color: $black !important;
   border: thin solid $black;
   height: 38px;
   padding: 0.5rem 1.5rem 0;

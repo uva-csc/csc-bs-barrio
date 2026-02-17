@@ -16311,7 +16311,7 @@ div.type-tag a:hover {
   display: inline-block;
   margin-top: -0.8rem;
   background: transparent;
-  color: #222222;
+  color: #222222 !important;
   border: thin solid #222222;
   height: 38px;
   padding: 0.5rem 1.5rem 0;
