@@ -291,6 +291,10 @@ body.path-frontpage main#content {
           div.date, div.time  {
             font-weight: normal;
 
+            p {
+              margin: 0;
+            }
+
             .text-align-center {
               text-align: left !important;
             }

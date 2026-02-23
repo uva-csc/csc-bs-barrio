@@ -13033,6 +13033,9 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.date, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.time {
   font-weight: normal;
 }
+body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.date p, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.time p {
+  margin: 0;
+}
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.date .text-align-center, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta div.time .text-align-center {
   text-align: left !important;
 }
