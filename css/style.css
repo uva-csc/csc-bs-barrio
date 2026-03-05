@@ -13021,7 +13021,7 @@ body.path-frontpage main#content .upcoming-events .view-content .views-row .view
   max-width: 280px;
 }
 body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta h3, body.path-frontpage main#content .upcoming-events .view-content .views-row .views-group-meta .h3 {
-  margin: 0.5rem 0 0 0;
+  margin: 0.25rem 0 0.5rem;
   padding: 0;
   font-family: franklin-gothic-urw, sans-serif;
   font-size: 1.45rem;
