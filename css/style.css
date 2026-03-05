@@ -12788,7 +12788,7 @@ article.node--unpublished::before {
 }
 
 .node--unpublished {
-  background: rgba(255, 192, 203, 0.568627451);
+  background: rgba(250, 220, 226, 0.5019607843);
 }
 
 .path-frontpage .home-link {
