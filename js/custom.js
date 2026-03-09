@@ -77,17 +77,10 @@
           $(el).on('click', function(e) {
             e.preventDefault();
             let inbox = $(this).parents('.search-container').find('.search-input');
-            const scrnwidth = window.innerWidth;
             if (inbox.hasClass('active')) {
               inbox.removeClass('active');
-              setTimeout(() => {
-                $('.csc-social-header').addClass('d-lg-block')
-              }, 500);
             } else {
               inbox.addClass('active');
-              if (scrnwidth < 1500) {
-                $('.csc-social-header').removeClass('d-lg-block');
-              }
             }
             return false;
           });
