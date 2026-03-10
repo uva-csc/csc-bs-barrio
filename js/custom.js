@@ -77,10 +77,18 @@
           $(el).on('click', function(e) {
             e.preventDefault();
             let inbox = $(this).parents('.search-container').find('.search-input');
+            const screenwidth = $(window).width();
+            const socialdiv = $('.csc-social-header'); //csc-social-header d-none d-xl-block
             if (inbox.hasClass('active')) {
               inbox.removeClass('active');
+              setTimeout(() => {
+                socialdiv.addClass('d-xl-block');
+              }, 500);
             } else {
               inbox.addClass('active');
+              if (screenwidth < 1400) {
+                socialdiv.removeClass('d-xl-block');
+              }
             }
             return false;
           });
