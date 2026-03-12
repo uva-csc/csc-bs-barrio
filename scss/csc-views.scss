@@ -149,6 +149,26 @@ p.view-more {
   }
 }
 
+// Fix for custom dates with br and bold on events page featured and column
+.featured-event .views-row .views-field-field-custom-date-display,
+.event-col .views-row .views-field.date
+{
+  strong {
+    font-weight: normal !important;
+    &:after {
+      display: inline-block;
+      content: ' ';
+      margin: 0 0.15rem;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  br {
+    display: none;
+  }
+}
+
 // Event Column View (used on events page)
 .view.event-col {
   margin: 0 0 0 30px;

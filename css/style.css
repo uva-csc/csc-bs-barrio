@@ -14417,6 +14417,25 @@ p.view-more a:hover {
   padding-top: 0.75rem;
 }
 
+.featured-event .views-row .views-field-field-custom-date-display strong,
+.event-col .views-row .views-field.date strong {
+  font-weight: normal !important;
+}
+.featured-event .views-row .views-field-field-custom-date-display strong:after,
+.event-col .views-row .views-field.date strong:after {
+  display: inline-block;
+  content: " ";
+  margin: 0 0.15rem;
+}
+.featured-event .views-row .views-field-field-custom-date-display p,
+.event-col .views-row .views-field.date p {
+  margin: 0;
+}
+.featured-event .views-row .views-field-field-custom-date-display br,
+.event-col .views-row .views-field.date br {
+  display: none;
+}
+
 .view.event-col {
   margin: 0 0 0 30px;
 }
