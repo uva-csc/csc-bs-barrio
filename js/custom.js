@@ -86,6 +86,9 @@
               }, 500);
             } else {
               inbox.addClass('active');
+              setTimeout(() => {
+                $('#kw').focus();
+              }, 300);
               if (screenwidth < 1400) {
                 socialdiv.removeClass('d-xl-block');
               }
