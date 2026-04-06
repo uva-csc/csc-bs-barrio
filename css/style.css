@@ -16001,6 +16001,10 @@ div.csc-give-link .content .field--name-body p a:hover {
   border: none;
 }
 
+.field--name-field-media-image .image-style-custom-600x800-people-profilex2 {
+  max-width: 250px;
+}
+
 .field--name-field-teaser-image img,
 .field--name-field-image img,
 .views-field-field-teaser-image img {
