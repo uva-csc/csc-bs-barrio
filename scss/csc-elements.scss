@@ -678,8 +678,8 @@ div.csc-give-link {
   }
 }
 
-.field--name-field-media-image .image-style-custom-600x800-people-profilex2 {
-  max-width: 250px;
+.field--name-field-media-image img.image-style-custom-600x800-people-profilex2 {
+  max-width: 250px !important;
 }
 
 .field--name-field-teaser-image img,
