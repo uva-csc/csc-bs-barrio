@@ -621,6 +621,27 @@ div.csc-give-link {
 }
 
 /** Images **/
+
+/* Image Resolution Styles **/
+.image-style-featured-block-image {
+  max-width: 350px;
+}
+
+.image-style-event-teaser-stack {
+  max-width: 280px;
+}
+
+.image-style-event-teaser-row {
+  max-width: 400px;
+}
+
+.image-style-slideshow-medium {
+  max-height: 400px;
+}
+
+
+/* end of image resolution styles */
+
 .field--name-body .field--name-field-media-image {
   margin-bottom: 0.5rem;
 }
