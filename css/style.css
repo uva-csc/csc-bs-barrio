@@ -15967,6 +15967,10 @@ div.csc-give-link .content .field--name-body p a:hover {
   max-height: 400px;
 }
 
+.image-style-medium {
+  max-width: 220px;
+}
+
 /* end of image resolution styles */
 .field--name-body .field--name-field-media-image {
   margin-bottom: 0.5rem;
