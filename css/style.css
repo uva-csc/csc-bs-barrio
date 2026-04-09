@@ -15971,6 +15971,10 @@ div.csc-give-link .content .field--name-body p a:hover {
   max-width: 400px;
 }
 
+.image-style-people-profile {
+  max-width: 300px;
+}
+
 .image-style-large {
   max-width: 480px;
 }
