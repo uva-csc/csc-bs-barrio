@@ -59,7 +59,7 @@
       });
       // End of Accordion Scroll fix
     }
-  };
+  }; // end of global listeners
 
   Drupal.behaviors.csc_bs_sass_other = {
     attach: function(context, settings) {
@@ -131,6 +131,14 @@
             ael.setAttribute('tabindex', '0');
           });
         }, 500);
+
+        // People page default to staff
+        if (
+          window.location.pathname === '/people' &&
+          window.location.search === ''
+        ) {
+          window.location.replace('/people?f%5B0%5D=roles%3Astaff');
+        }
       }); // End of Document Ready
     }
   };  // End of csc_bs_sass_other behavior
@@ -253,31 +261,5 @@
       });
     }
   } // End of Calendar
-
-
- /* // Scroll Open Accordion Item into View
-  document.addEventListener('DOMContentLoaded', function () {
-    const container = document.querySelector('.ckeditor-accordion-container');
-
-    if (!container) return;
-    container.addEventListener('click', function (e) {
-      const header = e.target.closest('dt');
-      if (!header) return;
-      // Small delay to allow class changes / animations
-      setTimeout(() => {
-        const activePanel = container.querySelector('dd.active');
-        if (activePanel) {
-          // Scroll to the <dt> just before the active <dd>
-          const relatedHeader = activePanel.previousElementSibling;
-          if (relatedHeader && relatedHeader.tagName.toLowerCase() === 'dt') {
-            relatedHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }
-      }, 300); // adjust this delay to match the animation timing
-    });
-  });
-  // End of Accordion update
-
-  */
 
 })(jQuery, Drupal);

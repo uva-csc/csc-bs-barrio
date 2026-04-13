@@ -17591,6 +17591,20 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     width: 225px;
   }
 }
+@media (min-width: 641px) and (max-width: 991px) {
+  body.node--type-people .layout--twocol-section.layout--twocol-section--33-67 .layout__region--first {
+    flex: 0 1 40%;
+  }
+  body.node--type-people .layout--twocol-section.layout--twocol-section--33-67 .layout__region--second {
+    flex: 0 1 55%;
+  }
+  body.node--type-people .field--name-field-image img {
+    max-width: 30vw;
+  }
+  body.node--type-people .block-field-blocknodepeopletitle .field--name-title {
+    font-size: 2rem;
+  }
+}
 @media (min-width: 992px) {
   .teaser-row .layout__region {
     text-align: center;

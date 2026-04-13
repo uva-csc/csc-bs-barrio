@@ -1393,6 +1393,29 @@
   }
 } // End 768px to 1024px
 
+// Only Large (small laptops)
+@media (min-width: 641px) and (max-width: 991px) {
+  body.node--type-people {
+    .layout--twocol-section.layout--twocol-section--33-67
+    {
+      .layout__region--first {
+        flex: 0 1 40%;
+      }
+      .layout__region--second {
+        flex: 0 1 55%;
+      }
+    }
+
+    .field--name-field-image img {
+      max-width: 30vw;
+    }
+
+    .block-field-blocknodepeopletitle .field--name-title {
+      font-size: 2rem;
+    }
+  }
+}
+
 // Large and up
 @media (min-width: 992px)  {
   .teaser-row {
