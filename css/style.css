@@ -14984,6 +14984,10 @@ aside .block-facet-blockroles a[data-drupal-facet-item-value=student_staff] span
   display: none;
 }
 
+.view-people-clf .image-style-featured-block-image {
+  max-width: 300px;
+}
+
 .views-row .views-field .filters::before {
   content: "Topics: ";
   font-weight: bold;
