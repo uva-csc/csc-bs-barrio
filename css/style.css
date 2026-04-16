@@ -14075,7 +14075,7 @@ body.csc-darkened-hero .c-csc-hero .csc-hero-overlay {
   height: calc(100% - 60px);
   position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5019607843); /* overlay */
+  background-color: rgba(0, 0, 0, 0.3019607843); /* overlay */
 }
 body.csc-darkened-hero h1.title-overlay, body.csc-darkened-hero .title-overlay.h1 {
   background-color: rgba(0, 0, 0, 0.5019607843) !important; /* overlay */
