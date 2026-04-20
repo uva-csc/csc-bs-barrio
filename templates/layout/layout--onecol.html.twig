@@ -19,7 +19,7 @@
 %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    {% if '-skew' in render_var(attributes) %}
+    {% if '-skew' in attributes|render ~ '' %}
       <div class="skew-overlay"></div>
     {% endif %}
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
