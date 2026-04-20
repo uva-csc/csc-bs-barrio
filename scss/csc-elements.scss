@@ -659,7 +659,11 @@ div.csc-give-link {
   max-width: 220px;
 }
 
-/* end of image resolution styles */
+.image-style-event-image {
+  max-width: 800px;
+}
+
+  /* end of image resolution styles */
 
 .field--name-body .field--name-field-media-image {
   margin-bottom: 0.5rem;
@@ -894,7 +898,7 @@ div.geolocation-map-wrapper {
 
 .csc-slideshow {
   img {
-    max-width: 100vw !important;
+    /* max-width: 100vw !important;*/
   }
 }
 
