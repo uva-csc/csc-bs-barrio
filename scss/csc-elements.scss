@@ -115,7 +115,7 @@ blockquote {
   }
 
   &:before {
-    display: inline-block;
+    display: inline;
     font-family: $font-opensans;
     color: #bbb;
     content: "\201C";
@@ -125,7 +125,7 @@ blockquote {
     vertical-align: -.4em;
   }
   &:after {
-    display: inline-block;
+    display: inline;
     font-family: $font-opensans;
     color: #bbb;
     content: "\201D";

@@ -15535,7 +15535,7 @@ blockquote p {
   display: inline !important;
 }
 blockquote:before {
-  display: inline-block;
+  display: inline;
   font-family: "opensans-regular", helvetica, arial, sans-serif;
   color: #bbb;
   content: "“";
@@ -15545,7 +15545,7 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 blockquote:after {
-  display: inline-block;
+  display: inline;
   font-family: "opensans-regular", helvetica, arial, sans-serif;
   color: #bbb;
   content: "”";
