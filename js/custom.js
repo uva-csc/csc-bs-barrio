@@ -25,6 +25,7 @@
   // Global Listener Behaviors
   Drupal.behaviors.csc_bs_sass_global_listeners = {
     attach: function(context, settings) {
+      if (!window?.csc) { window.csc = {}; }
       $(document).ready(() => {
         $('div.icon.show-search').hover(function(e) {
           $('#search-block-form').addClass('show');
@@ -68,22 +69,46 @@
       attach: function(context, settings) {
         const wrapper = once('csc-featured-event-slideshow', '.view-homepage-events.featured-event', context);
         if (!wrapper.length) return;
+        const el = wrapper[0];
 
-        const rows = wrapper[0].querySelectorAll('.views-row');
+        const rows = el.querySelectorAll('.views-row');
         if (!rows.length) return;
 
         let current = Math.floor(Math.random() * rows.length);
         rows[current].classList.add('active');
+        window.csc.pause_home_events = false;
+        // set play and pause buttons
+        const pauseBtn = el.querySelector('.slideshow-pause');
+        const playBtn = el.querySelector('.slideshow-play');
+
+        function pause(e) {
+          // console.log("pausing");
+          window.csc.pause_home_events = true;
+          pauseBtn.classList.add('active');
+          playBtn.classList.remove('active');
+        }
+
+        function play(e) {
+          // console.log("playing");
+          window.csc.pause_home_events = false;
+          pauseBtn.classList.remove('active');
+          playBtn.classList.add('active');
+        }
+
+        once('slideshow-pause-btn', pauseBtn).forEach(btn => btn.addEventListener('click', pause));
+        once('slideshow-play-btn', playBtn).forEach(btn => btn.addEventListener('click', play));
 
         setInterval(() => {
-          rows[current].classList.remove('active');
-          current = (current + 1) % rows.length;
-          rows[current].classList.add('active');
+          if (window.csc.pause_home_events !== true) {
+            rows[current].classList.remove('active');
+            current = (current + 1) % rows.length;
+            rows[current].classList.add('active');
+          }
         }, 8000);
       }
-    }; // End of csc_featured_event_slideshow behavior
+    };
   }(jQuery, Drupal, once));
-
+  // End of csc_featured_event_slideshow behavior
   Drupal.behaviors.csc_bs_sass_other = {
     attach: function(context, settings) {
       $(document).ready(() => {

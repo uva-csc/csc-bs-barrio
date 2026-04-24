@@ -138,10 +138,42 @@ body.path-frontpage main#content {
         .views-row {
           opacity: 0;
           height: 0;
+          max-height: 0;
           transition: opacity 1s ease-in-out;
+          pointer-events: none;
+
           &.active {
             opacity: 1;
             height: 100%;
+            max-height: unset;
+            pointer-events: unset;
+          }
+        }
+
+        .slideshow-controls {
+          a {
+            span {
+              cursor: pointer;
+              color: white;
+            }
+            &:hover {
+              border-bottom: thin solid $uva-orange;
+            }
+            &.slideshow-pause span {
+              font-size: 1.25rem;
+            }
+            &.slideshow-play span {
+              font-size: 0.8rem;
+              vertical-align: text-bottom;
+            }
+            &.active {
+              &:hover {
+                border: none;
+              }
+              span {
+                color: grey !important;
+              }
+            }
           }
         }
       }

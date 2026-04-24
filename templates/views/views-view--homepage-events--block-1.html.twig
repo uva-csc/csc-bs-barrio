@@ -66,6 +66,14 @@
     {% if rows %}
       <div class="view-content row">
         {{ rows }}
+        <div class="slideshow-controls">
+          <a class="slideshow-pause plain" aria-label="Pause slideshow" title="Pause">
+            <span class="icon text-white">⏸</span>
+          </a> |
+          <a class="slideshow-play plain active" aria-label="Play slideshow" title="Play">
+            <span class="icon plain">▶</span>
+          </a>
+        </div>
       </div>
     {% elseif empty %}
       <div class="view-empty">

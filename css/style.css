@@ -12916,11 +12916,35 @@ body.path-frontpage main#content .featured-event .wrapper {
 body.path-frontpage main#content .featured-event .wrapper .view-content .views-row {
   opacity: 0;
   height: 0;
+  max-height: 0;
   transition: opacity 1s ease-in-out;
+  pointer-events: none;
 }
 body.path-frontpage main#content .featured-event .wrapper .view-content .views-row.active {
   opacity: 1;
   height: 100%;
+  max-height: unset;
+  pointer-events: unset;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a span {
+  cursor: pointer;
+  color: white;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a:hover {
+  border-bottom: thin solid #E57200;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.slideshow-pause span {
+  font-size: 1.25rem;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.slideshow-play span {
+  font-size: 0.8rem;
+  vertical-align: text-bottom;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.active:hover {
+  border: none;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.active span {
+  color: grey !important;
 }
 body.path-frontpage main#content .featured-event .view-header h3 span:first-of-type, body.path-frontpage main#content .featured-event .view-header .h3 span:first-of-type {
   font-size: 180%;
