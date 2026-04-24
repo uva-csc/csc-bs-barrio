@@ -331,6 +331,19 @@ function csc_bs_sass_preprocess_views_view(&$variables) {
   }
 }
 
+function csc_bs_sass_preprocess_views_view_unformatted(&$variables) {
+  $view = $variables['view'];
+  $view_id = $view->storage->id();
+  $display = $view->current_display;
+  csc_log('In views_view_unformatted: ' . $view_id);
+  if ($view_id == 'homepage_events' && $display == 'block_1') {
+    csc_log('In homepage events block 1');
+    foreach ($variables['rows'] as $id => $row) {
+      $variables['rows'][$id]['attributes']->addClass('views-row-' . ($id + 1));
+    }
+  }
+}
+
 function csc_bs_sass_preprocess_views_view_field(&$variables) {
   $view = $variables['view'];
   $field = $variables['field'];
