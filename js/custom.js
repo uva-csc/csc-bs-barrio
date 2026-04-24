@@ -61,6 +61,29 @@
     }
   }; // end of global listeners
 
+  // Make slideshow of featured events on the home page
+  (function ($, Drupal, once) {
+    // Make slideshow of featured events on the home page
+    Drupal.behaviors.csc_featured_event_slideshow = {
+      attach: function(context, settings) {
+        const wrapper = once('csc-featured-event-slideshow', '.view-homepage-events.featured-event', context);
+        if (!wrapper.length) return;
+
+        const rows = wrapper[0].querySelectorAll('.views-row');
+        if (!rows.length) return;
+
+        let current = Math.floor(Math.random() * rows.length);
+        rows[current].classList.add('active');
+
+        setInterval(() => {
+          rows[current].classList.remove('active');
+          current = (current + 1) % rows.length;
+          rows[current].classList.add('active');
+        }, 8000);
+      }
+    }; // End of csc_featured_event_slideshow behavior
+  }(jQuery, Drupal, once));
+
   Drupal.behaviors.csc_bs_sass_other = {
     attach: function(context, settings) {
       $(document).ready(() => {

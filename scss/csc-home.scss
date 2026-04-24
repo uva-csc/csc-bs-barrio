@@ -133,6 +133,19 @@ body.path-frontpage main#content {
     .wrapper {
       padding: 1rem 4rem;
       background-color: $uva-blue;
+
+      .view-content {
+        .views-row {
+          opacity: 0;
+          height: 0;
+          transition: opacity 1s ease-in-out;
+          &.active {
+            opacity: 1;
+            height: 100%;
+          }
+        }
+      }
+
     }
 
     // This week at the commons

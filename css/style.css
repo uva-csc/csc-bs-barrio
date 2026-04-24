@@ -12913,6 +12913,15 @@ body.path-frontpage main#content .featured-event .wrapper {
   padding: 1rem 4rem;
   background-color: #232D4B;
 }
+body.path-frontpage main#content .featured-event .wrapper .view-content .views-row {
+  opacity: 0;
+  height: 0;
+  transition: opacity 1s ease-in-out;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .views-row.active {
+  opacity: 1;
+  height: 100%;
+}
 body.path-frontpage main#content .featured-event .view-header h3 span:first-of-type, body.path-frontpage main#content .featured-event .view-header .h3 span:first-of-type {
   font-size: 180%;
   text-transform: uppercase;
