@@ -74,10 +74,21 @@
         const rows = el.querySelectorAll('.views-row');
         if (!rows.length) return;
 
+        function setRow(rind) {
+          rows[rind].classList.add('active');
+          rows[rind].closest('.view-content').style.minHeight =
+            rows[rind].scrollHeight + 10 + 'px';
+        }
+
+        if (rows.length === 1) {
+          setRow(0);
+          el.querySelector('.slideshow-controls').classList.add('d-none');
+          return;
+        }
+
         let current = Math.floor(Math.random() * rows.length);
-        rows[current].classList.add('active');
-        rows[current].closest('.view-content').style.minHeight =
-          rows[current].scrollHeight + 10 + 'px';
+        setRow(current);
+
         window.csc.pause_home_events = false;
         // set play and pause buttons
         const pauseBtn = el.querySelector('.slideshow-pause');
@@ -104,9 +115,7 @@
           if (window.csc.pause_home_events !== true) {
             rows[current].classList.remove('active');
             current = (current + 1) % rows.length;
-            rows[current].classList.add('active');
-            rows[current].closest('.view-content').style.minHeight =
-              rows[current].scrollHeight + 10 + 'px';
+            setRow(current);
           }
         }, 8000);
       }
