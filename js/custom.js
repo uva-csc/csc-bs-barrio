@@ -100,9 +100,16 @@
 
         setInterval(() => {
           if (window.csc.pause_home_events !== true) {
+            const oldcurrent = current;
+            if (oldcurrent === rows.length - 1) {
+              rows[oldcurrent].classList.add('d-none');
+            }
             rows[current].classList.remove('active');
             current = (current + 1) % rows.length;
             rows[current].classList.add('active');
+            if (oldcurrent === rows.length - 1) {
+              rows[oldcurrent].classList.remove('d-none');
+            }
           }
         }, 8000);
       }
