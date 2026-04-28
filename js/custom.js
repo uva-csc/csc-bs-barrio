@@ -76,6 +76,8 @@
 
         let current = Math.floor(Math.random() * rows.length);
         rows[current].classList.add('active');
+        rows[current].closest('.view-content').style.minHeight =
+          rows[current].scrollHeight + 10 + 'px';
         window.csc.pause_home_events = false;
         // set play and pause buttons
         const pauseBtn = el.querySelector('.slideshow-pause');
@@ -100,16 +102,11 @@
 
         setInterval(() => {
           if (window.csc.pause_home_events !== true) {
-            const oldcurrent = current;
-            if (oldcurrent === rows.length - 1) {
-              rows[oldcurrent].classList.add('d-none');
-            }
             rows[current].classList.remove('active');
             current = (current + 1) % rows.length;
             rows[current].classList.add('active');
-            if (oldcurrent === rows.length - 1) {
-              rows[oldcurrent].classList.remove('d-none');
-            }
+            rows[current].closest('.view-content').style.minHeight =
+              rows[current].scrollHeight + 10 + 'px';
           }
         }, 8000);
       }

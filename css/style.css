@@ -12913,18 +12913,47 @@ body.path-frontpage main#content .featured-event .wrapper {
   padding: 1rem 4rem;
   background-color: #232D4B;
 }
+body.path-frontpage main#content .featured-event .wrapper .view-content {
+  position: relative;
+  /* Set a height here or let the active row define it — see note below */
+}
 body.path-frontpage main#content .featured-event .wrapper .view-content .views-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   opacity: 0;
-  height: 0;
-  max-height: 0;
   transition: opacity 1s ease-in-out;
   pointer-events: none;
+  visibility: hidden;
 }
 body.path-frontpage main#content .featured-event .wrapper .view-content .views-row.active {
   opacity: 1;
-  height: 100%;
-  max-height: unset;
   pointer-events: unset;
+  visibility: visible;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content {
+  /* old with flash
+  .views-row {
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      height: 100%;
+      max-height: unset;
+      pointer-events: unset;
+    }
+  } */
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a span {
   cursor: pointer;
