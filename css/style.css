@@ -14895,6 +14895,10 @@ div.view-empty {
   /*  z-index: 1; makes drop down menus transparent over views */
 }
 
+.csc-list-wide.view-locations .views-row .text-center {
+  text-align: left !important;
+}
+
 /*
 .events-list-alt {
   .date:has(.recurring-output--wrapper) {
