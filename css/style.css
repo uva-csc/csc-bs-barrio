@@ -16046,7 +16046,7 @@ div.csc-give-link .content .field--name-body p a:hover {
 }
 
 .image-style-people-teaser {
-  max-width: 250px;
+  max-width: 250px !important;
 }
 
 .image-style-large {
