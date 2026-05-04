@@ -1430,6 +1430,14 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   background: #434b64;
 }
 
+// New Cookie Klaro module
+.cn-ok a.cn-learn-more {
+  border: none;
+  text-decoration: underline !important;
+  text-decoration-color: orange!important;
+  text-decoration-thickness: 2px !important;
+}
+
 #popup-text.eu-cookie-compliance-message {
   h2 {
     margin: 0.5rem 0 0 0;
