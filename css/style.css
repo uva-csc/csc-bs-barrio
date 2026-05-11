@@ -14507,6 +14507,13 @@ p.view-more a:hover {
 .event-col .views-row .views-field.date br {
   display: none;
 }
+.featured-event .views-row .views-field-field-custom-date-display span.p,
+.event-col .views-row .views-field.date span.p {
+  display: block;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
 
 .view.event-col {
   margin: 0 0 0 30px;

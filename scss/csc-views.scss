@@ -179,6 +179,12 @@ p.view-more {
   br {
     display: none;
   }
+  span.p {
+    display: block;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 // Event Column View (used on events page)
