@@ -12953,7 +12953,7 @@ body.path-frontpage main#content .featured-event .wrapper .view-content .slidesh
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: fit-content;
 }
 body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a span {
   cursor: pointer;
