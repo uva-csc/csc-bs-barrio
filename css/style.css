@@ -14463,10 +14463,20 @@ p.view-more a:hover {
   font-size: 1.5rem;
   line-height: 1.25;
 }
-.view.featured-event .views-field-field-date {
-  margin: 0 0 0.5rem;
+.view.featured-event .views-field-field-date, .view.featured-event .views-field-field-custom-date-display {
+  margin: 0.5rem 0 0.5rem;
   font-size: 1rem;
   font-style: italic;
+}
+.view.featured-event .views-field-field-date p.text-align-center, .view.featured-event .views-field-field-custom-date-display p.text-align-center {
+  text-align: left !important;
+  margin-bottom: -1.35rem;
+}
+.view.featured-event .views-field-field-date span.p, .view.featured-event .views-field-field-custom-date-display span.p {
+  display: block;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
 }
 .view.featured-event .views-field-body {
   /* line-height: 1.3; */

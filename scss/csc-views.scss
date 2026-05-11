@@ -128,11 +128,23 @@ p.view-more {
     line-height: 1.25;
   }
 
-  .views-field-field-date {
-    margin: 0 0 0.5rem;
+  .views-field-field-date, .views-field-field-custom-date-display {
+    margin: 0.5rem 0 0.5rem;
     font-size: 1rem;
     font-style: italic;
+
+    p.text-align-center {
+      text-align: left !important;
+      margin-bottom: -1.35rem;
+    }
+    span.p {
+      display: block;
+      height: fit-content;
+      margin: 0;
+      padding: 0;
+    }
   }
+
   .views-field-body {
     /* line-height: 1.3; */
   }
