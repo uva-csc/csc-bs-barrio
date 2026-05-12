@@ -12913,6 +12913,68 @@ body.path-frontpage main#content .featured-event .wrapper {
   padding: 1rem 4rem;
   background-color: #232D4B;
 }
+body.path-frontpage main#content .featured-event .wrapper .view-content {
+  position: relative;
+  /* Set a height here or let the active row define it — see note below */
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .views-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+  visibility: hidden;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .views-row.active {
+  opacity: 1;
+  pointer-events: unset;
+  visibility: visible;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content {
+  /* old with flash
+  .views-row {
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      height: 100%;
+      max-height: unset;
+      pointer-events: unset;
+    }
+  } */
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a span {
+  cursor: pointer;
+  color: white;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a:hover {
+  border-bottom: thin solid #E57200;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.slideshow-pause span {
+  font-size: 1.25rem;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.slideshow-play span {
+  font-size: 0.8rem;
+  vertical-align: text-bottom;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.active:hover {
+  border: none;
+}
+body.path-frontpage main#content .featured-event .wrapper .view-content .slideshow-controls a.active span {
+  color: grey !important;
+}
 body.path-frontpage main#content .featured-event .view-header h3 span:first-of-type, body.path-frontpage main#content .featured-event .view-header .h3 span:first-of-type {
   font-size: 180%;
   text-transform: uppercase;
@@ -14401,10 +14463,20 @@ p.view-more a:hover {
   font-size: 1.5rem;
   line-height: 1.25;
 }
-.view.featured-event .views-field-field-date {
-  margin: 0 0 0.5rem;
+.view.featured-event .views-field-field-date, .view.featured-event .views-field-field-custom-date-display {
+  margin: 0.5rem 0 0.5rem;
   font-size: 1rem;
   font-style: italic;
+}
+.view.featured-event .views-field-field-date p.text-align-center, .view.featured-event .views-field-field-custom-date-display p.text-align-center {
+  text-align: left !important;
+  /* margin-bottom: -1.35rem;*/
+}
+.view.featured-event .views-field-field-date span.p, .view.featured-event .views-field-field-custom-date-display span.p {
+  display: block;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
 }
 .view.featured-event .views-field-body {
   /* line-height: 1.3; */
@@ -14434,6 +14506,13 @@ p.view-more a:hover {
 .featured-event .views-row .views-field-field-custom-date-display br,
 .event-col .views-row .views-field.date br {
   display: none;
+}
+.featured-event .views-row .views-field-field-custom-date-display span.p,
+.event-col .views-row .views-field.date span.p {
+  display: block;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
 }
 
 .view.event-col {
@@ -14860,6 +14939,10 @@ div.view-empty {
   position: relative;
   line-height: 1.3;
   /*  z-index: 1; makes drop down menus transparent over views */
+}
+
+.csc-list-wide.view-locations .views-row .text-center {
+  text-align: left !important;
 }
 
 /*
@@ -15535,7 +15618,7 @@ blockquote p {
   display: inline !important;
 }
 blockquote:before {
-  display: inline-block;
+  display: inline;
   font-family: "opensans-regular", helvetica, arial, sans-serif;
   color: #bbb;
   content: "“";
@@ -15545,7 +15628,7 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 blockquote:after {
-  display: inline-block;
+  display: inline;
   font-family: "opensans-regular", helvetica, arial, sans-serif;
   color: #bbb;
   content: "”";
@@ -15980,7 +16063,7 @@ div.csc-give-link .content .field--name-body p a:hover {
 }
 
 .image-style-people-teaser {
-  max-width: 250px;
+  max-width: 250px !important;
 }
 
 .image-style-large {
@@ -16630,6 +16713,13 @@ div.bc-teaser .caption a {
 
 div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {
   background: #434b64;
+}
+
+.cn-ok a.cn-learn-more {
+  border: none;
+  text-decoration: underline !important;
+  text-decoration-color: orange !important;
+  text-decoration-thickness: 2px !important;
 }
 
 #popup-text.eu-cookie-compliance-message h2, #popup-text.eu-cookie-compliance-message .h2 {

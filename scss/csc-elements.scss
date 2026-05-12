@@ -115,7 +115,7 @@ blockquote {
   }
 
   &:before {
-    display: inline-block;
+    display: inline;
     font-family: $font-opensans;
     color: #bbb;
     content: "\201C";
@@ -125,7 +125,7 @@ blockquote {
     vertical-align: -.4em;
   }
   &:after {
-    display: inline-block;
+    display: inline;
     font-family: $font-opensans;
     color: #bbb;
     content: "\201D";
@@ -648,7 +648,7 @@ div.csc-give-link {
 }
 
 .image-style-people-teaser {
-  max-width: 250px;
+  max-width: 250px !important;
 }
 
 .image-style-large {
@@ -1428,6 +1428,14 @@ div.bc-teaser {
 // Cookie Compliance Message
 div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {
   background: #434b64;
+}
+
+// New Cookie Klaro module
+.cn-ok a.cn-learn-more {
+  border: none;
+  text-decoration: underline !important;
+  text-decoration-color: orange!important;
+  text-decoration-thickness: 2px !important;
 }
 
 #popup-text.eu-cookie-compliance-message {

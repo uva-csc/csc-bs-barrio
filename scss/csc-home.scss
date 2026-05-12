@@ -133,6 +133,77 @@ body.path-frontpage main#content {
     .wrapper {
       padding: 1rem 4rem;
       background-color: $uva-blue;
+
+      .view-content {
+        position: relative;
+
+        /* Set a height here or let the active row define it — see note below */
+
+        .views-row {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+          pointer-events: none;
+          visibility: hidden;
+
+          &.active {
+            opacity: 1;
+            pointer-events: unset;
+            visibility: visible;
+          }
+        }
+        /* old with flash
+        .views-row {
+          opacity: 0;
+          height: 0;
+          max-height: 0;
+          transition: opacity 1s ease-in-out;
+          pointer-events: none;
+
+          &.active {
+            opacity: 1;
+            height: 100%;
+            max-height: unset;
+            pointer-events: unset;
+          }
+        } */
+
+        .slideshow-controls {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: fit-content;
+
+          a {
+            span {
+              cursor: pointer;
+              color: white;
+            }
+            &:hover {
+              border-bottom: thin solid $uva-orange;
+            }
+            &.slideshow-pause span {
+              font-size: 1.25rem;
+            }
+            &.slideshow-play span {
+              font-size: 0.8rem;
+              vertical-align: text-bottom;
+            }
+            &.active {
+              &:hover {
+                border: none;
+              }
+              span {
+                color: grey !important;
+              }
+            }
+          }
+        }
+      }
+
     }
 
     // This week at the commons
