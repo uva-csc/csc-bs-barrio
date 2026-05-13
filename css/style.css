@@ -13509,6 +13509,7 @@ body.node--type-event .bc-inline.layout.layout--onecol {
 body.node--type-event article.node--type-event {
   max-width: 1200px;
   margin: 0 auto;
+  /** Add margin below event content for calendar links **/
 }
 body.node--type-event article.node--type-event .layout--twocol-section.event-pg:last-of-type {
   margin-bottom: 130px;

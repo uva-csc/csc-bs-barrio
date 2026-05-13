@@ -497,6 +497,7 @@ body.node--type-event {
     max-width: 1200px;
     margin: 0 auto;
 
+    /** Add margin below event content for calendar links **/
     .layout--twocol-section.event-pg:last-of-type {
       margin-bottom: 130px;
     }
