@@ -496,6 +496,10 @@ body.node--type-event {
   article.node--type-event {
     max-width: 1200px;
     margin: 0 auto;
+
+    .layout--twocol-section.event-pg:last-of-type {
+      margin-bottom: 130px;
+    }
   }
 
   .node--view-mode-full .block-csc-canceled-dates-block {
@@ -505,6 +509,7 @@ body.node--type-event {
   div.event-content.layout--twocol-section {
     gap: 75px;
   }
+
   .layout__region.layout__region--first {
     max-width:800px;
     padding-right: 5rem;

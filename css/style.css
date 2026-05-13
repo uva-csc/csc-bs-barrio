@@ -13510,6 +13510,9 @@ body.node--type-event article.node--type-event {
   max-width: 1200px;
   margin: 0 auto;
 }
+body.node--type-event article.node--type-event .layout--twocol-section.event-pg:last-of-type {
+  margin-bottom: 130px;
+}
 body.node--type-event .node--view-mode-full .block-csc-canceled-dates-block {
   margin-bottom: 1rem;
 }
