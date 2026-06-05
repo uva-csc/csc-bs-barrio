@@ -427,7 +427,7 @@ body.custom-title {
 // People View Page
 .view.view-people {  // the main class for the view
   .view-header {
-    h2 {
+    h2:not(.h3, .h4) {
       margin: 0;
       padding: 0 0 1rem 0;
       width: 100%;

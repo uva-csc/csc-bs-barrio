@@ -15440,7 +15440,7 @@ body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
   letter-spacing: -0.03125em;
 }
 
-.view.view-people .view-header h2, .view.view-people .view-header .h2 {
+.view.view-people .view-header h2:not(.h3, .h4), .view.view-people .view-header .h2:not(.h3, .h4) {
   margin: 0;
   padding: 0 0 1rem 0;
   width: 100%;

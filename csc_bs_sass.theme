@@ -320,7 +320,7 @@ function csc_bs_sass_preprocess_views_view(&$variables) {
     $query_parameters = Drupal::request()->query->all();
     $rolep = $query_parameters['f'][0] ?? false;
     if (in_array($rolep, array_keys($roles))) {
-      $variables['header']['area']['#text'] .= "<h3>" . $roles[$rolep] . "</h3>";
+      $variables['header']['area']['#text'] .= "<h2 class='h3'>" . $roles[$rolep] . "</h2>";
     }
 
     if($rolep == 'roles:student_staff') {
