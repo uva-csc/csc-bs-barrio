@@ -14793,11 +14793,6 @@ p.view-more a:hover {
   white-space: nowrap;
 }
 
-.view.csc-calendar .js-drupal-fullcalendar {
-  position: relative;
-  z-index: 0;
-}
-
 .view.view-search-content div.row.results-header {
   display: flex;
   justify-content: space-between;
@@ -14841,6 +14836,9 @@ div.view-empty {
   color: #005bea !important;
 }
 
+.csc-calendar-view .view-header h1, .csc-calendar-view .view-header .h1 {
+  margin: -0.75rem 0 !important;
+}
 .csc-calendar-view .calendar-view-pager {
   list-style-type: none;
 }

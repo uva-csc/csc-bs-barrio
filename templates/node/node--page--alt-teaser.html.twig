@@ -86,7 +86,7 @@
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass(content_classes) }}>
 
-      <h3 class="field--name-field-alt-teaser-title">
+      <h2 class="h3 field--name-field-alt-teaser-title">
         <a href="{{ url }}">
           {% if node.field_alt_teaser_title is empty  %}
             {{ label }}
@@ -94,7 +94,7 @@
             {{ content.field_alt_teaser_title }}
           {% endif %}
         </a>
-      </h3>
+      </h2>
 
     <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item">
       <a href="{{ url }}" aria-label="View {{ label|render|striptags|trim|raw }}">

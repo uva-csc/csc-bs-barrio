@@ -16,6 +16,7 @@
 %}
 
 {% if items|length %}
+  <h2 class="visually-hidden">{{ items.current }}</h2>
   <ul {{ attributes.addClass(classes) }}>
     {% for key,item in items|without('reset') %}
       <li class="pager__item {{ 'pager__' ~ key|clean_class }}">
