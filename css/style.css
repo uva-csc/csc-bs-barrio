@@ -15488,7 +15488,7 @@ body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
 
 body.page-node-144 .circl-overlay {
   position: relative;
-  padding-top: 10%;
+  padding-top: 3%;
   left: 13vw;
   font-size: 2.5rem;
   text-align: left;
@@ -15500,21 +15500,28 @@ body.page-node-144 .circl-overlay .text-overlay {
   margin-top: 2.5rem;
   width: fit-content;
 }
-body.page-node-144 .circl-overlay .text-overlay p {
+body.page-node-144 .circl-overlay .text-overlay h1, body.page-node-144 .circl-overlay .text-overlay .h1 {
   font-family: "Libre Franklin", sans-serif !important;
+  margin: 6rem 0 0 2rem;
+  padding: 0;
 }
-body.page-node-144 .circl-overlay .text-overlay p.p1 {
+body.page-node-144 .circl-overlay .text-overlay h1 span.p1, body.page-node-144 .circl-overlay .text-overlay .h1 span.p1 {
+  display: block;
   font-size: 2.75rem;
   font-weight: 900 !important;
   letter-spacing: 6px;
 }
-body.page-node-144 .circl-overlay .text-overlay p.p2 {
+body.page-node-144 .circl-overlay .text-overlay h1 span.p2, body.page-node-144 .circl-overlay .text-overlay .h1 span.p2, body.page-node-144 .circl-overlay .text-overlay h1 span.p3, body.page-node-144 .circl-overlay .text-overlay .h1 span.p3 {
+  display: block;
   padding-top: 0.5rem;
   line-height: 1.2;
   font-weight: 100 !important;
   font-size: 2.25rem;
   color: #efefef;
   letter-spacing: 2px;
+}
+body.page-node-144 .circl-overlay .text-overlay h1 span.p3, body.page-node-144 .circl-overlay .text-overlay .h1 span.p3 {
+  margin-left: 3rem;
 }
 
 /** End of Individual Page Styles **/
