@@ -1191,7 +1191,8 @@ body.node--type-article {
     width: 40vw;
   }
 
-  h2 {
+  // Don't include h2s styles as other levels
+  h2:not(.h3, .h4, .h5, .h6) {
     font-family: $font-frankgoth-std;
     font-weight: 500!important;
     /*text-align: left;*/

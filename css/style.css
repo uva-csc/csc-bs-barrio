@@ -14091,7 +14091,7 @@ body.node--type-article {
 .node--type-landing-page .c-csc-text_box.bottom-right.caption {
   width: 40vw;
 }
-.node--type-landing-page .c-csc-text_box h2, .node--type-landing-page .c-csc-text_box .h2 {
+.node--type-landing-page .c-csc-text_box h2:not(.h3, .h4, .h5, .h6), .node--type-landing-page .c-csc-text_box .h2:not(.h3, .h4, .h5, .h6) {
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 500 !important;
   /*text-align: left;*/

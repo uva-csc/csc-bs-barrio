@@ -70,8 +70,8 @@
 #}
 <div{{ attributes }}>
   <div{{ content_attributes }}>
+    <a href={{ url }} aria-label="{{ content.field_teaser_caption|render|striptags|trim }}">
       {{ content.field_teaser_image }}
-    <a href={{ url }}>
       {{ content.field_teaser_caption }}
     </a>
   </div>
