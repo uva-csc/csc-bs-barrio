@@ -13806,7 +13806,7 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
   border-bottom: thin solid grey;
 }
 body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclasstitle span {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 500 !important;
   line-height: 1.03846;
@@ -13861,7 +13861,7 @@ body.node--type-class .layout__region.layout__region--first .field--name-field-c
 }
 body.node--type-class .layout__region.layout__region--second .wrapper {
   height: 430px;
-  width: 300px;
+  /* width: 300px; */
   background-color: #eeeeee;
   margin-top: 20px;
   padding: 40px 50px;
