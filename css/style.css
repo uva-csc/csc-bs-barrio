@@ -12842,10 +12842,10 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line {
   font-family: franklin-gothic-urw, sans-serif;
-  font-size: 1.65rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: #232D4B;
-  text-shadow: 1px 2px 0 #fdfdfd;
+  /* text-shadow: 1px 2px 0 $white;*/
   /*
   text-shadow: 1px 2px 0 $uva-orange;
   color: #E57325;
