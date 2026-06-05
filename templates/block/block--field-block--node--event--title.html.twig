@@ -43,8 +43,8 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
+    <h1{{ content_attributes.addClass(['content', 'mt-0']) }}>
       {{ content }}
-    </div>
+    </h1>
   {% endblock %}
 </div>
