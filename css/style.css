@@ -12842,10 +12842,10 @@ body.path-frontpage main#content .c-csc-hero .home-title-overlay h3, body.path-f
 }
 body.path-frontpage main#content .c-csc-hero .home-title-overlay p.home-tag-line {
   font-family: franklin-gothic-urw, sans-serif;
-  font-size: 1.65rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: #232D4B;
-  text-shadow: 1px 2px 0 #fdfdfd;
+  /* text-shadow: 1px 2px 0 $white;*/
   /*
   text-shadow: 1px 2px 0 $uva-orange;
   color: #E57325;
@@ -13509,6 +13509,10 @@ body.node--type-event .bc-inline.layout.layout--onecol {
 body.node--type-event article.node--type-event {
   max-width: 1200px;
   margin: 0 auto;
+  /** Add margin below event content for calendar links **/
+}
+body.node--type-event article.node--type-event .layout--twocol-section.event-pg:last-of-type {
+  margin-bottom: 130px;
 }
 body.node--type-event .node--view-mode-full .block-csc-canceled-dates-block {
   margin-bottom: 1rem;
@@ -13802,7 +13806,7 @@ body.node--type-class .layout__region.layout__region--first .block-field-blockno
   border-bottom: thin solid grey;
 }
 body.node--type-class .layout__region.layout__region--first .block-field-blocknodeclasstitle span {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 500 !important;
   line-height: 1.03846;
@@ -13857,7 +13861,7 @@ body.node--type-class .layout__region.layout__region--first .field--name-field-c
 }
 body.node--type-class .layout__region.layout__region--second .wrapper {
   height: 430px;
-  width: 300px;
+  /* width: 300px; */
   background-color: #eeeeee;
   margin-top: 20px;
   padding: 40px 50px;
@@ -14087,7 +14091,7 @@ body.node--type-article {
 .node--type-landing-page .c-csc-text_box.bottom-right.caption {
   width: 40vw;
 }
-.node--type-landing-page .c-csc-text_box h2, .node--type-landing-page .c-csc-text_box .h2 {
+.node--type-landing-page .c-csc-text_box h2:not(.h3, .h4, .h5, .h6), .node--type-landing-page .c-csc-text_box .h2:not(.h3, .h4, .h5, .h6) {
   font-family: franklin-gothic-urw, sans-serif;
   font-weight: 500 !important;
   /*text-align: left;*/
@@ -14789,11 +14793,6 @@ p.view-more a:hover {
   white-space: nowrap;
 }
 
-.view.csc-calendar .js-drupal-fullcalendar {
-  position: relative;
-  z-index: 0;
-}
-
 .view.view-search-content div.row.results-header {
   display: flex;
   justify-content: space-between;
@@ -14837,6 +14836,9 @@ div.view-empty {
   color: #005bea !important;
 }
 
+.csc-calendar-view .view-header h1, .csc-calendar-view .view-header .h1 {
+  margin: -0.75rem 0 !important;
+}
 .csc-calendar-view .calendar-view-pager {
   list-style-type: none;
 }
@@ -15438,7 +15440,7 @@ body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
   letter-spacing: -0.03125em;
 }
 
-.view.view-people .view-header h2, .view.view-people .view-header .h2 {
+.view.view-people .view-header h2:not(.h3, .h4), .view.view-people .view-header .h2:not(.h3, .h4) {
   margin: 0;
   padding: 0 0 1rem 0;
   width: 100%;
@@ -15486,7 +15488,7 @@ body.custom-title div.block-layout-builder.block-field-blocknodepagetitle {
 
 body.page-node-144 .circl-overlay {
   position: relative;
-  padding-top: 10%;
+  padding-top: 3%;
   left: 13vw;
   font-size: 2.5rem;
   text-align: left;
@@ -15498,21 +15500,28 @@ body.page-node-144 .circl-overlay .text-overlay {
   margin-top: 2.5rem;
   width: fit-content;
 }
-body.page-node-144 .circl-overlay .text-overlay p {
+body.page-node-144 .circl-overlay .text-overlay h1, body.page-node-144 .circl-overlay .text-overlay .h1 {
   font-family: "Libre Franklin", sans-serif !important;
+  margin: 6rem 0 0 2rem;
+  padding: 0;
 }
-body.page-node-144 .circl-overlay .text-overlay p.p1 {
+body.page-node-144 .circl-overlay .text-overlay h1 span.p1, body.page-node-144 .circl-overlay .text-overlay .h1 span.p1 {
+  display: block;
   font-size: 2.75rem;
   font-weight: 900 !important;
   letter-spacing: 6px;
 }
-body.page-node-144 .circl-overlay .text-overlay p.p2 {
+body.page-node-144 .circl-overlay .text-overlay h1 span.p2, body.page-node-144 .circl-overlay .text-overlay .h1 span.p2, body.page-node-144 .circl-overlay .text-overlay h1 span.p3, body.page-node-144 .circl-overlay .text-overlay .h1 span.p3 {
+  display: block;
   padding-top: 0.5rem;
   line-height: 1.2;
   font-weight: 100 !important;
   font-size: 2.25rem;
   color: #efefef;
   letter-spacing: 2px;
+}
+body.page-node-144 .circl-overlay .text-overlay h1 span.p3, body.page-node-144 .circl-overlay .text-overlay .h1 span.p3 {
+  margin-left: 3rem;
 }
 
 /** End of Individual Page Styles **/

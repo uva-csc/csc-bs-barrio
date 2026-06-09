@@ -83,10 +83,10 @@
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
-    <h5{{ title_attributes.addClass('node__title') }}>
+    <p{{ title_attributes.addClass(['node__title', 'h5']) }}>
       {{ display_title }}
      {#  <a href="{{ url }}" rel="bookmark" class="reversed">{{ display_title }}</a> #}
-    </h5>
+    </p>
     {{ title_suffix }}
   </header>
   <div{{ content_attributes.addClass(content_classes) }}>

@@ -38,7 +38,7 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-    <h1{{ content_attributes.addClass('content') }}>
+    <h1{{ content_attributes.addClass(['content', 'mt-0']) }}>
       {{ content }}
     </h1>
   {% endblock %}

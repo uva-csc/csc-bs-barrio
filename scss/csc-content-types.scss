@@ -496,6 +496,11 @@ body.node--type-event {
   article.node--type-event {
     max-width: 1200px;
     margin: 0 auto;
+
+    /** Add margin below event content for calendar links **/
+    .layout--twocol-section.event-pg:last-of-type {
+      margin-bottom: 130px;
+    }
   }
 
   .node--view-mode-full .block-csc-canceled-dates-block {
@@ -505,6 +510,7 @@ body.node--type-event {
   div.event-content.layout--twocol-section {
     gap: 75px;
   }
+
   .layout__region.layout__region--first {
     max-width:800px;
     padding-right: 5rem;
@@ -850,7 +856,7 @@ body.node--type-class {
       padding-bottom: 0.25rem;
       border-bottom: thin solid grey;
       span {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-family: $font-frankgoth-std;
         font-weight: 500!important;
         line-height: 1.03846;
@@ -920,7 +926,7 @@ body.node--type-class {
   // Side bar on events and classes
   .layout__region.layout__region--second .wrapper {
     height: 430px;
-    width: 300px;
+    /* width: 300px; */
     background-color: $csc-lt-gray;
     margin-top: 20px;
     padding: 40px 50px;
@@ -1185,7 +1191,8 @@ body.node--type-article {
     width: 40vw;
   }
 
-  h2 {
+  // Don't include h2s styles as other levels
+  h2:not(.h3, .h4, .h5, .h6) {
     font-family: $font-frankgoth-std;
     font-weight: 500!important;
     /*text-align: left;*/
