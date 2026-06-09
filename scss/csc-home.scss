@@ -124,7 +124,7 @@ body.path-frontpage main#content {
     }
   }
 
-  // Featured Event (This week at the commons)
+  // Featured Event
   .featured-event {
     padding: 8rem 0rem 2rem 4rem;
     color: white;
@@ -154,7 +154,14 @@ body.path-frontpage main#content {
             pointer-events: unset;
             visibility: visible;
           }
+
+          .views-field-field-message {
+            br {
+              display: none;
+            }
+          }
         }
+
         /* old with flash
         .views-row {
           opacity: 0;
