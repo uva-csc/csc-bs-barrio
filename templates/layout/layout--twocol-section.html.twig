@@ -13,7 +13,8 @@
 #}
 {% if content %}
   <div{{ attributes }}>
-    {% if '-skew' in render_var(attributes) %}
+    {# Explicitly cast to string to search for a partial match #}
+    {% if '-skew' in attributes|render ~ '' %}
       <div class="skew-overlay"></div>
     {% endif %}
 
