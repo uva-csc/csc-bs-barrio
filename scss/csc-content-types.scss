@@ -923,10 +923,9 @@ body.node--type-class {
 
   } // end of class layout region first
 
-  // Side bar on events and classes
+  // Side bar on classes
   .layout__region.layout__region--second .wrapper {
-    height: 430px;
-    /* width: 300px; */
+    min-height: 430px; // Changed to min-height
     background-color: $csc-lt-gray;
     margin-top: 20px;
     padding: 40px 50px;

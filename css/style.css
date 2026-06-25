@@ -13860,8 +13860,7 @@ body.node--type-class .layout__region.layout__region--first .field--name-field-c
   content: ")";
 }
 body.node--type-class .layout__region.layout__region--second .wrapper {
-  height: 430px;
-  /* width: 300px; */
+  min-height: 430px;
   background-color: #eeeeee;
   margin-top: 20px;
   padding: 40px 50px;
