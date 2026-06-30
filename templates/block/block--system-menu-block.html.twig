@@ -40,12 +40,7 @@
   ]
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#main-menu-list" aria-controls="main-menu-list"
-        aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<nav id="main-menu-list" aria-label="{{ configuration.label }}" class="collapse navbar-collapse">
+<nav aria-label="{{ configuration.label }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
   {# Menu. #}
   {% block content %}
     {{ content }}
