@@ -9,7 +9,7 @@ header#header {
     ul.navbar-nav {
       li.nav-item {
         // Make the tab focus clear by using red
-        a.nav-link:focus-visible {
+        .nav-link:focus-visible {
           outline: 1px solid white;
           outline-offset: 1px;
           margin: 8px;

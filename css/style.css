@@ -12205,21 +12205,25 @@ main#content {
 #header #navbar-main ul.navbar-nav li.dropdown-item:active {
   background-color: unset;
 }
-#header #navbar-main ul.navbar-nav a, #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle {
+#header #navbar-main ul.navbar-nav a, #header #navbar-main ul.navbar-nav .nav-link.dropdown-toggle {
   font-size: 0.9rem;
   color: #eeeeee;
   cursor: pointer;
 }
-#header #navbar-main ul.navbar-nav a:hover, #header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle:hover {
+#header #navbar-main ul.navbar-nav a:hover, #header #navbar-main ul.navbar-nav .nav-link.dropdown-toggle:hover {
   /* color: $uva-orange; */
   opacity: 1;
 }
-#header #navbar-main ul.navbar-nav span.nav-link.dropdown-toggle {
+#header #navbar-main ul.navbar-nav .nav-link.dropdown-toggle {
   margin: 0 0.25rem 0 0;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.05rem;
+  background: none;
+  border: 0;
+  font-family: inherit;
+  text-align: left;
 }
 #header #navbar-main {
   /*
@@ -18047,7 +18051,7 @@ div.highlighted, div.highlighted div, div.highlighted aside {
 /*
     Styles for implementing WCAG 2.2 AA accessibility on the csc site
  */
-header#header .navbar#navbar-main ul.navbar-nav li.nav-item a.nav-link:focus-visible {
+header#header .navbar#navbar-main ul.navbar-nav li.nav-item .nav-link:focus-visible {
   outline: 1px solid white;
   outline-offset: 1px;
   margin: 8px;

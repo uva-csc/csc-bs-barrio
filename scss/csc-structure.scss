@@ -215,7 +215,7 @@ main#content {
         }
       }
 
-      a, span.nav-link.dropdown-toggle {
+      a, .nav-link.dropdown-toggle {
         font-size: 0.9rem;
         color: $csc-lt-gray;
         cursor: pointer;
@@ -225,12 +225,16 @@ main#content {
         }
       }
 
-      span.nav-link.dropdown-toggle {
+      .nav-link.dropdown-toggle {
         margin: 0 0.25rem 0 0;
         color: white;
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 0.05rem;
+        background: none;
+        border: 0;
+        font-family: inherit;
+        text-align: left;   // buttons center text by default
       }
     }
 /*
