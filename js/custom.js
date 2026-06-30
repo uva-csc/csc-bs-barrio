@@ -135,26 +135,53 @@
         // Search box expanding
         const els = once('.search-container', '.search-button', context);
         els.forEach(function (el) {
-          $(el).on('click', function(e) {
-            e.preventDefault();
-            let inbox = $(this).parents('.search-container').find('.search-input');
+          const $btn = $(el);
+          const $container = $btn.parents('.search-container');
+          const $input = $container.find('.search-input');
+          const socialdiv = $('.csc-social-header');
+
+          function openSearch() {
+            $input.addClass('active');
+            $btn.attr('aria-expanded', 'true');
+            $btn.attr('aria-label', 'Close search');
+            $btn.find('.visually-hidden').text('Close search');
             const screenwidth = $(window).width();
-            const socialdiv = $('.csc-social-header'); //csc-social-header d-none d-xl-block
-            if (inbox.hasClass('active')) {
-              inbox.removeClass('active');
-              setTimeout(() => {
-                socialdiv.addClass('d-xl-block');
-              }, 500);
+            setTimeout(() => {
+              $input.trigger('focus');
+            }, 300);
+            if (screenwidth < 1400) {
+              socialdiv.removeClass('d-xl-block');
+            }
+          }
+
+          function closeSearch(returnFocus) {
+            $input.removeClass('active');
+            $btn.attr('aria-expanded', 'false');
+            $btn.attr('aria-label', 'Open search');
+            $btn.find('.visually-hidden').text('Open search');
+            setTimeout(() => {
+              socialdiv.addClass('d-xl-block');
+            }, 500);
+            if (returnFocus) {
+              $btn.trigger('focus');
+            }
+          }
+
+          $btn.on('click', function (e) {
+            e.preventDefault();
+            if ($input.hasClass('active')) {
+              closeSearch(false);
             } else {
-              inbox.addClass('active');
-              setTimeout(() => {
-                $('#kw').focus();
-              }, 300);
-              if (screenwidth < 1400) {
-                socialdiv.removeClass('d-xl-block');
-              }
+              openSearch();
             }
             return false;
+          });
+
+          // Allow Escape to close and return focus to the toggle button
+          $input.on('keydown', function (e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+              closeSearch(true);
+            }
           });
         });
 
