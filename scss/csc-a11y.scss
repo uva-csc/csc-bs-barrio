@@ -45,4 +45,14 @@ header#header {
       }
     }
   } // End of .navbar#navbar-mai
+
+  ul.nav li.nav-item a.nav-link:focus-visible,
+  a.calendar-link:focus-visible,
+  div.csc-give-link:focus-visible
+  {
+    outline: 2px solid $white;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
 } // End of header#header
