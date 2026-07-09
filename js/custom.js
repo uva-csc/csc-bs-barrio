@@ -129,6 +129,7 @@
         if (AOS?.init) {
           AOS.init({
             duration: 1200,
+            disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
           });
         }
 

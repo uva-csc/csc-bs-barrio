@@ -48,7 +48,8 @@ header#header {
 
   ul.nav li.nav-item a.nav-link:focus-visible,
   a.calendar-link:focus-visible,
-  div.csc-give-link:focus-visible
+  div.csc-give-link:focus-visible,
+  button.search-button:focus-visible
   {
     outline: 2px solid $white;
     outline-offset: 2px;
@@ -56,3 +57,13 @@ header#header {
   }
 
 } // End of header#header
+
+/** Reduced Motion **/
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
