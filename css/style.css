@@ -12225,23 +12225,6 @@ main#content {
   font-family: inherit;
   text-align: left;
 }
-#header #navbar-main {
-  /*
-      ul.dropdown-menu {
-        li {
-          padding-bottom: 0.5rem;
-          border-bottom: thin solid grey;
-        }
-        a {
-          font-weight: normal;
-          color: $uva-blue;
-
-          &:hover {
-            color: $uva-blue-25;
-          }
-        }
-      }*/
-}
 #header .navbar .nav-item a, #header .navbar .menu-item a {
   display: block;
   margin: 0 0.25rem 0 0;
@@ -12250,14 +12233,9 @@ main#content {
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
-  /*
-  &:hover {
-    color: $uva-orange;
-    opacity: 1;
-  }*/
 }
 #header .navbar .nav-item.dropdown:hover .dropdown-menu {
-  display: block;
+  /* display: block; // removed for A11Y */
   min-width: 250px;
   margin: -0.4rem 0 0;
   padding: 0 1rem 0.5rem;
@@ -12308,6 +12286,11 @@ main#content {
     border-left: 0.3em solid transparent;
     transform: rotate(-90deg) translate(-2px);
   }*/
+}
+@media (min-width: 992px) {
+  #header .navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
 aside.featured-top__inner.section.container.clearfix {
@@ -17556,10 +17539,27 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     text-align: center;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   #header #navbar-top .navbar-brand img {
     max-width: 80vw;
     margin: 4px 0 4px 4px;
+  }
+  #header #navbar-main {
+    position: relative;
+  }
+  #header #navbar-main #main-menu-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    background-color: #232D4B;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+  }
+  #header #navbar-main #main-menu-list ul.navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
   }
   #header #navbar-main.bg-primary {
     height: 0px !important;

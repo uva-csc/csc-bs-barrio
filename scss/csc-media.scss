@@ -1137,8 +1137,9 @@
   }
 } // End of max-width: 767.9px (phones)
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   // Header
+
   #header {
     #navbar-top {
       .navbar-brand {
@@ -1148,11 +1149,31 @@
         }
       }
     }
-    #navbar-main.bg-primary {
-      height: 0px !important;
-      .navbar-toggler-icon {
-        height: 1.25em;
-        width: 1.25em;
+    #navbar-main {
+      position: relative;
+
+      #main-menu-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        min-width: 180px;
+        background-color: $uva-blue;
+        padding: 0.5rem 1rem;
+        z-index: 100;
+
+        ul.navbar-nav {
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 0;
+        }
+      }
+
+      &.bg-primary {
+        height: 0px !important;
+        .navbar-toggler-icon {
+          height: 1.25em;
+          width: 1.25em;
+        }
       }
     }
   }
