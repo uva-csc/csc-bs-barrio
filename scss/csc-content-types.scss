@@ -718,7 +718,8 @@ body.node--type-event {
     flex-direction: column;
     flex: 1 1 auto;
 
-    & > div {max-width: 300px!important;
+    & > * {
+      max-width: 300px!important;
       text-align: center;
     }
 

@@ -285,6 +285,10 @@ p.view-more {
       margin: 0 auto;
     }
 
+    .event-card {
+      position: relative;
+    }
+
     .views-view-responsive-grid__item {
       .field--type-smartdate {
         color: transparent;
@@ -444,10 +448,10 @@ p.view-more {
     border: none;
 
     // Every field has a .content
+    /*
     .content {
       line-height: 1.1rem; // pack text close together
-      /*font-size: 90%;*/
-    }
+    }*/
 
     // New teaser image
     .field--name-field-image,
@@ -481,7 +485,11 @@ p.view-more {
 
     .field--name-title {
       padding-right: 2px;
-      /*line-height: 1.2;*/
+      line-height: 1.5;
+      margin:0;
+      padding: 0;
+      font-weight: normal;
+      font-size: 1.2rem;
     }
   }  // end of News node teaser
 

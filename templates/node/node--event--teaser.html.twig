@@ -78,16 +78,14 @@
 
 <div{{ attributes.addClass(classes, 'node__content', 'clearfix', 'event-card') }}>
   <div class="event-image">
-    <a href="{{ url }}" aria-label="View the event, {{ title_use|render|striptags|trim|raw }}">
       {{ content.field_image }}
-    </a>
   </div>
   <div class="event-content">
-    <div class="clearfix text-formatted field field--name-field-short-title field--type-text field--label-hidden field__item">
-      <a href="{{ url }}">
+    <h3 class="clearfix text-formatted field field--name-field-short-title field--type-text field--label-hidden field__item">
+      <a href="{{ url }}"  class="stretched-link">
         {{ title_use }}
       </a>
-    </div>
+    </h3>
     {{ content.field_date }}
     {% if starts_on %}
       {% if ends_on  %}
