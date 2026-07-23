@@ -390,6 +390,12 @@ p.view-more {
     }
   }
 
+  &.events-list-alt.past-events {
+    img.image-style-event-teaser-row {
+      max-width: 300px;
+    }
+  }
+
 } // End of .view-events
 
 // Events blocks on Events home page

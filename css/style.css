@@ -14670,6 +14670,9 @@ p.view-more a:hover {
 .view-events.featured-event .views-field.event-type {
   margin-top: 0.8rem;
 }
+.view-events.events-list-alt.past-events img.image-style-event-teaser-row {
+  max-width: 300px;
+}
 
 #special-events .view-events .row .views-field-body .desc p,
 #dropins .view-events .row .views-field-body .desc p {
