@@ -13599,6 +13599,9 @@ body.node--type-event .layout__region.layout__region--second .wrapper .field--na
   font-weight: bold;
   margin-bottom: 1rem;
 }
+body.node--type-event .layout__region.layout__region--second .wrapper .field--name-field-date .field__item:not(:first-of-type) {
+  margin-top: 1rem;
+}
 body.node--type-event .layout__region.layout__region--second .wrapper .exceptions, body.node--type-event .layout__region.layout__region--second .wrapper .block-csc-canceled-dates-block {
   font-style: italic;
   width: 100%;
