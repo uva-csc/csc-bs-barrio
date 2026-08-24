@@ -557,7 +557,7 @@ function csc_bs_sass_preprocess_paragraph__hero(&$variables) {
     if ($position) {
       $position = $position->value;
       if (!empty($position)) {
-        $variables['attributes']['style'][] = "background-position: $position;";
+        $variables['attributes']['style'][] = "background-position: $position !important;";
       }
     }
 
