@@ -405,6 +405,26 @@ function csc_bs_sass_preprocess_views_view_field(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for calendar_view_day.
+ *
+ * calendar_view sorts each day cell by `first_instance` — the first date of the
+ * whole Smart Date series — which pins long-running recurring events to the top
+ * of every cell. Re-sort by the start of the instance actually being shown.
+ *
+ * @see template_preprocess_calendar_view_day()
+ */
+function csc_bs_sass_preprocess_calendar_view_day(array &$variables) {
+  $rows = $variables['rows'] ?? [];
+  if (count($rows) < 2) {
+    return;
+  }
+  usort($rows, function ($a, $b) {
+    return ($a['#values']['value'] ?? 0) <=> ($b['#values']['value'] ?? 0);
+  });
+  $variables['rows'] = $rows;
+}
+
 /** End of Views hooks */
 
 
