@@ -302,6 +302,14 @@ function csc_bs_sass_preprocess_field(&$variables) {
         unset($variables['items']); // Remove the link (field_url) from render array so it doesn't display
       }
     }
+  // Video gallery title: link the title to the media's canonical page (same target as the thumbnail)
+  } elseif ($fld_name == 'field_title' && $ctype == 'remote_video' && ($el['#view_mode'] ?? '') == 'video_thumb') {
+    try {
+      $variables['media_url'] = $node->toUrl()->toString();
+    }
+    catch (Exception $e) {
+      $variables['media_url'] = NULL;
+    }
   }
 }
 

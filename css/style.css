@@ -15092,6 +15092,62 @@ aside .block-facet-blockroles a[data-drupal-facet-item-value=student_staff] span
   margin-top: 1rem;
 }
 
+.view-display-id-sharat_videos_block .views-view-responsive-grid {
+  grid-auto-rows: 1fr;
+}
+.view-display-id-sharat_videos_block .views-view-responsive-grid__item-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: thin solid #939292;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+.view-display-id-sharat_videos_block .views-view-responsive-grid__item-inner:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.view-display-id-sharat_videos_block .views-view-responsive-grid__item-inner > .contextual-region {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.view-display-id-sharat_videos_block .field--name-thumbnail a.plain {
+  display: block;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.view-display-id-sharat_videos_block .field--name-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.view-display-id-sharat_videos_block .field--name-field-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+}
+.view-display-id-sharat_videos_block .field--name-field-title p {
+  margin: 0;
+  line-height: 1.4;
+}
+.view-display-id-sharat_videos_block .field--name-field-title a {
+  color: #232D4B;
+  font-weight: bold;
+  text-decoration: none;
+}
+.view-display-id-sharat_videos_block .field--name-field-title a:hover {
+  color: #E57200;
+  text-decoration: underline;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** General Styles for All Pages ***/
@@ -15521,6 +15577,11 @@ body.page-node-144 .circl-overlay .text-overlay h1 span.p2, body.page-node-144 .
 }
 body.page-node-144 .circl-overlay .text-overlay h1 span.p3, body.page-node-144 .circl-overlay .text-overlay .h1 span.p3 {
   margin-left: 3rem;
+}
+
+body.sharat-page .block-field-blocknodepagebody {
+  max-width: 1080px !important;
+  margin: 1rem auto;
 }
 
 /** End of Individual Page Styles **/

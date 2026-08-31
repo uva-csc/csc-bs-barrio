@@ -977,3 +977,78 @@ aside .block-facet-blockroles {
   margin-bottom: -3rem;
   margin-top: 1rem;
 }
+
+// Sharat Jois Video Gallery (Media view: Sharat Videos block)
+// YouTube's default/hq thumbnails are 4:3 with black letterboxing baked in
+// around the 16:9 video frame; cropping to a 16:9 box removes the bars.
+.view-display-id-sharat_videos_block {
+  .views-view-responsive-grid {
+    grid-auto-rows: 1fr;
+  }
+
+  .views-view-responsive-grid__item-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: thin solid #939292;
+    border-radius: 6px;
+    background-color: $white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    // The contextual-links wrapper sits between the card and its fields;
+    // it needs to be a flex column too so the title can grow to fill
+    // leftover height and keep every card the same overall height.
+    > .contextual-region {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .field--name-thumbnail {
+    a.plain {
+      display: block;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .field--name-field-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    a {
+      color: $uva-blue;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: $uva-orange;
+        text-decoration: underline;
+      }
+    }
+  }
+}
