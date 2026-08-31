@@ -302,15 +302,32 @@ function csc_bs_sass_preprocess_field(&$variables) {
         unset($variables['items']); // Remove the link (field_url) from render array so it doesn't display
       }
     }
-  // Video gallery title: link the title to the media's canonical page (same target as the thumbnail)
-  } elseif ($fld_name == 'field_title' && $ctype == 'remote_video' && ($el['#view_mode'] ?? '') == 'video_thumb') {
-    try {
-      $variables['media_url'] = $node->toUrl()->toString();
-    }
-    catch (Exception $e) {
-      $variables['media_url'] = NULL;
-    }
+  // Video gallery: open the video in a modal player instead of linking to the media edit page.
+  } elseif ($ctype == 'remote_video' && ($el['#view_mode'] ?? '') == 'video_thumb' && in_array($fld_name, ['field_title', 'thumbnail'])) {
+    $oembed_url = $node->hasField('field_media_oembed_video') ? $node->get('field_media_oembed_video')->value : NULL;
+    $variables['video_embed_url'] = _csc_bs_sass_youtube_embed_url($oembed_url);
+    $variables['video_title'] = $node->get('field_title')->value ?: $node->label();
   }
+}
+
+/**
+ * Converts a youtu.be / youtube.com URL to its embeddable form.
+ */
+function _csc_bs_sass_youtube_embed_url($url) {
+  if (empty($url)) {
+    return NULL;
+  }
+  $video_id = NULL;
+  if (preg_match('#youtu\.be/([A-Za-z0-9_-]{6,})#', $url, $m)) {
+    $video_id = $m[1];
+  }
+  elseif (preg_match('#[?&]v=([A-Za-z0-9_-]{6,})#', $url, $m)) {
+    $video_id = $m[1];
+  }
+  elseif (preg_match('#youtube\.com/embed/([A-Za-z0-9_-]{6,})#', $url, $m)) {
+    $video_id = $m[1];
+  }
+  return $video_id ? 'https://www.youtube.com/embed/' . $video_id : NULL;
 }
 
 /* View Preprocessing */
