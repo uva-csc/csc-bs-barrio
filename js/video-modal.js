@@ -10,6 +10,14 @@
   Drupal.behaviors.cscVideoModal = {
     attach: function (context) {
       once('csc-video-modal', '#video-player-modal', context).forEach(function (modalEl) {
+        // Move to a direct child of body. Left nested in the view markup, some
+        // ancestor establishes a CSS containing block for fixed-position
+        // elements (couldn't pin down which — none of the usual transform/
+        // filter/contain/perspective/will-change checks matched), which makes
+        // the modal size itself against the content column instead of the
+        // viewport and breaks both centering and the near-fullscreen sizing.
+        document.body.appendChild(modalEl);
+
         var iframe = modalEl.querySelector('iframe');
         var titleEl = modalEl.querySelector('.modal-title');
 

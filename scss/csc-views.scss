@@ -978,6 +978,12 @@ aside .block-facet-blockroles {
   margin-top: 1rem;
 }
 
+// Video player modal (Sharat Jois gallery) — near-fullscreen so the video reads large
+.video-player-modal-dialog {
+  width: 90vw;
+  max-width: 1600px;
+}
+
 // Sharat Jois Video Gallery (Media view: Sharat Videos block)
 // YouTube's default/hq thumbnails are 4:3 with black letterboxing baked in
 // around the 16:9 video frame; cropping to a 16:9 box removes the bars.
