@@ -452,8 +452,11 @@ body.node--type-news-item {
     }
   }
 
-  .pt-0 .block-field-blocknodepagebody {
-    padding-top: 0!important;
+  .mb-0, pb-0 {
+    .block-field-blocknodepagebody {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
   }
 
   // Basic Page Teaser
