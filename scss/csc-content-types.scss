@@ -452,6 +452,10 @@ body.node--type-news-item {
     }
   }
 
+  .pt-0 .block-field-blocknodepagebody {
+    padding-top: 0!important;
+  }
+
   // Basic Page Teaser
   &.node--view-mode-teaser {
     .field--name-field-image,
