@@ -87,7 +87,7 @@
   set email, website = content.field_email['#items'].getValue()|first['value']|raw, content.field_url|render|striptags
 %}
 {% set endyear =  node.field_end_year.value %}
-{% set years =  node.field_start_year.value ? node.field_start_year.value ~ '-' ~ endyear: '' %}
+{% set years =  node.field_start_year.value ? (endyear is not empty ? node.field_start_year.value ~ '-' ~ endyear : node.field_start_year.value) : '' %}
 {% set name = node.title.value %}
 
 <div class="card people">
