@@ -12426,26 +12426,29 @@ footer.site-footer section.region-footer-second .media-links a span {
 footer.site-footer #block-csc-bs-sass-legal {
   width: 100%;
 }
-footer.site-footer #block-csc-bs-sass-legal ul.menu {
+footer.site-footer #block-csc-bs-sass-legal ul {
   width: 100%;
   margin: 1rem auto 0.5rem;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
   list-style: none;
 }
-footer.site-footer #block-csc-bs-sass-legal ul.menu li {
+footer.site-footer #block-csc-bs-sass-legal ul li {
   display: inline-block;
   list-style: none;
   margin: 0 3rem;
 }
-footer.site-footer #block-csc-bs-sass-legal ul.menu li a {
+footer.site-footer #block-csc-bs-sass-legal ul li a {
   text-transform: uppercase;
   border: none;
   font-family: franklin-gothic-urw, sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
-footer.site-footer #block-csc-bs-sass-legal ul.menu li a:hover {
+footer.site-footer #block-csc-bs-sass-legal ul li a:hover {
   color: #E57200 !important;
   border-bottom: thin solid #E57200;
 }
@@ -17990,7 +17993,9 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   .node--type-people .image-bio .field--name-field-image img {
     margin-left: 100px;
   }
-  .footer-contact, .navigation, .media-links {
+  .region-footer-second .footer-contact,
+  .region-footer-second .navigation,
+  .region-footer-second .media-links {
     padding-left: 5%;
   }
 }

@@ -494,10 +494,13 @@ footer.site-footer {
 
   #block-csc-bs-sass-legal {
     width: 100%;
-    ul.menu {
+    ul {
       width: 100%;
       margin: 1rem auto 0.5rem;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       text-align: center;
       list-style: none;
 
