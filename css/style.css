@@ -16302,6 +16302,46 @@ div.csc-news-block a img:hover {
   max-width: none;
 }
 
+.video-loop {
+  position: relative;
+  max-width: 1320px;
+  margin: 1.5rem auto;
+}
+.video-loop video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video-loop .video-sound {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.6; /* dimmed = muted */
+  transition: opacity 0.2s;
+}
+.video-loop .video-sound svg {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+}
+.video-loop .video-sound[aria-pressed=true],
+.video-loop .video-sound:hover,
+.video-loop .video-sound:focus-visible {
+  opacity: 1; /* full white = sound on */
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 table.no-padding {
   padding: 0;
   border: none;

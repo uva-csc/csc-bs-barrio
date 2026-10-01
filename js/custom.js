@@ -22,8 +22,8 @@
     }
   };
 
-  // Global Listener Behaviors
-  Drupal.behaviors.csc_bs_sass_global_listeners = {
+  // Accordion Behaviors
+  Drupal.behaviors.csc_bs_sass_accordion_scroll = {
     attach: function(context, settings) {
       if (!window?.csc) { window.csc = {}; }
       $(document).ready(() => {
@@ -60,7 +60,35 @@
       });
       // End of Accordion Scroll fix
     }
-  }; // end of global listeners
+  }; // end of accordion_scroll fix
+
+  Drupal.behaviors.csc_bs_sass_media_listeners = {
+    attach: function (context, settings) {
+      $(document).ready(() => {
+        // Video Loop
+        once('video-loop', '.video-loop', context).forEach((wrapper) => {
+          const video = wrapper.querySelector('video');
+          const button = wrapper.querySelector('.video-sound');
+          if (!video || !button) return;
+
+          const update = () => {
+            button.setAttribute('aria-pressed', String(!video.muted));
+            // button.textContent = video.muted ? 'Unmute video' : 'Mute video';
+            button.innerHTML = video.muted ?
+              '<i class="bi bi-volume-up-fill" aria-hidden="true"></i>' :
+              '<i class="bi bi-volume-mute-fill" aria-hidden="true"></i>';
+          };
+
+          button.addEventListener('click', () => {
+            video.muted = !video.muted;
+            update();
+          });
+
+          update();
+        });
+      });
+    }
+  }; // end of media listeners
 
   // Make slideshow of featured events on the home page
   (function ($, Drupal, once) {
