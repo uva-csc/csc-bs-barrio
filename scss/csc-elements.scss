@@ -1122,6 +1122,25 @@ div.geolocation-map-wrapper {
   background-color: #ABABAB !important;
 }
 
+// Tabs
+
+div.csc-tabs {
+  .nav-tabs {
+    border-bottom: 1px solid $csc-dark-gray;
+    .nav-item {
+      .nav-link {
+        font-weight: bold;
+        color: #999;
+
+        &.active {
+          color: $body-color;
+          border-bottom: 3px solid #222;
+        }
+      }
+    }
+  }
+}
+
 
 // Modals
 .modal-dialog.modal-dialog-centered.modal-lg {
