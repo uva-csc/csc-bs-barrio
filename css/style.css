@@ -16563,7 +16563,7 @@ div.csc-tabs .nav-tabs .nav-item .nav-link {
 }
 div.csc-tabs .nav-tabs .nav-item .nav-link.active {
   color: #212529;
-  border-bottom: 3px solid #232D4B;
+  border-bottom: 3px solid #232D4B !important;
 }
 
 .modal-dialog.modal-dialog-centered.modal-lg {
