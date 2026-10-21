@@ -16258,6 +16258,10 @@ div.align-center div {
   width: fit-content;
 }
 
+div.rounded-circle img {
+  border-radius: 50% !important;
+}
+
 .media-div.rnd img {
   border-radius: 0.3rem !important;
 }

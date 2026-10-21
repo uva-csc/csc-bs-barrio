@@ -748,6 +748,10 @@ div.align-center {
   }
 }
 
+div.rounded-circle img {
+  border-radius: 50% !important;
+}
+
 // For Drupal Media images, classes wind up on enclosing div
 .media-div {
   &.rnd {
