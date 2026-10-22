@@ -376,6 +376,78 @@
           return false;
         })
       });
+
+      // Month calendar: scroll to today on load, and show a compact bar
+      // (previous month, title and month with back to top, next month) once the full header is gone.
+      once('csc-calendar-bar', '.csc-calendar-view.view-display-id-page-month', context).forEach((view) => {
+        const pager = view.querySelector('ul.calendar-view-pager');
+        if (!pager) {
+          return;
+        }
+        const prev = pager.querySelector('.pager__previous a');
+        const next = pager.querySelector('.pager__next a');
+        const month = pager.parentElement.querySelector('h2.visually-hidden');
+
+        // Built from the pager's own links so the two always agree.
+        const bar = document.createElement('div');
+        bar.className = 'csc-calendar-bar';
+        bar.innerHTML =
+          '<div class="csc-calendar-bar__inner">' +
+            '<a class="csc-calendar-bar__prev" rel="prev"><span aria-hidden="true">&larr;</span> <span class="csc-calendar-bar__label"></span></a>' +
+            '<div class="csc-calendar-bar__center">' +
+              '<span class="csc-calendar-bar__title">CSC Events</span>' +
+              '<span class="csc-calendar-bar__month"></span>' +
+              '<a class="csc-calendar-bar__top" href="#">Back to top</a>' +
+            '</div>' +
+            '<a class="csc-calendar-bar__next" rel="next"><span class="csc-calendar-bar__label"></span> <span aria-hidden="true">&rarr;</span></a>' +
+          '</div>';
+        const monthText = month ? month.textContent.trim() : '';
+        bar.querySelector('.csc-calendar-bar__month').textContent = monthText;
+        const shownYear = (monthText.match(/\d{4}/) || [''])[0];
+
+        // Name the neighbouring month from the pager link's timestamp. Month
+        // starts are midnight site time, so format in the site's timezone.
+        const monthName = (href) => {
+          const ts = parseInt(new URL(href).searchParams.get('calendar_timestamp'), 10);
+          if (!ts) {
+            return '';
+          }
+          const opts = { timeZone: 'America/New_York' };
+          const name = new Date(ts * 1000).toLocaleString('en-US', { ...opts, month: 'long' });
+          const year = new Date(ts * 1000).toLocaleString('en-US', { ...opts, year: 'numeric' });
+          return year === shownYear ? name : name + ' ' + year;
+        };
+        ['prev', 'next'].forEach((dir) => {
+          const src = dir === 'prev' ? prev : next;
+          const link = bar.querySelector('.csc-calendar-bar__' + dir);
+          if (src) {
+            link.href = src.href;
+            const name = monthName(src.href);
+            link.querySelector('.csc-calendar-bar__label').textContent = name;
+            link.setAttribute('aria-label', (dir === 'prev' ? 'Previous month' : 'Next month') + (name ? ': ' + name : ''));
+          } else {
+            link.style.visibility = 'hidden';
+          }
+        });
+        bar.querySelector('.csc-calendar-bar__top').addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        document.body.appendChild(bar);
+
+        // Show the bar once the heading and pager have scrolled off the top.
+        new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          bar.classList.toggle('is-visible', !entry.isIntersecting && entry.boundingClientRect.bottom < 0);
+        }).observe(pager);
+
+        // Open on today when viewing the current month, unless the browser
+        // restored a scroll position or the URL points somewhere specific.
+        const today = view.querySelector('td.is-today');
+        if (today && window.scrollY === 0 && !window.location.hash) {
+          today.scrollIntoView({ block: 'start' });
+        }
+      });
     }
   } // End of Calendar
 

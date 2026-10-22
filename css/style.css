@@ -14876,6 +14876,9 @@ div.view-empty {
   line-height: 1.2;
   border-bottom: #E57200 solid 2px;
 }
+.csc-calendar-view td.is-today {
+  scroll-margin-top: 6rem;
+}
 .csc-calendar-view table.calendar-view-table > caption {
   display: none;
 }
@@ -14930,6 +14933,80 @@ div.view-empty {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.csc-calendar-bar {
+  position: fixed;
+  top: var(--drupal-displace-offset-top, 0px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #232D4B;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform 0.2s ease, visibility 0s linear 0.2s;
+}
+.csc-calendar-bar.is-visible {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .csc-calendar-bar {
+    transition: none;
+  }
+  .csc-calendar-bar.is-visible {
+    transition: none;
+  }
+}
+.csc-calendar-bar .csc-calendar-bar__inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0.35rem 1rem;
+}
+.csc-calendar-bar .csc-calendar-bar__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.25;
+  text-align: center;
+}
+.csc-calendar-bar .csc-calendar-bar__title {
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+.csc-calendar-bar .csc-calendar-bar__month {
+  font-size: 0.9rem;
+}
+.csc-calendar-bar .csc-calendar-bar__prev,
+.csc-calendar-bar .csc-calendar-bar__next,
+.csc-calendar-bar .csc-calendar-bar__top {
+  border: none;
+  color: #fff !important;
+  text-decoration: none;
+}
+.csc-calendar-bar .csc-calendar-bar__prev:hover, .csc-calendar-bar .csc-calendar-bar__prev:focus-visible,
+.csc-calendar-bar .csc-calendar-bar__next:hover,
+.csc-calendar-bar .csc-calendar-bar__next:focus-visible,
+.csc-calendar-bar .csc-calendar-bar__top:hover,
+.csc-calendar-bar .csc-calendar-bar__top:focus-visible {
+  color: #E57200 !important;
+}
+.csc-calendar-bar .csc-calendar-bar__prev {
+  justify-self: start;
+}
+.csc-calendar-bar .csc-calendar-bar__next {
+  justify-self: end;
+}
+.csc-calendar-bar .csc-calendar-bar__top {
+  font-size: 0.8rem;
+  text-decoration: underline;
 }
 
 .view.csc-list-wide .row.views-row,
