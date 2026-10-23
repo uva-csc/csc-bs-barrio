@@ -1171,7 +1171,7 @@ aside .block-facet-blockroles {
 .csc-event-search {
   position: relative;
   max-width: 24rem;
-  margin: 0 1rem 2rem 8vw;
+  margin: 0;
   font-family: $font-frankgoth-std;
 
   &__label {
@@ -1292,6 +1292,5 @@ aside .block-facet-blockroles {
 @media (max-width: 991.98px) {
   .csc-event-search {
     max-width: none;
-    margin-left: 1rem;
   }
 }
