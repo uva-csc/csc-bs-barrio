@@ -18501,5 +18501,10 @@ a {
     max-width: none;
   }
 }
+@media (min-width: 768px) {
+  .csc-event-search {
+    margin-left: 50px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

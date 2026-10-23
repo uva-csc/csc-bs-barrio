@@ -1294,3 +1294,11 @@ aside .block-facet-blockroles {
     max-width: none;
   }
 }
+
+// Line up with the Upcoming Events column content (images sit 50px in from the
+// column edge at 768px and up; the header text itself is right-aligned).
+@media (min-width: 768px) {
+  .csc-event-search {
+    margin-left: 50px;
+  }
+}
