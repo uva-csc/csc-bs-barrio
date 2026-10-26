@@ -15291,7 +15291,7 @@ aside .block-facet-blockroles a[data-drupal-facet-item-value=student_staff] span
   width: 100%;
   padding: 0.6rem 1rem 0.6rem 2.6rem;
   border: 2px solid #232D4B;
-  border-radius: 999px;
+  /* border-radius: 999px; // Removing rounded cornders */
   background-color: #fff;
   color: #212529;
   font-size: 1rem;
