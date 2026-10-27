@@ -13929,7 +13929,8 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-url,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-start-year,
-.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-date-residency {
   color: white !important;
 }
 .node--type-people .image-bio .block-field-blocknodepeopletitle a,
@@ -13939,7 +13940,8 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns a,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-url a,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-start-year a,
-.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year a {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year a,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-date-residency a {
   color: white !important;
   border-bottom: none;
 }
@@ -13950,7 +13952,8 @@ body.node--type-class .layout__region.layout__region--second .wrapper article.no
 .node--type-people .image-bio .block-field-blocknodepeoplefield-pronouns a:hover,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-url a:hover,
 .node--type-people .image-bio .block-field-blocknodepeoplefield-start-year a:hover,
-.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year a:hover {
+.node--type-people .image-bio .block-field-blocknodepeoplefield-end-year a:hover,
+.node--type-people .image-bio .block-field-blocknodepeoplefield-date-residency a:hover {
   color: #E57200 !important;
   border-bottom: 2px solid #E57200 !important;
 }
