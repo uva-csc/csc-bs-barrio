@@ -1302,3 +1302,13 @@ aside .block-facet-blockroles {
     margin-left: 50px;
   }
 }
+
+// Micro-residents block: Bootstrap 5 dropped .form-group, so nothing spaces the
+// image/bio rows apart.
+.view-micro-residents .row.form-group {
+  margin-bottom: 1rem;
+}
+
+.view-micro-residents .col-lg-10 p {
+  margin-bottom: 0.5rem;
+}

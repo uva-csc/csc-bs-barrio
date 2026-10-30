@@ -15377,6 +15377,14 @@ aside .block-facet-blockroles a[data-drupal-facet-item-value=student_staff] span
     margin-left: 50px;
   }
 }
+.view-micro-residents .row.form-group {
+  margin-bottom: 1rem;
+}
+
+.view-micro-residents .col-lg-10 p {
+  margin-bottom: 0.5rem;
+}
+
 /* VARIABLES */
 /** Bootstrap Overrides **/
 /*** General Styles for All Pages ***/
