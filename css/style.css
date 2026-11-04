@@ -14685,7 +14685,9 @@ p.view-more a:hover {
   margin-top: 0.8rem;
 }
 .view-events.events-list-alt.past-events img.image-style-event-teaser-row {
+  width: 100%;
   max-width: 300px;
+  height: auto;
 }
 
 #special-events .view-events .row .views-field-body .desc p,

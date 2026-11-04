@@ -392,7 +392,10 @@ p.view-more {
 
   &.events-list-alt.past-events {
     img.image-style-event-teaser-row {
+      // Fill the col-lg-3 image column (so it never overflows under the text), capped at 300px
+      width: 100%;
       max-width: 300px;
+      height: auto;
     }
   }
 
