@@ -466,6 +466,9 @@ function csc_bs_sass_preprocess_facets_result_item(&$facet) {
   if ($label == 'citizen_leader_fellow') {
     $new_label = 'Citizen Leaders Fellows';
   }
+  if ($label == 'micro_residency') {
+    $new_label = 'Micro-Residencies';
+  }
   $facet['value'] = $new_label;
   $facet['raw_value'] = $facet['value'];
 }
