@@ -1792,3 +1792,28 @@
   }
 
 }
+
+// Event pages on mobile: move the grey details box (date, time, place)
+// up from the bottom to just under the event image.
+@media (max-width: 640px) {
+  .layout--twocol-section.event-pg {
+    display: flex;
+    flex-direction: column;
+
+    > .layout__region--first,
+    > .layout__region--first > .wrapper {
+      display: contents;
+    }
+    > .layout__region--first > .wrapper > .block {
+      order: 3;
+    }
+    > .layout__region--first > .wrapper > .block-field-blocknodeeventfield-event-type,
+    > .layout__region--first > .wrapper > .block-field-blocknodeeventtitle,
+    > .layout__region--first > .wrapper > .block-field-blocknodeeventfield-image {
+      order: 1;
+    }
+    > .layout__region--second {
+      order: 2;
+    }
+  }
+}
